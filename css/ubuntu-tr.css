@@ -426,9 +426,21 @@ ul.liste > li > .icerik > .yazar {
 /* =============== TIP 5 SON ================*/
 
 /* =============== Haber ================*/
+ul.haber, #rssForum {
+    margin: 10px;
+}
 ul.haber > li > .baslik, ol.haber > li > .baslik{
     display: block;
     color: #dd4814;
+    font-size: 16px;
+}
+#rssForum {
+    display: block;
+    font-size: 14px;
+    list-style-type: circle;
+}
+ul.haber > li, #rssForum > li {
+    margin: 10px;
 }
 /* =============== Haber SON ================*/
 
