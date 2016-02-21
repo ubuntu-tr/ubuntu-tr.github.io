@@ -4,11 +4,11 @@ title: Ubuntu-Tr Sudo
 url: "http://ubuntu-tr.github.io/" # the base hostname & protocol for your site
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: rouge
+
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 gems: [jekyll-paginate]
-
-highlighter: pygments
 
 # YB Settings
 excerpt_separator: <!-- more -->

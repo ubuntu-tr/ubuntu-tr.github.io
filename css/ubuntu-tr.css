@@ -215,9 +215,6 @@ main a:hover {
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 ol {
     margin: 0;
@@ -226,6 +223,9 @@ ol {
 }
 ul.liste {
     display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 ul.liste > li {
     display: flex;
