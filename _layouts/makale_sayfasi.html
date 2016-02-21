@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        {% include head.html %}
+    </head>
+    <body class="beyaz">
+
+        {% include header.html %}
+        <div>
+            <main class="ileti">
+
+                <h1>{{ page.title }}</h1>
+                <p class="bilgi">{{ page.date | date: "%b %-d, %Y" }}, <a>{{ page.author }}</a></p>
+                <p class="bilgi">Kategori: 
+                    {% for cat_name in page.categories %}
+                        {% assign cats = site.kategori | where:'code',cat_name %}
+                        {% assign cat =  cats[0] %}
+                        <a href="{{cat.url}}">{{cat.title}}</a>
+                    {% endfor %}
+                </p>
+                <div class="ileti">
+                    {{ content }}
+                </div>
+                <p class="etiket">
+                    {% for tag_name in page.tags %}
+                        {% assign tags = site.etiket | where:'code',tag_name %}
+                        {% assign tag =  tags[0] %}
+                        <a href="{{tag.url}}">{{tag.title}}</a>
+                    {% endfor %}
+                </p>
+            </main>
+            <aside>
+                <div class="kutu">
+                    <div class="ana baslik2">En Çok Okunan Yazılar</div>
+                    <ul class="liste tip5 kutu">
+                        {% for post in site.categories['k1'] %}
+                            {% include liste.html %}
+                        {% endfor %}
+                    </ul>
+            
+                </div>
+            </aside>
+            <div style="clear: both;"></div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+</html>

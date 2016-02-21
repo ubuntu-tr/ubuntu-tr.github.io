@@ -1,0 +1,47 @@
+---
+layout: genel
+---
+
+<div class="ana baslik2">Son Haberler</div>
+<ol class="kutu haber">
+    {% for post in site.tags['PHP'] %}
+        {% include liste_baslik_aciklama.html %}
+    {% endfor %}
+</ol>
+
+
+        <div class="ana baslik2">Öne Çıkanlar</div>
+        <ul class="liste tip2 kutu">
+            {% for post in site.tags['Java'] %}
+                {% include liste.html %}
+            {% endfor %}
+        </ul>
+
+        <div class="ana baslik">Son Gönderilen İletiler</div>
+        <ul class="liste tip1 kutu">
+            {% for post in site.tags['PHP'] %}
+                {% include liste.html %}
+            {% endfor %}
+        </ul>
+
+        <div class="bolmele">
+            <div>
+                <div class="ana baslik2">Sık Sorulan Sorular</div>
+                <ol class="haber kutu">
+                    {% for post in site.tags['PHP'] %}
+                        {% include liste_baslik.html %}
+                    {% endfor %}
+                </ol>
+            </div>
+            <div>
+                <div class="ana baslik2">Etiketler</div>
+                <div class="etiket kutu">
+                    {% for tag in site.tags %}
+    					{% assign tag_name = tag | first %}
+    					{% assign tag_size = tag | last | size %}
+    					{% assign tag_slug = tag_name | slugify  %}
+                        <a href="/etiket/{{tag_slug | slugify }}">{{tag_name}} ({{tag_size}})</a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>

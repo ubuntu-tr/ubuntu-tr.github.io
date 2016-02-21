@@ -1,0 +1,630 @@
+body {
+    font-family: "Ubuntu", "Verdana", "Arial", "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+    background: url("images/pattern6.png") repeat scroll 0 0 #F5F5F5;
+}
+
+/* Footer */
+footer {
+    clear: both;
+    width: 100%;
+    margin-top:20px;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 -2px 2px rgba(0,0,0,.2);
+}
+footer > .ayirac {
+    height: 15px;
+    border-top: 1px solid #D8D8D8;
+    width: 100%;
+}
+footer > nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow:row nowrap;
+    padding: 50px 10px 30px;
+}
+footer > nav > div {
+    flex: 1;
+}
+footer > nav > div > a {
+    display: block;
+    color: #333333;
+    font-size: 10.5px;
+    line-height: 2;
+    padding: 3px;
+}
+footer > nav > div > a:first-child {
+    font-weight: bold;
+}
+footer > nav a:hover {
+    color: #E6402A;
+    text-decoration: underline;
+}
+
+footer > .bilgi {
+    width: 90%;
+    margin: 0 auto;
+    background: url("images/logo-ubuntu-grey.png") no-repeat scroll right 20px rgba(0, 0, 0, 0);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+}
+footer > .bilgi > img {
+    width: 48px;
+    float: left;
+    margin-right: 10px;
+}
+footer > .bilgi a {
+    color: #772953;
+}
+footer > .bilgi a:hover {
+    color: #E6402A;
+}
+
+
+/* HEADER */
+header > nav {
+    padding: 0 5%;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav > a:first-child {
+    margin-left: 0;
+}
+nav > a:last-child {
+    margin-right: 0;
+}
+#menuDugme1 {
+    display: none;
+}
+
+.ustMenu {
+    background: none repeat scroll 0 0 #EFEFEF;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    height: 30px;
+    line-height: 19.2px;
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.ustMenu > a {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    position: relative;
+    display: block;
+}
+.ustMenu > a:hover {
+    color: #DD4814;
+}
+.ustMenu >  a.aktif {
+    border-top: 2px solid #DD4814;
+    color: #DD4814;
+    opacity: 1;
+}
+
+.menu {
+    background: none repeat scroll 0 0 #DD4814;
+    box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
+    width: 100%;
+    height: 47px;
+    color: white;
+    display: flex;
+    z-index: 2;
+    position: relative;
+}
+.menu > a {
+    color: white;
+    display: block;
+    padding: 12px 14px 0px;
+    font-size: 14px;
+    border-left: 1px solid #C64012;
+    height: 47px;
+}
+.menu > a.aktif {
+    background: #B83A10;
+}
+.menu > a:not(:first-child):not(:last-child):hover {
+    background: #E1662F;
+}
+.menu > a:not(:first-child)::before {
+    content: " ";
+    border-left: 1px solid #EC5B29;
+    padding-right: 14px;
+    margin: -12px 0 0 -14px;
+    display: block;
+    float: left;
+    height: 47px;
+}
+.menu > a.logo {
+    border: none;
+    font-size: 28px;
+    padding: 0px;
+    padding-right: 14px;
+    text-align: right;
+}
+.logo > label {
+    float: left;
+    display: none;
+}
+.menuIcon {
+    margin-top: 5px;
+    height: 32px;
+}
+
+body > div {
+    margin: 10px auto;
+    max-width: 1140px;
+    clear: both;
+    width: 95%;
+}
+
+aside {
+    float: right;
+    width: 325px;
+    margin: 0;
+}
+aside > div{
+    min-height: 400px;
+}
+
+main {
+    width: calc(1140px - 345px);
+    margin: 0;
+    float: left;
+}
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Listeleme */
+.ana.baslik, .ana.baslik2 {
+    background: #dd4814;
+    color: white;
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    padding: 5px 20px;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+.ana.baslik2 {
+    background:#fff;
+    color: #dd4814;
+    border-bottom: 1px solid #dd4814;
+}
+
+.kutu {
+    background-color: white;
+    box-shadow: 0 0 3px #C9C9C9;
+    height: calc(100% - 45px);
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ol {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ul.liste {
+    display: flex;
+}
+ul.liste > li {
+    display: flex;
+    border-bottom: 1px solid #DFDCD9;
+    padding: 10px;
+    flex: 1;
+    min-width: 280px;
+}
+ul.liste > li p, ul.liste > li a {
+    margin: 1px 0;
+}
+
+/* =========== Öntanımlı Ayarlar ============*/
+
+ul.liste > li > .resim > img {
+    width: 150px;
+    height: 100px;
+}
+ul.liste > li > .icerik {
+    display: flex;
+    flex-flow:column nowrap;
+    padding: 0 10px;
+}
+ul.liste > li > .icerik > .resim > img {
+    max-height: 250px;
+    max-width: 100%;
+    min-width: 150px;
+}
+ul.liste.kucuk > li > .icerik > .resim > img {
+    max-height: 100px;
+}
+ul.kucuk > li > .icerik {
+    margin: 0 auto;
+} 
+ul.kucuk > li > .icerik > .resim {
+    text-align: center;
+}
+ul.liste > li > .icerik > .baslik {
+    font-size: 18px;
+    color: #dd4814;
+}
+ul.liste > li > .icerik > .aciklama {
+    margin-top: 15px;
+}
+ul.liste > li > .icerik > .etiket {
+
+}
+ul.liste > li > .icerik > .yazar {
+    color: #333;
+}
+
+/* =============== TIP 0 ================*/
+#g0:checked ~ ul.liste, ul.liste.tip0 {
+    flex-flow:column nowrap;
+}
+#g0:checked ~ ul.liste > li > .resim, ul.liste.tip0 > li > .resim {
+    order: 0;
+    align-self:center;
+}
+#g0:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip0 > li > .icerik > .resim {
+    display: none;
+}
+#g0:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip0 > li > .icerik > .baslik {
+    order: 1;
+}
+#g0:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip0 > li > .icerik > .aciklama {
+    order: 4;
+}
+#g0:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip0 > li > .icerik > .etiket {
+    display: none;
+}
+#g0:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip0 > li > .icerik > .yazar {
+    display: none;
+}
+/* =============== TIP 1 SON ================*/
+
+/* =============== TIP 1 ================*/
+#g1:checked ~ ul.liste, ul.liste.tip1 {
+    flex-flow:column nowrap;
+}
+#g1:checked ~ ul.liste > li > .resim, ul.liste.tip1 > li > .resim {
+    order: 0;
+    align-self:center;
+}
+#g1:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip1 > li > .icerik > .resim {
+    display: none;
+}
+#g1:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip1 > li > .icerik > .baslik {
+    order: 1;
+}
+#g1:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip1 > li > .icerik > .aciklama {
+    order: 4;
+}
+#g1:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip1 > li > .icerik > .etiket {
+    order: 3;
+}
+#g1:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip1 > li > .icerik > .yazar {
+    order: 2;
+}
+/* =============== TIP 1 SON ================*/
+
+/* =============== TIP 2 ================*/
+#g2:checked ~ ul.liste, ul.liste.tip2 {
+    flex-flow:row wrap;
+}
+#g2:checked ~ ul.liste > li > .resim, ul.liste.tip2 > li > .resim {
+    display: none;
+}
+#g2:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip2 > li > .icerik > .resim {
+
+}
+#g2:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip2 > li > .icerik > .baslik {
+    order: 1;
+}
+#g2:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip2 > li > .icerik > .aciklama {
+    order: 4;
+}
+#g2:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip2 > li > .icerik > .etiket {
+    order: 3;
+}
+#g2:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip2 > li > .icerik > .yazar {
+    order: 2;
+}
+/* =============== TIP 2 SON ================*/
+
+/* =============== TIP 3 ================*/
+#g3:checked ~ ul.liste, ul.liste.tip3 {
+    flex-flow:row wrap;
+}
+#g3:checked ~ ul.liste > li > .resim, ul.liste.tip3 > li > .resim {
+    display: none;
+}
+#g3:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip3 > li > .icerik > .resim {
+
+}
+#g3:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip3 > li > .icerik > .baslik {
+    order: 1;
+    height: 54px;
+}
+#g3:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip3 > li > .icerik > .aciklama {
+    order: 4;
+}
+#g3:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip3 > li > .icerik > .etiket {
+    display: none;
+}
+#g3:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip3 > li > .icerik > .yazar {
+    display: none;
+}
+/* =============== TIP 3 SON ================*/
+
+/* =============== TIP 4 ================*/
+#g4:checked ~ ul.liste, ul.liste.tip4 {
+    flex-flow:row wrap;
+}
+#g4:checked ~ ul.liste > li > .resim, ul.liste.tip4 > li > .resim {
+    display: none;
+}
+#g4:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip4 > li > .icerik > .resim {
+    display: none;
+}
+#g4:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip4 > li > .icerik > .baslik {
+    order: 1;
+    height: 54px;
+}
+#g4:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip4 > li > .icerik > .aciklama {
+    order: 4;
+}
+#g4:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip4 > li > .icerik > .etiket {
+    display: none;
+}
+#g4:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip4 > li > .icerik > .yazar {
+    display: none;
+}
+/* =============== TIP 4 SON ================*/
+
+/* =============== TIP 5 ================*/
+#g5:checked ~ ul.liste, ul.liste.tip5 {
+    flex-flow:row wrap;
+}
+#g5:checked ~ ul.liste > li > .resim, ul.liste.tip5 > li > .resim {
+    display: none;
+}
+#g5:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip5 > li > .icerik > .resim {
+
+}
+#g5:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip5 > li > .icerik > .baslik {
+    order: 1;
+}
+#g5:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip5 > li > .icerik > .aciklama {
+    display: none;
+}
+#g5:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip5 > li > .icerik > .etiket {
+    display: none;
+}
+#g5:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip5 > li > .icerik > .yazar {
+    display: none;
+}
+/* =============== TIP 5 SON ================*/
+
+/* =============== Haber ================*/
+ul.haber > li > .baslik, ol.haber > li > .baslik{
+    display: block;
+    color: #dd4814;
+}
+/* =============== Haber SON ================*/
+
+.bolmele {
+    display: flex;
+    flex-flow:row wrap;
+    align-items:stretch;
+}
+.bolmele > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.etiket > * {
+    background-color: #E1662F;
+    color: white;
+    padding: 1px 5px;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-right: 10px !important;
+    margin-top: 5px;
+}
+.etiket.kutu {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1150px) {
+    aside {
+        display: none;
+    }
+    main {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    header > nav.menu > a.logo > label {
+        display: block;
+    }
+    header > nav.menu > a:not(.logo) {
+        display: none;
+    }
+    header > nav.menu > a {
+        flex: 1;
+        border: none;
+        min-height: 47px;
+    }
+    header > nav.menu > a::before {
+        border-left: none !important;
+    }
+    #menuDugme1:checked + header > nav.menu {
+        flex-direction:column;
+    }
+    #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:last-child) {
+        display: block;
+        background: #DD4814;
+        border-top: 1px solid #EC5B29;
+    }
+    #menuDugme1:checked + header > nav.menu > a > label {
+        color: green;
+    }
+    #menuDugme1:checked + header + * {
+        opacity:0.1;
+    }
+}
+@media only screen and (max-width: 800px) {
+    footer > nav, footer > .ayirac {
+        display: none;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .gorunus > span {
+        display: none;
+    }
+}
+
+
+body.beyaz {
+    background: white;
+}
+main.ileti {
+    max-width: 780px;
+    margin: 50px auto;
+}
+main.ileti > h1 {
+    color: #606c76;
+    letter-spacing: -0.1rem;
+    line-height: 1.2;
+    font-weight: 300;
+    font-size: 48px;
+}
+main.ileti > .ileti {
+    margin-top:30px;
+}
+main.ileti > .bilgi > a {
+    color: #EC5B29;
+}
+main.ileti > .ileti, main.ileti > .bilgi {
+    color: #606c76;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+}
+
+
+main.kategori {
+    margin: 50px auto;
+}
+input[name="gorunus"] {
+    display: none;
+}
+.gorunus {
+    float: right;
+    margin-right: -20px;
+}
+.gorunus > label {
+    border: 1px solid #EC5B29;
+    padding: 2px 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#g0:checked ~ div label:nth-child(2),
+#g1:checked ~ div label:nth-child(3),
+#g2:checked ~ div label:nth-child(4),
+#g3:checked ~ div label:nth-child(5),
+#g4:checked ~ div label:nth-child(6) {
+    background-color: #EC5B29;
+    color: white;
+}
+
+
+
+/*Time for the CSS*/
+.slider{
+    max-width: 1140px; /*Same as width of the large image*/
+    width: 100%;
+    position: relative;
+    /*Instead of height we will use padding*/
+    padding-top: 320px; /*That helps bring the labels down*/
+    
+    margin: 10px auto;
+    
+    /*Lets add a shadow*/
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s;
+    max-width: 100%;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+    border: 3px solid #999;
+    
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    /*Default style = low opacity*/
+    opacity: 0.6;
+}
+
+.slider label img{
+    display: block;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+/*Clicking o

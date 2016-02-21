@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        {% include head.html %}
+    </head>
+    <body class="beyaz">
+
+        {% include header.html %}
+        <div>
+            <div class="slider">
+                <input type="radio" name="slide_switch" id="id1"/>
+                <label for="id1">
+                    <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" width="100"/>
+                </label>
+                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
+                
+                <!--Lets show the second image by default on page load-->
+                <input type="radio" name="slide_switch" id="id2" checked="checked"/>
+                <label for="id2">
+                    <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="100"/>
+                </label>
+                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
+                
+                <input type="radio" name="slide_switch" id="id3"/>
+                <label for="id3">
+                    <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="100"/>
+                </label>
+                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
+                
+                <input type="radio" name="slide_switch" id="id4"/>
+                <label for="id4">
+                    <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" width="100"/>
+                </label>
+                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
+                
+            </div>
+
+            <main>
+                {{ content }}
+            </main>
+            <aside>
+                <div class="kutu">
+                    <div class="ana baslik2">İndirme Linkleri</div>
+
+                    <div class="ana baslik2">Sık Sorulan Sorular</div>
+                    <ul class="liste tip5 kucuk kutu">
+                        {% for post in site.categories['k1'] %}
+                            {% include liste.html %}
+                        {% endfor %}
+                    </ul>
+                    <div class="ana baslik2">Forumdan Son Yazılar</div>
+                </div>
+            </aside>
+            <div style="clear: both;"></div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+</html>
