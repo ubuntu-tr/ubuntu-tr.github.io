@@ -427,7 +427,8 @@ ul.liste > li > .icerik > .yazar {
 
 /* =============== Haber ================*/
 ul.haber, #rssForum {
-    margin: 10px;
+    margin-left: -15px;
+    padding-bottom: 5px;
 }
 ul.haber > li > .baslik, ol.haber > li > .baslik{
     display: block;
@@ -437,10 +438,10 @@ ul.haber > li > .baslik, ol.haber > li > .baslik{
 #rssForum {
     display: block;
     font-size: 14px;
-    list-style-type: circle;
+    list-style-type: disc;
 }
 ul.haber > li, #rssForum > li {
-    margin: 10px;
+    margin: 10px 0;
 }
 /* =============== Haber SON ================*/
 
