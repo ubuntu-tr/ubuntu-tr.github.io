@@ -8,32 +8,25 @@
 
         {% include header.html %}
         <div>
-            <div class="slider">
-                <input type="radio" name="slide_switch" id="id1"/>
-                <label for="id1">
-                    <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" width="100"/>
-                </label>
-                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg"/>
-                
-                <!--Lets show the second image by default on page load-->
-                <input type="radio" name="slide_switch" id="id2" checked="checked"/>
-                <label for="id2">
-                    <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" width="100"/>
-                </label>
-                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg"/>
-                
-                <input type="radio" name="slide_switch" id="id3"/>
-                <label for="id3">
-                    <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" width="100"/>
-                </label>
-                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg"/>
-                
-                <input type="radio" name="slide_switch" id="id4"/>
-                <label for="id4">
-                    <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" width="100"/>
-                </label>
-                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg"/>
-                
+            
+            <!-- Place somewhere in the <body> of your page -->
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://i.imgur.com/UOA74W4.jpg" />
+                    </li>
+                    <li>
+                        <img src="http://i.imgur.com/rYfVN5N.jpeg" />
+                    </li>
+                </ul>
+                <script>
+                // Can also be used with $(document).ready()
+                $(window).load(function() {
+                    $('.flexslider').flexslider({
+                        animation: "slide"
+                    });
+                });
+                </script>
             </div>
 
             <main>
