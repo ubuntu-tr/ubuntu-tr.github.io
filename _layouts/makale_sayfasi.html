@@ -11,14 +11,33 @@
             <main class="ileti">
 
                 <h1>{{ page.title }}</h1>
-                <p class="bilgi">{{ page.date | date: "%b %-d, %Y" }}, <a>{{ page.author }}</a></p>
-                <p class="bilgi">Kategori: 
+                <p class="bilgi">{{page.summary}}</p>
+                <!-- Whitespace added for readability -->
+                {% assign m = page.date | date: "%-m" %}
+                {% case m %}
+                  {% when '1' %}{% assign m = 'Ocak' %}
+                  {% when '2' %}{% assign m = 'Şubat' %}
+                  {% when '3' %}{% assign m = 'Mart' %}
+                  {% when '4' %}{% assign m = 'Nisan' %}
+                  {% when '5' %}{% assign m = 'Mayıs' %}
+                  {% when '6' %}{% assign m = 'Haziran' %}
+                  {% when '7' %}{% assign m = 'Temmuz' %}
+                  {% when '8' %}{% assign m = 'Ağustos' %}
+                  {% when '9' %}{% assign m = 'Eylül' %}
+                  {% when '10' %}{% assign m = 'Ekim' %}
+                  {% when '11' %}{% assign m = 'Kasım' %}
+                  {% when '12' %}{% assign m = 'Aralık' %}
+                {% endcase %}
+                <p class="bilgi"><a>{{ page.author }}</a> tarafından,
                     {% for cat_name in page.categories %}
                         {% assign cats = site.kategori | where:'code',cat_name %}
                         {% assign cat =  cats[0] %}
                         <a href="{{cat.url}}">{{cat.title}}</a>
                     {% endfor %}
+                    kategorisi altında, {{ page.date | date: "%-d" }} {{ m }} {{ page.date | date: "%Y" }} tarihinde yayınlandı.
                 </p>
+                <p class="bilgi"> </p>
+                <div><img src="{{page.image}}" /></div>
                 <div class="ileti markdown-body">
                     {{ content }}
                 </div>

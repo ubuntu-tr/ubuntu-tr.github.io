@@ -526,7 +526,7 @@ body.beyaz {
 }
 main.ileti {
     max-width: 780px;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 main.ileti > h1 {
     color: #606c76;
