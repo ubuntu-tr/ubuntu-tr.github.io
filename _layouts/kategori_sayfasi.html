@@ -9,8 +9,8 @@
         {% include header.html %}
         <div>
             <main class="">
-                <input type="radio" name="gorunus" id="g0" checked />
-                <input type="radio" name="gorunus" id="g1" />
+                <input type="radio" name="gorunus" id="g0" />
+                <input type="radio" name="gorunus" id="g1" checked />
                 <input type="radio" name="gorunus" id="g2" />
                 <input type="radio" name="gorunus" id="g3" />
                 <input type="radio" name="gorunus" id="g4" />
@@ -26,7 +26,7 @@
             <aside>
                 <div class="kutu">
                     <div class="ana baslik2">En Çok Okunan Yazılar</div>
-                    <ul class="liste tip5 kutu">
+                    <ul class="liste tip6 kutu">
                         {% for post in site.categories['k1'] %}
                             {% include liste.html %}
                         {% endfor %}

@@ -425,6 +425,30 @@ ul.liste > li > .icerik > .yazar {
 }
 /* =============== TIP 5 SON ================*/
 
+/* =============== TIP 5 ================*/
+#g6:checked ~ ul.liste, ul.liste.tip6 {
+    flex-flow:row wrap;
+}
+#g6:checked ~ ul.liste > li > .resim, ul.liste.tip6 > li > .resim {
+    display: none;
+}
+#g6:checked ~ ul.liste > li > .icerik > .resim, ul.liste.tip6 > li > .icerik > .resim {
+
+}
+#g6:checked ~ ul.liste > li > .icerik > .baslik, ul.liste.tip6 > li > .icerik > .baslik {
+    order: 1;
+}
+#g6:checked ~ ul.liste > li > .icerik > .aciklama, ul.liste.tip6 > li > .icerik > .aciklama {
+    order: 2;
+}
+#g6:checked ~ ul.liste > li > .icerik > .etiket, ul.liste.tip6 > li > .icerik > .etiket {
+    display: none;
+}
+#g6:checked ~ ul.liste > li > .icerik > .yazar, ul.liste.tip6 > li > .icerik > .yazar {
+    display: none;
+}
+/* =============== TIP 5 SON ================*/
+
 /* =============== Haber ================*/
 ul.haber, #rssForum {
     margin-left: -15px;
