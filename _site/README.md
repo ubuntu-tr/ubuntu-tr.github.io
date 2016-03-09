@@ -33,9 +33,26 @@ code: e1
 Tanımlanması gereken zorunlu alanları açıklarsak;
 
 - **title :** Kategori ismi
-- **code :** Benzersiz restgele bir değer
+- **code :** Benzersiz rastgele bir değer
 
 Bu dosyayı **isim.md** ismiyle kaydedersek, bu tanımlanmış kategoriye http://site_adresi/etiket/isim.html adresiyle ulaşabiliriz.
+
+#### Başka Listeleme Sayfaları Oluşturma
+Kategori ve etiket gibi makaleler içinde alan olarak tanımlanıp daha sonra bu alanların altındaki her veri için ayrı bir sayfa oluşturmak isteniyorsa aşağıdaki maddeler uygulanmalıdır.
+
+- "_o" klasörü altında oluşturulmak istenen yapı için yeni bir klasör oluşturulur. Örneğin: "yazar" klasörü
+- Makale içine, oluşturulan klasörle aynı isimdeki alan için değerleri girilir. Örneğin "yazar: y1"
+- Oluşturulan klasör altına her bir seçenek için ayrı bir dosya oluşturulur. Örneğin "linustorvalds" ve "ubuntutr" dosyası
+- Bu dosyaların içeriği aşağıdaki gibi doldurulur.
+
+```
+---
+title:  "Linus Torvalds"
+code: y1
+---
+```
+"title" ve "code" zorunlu alanlar olup, "title" verinin isimlendirilmesi için, "code" ise verinin tanımı için benzersiz rastgele bir
+değeri belirtmek için kullanılır. İstenirse daha fazla alan tanımlanıp değer verilebilir. 
 
 #### Makale Oluşturma
 Tüm makaleler "_posts" klasörü altında .md formatında tanımlanmıştır. Klasör altındaki her bir dosya bir makaleyi temsil etmektedir. Örnek bir makale dosyasının içeriği aşağıda verilmiştir.
@@ -48,7 +65,7 @@ tags: e1
 permalink: ubuntu-tr-sudo-sayfasi-acildi
 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 image: "resim/sudo.jpg"
-author: "Linus Torvalds"
+yazar: y1
 ---
 
 Makale içeriği buraya yazılacak

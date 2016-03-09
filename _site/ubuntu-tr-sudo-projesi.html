@@ -110,10 +110,28 @@ code: e1
 
 <ul>
 <li><strong>title :</strong> Kategori ismi</li>
-<li><strong>code :</strong> Benzersiz restgele bir değer</li>
+<li><strong>code :</strong> Benzersiz rastgele bir değer</li>
 </ul>
 
 <p>Bu dosyayı <strong>isim.md</strong> ismiyle kaydedersek, bu tanımlanmış kategoriye http://site_adresi/etiket/isim.html adresiyle ulaşabiliriz.</p>
+
+<h4>Başka Listeleme Sayfaları Oluşturma</h4>
+
+<p>Kategori ve etiket gibi makaleler içinde alan olarak tanımlanıp daha sonra bu alanların altındaki her veri için ayrı bir sayfa oluşturmak isteniyorsa aşağıdaki maddeler uygulanmalıdır.</p>
+
+<ul>
+<li>&quot;_o&quot; klasörü altında oluşturulmak istenen yapı için yeni bir klasör oluşturulur. Örneğin: &quot;yazar&quot; klasörü</li>
+<li>Makale içine, oluşturulan klasörle aynı isimdeki alan için değerleri girilir. Örneğin &quot;yazar: y1&quot;</li>
+<li>Oluşturulan klasör altına her bir seçenek için ayrı bir dosya oluşturulur. Örneğin &quot;linustorvalds&quot; ve &quot;ubuntutr&quot; dosyası</li>
+<li>Bu dosyaların içeriği aşağıdaki gibi doldurulur.</li>
+</ul>
+<div class="highlight"><pre><code class="language-" data-lang="">---
+title:  "Linus Torvalds"
+code: y1
+---
+</code></pre></div>
+<p>&quot;title&quot; ve &quot;code&quot; zorunlu alanlar olup, &quot;title&quot; verinin isimlendirilmesi için, &quot;code&quot; ise verinin tanımı için benzersiz rastgele bir
+değeri belirtmek için kullanılır. İstenirse daha fazla alan tanımlanıp değer verilebilir. </p>
 
 <h4>Makale Oluşturma</h4>
 
@@ -126,7 +144,7 @@ tags: e1
 permalink: ubuntu-tr-sudo-sayfasi-acildi
 summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 image: "resim/sudo.jpg"
-author: "Linus Torvalds"
+yazar: y1
 ---
 
 Makale içeriği buraya yazılacak
