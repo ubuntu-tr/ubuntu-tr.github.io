@@ -20,6 +20,8 @@ collections:
     output: true
   etiket:
     output: true
+  o:
+    output: true
 
 defaults:
   - scope:
@@ -39,3 +41,8 @@ defaults:
       type: posts
     values:
       layout: makale_sayfasi
+  - scope:
+      path: ""
+      type: o
+    values:
+      layout: listeleme_sayfasi

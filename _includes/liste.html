@@ -11,6 +11,8 @@
                 <a href="{{tag.url}}">{{tag.title}}</a>
             {% endfor %}
         </p>
-        <p class="yazar">Yazar: {{post.author}}</p>
+        {% assign yazar = site.o | where:'code',post.yazar %}
+        {% assign yazar = yazar[0] %}
+        <p class="yazar">Yazar: {{yazar.title}}</p>
     </div>
 </li>

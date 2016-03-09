@@ -28,7 +28,9 @@
                   {% when '11' %}{% assign m = 'Kasım' %}
                   {% when '12' %}{% assign m = 'Aralık' %}
                 {% endcase %}
-                <p class="bilgi"><a>{{ page.author }}</a> tarafından,
+                {% assign yazar = site.o | where:'code',page.yazar %}
+                {% assign yazar = yazar[0] %}
+                <p class="bilgi"><a href="{{ yazar.url }}">{{ yazar.title }}</a> tarafından,
                     {% for cat_name in page.categories %}
                         {% assign cats = site.kategori | where:'code',cat_name %}
                         {% assign cat =  cats[0] %}
