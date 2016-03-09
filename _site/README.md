@@ -104,6 +104,16 @@ layout:  genel
 ```
 - **layout :** Bir şablon altında yayınlanacaksa, burada o şablonun adı belirtilir.
 
+#### Slider Verileri
+Slider içerisinde gösterilecek verilerin tanımlandığı dosyanın içeriği (_data/slider.yml) aşağıda gösterilmiştir.
+
+```
+- image: http://i.imgur.com/UOA74W4.jpg
+  url: ubuntu-tr-sudo-projesi
+- image: http://i.imgur.com/rYfVN5N.jpeg
+  url: welcome-to-jekyll
+```
+Bu dosya düzenlenerek ekleme, düzeltme veya çıkartma yapılabilir.
 
 Tasarım
 ----------

@@ -12,12 +12,11 @@
             <!-- Place somewhere in the <body> of your page -->
             <div class="flexslider">
                 <ul class="slides">
-                    <li>
-                        <img src="http://i.imgur.com/UOA74W4.jpg" />
-                    </li>
-                    <li>
-                        <img src="http://i.imgur.com/rYfVN5N.jpeg" />
-                    </li>
+                    {% for post in site.data.slider %}
+                        <li>
+                            <a href="{{ post.url }}"><img src="{{ post.image }}" /></a>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <script>
                 // Can also be used with $(document).ready()
