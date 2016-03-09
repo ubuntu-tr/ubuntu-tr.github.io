@@ -26,3 +26,10 @@ $.jGFeed('https://forum.ubuntu-tr.net/index.php?action=.xml;type=rss', function(
     $('#rssForum').append('<li><a href="'+value.link+'" class="baslik">'+value.title+'</a></li>');
   });
 }, 5);
+
+$( document ).ready(function() {
+  if(window.innerWidth < 500) {
+    $('label[for=g0], label[for=g1]').css('display', 'none');
+    $('label[for=g2]').click();
+  }
+});
