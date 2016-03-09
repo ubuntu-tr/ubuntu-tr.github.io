@@ -575,4 +575,6 @@ input[name="gorunus"] {
     background-color: #EC5B29;
     color: white;
 }
-
+#disqus_thread {
+    margin-top: 30px;
+}

@@ -1,7 +1,7 @@
 # Site settings
 title: Ubuntu-Tr Sudo
-url: "http://localhost:4000/" # the base hostname & protocol for your site
-#url: "http://ubuntu-tr.github.io/" # the base hostname & protocol for your site
+#url: "http://localhost:4000" # the base hostname & protocol for your site
+url: "http://ubuntu-tr.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: redcarpet
