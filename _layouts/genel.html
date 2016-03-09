@@ -33,15 +33,18 @@
             </main>
             <aside>
                 <div class="kutu">
-                    <div class="ana baslik2">İndirme Linkleri</div>
+                    <a href="http://releases.ubuntu.com/15.10/ubuntu-15.10-desktop-i386.iso" class="ana baslik2"><img class="iconImage" src="images/download.svg"> Ubuntu 15.10 - 32 Bit</a>
+                    <a href="http://releases.ubuntu.com/15.10/ubuntu-15.10-desktop-amd64.iso" class="ana baslik2"><img class="iconImage" src="images/download.svg"> Ubuntu 15.10 - 64 Bit</a>
+                    <a href="http://releases.ubuntu.com/trusty/ubuntu-14.04.3-desktop-i386.iso" class="ana baslik2"><img class="iconImage" src="images/download.svg"> Ubuntu 14.04 LTS - 32 Bit</a>
+                    <a href="http://releases.ubuntu.com/trusty/ubuntu-14.04.3-desktop-amd64.iso" class="ana baslik2"><img class="iconImage" src="images/download.svg"> Ubuntu 14.04 LTS - 64 Bit</a>
 
-                    <div class="ana baslik2">Sık Sorulan Sorular</div>
+                    <div class="ana baslik">Sık Sorulan Sorular</div>
                     <ul class="liste tip5 kucuk kutu">
                         {% for post in site.tags['e1'] %}
                             {% include liste.html %}
                         {% endfor %}
                     </ul>
-                    <div class="ana baslik2">Forumdan Son Yazılar</div>
+                    <div class="ana baslik">Forumdan Son Yazılar</div>
                     <ul class="" id="rssForum"></ul>
                 </div>
             </aside>

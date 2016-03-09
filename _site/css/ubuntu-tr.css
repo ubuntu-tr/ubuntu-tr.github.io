@@ -200,6 +200,7 @@ main a:hover {
     padding: 5px 20px;
     border-top-left-radius:3px;
     border-top-right-radius:3px;
+    display: block;
 }
 .ana.baslik2 {
     background:#fff;
@@ -601,4 +602,10 @@ input[name="gorunus"] {
 }
 #disqus_thread {
     margin-top: 30px;
+}
+
+.iconImage {
+    width: 30px; 
+    vertical-align: middle; 
+    margin-right: 10px;
 }
