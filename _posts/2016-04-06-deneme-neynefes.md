@@ -1,6 +1,6 @@
 ---
 title:  "Neynefes"
-date:   2016-4-6 10:19:27
+date:   2016-04-06 10:19:27
 categories: k1 k2
 tags: e1
 permalink: deneme-neynefes
