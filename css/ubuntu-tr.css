@@ -252,7 +252,7 @@ ul.liste > li > .icerik {
 }
 ul.liste > li > .icerik > .resim > img {
     max-height: 250px;
-    max-width: 100%;
+    width: 100%;
     min-width: 150px;
 }
 ul.liste.kucuk > li > .icerik > .resim > img {
