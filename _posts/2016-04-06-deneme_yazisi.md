@@ -1,6 +1,6 @@
 ---
 title:  "Bu bir test iletisidir"
-date:   2016-04-06 00:41:27
+date:   2016-04-05 00:14:27
 categories: k1
 tags: e1
 permalink: bu-bir-test-iletisidir
