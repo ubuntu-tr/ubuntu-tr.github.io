@@ -7,6 +7,8 @@ url: "https://ubuntu-tr.github.io" # the base hostname & protocol for your site
 markdown: redcarpet
 highlighter: rouge
 
+timezone: Europe/Istanbul
+
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 gems: [jekyll-paginate]
 
