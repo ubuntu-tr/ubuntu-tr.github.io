@@ -1,6 +1,6 @@
 ---
 title: "Çok heyecanlı :)"
-date: 2016-04-18 02:11:20
+date: 2015-04-18 02:11:20
 categories: "k1"
 tags: ["ilk yazı"]
 permalink: "cok-heyecanli"
