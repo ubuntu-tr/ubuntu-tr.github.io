@@ -1,0 +1,24 @@
+---
+---
+{
+    "categories": [
+        {% assign posts = site.kategori %}
+        {% for post in posts %}
+        {% if post.code != site.kategori.first.code %},{% endif %}
+          {
+            "name": "{{ post.title }}",
+            "id": "{{ post.code }}"
+          }
+        {% endfor %}
+    ],
+    "tags": [
+        {% assign posts = site.etiket %}
+        {% for post in posts %}
+        {% if post.code != site.etiket.first.code %},{% endif %}
+          {
+            "name": "{{ post.title }}",
+            "id": "{{ post.code }}"
+          }
+        {% endfor %}
+    ]
+}
