@@ -1,6 +1,6 @@
 ---
 title: "Api Denemesi"
-date: 2016-04-16 23:50:21
+date: 2016-04-18 02:55:21
 categories: "k2"
 tags: ["Sık Sorulan Sorular", "güvenlik duvarı"]
 permalink: "api-denemesi"
