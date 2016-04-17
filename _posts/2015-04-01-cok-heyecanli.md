@@ -5,7 +5,7 @@ categories: "k1"
 tags: ["ilk yazı"]
 permalink: "cok-heyecanli"
 summary: "daa"
-image: "https://raw.githubusercontent.com/bugra9/temp/master/sence.jpeg?token=AKdc4Ii93IHqzI2QZCSKl0kQOoBEB2bkks5XHVbIwA%3D%3D"
+image: "https://raw.githubusercontent.com/ubuntu-tr/ubuntu-tr.github.io/master/images/duvarka%C4%9F%C4%B1d%C4%B1.jpg"
 thumb: "mıncıkladım biraz"
 author: "neynefes"
 ---
