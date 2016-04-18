@@ -1,0 +1,4 @@
+---
+title: "Anlatım"
+code: "anlatim"
+---
