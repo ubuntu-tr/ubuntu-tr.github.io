@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{page.title}} Makaleleri</title>
+        {% include head.html %}
+    </head>
+    <body class="beyaz">
+
+        {% include header.html %}
+        <div>
+            <main class="">
+                <input type="radio" name="gorunus" id="g0" />
+                <input type="radio" name="gorunus" id="g1" checked />
+                <input type="radio" name="gorunus" id="g2" />
+                <input type="radio" name="gorunus" id="g3" />
+                <input type="radio" name="gorunus" id="g4" />
+
+                <div class="ana baslik2">{{page.title}}<span class="gorunus"><span>Görünüş: </span><label for="g0">G0</label><label for="g1">G1</label><label for="g2">G2</label><label for="g3">G3</label><label for="g4">G4</label></span></div>
+                <ul class="liste kutu">
+                    {% for post in site[page.type][page.title] %}
+                      {% include liste.html %}
+                    {% endfor %}
+                </ul>
+
+            </main>
+            <aside>
+                <div class="kutu">
+                    <div class="ana baslik2">En Çok Okunan Yazılar</div>
+                    <ul class="liste tip6 kutu">
+                        {% for post in site.categories['k1'] %}
+                            {% include liste.html %}
+                        {% endfor %}
+                    </ul>
+            
+                </div>
+            </aside>
+            <div style="clear: both;"></div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+</html>
