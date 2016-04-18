@@ -37,7 +37,7 @@ defaults:
       type: etiket
     values:
       type: tags
-      layout: kategori_sayfasi
+      layout: etiket_sayfasi
   - scope:
       path: ""
       type: posts
