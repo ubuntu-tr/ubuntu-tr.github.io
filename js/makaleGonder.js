@@ -50,7 +50,7 @@ $( document ).ready(function() {
             return;
 
         $('#loader').addClass("active");
-        var url = "index.php";
+        var url = "http://bugra9.tk/index.php";
         $.ajax({
                type: "POST",
                url: url,
