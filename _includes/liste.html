@@ -6,13 +6,11 @@
         <p class="aciklama">{{ post.summary }}</p>
         <p class="etiket">
             {% for tag_name in post.tags %}
-                {% assign tags = site.etiket | where:'code',tag_name %}
+                {% assign tags = site.etiket | where:'title',tag_name %}
                 {% assign tag =  tags[0] %}
                 <a href="{{tag.url}}">{{tag.title}}</a>
             {% endfor %}
         </p>
-        {% assign yazar = site.o | where:'code',post.yazar %}
-        {% assign yazar = yazar[0] %}
-        <p class="yazar">Yazar: {{yazar.title}}</p>
+        <p class="yazar">Yazar: {{post.author}}</p>
     </div>
 </li>
