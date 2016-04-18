@@ -21,7 +21,12 @@ Programlama dili öğrenmek kolaydır. Asıl olay bu öğrenileni fikirlerinle b
 
 Lafı uzatmayalım, hemen öğrenmemize devam edelim.
 
+
+----------
+
+
 **Geçen Sayıda Neler Yaptık?**
+
 Geçen sayımızda programlamanın ne işe yaradığını, neden programlama yapıldığını, programların nasıl hazırlandığını, bilgisayarların bizi nasıl anlayacağını ve neden Python seçtiğimizi öğrendik.
 
 Bununla birlikte Python'a ufak bi' giriş yapıp Python kodlarının sözdizimini anlayıp ileride bizleri neyin beklediğini anlamaya çalıştık.. Bu sayımızda Python'da daha da derinlere ineceğiz. Ve kesinlikle daha elle tutulur şeyler yapmayı deneyeceğiz.
@@ -29,6 +34,7 @@ Bununla birlikte Python'a ufak bi' giriş yapıp Python kodlarının sözdizimin
 # **Python**
 
 **Python'da Şart İfadeleri**
+
 Programlama yaparken şart ifadeleri programın gerçekten çok büyük bir bölümünü kapsar. Kullanıcının istekleri, işletim sisteminin uyumluluğu, donanımın uyumluluğu ve daha bir çok kontrol şart ifadeleri tarafından yapılır.
 
 Bir robot tasarladığımızı düşünelim. Robotun yürüme fonksiyonlarını tanımlıyoruz. Robotun yürüme işini adam akıllı yapabilmesi için ona anlayacağı dilde (Makine dili ya da makine diline çevrilebilen bir dilde) şu ifadeleri söylememiz gerekir:
@@ -47,7 +53,12 @@ Bu işlemi yapmak için yine şart ifadelerini kullanmalıyız.
 
 Eğer şart ifadelerinin mantığı anlaşıldıysa şimdi bunu Python dilinde nasıl ifade edebileceğimizi görelim. 
 
+
+----------
+
+
 **İf Deyimi:**
+
 Python'da şart ifadeleri bir bütündür. Genellikle tek kullanılmazlar. Ancak if deyimi şart ifadelerinin temelini oluşturur. 
 
 Şart ifadelerini 'if' deyimi ile başlatırız. İf deyimini kullanmayı öğrenmeden önce girintilerde ilgili bir hatırlatma yapayım:
@@ -56,14 +67,14 @@ Python sözdizimi girintiler ile yazılır. Python'da ':' ifadesinden sonra giri
 
 Bu ufak hatırlatmadan sonra if deyimini nasıl kullanacağımızı göstereyim:
 
-```python
-if şartifadesi:
-	Çalışacak 1. kod
-	Çalışacak 2. kod
-	             .
-	             .
-	Çalışacak n. kod
-```
+
+    if şartifadesi:
+    	Çalışacak 1. kod
+    	Çalışacak 2. kod
+    	             .
+    	             .
+    	Çalışacak n. kod
+
 
 Kodlarımızı bu formüle göre yazdığımızda eğer şart sağlanırsa altına yazdığımız kodlar çalışacaktır. Şimdi daha iyi anlamak için bir örnek verelim:
 
@@ -91,12 +102,12 @@ Bu kez hiçbir çıktı almadık. Çünkü a'nın değeri 3 değil. Yani 'if' de
 
 Bu arada if deyimini kullanırken eşitlik belirtmek için '==' ifadesini kullanıyoruz. Python'da bu tip ifadelere işleç denir. İşleçleri ileride detaylı biçimde görecek olsakta şimdilik sadece göstermem şart ifadelerini anlamak için gereklidir.
 
-* __'=='  :__ Eşitlik bildirir. İki ifadenin birbirine eşit olduğunu kontrol eder.
-* __'!='  :__ Eşitsizlik bildirir. İki ifadenin birbirine eşit olmadığını kontrol eder.
-* __'<' :__ Küçüklük bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu kontrol eder.
-* __'>' :__ Büyüklük bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu kontrol eder.
-* __'<=' :__ Küçük - eşitlik bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu ya da eşit olduğunu kontrol eder.
-* __'>=' :__ Büyük - eşitlik bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu ya da eşit olduğunu kontrol eder.
+> * __'=='  :__ Eşitlik bildirir. İki ifadenin birbirine eşit olduğunu kontrol eder.
+> * __'!='  :__ Eşitsizlik bildirir. İki ifadenin birbirine eşit olmadığını kontrol eder.
+> * __'<' :__ Küçüklük bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu kontrol eder.
+> * __'>' :__ Büyüklük bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu kontrol eder.
+> * __'<=' :__ Küçük - eşitlik bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu ya da eşit olduğunu kontrol eder.
+> * __'>=' :__ Büyük - eşitlik bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu ya da eşit olduğunu kontrol eder.
 
 Aslında kontrolü bu işleçler yapar. Yani eğer bu işleçler yaptıkları kontrole göre True ya da False değeri döndürürler. Bunu, aşağıda da görebilirsiniz:
 
@@ -164,7 +175,13 @@ Eğer input fonksiyonuna verdiğiniz cevap başta tanımladığınız şifrenin 
 
 İf deyimi hakkında oldukça şey öğrendik. Şimdi şart ifadelerinin diğer deyimine geçelim.
  
+
+
+----------
+
+
 **else Deyimi :**
+
 'if' kelimesi İngilizce de 'eğer' anlamına gelirken, 'else' ifadesi 'aksi halde' anlamına gelir. Python dilindede bu deyimleri gerçek anlamlarında kullanırız.
 
 'Else' deyimine şöyle bir örnek vereyim:
@@ -199,7 +216,11 @@ else:
 ```
 
 
+----------
+
+
 **elif Deyimi:**
+
 Elif deyimi else ve if deyiminin karışımıdır. Genellikle if ve else deyimlerinin arasına girer. İf deyiminin karşısındaki şartın yanlış olduğu durumda işletilir. Else deyiminden farkı ise karşısına şart almasıdır.
 
 Biraz havada kaldı gibi :) Hemen bi' örnek vereyim:
@@ -227,7 +248,12 @@ Ben elif yazmam onun yerine hepsine if yazarım diyorsanız size önerim yukarı
 
 Bir sorun var değil mi? Eğer hala çözemediyseniz foruma bekleriz . 
 
+
+----------
+
+
 **Şart ifadelerinde diğer işleçler:**
+
 Şart ifadelerinde kullandığımız ve gerçekten işe yarayan iki önemli işlecimiz daha var. Kullanımı oldukça basit; 'and' ve 'or'.
 
 * __'and': __ 've' anlamına gelir. Sağında ve solundaki her iki ifadenin doğru olması gerekir. Aksi takdirde True değeri dönmez.
@@ -255,7 +281,12 @@ f = 8
 
 Bu işleçler yaptığı kontroller sonucunda 'True' ya da 'False' değeri döndürüyor. O halde biz bu işleçleri şart ifadelerinde rahatlıkla kullanabiliriz.
 
+
+----------
+
+
 **Uçbirimdekiler Uçar IDE'dekiler Kalır:**
+
 Bu kısımla birlikte programcılık serüvenimizde adeta bir çağı kapatıp yeni bir çağ  açacağız. Neden bu başlığı bu kadar büyüttüm? Çünkü bu zamana kadar Python'da yaptığımız her şey başlıkta yazdığı gibi uçbirimdeydi (IPython da python uçbirimi olarak görülebilir) ve uçtu. :) Ayrıca açık konuşayım yaptıklarımız çokta işe yaramıyordu. Aslında bu bildiklerimizle çok güzel uygulamalar yapabiliriz ama yorum satırında çalışmak bize büyük engel.
 
 Esasında bu kısımdan önceki örnekler bu engelden ötürü hep aynı şeylerin etrafında dönüyordu. Ama artık çok daha geniş kapsamlı ve çok daha kaliteli uygulamalar yapabileceğiz. 
@@ -266,7 +297,12 @@ Bu bahsettiklerimin tamamının sonu bir IDE'ye varıyor. Peki IDE nedir? Türk�
 
 Bana kalırsa her iki görüşte doğrudur. Bu yüzden bu güne kadar kullandığım ve memnun kaldığım tüm IDE'leri anlatacağım. İsteyen kişi istediği IDE'yi seçebilir. Bana kalırsa bu seviye için ilk anlatacağım IDE olan IDLE bizler için en uygunudur. Dediğim gibi tercih sizin...
 
+
+----------
+
+
 **IDLE:**
+
 IDLE Python'un resmi olarak desteklediği çok gelişmiş olmayan her seviyedeki geliştirici için kullanılabilir ve Python'a tam olarak uyumlu bir tümleşik geliştirici ortamıdır.
 
 ![](https://raw.githubusercontent.com/ubuntu-tr/ubuntu-tr.github.io/master/images/PythonIDLE1.png)
@@ -277,9 +313,16 @@ Kullanımı oldukça basittir. İndirdiğinizde Python'a tam uyumlu şekilde gel
 
 Ubuntu ve türevlerinde bu uygulamayı kurmak için:
 
+ 
+
 > sudo apt-get install idle-python3.4
 
+
+----------
+
+
 **Ninja IDE:**
+
 Ninja IDE açık kaynak kodludur. Python için düzenlenmiştir. IDLE gibi bu yazılım da Python ile yazılmıştır. Gelişmiş bir IDE'dir. Python projeleri için alışıldığında vazgeçilmeyecek bir programdır.
 
 ![](https://raw.githubusercontent.com/ubuntu-tr/ubuntu-tr.github.io/master/images/PythonNinja1.png)
@@ -293,7 +336,12 @@ Kaliteli bir kod renklendirmesi vardır. Hızlı ve kullanıcı dostudur. Kuruld
 İndirme kodu:
 >sudo apt-get install ninja-ide
 
+
+----------
+
+
 **Geany:**
+
 Geany oldukça hafif bir IDE'dir. Program sadece Python için yazılmasa da Python için rahatlıkla ve zorlanmadan kullanılabilir. Acemi kullanıcıların kafasını karıştırmayacak düzeydedir. 
 
 Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyorum ama kendimi aşırı biçimde de yormak istemiyorum derseniz ve IDLE'yi de bağenmediyseniz Geany ikinci alternatifiniz olabilir. F5 tuşu ile yazdığınız betik çalıştırılır.
@@ -305,6 +353,8 @@ Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyor
 	
 Diğer bazı IDE'leri ve Python'da kullanımlarını forumda Python bölümünde bulabilirsiniz.
 
+
+----------
 
 
 **Yazılanların Kaydedilmesi ve Çalıştırılması:**
@@ -331,7 +381,12 @@ print(yazdır)
 ```
 Programı açıklamaya gerek yok. Tabi bir istisna hariç; eğer bir önceki sayıda bahsettiğimiz __string__ ifadelerini üç tırnak ile oluşturuyorsak dilediğimiz gibi alt satıra geçebiliriz, boşluk bırakabiliriz. Bu durum sadece __string__ ifadesini üç tırnak ile oluşturduğunuzda geçerlidir. Şimdi bu programı çalıştıralım:
 
+
+----------
+
+
 **Uçbirim ile:**
+
 Python programlarını uçbirim ile çalıştırmak en makul yol denilebilir. Çünkü eğer hata varsa uçbirim ekranından hatayı rahatlıkla görebiliriz.
 
 Yazdığımız programı uçbirimden çalıştırmak için öncelikle bir yere kaydetmeliyiz. Bunun için IDLE ekranında CTRL-S tuş kombinasyonunu ya da File>>Save File yolunu uygulamalıyız. Karşımıza çıkan diyalog pencerede dosyanın kaydedileceği yer belirlenir ve uygun bir isimle dosya kaydedilir. 
@@ -350,7 +405,12 @@ Daha sonra programımızı python3 komutuna belirterek çalıştırıyoruz. (pyt
 
 Yukarıdaki ekranı görüyorsanız programı başarı ile çalıştırdınız demektir. Programımız burada çok basit bir program olduğu için uçbirim ekranında sadece 'Merhaba Dünya' yazdırıp kendini sonlandırıyor.
 
+
+----------
+
+
 **Çift Tıklama ile:**
+
 Linux dağıtımlarında bizim hazırladığımız tarzdaki metin belgelerini çalıştırabilmek için bu dosyayı çalıştırılabilir yapmamız yeterlidir. Ancak Ubuntu'nun da varsayılan olarak kullandığı Nautilus dosya yöneticisi, bu tip dosyaları, çalıştırılabilir olmasına rağmen program gibi çalışmasına izin vermez. Eğer Nautilus dosya yöneticisini kullanıyorsanız ve programlarınızı çift tıklama ile çalıştırmak istiyorsanız Nautilus'un bu özelliğini devre dışı bırakmalısınız.
 
 Eğer Naltilus kullanıyorsanız, yukarıdaki özelliği devredışı bırakmak için Nautilus dosya yöneticisini açıp _Değiştir>>Tercihler>>Davranış_ yolunu izlemeniz gerekir. Karşınızdaki pencere aşağıdaki gibi olmalıdır:
@@ -383,7 +443,12 @@ input()
 ```
 Artık programımızı çift tıklayarak çalıştırabiliriz. Program, biz bir tuşa basana kadar kapanmaz.
 
+
+----------
+
+
 **Programlamaya Devam:**
+
 Programlarımızı kaydetmeyi öğrenmişken hemen bir örnek yapalım ve bu işe ısınalım.
 
 ```python3
@@ -463,7 +528,12 @@ Ve son olarak bir input fonksiyonu görüyorsunuz. Bu fonksiyonun mantığı pro
 
 Ve bu şekilde program sonlanıyor. Şimdi bu bilgilerle programı tekrar çalıştırın. Eminim her şey yerine oturmuştur. Eğer bu konuda yanılıyorsam sorularınızı forumun Python bölümünde sorabilirsiniz. :)
 
+
+----------
+
+
 **Len() fonksiyonu:**
+
 Programlamaya bir fonksiyon ile devam edeceğiz. Bu fonksiyon kullanımı açısından daha önce detaylıca öğrendiğimiz 'print' ve 'input' fonksiyonlarına benzer. 
 
 Bu fonksiyonun amacı, ona verdiğimiz değerin kaç karakterden oluştuğunu bize belirtmektir. Şimdi bir örnek verelim. Bu örneği herhangi bir IDE ile kaydetmenize gerek yok IPython3 ile çalıştırabilirsiniz:
@@ -525,7 +595,12 @@ Aslında dikkatinizi bir şeyin çekmiş olması gerek.
 
 'KaçKar' nesnesini print fonksiyonu içinde belirtirken 'str' şeklinde bi' ifade kullandık. Bunun asıl sebebi 'len' fonksiyonunun sayı değeri döndürmesi. Yani, print ifadesine aynı anda hem sayı değeri, hemde string değeri kabul etmiyor. Biz hata almamak için 'KaçKar' nesnesini yeniden string ifadeye çevirdik. Anlatım biraz kapalı oldu farkındayım. O zaman hemen açık bir anlatıma geçelim.
 
+
+----------
+
+
 **Python'da Tip Dönüşümleri:**
+
 Python'da şu anda veritipi olarak iki tip hakkında bilgi sahibiyiz. Bunlardan biri karakter dizileri (string) ve sayı değerleri.
 
 Karakter dizilerini tırnak işareti ile belirtirken, sayı tipinde verileri belirtmek için herhangi bir özel karaktere ihtiyacımız yoktur. Bu iki tip dışında yeni bir veri tipi ise ondalık sayılardır.
@@ -571,7 +646,13 @@ Aşağıdaki örnekleri IPython3 veya uçbirimden deneyebilirsiniz:
 
 Eğer genel anlamda anlaşıldıysa bu veritipleri hakkında detaylı bilgi edinelim.
 
-**Sayı Değerleri (Integer) :**Python'da sayı değerleri bildiğimiz sayı değerleri ile eşdeğerdir. Yani matematik dersinde kullandığımız tam sayı değerleri. Aritmetik işlemler yapılırken kullanılabilir. 
+
+----------
+
+
+**Sayı Değerleri (Integer) :**
+
+Python'da sayı değerleri bildiğimiz sayı değerleri ile eşdeğerdir. Yani matematik dersinde kullandığımız tam sayı değerleri. Aritmetik işlemler yapılırken kullanılabilir. 
 
 Sayı değeri oluşturmak için ek bir şey yapmaya gerek yok. Örneğin
 
@@ -619,7 +700,12 @@ karakter = int(karakter)
 
 Bu şekilde 'karakter' nesnesini iki kez tanımladık. En son ne şekilde tanımlandıysa nesne odur. Bu örnekte 'karakter' nesnesi artık bir sayı değeridir.
 
+
+----------
+
+
 **Karakter Dizisi (string):**
+
 Karakter dizilerini aslında birçok yerde gördük. Yani bu tipe aşinayız. Öncelikle karakter dizilerini nasıl tanımlıyorduk bunları görelim:
 
 ```python
@@ -690,7 +776,12 @@ Programda bizi ilgilendiren kısmın yazılmasını birkaç farklı şekilde yap
 Burada 'Karakter_Sayısı' nesnesinin karakter dizisine dönüştürülmüş hali işimize sadece bir defa yaradığı için bu dönüştürmeyi 'print()' fonksiyonunun içinde yaptık.
 Bu nesneyle daha çok uğraşmamız gerekseydi farklı bir yolla yapabilirdik. Birdahaki sayıda karakter dizilerinin metotlarını öğreneceğiz. O zaman bu programı daha farklı ve işe yarar biçimde düzenleyeceğiz.
 
+
+----------
+
+
 **Ondalık Sayı (Float):**
+
 İsmindende anlaşıldığı üzere ondalık sayılar üzerinde duracağız. Merak edip alıştırmalar yapma şansını bulmuşsanız sayı değerlerinde bazı durumlarda verinin tipi farklı oluyordu. Evet programlama işi cümle değil. Ya da bu iş benim işim değil. Ben bir örnekle anlatatayım.
 
 ```python
@@ -718,10 +809,16 @@ Bir nesneyi ondalık sayıya dönüştürürken 'float()' fonksiyonunu kullanaca
 
 Eğer bir ondalık sayı nesnesinin sadece tam kısmına ihtiyaç duyuyorsanız bu nesneyi tekrar sayı değerine çevirebilirsiniz.
 
+
+----------
+
+
 **Son:**
 
 Bu serimizin 2. sayısınında sonuna geldik. Umarım amacıma ulaşmışımdır. Bu seri hakkında istek ve önerilerinizi forumda SUDO E-Dergi bölümünde. Python ile ilgili sorularınızı forumda Yazılım>>Programlama>>Python bölümünde belirtebilirsiniz.
 
+
+----------
 
 
 **Sorular: **
@@ -744,6 +841,10 @@ __Soru 1:__
 
     _İpucu_: 'round' fonksiyonu sadece ondalıklı sayı ve sayı değeri alabilir.
     
+
+
+----------
+
 
 __Soru 2:__
     Bir program yapma programı yaptığınızı ve şu an bu programda veritipleri ile uğraştığınızı düşünün. Kullanıcı önce veriyi girecek sonra bir menü ile hangi tipe dönüştürmek istediği sorulacak istenilen tipe dönüştürülecek ve kullanıcıya bildiirilecek. Yani program aşağı yukarı böyle olacak:
