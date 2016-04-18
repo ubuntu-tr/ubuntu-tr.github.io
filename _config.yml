@@ -4,7 +4,7 @@ title: Ubuntu-Tr Sudo
 url: "https://ubuntu-tr.github.io" # the base hostname & protocol for your site
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 highlighter: rouge
 
 timezone: Europe/Istanbul
