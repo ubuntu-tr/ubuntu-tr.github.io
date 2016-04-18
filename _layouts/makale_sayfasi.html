@@ -28,7 +28,7 @@
                   {% when '11' %}{% assign m = 'Kasım' %}
                   {% when '12' %}{% assign m = 'Aralık' %}
                 {% endcase %}
-                <p class="bilgi">{{ yazar.author }} tarafından,
+                <p class="bilgi">{{ page.author }} tarafından,
                     {% for cat_name in page.categories %}
                         {% assign cats = site.kategori | where:'code',cat_name %}
                         {% assign cat =  cats[0] %}
@@ -43,7 +43,7 @@
                 </div>
                 <p class="etiket">
                     {% for tag_name in page.tags %}
-                        {% assign tags = site.etiket | where:'name',tag_name %}
+                        {% assign tags = site.etiket | where:'title',tag_name %}
                         {% assign tag =  tags[0] %}
                         <a href="{{tag.url}}">{{tag.title}}</a>
                     {% endfor %}
