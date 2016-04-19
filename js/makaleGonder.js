@@ -39,7 +39,6 @@ $( document ).ready(function() {
       resim     : 'empty',
       yazar     : 'empty',
       eposta    : 'empty',
-      sifre     : 'empty',
       kural     : 'checked'
     },
     keyboardShortcuts: false
