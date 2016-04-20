@@ -39,13 +39,13 @@
                   {% when '11' %}{% assign m = 'Kasım' %}
                   {% when '12' %}{% assign m = 'Aralık' %}
                 {% endcase %}
-                <p class="bilgi">Yazar: {{ page.author }}
+                <p class="bilgi">Yazar: {{ page.author }}  |
                     Kategori: 
                     {% for cat_name in page.categories %}
                         {% assign cats = site.kategori | where:'code',cat_name %}
                         {% assign cat =  cats[0] %}
                         <a href="{{cat.url}}">{{cat.title}}</a>
-                    {% endfor %}
+                    {% endfor %}  |
                     {{ page.date | date: "%-d" }} {{ m }} {{ page.date | date: "%Y" }} tarihinde yayımlandı.
                 </p>
                 <p class="bilgi"> </p>
