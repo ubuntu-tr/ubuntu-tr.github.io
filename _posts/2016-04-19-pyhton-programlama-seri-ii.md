@@ -22,7 +22,7 @@ Programlama dili öğrenmek kolaydır. Asıl olay bu öğrenileni fikirlerinle b
 Lafı uzatmayalım, hemen öğrenmemize devam edelim.
 
 
-----------
+***
 
 
 ### Geçen Sayıda Neler Yaptık?
