@@ -334,6 +334,7 @@ Kurulduğunda sizi yukarıdaki gibi bir başlangıç ekranı karşılar. İyi se
 Kaliteli bir kod renklendirmesi vardır. Hızlı ve kullanıcı dostudur. Kurulduktan sonra hemen program yazmaya başlayabilirsiniz. Herhangi bir özelleştirme gerektimez.
 
 İndirme kodu:
+
 > sudo apt-get install ninja-ide
 
 
@@ -349,6 +350,7 @@ Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyor
 ![](https://raw.githubusercontent.com/ubuntu-tr/ubuntu-tr.github.io/master/images/PythonGeany.png)
 
 İndirip kurmak için aşağıdaki komutu çalıştırmalısınız:
+
 > sudo apt-get install geany
 	
 Diğer bazı IDE'leri ve Python'da kullanımlarını forumda Python bölümünde bulabilirsiniz.
@@ -451,7 +453,7 @@ Artık programımızı çift tıklayarak çalıştırabiliriz. Program, biz bir 
 
 Programlarımızı kaydetmeyi öğrenmişken hemen bir örnek yapalım ve bu işe ısınalım.
 
-```python3
+```python
 
 #! /usr/bin/env python3
 
@@ -538,7 +540,7 @@ Programlamaya bir fonksiyon ile devam edeceğiz. Bu fonksiyon kullanımı açıs
 
 Bu fonksiyonun amacı, ona verdiğimiz değerin kaç karakterden oluştuğunu bize belirtmektir. Şimdi bir örnek verelim. Bu örneği herhangi bir IDE ile kaydetmenize gerek yok IPython3 ile çalıştırabilirsiniz:
 
-```python3
+```python
 
 >>> Değer = "Bu ifade 26 karakterlidir."
 >>> len(Değer)
@@ -548,7 +550,7 @@ Bu fonksiyonun amacı, ona verdiğimiz değerin kaç karakterden oluştuğunu bi
 
 Gördüğünüz gibi önce bir string ifadesi oluşturduk. Daha sonra bu string ifadesini bir nesneye atayıp 'len' fonksiyonuna verdik. 'len' fonksiyonu bu nesneyi işleyerek 26 diye bir sayı değeri döndürdü. Eğer boşlukları da dahil ederek saymışsanız gerçektende bu ifade 26 karakterden oluşuyor. Bu ifadeyi nesneye tanımlamak zorunda değildik. Yani şu biçimde de len fonksiyonu işini başarı ile yapar:
 
-```python3
+```python
 
 >>>len("Bu ifade 26 karakterlidir.")
 26
@@ -557,7 +559,7 @@ Gördüğünüz gibi önce bir string ifadesi oluşturduk. Daha sonra bu string 
 
 Farzedelim ki Selim Çarkıfelek televizyon programı için bir yazılım yapacak. Selim'den istenilen; ana bilgisayar'ın başındaki kişinin girdiği cümlenin harf sayısını bildirmesi ve bilgisayar başındaki kullanıcıya güzelce bildirmesi. Şimdi Selime yardım edelim:
 
-```python3
+```python
 
 #! /usr/bin/env python3
 
