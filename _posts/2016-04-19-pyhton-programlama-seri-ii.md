@@ -2,9 +2,9 @@
 title: "PYHTON PROGRAMLAMA - Seri II"
 date: 2016-04-19 02:11
 categories: "k4"
-tags: ["python"]
+tags: ["python","programlama","yazı dizisi"]
 permalink: "pyhton-programlama-seri-ii"
-summary: "İnsanlar siyah ekranın üzerindeki yeşil - hızlı akan yazılardan, buna eşlik eden taramalı silah sesine benzeyen ve her tuştan farklı tonda ses çıkaran klavyeden; en önemlisi tüm bunları sağlayan bilgisayar başındaki o kişiden neden bu kadar korkar ki?"
+summary: ""
 image: "images/pyhton-programlama-seri-ii.jpeg"
 thumb: "images/pyhton-programlama-seri-ii.jpeg"
 author: "Berkay Dedeoğlu"
