@@ -25,7 +25,7 @@ Lafı uzatmayalım, hemen öğrenmemize devam edelim.
 ----------
 
 
-**Geçen Sayıda Neler Yaptık?**
+###Geçen Sayıda Neler Yaptık?
 
 Geçen sayımızda programlamanın ne işe yaradığını, neden programlama yapıldığını, programların nasıl hazırlandığını, bilgisayarların bizi nasıl anlayacağını ve neden Python seçtiğimizi öğrendik.
 
@@ -33,7 +33,7 @@ Bununla birlikte Python'a ufak bi' giriş yapıp Python kodlarının sözdizimin
 
 # **Python**
 
-**Python'da Şart İfadeleri**
+###Python'da Şart İfadeleri
 
 Programlama yaparken şart ifadeleri programın gerçekten çok büyük bir bölümünü kapsar. Kullanıcının istekleri, işletim sisteminin uyumluluğu, donanımın uyumluluğu ve daha bir çok kontrol şart ifadeleri tarafından yapılır.
 
@@ -57,7 +57,7 @@ Eğer şart ifadelerinin mantığı anlaşıldıysa şimdi bunu Python dilinde n
 ----------
 
 
-**İf Deyimi:**
+###İf Deyimi:
 
 Python'da şart ifadeleri bir bütündür. Genellikle tek kullanılmazlar. Ancak if deyimi şart ifadelerinin temelini oluşturur. 
 
@@ -180,7 +180,7 @@ Eğer input fonksiyonuna verdiğiniz cevap başta tanımladığınız şifrenin 
 ----------
 
 
-**else Deyimi :**
+###else Deyimi:
 
 'if' kelimesi İngilizce de 'eğer' anlamına gelirken, 'else' ifadesi 'aksi halde' anlamına gelir. Python dilindede bu deyimleri gerçek anlamlarında kullanırız.
 
@@ -219,7 +219,7 @@ else:
 ----------
 
 
-**elif Deyimi:**
+###elif Deyimi:
 
 Elif deyimi else ve if deyiminin karışımıdır. Genellikle if ve else deyimlerinin arasına girer. İf deyiminin karşısındaki şartın yanlış olduğu durumda işletilir. Else deyiminden farkı ise karşısına şart almasıdır.
 
@@ -252,7 +252,7 @@ Bir sorun var değil mi? Eğer hala çözemediyseniz foruma bekleriz .
 ----------
 
 
-**Şart ifadelerinde diğer işleçler:**
+###Şart ifadelerinde diğer işleçler:
 
 Şart ifadelerinde kullandığımız ve gerçekten işe yarayan iki önemli işlecimiz daha var. Kullanımı oldukça basit; 'and' ve 'or'.
 
@@ -285,7 +285,7 @@ Bu işleçler yaptığı kontroller sonucunda 'True' ya da 'False' değeri dönd
 ----------
 
 
-**Uçbirimdekiler Uçar IDE'dekiler Kalır:**
+###Uçbirimdekiler Uçar IDE'dekiler Kalır:
 
 Bu kısımla birlikte programcılık serüvenimizde adeta bir çağı kapatıp yeni bir çağ  açacağız. Neden bu başlığı bu kadar büyüttüm? Çünkü bu zamana kadar Python'da yaptığımız her şey başlıkta yazdığı gibi uçbirimdeydi (IPython da python uçbirimi olarak görülebilir) ve uçtu. :) Ayrıca açık konuşayım yaptıklarımız çokta işe yaramıyordu. Aslında bu bildiklerimizle çok güzel uygulamalar yapabiliriz ama yorum satırında çalışmak bize büyük engel.
 
@@ -301,7 +301,7 @@ Bana kalırsa her iki görüşte doğrudur. Bu yüzden bu güne kadar kullandı�
 ----------
 
 
-**IDLE:**
+###IDLE:
 
 IDLE Python'un resmi olarak desteklediği çok gelişmiş olmayan her seviyedeki geliştirici için kullanılabilir ve Python'a tam olarak uyumlu bir tümleşik geliştirici ortamıdır.
 
@@ -315,13 +315,13 @@ Ubuntu ve türevlerinde bu uygulamayı kurmak için:
 
  
 
-> sudo apt-get install idle-python3.4
+>sudo apt-get install idle-python3.4
 
 
 ----------
 
 
-**Ninja IDE:**
+####Ninja IDE:
 
 Ninja IDE açık kaynak kodludur. Python için düzenlenmiştir. IDLE gibi bu yazılım da Python ile yazılmıştır. Gelişmiş bir IDE'dir. Python projeleri için alışıldığında vazgeçilmeyecek bir programdır.
 
@@ -340,7 +340,7 @@ Kaliteli bir kod renklendirmesi vardır. Hızlı ve kullanıcı dostudur. Kuruld
 ----------
 
 
-**Geany:**
+####Geany:
 
 Geany oldukça hafif bir IDE'dir. Program sadece Python için yazılmasa da Python için rahatlıkla ve zorlanmadan kullanılabilir. Acemi kullanıcıların kafasını karıştırmayacak düzeydedir. 
 
@@ -349,7 +349,7 @@ Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyor
 ![](https://raw.githubusercontent.com/ubuntu-tr/ubuntu-tr.github.io/master/images/PythonGeany.png)
 
 İndirip kurmak için aşağıdaki komutu çalıştırmalısınız:
-> sudo apt-get install geany
+>sudo apt-get install geany
 	
 Diğer bazı IDE'leri ve Python'da kullanımlarını forumda Python bölümünde bulabilirsiniz.
 
@@ -357,7 +357,7 @@ Diğer bazı IDE'leri ve Python'da kullanımlarını forumda Python bölümünde
 ----------
 
 
-**Yazılanların Kaydedilmesi ve Çalıştırılması:**
+###Yazılanların Kaydedilmesi ve Çalıştırılması:
 
 Yukarıda bahsettiğim programlar aracılığıyla programlarımızı yazabiliriz. Biz bir süre boyunca anlatırken IDLE programını kullanacağız. Şimdi IDLE programını açalım.
 
@@ -385,7 +385,7 @@ Programı açıklamaya gerek yok. Tabi bir istisna hariç; eğer bir önceki say
 ----------
 
 
-**Uçbirim ile:**
+####Uçbirim ile:
 
 Python programlarını uçbirim ile çalıştırmak en makul yol denilebilir. Çünkü eğer hata varsa uçbirim ekranından hatayı rahatlıkla görebiliriz.
 
@@ -409,7 +409,7 @@ Yukarıdaki ekranı görüyorsanız programı başarı ile çalıştırdınız d
 ----------
 
 
-**Çift Tıklama ile:**
+####Çift Tıklama ile:
 
 Linux dağıtımlarında bizim hazırladığımız tarzdaki metin belgelerini çalıştırabilmek için bu dosyayı çalıştırılabilir yapmamız yeterlidir. Ancak Ubuntu'nun da varsayılan olarak kullandığı Nautilus dosya yöneticisi, bu tip dosyaları, çalıştırılabilir olmasına rağmen program gibi çalışmasına izin vermez. Eğer Nautilus dosya yöneticisini kullanıyorsanız ve programlarınızı çift tıklama ile çalıştırmak istiyorsanız Nautilus'un bu özelliğini devre dışı bırakmalısınız.
 
@@ -447,7 +447,7 @@ Artık programımızı çift tıklayarak çalıştırabiliriz. Program, biz bir 
 ----------
 
 
-**Programlamaya Devam:**
+####Programlamaya Devam:
 
 Programlarımızı kaydetmeyi öğrenmişken hemen bir örnek yapalım ve bu işe ısınalım.
 
@@ -532,7 +532,7 @@ Ve bu şekilde program sonlanıyor. Şimdi bu bilgilerle programı tekrar çalı
 ----------
 
 
-**Len() fonksiyonu:**
+###Len() fonksiyonu:
 
 Programlamaya bir fonksiyon ile devam edeceğiz. Bu fonksiyon kullanımı açısından daha önce detaylıca öğrendiğimiz 'print' ve 'input' fonksiyonlarına benzer. 
 
@@ -599,7 +599,7 @@ Aslında dikkatinizi bir şeyin çekmiş olması gerek.
 ----------
 
 
-**Python'da Tip Dönüşümleri:**
+###Python'da Tip Dönüşümleri:
 
 Python'da şu anda veritipi olarak iki tip hakkında bilgi sahibiyiz. Bunlardan biri karakter dizileri (string) ve sayı değerleri.
 
@@ -650,7 +650,7 @@ Eğer genel anlamda anlaşıldıysa bu veritipleri hakkında detaylı bilgi edin
 ----------
 
 
-**Sayı Değerleri (Integer) :**
+####Sayı Değerleri (Integer) :
 
 Python'da sayı değerleri bildiğimiz sayı değerleri ile eşdeğerdir. Yani matematik dersinde kullandığımız tam sayı değerleri. Aritmetik işlemler yapılırken kullanılabilir. 
 
@@ -704,7 +704,7 @@ Bu şekilde 'karakter' nesnesini iki kez tanımladık. En son ne şekilde tanım
 ----------
 
 
-**Karakter Dizisi (string):**
+####Karakter Dizisi (string):
 
 Karakter dizilerini aslında birçok yerde gördük. Yani bu tipe aşinayız. Öncelikle karakter dizilerini nasıl tanımlıyorduk bunları görelim:
 
@@ -780,7 +780,7 @@ Bu nesneyle daha çok uğraşmamız gerekseydi farklı bir yolla yapabilirdik. B
 ----------
 
 
-**Ondalık Sayı (Float):**
+####Ondalık Sayı (Float):
 
 İsmindende anlaşıldığı üzere ondalık sayılar üzerinde duracağız. Merak edip alıştırmalar yapma şansını bulmuşsanız sayı değerlerinde bazı durumlarda verinin tipi farklı oluyordu. Evet programlama işi cümle değil. Ya da bu iş benim işim değil. Ben bir örnekle anlatatayım.
 
@@ -813,7 +813,7 @@ Eğer bir ondalık sayı nesnesinin sadece tam kısmına ihtiyaç duyuyorsanız 
 ----------
 
 
-**Son:**
+###Son:
 
 Bu serimizin 2. sayısınında sonuna geldik. Umarım amacıma ulaşmışımdır. Bu seri hakkında istek ve önerilerinizi forumda SUDO E-Dergi bölümünde. Python ile ilgili sorularınızı forumda Yazılım>>Programlama>>Python bölümünde belirtebilirsiniz.
 
@@ -821,7 +821,7 @@ Bu serimizin 2. sayısınında sonuna geldik. Umarım amacıma ulaşmışımdır
 ----------
 
 
-**Sorular: **
+###Sorular: 
 
 __Soru 1:__
     Ondalık sayıları yuvarlamak için 'round()' fonksiyonunu kullanırız. Round fonksiyonu iki parametre alır. Birincisi yuvarlanaak sayı, ikincisi     noktadan sonra hangi rakamın yuvarlanacağı. Parametreler birbirinden virgül ile ayrılır. Bir örnek verelim:
