@@ -9,6 +9,7 @@ $( document ).ready(function() {
     });
     new SimpleMDE(
         {
+            toolbar: ["bold", "italic", "heading-1", "heading-2", "heading-3", "|", "quote", "code", "unordered-list", "ordered-list", "|", "link", "image", "table", "horizontal-rule", "|", "preview", "side-by-side", "fullscreen", "|", "guide"],
             spellChecker: false,
             autosave: {
                 enabled: true,
