@@ -1,4 +1,4 @@
 ---
-	title: "yükseltme"
-	code: "yukseltme"
-	---
+title: "yükseltme"
+code: "yukseltme"
+---
