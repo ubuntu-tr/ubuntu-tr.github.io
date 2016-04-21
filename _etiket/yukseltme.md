@@ -1,0 +1,4 @@
+---
+	title: "yükseltme"
+	code: "yukseltme"
+	---
