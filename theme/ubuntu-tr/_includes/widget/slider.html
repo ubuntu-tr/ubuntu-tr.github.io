@@ -1,0 +1,17 @@
+<div class="flexslider">
+    <ul class="slides">
+        {% for post in site.data.slider %}
+            <li>
+                <a href="{{ post.url }}"><img src="{{ post.image }}" /></a>
+            </li>
+        {% endfor %}
+    </ul>
+    <script>
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide"
+        });
+    });
+    </script>
+</div>

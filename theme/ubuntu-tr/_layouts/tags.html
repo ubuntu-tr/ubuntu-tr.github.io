@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        {% include head.html %}
+    </head>
+    <body>
+        {% include header.html %}
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui cards link two stackable">
+                        {% assign list = site[page.type][page.title] %}
+                        {% include list/card.html %}
+
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+
+                    <h3 class="ui header orange dividing">
+                      En Çok Okunanlar
+                    </h3>
+                    <div class="ui items divided link">
+                        {% assign list = site.data.mostRead %}
+                        {% include list/item.html %}
+
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+</html>

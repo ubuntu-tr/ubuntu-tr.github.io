@@ -2,6 +2,12 @@
 title: Ubuntu-Tr Sudo
 #url: "http://localhost:4000" # the base hostname & protocol for your site
 url: "https://ubuntu-tr.github.io" # the base hostname & protocol for your site
+theme: ubuntu-tr
+themeDir: theme/ubuntu-tr
+
+# Where things are
+layouts_dir:  ./theme/ubuntu-tr/_layouts
+includes_dir: ./theme/ubuntu-tr/_includes
 
 # Build settings
 markdown: kramdown
@@ -18,33 +24,51 @@ paginate: 4
 comments: false
 
 collections:
-  kategori:
+  category:
     output: true
-  etiket:
+    permalink: /:title/
+  tag:
     output: true
+    permalink: /etiket/:path
   o:
     output: true
+  pages:
+    output: true
+    permalink: /:path
+  root:
+    output: true
+    permalink: /:path
 
 defaults:
   - scope:
       path: ""
-      type: kategori
+      type: category
     values:
       type: categories
-      layout: kategori_sayfasi
+      layout: categories
   - scope:
       path: ""
-      type: etiket
+      type: tag
     values:
       type: tags
-      layout: etiket_sayfasi
+      layout: tags
   - scope:
       path: ""
       type: posts
     values:
-      layout: makale_sayfasi
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  - scope:
+      path: "basic"
+      type: pages
+    values:
+      layout: 
   - scope:
       path: ""
       type: o
     values:
-      layout: listeleme_sayfasi
+      layout: others

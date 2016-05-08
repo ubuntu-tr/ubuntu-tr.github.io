@@ -1,0 +1,18 @@
+{% for post in list %}
+    {% include helper/date.html %}
+    {% include helper/category.html %}
+    <div class="card">
+        <a class="ui image" href="{{post.url}}"> 
+            <div class="ui blue ribbon label">{{ cat.title }}</div>
+            <img src="images/post{{post.url}}/{{post.thumb}}"> 
+        </a>
+        <div class="content">
+            <a class="header" href="{{post.url}}">{{post.title}}</a>
+            <div class="description"> {{ post.summary }} </div>
+        </div>
+        <div class="extra content"> 
+            <span class="right floated"> {{ date }} </span> 
+            <span> <i class="user icon"></i> {{post.author}} </span> 
+        </div>
+    </div>
+{% endfor %}

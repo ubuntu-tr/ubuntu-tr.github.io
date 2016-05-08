@@ -5,8 +5,8 @@ categories: "k4"
 tags: ["python","programlama","yazı dizisi"]
 permalink: "pyhton-programlama-seri-ii"
 summary: ""
-image: "images/pyhton-programlama-seri-ii.jpeg"
-thumb: "images/pyhton-programlama-seri-ii.jpeg"
+image: "pyhton-programlama-seri-ii.jpeg"
+thumb: "pyhton-programlama-seri-ii.jpeg"
 author: "Berkay Dedeoğlu"
 ---
 Tekrar merhaba...

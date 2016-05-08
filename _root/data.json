@@ -1,0 +1,24 @@
+---
+---
+{
+    "categories": [
+        {% assign posts = site.category %}
+        {% for post in posts %}
+        {% if post.code != site.category.first.code %},{% endif %}
+          {
+            "name": "{{ post.title }}",
+            "id": "{{ post.code }}"
+          }
+        {% endfor %}
+    ],
+    "tags": [
+        {% assign posts = site.tag %}
+        {% for post in posts %}
+        {% if post.code != site.tag.first.code %},{% endif %}
+          {
+            "name": "{{ post.title }}",
+            "id": "{{ post.code }}"
+          }
+        {% endfor %}
+    ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        {% include head.html %}
+    </head>
+    <body>
+        {% include header.html %}
+        <div class="ui container">
+
+            {% include widget/slider.html %}
+
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui cards link two stackable">
+
+                        {% assign list = site.posts %}
+                        {% include list/card.html %}
+
+                    </div>
+                </div>
+                <div class="column five wide">
+
+                    <h3 class="ui header orange dividing">
+                      Duyurular
+                    </h3>
+                    <div class="ui items divided link">
+                        {% assign list = site.data.news %}
+                        {% include list/item.html %}
+                    </div>
+
+                    <h3 class="ui header orange dividing">
+                      En Çok Okunanlar
+                    </h3>
+                    <div class="ui items divided link">
+                        {% assign list = site.data.mostRead %}
+                        {% include list/item.html %}
+                    </div>
+                    <h3 class="ui header orange dividing">
+                      Forumdan son yazılar
+                    </h3>
+
+                    <div id="rssForum" class="ui list">
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+
+    </body>
+</html>
