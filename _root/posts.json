@@ -1,0 +1,17 @@
+---
+---
+{
+    "posts": [
+        {% assign posts = site.posts %}
+        {% for post in posts %}
+            {% if forloop.index != 1 %},{% endif %}
+          {
+            "title": "{{ post.title }}",
+            "url": "{{ post.url }}",
+            "thumb": "{{ post.thumb }}",
+            "tags": "{{ post.tags | join:',' }}",
+            "category": "{{ post.categories }}"
+          }
+        {% endfor %}
+    ]
+}

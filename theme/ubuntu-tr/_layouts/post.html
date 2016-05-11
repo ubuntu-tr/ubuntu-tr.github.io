@@ -5,6 +5,7 @@
     <head>
         <title>{{ page.title }}</title>
         {% include head.html %}
+        <script src="{{ site.themeDir }}/js/relatedPosts.js"></script>
     </head>
     <body>
         {% include header.html %}
@@ -37,11 +38,9 @@
                 </div>
                 <div class="column five wide computer only">
                     <h3 class="ui header orange dividing">
-                      En Çok Okunanlar
+                      Benzer Yazılar
                     </h3>
-                    <div class="ui items divided link">
-                        {% assign list = site.data.mostRead %}
-                        {% include list/item.html %}
+                    <div id="rp" class="ui items divided link">
 
                     </div>
                 </div>
