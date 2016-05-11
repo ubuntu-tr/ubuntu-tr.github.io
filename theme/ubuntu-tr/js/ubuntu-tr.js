@@ -35,7 +35,7 @@ $( document ).ready(function() {
 
   $("#toc").tocify({context: ".markdown-body", scrollTo: "100", scrollHistory: true});
   $( document ).scroll(function() {
-    if($('body').scrollTop() > 300)
+    if($(document).scrollTop() > 300)
       $('#rp').hide();
     else
       $('#rp').show();
