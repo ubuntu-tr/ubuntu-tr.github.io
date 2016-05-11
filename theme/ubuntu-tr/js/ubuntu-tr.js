@@ -32,4 +32,12 @@ $( document ).ready(function() {
     $('label[for=g0], label[for=g1]').css('display', 'none');
     $('label[for=g2]').click();
   }
+
+  $("#toc").tocify({context: ".markdown-body", scrollTo: "100", scrollHistory: true});
+  $( document ).scroll(function() {
+    if($('body').scrollTop() > 300)
+      $('#rp').hide();
+    else
+      $('#rp').show();
+  });
 });

@@ -6,6 +6,9 @@
         <title>{{ page.title }}</title>
         {% include head.html %}
         <script src="{{ site.themeDir }}/js/relatedPosts.js"></script>
+        <script src="{{ site.themeDir }}/js/jquery-ui.min.js"></script>
+        <script src="{{ site.themeDir }}/js/tocify.js"></script>
+        <link rel="stylesheet" href="{{ site.themeDir }}/css/tocify.css">
     </head>
     <body>
         {% include header.html %}
@@ -43,6 +46,10 @@
                     <div id="rp" class="ui items divided link">
 
                     </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
