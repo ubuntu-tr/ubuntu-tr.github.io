@@ -1,11 +1,5 @@
 # Site settings
-title: Ubuntu-Tr Sudo
-#url: "http://localhost:4000" # the base hostname & protocol for your site
-url: "https://ubuntu-tr.github.io" # the base hostname & protocol for your site
-theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
-
-# Where things are
 layouts_dir:  ./theme/ubuntu-tr/_layouts
 includes_dir: ./theme/ubuntu-tr/_includes
 
@@ -18,11 +12,6 @@ timezone: Europe/Istanbul
 exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 gems: [jekyll-paginate]
 
-# YB Settings
-excerpt_separator: <!-- more -->
-paginate: 4
-comments: false
-
 collections:
   category:
     output: true
@@ -30,7 +19,7 @@ collections:
   tag:
     output: true
     permalink: /etiket/:path
-  o:
+  other:
     output: true
   pages:
     output: true
@@ -63,12 +52,7 @@ defaults:
     values:
       layout: page
   - scope:
-      path: "basic"
-      type: pages
-    values:
-      layout: 
-  - scope:
       path: ""
-      type: o
+      type: other
     values:
       layout: others
