@@ -3,7 +3,7 @@
     {% include helper/category.html %}
     <div class="card">
         <a class="ui image" href="{{post.url}}"> 
-            <div class="ui blue ribbon label">{{ cat.title }}</div>
+            <div class="ui {{ cat.color }} ribbon label">{{ cat.title }}</div>
             <img src="images/post{{post.url}}/{{post.thumb}}"> 
         </a>
         <div class="content">
