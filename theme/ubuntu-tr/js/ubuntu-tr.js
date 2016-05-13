@@ -33,7 +33,7 @@ $( document ).ready(function() {
     $('label[for=g2]').click();
   }
 
-  $("#toc").tocify({context: ".markdown-body", scrollTo: "100", scrollHistory: true});
+  $("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", scrollHistory: true, extendPage: false});
   $( document ).scroll(function() {
     if($(document).scrollTop() > 300)
       $('#rp').hide();
