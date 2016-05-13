@@ -1,4 +1,0 @@
----
-title: "yükseltme"
-code: "yukseltme"
----

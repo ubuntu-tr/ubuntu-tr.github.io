@@ -1,4 +1,0 @@
----
-title: "bildiri"
-code: "bildiri"
----

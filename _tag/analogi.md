@@ -1,4 +1,0 @@
----
-title: "analogi"
-code: "analogi"
----

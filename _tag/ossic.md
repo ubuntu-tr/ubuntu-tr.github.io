@@ -1,4 +1,0 @@
----
-title: "ossic"
-code: "ossic"
----
