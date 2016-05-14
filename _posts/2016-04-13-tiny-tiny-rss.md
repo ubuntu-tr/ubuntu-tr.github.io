@@ -34,7 +34,7 @@ tt-rss'yi kullanmak için iki nedeniniz olabilir:
 tt-rss için gereksinimleri de aktarırken sunucuda nelerin kurulu olması gerektiğinden bahsettik. Bu nedenle kendi sunucunuz olsun veya olmasın belirtilen bileşenlerin sağlanmış olması gerekmekte. Kendisi bir de veritabanı kullandığı için kurulumdan önce onun da oluşturulması gerekiyor. Bunların sağlandığını varsayarak tt-rss'nin kurulumunu anlatmaya geçelim. Hemen belirteyim, bu anlatımı yeni kurulmuş bir Ubuntu 14.04 üzerinde, LEMP (yani Nginx,Php,Mysql) üçlüsü ile deneyerek yapmaktayım.
 
 Uygulamanın son sürümüne şu adresten ulaşıyoruz: \\
-<https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.13.tar.gz>
+<https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.13.tar.gz> \\
 Eğer sunucuda git kurulu ise şu bağlantıdan da en güncel sürüme erişebiliriz:\\
 <https://github.com/gothfox/Tiny-Tiny-RSS.git>
 
@@ -151,9 +151,9 @@ Size yeni sürüm mevcutsa eskisinin yedeklenerek başka bir isim verileceği, y
 RSS takibi için dilediğiniz yolları kullanmanız mümkün. Tarayıcınızdan ilgili adresinize giderek takibi yapabileceğiniz gibi, kullandığınız tarayıcılara (Firefox, Chrome) eklentilerini kurarak size kaç tane okunmamış yazınız olduğun da hatırlatabilirsiniz. Eğer akıllı bir telefona sahipseniz Android üzerinde iki farklı uygulama mevcut. Biri resmi olan (geliştiricinin yazdığı) diğeri ise gayr-ı resmi olan bir uygulama. Resmi olan ücretli ve yedi günlük bir deneme süresi veriyor. Resmi olmayan ise ücretsiz ve kıyasladığım kadarıyla bana yeterli göründü. News+ kullanan varsa onun için de eklentisi mevcut. Sırasıyla geçelim bağlantıları:\\
 
 
-<https://play.google.com/store/apps/details?id=org.fox.ttrss>  
-<https://play.google.com/store/apps/details?id=org.ttrssreader>  
-<https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus.extension.ttrss>  
+<https://play.google.com/store/apps/details?id=org.fox.ttrss>  \\
+<https://play.google.com/store/apps/details?id=org.ttrssreader>  \\
+<https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus.extension.ttrss>  \\
  
 IOS tarafı ise şuradan bakabilirler ilgili uygulamaya fakat akıbeti hakkında bilgim yok maalesef :)  
 
