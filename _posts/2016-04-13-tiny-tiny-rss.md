@@ -1,8 +1,8 @@
 ---
 title: "Tiny Tiny RSS"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["rss", "php","Sudo 61. Sayı"]
+categories: "k5"
+tags: ["rss","php","Sudo 61. Sayı","ttrss"]
 permalink: "tiny-tiny-rss"
 summary: ""
 image: "1.png"
@@ -33,8 +33,10 @@ tt-rss'yi kullanmak için iki nedeniniz olabilir:
 
 tt-rss için gereksinimleri de aktarırken sunucuda nelerin kurulu olması gerektiğinden bahsettik. Bu nedenle kendi sunucunuz olsun veya olmasın belirtilen bileşenlerin sağlanmış olması gerekmekte. Kendisi bir de veritabanı kullandığı için kurulumdan önce onun da oluşturulması gerekiyor. Bunların sağlandığını varsayarak tt-rss'nin kurulumunu anlatmaya geçelim. Hemen belirteyim, bu anlatımı yeni kurulmuş bir Ubuntu 14.04 üzerinde, LEMP (yani Nginx,Php,Mysql) üçlüsü ile deneyerek yapmaktayım.
 
-Uygulamanın son sürümüne şu adresten ulaşıyoruz: https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.13.tar.gz
-Eğer sunucuda git kurulu ise şu bağlantıdan da en güncel sürüme erişebiliriz: https://github.com/gothfox/Tiny-Tiny-RSS.git
+Uygulamanın son sürümüne şu adresten ulaşıyoruz: \\
+<https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.13.tar.gz>
+Eğer sunucuda git kurulu ise şu bağlantıdan da en güncel sürüme erişebiliriz:\\
+<https://github.com/gothfox/Tiny-Tiny-RSS.git>
 
 Ben bu anlatımda git üzerinden edinip kurulumu gerçekleştireceğim.
 
@@ -131,7 +133,8 @@ Eğer her şey yolundaysa beslemelerin güncellendiğini ilgili çıktılardan g
 
 Bunun haricinde sunucudan değil de bilgisayar üzerinden yapılan bir güncelleme yöntemi de mevcut. O da tarayıcınızdan rss adresinize gitmek. Her seferinde uygulama beslemeleri güncelleyecektir. Bunun için de config.php dosyanızdaki **SIMPLE_UPDATE_MODE** değişkeninin tanımlı olması gerekiyor. Fakat, bu şekilde kullanımın hiçbir rahatlığı olmadığı için tercih edileceğini sanmıyorum. Ayrıca, tarayıcının kesinlikle bilgisayar üzerinden kullanılması gerekiyor zira bu özellik sadece bu arayüzde desteklenmekte. Telefonlarda kullanılamıyor yani.
 
-Beslemelerin güncellenmesi tamam, ola ki uygulamayı güncellemek istediğimizde ne yapacağız? İki yöntem mevcut: 1. Arayüz üzerinden, 2. Elle
+Beslemelerin güncellenmesi tamam, ola ki uygulamayı güncellemek istediğimizde ne yapacağız? İki yöntem mevcut: 1. Arayüz üzerinden, 2. Elle.
+
 Arayüz üzerinden yapabilmek için git sürümünü kullanıyor olmanız ve "updater" eklentisinin config.php dosyasında tanımlı olması gerekiyor ki varsayılan olarak tanımlı geliyor. Güncelleme için "Daha fazla -> Tercihler" yolunu takip ettiğinizde sayfanın en altında "Tiny Tiny RSS'i güncelle" bağlantısını görebilir ve güncellemeleri denetleyebilirsiniz. 
 
 İkinci yöntem ise elle uçbirimden şu şekilde gerçekleştirilebilir:
@@ -145,14 +148,16 @@ Size yeni sürüm mevcutsa eskisinin yedeklenerek başka bir isim verileceği, y
 
 ## RSS Takibi
 
-RSS takibi için dilediğiniz yolları kullanmanız mümkün. Tarayıcınızdan ilgili adresinize giderek takibi yapabileceğiniz gibi, kullandığınız tarayıcılara (Firefox, Chrome) eklentilerini kurarak size kaç tane okunmamış yazınız olduğun da hatırlatabilirsiniz. Eğer akıllı bir telefona sahipseniz Android üzerinde iki farklı uygulama mevcut. Biri resmi olan (geliştiricinin yazdığı) diğeri ise gayr-ı resmi olan bir uygulama. Resmi olan ücretli ve yedi günlük bir deneme süresi veriyor. Resmi olmayan ise ücretsiz ve kıyasladığım kadarıyla bana yeterli göründü. News+ kullanan varsa onun için de eklentisi mevcut. Sırasıyla geçelim bağlantıları:
+RSS takibi için dilediğiniz yolları kullanmanız mümkün. Tarayıcınızdan ilgili adresinize giderek takibi yapabileceğiniz gibi, kullandığınız tarayıcılara (Firefox, Chrome) eklentilerini kurarak size kaç tane okunmamış yazınız olduğun da hatırlatabilirsiniz. Eğer akıllı bir telefona sahipseniz Android üzerinde iki farklı uygulama mevcut. Biri resmi olan (geliştiricinin yazdığı) diğeri ise gayr-ı resmi olan bir uygulama. Resmi olan ücretli ve yedi günlük bir deneme süresi veriyor. Resmi olmayan ise ücretsiz ve kıyasladığım kadarıyla bana yeterli göründü. News+ kullanan varsa onun için de eklentisi mevcut. Sırasıyla geçelim bağlantıları:\\
 
-https://play.google.com/store/apps/details?id=org.fox.ttrss
-https://play.google.com/store/apps/details?id=org.ttrssreader
-https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus.extension.ttrss
+
+<https://play.google.com/store/apps/details?id=org.fox.ttrss>  
+<https://play.google.com/store/apps/details?id=org.ttrssreader>  
+<https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus.extension.ttrss>  
  
-IOS tarafı ise şuradan bakabilirler ilgili uygulamaya fakat akıbeti hakkında bilgim yok maalesef :)
-https://itunes.apple.com/us/app/tiny-reader-rss/id689519762?mt=8
+IOS tarafı ise şuradan bakabilirler ilgili uygulamaya fakat akıbeti hakkında bilgim yok maalesef :)  
+
+<https://itunes.apple.com/us/app/tiny-reader-rss/id689519762?mt=8>
 
 
 
