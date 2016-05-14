@@ -31,33 +31,46 @@ Clipperz'a giriş için kullanılabilecek tek seferlik parolalar üretebiliyorsu
 ## Kurulum
 
 Uyguluma geri planda PHP ve Python kullanabiliyor. Ben PHP ve MySQL ikilisi üzerinden anlatmayı tercih ettim. Terminal açtıktan sonra bağımlılıkları kurarak işe başlıyoruz.
+
 ```
 sudo apt-get install git python-git apache2 libapache2-mod-php5 php5-mysql mysql-server
 ```
+
 Eğer daha önce kurmadıysanız kurulum sırasında MySQL bir root parolası isteyecektir. Parolanızı girdikten sonra enter tuşuna basıp devam edebilirsiniz. İşlemler tamamlandığında ihtiyacımız olan her şeye sahip olacağız. Sıradaki işlem Clipperz'ın kodunu github'tan yerelimize almak.
+
 ```
 mkdir ~/calisma
 cd ~/calisma
 git clone https://github.com/clipperz/password-manager.git .
 ```
+
 Bu adımda Clipperz'ı inşa edeceğiz.
+
 ```
 ./scripts/build install --backends php --frontends beta
 ```
+
 Eğer bir sorun çıkmadıysa şu anda içinde bulunduğumuz dizin içerisinde target/php/ dizini ve bu dizin içerisinde de kullanacağımız dosyaların oluşturulmuş olması gerekiyor. Web sunucumuz Apache'nin varsayılan olarak kullandığı dizine bu dosyaları taşıyalım. Eğer bu dizini başka projeleriniz için kullanıyorsanız o dizin altında oluşturacağınız yeni bir dizine de taşıyabilirsiniz ilgili dosyaları.
+
 ```
 sudo mv target/php/* /var/www/
 ```
+
 Servislerin çalıştığından emin olalım.
+
 ```
 sudo service apaçhe2 restart
 sudo service mysql restart
 ```
+
 Şimdi uygulamanın kullanacağı veritabanını oluşturacağız.
+
 ```
 mysql -u root -p
 ```
+
 ile veritabanı sunucumuza bağlanalım. Bize kurulum sırasında belirlediğimiz root parolasını soracaktır, giriş yapıp enter ile devam ediyoruz. Sırayla şu komutları vereceğiz.
+
 ```
 CREATE DATABASE clipperzdb;
 CREATE USER 'clipperzyonetici'@'localhost' IDENTIFIED BY 'clipperzsifre';
@@ -65,10 +78,13 @@ GRANT ALL PRIVILEGES on clipperzdb.* to 'clipperzyonetici'@'localhost';
 FLUSH PRIVILEGES;
 quit
 ```
+
 Burada clipperzdb veritabanın adı, clipperzyonetici bu veritabanını kullanacak hesabın adı ve clipperzsifre hesaba ait parolayı ifade ediyor. Bu değerleri kendiniz uygun gördüğünüz şekilde değiştirebilirsiniz. Sıradaki işlemde bu oluşturduğumuz veritabanına ait bilgileri uygulamamıza tanıtacağız. Düzenlememiz gereken dosyayı açalım. Ben nano ile yapıyorum bu işlemi. Daha rahat ettiğiniz bir metin editörünü de kullanabilirsiniz.
+
 ```
 sudo nano /var/www/configuration.php
 ```
+
 Bu dosyadaki şu satırlar eğer yukarıdaki bilgileri kullandıysanız şöyle görünmeli:
 
 ```
@@ -78,6 +94,7 @@ $configuration['user']  = 'clipperzyonetici';      //      database user
 $configuration['pass']  = 'clipperzsifre';       //      database password
 $configuration['port']  = '3306';               //      database port
 ```
+
 Dosyayı yukarıdakine benzer şekilde düzenledikten sonra kaydedip kapatıyoruz. Şimdi kurulum işlemini yapacağız. Tarayıcımızı açıp şu adrese gidelim.
 
 http://localhost/setup/index.php
@@ -94,17 +111,23 @@ https://raw.github.com/clipperz/password-manager/master/frontend/beta/staticReso
 
 adresindeki metni kopyalayıp /var/www/beta/logout.html diye bir dosya oluşturuyoruz. 
 Ardından /var/www/dump.php dosyasını açıp $htmlContent satırını şu şekilde düzenliyoruz.
+
 ```
 $htmlContent = file_get_contents("./beta/index.html");
 ```
+
 Son olarak /var/www/beta/index.html dosyasındaki Clipperz_dumpUrl değişkenini aşağıdaki gibi gözükecek şekilde düzenliyoruz.
+
 ```
 Clipperz_dumpUrl = "/../dump.php"
 ```
+
 Sıra dosya sahipliklerini düzenlemeye geldi.
+
 ```
 sudo chown -R www-data:www-data /var/www/
 ```
+
 Bütün bu işlemleri tamamladığımızda artık Clipperz uygulamasını kullanabiliriz demektir. http://localhost/beta adresine gidip sağ taraftaki giriş formunun altında bulunan "create one" bağlantısına tıklayıp bir hesap oluşturduktan sonra uygulamaya giriş yapabiliriz. Bu aşamada bizi aşağıdaki gibi bir ekran karşılayacak.
 
 ![](1.png)

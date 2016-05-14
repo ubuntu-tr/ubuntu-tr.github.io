@@ -23,9 +23,11 @@ Geçen yazıda daha çok metin dosyaları içerisinde gezinme üzerinde durmuşt
 vim'in daima diğer metin editörlerinden daha üstün olduğu söylenir ve el alışkanlığı edinince (edinilebilince denmesi daha doğru bence)görsel metin dosyalarından da çok daha hızlıca istenilen işler halledilebilir denir. Ben buna katılıyorum fakat el alışkanlığı edinmenin ciddi bir pratik sonrasında olacağına inanıyorum. Tabi artık tüm uygulamalar eklenti eklenerek genişletilebiliyor ve istenilen özelliklerin eklenmesi sağlanabiliyor. Bu nedenle her bir metin editörü üzerinde uzman olmadığım için bu kadar iddialı konuşmayacağım fakat açık olmak gerekirse şahsi görüşüm bu söylenenin doğru olduğu yönünde.
 
 Metin düzenleyici ile yapabileceğimiz işlemler zaten sınırlıdır, eğer bir IDE, bir tanımlayıcı vs amacı ile kullanmıyorsak. Bir metin dosyası içerisinde ya bir metin eklemesi yaparus yani yeni metinler yazabiliriz, ya damevcut metinler üzerinde düzenleme yapabiliriz, silebiliriz yani özetle.
+
 ```
 vim örnek_dosya
 ```
+
 komutumuzu veriyoruz ve üzerinde işlemler yapacağımız yani içerisinde metinler olan (önemli bir metin dosyası olmazsa iyi olur, silme işlemlerini yanlışlıkla da olsa kaydetme ihtimaline karşı). Bir metin dosyasını kaç türlü silebiliriz, aklıma gelenleri sıralayayım:
 
 1. İleri doğru birer birer silebilirim bir metin dosyasını (normalde delete tuşu ile yaptığımız işlem)
@@ -51,59 +53,81 @@ Geçen sayıda belirtmediğimiz bir gezinme kısayolundan daha bahsetmiş olalı
 
 Burada silme komutlarını verirken dikkat etmemiz gereken önemli bir husus var: dd komutu. dd komutu seri bir şekilde verilebiliyor. Yani d tuşunu basılı tuttuğunuzda, vim bunları seri bir dd komutu olarak algılıyor ve sıra sıra satırları silmeye başlıyor. Dikkat etmemiz gereken nokta ise şu oluyor; d den sonra bir karakter girilmesi gereken silme kısayollarında biraz seri olmak gerekiyor, aksi halde d'ye bastıktan sonra uzun süre beklenecek olursa bunlar dd komutu olarak algılanacaktır.
 
-İlgili değişikliklerimizi yaptıktan sonra vim'den çıkmak için komutlarımız vardı; w, q, wq ya da q! olarak belirtmiştik bunları bir önceki yazıda. Tabi çıkmak zorunda değildik, sadece yapılan değişikliklerin saklandığından emin olmak için salt w komutunu da verebiliyorduk. Bunlar komut modunda verilen komutlardı. Yukarıda metin dosyasını tamamen normal modda düzenledik, bu nedenle çıkış için de yine normal mod kısayollarını kullanmak isteyebiliriz. Bu komutların açıkmalarını vermeyeceğim, sadece geçen yazıda üzerinde durduğumuz, komut modu muadillerini vereceğim. 
+İlgili değişikliklerimizi yaptıktan sonra vim'den çıkmak için komutlarımız vardı; w, q, wq ya da q! olarak belirtmiştik bunları bir önceki yazıda. Tabi çıkmak zorunda değildik, sadece yapılan değişikliklerin saklandığından emin olmak için salt w komutunu da verebiliyorduk. Bunlar komut modunda verilen komutlardı. Yukarıda metin dosyasını tamamen normal modda düzenledik, bu nedenle çıkış için de yine normal mod kısayollarını kullanmak isteyebiliriz. Bu komutların açıkmalarını vermeyeceğim, sadece geçen yazıda üzerinde durduğumuz, komut modu muadillerini vereceğim.
+
 ```
 ZQ = :q!
 ZZ = :wq
 ```
+
 Metin dosyalarında gezinme üzerinde durmuştuk önceki yazıda, bu yazıda ise normal modda iken bir dosyayı düzenleme ve işlemleri kaydederek ya da kaydetmeden çıkış yapma üzerine durduk. Metin dosyaları ile ana işlemler arasında tek eksiğimiz "arama işlemleri" kaldı.
 
 Normal modda ya da düzenleme modunda iken doğrudan / tuşuna basarak, akabinde aramak istediğiniz metini girebilirsiniz. Fakat vim büyük küçük harf duyarlıdır, bu nedenle örneğin "Configuration" şeklinde bir metin parçası ararken "configuration" yazarsanız aradığınızı bulamazsınız, bu durumda iki seçeneğiniz var, ya istediğinizi tam olarak doğru şekilde bilecek ve yazacaksınız ya da daha güzel ve modern bir alternatif olarak, harf duyarlılığını kapatacaksınız. Vim editöründe harf duyarlılığını komut moduna geçerek kapatabiliyoruz ya da açabiliyoruz. Hatırlarsınız normal moddan komut moduna geçmek için : tuşuna basmamız gerekiyordu. Gerçi düzenleme modunda : tuşuna basarsanız gerçekten metin içerisine : yazmış olursunuz. Yani düzenleme modunda iseniz önce ESC tuşu ile normal moda geçip akabinde : tuşuna basarak komut moduna geçiniz ve:
+
 ```
 :set ignorecase
 ```
+
 komutu ya da kısaltılmışı olan:
+
 ```
 :set ic
 ```
+
 komutunu aramalarda büyük harf küçük harf duyarlılığını kapatmak için kullanabiliyoruz (komutu yazıp enter tuşuna basınız, buradaki : komutun bir parçası değil, komut modunda yazmanız gerektiğine dikkat çekmek için kullanılan bir işarettir). Aramalardaki bu durumun iptali için ise:
+
 ```
 :set noic
 ```
+
 komutunu kullanmamız yeterli. Bu komuttan sonra aramalarımız tekrardan büyük küçük harf duyarlı hale gelecektir.
 
 Her mod ile ipucu vermeye özen gösterdiğimiz için komut modunda da, metin dosyası içerisinde gezinmekten bahsetmeden geçmeyelim. vim tabi ki komut modunda da gezinebilmeyi mümkün kılıyor. Bunun için komut modunda iken herhangi bir rakam yazmanız yeterli. Örneğin bir metin dosyası içerisinde hangi satıra gitmek istediğinizi biliyorsanız eğer o rakamı yazarak gidebilirsiniz, örneğin 1986. satıra gitmek istiyorsanız, önce normal modda iken : tuşuna basarak komut moduna geçtikten sonra ilgili rakamı yazıp, girdi (enter) tuşuna basmanız yeterli:
+
 ```
 :1986
 ```
+
 Bir adım ilerisi olarak, bir metin dosyasında gitmek istediğiniz karakteri biliyorsanız eğer, yukarıdaki örnek için, örneğin metin dosyasının 1986. karakterine gitmek istiyorsanız, komut moduna geçtikten sonra;
+
 ```
 :goto 1986
 ```
+
 Komutunu vermeniz yeterli. Bunlara ek olarak bu gezinmeler esnasında, dosyada satır sayılarının da görünmesini istiyorsanız eğer, "set number" ya da kısaltılmışı olan "set nu" komutunu kullanabilirsiniz.
+
 ```
 :set number
 ```
+
 Komutunu verdikten sonra satır numaralarını, satır başlarında görebilirsiniz. Bu komutun iptali için ise;
+
 ```
 :set nu!
 ```
+
 komutunu vermeniz yeterli.
 
 Komut modu ile ilgili de gezinme ipuçlarını verdikten sonra tekrar arama işlemlerine dönecek olursak, büyük/küçük harf duyarlı ve duyarsız arama yapmaktan bahsetmiştik son olarak. Bu yazının son ipucu olarak arama sonuçlarında gezinme üzerinde duracağız. Örneğin "configuration" anahtar kelimesini metin içerisinde aradım ve 10 tane "Configuration" bulundu diyelim ya da bulunacak farz edelim. Arama işlemini gerçekleştirdikten sonra yani normal mod ya da komut modunda iken
+
 ```
 /configuration
 ```
+
 yazıp, girdi tuşuna bastıktan hemen sonra, imleç ilk "Configuration" bulunan yere konuşlandırıldı diyelim. Bu aşamadan sonra, tekrar arama işlemi yapmamak için, bir sonraki "Configuration" ibaresi geçen yere imleci konuşlandırmak için n (next'in n'si) kısayolunu kullanıyoruz. Böylece bulunan ibareler arasında gezinebiliyoruz. n tuşuna basa basa 6. Configuration ibaresi bulunan yere geldim diyelim ve 5. pozisonya tekrar gitmek istersek de p kısayolunu kullanıyoruz (bu da previous'un p'si sanıyorum).
 
 Son ipucu olarak, normal modda arama ile komut modunda arama arasındaki fark olarak, normal modda;
+
 ```
 /configuration
 ```
+
 yazıp ararsanız imleç  doğrudan aranan kelimeye konuşlanır. Komut modunda arasanız da;
+
 ```
 :/configuration
 ```
+
 imleç doğrudan aranan kelimenin bulunduğu satır başına konuşlanır.
 
 Bir sonraki yazıda genel olarak bahsettimizi toparladıktan sonra seviyeyi arttırarak seriye devam edeceğiz.

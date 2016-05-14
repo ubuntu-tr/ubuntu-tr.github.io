@@ -32,10 +32,12 @@ Atareao'nun PPA'sı biraz "her şey dahil" PPA'lardan. İçinde alakasız bir d�
 Önlem olarak şöyle bir yol seçebilirsiniz: Depoyu eklersiniz, ihtiyacınız olanı kurar sonra da Yazılım Kaynakları'ndan depoyu devre dışı bırakırsınız.
 
 12.04-14.04 üzerinde yükleme için:
+
 ```
 sudo-add-apt-repository ppa:atareao/atareao
 sudo apt-get update && sudo apt-get install power-commands
 ```
+
 Yüklemeden hemen sonra butonların Ana Seçkedeki yerini almış olması gerekiyor. Almadıysa da çıkış yapıp yeniden Ana Seçkeyi açtığınızda seçenekler karşınıza gelecektir.
 
 Daha sonra silme gereksinimi duyarsanız da Ubuntu Yazılım Merkezi'nden "Power Commands" diye aratıp "sil" butonuna tıklamanız yeterli olacaktır.

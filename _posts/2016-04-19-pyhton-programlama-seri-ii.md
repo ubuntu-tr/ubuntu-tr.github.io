@@ -132,18 +132,21 @@ True
 >>> c == d
 False
 ```
+
 Eğer bu işleçlerin yaptığı kontrollerden olumlu sonuç alınıyorsa True değeri döndürülür. Eğer 'if' deyiminin karşısında True değeri varsa aşağısındaki kodlar çalıştırılır. Yani 'if' deyimini şu şekilde de kullanabilirsiniz:
 
 ```python
 if True:
     print('İf deyiminin karşısındaki ifade doğru')
 ```
+
 Bu şekilde if deyimi kontrol yapmadan bünyesindeki kodları çalıştırır. Python'da True ifadesi sayısal biçimde 1 olarak gösterilir. Yani bir önceki örnekle aşağıdaki örnek tamamen aynıdır:
 
 ```python
 if 1:
     print('İf deyiminin karşısındaki ifade doğru')
 ```
+
 Dilerseniz 'if' deyiminin karşısına bu kez de False değeri verelim. Aşağıdaki iki örnekte tıpkı yukarıdakiler gibi aynı şeyi ifade eder:
 
 ```python
@@ -155,6 +158,7 @@ if 0:
 if False:
     print('İf deyiminin karşısındaki ifade doğru')
 ```
+
 Yukarıdaki kodlardan birini denediyseniz hiçbir çıktı alınmadığını görmüşsünüzdür. 
 
 Şimdi çok küçük bir parola denetim programı yapıp konumuza devam edelim:
@@ -379,6 +383,7 @@ Ben bir Python3 programıyım.
 
 print(yazdır)
 ```
+
 Programı açıklamaya gerek yok. Tabi bir istisna hariç; eğer bir önceki sayıda bahsettiğimiz __string__ ifadelerini üç tırnak ile oluşturuyorsak dilediğimiz gibi alt satıra geçebiliriz, boşluk bırakabiliriz. Bu durum sadece __string__ ifadesini üç tırnak ile oluşturduğunuzda geçerlidir. Şimdi bu programı çalıştıralım:
 
 
@@ -426,6 +431,7 @@ Bu işlemi yalnızca bir kez yapmanız yeterlidir. Daha sonra programımıza ça
 ```text
 chmod +x deneme.py
 ```
+
 Bu şekilde dosyamızı çalıştırılabilirde yaptık. Bu sayede dosyaya çift tıklayınca bilgisayar bu dosyayı çalıştırmaya çalışacak.
 
 Ancak denediyseniz görmüşsünüzdür ki program çalışmadı. Çünkü işletim sistemine bu programı nasıl çalıştıracağına dair bir ipucu vermiyoruz. O halde programın kodlarını tekrar açıp ipucumuzu programın en başına yazalım:
@@ -441,6 +447,7 @@ Tabi bizim yazmış olduğumuz programda bir istisnai durum var. Programlar işl
 ```python
 input()
 ```
+
 Artık programımızı çift tıklayarak çalıştırabiliriz. Program, biz bir tuşa basana kadar kapanmaz.
 
 
@@ -587,6 +594,7 @@ else:
 input()
 
 ```
+
 Selim'den istenilen programı, mevcut bilgilerimizle, bu şekilde yazabiliriz. Tabi ki bu program istenileni kısmen karşılayabiliyor. Zaten amaç öğrenmek olduğundan herhangi bir problem yok.
 
 Bu programda giriş kısmını yorum satırları ile yaptık. Önce kullanıcıdan cümleyi aldık. Daha sonra bu cümleyi nesneye iliştirip işlemesi için 'len' fonksiyonuna verdik. 'len' fonksiyonunu da tekrar bir nesneye bağladık. Çünkü 'len' fonksiyonunun bize vereceği değer programın geri kalan kısmında bize lazım. Yani alınan değerin hafızada tutulması gerekiyor. Bu da nesnelendirme ile mümkün.
@@ -659,6 +667,7 @@ Sayı değeri oluşturmak için ek bir şey yapmaya gerek yok. Örneğin
 ```python
 >>> a = 2
 ```
+
 ifadesinde 'a' bir sayı değeridir.
 
 İfadeleri sayı değerine dönüştürmek için 'int' fonksiyonuna ihtiyaç duyarız. 
@@ -724,6 +733,7 @@ Karakter dizilerini aslında birçok yerde gördük. Yani bu tipe aşinayız. Ö
 <class 'str'>
 
 ```
+
 Karakter dizilerini bu şekilde tanımlıyorduk. Tanımlama işinin böyle 3 seçeneği olmasının nedeni ihtiyaçlardı. Örneğin şu ifadeyi tanımlayabilmek için;
 
 ```python
@@ -740,6 +750,7 @@ kodlarını kullandık. İllaha 'İzmir Belalısı' ifadesini tek tırnak ile ku
 >>> Karakter = """ 'İzmir Belalısı' ile başım dertte (!) """
 
 ```
+
 Verileri karakter dizisine çevirmek için str() fonksiyonundan yararlanırız. 
 
 Yani elimizde bir sayı değeri varsa bu değeri 'str()' fonksiyonu sayesinde karakter  dizisi haline çevirebiliriz.

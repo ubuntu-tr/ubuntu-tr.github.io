@@ -23,10 +23,12 @@ Maksimum dosya sayısı 2^64 adet ve maksimum dosya uzunluğu 255 karakterdir. T
 BTRFS dosya sistemi parçalanmayı azaltmaya yardımcı oluyor. Depolama aygıtları parçalanmadan ötürü genellikle başarım kaybına uğrarlar. BTRFS çevrimiçi disk birleştirmeye olanak tanır.
 
 Dosya sisteminin dolmasını önlemek için BTRFS sıkıştırmayı da destekliyor. Sıkıştırma işlemi için iki seçenek var: LZO ve zlib. Zlib’in daha hızlı sıkıştırma yapmasına karşın LZO daha küçük dosyalar oluşturur. Hangisini kullanacağınızı belirlemek için BTRFS biriminizi aşağıdakilerden biri ile bağlayabilirsiniz: 
+
 ```
 *compress=LZO
 *compress=zlib
 ```
+
 Disk alanı dolduğunda var olan BTRFS birimine alan eklemek mümkündür. Bunun için Çevrimiçi Yeniden Boyutlandırma yöntemini kullanabilirsiniz. Bu işlem için BTRFS dosya sisteminin bağının kaldırılması ya da çevrimdışı olması gerekmez. Tüm dosya sistemini yeniden boyutlandırmak adına var olan bir birim eklenebilir ya da kaldırılabilir. 
 
 Eğer bir birim ext3 ya da ext4 dosya sistemine sahipse, bu birim BTRFS'e dönüştürülebilir. Bu dönüşüm yerinde yapılan bir dönüşümdür, yani mevcut veri dosya sistemi dönüştürülmeden önce kaldırılmak zorunda değildir. Dönüşümün başarısız olması ve veri kaybı ihtimaline karşı için yedek almak iyi bir uygulama olacaktır. 

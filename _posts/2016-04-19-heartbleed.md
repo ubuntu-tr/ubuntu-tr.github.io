@@ -25,10 +25,12 @@ Gelelim nasıl korunabileceğimize;
 Öncelikle, mobil işletim sistemi olan Android de geçtiğimiz günlerde zaafiyetten payını aldı. Google’dan yapılan açıklamada Android 4.1.1 sürümünün açıktan etkilendiği bildirildi ve şu an android kullanıcılarının %34 gibi bir kısmı 4.1.x sürümünü kullanmakta. Korunabilmenizin şu an için tek çözümü güncelleme paketiniz var ise derhâl kurmak. Bunun dışında, üçüncü parti firmaların Google Play Store’de yayınladıkları uygulamaları –güvenli olduklarını düşünüyorsanız– kullanabilirsiniz.
 
 OpenSSL ‘in aşağıdaki sürümlerinden birini kullanıyorsanız, güvenlik güncellemesini yapmanızda fayda var;
+
 ```
 OpenSSL 1.0.1e-fips
 OpenSSL 1.0.1 1.0.1f
 ```
+
 Bir de varsayılan olarak, yani kurulduğunda OpenSSL ile gelen işletim sistemleri var, sürümlerine göre bunlar da zaafiyet içeriyor olabilirler;
 
  - Debian Wheezy (stable), OpenSSL 1.0.1e-2+deb7u4

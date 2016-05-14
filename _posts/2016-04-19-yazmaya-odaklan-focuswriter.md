@@ -51,9 +51,11 @@ Uygulama ile belgelerinizi iki farklı formatta kaydedebiliyorsunuz: Rich Text (
 FocusWriter'ın farklı platformlar için sürümleri mevcut. Bunun yanında Ubuntu Yazılım Merkezi'nden ulaşılabiliyor kendisine. 
 
 Ya da olmadı terminalden, 
+
 ```
 sudo apt-get install focuswriter
 ```
+
 demeniz yeterli.
 
 Keşfettiğimden bu yana işimi kolaylaştıran, keyifle kullandığım bir uygulama oldu FocusWriter. Denemenizi öneririm.

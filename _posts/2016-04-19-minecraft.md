@@ -61,9 +61,11 @@ Oyun ücretliymiş satın almak istemiyorum ücretsizi yokmu diyen arkadaşlar i
 Buradan 
 https://apps.ubuntu.com/cat/applications/precise/minetest/ 
 veya uçbirimde
+
 ```
 sudo apt-get install minetest
 ```
+
  yazarak yükleyebilirsiniz. 
 
 Minetest'e ait bir görüntü : 

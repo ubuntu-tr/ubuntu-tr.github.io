@@ -395,6 +395,7 @@ Başka programlama dillerini öğrendiyseniz ya da öğreniyorsanız bilirsiniz.
 print("Merhaba Dünya")
 
 ```
+
 IPython3 yazılımını ya da herhangi bir Python3 yorumlayıcısını açıp yukarıdaki satırı yazdığınızda ekranda şöyle bir çıktı alırız:
     
     Merhaba Dünya
@@ -432,15 +433,19 @@ print("Bu bir parametredir.")
 ```python3
 print("Print bir fonksiyondur")
 ```
+
 ```python3
 print("Print aldığı parametreleri ekrana yazar")
 ```
+
 ```python3
 print("Verilen parametre bir yazı dizisi ise tırnak işareti kullanmak gerekir")
 ```
+
 ```python3
 print("1234567890*-!'^+%&/()=?:;|}][{¾½$#")
 ```
+
 Gördüğünüz gibi print ona ne parametre verirsek ekrana yazdırdı, tabii tırnak içine aldığımız takdirde. Ancak aklınıza geldi mi bilmiyorum ama biz tırnak işreti kullanmamız gerektiğinde ne yapacağız?
 
 Örneğin ""İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kemal Beyatlı)" satırını ekrana yazdırmak için ne yapabiliriz? Önce bir tırnak içine koyarak deneyelim:
@@ -457,6 +462,7 @@ File "<stdin>", line 1
                 ^
 SyntaxError: invalid syntax
 ```
+
 Bu hatayı yukarıda print ifadesine yazı dizilerini tırnak içinde vermeyince de gördük. Sözdizimi hatası...
 
 Aslında işin başından beri yazı dizisi olarak belirttiğim şey Python'da karakter dizisi olarak adlandiırılır. Karakter dizileri tırnak içine aldığımız karakterlerdir. Yani birtakım karakteri tırnak içine aldığımızda karakter dizisi elde ediyoruz. Karakter dizilerini serinin öteki sayılarında detaylıca göreceğiz. Ancak karakter dizilerini oluşturmanın yöntemlerine ufaktan bir göz atalım. 
@@ -472,10 +478,13 @@ print('Merhaba Dünya')
 ```
 
 Üçüncü yol ise (""") yöntemidir. Yani karakter dizisinin başına ve sonuna üç adet çift tırnak işareti koymaktır.
+
 ```python3
 print("""Merhaba Dünya""")
 ```
+
 Bu ifade şöyle de kullanılabilir:
+
 ```python3
 print('''Merhaba Dünya''')
 ```
@@ -489,6 +498,7 @@ print(' "İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kem
 ```python3
 print("'İzmir üzerine dünyada bir şehir daha yoktur!' diyorlar. (Yahya Kemal Beyatlı)")
 ```
+
 Siz de diğer kombinasyonlarla deneyip aldığınız hataların sebeplerini araştırabilirsiniz.
 
 Print fonksiyonuna sadece bir parametre vermek zorunlu değildir. Parametreler virgüllerle ayrılır. Print fonksiyonuna birden fazla karakter dizinini parametre olarak verebiliriz. Yani şu ifade yanlış değildir:
@@ -496,6 +506,7 @@ Print fonksiyonuna sadece bir parametre vermek zorunlu değildir. Parametreler v
 ```python3
 print('Merhaba Dünya', "Ben Geldim")
 ```
+
 Print fonksiyonu parametreleri bu şekilde alınca araya bir boşluk bırakıp ekrana yazar. Bu sayede print fonksiyonu sonsuz parametre alabilir.
 
 **Nesneden print'e, Python çağırıyor:**
@@ -512,6 +523,7 @@ b = 'Nesne'
 c = '2 kalem'
 A = 5
 ```
+
 Aslında nesneleme işlemi eşitlemektir. Yani yukarıdaki kodları şöyle çevirebiliriz:
 
 > a Python için 2 demektir. b ise Python için 'Nesne' demektir.
@@ -526,6 +538,7 @@ d = 'Mareketten'
 
 print(c, b, 'poşet', d, a, 'poşet')
 ```
+
 Bu şekilde print fonksiyonuna nesneleri de ekleyebileceğimizi gördük. Aynı zamanda print fonksiyonuna sayı değeri verebileceğimizde görmüş olmalısınız. 'a' ve 'b' nesneleri tırnak işaretleri arasında olmayan sayı içeriyor. Buna rağmen print hata vermeden çalıştı. İşte size yeni bir veri tipi. Python'da sayı veritipini normal şekilde belirtebiliriz. Print, sayı veritipinide başarıyla ekrana yazdırabilir.
 
 
@@ -538,6 +551,7 @@ Print fonksiyonu sadece sizin vereceğiniz parametrelerle sınırlı değildir. 
     ```python3
     print('Merhaba Dünya', "Ben Geldim")
     ```
+
     Örneğimiz buydu. Bunu çalıştırdığımızda alacağımız çıktı:
     
         Merhaba Dünya Ben Geldim
@@ -553,6 +567,7 @@ Print fonksiyonu sadece sizin vereceğiniz parametrelerle sınırlı değildir. 
     
     print(a, b, c)
     ```
+
     Ipython3'te bunun aynısını yaptığımızda aldığımız çıktı:
     
         Fizik Kimya Biyoloji
@@ -577,6 +592,7 @@ Print fonksiyonu sadece sizin vereceğiniz parametrelerle sınırlı değildir. 
     ```python3
     print('Nane', 'Nane', sep=" - ", end=" ")
     ```
+
 Eğer bu örneği IPython3 te çalıştırdıysanız hiçbir değişiklik gözlememiş bulunmaktasınız. IPython3 yapısı gereği bu tür değişiklikleri esgeçer. Siz bu örneği bir de normal yorumlayıcıdan deneyin ve değişikliği görün.
 
     Burada yapmış olduğumuz şey print fonksiyonuna 'işin bitince alt satıra geçme bir boşluk bırakıp devam et' demek. Ve bu söylemi print'e end="  " ifadesiyle anlattık. İşimiz bitince bir kez daha nane yazdırmak isteseydik böyle bir kod yazabilirdik:
@@ -596,11 +612,13 @@ Input fonksiyonuna giriş adına bu örneği IPython'a yazalım:
 ```python3
 input("Giriş: ")
 ```
+
 Bu örneği çalıştırdığınızda karşınıza bir Giriş:  yazısı çıkar. Eğer hiçbir şeye basmadan devam ettiyseniz bir OUT[..] satırı ve karşısında '' karakterlerini görürsünüz.
 
 Bu kodu tekrar çalıştırıp Giriş: yazısına herhangi bir şey yazın. OUT[..] çıktısında o yazdığınız karakterleri göreceksiniz. 
 
 Yani input fonksiyounun içine yazdığımız karakter dizisi önce ekranda görünür. Ardından Python bizden cevap bekler. Cevabı verip 'enter' tuşuna basınca input fonksiyonu bu cevabı döndürür. Input fonsiyonu için birkaç örnek:
+
 ```python3
 input('Giriniz:')
 input('Lütfen Giriş Yapın: ')
@@ -626,14 +644,19 @@ a
 Bir önceki bölümde input fonksiyonunu nesneye atadık. Şimdi bu atadığımız nesneyi biraz kullanalım.
 
 Öncelikle Python yorumlayıcısını açalım ve bir input nesnesi oluşturalım örneğin:
+
 ```python3
 Giriş = input('Lütfen Kullanıcı Adınızı Girin: ')
 ```
+
  Bu input nesnesini artık istediğimiz gibi kullanabiliriz. Örneğin :
+
 ```python3
 print(Giriş)
 ```
+
 Tabii bu çok kolay oldu. Şimdi öğrendiklerimizle daha kullanışlı bir şeyler yapalım:
+
 ```python3
 Hoşgeldiniz_Yazısı = """
 Hoş Geldiniz...
@@ -661,6 +684,7 @@ b = 5 - 6
 c = 3 * 2
 d = 3 / 1
 ```
+
  Hemen çıktıları görelim:
  
     >>> a
@@ -687,10 +711,13 @@ Sonucun 56.770833333333336 sayısı olması gerekli.
 Bu aritmetik operatörler dışında 2 operatör daha bilmemiz bize yarar sağlar.
 
 * __%:__ Bölme işleminden kalanı verir
+
 ```python3
 8 % 3
 ```
+
 * __**:__ Sayının kuvvetini almaya yarar. Şimdi çıktıları ile birlikte örnek yapalım:
+
 ```python3
 >>>3 ** 2
 9
@@ -698,6 +725,7 @@ Bu aritmetik operatörler dışında 2 operatör daha bilmemiz bize yarar sağla
 >>>2 ** 10
 1024
 ```
+
 ### Karakter Dizilerinin Toplama ve Çarpma Özelliği:
 Konunun başında aritmetik işleçler sadece sayılar için kullanılır dedik. Aslında aritmetik işleç olarak kullanılmasa da çarpma işlemi ve toplama işlemi sembolleri diğer veritiplerinde de kullanılabilir. Şimdilik bunlardan karakter dizileri için olan kısmı işleyeceğiz.
 
@@ -709,6 +737,7 @@ Python'da karakter dizilerine kendi aralarında toplama işlemi uygulamak bu diz
 ```
 
 Daha işe yarar bir örnek:
+
 ```python3
 >>> a = 'Sen'
 >>> b = 'Ben'
