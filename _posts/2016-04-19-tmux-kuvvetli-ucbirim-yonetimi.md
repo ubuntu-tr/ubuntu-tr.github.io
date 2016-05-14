@@ -70,8 +70,8 @@ Tmux kendi tecrübelerimden edindiğim kadarıyla da Screen'den daha hızlı cev
 
 Tmux'un öne çıkan bazı özellikleriyle Screen'den nasıl farklılaştığına daha da fazla değinebilirdim aslında, ancak listemiz kabarıp gidecektir. Bu nedenle aradaki farkları yüzeysel olarak maddeleyip diğer bazı farkları kullanarak veya araştırarak öğrenmeniz için size bırakıyorum. Yine de maddelemesek bile Tmux'un öne çıkan bazı özelliklerinden bahsedelim. 
 
-Tmux ile pencereleri istediğimiz bir anda eşzamanlı olarak kullanabiliriz. Şöyle düşünün. İki penceremiz var ve ayrı ayrı iki sunucuya bağlandık. Hatta sunucu sayısı iki değil de on olsun, haliyle pencere veya bölme sayımız da on olacaktır. Bu sunucuların hepsinde aynı anda apt-get update ve apt-get upgrade yürütmek istiyoruz. Tüm sunucu bağlantılarını yaptıktan sonra Tmux oturumunda bir komut yürüterek tüm bu pencereleri "senkronize" edebiliriz: **"set-window-option synchronize-panes on|off"**  
-
+Tmux ile pencereleri istediğimiz bir anda eşzamanlı olarak kullanabiliriz. Şöyle düşünün. İki penceremiz var ve ayrı ayrı iki sunucuya bağlandık. Hatta sunucu sayısı iki değil de on olsun, haliyle pencere veya bölme sayımız da on olacaktır. Bu sunucuların hepsinde aynı anda apt-get update ve apt-get upgrade yürütmek istiyoruz. Tüm sunucu bağlantılarını yaptıktan sonra Tmux oturumunda bir komut yürüterek tüm bu pencereleri "senkronize" edebiliriz: 
+```set-window-option synchronize-panes on|off```
 Birer adet apt-get update ve apt-get upgrade komutu on sunucuda birden çalışacaktır. Bu işlemden sonra birleştirdiğimiz pencere veya bölmeleri ayırarak tekrar her sunucu için ayrı ayrı çalışmaya devam edebiliriz. 
 
 
