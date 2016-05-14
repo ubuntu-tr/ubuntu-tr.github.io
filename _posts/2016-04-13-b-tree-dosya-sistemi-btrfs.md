@@ -55,6 +55,6 @@ Dosya sistemi yayımlamak özgün dosya sisteminin salt-okunur kopyasını yapma
 Bir yazılımın kararlı olması onun fazla değiştirilmemesi anlamına gelir. Btrfs’in şu anda yoğun bir geliştirme döneminde olduğunu düşünürsek, Btrfs şu an için kararlı değil diyebiliriz. Bu sebeple Btrfs şu anda deneysel amaçlı olarak nitelendiriliyor ve Linux dağıtımlarında varsayılan dosya sistemi olarak kullanılmıyor.
 
 ## Kaynaklar
-[http://www.linux.org/threads/b-tree-file-system-btrfs.4430/](http://www.linux.org/threads/b-tree-file-system-btrfs.4430/) \\
-[http://www.maketecheasier.com/what-is-btrfs/](http://www.maketecheasier.com/what-is-btrfs/) \\
+[http://www.linux.org/threads/b-tree-file-system-btrfs.4430/](http://www.linux.org/threads/b-tree-file-system-btrfs.4430/)  
+[http://www.maketecheasier.com/what-is-btrfs/](http://www.maketecheasier.com/what-is-btrfs/)  
 [http://www.belgeler.org/](http://www.belgeler.org/)
