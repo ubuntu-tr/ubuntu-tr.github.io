@@ -1,8 +1,8 @@
 ---
 title: "Vim - Seri II"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 61. Sayı"]
+categories: "k5"
+tags: ["Sudo 61. Sayı","vim","metin","editör"]
 permalink: "vim-seri-II"
 summary: ""
 image: "1.png"
