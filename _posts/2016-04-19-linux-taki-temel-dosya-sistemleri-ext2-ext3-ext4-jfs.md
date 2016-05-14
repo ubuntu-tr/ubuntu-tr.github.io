@@ -1,8 +1,8 @@
 ---
 title: "Linux'taki Temel Dosya Sistemleri: ext2,ext3,ext4,jfs & xfs"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 60. Sayı"]
+categories: "k5"
+tags: ["Sudo 60. Sayı","dosya","sistem","ext2","ext3","ext4","jfs","xfs"]
 permalink: "linux-taki-temel-dosya-sistemleri-ext2-ext3-ext4-jfs"
 summary: "Orijinal Linux sistemi, Unix dosya sistemine işlevsellik bakımından benzeyen basit bir dosya sistemi kullanır. Bu makalede Linux'ta kullanılan temel dosya sistemlerini tartışacağız."
 image: "1.png"
@@ -58,7 +58,7 @@ Veri kipi güncelleme yöntemi çok daha güvenli bir veri koruma yöntemidir; a
 ### Uzatılmış Linux Günlükleme Dosya Sistemleri
 Ext ve ext2 dosya sistemlerini geliştiren aynı ekip, Linux projesinin bir parçası olarak bu dosya sistemlerinin günlükleme sürümlerini oluşturdu. Günlükleme dosya sistemleri ext2 ile uyumudur ve aralarında eskiye ya da ileriye dönmek kolaydır. Şu anda ext2 dosya sistemine dayalı iki ayrı günlükleme sistemi vardır.
 
-## Ext3 Dosya Sistemi 
+## Ext3 Dosya Sistemi
 
 Ext3 dosya sistemi, Linux çekirdeğine 2001 yılında eklendi ve son yıllara değin neredeyse tüm Linux dağıtımları tarafında öntanımlı olarak kullanılan dosya sistemiydi. Tıpkı ext2 dosya sistemi gibi aynı inode tablo yapısını kullanır; fakat depolama aygıtına yazılan veriyi günlüklemek için her depolama aygıtına bir günlükleme dosyası ekler.
 
@@ -66,11 +66,11 @@ Ext3 dosya sistemi, Linux çekirdeğine 2001 yılında eklendi ve son yıllara d
 
 Ext3 dosya sistemi, Linux dosya sisteminin temel günlüklemesine eklendiğinde hâlen birkaç noksan tarafı vardı. Örneğin, ext3 dosya sisteminde kazara dosyaların silinme durumu için kurtarma kipi bulunmuyor, mevcut gömülü veri sıkıştırma özelliği yok (ayrı olarak yüklenen ve bu özelliği sağlayan bir yama var sadece) ve ext3 dosya sistemi dosyaların şifrelenmesini desteklemiyor. Bu sebeplerden ötürü geliştiriciler ext3 dosya sistemini ilerletme konusu üstünde çalışmaya devam etmeyi seçtiler.
 
-## Ext4 Dosya Sistemi 
+## Ext4 Dosya Sistemi
 
 Genişleyen ext3 dosya sisteminin bir sonucu olarak (tahmin edeceğiniz gibi) ext4 ortaya çıktı. Ext4 dosya sistemi resmî olarak 2008'de Linux çekirdeğinde desteklendi. Şimdi de Fedora ve Ubuntu gibi en çok kullanılan Linux dağıtımlarında öntanımlı dosya sistemidir.
 
-Sıkıştırma ve şifreleme desteğine ek olarak, ext4 dosya sistemi aynı zamanda kaplam (extens) diye adlandırılan bir özelliği de destekliyor. Kaplam, depolama aygıtında bloklar hâlinde alan ayırır ve sadece inode tablosundaki başlangıç konumu bloğuna depolar. Bu işlem, dosyadan veri depolamada kullanılan tüm veri bloklarını listemeye gerek kalmadan alan tasarruf etmeye yardımcı olur. 
+Sıkıştırma ve şifreleme desteğine ek olarak, ext4 dosya sistemi aynı zamanda kaplam (extens) diye adlandırılan bir özelliği de destekliyor. Kaplam, depolama aygıtında bloklar hâlinde alan ayırır ve sadece inode tablosundaki başlangıç konumu bloğuna depolar. Bu işlem, dosyadan veri depolamada kullanılan tüm veri bloklarını listemeye gerek kalmadan alan tasarruf etmeye yardımcı olur.
 
 Ext4 dosya sistemi, önceden blok ayırmaya imkân veriyor. Eğer bir süre için bir depolama aygıtında boyutunu arttırabileceğiniz bir yer ayırmak isterseniz, sadece fiziksel olarak var olan bloklar için değil, aynı zamanda dosya için de tüm beklenen blokları ayırmak mümkün. Ext4 dosya sistemi, ayrılan veri bloklarını sıfırlarla doldurur ve diğer başka dosyalara ayırmaması gerektiğini bilir.
 
@@ -96,9 +96,8 @@ XFS günlükleme dosya sistemi, aslında yolu Linux dünyasından geçen ticari 
 
 XFS dosya sistemi geri yazma kipi günlüklemeyi kullanır, bu yöntem yüksek başarım sağlar ama aynı zamanda bir miktar riski de beraberinde getirir, çünkü güncel veri günlükleme dosyasına kaydedilmez. XFS dosya sistemi, ReiserFS dosya sistemine benzer biçimde çevrimiçi olarak dosya sistemini yeniden boyutlandırma olanağı sunar, bunun haricinde XFS dosya sistemleri sadece genişletilebilir, fakat daraltılamaz.
 
-Bunların haricinde geleceği parlak bir dosya sistemi daha var: BTRFS. Onu da bir sonraki sayımızda ele almayı planlıyoruz. 
+Bunların haricinde geleceği parlak bir dosya sistemi daha var: BTRFS. Onu da bir sonraki sayımızda ele almayı planlıyoruz.
 
 
 ## Kaynak
-http://www.nextstep4it.com/categories/how-to/linux-filesystem/
-
+<http://www.nextstep4it.com/categories/how-to/linux-filesystem/>

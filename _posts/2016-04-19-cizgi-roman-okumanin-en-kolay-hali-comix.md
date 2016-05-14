@@ -1,8 +1,8 @@
 ---
 title: "Çizgi Roman Okumanın En Kolay Hâli: Comix"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 60. Sayı"]
+categories: "k5"
+tags: ["Sudo 60. Sayı","Comix","çizgi roman","Python"]
 permalink: "cizgi-roman-okumanin-en-kolay-hali-comix"
 summary: "Çok sevdiğimiz çizgi romanları bilgisayardan okumak, epey meşakkatli olabiliyor. Resim görüntüleyici programları ile açıp okumak, insanı çizgi romandan bile soğutur. Ama bunu kolaylaştıran güzel bir uygulamamız var: Comix."
 image: "comix_gorsel_1.png"
@@ -24,7 +24,7 @@ Eğer başka bir çizgi romanı açmak istersem, birinde kaldığım yere ayraç
 
 ![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_3.png)
 
-Bir de sayfa boyutlandırması özelliği hakkında konuşalım. Comix size dört farklı seçenek sunuyor bu noktada. Sayfayı ekrana enine, boyuna göre yerleştirebilir ya da ben kendim büyütüp de okurum, sen bir şey yapma, diyebilirsiniz. Yine sayfa görünümü açısından da ayarlamalar mevcut. Dedik ya çizgi romanlara göre tasarlanmış diye, çizgi romanlarınızı yan yana iki sayfa veya tek sayfa görüntüleyebilirsiniz. Hatta, art arda gelen sayfaların yerini değiştirmeniz de mümkün. 
+Bir de sayfa boyutlandırması özelliği hakkında konuşalım. Comix size dört farklı seçenek sunuyor bu noktada. Sayfayı ekrana enine, boyuna göre yerleştirebilir ya da ben kendim büyütüp de okurum, sen bir şey yapma, diyebilirsiniz. Yine sayfa görünümü açısından da ayarlamalar mevcut. Dedik ya çizgi romanlara göre tasarlanmış diye, çizgi romanlarınızı yan yana iki sayfa veya tek sayfa görüntüleyebilirsiniz. Hatta, art arda gelen sayfaların yerini değiştirmeniz de mümkün.
 
 ![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_4.png)
 
@@ -39,5 +39,3 @@ Menüleri oldukça kolay Comix'in. Belki Edit > Preferences menüsü üzerinde b
 Unutmadan Comix'in Ubuntu Yazılım Merkezi'nde yer aldığını da söyleyelim.
 
 Keyifli okumalar...
-
-

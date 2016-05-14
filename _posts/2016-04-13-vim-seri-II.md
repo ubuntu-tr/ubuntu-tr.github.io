@@ -39,13 +39,13 @@ komutumuzu veriyoruz ve üzerinde işlemler yapacağımız yani içerisinde meti
 
 Bunlar aslında fazla bile fakat ihtiyaç duyulan özellikler gerçekten kod yazarken ya da bir ayar dosyasını düzenlerken. Bunlardan bazılarını gerçekten artık görsel metin editörleri de sağlıyor. Pek bilinmiyor ya da kullanılmıyor olsa da örneğin 3. ve 4. adımları normal silme işleminizi yaparken ctrl tuşuna basarak Gedit ile de yapabilirsiniz. Ama bizim konumuz vim olduğu için biz konumuza tekrar dönelim:
 
-2'inci işlemi girizgahın istisnası olarak kabul edeceğim, düzenleme moduna geçmeden, normal modda düzenleme ibaresine yönelik bir istisna. Çünkü bu işlemi yapmak için komut moduna geçip bazı komutları vermemiz gerekiyor. Daha kolay olduğu için önce i tuşu ile düzenleme moduna geçmenizi ve akabinde istediğiniz ve bildiğiniz gibi backspace tuşunuzu kullanmanızı önereceğim. 
+2'inci işlemi girizgahın istisnası olarak kabul edeceğim, düzenleme moduna geçmeden, normal modda düzenleme ibaresine yönelik bir istisna. Çünkü bu işlemi yapmak için komut moduna geçip bazı komutları vermemiz gerekiyor. Daha kolay olduğu için önce i tuşu ile düzenleme moduna geçmenizi ve akabinde istediğiniz ve bildiğiniz gibi backspace tuşunuzu kullanmanızı önereceğim.
 
 1'inci adımdaki işlemi yapmak için normal modda iken "x" tuşunu kullanıyoruz. Düzenleme modunda iken klavyeyi zaten bildiğimiz şekilde kullandığımız için bu mooda iken ekstra bir bilgiye ihtiyacımız yok. Bunu artık zaten bildiğinizi kabul ederek daha sonraki normal mod komutlarında ilgili işlemi düzenleme modunda zaten normal şekilde yapabileceğiniz vurgusundan kaçınacağım.
 
 Önceki yazımızdan hatırlayacağınız b,w komutları vardı. Metin içerisinde karakter karakter değil, sözcük sözcük ilerlemek için kullanmıştık bu iki kısayolu. Bu harfleri silme işlemleri için de kullanacağız, tek bir farkla, başlarına delete ibaresinin d harfini getirerek. b komutu bir normal modda gezinme esnasında önceki sözcüğe geçmemizi, w ise bir sonraki sözcüğe geçmemizi sağlıyordu. Bu durumda bir imlecin bulunduğu pozisyondan itibaren bir önceki sözcüğü silmek için db mevcut sözcüğü silmek için ise dw kısayollarını kullanacağız.
 
-Olduğu gibi mevcut satırı silmek isteyecek olursak da dd kısayolunu kullancağız ve imlecin bulunduğu mevcut satırı olduğu gibi sileceğiz. Ya da imlecin bulunduğu mevcut satırda, olduğu satırı silmek yerine, mevcut imleç pozisyonundan itibaren sadece satır sonuna kadar olan bölümü silmek istersek d$ kısayolunu kullabiliyoruz. 
+Olduğu gibi mevcut satırı silmek isteyecek olursak da dd kısayolunu kullancağız ve imlecin bulunduğu mevcut satırı olduğu gibi sileceğiz. Ya da imlecin bulunduğu mevcut satırda, olduğu satırı silmek yerine, mevcut imleç pozisyonundan itibaren sadece satır sonuna kadar olan bölümü silmek istersek d$ kısayolunu kullabiliyoruz.
 
 Fark ettiyseniz, birinci yazıda bahsettiğimiz gezinme kısayollarının başına d koyduğumuz zaman, ilgili gezinme kısayolu silme kısayoluna dönüşüveriyor.
 
@@ -133,4 +133,3 @@ imleç doğrudan aranan kelimenin bulunduğu satır başına konuşlanır.
 Bir sonraki yazıda genel olarak bahsettimizi toparladıktan sonra seviyeyi arttırarak seriye devam edeceğiz.
 
 Şimdilik herkese kolay gelsin diyerek bırakıyoruz.
-

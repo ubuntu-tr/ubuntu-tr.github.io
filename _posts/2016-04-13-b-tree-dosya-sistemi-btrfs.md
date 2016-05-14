@@ -16,22 +16,22 @@ Sabit disk için tek önemli konu kapasitesi değildir. Dikkat edilmesi gereken 
 Dosya sistemi sabit diskin dosyaları nasıl depolayacağını, dosyalara nasıl erişeceğini ve yöneteceğini belirleyen sistemdir. Kısaca, disk üzerindeki dosyaların organize edilmesidir diyebiliriz. Aynı sabit disk üzerinde farklı işletim sistemleri kullanılabilmesine rağmen, bu işletim sistemleri aynı dosya sistemini kullanmazlar. Farklı işletim sistemleri farklı dosya sistemlerini kullanır. Windows NTFS kullanmayı tercih ederken, MAC OS X şu anda HFS+ dosya sistemini kullanmaktadır. Linux dağıtımlarının birçoğu ise ext4 dosya sistemi kullanmayı tercih etmektedir.
 
 ## Dosya sistemi ifadesini anladık, Btrfs nedir?
-B-Tree dosya sistemi Oracle tarafından 2007 yılında oluşturuldu ve Linux 2.6.29 çekirdeğine 2009 yılında eklendi. 
+B-Tree dosya sistemi Oracle tarafından 2007 yılında oluşturuldu ve Linux 2.6.29 çekirdeğine 2009 yılında eklendi.
 
-Maksimum dosya sayısı 2^64 adet ve maksimum dosya uzunluğu 255 karakterdir. Teorik olarak maksimum dosya boyutu limiti 16 EB ya da Linux'un çekirdek sınırlamasına göre 8 EB olabiliyor. 
+Maksimum dosya sayısı 2^64 adet ve maksimum dosya uzunluğu 255 karakterdir. Teorik olarak maksimum dosya boyutu limiti 16 EB ya da Linux'un çekirdek sınırlamasına göre 8 EB olabiliyor.
 
 BTRFS dosya sistemi parçalanmayı azaltmaya yardımcı oluyor. Depolama aygıtları parçalanmadan ötürü genellikle başarım kaybına uğrarlar. BTRFS çevrimiçi disk birleştirmeye olanak tanır.
 
-Dosya sisteminin dolmasını önlemek için BTRFS sıkıştırmayı da destekliyor. Sıkıştırma işlemi için iki seçenek var: LZO ve zlib. Zlib’in daha hızlı sıkıştırma yapmasına karşın LZO daha küçük dosyalar oluşturur. Hangisini kullanacağınızı belirlemek için BTRFS biriminizi aşağıdakilerden biri ile bağlayabilirsiniz: 
+Dosya sisteminin dolmasını önlemek için BTRFS sıkıştırmayı da destekliyor. Sıkıştırma işlemi için iki seçenek var: LZO ve zlib. Zlib’in daha hızlı sıkıştırma yapmasına karşın LZO daha küçük dosyalar oluşturur. Hangisini kullanacağınızı belirlemek için BTRFS biriminizi aşağıdakilerden biri ile bağlayabilirsiniz:
 
 ```
 *compress=LZO
 *compress=zlib
 ```
 
-Disk alanı dolduğunda var olan BTRFS birimine alan eklemek mümkündür. Bunun için Çevrimiçi Yeniden Boyutlandırma yöntemini kullanabilirsiniz. Bu işlem için BTRFS dosya sisteminin bağının kaldırılması ya da çevrimdışı olması gerekmez. Tüm dosya sistemini yeniden boyutlandırmak adına var olan bir birim eklenebilir ya da kaldırılabilir. 
+Disk alanı dolduğunda var olan BTRFS birimine alan eklemek mümkündür. Bunun için Çevrimiçi Yeniden Boyutlandırma yöntemini kullanabilirsiniz. Bu işlem için BTRFS dosya sisteminin bağının kaldırılması ya da çevrimdışı olması gerekmez. Tüm dosya sistemini yeniden boyutlandırmak adına var olan bir birim eklenebilir ya da kaldırılabilir.
 
-Eğer bir birim ext3 ya da ext4 dosya sistemine sahipse, bu birim BTRFS'e dönüştürülebilir. Bu dönüşüm yerinde yapılan bir dönüşümdür, yani mevcut veri dosya sistemi dönüştürülmeden önce kaldırılmak zorunda değildir. Dönüşümün başarısız olması ve veri kaybı ihtimaline karşı için yedek almak iyi bir uygulama olacaktır. 
+Eğer bir birim ext3 ya da ext4 dosya sistemine sahipse, bu birim BTRFS'e dönüştürülebilir. Bu dönüşüm yerinde yapılan bir dönüşümdür, yani mevcut veri dosya sistemi dönüştürülmeden önce kaldırılmak zorunda değildir. Dönüşümün başarısız olması ve veri kaybı ihtimaline karşı için yedek almak iyi bir uygulama olacaktır.
 
 BTRFS aynı veriyi kullanan birden çok görev olduğunda kaynakları idare etmek için Copy On Write (COW - Yazarken Kopyasını Oluştur) yöntemini kullanır. Bir uygulama bir dosyadaki veriyi talep ediyorsa, veri belleğe ya da önbelleğe gönderilir. Daha sonra her uygulama kendi bellek alanına sahip olur. Eğer birden çok uygulama aynı veriyi talep ederse, COW tek bellek alanı ayırır ve tüm uygulamalara bu alanı gösterir. Eğer uygulamalardan birisi veriyi değiştirirse, bu uygulamaya yeni güncellenen bilgi ile birlikte kendi bellek alanı tahsis edilir. Diğer uygulamalar ise orijinal veri ile eski gösterileni kullanmaya devam ederler. COW’un kullanımı birçok uygulamanın eski veriyi kullanabilmesini gerektirir.
 

@@ -1,8 +1,8 @@
 ---
 title: "Süreç Sonlandırma"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 30. Sayı"]
+categories: "k2"
+tags: ["Sudo 30. Sayı","kill","pkill","killall","süreç sonlandırma","PID"]
 permalink: "surec-sonlandirma"
 summary: ""
 image: "1.jpg"
@@ -59,7 +59,7 @@ Buraya işlem yapacağınız sürecin pid numarasını girin (istenilen süreç 
 
 ## Kill PID 3460 with signal [15]
 
-Bu bölümde de bize sorulan sürece göndermek istediğimiz sinyalin numarasıdır. Yine 9 göndererek sonlandırabiliriz (SIGKILL). 
+Bu bölümde de bize sorulan sürece göndermek istediğimiz sinyalin numarasıdır. Yine 9 göndererek sonlandırabiliriz (SIGKILL).
 
 Bir başka alternatif olarak htop komutu verip (sisteminizde htop yüklü değilse şu komut ile kurabilirsiniz;  sudo apt-get install htop), işlem yapacağımız süreç üzerine gelerek "k" tuşuna bastığınızda size biraz daha görsel ve açık olarak göndermek istediğiniz sinyal sorulacak. Buradan istediğiniz sinyali seçebilirsiniz ayrıca gönderebileceğiniz diğer sinyal alternatiflerini de görebilirsiniz. Sonlandırma işlemi için SIGKILL sinyalinin en garanti olacağını belirterek geçelim.
 

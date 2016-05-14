@@ -1,8 +1,8 @@
 ---
 title: "SDL ile Oyun Programcılığı"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 33. Sayı"]
+categories: "k2"
+tags: ["Sudo 33. Sayı","SDL","Oyun","program"]
 permalink: "sdl-ile-oyun-programciligi"
 summary: ""
 image: "1.jpg"
@@ -17,9 +17,9 @@ Burada yazacağımız dersler 2 Boyutlu basit oyunlar yapmamız için bir temel 
 Oyun yapımı hakkında bu kadar önbilgiden sonra şimdide kullanacağımız kütüphane hakkında biraz bilgi verelim. Programlama dili olarak C++ kullanacağız çünkü C++ bu endüstride kabul görmüş bir dil. Hız olarak en verimli dil olduğu söyleniyor. Oyun yapımı için C++ ile birlikte kısaca SDL diye bilinen bir kütüphane kullanacağız. SDL aslında bir kısalmadır ki açılımı şu şekildedir. Simple DirectMedia Layer. Aşağıdaki yazıyı aynen Wikipediadan buraya aktardım.
 
 >SDL (Simple DirectMedia Layer), ilk olarak 1998 yılında Sam Lantinga tarafından C programlama dili ile yazılımş, çapraz platform, özgür ve açık kaynak kodlu yazılım çoklu ortam kütüphanesi. Birçok platformda değişikliğe gerek duymadan grafik, ses, klavye, fare etkileşimi sunan bir arabirim niteliğindedir.
-
+>
 >Yazılım geliştiriciler SDL kullanarak birçok platform (Linux, Syllable, Haiku/BeOS, OpenVMS, Windows, Mac OS X, AmigaOS ve klonu MorphOS) için bilgisayar oyunları ve çoklu ortam uygulamaları geliştirebilirler.
-
+>
 >Zaman içerisinde C dilinin dışında C++, Perl, Python ve Pascal gibi birçok popüler dil içinde SDL kütüphaneleri geliştirilmiş, yaygın olarak kullanılmaktadır.
 
 Yukarıda da yazdığı gibi kütüphanemiz C ile yazılmış, açık kaynak ve platform bağımsız bir kütüphanedir. Bu kütüphaneyi kullanarak 2D(2 Boyutlu) oyunlar yapabiliriz.
@@ -39,14 +39,14 @@ libsdl-ttf2.0-dev
 libsdl-mixer1.2
 libsdl-mixer1.2-dev
 libsdl-net1.2
-libsdl-net1.2-dev 
+libsdl-net1.2-dev
 ```
 
 Bu paketleri kurmak şimdilik bizim için yeterli eğer gerekli olursa gerektiği zaman başka kütüphanelerde kurarız. Bu kütüphanelerden kurduğumuz ilk üç kütüphane SDL çekirdek kütüphaneleridir. İmage kütüphanesi grafik işlemleri ile alakalı kütüphanedir. SDL sadece .bmp uzantılı grafik dosyalarını hafızaya yükler ve işlem yapabilir.Diğer dosya formatlarını da kullanabilmek için bu kütüphaneden yararlanacağız.TTF(True Type Fonts) kütüphanesi ekrana belli fontlar kullanarak yazılar yazmak için kullanacağımız kütüphanedir. Sessiz bir oyun tabiki yeteri kadar heyacan vermiyecektir. Ses ile ilgili işlemler için Mixer kütüphanesini kullanacağız.Net kütüphanesinin işlevini ise tahmin edebilirsiniz, bu da network işlemleri ile alakalı kütüphanedir.
 
 ## Derleme Ayarları
 
-Kütüphanemizi sistemimize kurduktan sonra derleme işleminin nasıl yapılacağına göz atalım. Konsol kullanarak C++ kodlarını derlemek için 
+Kütüphanemizi sistemimize kurduktan sonra derleme işleminin nasıl yapılacağına göz atalım. Konsol kullanarak C++ kodlarını derlemek için
 
 ```
 g++ kaynak.cpp -o program_adi
@@ -66,10 +66,10 @@ g++ kaynak.cpp -o program_adi -lSDL
 
 komutlarını kullanırız.Eğer bir IDE kullanıyorsak yapmamız gereken ayarlarda hemen hemen aynıdır.Burada örnek olarak NetBeans geliştirme ortamı için gerekli ayarları anlatacağım. Diğer geliştirme ortamları içinde ayarlar benzer olacaktır. Aslında yaptığımız iş derleyicinin Linker(Bağlayıcı) ayarlarını, parametrelerini ayarlamaktır. İlk olarak C++ projemizi açıyoruz.  Sol üst tarafta açıtığımız projeyi görüyoruz. Bunun üzerine sağ tuşla tıklıyoruz ve Properties(Özellikler) kısmına giriyoruz. Burası ilgili proje üzerinde yapacağımız ayarların özellikleri bulunmaktadır, biz burada C++ derleyici ayarlarını yapacağımız için C++ compiler bölümüne giriyoruz. Açılan ayarlardan Command Line bölümü altındaki Additional Options bölümüne gerekli anahtarımızı giriyoruz -lSDL. Hepsi bu kadar.
 
-## SDL Alt Sistemleri 
+## SDL Alt Sistemleri
 
 C++ programcıları bazı kütüphaneleri kullanırken ilk olarak ilklenmesi gerektiğini biliyorlardır. İşte SDL'de de aynı durum sözkonusudur. SDL fonksiyonları kullanılmadan önce SDL'nin ilklenmesi, çalıştırılması veya kullanıma hazırlanması gerekir. Artık siz bu işleme ne ad verirseniz.
-	
+
 SDL 8 tane alt sisteme sahiptir.Bunlar Ses, Video(Grafik), Timer(Zaman), CD-ROM, Olay Yakalama(Event), Çoklu Görev(Thread), Joystick ve Dosya Giriş-Çıkış sistemleridir.Bu sistemleri kullanmadan önce çalıştırılması gerekir.Bu çalıştırma programın başında olabileceği gibi gerektiği zamanda yapılabilir.Çalıştırmak için
 
 ```
@@ -86,16 +86,16 @@ kodu kullanılır.Diğer alt sistemlerin bayrak listesi aşağıdaki gibidir.
 
 ```
 SDL_INIT_EVERYTHING - Bütün sistemleri çalıştırır.
-SDL_INIT_VIDEO - Grafik(Video) 
-SDL_INIT_TIMER - Zamanlayıcı 
-SDL_INIT_AUDIO - Ses 
+SDL_INIT_VIDEO - Grafik(Video)
+SDL_INIT_TIMER - Zamanlayıcı
+SDL_INIT_AUDIO - Ses
 SDL_INIT_CDROM - CD-Rom
 SDL_INIT_JOYSTICK – Joystick
 SDL_INIT_EVENTTHREAD - Çok görevlilik(Thread)
-SDL_INIT_NOPARACHUTE - SDL'in hata sinyallerini yakalamasını önler 
+SDL_INIT_NOPARACHUTE - SDL'in hata sinyallerini yakalamasını önler
 ```
 
-Bu sistemleri işimiz bittiği zaman kapatmamız gerekir.Bunun için de 
+Bu sistemleri işimiz bittiği zaman kapatmamız gerekir.Bunun için de
 
 ```
 SDL_Quit()
@@ -108,8 +108,8 @@ SDL_QuitSubSystem()
 ```
 
 komutu kullanılır. Kapatmak istediğimiz alt sistemin bayrağını argüman olarak bildiririz.
-	
-Şimdi şunu sorabilirsiniz birden fazla alt sistemi nasıl çalıştırabiliriz? Cevabı basit çalıştırmak istediğimiz alt sistemlerin bayrak değişkenlerini bit düzeyinde işlem yapan veya bağlacı ( | ) ile bağlamamız gerekir.Mesela zamanlayıcı ve grafik alt sistemlerini çalıştırmak istersek
+
+Şimdi şunu sorabilirsiniz birden fazla alt sistemi nasıl çalıştırabiliriz? Cevabı basit çalıştırmak istediğimiz alt sistemlerin bayrak değişkenlerini bit düzeyinde işlem yapan veya bağlacı ( \| ) ile bağlamamız gerekir.Mesela zamanlayıcı ve grafik alt sistemlerini çalıştırmak istersek
 
 ```
 SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO)
@@ -121,11 +121,11 @@ Son olarakta bir sistemin o anda çalışır vaziyette olup olmadığını kontr
 
 SDL_WasInit() fonksiyonunu kullanmanız gerekir.Argüman olarak çalışıp çalışmadığı öğrenilmek istenilen alt sistemin bayrak değişkeni alır.Sıfırdan farklı bir değer dönüyorsa sistem çalışıyor durumdadır.Ufak bir kod parçası verecek olursak şöyle
 
-```	
-	if(SDL_WasInit(SDL_INIT_VIDEO)!=0) 
-            printf("Video alt sistemi yüklü.\n"); 
-            else 
-            printf("Video alt sistemi yüklü değil.\n"); 
+```
+if(SDL_WasInit(SDL_INIT_VIDEO)!=0)
+          printf("Video alt sistemi yüklü.\n");
+          else
+          printf("Video alt sistemi yüklü değil.\n");
 ```
 
 Yukarıdaki kod zaten herşeyi anlatıyor.
@@ -138,22 +138,22 @@ Sabırsızlandığınızı biliyorum ama işin temelini de göstermek gerektiği
 
 ```
 //Ornek1-Pencere olusturma
-#include <SDL/SDL.h> 
-#include <iostream> 
-using namespace std; 
-int main(){ 
-	if(SDL_Init(SDL_INIT_EVERYTHING)==-1){ 
-		cout<<"Butun sistemler baslatilamadi\n"; 
-		return 0; 
-	} 
-	cout<<"SDL sistemleri baslatildi.\n"; 
-	SDL_Surface *pencere=NULL; 
-	pencere=SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE); 
-	SDL_Flip(pencere); 
-	SDL_Delay(3000); 
-	SDL_Quit(); 
-	cout<<"SDL sistemleri durduruldu.\n"; 
-	return 0; 
+#include <SDL/SDL.h>
+#include <iostream>
+using namespace std;
+int main(){
+	if(SDL_Init(SDL_INIT_EVERYTHING)==-1){
+		cout<<"Butun sistemler baslatilamadi\n";
+		return 0;
+	}
+	cout<<"SDL sistemleri baslatildi.\n";
+	SDL_Surface *pencere=NULL;
+	pencere=SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE);
+	SDL_Flip(pencere);
+	SDL_Delay(3000);
+	SDL_Quit();
+	cout<<"SDL sistemleri durduruldu.\n";
+	return 0;
 }
 ```
 
@@ -172,7 +172,7 @@ int main(){
 |SDL_OPENGLBLIT | Üstteki gibidir ama aynı zamanda blitting (*yardım*) işlemlerine izin verir.|
 |SDL_RESIZABLE | Boyutlandırılabilir bir pencere yaratır. Pencere boyutları değiştirildiği zaman SDL_VIDEORESIZE olayı tetiklenir ve SDL_SetVideoMode yeni boyut ile tekrar çağırılabilir.|
 |SDL_NOFRAME | Mümkün ise çerçevesiz bir pencere yaratır. Tam ekran modu otomatik olarak bu bayrağı etkinleştirir.|
-	
+
 Bir video modunun uygun olup olmadığınıda kontrol edebilirsiniz.Bunun için kullanmanız gereken,
 
 ```
@@ -182,10 +182,10 @@ SDL_VideoModeOK(640,480,32,SDL_SWSURFACE)
 eğer uygun değil ise false, uygunsa true değerleri döner.Örnek bir kullanım ise şöyle verilebilir.
 
 ```
-	if (!SDL_VideoModeOK(640, 480, 32, SDL_HWSURFACE)) 
-            cout<<"Ekran modu uygun değil.\n"; 
-            else 
-            cout<<"Ekran modu uygun.\n"; 
+	if (!SDL_VideoModeOK(640, 480, 32, SDL_HWSURFACE))
+            cout<<"Ekran modu uygun değil.\n";
+            else
+            cout<<"Ekran modu uygun.\n";
 ```
 
 SDL_Flip() fonksiyonu argüman olarak bildirilen yüzeyi günceller.Burada pencere adlı yüzeyi ekranda gösterilecek olan asıl yüzey olarak ayarlamıştık, bu ayarların güncellenmesi gerekir ki bu yüzey ekranda gözüksün. Bu işlemi SDL_Flip() fonksiyonu ile yapıyoruz. Bu fonksiyonu kaldırıp tekrar derleyerek programınızdaki değişiklikleri gözlemleyebilirsiniz.
@@ -198,27 +198,27 @@ SDL_Delay() fonksiyonu penceremizin hemen kapanmaması için kullandığımız b
 Pencere açmayı öğrendiğimize göre bu pencereye bir grafik koymakla işe başlayalım. Bu işlem hakkında ön bilgi vermek gerekirse bir kaç söz söyleyebiliriz. İlk olarak grafik dosyası hafızaya yüklenir bu yüklenen dosya tabiki SDL_Surface yapısı kullanılarak hafızada tutulur. Yüklediğimiz grafiğin tutulduğu yüzeyi ana pencere olarak kullanacağımız yüzeyin üstüne uyguluyoruz. Uygulamakla grafik hemen gözükmez, gözükmesi için bu yüzeyin yenilenmesi gerekir. Yüzeyimizi yeniledikten sonra grafiğimiz artık ekranda gözükecektir.Yuklemek istediğimiz grafik dosyası programımız ile aynı dizinde olmalıdır.Fonksiyona argüman olarak dosyanın ismi verilir, eğer farklı bir yerde ise dosyanın dizinide yazılmalıdır.
 
 ```
-//ornek2- grafik yuklemek 
-#include <SDL/SDL.h> 
-#include <iostream> 
-using namespace std; 
-int main(){ 
-	if(SDL_Init(SDL_INIT_EVERYTHING)==-1){ 
-		cout<<"Butun sistemler baslatilamadi\n"; 
-		return 0; 
-	} 
-	cout<<"SDL sistemleri baslatildi.\n"; 
-	SDL_Surface *pencere=NULL; 
-	SDL_Surface *grafik=NULL; 
-	pencere=SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE); 
-	grafik=SDL_LoadBMP("merhaba.bmp"); 
-	SDL_BlitSurface(grafik,NULL,pencere,NULL); 
-	SDL_Flip(pencere); 
-	SDL_Delay(3000); 
-	SDL_FreeSurface(grafik); 
-	SDL_Quit(); 
-	cout<<"SDL sistemleri durduruldu.\n"; 
-	return 0; 
+//ornek2- grafik yuklemek
+#include <SDL/SDL.h>
+#include <iostream>
+using namespace std;
+int main(){
+	if(SDL_Init(SDL_INIT_EVERYTHING)==-1){
+		cout<<"Butun sistemler baslatilamadi\n";
+		return 0;
+	}
+	cout<<"SDL sistemleri baslatildi.\n";
+	SDL_Surface *pencere=NULL;
+	SDL_Surface *grafik=NULL;
+	pencere=SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE);
+	grafik=SDL_LoadBMP("merhaba.bmp");
+	SDL_BlitSurface(grafik,NULL,pencere,NULL);
+	SDL_Flip(pencere);
+	SDL_Delay(3000);
+	SDL_FreeSurface(grafik);
+	SDL_Quit();
+	cout<<"SDL sistemleri durduruldu.\n";
+	return 0;
 }
 ```
 

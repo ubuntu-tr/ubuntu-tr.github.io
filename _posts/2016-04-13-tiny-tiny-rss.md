@@ -10,9 +10,9 @@ thumb: "1.png"
 author: "Heartsmagic"
 ---
 
-RSS, senelerdir var olan bir teknoloji. Birden fazla kaynağı takip etmek için var olanlar arasında muhtemelen en güzeli de. Özellikle mobil tarafın hayatımıza çekirge sürüsü gibi giren akıllı telefonlarla baskın hâle gelmesiyle beraber, RSS kullanımı daha da kolaylaştı. Zira elimizin altında aklımıza geldiği anda "Neler yazmış bakalım takip ettiğim yerler?" sorusuna cevap alabileceğimiz bir bilgisayar mevcut. 
+RSS, senelerdir var olan bir teknoloji. Birden fazla kaynağı takip etmek için var olanlar arasında muhtemelen en güzeli de. Özellikle mobil tarafın hayatımıza çekirge sürüsü gibi giren akıllı telefonlarla baskın hâle gelmesiyle beraber, RSS kullanımı daha da kolaylaştı. Zira elimizin altında aklımıza geldiği anda "Neler yazmış bakalım takip ettiğim yerler?" sorusuna cevap alabileceğimiz bir bilgisayar mevcut.
 
-RSS ile tanıştığımda büyük çoğunluğun yaptığı gibi bu işi Google Reader'a yıkmıştım. Seneler boyunca da kendisini memnuniyetle kullandım. Akıllı bir telefona sahip olduğumda da kendisiyle devam ettim, ta ki geçen seneye kadar. Bildiğimiz üzere Google bu hizmetini geçen sene sonlandırdı. Birçokları gibi ben de anlam veremedim ancak Google'ın işine bazen akıl sır ermeyebiliyor. Bir süre boşluğa düşüp birkaç uygulama denedikten sonra yine büyük çoğunluğun geçiş yaptığını tahmin ettiğim gibi Feedly uygulamasına geçmiştim, tabi telefon üzerinde. Fakat, kendisine bir türlü alışmak kısmet olmadı. Nedense sürekli eski, bildiğim, aşina olduğum RSS arayüzünü arıyordum. 
+RSS ile tanıştığımda büyük çoğunluğun yaptığı gibi bu işi Google Reader'a yıkmıştım. Seneler boyunca da kendisini memnuniyetle kullandım. Akıllı bir telefona sahip olduğumda da kendisiyle devam ettim, ta ki geçen seneye kadar. Bildiğimiz üzere Google bu hizmetini geçen sene sonlandırdı. Birçokları gibi ben de anlam veremedim ancak Google'ın işine bazen akıl sır ermeyebiliyor. Bir süre boşluğa düşüp birkaç uygulama denedikten sonra yine büyük çoğunluğun geçiş yaptığını tahmin ettiğim gibi Feedly uygulamasına geçmiştim, tabi telefon üzerinde. Fakat, kendisine bir türlü alışmak kısmet olmadı. Nedense sürekli eski, bildiğim, aşina olduğum RSS arayüzünü arıyordum.
 
 Bir süre önce Tiny Tiny RSS (tt-rss) ile tanıştım (aslında uzunca bir süredir mevcut olan bir uygulama)  ve memnuniyetle kullanmaktayım. Memnun kaldığımdan ötürü de kullanmak isteyenler çıkabilir diyerek kendisini tanıtmak istedim. Yazının başı sayılabilecek bu noktada bir uyarı geçelim, iki tıkla halledilebilecek bir uygulama değil tt-rss. Geliştiricisi gereksinimlerini sıralarken sanal veya gerçek bir sunucudan bahsetmekte. Gerçi sunucu üzerinde yapılanları eğer paylaşımlı barındırma hizmeti aldığınız yerde de yapabiliyorsanız sorun olmayacaktır diye düşünüyorum. Kısacası kendisi sunucu tabanlı çalışan bir uygulama. Gereksinimleri yazalım:
 
@@ -29,7 +29,7 @@ tt-rss'yi kullanmak için iki nedeniniz olabilir:
 1. Benim durumumda olduğu gibi bir türlü doğru uygulamayı hâlâ bulamamış olmanız.
 2. Verilerinizi ilk defa ya da artık bundan sonra başka birilerinin eline vermek istemiyor olmanız.
 
-## Kurulum 
+## Kurulum
 
 tt-rss için gereksinimleri de aktarırken sunucuda nelerin kurulu olması gerektiğinden bahsettik. Bu nedenle kendi sunucunuz olsun veya olmasın belirtilen bileşenlerin sağlanmış olması gerekmekte. Kendisi bir de veritabanı kullandığı için kurulumdan önce onun da oluşturulması gerekiyor. Bunların sağlandığını varsayarak tt-rss'nin kurulumunu anlatmaya geçelim. Hemen belirteyim, bu anlatımı yeni kurulmuş bir Ubuntu 14.04 üzerinde, LEMP (yani Nginx,Php,Mysql) üçlüsü ile deneyerek yapmaktayım.
 
@@ -44,9 +44,9 @@ Ben bu anlatımda git üzerinden edinip kurulumu gerçekleştireceğim.
 git clone https://github.com/gothfox/Tiny-Tiny-RSS.git
 ```
 
-Komutu verdiğiniz dizinde Tiny-Tiny-RSS ismindeki dizine inecektir uygulama. Esasında kurulum çok kolay. Fakat kurulumun yapılacağı dizin biraz çetrefilli olacak. tt-rss kendisini (rss beslemelerini değil) güncellemesi esnasında mevcut dizinin ismini değiştirip yeni bir dizin üzerinden sürüm yükselttiği için hem kendi dizininde hem de bir üstteki dizinde yazma hakkı arıyor. Ayrıca, hem kendisini hem de beslemeleri güncelleme işini root kullanıcı veya yetkiye bürünmüş kullanıcı ile yapmamızı istemiyor. Bu nedenden ötürü kendi sunucusu üzerinde işlem yapanlar yetkisiz bir kullanıcıya bu işi yaptırmalılar ya da daha doğrusu root haricindeki yetkili kullanıcıları olsa bile sudo kullanmamalılar. İşte bu mecburiyet nedeniyle kurulum şu şekilde yapılabilir: htp://alan-adı/birinci_dizin/ikinci_dizin. Örneğin: http://alan-adı/rss/tt-rss 
+Komutu verdiğiniz dizinde Tiny-Tiny-RSS ismindeki dizine inecektir uygulama. Esasında kurulum çok kolay. Fakat kurulumun yapılacağı dizin biraz çetrefilli olacak. tt-rss kendisini (rss beslemelerini değil) güncellemesi esnasında mevcut dizinin ismini değiştirip yeni bir dizin üzerinden sürüm yükselttiği için hem kendi dizininde hem de bir üstteki dizinde yazma hakkı arıyor. Ayrıca, hem kendisini hem de beslemeleri güncelleme işini root kullanıcı veya yetkiye bürünmüş kullanıcı ile yapmamızı istemiyor. Bu nedenden ötürü kendi sunucusu üzerinde işlem yapanlar yetkisiz bir kullanıcıya bu işi yaptırmalılar ya da daha doğrusu root haricindeki yetkili kullanıcıları olsa bile sudo kullanmamalılar. İşte bu mecburiyet nedeniyle kurulum şu şekilde yapılabilir: htp://alan-adı/birinci_dizin/ikinci_dizin. Örneğin: http://alan-adı/rss/tt-rss
 
-Buradaki önemli konu mevcut rss ve tt-rss dizinlerinin biraz önce bahsetmiş olduğumuz yetkisiz kullanıcı tarafından yazılabiliyor olmasıdır. Şimdi, örnekte verdiğimiz benzer yapıyı oluşturup kuruluma devam edelim. 
+Buradaki önemli konu mevcut rss ve tt-rss dizinlerinin biraz önce bahsetmiş olduğumuz yetkisiz kullanıcı tarafından yazılabiliyor olmasıdır. Şimdi, örnekte verdiğimiz benzer yapıyı oluşturup kuruluma devam edelim.
 
 ```
 mkdir rss
@@ -77,7 +77,7 @@ Tekrar yapılandırmayı denetlediğimizde artık bize "Configuration check succ
 
 ![](images/post/tiny-tiny-rss/ttrss_2.png)
 
-Dosyayı veya içinde yazanları kopyalayıp istediğimiz bir şekilde ana dizine kopyalayabileceğimiz gibi, uygulamanın bunu bizim yerimize yapmasını da sağlayabiliriz. En alttaki "Save configuration" bağlantısını takip ettiğimizde eğer dizine yazma hakkı varsa bizim yerimize uygulama bunu yapacaktır (www-data kullanıcısının yazabiliyor olması gerekmekte). Her şey yolunda gittiyse şu iletiyi alacağız: "Successfully saved config.php. You can try loading tt-rss now." 
+Dosyayı veya içinde yazanları kopyalayıp istediğimiz bir şekilde ana dizine kopyalayabileceğimiz gibi, uygulamanın bunu bizim yerimize yapmasını da sağlayabiliriz. En alttaki "Save configuration" bağlantısını takip ettiğimizde eğer dizine yazma hakkı varsa bizim yerimize uygulama bunu yapacaktır (www-data kullanıcısının yazabiliyor olması gerekmekte). Her şey yolunda gittiyse şu iletiyi alacağız: "Successfully saved config.php. You can try loading tt-rss now."
 
 Burada "loading tt-rss now" bağlantısını takip ettiğimizde ya da elle http://alan-adı/rss/tt-rss bağlantısına gittiğimizde artık uygulamanın kurulmuş ve bizi şu ekranla karşılıyor olması gerekmekte:
 
@@ -96,11 +96,11 @@ Yeni parola atadıktan sonra size bir hata döndürecektir. Bu ufak bir böcek g
 
 Yeniden giriş yaptıktan sonra artık uygulamayı dilediğiniz gibi yapılandırabilirsiniz. Tahmin edebileceğiniz gibi ayarların tamamı "Daha fazla -> Tercihler" bölümünden yapılıyor. Bu bölümün neredeyse tamamı Türkçe ve açıklamlar da yeterli olduğu için fazlaca ayrıntıya girmeyelim. Beslemelerinizi "Daha fazla -> Özet akışına üye ol" bağlantısından ekleyebilirsiniz. Beslemelerinizi ve ait oldukları kategorileri (düzenleyip, eklemek) "Özet akışları" sekmesinden yönetebilirsiniz.
 
-tt-rss'nin güzel bir özelliği de birden fazla kullanıcıya (dilediğiniz kadar) imkân tanıyor olması. Zaten sunucu temelli çalışan bir uygulama bunu yapamasaydı anlamı olmazdı. Yazının bir yerinde değindiğimiz gibi, arkadaşlarınız veya aileniz için ayrı ayrı hesaplar açıp onların da sizin uygulamanız üzerinden hizmet almasını sağlayabilirsiniz. Bunu da Tercihler bölümündeki Kullanıcılar sekmesinden yönetebilirsiniz (açık olduğu üzere). 
+tt-rss'nin güzel bir özelliği de birden fazla kullanıcıya (dilediğiniz kadar) imkân tanıyor olması. Zaten sunucu temelli çalışan bir uygulama bunu yapamasaydı anlamı olmazdı. Yazının bir yerinde değindiğimiz gibi, arkadaşlarınız veya aileniz için ayrı ayrı hesaplar açıp onların da sizin uygulamanız üzerinden hizmet almasını sağlayabilirsiniz. Bunu da Tercihler bölümündeki Kullanıcılar sekmesinden yönetebilirsiniz (açık olduğu üzere).
 
 ## Güncelleme
 
-Bu bölüm hem uygulamanın kendisini hem de beslemelerin güncellemesini içerecek. Öncelikle beslemelerin güncellemesinden bahsedelim. 
+Bu bölüm hem uygulamanın kendisini hem de beslemelerin güncellemesini içerecek. Öncelikle beslemelerin güncellemesinden bahsedelim.
 
 tt-rss beslemelerin güncellenmesinin update.php veya update_daemon2.php üzerinden yapılmasını önermekte. İlk dosya tekil, ikincisi ise çoklu süreçler şeklinde güncelleme yapıyor. Herhangi birini kullanabilirsiniz, ben ilki ile devam edeceğim anlatıma. Kabaca şöyle oluyor bu işlem, öncesinde eğer kurulu değilse php-cli paketini sisteme kurmamız gerekiyor.
 
@@ -135,7 +135,7 @@ Bunun haricinde sunucudan değil de bilgisayar üzerinden yapılan bir güncelle
 
 Beslemelerin güncellenmesi tamam, ola ki uygulamayı güncellemek istediğimizde ne yapacağız? İki yöntem mevcut: 1. Arayüz üzerinden, 2. Elle.
 
-Arayüz üzerinden yapabilmek için git sürümünü kullanıyor olmanız ve "updater" eklentisinin config.php dosyasında tanımlı olması gerekiyor ki varsayılan olarak tanımlı geliyor. Güncelleme için "Daha fazla -> Tercihler" yolunu takip ettiğinizde sayfanın en altında "Tiny Tiny RSS'i güncelle" bağlantısını görebilir ve güncellemeleri denetleyebilirsiniz. 
+Arayüz üzerinden yapabilmek için git sürümünü kullanıyor olmanız ve "updater" eklentisinin config.php dosyasında tanımlı olması gerekiyor ki varsayılan olarak tanımlı geliyor. Güncelleme için "Daha fazla -> Tercihler" yolunu takip ettiğinizde sayfanın en altında "Tiny Tiny RSS'i güncelle" bağlantısını görebilir ve güncellemeleri denetleyebilirsiniz.
 
 İkinci yöntem ise elle uçbirimden şu şekilde gerçekleştirilebilir:
 
@@ -154,7 +154,7 @@ RSS takibi için dilediğiniz yolları kullanmanız mümkün. Tarayıcınızdan 
 <https://play.google.com/store/apps/details?id=org.fox.ttrss>  \\
 <https://play.google.com/store/apps/details?id=org.ttrssreader>  \\
 <https://play.google.com/store/apps/details?id=com.noinnion.android.newsplus.extension.ttrss>  \\
- 
+
 IOS tarafı ise şuradan bakabilirler ilgili uygulamaya fakat akıbeti hakkında bilgim yok maalesef :)  
 
 <https://itunes.apple.com/us/app/tiny-reader-rss/id689519762?mt=8>
@@ -163,7 +163,6 @@ IOS tarafı ise şuradan bakabilirler ilgili uygulamaya fakat akıbeti hakkında
 
 ## Sonuç
 
-tt-rss'nin kurulumu ve yapılandırması biraz zahmetli gibi görünse de sonucunda alınan keyif buna değmekte. Zira hem kendinize ait basit ve hızlı bir RSS sunucu uygulamanız olmakta, hem de etrafınızdaki başkalarına da faydanız dokunmakta. Eğer eski, sade ve kullanışlı uygulamalara özlem duyuyor ya da verilerinizi kendiniz tutmak istiyorsanız tt-rss'yi kesinlikle denemelisiniz. Elinizin altında küçük de olsa bir sunucunuz varsa kurup kullanmak çok da zor değil. 
+tt-rss'nin kurulumu ve yapılandırması biraz zahmetli gibi görünse de sonucunda alınan keyif buna değmekte. Zira hem kendinize ait basit ve hızlı bir RSS sunucu uygulamanız olmakta, hem de etrafınızdaki başkalarına da faydanız dokunmakta. Eğer eski, sade ve kullanışlı uygulamalara özlem duyuyor ya da verilerinizi kendiniz tutmak istiyorsanız tt-rss'yi kesinlikle denemelisiniz. Elinizin altında küçük de olsa bir sunucunuz varsa kurup kullanmak çok da zor değil.
 
 İyi takipler!
-

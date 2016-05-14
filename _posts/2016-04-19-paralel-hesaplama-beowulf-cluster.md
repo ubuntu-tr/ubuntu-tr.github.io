@@ -1,8 +1,8 @@
 ---
 title: "Paralel Hesaplama - Beowulf Cluster"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 57. Sayı"]
+categories: "k2"
+tags: ["Sudo 57. Sayı","Beowulf","Cluster","Paralel","hesaplama"]
 permalink: "paralel-hesaplama-beowulf-cluster"
 summary: "Yapmanız gereken büyük hesaplar varsa ve elinizdeki kaynaklar buna yeterli gelmiyorsa Beowulf Cluster yapısı tam da aradığınız şeydir. Başlangıç olarak, ihtiyacınızı karşılamak için bu kaynak size yetecektir."
 image: "kapak.png"
@@ -17,13 +17,13 @@ Anlatıma başlamadan önce biraz iştah kabartması için birkaç fotoğraf gö
 ![](images/post/paralel-hesaplama-beowulf-cluster/2.jpg)
 ![](images/post/paralel-hesaplama-beowulf-cluster/3.jpg)
 
-Elimde şu an için dört adet ev kullanıcı bilgisayarı bulunmakta. Bundan dolayı Beowulf yapısını bir adet 
+Elimde şu an için dört adet ev kullanıcı bilgisayarı bulunmakta. Bundan dolayı Beowulf yapısını bir adet
 ana makine ve üç adet hesaplama düğümünden oluşturacağım. Ana makineden hesaplarımızı vereceğiz, aynı zamanda bu makine hesaplama düğümleri ile birlikte hesap işinede katkı sağlayacaktır. (İsterseniz, ilk çalışmanız için, fiziksel makinenizde sanal makineler oluşturup bu işlemleri adım adım yapabilirsiniz.)
 
 ![](images/post/paralel-hesaplama-beowulf-cluster/yapi.png)
 
 
-Öncelikli olarak makinelerim için tanımlamalarım; 
+Öncelikli olarak makinelerim için tanımlamalarım;
 İş teslimi yapacağımız ana sunucumuz;
 
 ```
@@ -85,12 +85,12 @@ ssh-copy-id node3
 Deneme yapamak için;
 
 ```
-ssh node1 
+ssh node1
 ```
 
 dediğimizde şifre istemeden node1 makinesine (192.168.1.11) ve mpiuser kullanıcısına eriştiysek sorun yok demektir.
 
-Diğer nodelar için de bu işlemleri tekrarlayacağız. 
+Diğer nodelar için de bu işlemleri tekrarlayacağız.
 
 node1 için;
 
@@ -225,6 +225,5 @@ mpiuser@node0:~$scp -p mpd.hosts node3:/home/mpiuser/
 Bu noktadan sonrası yapacağınız hesaplamalar doğrultusunda değişmektedir. Bunun için **[2]** adresinde Paralel Programlama bölümü altındaki başlıkları incelemenizde fayda var.
 
 ### Kaynak:
-[1] http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html
-[2] http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa
-
+[1] <http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html> \\
+[2] <http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa>

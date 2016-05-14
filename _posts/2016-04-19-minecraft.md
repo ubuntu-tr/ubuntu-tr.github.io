@@ -1,8 +1,8 @@
 ---
 title: "MineCraft"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 58. Sayı"]
+categories: "k3"
+tags: ["Sudo 58. Sayı","minecraft"]
 permalink: "minecraft"
 summary: "Minecraft, küplerle çeşitli tasarımlar yapmanızı sağlayan 2 ve 3 boyutlu oynanabilen bir oyundur."
 image: "1.png"
@@ -22,23 +22,23 @@ Minecraft'ı anlatmaya ilk olarak Wikipedia'dan aldığım şu tanımla başlaya
 > yazılmış ve TIGSource forumlarında yayınlanmıştır.
 
 Minecraft basit grafikleri olmasına rağmen çok eğlenceli bir oyundur. Oyunun türkçe dil desteğide bulunmaktadır. Minecraft'da **hayatta kalma** ve **inşaa** olmak üzere iki adet oyun modu bulunmakta. Anlatımıma genel olarak Minecraft değil de bu modlar üzerinden gitmeyi daha uygun buldum.
-	
+
 ## Hayatta Kalma Modu
 
 Bu modda rastgele oluşan haritada, herhangi bir yerde doğarak oyuna başlıyorsunuz. Adı üstünde amacımız hayattta kalmak. Hemen bir ağaç kesiyor onları işledikten sonra silah , kürek , kazma gibi çeşitli araç gereçler üretiyorsunuz. Üretmek deyince oyunun şahsım adına en eğlenceli yönü bu.
-	
+
 ![](images/post/minecraft/4.png)
 
-İnek , tavuk vs hayvanları keserek etlerini topluyoruz ve karnımızı doyuruyoruz veya tarlamıza buğday ekip bu buğdaylardan ekmek yapıyoruz. Kazdığımız taşlardan ocak yapıp etleri pişirdiğimizde karnımız daha çok doyuyor :). Karanlık çökünce yavaş yavaş canavarlar ortaya çıkıyor . İlk gece için kendimize ufak bi barınak yapmamız, kömür ve çubuk ile yaptığımız meşalelerle barınağımızı ışıklandırmamız çok önemli. Karanlık olan heryerde, bu evimiz bile olsa, canavarlar doğabiliyor. 
-	
+İnek , tavuk vs hayvanları keserek etlerini topluyoruz ve karnımızı doyuruyoruz veya tarlamıza buğday ekip bu buğdaylardan ekmek yapıyoruz. Kazdığımız taşlardan ocak yapıp etleri pişirdiğimizde karnımız daha çok doyuyor :). Karanlık çökünce yavaş yavaş canavarlar ortaya çıkıyor . İlk gece için kendimize ufak bi barınak yapmamız, kömür ve çubuk ile yaptığımız meşalelerle barınağımızı ışıklandırmamız çok önemli. Karanlık olan heryerde, bu evimiz bile olsa, canavarlar doğabiliyor.
+
 ![](images/post/minecraft/15.png)
 
 Resimde göründüğü gibi içeride yatağım var. Odun ve koyunlardan topladığım yünle yaptım :). Yatakta sadece geceleri uyuyabiliyorsunuz ve uyuduğunuz zaman direk sabah oluyor . Güneşi gören zombiler ölüyor. Gündüz çalışmamız bizim için daha güvenli. Yatakta bir kere uyuduğumuz zaman orası bizim öldüğümüzde tekrar doğuş noktamız (spawn point) oluyor. Aksi halde öldüğünüzde oyunun başlangıcında ilk doğduğunuz yerde doğuyorsunuz :).
 
 ![](images/post/minecraft/8.png)
 
-Gelelim oyunun adı olan minecraftlara. Taş kazmamızı ürettikten sonra yerin altına doğru kazmaya başlıyoruz. Kömür , demir , altın , elmas vs çeşitli madenler buluyoruz. Bu madenleri işledikten sonra ray ve vagon üretiyoruz . Bunlar sayesinde daha hızlı yolculuk yapıp , madenlerimiz daha rahat taşıyoruz. 
-	
+Gelelim oyunun adı olan minecraftlara. Taş kazmamızı ürettikten sonra yerin altına doğru kazmaya başlıyoruz. Kömür , demir , altın , elmas vs çeşitli madenler buluyoruz. Bu madenleri işledikten sonra ray ve vagon üretiyoruz . Bunlar sayesinde daha hızlı yolculuk yapıp , madenlerimiz daha rahat taşıyoruz.
+
 ![](images/post/minecraft/7.png)
 
 ## İnşaa Modu
@@ -51,27 +51,28 @@ Bu resmi internetten buldum. Gördüğünüz gibi koca bir camii inşaa etmiş. 
 
 ---
 
-Modlardan çıkıp biraz da oyunun yapısından bahsedecek olursak ; 
+Modlardan çıkıp biraz da oyunun yapısından bahsedecek olursak ;
 Arkadaşlarınızla yerel(local) ağ veya internet üzerinden(online)  birlikte oynayabiliyorsunuz. Sıkıldığım zamanlarda hanımla Minecraft'a girip gelecekte sahip olmak istediğimiz evi inşaa ediyoruz mesela :D.
-	
-Hoş güzel anlattık ama bu oyunu nereden indirir nasıl çalıştırırız bunlardan hiç bahsetmedik. Oyunu https://minecraft.net/ kendi sitesinden indirebilirsiniz , üye olduktan sonra oyunu 100 dk kadar demo oynabiliyorsunuz. Sınırsız tek seferlik 19.95 € ödemeniz gerekiyor. Oyunu çalıştırmak için  indirdiğimiz jar dosyasını sağ tıklayıp terminalden open veya oracle JDK ile aç dememiz yeterli veya uçbirimden “java -jar minecraft.jar” diyerek de çalıştırabiliriz.
+
+Hoş güzel anlattık ama bu oyunu nereden indirir nasıl çalıştırırız bunlardan hiç bahsetmedik. Oyunu <https://minecraft.net/> kendi sitesinden indirebilirsiniz , üye olduktan sonra oyunu 100 dk kadar demo oynabiliyorsunuz. Sınırsız tek seferlik 19.95 € ödemeniz gerekiyor. Oyunu çalıştırmak için  indirdiğimiz jar dosyasını sağ tıklayıp terminalden open veya oracle JDK ile aç dememiz yeterli veya uçbirimden “java -jar minecraft.jar” diyerek de çalıştırabiliriz.
 
 Oyun ücretliymiş satın almak istemiyorum ücretsizi yokmu diyen arkadaşlar için de; Ubuntu depolarında bulunan ücretsiz olarak oynanabilen minetest'i tavsiye ediyorum.
 
-Buradan 
-https://apps.ubuntu.com/cat/applications/precise/minetest/ 
+Buradan\\
+<https://apps.ubuntu.com/cat/applications/precise/minetest/> \\
+
 veya uçbirimde
 
 ```
 sudo apt-get install minetest
 ```
 
- yazarak yükleyebilirsiniz. 
+ yazarak yükleyebilirsiniz.
 
-Minetest'e ait bir görüntü : 
-	
+Minetest'e ait bir görüntü :
+
 ![](images/post/minecraft/17.png)
-	
+
 Herkese iyi eğlenceler , bol elmaslı madenler :)
 
 ---

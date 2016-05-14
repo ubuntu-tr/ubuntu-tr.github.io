@@ -1,8 +1,8 @@
 ---
 title: "SparkleShare"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 34. Sayı"]
+categories: "k5"
+tags: ["Sudo 34. Sayı","sparkleshare","bulut","GitHub","Kurulum","sunucu"]
 permalink: "sparkleshare"
 summary: ""
 image: "3.png"
@@ -66,6 +66,6 @@ yazmaları gerekiyor. Ben daha rahat ettiğim için scp tercih ediyorum.
 Bu işlemleri de tamamladıktan sonra yine SparkleShare ekranında sunucumuz için kullanıciadı:sunucuadresi şeklinde ayarımızı giriyor ve Folder Name yazılı kısıma da projemizin dosya yolu olan /benim/depo/projeadım.git adresini yazıyoruz. Sync işlemi sonucunda artık kendi sunucunuzla da SparkleShare kullanabilir durumdasınız. Tebrikler.
 
 ## Notlar
-SparkleShare hala geliştirilme aşamasında olan ve ara sıra çökebilen bir yazılım fakat buna rağmen işini oldukça iyi yapıyor. Eğer git'in her özelliğine ihtiyacımız yok fakat basit bir versiyonlama sistemine ihtiyacımız varsa GitHub ile SparkleShare kullanımı tam ihtiyacımızı karşılar nitelikte bir birleşim olacaktır. 
+SparkleShare hala geliştirilme aşamasında olan ve ara sıra çökebilen bir yazılım fakat buna rağmen işini oldukça iyi yapıyor. Eğer git'in her özelliğine ihtiyacımız yok fakat basit bir versiyonlama sistemine ihtiyacımız varsa GitHub ile SparkleShare kullanımı tam ihtiyacımızı karşılar nitelikte bir birleşim olacaktır.
 
 Eğer öğrenciyseniz .edu uzantılı eposta hesabınızla GitHub'in ayda 7 dolar bedeli olan micro planını ücretsiz olarak kullanabilirsiniz. Bunun için <https://github.com/edu> üzerindeki formu doldurmanız yeterli.

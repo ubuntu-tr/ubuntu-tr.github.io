@@ -1,8 +1,8 @@
 ---
 title: "Tmux: Kuvvetli Uçbirim Yönetimi"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 32. Sayı"]
+categories: "k5"
+tags: ["Sudo 32. Sayı","Tmux","uçbirim","terminal","Screen"]
 permalink: "tmux-kuvvetli-ucbirim-yonetimi"
 summary: ""
 image: "resim1.jpg"
@@ -16,7 +16,7 @@ Screen uygulamasını daha önce kullanmayanlar için Tmux'u anlatmak zor olduğ
 
 ## Tmux ve Screen Nedir?
 
-Bu uygulamalar uçbirim için birer pencere yöneticisi ve oturum çoklayıcısıdırlar. Cümle biraz havada kalıyor olabilir, bu nedenle gündelik örneklerden yola çıkarak uygulamaların biraz daha kafamızda yer etmesini sağlayalım. 
+Bu uygulamalar uçbirim için birer pencere yöneticisi ve oturum çoklayıcısıdırlar. Cümle biraz havada kalıyor olabilir, bu nedenle gündelik örneklerden yola çıkarak uygulamaların biraz daha kafamızda yer etmesini sağlayalım.
 
 ### Oturum Kurtarma
 
@@ -24,7 +24,7 @@ Uzak bir sunucumuz olsun ve bu sunucuyu SSH üzerinden yani uçbirimi kullanarak
 
 ### Pencere Çoklama
 
-İlk madde bu bölümün başında havada kalan cümleyi açıklamıyor gibi sanki. Gerçi oturum çoklama meselesinin biraz yanından geçiyor ancak yine de tam anlamıyla izah etmiyor, örneklemiyor. ilk maddeye bilerek oturum kurtarma daha doğrusu oturuma devam edebilme özelliğini koydum, zira çok zamanlar hayat kurtarıcı olacaktır bu özellik. Peki pencere çoklama ne demektir? 
+İlk madde bu bölümün başında havada kalan cümleyi açıklamıyor gibi sanki. Gerçi oturum çoklama meselesinin biraz yanından geçiyor ancak yine de tam anlamıyla izah etmiyor, örneklemiyor. ilk maddeye bilerek oturum kurtarma daha doğrusu oturuma devam edebilme özelliğini koydum, zira çok zamanlar hayat kurtarıcı olacaktır bu özellik. Peki pencere çoklama ne demektir?
 
 Aynı sunucumuza yine SSH ile bağlı olduğumuzu ve uçbirimden işimizi gördüğümüzü düşünelim. Öyle bir yapılandırma esnasındayız ki ikinci bir uçbirime bağlanma ihtiyacımız oldu bu sunucu üzerinde. Elimiz yerelde kullandığımız uçbirime gider, yeni bir SSH isteği yaparak sunucumuza bağlanırız. Öyle mi? Bunu ancak taze veya bu ihtiyacını karşılamak için araştırma yapmayan tembel sunucu yöneticileri yapar :) Diğerleri ise elindeki çoklayıcı üzerinden bir pencere daha açar. Hem de bir iki tuş darbesiyle. Kısacası aynı SSH oturumunda, aynı uçbirimde (daha doğrusu Tmux veya Screen oturumunda) ikinci bir pencere oluşturur, işini buradan görmeye devam eder. Aynı zamanda bu iki pencere arasında da bir ileri bir geri gezinebilir. Güzel değil mi?
 
@@ -44,7 +44,7 @@ Resimden de görülebileceği üzere pencerelerimizi dilediğimiz gibi şekillen
 Bir arkadaşımızın sistemine girmemiz ve onun bizden rica ederek yapmamızı istediği şeyi halletmemiz gerekiyor. Kolay bir şekilde SSH ile bağlanıp, işimizi halledip çıkabiliriz. Peki arkadaşımız biz bu işi hallederken neler yaptığımızı görmek istiyorsa, hem de birebir olarak? Bu gibi bir durumda oturum paylaşma kullanılabilir. Aynı Tmux veya Screen oturumuna bir başkası bağlanıp, bizim yaptıklarımızı görebilir, oturum ortak olduğu için gerektiğinde kendisi de müdahale edebilir. Bu özelliği, verdiğimiz örnekteki şekliyle kullanabileceğimiz gibi, eğitim maksatlı da kullanabiliriz. Sunucu yönetenler için ortak çalışma şekli bile olabilir bu özellik. Bizim yaptıklarımız birebir karşı tarafa da yansıyacağı için bir nevi sohbet aracı olarak bile kullanılabilir oturum paylaşma. Sadece "enter" yerine ctrl+c kullanmamız gerekir, onu da sistemi sürekli "Böyle bir komut bulunamadı" iletisini basma işkencesinden kurtarmak için yaparız :)
 
 
-Görülebileceği üzere uçbirim üzerinde kullanılan pencere çoklayıcılarının güzel ve hayat kurtarıcı özellikleri mevcut. İki uygulama da temel anlamda birbirlerine benzemekteler. Zira yaptıkları iş hemen hemen aynı kapıya çıkıyor. Aralarındaki farkları ortaya koymak için yazımızın bir sonraki bölümüne geçebiliriz. 
+Görülebileceği üzere uçbirim üzerinde kullanılan pencere çoklayıcılarının güzel ve hayat kurtarıcı özellikleri mevcut. İki uygulama da temel anlamda birbirlerine benzemekteler. Zira yaptıkları iş hemen hemen aynı kapıya çıkıyor. Aralarındaki farkları ortaya koymak için yazımızın bir sonraki bölümüne geçebiliriz.
 
 
 
@@ -53,14 +53,14 @@ Görülebileceği üzere uçbirim üzerinde kullanılan pencere çoklayıcılar�
 Belirtilmiş olunduğu üzere aslında işlev olarak Tmux ve Screen aynı amaca hizmet ediyorlar. Fakat aralarında bazı farklılıklar bulunmakta. Screen kullanan çoğunluk için bu farklar Tmux'a geçmeye yeter mi bilinmez, fakat etrafta Tmux'a geçenleri gördükçe ileride ortaya bir Gnome/KDE, Vim/Emacs tarzı bir rekabet çıkabileceğini söyleyebilirim. Ancak sayılan ikililer aynı amaçlara hizmet etse de hem yapı olarak hem de görünüş olarak birbirinden çok farklıdır. Tmux ve Screen ise bu kadar farklı görünmezler, en azından dışarıdan baktığımızda. Bu nedenle yazıyı okuyup da "Screen'den fazla nesi var ki?" diyenleri duyar gibi oluyorum :) Biz aradaki farkları aktaralım, karar yine kullanıcıların olsun.
 
 
--  İki uygulamanın arasındaki en büyük farklardan biri lisanslarıdır. Screen, GPL ile dağıtılırken Tmux, BSD lisansını kullanır. Özellikle lisanslar konusunda çok aşırı hassas kullanıcılar için iki uygulama arasındaki bu farkın belirtilmesi gerekir. 
+-  İki uygulamanın arasındaki en büyük farklardan biri lisanslarıdır. Screen, GPL ile dağıtılırken Tmux, BSD lisansını kullanır. Özellikle lisanslar konusunda çok aşırı hassas kullanıcılar için iki uygulama arasındaki bu farkın belirtilmesi gerekir.
 
-- Tmux çalışma prensibi olarak Screen'den ayrılır. Tmux, Sunucu/İstemci modeliyle iş görür. İlk Tmux oturumu oluşturulduğunda eş zamanlı olarak bir de Tmux sunucusu oluşturulur. Bunun akabinde artık oluşturulacak tüm oturumlar bu sunucu için birer istemci olurlar. Tmux'un oturumlararı arasında iş görmek kolay ve düzenlidir. Burada öne çıkabilecek tek eksi puan ise sunucunun çökmesi durumunda tüm Tmux oturumlarının kaybedilecek olmasıdır. 
+- Tmux çalışma prensibi olarak Screen'den ayrılır. Tmux, Sunucu/İstemci modeliyle iş görür. İlk Tmux oturumu oluşturulduğunda eş zamanlı olarak bir de Tmux sunucusu oluşturulur. Bunun akabinde artık oluşturulacak tüm oturumlar bu sunucu için birer istemci olurlar. Tmux'un oturumlararı arasında iş görmek kolay ve düzenlidir. Burada öne çıkabilecek tek eksi puan ise sunucunun çökmesi durumunda tüm Tmux oturumlarının kaybedilecek olmasıdır.
 
-- Screen *nix dünyasındaki en yaygın çoklayıcıdır. Ayrıca girmediği ortam kalmamıştır. 1987'den beri geliştirildiğinden dolayı kendisi kararlı sayılabilse de hala düzeltilmemiş sorunları mevcuttur. Kodu (bu işten anlayanların ifadesiyle) çorba gibi (spaghetti code) olmuştur. Bazı gereksiz sayılabilecek özellikler nedeniyle şişmiş durumdadır. Son sürümünü 2008'de çıkartmıştır ve yeni özellikler ekleme konusunda geliştiricileri pek hevesli değildir, örneğin pencereleri dikey bölmek gibi. 
-Tmux henüz yeni yaygınlaşmaktadır. Kendisi IRIX ve HP-UX gibi ortamlarda desteklenmemektedir, bu ortamlar için destek verilmesi de düşünülmemektedir. Diğer taraftaysa Tmux, OpenBSD üzerinde 2009'dan beri öntanımlı çoklayıcı olarak yerini almıştır. Kodu yine bu işten anlayanların yorumuyla son derece düzenli ve güzel yazılmış durumdadır. Yeni olduğu için sürekli güncellenmekte ve yeni özellikler katılmaktadır. 
+- Screen \*nix dünyasındaki en yaygın çoklayıcıdır. Ayrıca girmediği ortam kalmamıştır. 1987'den beri geliştirildiğinden dolayı kendisi kararlı sayılabilse de hala düzeltilmemiş sorunları mevcuttur. Kodu (bu işten anlayanların ifadesiyle) çorba gibi (spaghetti code) olmuştur. Bazı gereksiz sayılabilecek özellikler nedeniyle şişmiş durumdadır. Son sürümünü 2008'de çıkartmıştır ve yeni özellikler ekleme konusunda geliştiricileri pek hevesli değildir, örneğin pencereleri dikey bölmek gibi.
+Tmux henüz yeni yaygınlaşmaktadır. Kendisi IRIX ve HP-UX gibi ortamlarda desteklenmemektedir, bu ortamlar için destek verilmesi de düşünülmemektedir. Diğer taraftaysa Tmux, OpenBSD üzerinde 2009'dan beri öntanımlı çoklayıcı olarak yerini almıştır. Kodu yine bu işten anlayanların yorumuyla son derece düzenli ve güzel yazılmış durumdadır. Yeni olduğu için sürekli güncellenmekte ve yeni özellikler katılmaktadır.
 
-- Tmux	temiz ve hafif bir çoklayıcıdır. Zaten yazılmaya başladığında da bu yönde bir hedef belirlenmiştir. Screen'in neredeyse yarısı kadar bellek harcamaktadır. Çoklayıcıların bellek harcamaları fazla olmasa bile bu kullanım oranları uygulamaların yapısı hakkında fikir verecektir. 
+- Tmux	temiz ve hafif bir çoklayıcıdır. Zaten yazılmaya başladığında da bu yönde bir hedef belirlenmiştir. Screen'in neredeyse yarısı kadar bellek harcamaktadır. Çoklayıcıların bellek harcamaları fazla olmasa bile bu kullanım oranları uygulamaların yapısı hakkında fikir verecektir.
 Tmux kendi tecrübelerimden edindiğim kadarıyla da Screen'den daha hızlı cevap vermekte. Örneğin Screen'de verilecek bir dmesg komutunu ctrl+c ile kesmek Tmux ile yapılan denemedekinden çok daha yavaştır.  
 
 - Pencere yönetimi Tmux ile çok daha kolaydır. Pencerelerin boyutlandırılması için bir iki tuş kombinasyonu yeterlidir. Tmux bu konuda daha zekice davranmaktadır. Pencereleri dikey bölmek Tmux ile öntanımlı olarak sağlanırken, Screen'in bir yamayla yeniden derlenmesi gerekir. Belirtildiği üzere geliştiriciler bu özelliği eklemeyi düşünmemektedirler. Ubuntu üzerinde gelen Screen'se bu yama ile dağıtılmaktadır.
@@ -68,14 +68,14 @@ Tmux kendi tecrübelerimden edindiğim kadarıyla da Screen'den daha hızlı cev
 - Tmux oturumunda kullanabilen hemen her şey dışarıdaki kabukta da kullanılabilir. Bu özelliği sayesine daha kolay Tmux betikleri yazılabilir. Tmux ile beraber durum satırını (çubuğu) öntanımlı olarak gelmektedir ve özelleştirmek çok daha kolaydır. Ayrıca kendisi bu konuda daha esnektir. Screen ise durum çubuğunu öntanımlı olarak getirmez ve .screenrc dosyasına işleyeceğiniz durum çubuğu satırı çok karmaşıktır.
 
 
-Tmux'un öne çıkan bazı özellikleriyle Screen'den nasıl farklılaştığına daha da fazla değinebilirdim aslında, ancak listemiz kabarıp gidecektir. Bu nedenle aradaki farkları yüzeysel olarak maddeleyip diğer bazı farkları kullanarak veya araştırarak öğrenmeniz için size bırakıyorum. Yine de maddelemesek bile Tmux'un öne çıkan bazı özelliklerinden bahsedelim. 
+Tmux'un öne çıkan bazı özellikleriyle Screen'den nasıl farklılaştığına daha da fazla değinebilirdim aslında, ancak listemiz kabarıp gidecektir. Bu nedenle aradaki farkları yüzeysel olarak maddeleyip diğer bazı farkları kullanarak veya araştırarak öğrenmeniz için size bırakıyorum. Yine de maddelemesek bile Tmux'un öne çıkan bazı özelliklerinden bahsedelim.
 
-Tmux ile pencereleri istediğimiz bir anda eşzamanlı olarak kullanabiliriz. Şöyle düşünün. İki penceremiz var ve ayrı ayrı iki sunucuya bağlandık. Hatta sunucu sayısı iki değil de on olsun, haliyle pencere veya bölme sayımız da on olacaktır. Bu sunucuların hepsinde aynı anda apt-get update ve apt-get upgrade yürütmek istiyoruz. Tüm sunucu bağlantılarını yaptıktan sonra Tmux oturumunda bir komut yürüterek tüm bu pencereleri "senkronize" edebiliriz: 
+Tmux ile pencereleri istediğimiz bir anda eşzamanlı olarak kullanabiliriz. Şöyle düşünün. İki penceremiz var ve ayrı ayrı iki sunucuya bağlandık. Hatta sunucu sayısı iki değil de on olsun, haliyle pencere veya bölme sayımız da on olacaktır. Bu sunucuların hepsinde aynı anda apt-get update ve apt-get upgrade yürütmek istiyoruz. Tüm sunucu bağlantılarını yaptıktan sonra Tmux oturumunda bir komut yürüterek tüm bu pencereleri "senkronize" edebiliriz:
 ```set-window-option synchronize-panes on|off```
-Birer adet apt-get update ve apt-get upgrade komutu on sunucuda birden çalışacaktır. Bu işlemden sonra birleştirdiğimiz pencere veya bölmeleri ayırarak tekrar her sunucu için ayrı ayrı çalışmaya devam edebiliriz. 
+Birer adet apt-get update ve apt-get upgrade komutu on sunucuda birden çalışacaktır. Bu işlemden sonra birleştirdiğimiz pencere veya bölmeleri ayırarak tekrar her sunucu için ayrı ayrı çalışmaya devam edebiliriz.
 
 
-Bu gibi küçük olarak görülebilecek bir çok özelliği sayesinde Tmux esneklik kazanmakta ve Screen'in önüne geçmekte. Yeni bir uygulama olduğundan, önünde de Screen gibi güzel bir örnek bulunduğundan ötürü Tmux muhtemelen Screen'in yaptıklarını yapmakla kalmayarak üzerine birçok şeyi koymakta. Bu gibi bir yazıda tüm bu farklılıkları anlatmak mümkün olmadığından ötürü bir sonraki bölümümüz olan Tmux'un kullanımına geçebiliriz. 
+Bu gibi küçük olarak görülebilecek bir çok özelliği sayesinde Tmux esneklik kazanmakta ve Screen'in önüne geçmekte. Yeni bir uygulama olduğundan, önünde de Screen gibi güzel bir örnek bulunduğundan ötürü Tmux muhtemelen Screen'in yaptıklarını yapmakla kalmayarak üzerine birçok şeyi koymakta. Bu gibi bir yazıda tüm bu farklılıkları anlatmak mümkün olmadığından ötürü bir sonraki bölümümüz olan Tmux'un kullanımına geçebiliriz.
 
 
 
@@ -90,7 +90,7 @@ Ancak, devam etmeden önce çoklayıcıların en temel tuş vuruşundan bahsetme
 >**Not:** Tmux sistemde kurulu olarak gelmez. Uygulama Merkezi'nden aratarak veya aşağıdaki komutla doğrudan kurabilirsiniz.
 
 ```
-sudo apt-get install tmux 
+sudo apt-get install tmux
 ```
 
 ### Oturum Yönetimi / Oturumdan Ayrılma, Geri Bağlanma / Oturum Kurtarma
@@ -109,15 +109,15 @@ Karşımıza gelen şey, ilk esnada gözümüze farklı görünmeyebilir. Fakat 
 less /etc/fstab
 ```
 
-Evet, önümüze dosyamız açıldı. Çokluyucuların en güzel özelliklerinden biri olan oturumu geri plana atıp, daha sonra bağlanmayı uygulayalım. 
+Evet, önümüze dosyamız açıldı. Çokluyucuların en güzel özelliklerinden biri olan oturumu geri plana atıp, daha sonra bağlanmayı uygulayalım.
 
 Sırasıyla aşağıdaki tuşları işleyelim:
 
 ```
-C -b d 
+C -b d
 ```
 
-Bunun anlamı sırasıyla ctrl ve (ctrl'den elimizi kaldırmadan) b'ye aynı anda basıp, ardından iki tuşu birden bırakıp daha sonra d tuşuna basmaktır. Eğer tam olarak böyle yapmazsak istediğimiz şey olmaz. Doğru bir şekilde bunu uygularsak Tmux oturumu geri plana atılır ve uçbirimde "[detached]" yazısı görünür. Bunun anlamı oturumumuzun başarılı bir şekilde geri plana atıldığıdır. Biz farkında olmasak da geri planda less ile fstab dosyası açık olarak beklemektedir. 
+Bunun anlamı sırasıyla ctrl ve (ctrl'den elimizi kaldırmadan) b'ye aynı anda basıp, ardından iki tuşu birden bırakıp daha sonra d tuşuna basmaktır. Eğer tam olarak böyle yapmazsak istediğimiz şey olmaz. Doğru bir şekilde bunu uygularsak Tmux oturumu geri plana atılır ve uçbirimde "[detached]" yazısı görünür. Bunun anlamı oturumumuzun başarılı bir şekilde geri plana atıldığıdır. Biz farkında olmasak da geri planda less ile fstab dosyası açık olarak beklemektedir.
 
 Oturumumuzu tekrar önümüze getirmek istiyoruz. Yapmamız gereken uçbirimde şu komutu yürütmektir:
 
@@ -131,10 +131,10 @@ Bu komut aslında "tmux attach" komutunun kısaltılmış halidir. Bazı komutla
 pkill gnome-terminal
 ```
 
-Bu komutla bindiğimiz dalı kesiyoruz :) Komuttan sonra hem komutu uyguladığımız hem de Tmux oturumunun olduğu uçbirim sonlandırılacaktır. Bunu yapmamızın sebebi, uçbirimin bir şekilde zorla kapanması senaryosunu hayata geçirmektir. Zira uçbirimi çarpı tuşuyla kapatmaya çalışırsak bize aktif bir süreç olduğunu, eğer uçbirimi kapatırsak onun da sonlanacağını söyleyecektir. Bizim uyguladığımız komutla aynı işi görecektir fakat pkill ile sonlandırarak zorlama durumunda bile Tmux oturumunun kurtarılabildiğini görmek istiyoruz şu aşamada. Yeniden açacağımız uçbirimde tek yapmamız gereken "tmux a" komutunu yürütmektir. Oturumumuz yine karşımıza gelecektir. Bu şekilde ufak bir masaüstü çakılması veya uzak sunucudan bağlantımızın kopması senaryosunu hayata geçirmiş ve yaptığımız işi kurtarmış olduk. 
+Bu komutla bindiğimiz dalı kesiyoruz :) Komuttan sonra hem komutu uyguladığımız hem de Tmux oturumunun olduğu uçbirim sonlandırılacaktır. Bunu yapmamızın sebebi, uçbirimin bir şekilde zorla kapanması senaryosunu hayata geçirmektir. Zira uçbirimi çarpı tuşuyla kapatmaya çalışırsak bize aktif bir süreç olduğunu, eğer uçbirimi kapatırsak onun da sonlanacağını söyleyecektir. Bizim uyguladığımız komutla aynı işi görecektir fakat pkill ile sonlandırarak zorlama durumunda bile Tmux oturumunun kurtarılabildiğini görmek istiyoruz şu aşamada. Yeniden açacağımız uçbirimde tek yapmamız gereken "tmux a" komutunu yürütmektir. Oturumumuz yine karşımıza gelecektir. Bu şekilde ufak bir masaüstü çakılması veya uzak sunucudan bağlantımızın kopması senaryosunu hayata geçirmiş ve yaptığımız işi kurtarmış olduk.
 
-less aracı ile dosyamıza bakarken oturumumuzda bir şey dikkatimizi çekecektir. Durum çubuğunun sol tarafında artık şu ibare yer almaktadır: 
-"[0] 0:less*". Boş olarak açtığımız oturumdan farklı olarak less aracını kullandığımızda burada "bash" yerine artık "less" yazmaktadır. less aracını kapattığımızda yine "bash"e dönmektedir. Tahmin edebileceğimiz üzere Tmux, pencereleri kendiliğinden isimlendirmektedir. Örneğin less aracını "q" ile kapatıp uçbirimde "top" komutunu yürüttüğümüzde bu sefer isim "top" olarak değişecektir. Çoklu pencerelerle çalışmaya başladığımızda bunun yararını daha iyi göreceğiz. 
+less aracı ile dosyamıza bakarken oturumumuzda bir şey dikkatimizi çekecektir. Durum çubuğunun sol tarafında artık şu ibare yer almaktadır:
+"[0] 0:less*". Boş olarak açtığımız oturumdan farklı olarak less aracını kullandığımızda burada "bash" yerine artık "less" yazmaktadır. less aracını kapattığımızda yine "bash"e dönmektedir. Tahmin edebileceğimiz üzere Tmux, pencereleri kendiliğinden isimlendirmektedir. Örneğin less aracını "q" ile kapatıp uçbirimde "top" komutunu yürüttüğümüzde bu sefer isim "top" olarak değişecektir. Çoklu pencerelerle çalışmaya başladığımızda bunun yararını daha iyi göreceğiz.
 
 Peki, yaptığımız işlemi Tmux algılayamadı ve pencere ismini değiştirmedi ya da değiştirdi fakat biz farklı bir isim istiyoruz, bunu aşağıdaki tuşları işleyerek yapabiliriz:
 
@@ -165,7 +165,7 @@ Burada oturumlarımız listelenir ve kendileri hakkında bazı bilgiler mevcuttu
 tmux a -t 1
 ```
 
-"a" komutu "attach" ifadesini kısaltılmış haliydi hatırlayacak olursak. -t ise target-session anlamına gelir fakat target-session diye bir kullanım yoktur. "tmux a -t" ifadesinden sonra hangi oturumu ön plana almak istiyorsak o oturumun ismini veya şu haliyle daha doğru olan şekliyle numarasını kullanmamız gerekiyor. Bazı durumlarda yaptığımız işin mevcut oturumumuzda görünmemesini, kendi halinde arka planda devam etmesini isteyebiliriz. İşte bu gibi durumlarda birden fazla oturum açıp kullanmak durumunda kalırız. Fakat böyle olduğunda yukarıdaki listeden görebileceğimiz üzere ufak bir karışıklık yaşayabiliriz: Hangi oturumda ne vardı? Bunun önüne geçmek için oturumlarımızı isimlendirerek açabiliriz. Diyelim ki bir oturumumuzda "derleme" işi devam edecek, diğer oturumumuzda da "genel" işlerimizi yapacağız. 
+"a" komutu "attach" ifadesini kısaltılmış haliydi hatırlayacak olursak. -t ise target-session anlamına gelir fakat target-session diye bir kullanım yoktur. "tmux a -t" ifadesinden sonra hangi oturumu ön plana almak istiyorsak o oturumun ismini veya şu haliyle daha doğru olan şekliyle numarasını kullanmamız gerekiyor. Bazı durumlarda yaptığımız işin mevcut oturumumuzda görünmemesini, kendi halinde arka planda devam etmesini isteyebiliriz. İşte bu gibi durumlarda birden fazla oturum açıp kullanmak durumunda kalırız. Fakat böyle olduğunda yukarıdaki listeden görebileceğimiz üzere ufak bir karışıklık yaşayabiliriz: Hangi oturumda ne vardı? Bunun önüne geçmek için oturumlarımızı isimlendirerek açabiliriz. Diyelim ki bir oturumumuzda "derleme" işi devam edecek, diğer oturumumuzda da "genel" işlerimizi yapacağız.
 
 Oturumlarımızı açmak için şu iki komutu kullanabiliriz:
 
@@ -199,12 +199,12 @@ Bu şekilde oturumumuz açılır ve arka plana atılır. Hatta oturumumuzu pence
 tmux new -d -n pencere_ismi -s genel
 ```
 
-Oturum yönetimi oldukça esnektir Tmux'ta ancak daha fazla detaya inerek hali hazırda uzamış olan bu yazıyı daha fazla uzatmayalım, zira değinilecek daha temel meseleler bizleri bekliyor. Bu ve benzeri birçok özellik ve işlevi gerek Tmux'un "man" bölümünde, gerekse internette rahatlıkla bulabiliriz. Fakat Türkçe kaynak bulmakta zorlanabiliriz, hatta korkum o ki Tmux için tek Türkçe kaynak şu an okuduğumuz yazı bile olabilir :) 
+Oturum yönetimi oldukça esnektir Tmux'ta ancak daha fazla detaya inerek hali hazırda uzamış olan bu yazıyı daha fazla uzatmayalım, zira değinilecek daha temel meseleler bizleri bekliyor. Bu ve benzeri birçok özellik ve işlevi gerek Tmux'un "man" bölümünde, gerekse internette rahatlıkla bulabiliriz. Fakat Türkçe kaynak bulmakta zorlanabiliriz, hatta korkum o ki Tmux için tek Türkçe kaynak şu an okuduğumuz yazı bile olabilir :)
 
 
 ###  Pencere Çoklama / Yönetme
 
-Artık bir Tmux oturumunu nasıl oluşturacağımızı, gerektiğinde nasıl geri plana alacağımızı ardından da nasıl tekrar bağlanabileceğimizi öğrendik. Şu andan itibaren biraz daha işimize yarayacak olan pencerelerle iş görmeye başlayabiliriz. Pencere yönetimi çoklayıcılardaki en pratik işlevlerden biridir. 
+Artık bir Tmux oturumunu nasıl oluşturacağımızı, gerektiğinde nasıl geri plana alacağımızı ardından da nasıl tekrar bağlanabileceğimizi öğrendik. Şu andan itibaren biraz daha işimize yarayacak olan pencerelerle iş görmeye başlayabiliriz. Pencere yönetimi çoklayıcılardaki en pratik işlevlerden biridir.
 
 Eğer elimizin altında bir oturum yoksa hemen fişekleyelim ve karşısına geçelim. Oturumumuza isim verdiysek durum çubuğunda sol başta bu isim, devamındaysa pencere numarası ve ismi görünecektir. Şu ana kadar pencere çoklamayı görmediğimiz için burada bir adet penceremiz bulunur. Eğer bir önceki bölümde verilen ipucunu kullandıysak veya "C-b ," ile penceremize isim verdiysek kendi ismi, vermediysek burada "0:bash*" yazıyor olacaktır. Kısacası şu an bir adet penceremiz mevcuttur. Tmux oturumunda yeni pencereler oluşturmak için aşağıdaki tuş ikilisini işleriz:
 
@@ -212,7 +212,7 @@ Eğer elimizin altında bir oturum yoksa hemen fişekleyelim ve karşısına ge�
 C-b c
 ```
 
-Bu işlemden hemen sonra yeni bir pencere açılacak ve aktif olarak kendimizi o pencerede bulacağız. Bu arada durum çubuğuna dikkat edersek pencere sayısının ikiye çıktığını göreceğiz: "0:bash- 1:bash*" Daha önce "*" karakterinin anlamını belirtmiştik, bu aktif pencere anlamına gelir. "-" karakteri ise "bir önceki" pencere anlamına gelir. İki pencere ile "bir önceki" ifadesi pek anlam ifade etmiyor olabilir, ancak pencere sayımız arttığında bunun ne olduğunu daha iyi anlayacağız. 
+Bu işlemden hemen sonra yeni bir pencere açılacak ve aktif olarak kendimizi o pencerede bulacağız. Bu arada durum çubuğuna dikkat edersek pencere sayısının ikiye çıktığını göreceğiz: "0:bash- 1:bash*" Daha önce "*" karakterinin anlamını belirtmiştik, bu aktif pencere anlamına gelir. "-" karakteri ise "bir önceki" pencere anlamına gelir. İki pencere ile "bir önceki" ifadesi pek anlam ifade etmiyor olabilir, ancak pencere sayımız arttığında bunun ne olduğunu daha iyi anlayacağız.
 
 Dilediğimiz kadar pencere açıp, bunlara "C-b ," ile isimler verebiliriz. Örneğin birinde "top" komutunu yürütürken diğerinde kopyalama yapabilir, bir başkasında dosyaları inceleyip yapılandırmalarımızı düzenleyebiliriz. Peki pencereler arasında nasıl geçiş yapacağız?
 
@@ -230,7 +230,7 @@ işlemlerini yürütebiliriz. n bir sonraki, p ise bir önceki pencereye gidecek
 Pencereleri numarasına göre seçim yapmak için:
 
 ```
-C-b "pencere numarası" 
+C-b "pencere numarası"
 ```
 
 kullanılır. Yani ikinci pencereye geçmek için:
@@ -239,10 +239,10 @@ kullanılır. Yani ikinci pencereye geçmek için:
 C-b 2
 ```
 
-yapmamız yeterlidir. Eğer pencere sayımız 10'dan fazlaysa 
+yapmamız yeterlidir. Eğer pencere sayımız 10'dan fazlaysa
 
 ```
-C-b ' 
+C-b '
 ```
 
 işlemini kullanabiliriz. Bizden bir "index" isteyecektir, istediğimizi yazıp penceremize geçebiliriz.
@@ -261,13 +261,13 @@ Bu aşamada bölümün girişinde bahsetmiş olduğumuz pencere isimlerinin yan�
 0:bash- 1:bash 2:bash*
 ```
 
-3. penceremiz aktif durumdadır, 1. penceremiz ise "bir önceki" pencere konumundadır. Klasik olarak pencereler arasında geçiş yapmak yerine istediğimiz iki pencere arasında:
+3\. penceremiz aktif durumdadır, 1. penceremiz ise "bir önceki" pencere konumundadır. Klasik olarak pencereler arasında geçiş yapmak yerine istediğimiz iki pencere arasında:
 
 ```
 C-b l
 ```
 
-ile ileri geri yapabiliriz. Böylece aradaki pencereler atlanacak ve bizim iki penceremiz arasında geçiş yapılacaktır. 
+ile ileri geri yapabiliriz. Böylece aradaki pencereler atlanacak ve bizim iki penceremiz arasında geçiş yapılacaktır.
 
 Pencere sayımız çok olduğunda ortalık görülebileceği üzere biraz karışabiliyor. Pencereleri listeleterek geçiş yapmak mümkün, fakat bunun yerine isim verdiğimiz pencereler arasında arama yaparak da geçiş yapabiliriz. Pencerelerimize yaptığımız işlemlerle alakalı isimler verirsek aramalarımızda rahat edebiliriz. Örneğin "derleme", "kopyalama".
 
@@ -278,15 +278,15 @@ C-b f
 ile aramayı tetiklediğimizde durum çubuğu üzerinde Tmux bizden isim girmemizi isteyecektir. İsmi girdiğimizde eğer benzer isimde başka bir pencere yoksa doğrudan oraya atlayacaktır. Bizim örneğimizden yola çıkarsak arama bölümüne "der" girsek bile "derleme" isimli pencereye geçiş yapacaktır Tmux. Eğer benzer isimde pencereler varsa karşımıza bir liste gelecektir ve bizden seçim yapmamızı isteyecektir. Ancak burada bir şeyi belirtmekte fayda var. Tmux aramalarını sadece pencereler üzerinde yapmaz, pencerelerin o an gördüğü işlev neyse bunun üzerinden arama yapar. Mesela bir pencere sadece uçbirimde bekliyor ve bulunduğu dizinde önceden "ls" çalıştırılmışsa, listelenen dizin ve/veya dosya isimlerinde de örneğin "kitap" geçiyorsa, arama buraya kadar genişleyecektir. Kısacası biz "kitap" yazdığımızda bu pencereye geçiş yapılacaktır. Ufak bir not da aramanın büyük/küçük harf duyarlı olduğu üzerine olsun.
 
 
-Pencerelerle iyice haşir neşir olduğumuza göre artık bölmelerimize geçebiliriz. Çoklayıcıların güzel özelliklerinden biri de pencerelerini bölebiliyor olmamızdır. Tmux üzerinde pencereleri öntanımlı olarak hem dikey hem de yatay konumda bölebiliriz. 
+Pencerelerle iyice haşir neşir olduğumuza göre artık bölmelerimize geçebiliriz. Çoklayıcıların güzel özelliklerinden biri de pencerelerini bölebiliyor olmamızdır. Tmux üzerinde pencereleri öntanımlı olarak hem dikey hem de yatay konumda bölebiliriz.
 
-Dikey bölmek için:
+**Dikey bölmek için:**
 
 ```
 C-b %
 ```
 
-Yatay bölmek için:
+**Yatay bölmek için:**
 
 ```
 C-b "
@@ -294,9 +294,9 @@ C-b "
 
 işlemlerini yürütmemiz yeterli olacaktır. Bu şekilde istediğimiz bir pencereyi bölebilir, hatta bölmelerimizi de tekrar bölebiliriz. Bölmelerle çalışmak tamamen bizim ihtiyacımıza ve hayal gücümüze kalıyor. Daha önce de belirtmiş olduğumuz gibi, bir bölmede dosyamızı düzenlerken, bir başka bölmede sunucuyu "top" ile izleyebilir, bir başka bölmede IRC sunucusu üzerinde sohbet edebiliriz. Hatta Tmux'u sunucuda değil de kendi yerelimizdeki bir sistemde kullanıyorsak bir başk bölmede uçbirimden çalışan bir oynatıcı ile müzik bile dinleyebiliriz.
 
-Evet, pencerelerimizi bölmelere ayırmayı öğrendik. Peki bu bölmeler arasında nasıl geçiş yapabiliriz? Her zamanki gibi bunun da birden fazla yolu mevcut. Sırasıyla değinmeye çalışalım. 
+Evet, pencerelerimizi bölmelere ayırmayı öğrendik. Peki bu bölmeler arasında nasıl geçiş yapabiliriz? Her zamanki gibi bunun da birden fazla yolu mevcut. Sırasıyla değinmeye çalışalım.
 
-Bölmeler arasında en basit geçiş yolu belki de 
+Bölmeler arasında en basit geçiş yolu belki de
 
 ```
 C-b "yön tuşları"
@@ -304,10 +304,10 @@ C-b "yön tuşları"
 
 işlevidir. Ancak burada bir ayrıntıyı belirtmemiz lazım. Bu işlemi kullanmak için "Ctrl" ve "b" tuşuna basıp, bıraktıktan sonra yön tuşlarını kullanmalıyız. Aksi halde bırakmadan geçiş yapmaya çalışırsak yerel makinemizde farklı bir özelliği tetikleyecektir, ileride anlatacağımız bir özellik bu. Uzak bir makinede çalışıyorsak böyle bir şey sözkonusu değildir. Yön tuşlarının dördünü de kullanabiliriz, kısacası aşağı,yukarı ve sağa,sola gçiş yapmamız mümkündür.
 
-Bölmeler arasında gezinmenin bir başka yolu ise 
+Bölmeler arasında gezinmenin bir başka yolu ise
 
 ```
-C-b o 
+C-b o
 ```
 
 işlemi ile sırayla (ileri doğru) bölmeler arasında gezinmektir. Geri doğru gezinme mümkün olmasa bile bir önceki bölmeye geçiş aşağıdaki işlemle yapılabilir.
@@ -322,10 +322,10 @@ Bölmeler arasında gezinmenin ilginç bir başka yolu ise şu işlemi yürütme
 C-b q
 ```
 
-Bunu yaptığınızda bölmelerin numarası, üzerlerinde büyükçe bir şekilde belirecektir. Aktif bölme kırmızı, pasif bölme veya bölmelerse mavi renkle temsil edilirler. Ancak bu numaraların belirme süresi kısadır ve hızlı bir şekilde seçim yapmamız gerekir. 
+Bunu yaptığınızda bölmelerin numarası, üzerlerinde büyükçe bir şekilde belirecektir. Aktif bölme kırmızı, pasif bölme veya bölmelerse mavi renkle temsil edilirler. Ancak bu numaraların belirme süresi kısadır ve hızlı bir şekilde seçim yapmamız gerekir.
 
 
-Bölmelerimizi oluşturmayı öğrendik. Fakat bir bölme ihtiyacımızdan daha fazla yer işgal ediyor ve biz bunu daha dar bir alana yaymak istiyoruz ya da tam tersi. Bu durumda yapabileceğimiz şey bölmelerimizi boyutlandırmaktır. Evet, bunun da birden fazla yolu vardır ve yereldeki makinemizle uzaktaki makinemiz arasında farklılıklar gösterecektir. 
+Bölmelerimizi oluşturmayı öğrendik. Fakat bir bölme ihtiyacımızdan daha fazla yer işgal ediyor ve biz bunu daha dar bir alana yaymak istiyoruz ya da tam tersi. Bu durumda yapabileceğimiz şey bölmelerimizi boyutlandırmaktır. Evet, bunun da birden fazla yolu vardır ve yereldeki makinemizle uzaktaki makinemiz arasında farklılıklar gösterecektir.
 
 Aslında mesele yerel veya uzak makine meselesinden ziyade bir "uçbirim öykünücüsü" kullanıp kullanmama meselesidir. Masaüstünüzde gnome-terminal kullandığımız için boyutlandırma işi biraz daha rahat yapılabilir. Ancak uzak bir sunucuya bağlandığımızda "uçbirim öykünücüsü" yerine uçbirimin kendisini (daha doğrusu sanal uçbirimi) kullandığımız için biraz farklılık yaşayacağız.
 
@@ -335,18 +335,18 @@ Aslında mesele yerel veya uzak makine meselesinden ziyade bir "uçbirim öykün
 C-b C-"yukarı,aşağı,sağ,sol"
 ```
 
-işlemini kullanabiliriz. Yani Ctrl+b'ye basıp, bırakıp Ctrl+"yön tuşlarını" kullanacağız. Bu şekilde yaparak bölmemizi dilediğimiz gibi boyutlandırabiliriz. Fakat hemen belirtelim bu son boyutlandırma işleminin de bir süresi var. Kısacası bölmenizi Ctrl+"yön tuşları" ile hareket ettirirken bu hareketi ara vermeden yapmamız lazım. 
+işlemini kullanabiliriz. Yani Ctrl+b'ye basıp, bırakıp Ctrl+"yön tuşlarını" kullanacağız. Bu şekilde yaparak bölmemizi dilediğimiz gibi boyutlandırabiliriz. Fakat hemen belirtelim bu son boyutlandırma işleminin de bir süresi var. Kısacası bölmenizi Ctrl+"yön tuşları" ile hareket ettirirken bu hareketi ara vermeden yapmamız lazım.
 
 gnome-terminal değil de sanal bir uçbirim kullandığımızda, yani uzak sunucuya bağlandığımızda yön tuşları ne yazık ki işe yaramayacaktır. Burada elimizi biraz kirletmemiz gerekecek. Bu aşamadan sonra hem Tmux'un komut satırını görecek hem de tuş ataması yapmayı öğreneceğiz.
 
 
-Tmux ile çalışırken 
+Tmux ile çalışırken
 
 ```
 C-b :
 ```
 
-işlemini kullanırsak bizi kendi komut satırına düşürür ve bizden bir komut bekler. Bu komut satırı durum çubuğunun yerini alacaktır. Denememizi yapalım. Bu komut satırına şunu yazalım: 
+işlemini kullanırsak bizi kendi komut satırına düşürür ve bizden bir komut bekler. Bu komut satırı durum çubuğunun yerini alacaktır. Denememizi yapalım. Bu komut satırına şunu yazalım:
 
 ```
 split
@@ -363,7 +363,7 @@ resize-pane -D
 komutunu yürütebiliriz. -D aşağı, -U yukarı, -R sağ ve -L sol boyutlandırma için kullanılır. Öntanımlı olarak ölme 1 birim kaydırılır. Farklı birimlerle iş görmek istiyorsak:
 
 ```
-resize-pane -D 5 
+resize-pane -D 5
 ```
 
 gibi bir komut uygulayabiliriz. Peki her seferinde bu komutu yazmak zor olmayacak mı? Bu zorluğu aşmak için bir tuşu bu komuta atamamız mümkün. Bunun için komut satırına örneğin k tuşunu aşağı boyutlandırma için atamak için şunu yazabiliriz:
@@ -469,7 +469,7 @@ setw -g visual-activity on
 Bu ayarlamadan sonra kısa bir süreliğine hangi pencerede "aktivite" olduğu bize bildirilecektir.
 
 
-Görülebileceği üzere durum çubuğunu özelleştirme çok kolay ve aynı zamanda esnektir. Şimdi de sağ tarafı biraz özelleştirelim. Öntanımlı olarak sağ tarafta makine ismi, saat ve tarih görülür. Biz yine yeşil renkli olarak burada sistemin yük değerini görelim. 
+Görülebileceği üzere durum çubuğunu özelleştirme çok kolay ve aynı zamanda esnektir. Şimdi de sağ tarafı biraz özelleştirelim. Öntanımlı olarak sağ tarafta makine ismi, saat ve tarih görülür. Biz yine yeşil renkli olarak burada sistemin yük değerini görelim.
 
 ```
 set -g status-right '#[fg=yellow]#(uptime | cut -d "," -f 3)'
@@ -481,22 +481,22 @@ komutu ile bu işimizi görebiliriz. Sağ tarafın güncelleme süresi 15 saniye
 set -g status-interval 10
 ```
 
-komutunu kullanabiliriz. Fark edebileceğimiz üzere durum çubuğunun sağ tarafını özelleştirmek için bash komutlarını rahatlıkla kullanabiliyoruz. 
+komutunu kullanabiliriz. Fark edebileceğimiz üzere durum çubuğunun sağ tarafını özelleştirmek için bash komutlarını rahatlıkla kullanabiliyoruz.
 
 
 
 Durum çubuğu ile ilgili özelleştirmeleri kabaca görmüş olduk, detaylar yine kullanıcılara kalıyor. Şimdiyse çoklayıcıların bir başka özelliği olan kopyalama ve gezinme kipinden bahsedelim. Zira uzak bir sunucuda çalışırken bu özellik bizim için oldukça faydalı olacaktır.
 
-Çoklayıcılarla çalışırken fark edeceğimiz üzere çıktılar uçbirimi doldurduktan sonra Page-up ile yukarı doğru gezinemeyiz. Bu bir dezavantajdır ancak üstesinden gelinemeyecek bir durum değildir. Kaldı ki bu durumun üstesinden gelirken uzak sunucularda çalıştığımızda yapamadığımız kopyalama işini de halletmiş oluruz. 
+Çoklayıcılarla çalışırken fark edeceğimiz üzere çıktılar uçbirimi doldurduktan sonra Page-up ile yukarı doğru gezinemeyiz. Bu bir dezavantajdır ancak üstesinden gelinemeyecek bir durum değildir. Kaldı ki bu durumun üstesinden gelirken uzak sunucularda çalıştığımızda yapamadığımız kopyalama işini de halletmiş oluruz.
 
 
 Tmux ile yukarı satırlara doğru gezinmeye başlamak için kopylama kipine geçmemiz lazım. Bunun içinse
 
 ```
-C-b [ 
+C-b [
 ```
 
-işlemini yürütmeliyiz. Bu aşamdan sonra klavyemizdeki yön tuşlarıyla yukarı,aşağı ve sağa,sola doğru gezinebiliriz. Kopyalamak istediğimiz yerine başına geldiğimizde C-"boşluk" tuşuna basıp istediğimiz yeri işaretleyebiliriz. İşaretlememiz bittiğinde Alt+w tuşlarını kullandığımızda Tmux kopylama kipinden çıkıp yine uçbirime düşecektir. Kopyaladığımız bölümü yapıştırmak içinse 
+işlemini yürütmeliyiz. Bu aşamdan sonra klavyemizdeki yön tuşlarıyla yukarı,aşağı ve sağa,sola doğru gezinebiliriz. Kopyalamak istediğimiz yerine başına geldiğimizde C-"boşluk" tuşuna basıp istediğimiz yeri işaretleyebiliriz. İşaretlememiz bittiğinde Alt+w tuşlarını kullandığımızda Tmux kopylama kipinden çıkıp yine uçbirime düşecektir. Kopyaladığımız bölümü yapıştırmak içinse
 
 ```
 C-b ]
@@ -508,4 +508,4 @@ işlemini yürütebiliriz.
 Yazımızı burada noktalıyoruz. Tmux hakkında daha yazılacak çok şey olmasına rağmen böyle bir yazıda tümüne değinmek mümkün değildir. Gerek kendisinin man bölümünden, gerek sitesinden, gerekse internetteki kaynaklardan hemen hepsi hakkında güzel örnekler bulmamız mümkündür. Bu yazıda benim eksik bıraktığım, yanlış ifade ettiğim, yanlış bildiğim ve aktardığım bölümler de olabilir. Böyle bir durumda ufak bir araştırmayla doğrusunu bulabileceğinizden eminim. Ancak yazıda belirttiğim üzere bu konuda Türkçe kaynak olmasını pek ummuyorum. Bu güzel uygulama hakkında ilk Türkçe kaynak olması dileğiyle.
 
 
->**Not:** Bu anlatımda kabuk olarak *bash*, uçbirim olarak da *gnome-terminal* kullanılmıştır.
+>**Not:** Bu anlatımda kabuk olarak **bash**, uçbirim olarak da **gnome-terminal** kullanılmıştır.

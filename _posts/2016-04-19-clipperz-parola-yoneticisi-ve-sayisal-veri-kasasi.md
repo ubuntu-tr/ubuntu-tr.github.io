@@ -1,8 +1,8 @@
 ---
 title: "Clipperz Parola Yöneticisi ve Sayısal Veri Kasası"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 57. Sayı"]
+categories: "k5"
+tags: ["Sudo 57. Sayı","clipperz","parola","yönetim","sayısal","veri"]
 permalink: "clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi"
 summary: "Son zamanların havalı terimi bulut bilişim malumunuz. Bulut servislerin yaygınlaşmasıyla birlikte kullandığımız çevrimiçi hesapların sayısı da doğal olarak arttı. Peki her yeni hesap için farklı parolalar mı kullanıyoruz yoksa var olan parolalarımızı yeniden kullanmayı mı tercih ediyoruz?"
 image: "clipperz.png"
@@ -12,7 +12,7 @@ author: "Çağrı Emer"
 
 Bir finans firmasının araştırmasına göre ortalama 26 çevrimiçi servis için kullanıcılar 5 farklı parola kullanıyorlarmış.**[1]** Her hesabımız için farklı ve yeterli entropiye sahip bir parola kullanıp bütün bu parolaları akılda tutmak mümkün mü? Bu arada parola demişken XKCD klasiklerinden birini de paylaşmadan geçmeyelim.**[2]**
 
-Bir önceki paragraftaki soruya benim cevabım hayır olduğundan bir süredir işimi görecek bir parola yöneticisi arıyordum. Bu yazının konusu olan Clipperz ile bu sayede tanıştım. Clipperz, LastPass gibi çevrimiçi çalışabilen fakat yerelinizde de sorunsuzca kullanabileceğiniz dijital bir kasa görevini üstleniyor. Böylelikle tek bir ana parola ile tüm kullandığınız servislere erişme imkânınız oluyor. Üstelik bir hesaba ait bilgilerin çalınması durumunda diğer hesaplarınızı nasıl koruyacağınızı düşünmenize gerek kalmıyor.  Clipperz özel notlarınızı, kredi kartı bilgilerinizi, eğer kullanıyorsanız çeşitli yazılımlara ait anahtarları ve de parolalarınızı 256 bit anahtar uzunluğuna sahip AES şifreleme methodu ile şifreliyor.[3] (Aramızdaki kripto meraklıları için CTR modunun kullanıldığı notunu da düşelim.) Dikkate değer diğer bir özelliği de AGPL ile lisanslanmış özgür bir yazılım olması.
+Bir önceki paragraftaki soruya benim cevabım hayır olduğundan bir süredir işimi görecek bir parola yöneticisi arıyordum. Bu yazının konusu olan Clipperz ile bu sayede tanıştım. Clipperz, LastPass gibi çevrimiçi çalışabilen fakat yerelinizde de sorunsuzca kullanabileceğiniz dijital bir kasa görevini üstleniyor. Böylelikle tek bir ana parola ile tüm kullandığınız servislere erişme imkânınız oluyor. Üstelik bir hesaba ait bilgilerin çalınması durumunda diğer hesaplarınızı nasıl koruyacağınızı düşünmenize gerek kalmıyor.  Clipperz özel notlarınızı, kredi kartı bilgilerinizi, eğer kullanıyorsanız çeşitli yazılımlara ait anahtarları ve de parolalarınızı 256 bit anahtar uzunluğuna sahip AES şifreleme methodu ile şifreliyor.**[3]** (Aramızdaki kripto meraklıları için CTR modunun kullanıldığı notunu da düşelim.) Dikkate değer diğer bir özelliği de AGPL ile lisanslanmış özgür bir yazılım olması.
 
 Clipperz'ı github'dan alıp kurulumuna geçmeden önce öne çıkan diğer özelliklerinden de biraz bahsetmekte fayda var. Yazının ilerleyen kısımlarında uygulamalarını göreceğimiz bu özellikler kabaca şöyle;
 
@@ -97,19 +97,19 @@ $configuration['port']  = '3306';               //      database port
 
 Dosyayı yukarıdakine benzer şekilde düzenledikten sonra kaydedip kapatıyoruz. Şimdi kurulum işlemini yapacağız. Tarayıcımızı açıp şu adrese gidelim.
 
-http://localhost/setup/index.php
+<http://localhost/setup/index.php>
 
 Gelen sayfada en altta bulunan "POG me up!" butonuna tıkladığımızda veritabanına erişimi test edecek uygulama. Her şey yolunda gittiyse bir sonraki sayfada bir sürü OK! göreceğiz. Sayfanın en altındaki "Proceed" tuşuna bastığımızda yeni bir sayfa daha gelecek. Bu sayfada yapmamız gereken bir şey yok. Kurulum tamamlandı. Opsiyonel olarak "Manage Plugins" sekmesinden base64 encoding seçilebilir. Eğer bu işlemi yaparsanız yukarıda düzenlediğimiz configuration.php dosyasındaki $configuration['db_encoding'] = 0; satırındaki 0'ı 1 ile değiştirmeyi ihmal etmeyin. Artık aşağıdaki adresi ziyaret edip hesabımızı oluşturabiliriz.
 
-http://localhost/beta
+<http://localhost/beta>
 
 > **Önemli Not:** Yazıyı yazmaya iki-üç ay önce ilk başladığımda uygulamada aşağıda tanımladığım gibi bir hata mevcuttu fakat üzerinden çok zaman geçtiğinden hâlâ mevcut mu bilemiyorum. O yüzden kontrol etme işi size kalıyor. Eğer bir yerde takılırsanız dergi başlığında dile getirmeyi ihmal etmeyin.
 
 Fakat ondan önce düzeltmemiz gereken bir iki hata var. Bu hatalara uygulamayı test ederken rastladım ve henüz bildirme fırsatı bulamadım. O yüzden şimdilik elle düzelteceğiz.
 
-https://raw.github.com/clipperz/password-manager/master/frontend/beta/staticResources/logout.html
+<https://raw.github.com/clipperz/password-manager/master/frontend/beta/staticResources/logout.html>
 
-adresindeki metni kopyalayıp /var/www/beta/logout.html diye bir dosya oluşturuyoruz. 
+adresindeki metni kopyalayıp /var/www/beta/logout.html diye bir dosya oluşturuyoruz.
 Ardından /var/www/dump.php dosyasını açıp $htmlContent satırını şu şekilde düzenliyoruz.
 
 ```
@@ -130,15 +130,15 @@ sudo chown -R www-data:www-data /var/www/
 
 Bütün bu işlemleri tamamladığımızda artık Clipperz uygulamasını kullanabiliriz demektir. http://localhost/beta adresine gidip sağ taraftaki giriş formunun altında bulunan "create one" bağlantısına tıklayıp bir hesap oluşturduktan sonra uygulamaya giriş yapabiliriz. Bu aşamada bizi aşağıdaki gibi bir ekran karşılayacak.
 
-![](1.png)
+![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/1.png)
 
 Sol üstteki "Logout" ve "Lock" butonları adı üzerinde uygulamadan çıkma ve eğer bilgisayarın başından bir süre ayrılacaksanız hesabınızı kilitleme işlevini görüyorlar. Sağ taraftaki "Cards" sekmesi uygulamada sanıyorum ki en çok kullanılacak bölüm. Burada saklamak istediğimiz her veri için bir kart oluşturabiliyoruz. Fakat her kartı elle oluşturmak istemeyeceksinizdir. Clipperz uygulaması bizim için bunu da düşünmüş ve tarayıcımıza ekleyebileceğimiz bir yer imi yapmış. Yeni bir kart oluşturmadan önce bu yer imini tarayıcımıza ekleyelim ve ilk kartımızı kolayca oluşturalım. Sağ üstteki "Tools" sekmesine gelip açılan sayfada sol taraftaki menüden "Bookmarklet" butonuna tıklıyoruz. Gelen sayfadaki "Add to Clipperz" bağlantısını sürükleyerek sık kullanılanlar çubuğuna bırakıyoruz. Eğer her şey yolunda gittiyse sık kullanılanlar çubuğunda "Add to Clipperz" yeriminin görünmesi gerekiyor. Kısayolun kullanımı ise çok kolay. Diyelim ki Google posta hesabımızı uygulamaya eklemek istiyoruz. İlk olarak giriş yapacağımız sayfayı açıp ilgili alanları dolduruyoruz. Ardından sık kullanılanlar çubuğuna eklediğimiz "Add to Clipperz" butonuna basıyoruz. Bize bir pencere içerisinde kopyalamamız gereken metni getiriyor.
 
-[2.png]
+![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/2.png)
 
 Bu metni kopyalayıp uygulamadaki "Cards" sekmesine dönüyoruz ve "Add new card" tuşuna basıyoruz. Gelen pencerede "Direct login"i seçip az önce kopyaladığımız metni hemen aşağıdaki metin kutusuna yapıştırıyor ve "Create" tuşuna basıyoruz. Gelen sayfada herhangi bir alanı değiştirmemize gerek yok fakat istersek bu karta istediğimiz başka alanları ekleme şansımız var. "Save" diyerek işlemi tamamlıyoruz. Bu işlemin sonunda bizi aşağıdaki gibi bir pencere bekliyor.
 
-[3.png]
+![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/3.png)
 
 Artık bu karttaki "Direct Logins" kısmından ilgili bağlantıya tıklarsak uygulama sayfası açılacak ve Clipperz bizim için hesap bilgilerimizi girecektir. Direkt girişler dışında Clipperz'da banka kartlarınızı, web hesap bilgilerinizi, adres bilgilerinizi ve hatta kendi alanlarınızı oluşturabileceğiniz özel bilgileri güvenli bir şekilde tutabilirsiniz. Eğer bir kartı silmek isterseniz o kartı seçip "Delete card" tuşuna basmanız yeterli olacaktır. Kartlar hakkında genel bilgiyi verdiğimize göre artık "Account" sekmesine bakabiliriz.
 
@@ -153,7 +153,6 @@ Uygulamanın son kısmı olan ve daha önce baktığımız "Tools" sekmesi ise 4
 İşte Clipperz, ister yerelinize isterseniz de genel internetçe erişilebilen sunucunuza kurabileceğiniz, kurması kadar kullanması da oldukça basit olan çok işlevli ve AGPL lisanslı bir özgür yazılım projesi. Sayesinde her hesabınızı aynı şifreyle kullanmaktan kurtulabilir ve bir hesabınızın güvenliğini eskisi kadar dert etmemeye başlayabilirsiniz. Şifrelerinizi hatırlamanız gerekmediğinden normalde kullanacağınız şifrelerden daha uzun ve daha karmaşık şifreler oluşturarak hesaplarınızı brute-force tekniklerine karşı da nispeten daha güvenli hâle getirebilirsiniz. Tabii %100 güvenlik diye bir şeyin söz konusu olmadığını şimdiye kadar bilmiyorduysak bile güncel olaylar sayesinde öğrenmiş olmamız gerekiyor. Buna rağmen Clipperz benim hesaplarımı yönetim şeklimi oldukça kolaylaştırdı. Umarım sizin için de bunu başarabilir.
 
 ## Kaynak
-[1] http://www.techradar.com/au/news/internet/online-fraud-too-many-accounts-too-few-passwords-1089283
-[2] https://xkcd.com/936/
-[3] https://www.clipperz.com/security_privacy/crypto_algorithms/
-
+[1] <http://www.techradar.com/au/news/internet/online-fraud-too-many-accounts-too-few-passwords-1089283> \\
+[2] <https://xkcd.com/936/> \\
+[3] <https://www.clipperz.com/security_privacy/crypto_algorithms/> \\

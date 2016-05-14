@@ -1,8 +1,8 @@
 ---
 title: "Çekirdek Nedir? Ne yapar?"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 58. Sayı"]
+categories: "k5"
+tags: ["Sudo 58. Sayı","çekirdek","kernel","Mikrokernel","monolitik","HybridKernel"]
 permalink: "cekirdek-nedir-ne-yapar"
 summary: "Çekirdek, en alt katmanda çalışan ve donanımları kullanmamızı sağlayan uygulamalara arayüzlük yapan bir programdır diyebiliriz."
 image: "1.jpg"
@@ -53,7 +53,7 @@ Monolitik Kernel, Mikrokernel gibi sadece işlemci, hafıza gibi bileşenleri y�
 
 Monolitik Kernel'de Mikro Kernel'in aksine çok görevlilikten ve daha etkin donanım erişiminden bahsedebiliriz. Bir programdan bilgi almak veya başka bir işlemi gerçekleştirmek gerektiğinde süreç sırasında bekleme durumu yoktur. Bunun gibi durumlarda direkt gerçekleştirme veya erişim söz konusudur. Bu da performans konu olduğunda olumlu sonuç doğurur.
 
-Monolitik Kernel'de birçok işlem yönetici modunda ve tek bir süreçmiş gibi çalıştığından bir hata meydana geldiğinde tüm sistem bundan etkilenir. 
+Monolitik Kernel'de birçok işlem yönetici modunda ve tek bir süreçmiş gibi çalıştığından bir hata meydana geldiğinde tüm sistem bundan etkilenir.
 
 **Artıları**
 
@@ -104,13 +104,14 @@ Hybrid Çekirdek yapısında ise yukarıda da söylediğimiz gibi diğer 2 çeki
 
 Monolitik çekirdeğin sağladığı kararlılığın yanında esnekliğe açık olmadığını düşünenler Linux tarafında da Mikrokernel çalışması yapmaktalar. Fakat uzun süredir devam eden bir proje olmasna rağmen kararlı bir sürüme henüz kavuşmamıştır.
 
-Merak ederseniz projenin sitesini inceleyebilirsiniz. http://www.gnu.org/software/hurd/hurd.html
+Merak ederseniz projenin sitesini inceleyebilirsiniz.\\
+<http://www.gnu.org/software/hurd/hurd.html>
 
-Denemek isterseniz de yükleme şansınız var. http://www.debian.org/ports/hurd/hurd-cd
+Denemek isterseniz de yükleme şansınız var.\\
+<http://www.debian.org/ports/hurd/hurd-cd>
 
 Belki ileriki sayılarımızda hurd konusuna daha detaylı değiniriz.
 
 
-## Toparlayacak olursak
+**Toparlayacak olursak** \\
 Son kullanıcı ve sistem kullanımı tarafında çekirdek, yapı, mimari tartışmaları hep devam edecektir. Özellikle son kullanıcı bazında göreceli durumlar yeni tartışmalara ve dolayısıyla yeni fikirlere ve üretimlere sebep olacaktır.
-

@@ -1,8 +1,8 @@
 ---
 title: "Subversion Sürüm Kontrol Sistemi Kurulumu ve Apache Yapılandırması"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 32. Sayı"]
+categories: "k5"
+tags: ["Sudo 32. Sayı","sürüm","kontrol","subversion"]
 permalink: "subversion"
 summary: ""
 image: "1.png"
@@ -20,13 +20,13 @@ Ağ üzerinden çalışabildiği için, değişik bilgisayarlardaki insanların 
 
 ## Subversion benim için doğru araç mı?
 
-Subversion kullanmayı düşünen bir kullanıcı ya da sistem yöneticisiyseniz kendinize sormanız gereken ilk soru Subversion'ın sizin kullanımınız için doğru bir araç olup olmadığıdır. Yine kullanıcı kılavuzundan aktaracak olursak, “Subversion bir çekiçtir, fakat her problemi çivi gibi görmemeye özen gösterin.” 
+Subversion kullanmayı düşünen bir kullanıcı ya da sistem yöneticisiyseniz kendinize sormanız gereken ilk soru Subversion'ın sizin kullanımınız için doğru bir araç olup olmadığıdır. Yine kullanıcı kılavuzundan aktaracak olursak, “Subversion bir çekiçtir, fakat her problemi çivi gibi görmemeye özen gösterin.”
 
 Eğer dosyaların ve dizinlerin eski hallerini arşivlemek, muhtemelen bu hallere geri dönmek ve verinizin zaman içinde nasıl değiştiğini gösteren kayıtları incelemek istiyorsanız Subversion tam sizin aradığınız araçtır. Eğer çeşitli dosyalar üzerinde, genellikle ağ üzerinden, diğer insanlarla birlikte çalışmak durumundaysanız ve yapılan değişiklikleri kimin yaptığını görmek istiyorsanız Subversion kullanımı yine uygun olacaktır. Subversion'ın yazılım geliştirme ortamlarında kullanılmasının en büyük sebebi de budur.
 
 Tabii ki Subversion kullanmanın bir de maliyeti vardır. Verilerinizi ve tarih içindeki hallerini saklamak için bir depo yönetmeniz ve bu deponun zaman içinde yedeklerini almanız gerekir. Dosyalarınızla çalışırken bildiğimiz kopyalama, taşıma, yeniden adlandırma ve silme işlemleri yerine bu işlemlerin Subversion'a özgü olanlarını kullanmanız gerekir.
 
-Bütün bu ekstra iş yüküne -ki doğru araçları kullanırsanız zamanla aslında iş yükü olmadığını göreceksiniz- razıysanız, yine de Subversion'ı diğer araçların daha iyi şekilde çözebileceği bir problem için kullanmamalısınız. Örneğin Subversion, versiyonu değişmeyen fakat zaman içinde büyüyen verilerinizi dağıtabileceğiniz bir sistem değildir. Bu şekilde kullanabilirsiniz fakat bu işi çok daha iyi yapan araçlar varken Subversion kullanmak gereksiz olacaktır. Bu yazıda dav modülü ile Apache üzerinden kullanılacak şekilde Subversion yapılandırılması anlatılmıştır. 
+Bütün bu ekstra iş yüküne -ki doğru araçları kullanırsanız zamanla aslında iş yükü olmadığını göreceksiniz- razıysanız, yine de Subversion'ı diğer araçların daha iyi şekilde çözebileceği bir problem için kullanmamalısınız. Örneğin Subversion, versiyonu değişmeyen fakat zaman içinde büyüyen verilerinizi dağıtabileceğiniz bir sistem değildir. Bu şekilde kullanabilirsiniz fakat bu işi çok daha iyi yapan araçlar varken Subversion kullanmak gereksiz olacaktır. Bu yazıda dav modülü ile Apache üzerinden kullanılacak şekilde Subversion yapılandırılması anlatılmıştır.
 
 ## Subversion Kurulumu
 
@@ -70,10 +70,10 @@ Apache'yi yeniden başlattığınızda http://svn.ornek.com adresi üzerinden de
 Yukarıda oluşturduğumuz depo su anda herkese açık. svn.ornek.com adresine erişimi olan herkes depomuza da erişebilir. Dolayısıyla eğer sadece istediğimiz kişilerin erişmesini istiyorsak, erişim izinleri oluşturmalıyız.
 
 ```
-		AuthType Basic
-		AuthName "Kimsin Sen?"
-		AuthUserFile /etc/svn-auth-file
-		Require valid-user
+AuthType Basic
+AuthName "Kimsin Sen?"
+AuthUserFile /etc/svn-auth-file
+Require valid-user
 ```
 
 Örnek.com sitenizin yapılandırma dosyasına ekleyeceğiniz yukarıdaki satırlar tam olarak istediğimiz işi yaparlar. Yani yeni VirtualHost'umuz aşağıdaki gibi gözüküyorsa, svn.ornek.com adresine gelen kullanıcıların artık kullanıcı adı ve şifre girmeleri gerekecektir.
@@ -119,7 +119,7 @@ htpasswd -s /etc/svn-auth-file kullanici1
 
 ## Kullanıcılar tamam da, ya belli kullanıcıların belli dosyalara erişmesini istiyorsak ne yapacağız?
 
-Bunun için erişim kontrol dosyası oluşturmalı ve yine örnek.com'un yapılandırma dosyasına birkaç satır eklemeliyiz. Erişim kontrol dosyası çok basit bir yapıya sahip. Diyelim yukarıda oluşturduğumuz yönetici isimli kullanıcının her dizine erişebilmesini fakat kullanıcı1 isimli kullanıcının sadece kullanıcı1 dizinine  yazabilmesini fakat diğer dizinleri okuyabilmesini istiyoruz. O halde şöyle bir dosya oluşturmalıyız. Yine erişim izin dosyasında olduğu gibi bu dosyayı istediğimiz isimde ve istediğimiz dizinde oluşturabiliriz. Yeter ki adresini bilelim. 
+Bunun için erişim kontrol dosyası oluşturmalı ve yine örnek.com'un yapılandırma dosyasına birkaç satır eklemeliyiz. Erişim kontrol dosyası çok basit bir yapıya sahip. Diyelim yukarıda oluşturduğumuz yönetici isimli kullanıcının her dizine erişebilmesini fakat kullanıcı1 isimli kullanıcının sadece kullanıcı1 dizinine  yazabilmesini fakat diğer dizinleri okuyabilmesini istiyoruz. O halde şöyle bir dosya oluşturmalıyız. Yine erişim izin dosyasında olduğu gibi bu dosyayı istediğimiz isimde ve istediğimiz dizinde oluşturabiliriz. Yeter ki adresini bilelim.
 
 ```
 nano /etc/svn-access-file #favori metin editörü tartışmasına girmeyelim :) ben de istemez miyim bir vi kullanayım, emacs'le macro'dan macro'ya uçayım.
@@ -136,7 +136,7 @@ kullanici1 = r
 kullanici1 = rw
 ```
 
-Tabii ki bu dosyaya ekleyeceğiniz satırlar kullanıcılarınıza ve deponuzun dizin yapısına göre değişecektir. Birden çok depo kullanmanız halinde ya da Apache yapılandırmasında SVNParentPath kullandıysanız bu gibi sebeplerden farklı bir yapılandırmaya ihtiyaç duyabilirsiniz. Bu noktada sizi tekrar kullanıcı kılavuzuna yönlendiriyorum. Şimdi erişim kontrolü için gereken değişkeni Örnek.com'un Apache yapılandırmasına ekleyelim. 
+Tabii ki bu dosyaya ekleyeceğiniz satırlar kullanıcılarınıza ve deponuzun dizin yapısına göre değişecektir. Birden çok depo kullanmanız halinde ya da Apache yapılandırmasında SVNParentPath kullandıysanız bu gibi sebeplerden farklı bir yapılandırmaya ihtiyaç duyabilirsiniz. Bu noktada sizi tekrar kullanıcı kılavuzuna yönlendiriyorum. Şimdi erişim kontrolü için gereken değişkeni Örnek.com'un Apache yapılandırmasına ekleyelim.
 
 ```
 <VirtualHost IP:Port>
@@ -162,10 +162,8 @@ Temel Subversion kullanımı ve Git ile arasındaki farkları gelecek ayki SUDO'
 
 ## Notlar ve Kaynaklar
 
-VirtualHost yapılandırması için kullandığım CustomLog'un nasıl oluşturulduğunu Apache sayfalarında bulabilirsiniz.
+VirtualHost yapılandırması için kullandığım CustomLog'un nasıl oluşturulduğunu Apache sayfalarında bulabilirsiniz. \\
+<http://httpd.apache.org/docs/2.2/mod/mod_log_config.html#customlog>
 
-http://httpd.apache.org/docs/2.2/mod/mod_log_config.html#customlog
-
-Diğer her şey için bakmanız gereken kaynak kullanıcı kılavuzudur.
-
-http://svnbook.red-bean.com/
+Diğer her şey için bakmanız gereken kaynak kullanıcı kılavuzudur.\\
+<http://svnbook.red-bean.com/>

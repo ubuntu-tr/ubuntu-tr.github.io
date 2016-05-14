@@ -1,8 +1,8 @@
 ---
 title: "Özgür, Kolay, Sade: Deluge"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 35. Sayı"]
+categories: "k5"
+tags: ["Sudo 35. Sayı","Deluge","torrent"]
 permalink: "ozgur-kolay-sade-deluge"
 summary: ""
 image: "deluge.png"
@@ -16,11 +16,11 @@ En çok kullandığımız programlar arasında yer alır Bittorrent istemcileri.
 
 Öncelikle Deluge'yi edinmek için “Ubuntu Yazılım Merkezi”ni ziyaret etmeniz gerekiyor. Bütün masaüstü platformlarıyla uyumlu olan Deluge'de, arayüz olarak PyGTK kullanılmış. Oldukça sade bir arayüzü olduğu için de muadillerine göre sistemi daha az yoruyor. Kaynak olarak libtorrent kütüphanesini kullanıyor Deluge. Uygulamada en beğendiğim özellik ise indirme hızını sabitleme olanağı sağlaması. Bu sayede dosyaları daha verimli bir şekilde indirebiliyoruz.
 
-Kullanımı oldukça basit Deluge'nin. “Torrent Ekle” diyerek açılan pencereden indirdiğimiz torrent dosyasını seçiyoruz. “Seçenekler” sekmesinden dosyayı nereye indireceğimizi belirliyoruz. Buradan bant genişliğini de ayarlama imkanımız var. “Ekle” dediğimiz anda uygulama, belirlediğimiz yere dosyayı indirmeye başlayacaktır. Uygulamanın ana ekranında “Durum, Ayrıntılar, Dosyalar, Eşler, Seçenekler” sekmelerinden indirdiğiniz dosyayla ilgili detaylara ulaşabilirsiniz. 
+Kullanımı oldukça basit Deluge'nin. “Torrent Ekle” diyerek açılan pencereden indirdiğimiz torrent dosyasını seçiyoruz. “Seçenekler” sekmesinden dosyayı nereye indireceğimizi belirliyoruz. Buradan bant genişliğini de ayarlama imkanımız var. “Ekle” dediğimiz anda uygulama, belirlediğimiz yere dosyayı indirmeye başlayacaktır. Uygulamanın ana ekranında “Durum, Ayrıntılar, Dosyalar, Eşler, Seçenekler” sekmelerinden indirdiğiniz dosyayla ilgili detaylara ulaşabilirsiniz.
 
 ![](images/post/ozgur-kolay-sade-deluge/Ekran Görüntüsü-8.png)
 
-“Tercihler” sekmesinde yine “Bant Genişliği” ve “Arayüz” ile ilgili ayarlar yapabiliyoruz. Deluge'nin sağladığı “Vekil Sunucu” desteği ile ilgili düzenlemeleri de yine bu sekmede yapıyoruz. Ancak bu sekmede asıl üzerinde durulması gereken başlık ise “Eklentiler”. 
+“Tercihler” sekmesinde yine “Bant Genişliği” ve “Arayüz” ile ilgili ayarlar yapabiliyoruz. Deluge'nin sağladığı “Vekil Sunucu” desteği ile ilgili düzenlemeleri de yine bu sekmede yapıyoruz. Ancak bu sekmede asıl üzerinde durulması gereken başlık ise “Eklentiler”.
 
 Eklentiler, benzer uygulamaların hepsinde mevcut. Deluge de eklenti açısından oldukça zengin. “Tercihler” sekmesinde ulaşacağınız eklentilerden seçtiğiniz her birini pencerenin solunda yer alan sütunda görebilirsiniz. Eklentinin üzerine tıklayarak da ayarlarına hemen ulaşabilirsiniz. İşte bu eklentileri bazıları ve işlevleri:
 

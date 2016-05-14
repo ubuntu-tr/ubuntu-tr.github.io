@@ -1,8 +1,8 @@
 ---
 title: "Ağ Protokolleri"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 30. Sayı"]
+categories: "k5"
+tags: ["Sudo 30. Sayı","ağ","protokol","TCP","SMTP","SNMP","TELNET","FTP","NNTP","HTTP",""]
 permalink: "ag-protokolleri"
 summary: ""
 image: "1.jpg"
@@ -78,5 +78,7 @@ Bu katmanda herhangi bir protokol tanımlı değildir. IP başlığı eklenmiş 
 Günümüz teknolojisine bakıldığında açıkça görülmektedir ki Ethernet teknolojisi ağ bağlantıları alanının hakimi durumundadır. Ethernet teknolojisini kısaca incelemek gerekirse, ağ bağdaştırıcı kartların (ethernet kartları) birbirleri ile iletişime geçebilmeleri için her birine üretilmeleri sırasında, 48 bitlik özel fiziksel adresler tanımlanmıştır. Fakat TCP/IP protokol kümesinde 32 bitlik IP adresleri kullanılmaktadır. Eğer hem TCP/IP protokolü kullanılıp hem de ethernet kullanılacak ise iletişimin sağlanabilmesinde dönüştürücü görevini üstlenecek bir ara birime ihtiyaç duyulmaktadır. Bu birim ARP tablolarıdır.
 
 ![](images/post/ag-protokolleri/8.jpg)
-	
-**Sonuç olarak** TCP/IP denilen bir protokol kümesi olmasaydı, günümüzün iletişim kaynakları olamayacaktı. Tabii ki olurdu ama bu kadar etkili ve hızlı olur muydu düşünülmesi gereken bir nokta. Bu sayımızda ağ protokollerine genel bir çerçeveden baktık. Bir sonraki sayımızda TCP/IP protokoller kümesinin yapısına değineceğiz. Bir sonraki makalemizde görüşmek dileğimle. Hoşçakalın.
+
+**Sonuç olarak** TCP/IP denilen bir protokol kümesi olmasaydı, günümüzün iletişim kaynakları olamayacaktı. Tabii ki olurdu ama bu kadar etkili ve hızlı olur muydu düşünülmesi gereken bir nokta. Bu sayımızda ağ protokollerine genel bir çerçeveden baktık. Bir sonraki sayımızda TCP/IP protokoller kümesinin yapısına değineceğiz. Bir sonraki makalemizde görüşmek dileğimle.
+
+Hoşçakalın.

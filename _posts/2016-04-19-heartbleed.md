@@ -1,8 +1,8 @@
 ---
 title: "Heartbleed"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 58. Sayı"]
+categories: "k1"
+tags: ["Sudo 58. Sayı","heartbleed","openssl","heartbeat","zaafiyet"]
 permalink: "heartbleed"
 summary: "Düşünün, internet dünyasının %70’i tehlike altında ve bu tehlike aracılığı ile korsanlar parolalarınız ile hesaplarınızda cirit atıyorlar. Garip, değil mi?"
 image: "heartbleed.jpg"
@@ -14,7 +14,7 @@ Heart, ingilizce kalp anlamına gelen bir kelime; bleed ise kanama. İki kelimey
 
 “Nereden bulmuşlar ki bu zaafiyeti?” diye soruyorsunuz, farkındayım.
 
-Zaafiyet, OpenSSL kütüphanelerinde bulunan **“heartbeat”** isimli bir eklentiden kaynaklanıyor. Zaten ismi biraz da buradan geliyor. 
+Zaafiyet, OpenSSL kütüphanelerinde bulunan **“heartbeat”** isimli bir eklentiden kaynaklanıyor. Zaten ismi biraz da buradan geliyor.
 
 Girişi biraz şenlendirdiğimize göre hadi biraz derinlere inelim.
 
@@ -50,4 +50,3 @@ Mevcut işletim sisteminize dair bir güncelleme paketiniz yok ise, önerilen te
 Zaafiyet çok ciddi tehlikelere yol açabilecek ve bunu siz farketmeden yapacak türde. Bu yüzden dikkatli olmanızı önererek bitiriyorum.
 
 Bir sonraki yazımda görüşmek üzere.
-

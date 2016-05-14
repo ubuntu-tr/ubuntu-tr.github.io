@@ -1,8 +1,8 @@
 ---
 title: "Thunderbird ve GnuPG ile Güvenli Haberleşme"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 33. Sayı"]
+categories: "k2"
+tags: ["Sudo 33. Sayı","Thunderbird","GnuPG","güvenli","haberleşme","mail","e-posta","spam","şifreleme"]
 permalink: "thunderbird-ve-gnupg-ile-guvenli-haberlesme"
 summary: ""
 image: "1.jpg"
@@ -12,13 +12,13 @@ author: "Çağrı Emer"
 
 İlk örneklerini altmışlı yıllarda gördüğümüz e-posta sistemi, zaman içinde hızla evrilerek günümüzdeki şeklini aldı. Bu süre zarfında doğal olarak kullanıcıların ihtiyaçları da değişti. İlk çıktığı zamanlarda akademik iletişim hizmetini gören e-posta teknolojisi günümüzde artık temel iletişim ihtiyaçlarımız arasında önemli bir yer edinmiş durumda.
 
-Elektronik posta teknolojisinin yaygınlaşıp, hayatımızın her alanına girmeye başlamasıyla, kötü amaçlı e-postalar da kullanıcılar için büyük bir problem haline geldi. 2010 Ağustos tahminlerine göre her gün gönderilen e-postaların 200 milyar adedi **[1]** spam adı verilen istenmeyen postalardan oluşuyor. 
+Elektronik posta teknolojisinin yaygınlaşıp, hayatımızın her alanına girmeye başlamasıyla, kötü amaçlı e-postalar da kullanıcılar için büyük bir problem haline geldi. 2010 Ağustos tahminlerine göre her gün gönderilen e-postaların 200 milyar adedi **[1]** spam adı verilen istenmeyen postalardan oluşuyor.
 
 E-postaların bir güvenlik sorunu haline gelmesi, geliştiricileri ister istemez çözümler aramaya itti. Bunun sonucu olarak, gönderenin doğrulanması için sertifika ya da şifreleme çözümleri ortaya çıktı. Bu yazıda GnuPG temelli Enigmail eklentisi ile Thunderbird üzerinden gönderilen postaların nasıl imzalandığını ve şifrelendiğini anlatmaya çalışacağım.
 
 ## Nasıl çalışıyor?
 
-Gönderdiğimiz postaların, sadece istediğimiz alıcı tarafından içeriğine ulaşılmasını ve alıcının da mesajı bizim yolladığımızdan emin olmasını sağlayan bu sistemi arkadaşımıza verdiğimiz fakat anahtarı bizde duran bir asma kilide benzetebiliriz. Yani, diyelim ki benim bir kutum var ve arkadaşıma o kutu içerisinde çok önemli bir mesaj yollayacağım. Bu mesajın taşıyıcı tarafından görülmesini istemiyorum. Ayrıca arkadaşım kutuyu aldığında o kutuyu yollayanın ben olduğunu anlayabilmeli ki, eğer taşıyıcı, kutuyu benzeriyle değiştirmişse aldığı mesajı dikkate almasın. 
+Gönderdiğimiz postaların, sadece istediğimiz alıcı tarafından içeriğine ulaşılmasını ve alıcının da mesajı bizim yolladığımızdan emin olmasını sağlayan bu sistemi arkadaşımıza verdiğimiz fakat anahtarı bizde duran bir asma kilide benzetebiliriz. Yani, diyelim ki benim bir kutum var ve arkadaşıma o kutu içerisinde çok önemli bir mesaj yollayacağım. Bu mesajın taşıyıcı tarafından görülmesini istemiyorum. Ayrıca arkadaşım kutuyu aldığında o kutuyu yollayanın ben olduğunu anlayabilmeli ki, eğer taşıyıcı, kutuyu benzeriyle değiştirmişse aldığı mesajı dikkate almasın.
 
 ## Şifreleme
 
@@ -92,7 +92,7 @@ Sertifikayı oluşturunca şöyle bir uyarı veriyor.
 
 ![](images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/15.png)
 
-Bu uyarıyı da geçtiğimizde artık anahtar çiftimizi kullanabilir haldeyiz. 
+Bu uyarıyı da geçtiğimizde artık anahtar çiftimizi kullanabilir haldeyiz.
 
 ![](images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/16.png)
 
