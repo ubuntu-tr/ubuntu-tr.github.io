@@ -1,8 +1,8 @@
 ---
 title: "Linux Virüsleri ile Tanışın"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 45. Sayı"]
+categories: "k5"
+tags: ["Sudo 45. Sayı","Linux","Virus"]
 permalink: "linux-virusleri-ile-tanisin"
 summary: ""
 image: "1.jpg"
@@ -15,7 +15,7 @@ Sizler için bugüne kadar tanınmış bir Linux Virüs Listesi derledik. Şimdi
 
 ## 1. ALAEDA (Virus.Linux.Alaeda)
 
-**Çıkış Tarihi:** 2003  
+>**Çıkış Tarihi:** 2003  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -24,7 +24,7 @@ Alaeda virüsü; çalışan bir sistemde, geçerli dizindeki ELF biçimli dosyal
 
 ## 2. BADBUNNY (Perl.Badbunny)
 
-**Çıkış Tarihi:** 2007  
+>**Çıkış Tarihi:** 2007  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platforum:** Linux, Windows
@@ -33,7 +33,7 @@ Badbunny, açık kaynak kodlu Open Office aracını özellikle hedefleyen ilk so
 
 ## 3. OSFX.8759
 
-**Çıkış Tarihi:** 2002  
+>**Çıkış Tarihi:** 2002  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Unix
@@ -42,7 +42,7 @@ Linux.OSF.8759 virüsü Linux sistemleri üzerinde "backdoor" (arka kapı) göre
 
 ## 4. VIT VIRUS (Virus.Linux.Vit.4096)
 
-**Çıkış Tarihi:** 1999  
+>**Çıkış Tarihi:** 1999  
 **Risk Seviyesi:** Linux kullanıcıları için düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux, Unix, Windows ve MSDOS
@@ -51,7 +51,7 @@ Vit virüsü, yerleşik belleği olmayan parazitik çapraz platform virüslerden
 
 ## 5. STAOG
 
-**Çıkış Tarihi:** 1996  
+>**Çıkış Tarihi:** 1996  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -60,7 +60,7 @@ Staog, Linux sistemler üzerinde çalışanlar için özel olarak geliştirilen 
 
 ## 6. BLISS
 
-**Çıkış Tarihi:** 1997, Şubat  
+>**Çıkış Tarihi:** 1997, Şubat  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -69,7 +69,7 @@ Bliss, Linux sistemlere bulaşması ile bilinen ilk bilgisayar virüsü olma öz
 
 ## 7. Virus.Linux.Winter.341
 
-**Çıkış Tarihi:** 2000  
+>**Çıkış Tarihi:** 2000  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -78,7 +78,7 @@ Bu virüs, yerleşik belleği olmayan parazitik olarak bilinen zararsız bir Lin
 
 ## 8. Zipworm
 
-**Çıkış Tarihi:** 2001  
+>**Çıkış Tarihi:** 2001  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -95,7 +95,7 @@ Virüs ayrıca, “elf zip worm vecna” şeklinde bir telif hakkı metni de iç
 
 ## 9. SATYR (Virus.Linux.Satyr.a)
 
-**Çıkış Tarihi:** 2001  
+>**Çıkış Tarihi:** 2001  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -104,7 +104,7 @@ Satyr, yerleşik belleği olmayan parazitik olarak bilinen zararsız Linux virü
 
 ## 10. RAMEN VIRUS (Ramen Worm)
 
-**Çıkış Tarihi:** 2001  
+>**Çıkış Tarihi:** 2001  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux (Redhat)
@@ -115,7 +115,7 @@ Ramen, Red Hat Linux 6.2 ve 7.0 varsayılan kurulumları çalıştıran sistemle
 
 ## 11. KOOBFACE
 
-**Çıkış Tarihi:** 2010  
+>**Çıkış Tarihi:** 2010  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux, Windows, Mac
@@ -124,7 +124,7 @@ Koobface virüsü 2010 yılında türemiş yeni nesil virüslerden biridir. Sosy
 
 ## 12. KAITEN
 
-**Çıkış Tarihi:** 2006  
+>**Çıkış Tarihi:** 2006  
 **Risk Seviyesi:** Düşük  
 **Hasar Seviyesi:** Düşük  
 **Platform:** Linux
@@ -133,7 +133,7 @@ Kaiten, Linux sistemlerde "backdoor" (arka kapı) açılmasını sağlayan bir T
 
 ## 13. RIKE
 
-**Çıkış tarihi:** 2003  
+>**Çıkış tarihi:** 2003  
 **Risk seviyesi:** Düşük  
 **Hasar seviyesi:** Düşük  
 **Platform:** Linux
@@ -142,7 +142,7 @@ Rike, Assembler programlama dilinde yazılmış, 1627 baytlık neredeyse zarars�
 
 ---
 
-Linux gibi açık kaynak kodlu işletim sistemlerinde ELF dosyası formatı, virüs riskini artırabilir. 
-Sonuç olarak, Linux için virüsler, var olmayan varlıklar değildir. Her işletim sisteminde olduğu gibi Linux işletim sistemi dağıtımlarında da virüsler ile karşılaşabilirsiniz. Fakat, bu virüslerin oluşturduğu risklerin çoğu düşüktür ve ihmal edilebilir. Kısa sürede açık zaten gerekli güncellemelerle giderilir. Tabii, virüsler sadece Linux içindeki zaafiyetler ile değil, sizin kişisel güvenliğinizi ihmal ettiğiniz vakit, sisteminize kişisel güvenliğiniz üzerinden sızarak da girebilir. 
+Linux gibi açık kaynak kodlu işletim sistemlerinde ELF dosyası formatı, virüs riskini artırabilir.
+Sonuç olarak, Linux için virüsler, var olmayan varlıklar değildir. Her işletim sisteminde olduğu gibi Linux işletim sistemi dağıtımlarında da virüsler ile karşılaşabilirsiniz. Fakat, bu virüslerin oluşturduğu risklerin çoğu düşüktür ve ihmal edilebilir. Kısa sürede açık zaten gerekli güncellemelerle giderilir. Tabii, virüsler sadece Linux içindeki zaafiyetler ile değil, sizin kişisel güvenliğinizi ihmal ettiğiniz vakit, sisteminize kişisel güvenliğiniz üzerinden sızarak da girebilir.
 
 Kısacası, Linux'un virüs geçirmez olmasının nedeni, virüslerin oluşturdukları riskin çok düşük seviyede olmasıdır. Pek tabii Linux'un popülaritesi arttıkça, bilgisayar korsanları da bu sistemde açık aramaya ağırlık vermektedir. Bu yüzden her ihtimale karşı bir anti-virüs ya da güvenlik duvarının yüklü olması şarttır.

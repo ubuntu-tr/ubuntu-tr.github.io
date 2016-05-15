@@ -1,8 +1,8 @@
 ---
 title: "Açık Kaynak Güvenlik Duvarı Sistemi"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 44. Sayı"]
+categories: "k5"
+tags: ["Sudo 44. Sayı","güvenlik","açık","kaynak","Firewall","duvar","UTM"]
 permalink: "acik-kaynak-guvenlik-duvari-sistemi"
 summary: ""
 image: "1.png"
@@ -13,7 +13,7 @@ author: "Erkan Esmer"
 ## Unified Threat Management (UTM) Firewall - Birleştirilmiş Tehdit Yönetim Sistemleri -1
 
 Bu yazımızda donanımsal olarak kullanılan açık kaynak Güvenlik Duvarı sistemlerini inceleyeceğiz.
-Güvenlik Duvarı sistemlerine geçiş yapmadan önce 
+Güvenlik Duvarı sistemlerine geçiş yapmadan önce
 
 1. Güvenlik Duvarı tanımı
 2. Güvenlik Duvarı gerekliliği
@@ -21,7 +21,7 @@ Güvenlik Duvarı sistemlerine geçiş yapmadan önce
 
 maddelerini açıklamaya çalışacağız.
 
-Yazımızı iki bölüm hâlinde sunmayı düşündük. Giriş ve tanımlama niteliği taşıyan birinci bölüme bu ay, Güvenlik Duvarı çözümlerine yer vereceğimiz ikinci bölüme ise önümüzdeki ay yer vereceğiz. 
+Yazımızı iki bölüm hâlinde sunmayı düşündük. Giriş ve tanımlama niteliği taşıyan birinci bölüme bu ay, Güvenlik Duvarı çözümlerine yer vereceğimiz ikinci bölüme ise önümüzdeki ay yer vereceğiz.
 
 ## Güvenlik Duvarı Tanımı
 
@@ -57,7 +57,7 @@ IDS'ten farklı olarak şüpheli paketleri tespit eder ve ilgili trafiği kapatm
 
 DPI, IDS ve IPS'ten farklı olarak gelen paketin amacını algılamaya çalışan bir sistemdir. DPI, sadece kaynak IP, hedef IP ve port numarasına bakmaz. Trafiğin gelişimine göre alınacak önlemi veya verilecek izni belirler. Bu özelliği ile esnek bir kullanım ve duruma göre reaksiyon için daha isabetli bir ortam oluşturulmuş olur. Yani sistem daha esnek ve akıllı müdahalelerde bulunur. Örnek verecek olursak 100 numaralı portu kullanan bir uygulamanın bant genişliğini fazla işgal ettiği için bir kural yazarak alışverişini kesebiliriz. Fakat program 200 nolu portu kullanmaya başlarsa alınan önlem boşa gider. Ya da 100 numaralı port, başka uygulamalar için gerekli ise yaptığımız işlem başka uygulamaları etkiler.
 
-DPI daha kolay bir tarif ile pakete derin bir bakış atarak ne işlem yapacağını, yani amacını belirlemeye çalışır ve paketin yapacağı işe göre bir filtreleme uygular. 
+DPI daha kolay bir tarif ile pakete derin bir bakış atarak ne işlem yapacağını, yani amacını belirlemeye çalışır ve paketin yapacağı işe göre bir filtreleme uygular.
 
 Değindiğimiz bu birkaç nokta, Güvenlik Duvarı sistemlerinin gelişimi üzerine varılan en temel ve somut gelişmedir. Bahsettiğimiz bu sistemler tabii ki daha birçok özellik taşır. Biz sadece Güvenlik Duvarı sisteminin, niteliklerini belirleyici birkaç önemli noktaya dikkat çektik. Şimdi yazımızın başında belirttiğimiz maddelere devam edelim.
 
@@ -71,7 +71,7 @@ Artık sistemlerin hizmet yelpazeleri genişledikçe kontrollü ve kararlı bir 
 
 Ve üstelik artık günümüzde hedef, İnternet üzerinden yapacağımız bir işlemin sadece tamamlanması değildir. İşlemin güvenli bir şekilde tamamlanması büyük önem arz etmektedir. İnsanların aldıkları hizmette yaptıkları işlemlerde güvenli bir bölgede olmaları, özellikle iş dünyasında önemli bir sorumluluktur.
 
-Bütün bunlarla beraber, güvenlik şartı teknik olarak gerekli olduğu kadar kanun olarak da bir şart olmuştur. Şöyleki İnternet erişimi sağlayan kurumlar 5651 yasası gereği İnternet giriş/çıkışlarını kayıt altına almak ve belli bir süre saklamak durumundadır. 
+Bütün bunlarla beraber, güvenlik şartı teknik olarak gerekli olduğu kadar kanun olarak da bir şart olmuştur. Şöyleki İnternet erişimi sağlayan kurumlar 5651 yasası gereği İnternet giriş/çıkışlarını kayıt altına almak ve belli bir süre saklamak durumundadır.
 
 ## UTM Güvenlik Duvarı -Birleştirilmiş Tehdit Yönetimi
 
@@ -82,13 +82,13 @@ Güvenlik Duvarı çözümleri, ihtiyaçlara göre gelişme sağlarken, birbirin
 ![](images/post/acik-kaynak-guvenlik-duvari-sistemi/resim2.jpg)
 
 Bu resmin,  üstteki bölümünde UTM olmayan bir güvenlik çözümünü görüyorsunuz. E-posta filtreleme ve web filtreleme ayrı ayrı cihazlarla yapılmakta. Böyle bir düzeni kurmaktan ziyade yönetmek daha güç olsa gerek.
-Altta ise VPN, e-posta, web filter modüllerinin bir arada uygulanışını, aynı cihaz üzerinden yönetimini görebilirsiniz. 
+Altta ise VPN, e-posta, web filter modüllerinin bir arada uygulanışını, aynı cihaz üzerinden yönetimini görebilirsiniz.
 
 Böylece şunu söyleyebiliriz ki UTM cihazlarla beraber yönetim ve uygulama kolay hâle gelmiş olup bu tür ihtiyaçlarda başarılı çözümler bizlere sunulmuştur.
 
 İlk bölümümüzü UTM cihazların bir arada bulundurduğu güvenlik duvarı özelliklerini toparlayarak tamamlayalım.
 
-- İnternet üzerinde çok yaygın olarak kullanılan web dolaşımı, e-posta alışverişi, dosya transferi gibi işlemler için antivirüs hizmeti verir. 
+- İnternet üzerinde çok yaygın olarak kullanılan web dolaşımı, e-posta alışverişi, dosya transferi gibi işlemler için antivirüs hizmeti verir.
 
 - İnternet üzerindeki uygunsuz içerikli sitelere erişimin engellenmesi veya kontrolü için içerik filtreleme hizmeti sunar.
 
@@ -106,6 +106,6 @@ Böylece şunu söyleyebiliriz ki UTM cihazlarla beraber yönetim ve uygulama ko
 
 - Tüm bu aktiviteler izlenebilir ve raporlanabilir.
 
-Güvenlik Duvarı sistemlerine giriş yaparak gelişimini anlatmaya ve son hali ile ilgili bilgiler vermeye çalıştık. Güvenlik ve güvenlik ekipmanları konusundan ne kadar bahsedersek bahsedelim yine de işin tümüne değinmiş olamayız. Özet bir yazı yazmaya çalışıp önemli noktaları ifade etmeye çalıştık. 
+Güvenlik Duvarı sistemlerine giriş yaparak gelişimini anlatmaya ve son hali ile ilgili bilgiler vermeye çalıştık. Güvenlik ve güvenlik ekipmanları konusundan ne kadar bahsedersek bahsedelim yine de işin tümüne değinmiş olamayız. Özet bir yazı yazmaya çalışıp önemli noktaları ifade etmeye çalıştık.
 
 Önümüzdeki sayıda, 2.bölüm yazımızla, açık kaynak UTM Güvenlik Duvarı uygulamalarından bahsedeceğiz.

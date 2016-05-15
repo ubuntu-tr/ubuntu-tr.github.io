@@ -1,8 +1,8 @@
 ---
 title: "Ubuntu Donduğunda Güvenle Yeniden Başlatın"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 44. Sayı"]
+categories: "k2"
+tags: ["Sudo 44. Sayı","SysRq","yeniden başlat","Ubuntu"]
 permalink: "ubuntu-dondugunda-guvenle-yeniden-baslatin"
 summary: ""
 image: "1.jpg"
@@ -64,15 +64,11 @@ Alt+SysRq+r
 |b | Bilgisayarınızı yeniden başlatır.|
 
 
-Sihirli tuş ile kullanılabilen diğer komutlar ve ayrıntılı bilgi için:
-
-<http://kernel.org/doc/Documentation/sysrq.txt>
-
+Sihirli tuş ile kullanılabilen diğer komutlar ve ayrıntılı bilgi için:\\
+<http://kernel.org/doc/Documentation/sysrq.txt>\\
 belgesini inceleyebilirsiniz.
 
 Ayrıca aşağıda bulunan adreslerdeki yazılara bakabilirsiniz;
 
 * <http://www.howtogeek.com/119293/4-ways-to-recover-from-a-crashed-or-frozen-x-server-on-linux/>  
 * <http://www.howtogeek.com/119127/use-the-magic-sysrq-key-on-linux-to-fix-frozen-x-servers-cleanly-reboot-and-run-other-low-level-commands/>  
-
-
