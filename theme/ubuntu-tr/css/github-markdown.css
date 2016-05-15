@@ -403,6 +403,10 @@
   border-left: 4px solid #dd4814;
 }
 
+.markdown-body blockquote.onemli {
+  border-left: 4px solid #f44336;
+}
+
 .markdown-body blockquote>:first-child {
   margin-top: 0;
 }
