@@ -2,7 +2,7 @@
 title: "SDL ile Oyun Programcılığı"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 33. Sayı","SDL","Oyun","program"]
+tags: ["Sudo 33. Sayı","SDL","oyun","programlama"]
 permalink: "sdl-ile-oyun-programciligi"
 summary: ""
 image: "1.jpg"

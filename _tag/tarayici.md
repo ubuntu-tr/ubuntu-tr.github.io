@@ -1,0 +1,4 @@
+---
+title: "tarayıcı"
+code: "tarayici"
+---

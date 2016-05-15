@@ -2,7 +2,7 @@
 title: "Syslog-ng"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 56. Sayı","Sysnlog-ng","kayıt","log","günlük"]
+tags: ["Sudo 56. Sayı","kayıt","log","günlük"]
 permalink: "syslog-ng"
 summary: "Çoğu son kullanıcı, kayıt (log) dosyalarını bilmez. Biraz ileri seviyede olanlar ise hatalarla karşılaşınca bunlara bakarlar. Ama sistem yöneticileri için sistemin neler yaptığını sürekli izlemek önemlidir. Bunun içinse bu kayıtları inceleyen araçları kullanırlar. Nasıl mı? Cevabı yazımızda."
 image: "log.png"

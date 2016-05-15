@@ -2,7 +2,7 @@
 title: "Sistemde Bütünlük Denetim Uygulaması: Samhain"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 42. Sayı","Samhain","Denetim","bütünlük","güvenlik"]
+tags: ["Sudo 42. Sayı","denetim","bütünlük","güvenlik"]
 permalink: "sistemde-butunluk-denetim-uygulamasi-samhain"
 summary: ""
 image: "ikinci resim.jpg"

@@ -2,7 +2,7 @@
 title: "Tiny Tiny RSS"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["rss","php","Sudo 61. Sayı","ttrss"]
+tags: ["rss","php","Sudo 61. Sayı"]
 permalink: "tiny-tiny-rss"
 summary: ""
 image: "1.png"

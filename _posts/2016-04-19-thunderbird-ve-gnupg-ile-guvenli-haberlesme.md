@@ -2,7 +2,7 @@
 title: "Thunderbird ve GnuPG ile Güvenli Haberleşme"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 33. Sayı","Thunderbird","GnuPG","güvenli","haberleşme","mail","e-posta","spam","şifreleme"]
+tags: ["Sudo 33. Sayı","thunderbird","GnuPG","güvenlik","haberleşme","eposta","spam","şifreleme"]
 permalink: "thunderbird-ve-gnupg-ile-guvenli-haberlesme"
 summary: ""
 image: "1.jpg"

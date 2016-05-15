@@ -1,0 +1,4 @@
+---
+title: "çekirdek"
+code: "cekirdek"
+---

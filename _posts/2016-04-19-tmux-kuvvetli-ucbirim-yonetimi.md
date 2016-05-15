@@ -2,7 +2,7 @@
 title: "Tmux: Kuvvetli Uçbirim Yönetimi"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 32. Sayı","Tmux","uçbirim","terminal","Screen"]
+tags: ["Sudo 32. Sayı","uçbirim","screen"]
 permalink: "tmux-kuvvetli-ucbirim-yonetimi"
 summary: ""
 image: "resim1.jpg"

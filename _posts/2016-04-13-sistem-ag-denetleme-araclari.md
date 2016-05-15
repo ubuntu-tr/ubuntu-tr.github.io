@@ -2,7 +2,7 @@
 title: "Sistem ve Ağ İzleme, Test Etme Araçları"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 47. Sayı","Ağ","izleme","test","nessus","wireshark","zenmap","nmap"]
+tags: ["Sudo 47. Sayı","ağ izleme","test","nessus","wireshark","zenmap","nmap"]
 permalink: "sistem-ag-denetleme-araclari"
 summary: ""
 image: "1.jpg"

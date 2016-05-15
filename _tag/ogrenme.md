@@ -1,0 +1,4 @@
+---
+title: "öğrenme"
+code: "ogrenme"
+---

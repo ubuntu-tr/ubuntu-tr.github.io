@@ -2,7 +2,7 @@
 title: "Açık Kaynak Güvenlik Duvarı Sistemi"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 44. Sayı","güvenlik","açık","kaynak","Firewall","duvar","UTM"]
+tags: ["Sudo 44. Sayı","güvenlik","açık kaynak","firewall","güvenlik duvarı","UTM"]
 permalink: "acik-kaynak-guvenlik-duvari-sistemi"
 summary: ""
 image: "1.png"

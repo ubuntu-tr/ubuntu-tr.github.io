@@ -2,7 +2,7 @@
 title: "Linux Virüsleri ile Tanışın"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 45. Sayı","Linux","Virus"]
+tags: ["Sudo 45. Sayı","linux","virüs"]
 permalink: "linux-virusleri-ile-tanisin"
 summary: ""
 image: "1.jpg"

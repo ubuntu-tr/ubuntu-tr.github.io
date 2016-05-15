@@ -2,7 +2,7 @@
 title: "Dosya Aktarmak İçin: FileZilla"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 36. Sayı","filezilla","FTP","dosya aktarımı"]
+tags: ["Sudo 36. Sayı","filezilla","FTP","dosya aktarım"]
 permalink: "filezilla"
 summary: ""
 image: "filezilla.png"

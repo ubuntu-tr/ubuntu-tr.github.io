@@ -2,17 +2,13 @@
 title: "Sistemi İzleme Merkezi: /proc"
 date: 2016-04-19 02:11
 categories: "k4"
-tags: ["Sudo 48. Sayı","proc","dosya","sistem","linux"]
+tags: ["Sudo 48. Sayı","proc","dosya sistemi","linux"]
 permalink: "proc-dizini"
 summary: "/proc dizini sistemi izleme ve tahlil yapma anlamında çok önemli bir yerdir. Hâlihazırda çalışan uygulamaları inceleyebileceğimiz ve müdahale edebileceğimiz gibi sistemin sabit özellikleri hakkında da bilgilere erişebiliriz."
 image: "1.png"
 thumb: "1.png"
 author: "Erkan Esmer"
 ---
-
-
-
-
 
 Merhaba. Bu sayıdaki konumuz /proc dizini olacak. Yazımızda /proc klasöründen ve işlevlerinden bahsedeceğiz.
 

@@ -1,0 +1,4 @@
+---
+title: "önbellek"
+code: "onbellek"
+---

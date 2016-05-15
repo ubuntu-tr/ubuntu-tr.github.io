@@ -2,7 +2,7 @@
 title: "Linux Oyunlarının Kırılma Noktaları"
 date: 2016-04-19 02:11
 categories: "k3"
-tags: ["Sudo 56. Sayı","Linux","oyun","eleştiri"]
+tags: ["Sudo 56. Sayı","linux","oyun","eleştiri"]
 permalink: "linuxoyun"
 summary: "Linux oyunlarının zayıf yönleri, oyuncuların serzenişlerine ekleniyor. Windows oyunları güçlü, yeni ve pırıl pırıl. Linux oyunları ve oyuncuları ise bunların karşısında her yönden saldırıya açıklar. Çok ciddi, artık büyümüş (!) oyun oynamayan Linux kullanıcıları da biraz düşünmeli bunu. Ne o, alındınız mı? Biraz da siz alının, hep biz mi alınacağız?"
 image: "1.png"

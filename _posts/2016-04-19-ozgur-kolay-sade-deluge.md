@@ -2,7 +2,7 @@
 title: "Özgür, Kolay, Sade: Deluge"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 35. Sayı","Deluge","torrent"]
+tags: ["Sudo 35. Sayı","torrent"]
 permalink: "ozgur-kolay-sade-deluge"
 summary: ""
 image: "deluge.png"

@@ -2,7 +2,7 @@
 title: "Pyhton Programlama"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["python","programlama","yazı dizisi","Sudo 60. Sayı"]
+tags: ["python","programlama","Sudo 60. Sayı"]
 permalink: "pyhton-programlama-seri-i"
 summary: "Python programlama dili güçlü, kullanışlı, çabuk yazılabilen, eğlenceli ve kolay okunabilen, yorumlamalı bir programlama dilidir. Bu anlatım, Python programlama dilini hiç bilmeyen kullanıcıların dahi anlayabileceği bir seviyede sürecektir."
 image: "pyhton-programlama.jpeg"

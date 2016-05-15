@@ -2,7 +2,7 @@
 title: "Linux Çekirdek Geliştirme Süreci"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 40. Sayı","Linux","çekirdek","geliştirme","kernel"]
+tags: ["Sudo 40. Sayı","linux","çekirdek","kernel"]
 permalink: "linux-cekirdek-gelistirme-sureci"
 summary: ""
 image: "1.png"

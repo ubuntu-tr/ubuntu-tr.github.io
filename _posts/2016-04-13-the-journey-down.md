@@ -2,7 +2,7 @@
 title: "The Journey Down: Chapter One"
 date: 2016-04-19 02:11
 categories: "k3"
-tags: ["Sudo 47. Sayı","The Journey Down: Chapter One","oyun","linux"]
+tags: ["Sudo 47. Sayı","oyun"]
 permalink: "the-journey-down"
 summary: ""
 image: "ana-resim.png"

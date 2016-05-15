@@ -1,0 +1,4 @@
+---
+title: "sysRq"
+code: "sysrq"
+---

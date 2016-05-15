@@ -2,7 +2,7 @@
 title: "Ağ Protokolleri"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 30. Sayı","ağ","protokol","TCP","SMTP","SNMP","TELNET","FTP","NNTP","HTTP",""]
+tags: ["Sudo 30. Sayı","ağ","ağ protokolü","telnet","TCP","SMTP","SNMP","FTP","NNTP","HTTP"]
 permalink: "ag-protokolleri"
 summary: ""
 image: "1.jpg"

@@ -1,0 +1,4 @@
+---
+title: "bütünlük"
+code: "butunluk"
+---

@@ -2,7 +2,7 @@
 title: "\"Hot Standby Streaming Replication\" Sunucu Yapılandırması"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 54. Sayı","Sunucu","yapılandırma","postgreSQL","hot standby","repmgr"]
+tags: ["Sudo 54. Sayı","sunucu yapılandırma","sunucu","yapılandırma","postgreSQL","repmgr"]
 permalink: "postgresql"
 summary: "Bilindiği gibi en iyilerden olan postgreSQL, sorgulama yapabilmemiz ya da yüksek ulaşılabilirlik için
 bize \"hot standby\" adı altında bir özellik sunmakta. Bu yazıda bu özelliği repmgr yazılımını kullanarak

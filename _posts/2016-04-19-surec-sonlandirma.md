@@ -2,7 +2,7 @@
 title: "Süreç Sonlandırma"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 30. Sayı","kill","pkill","killall","süreç sonlandırma","PID"]
+tags: ["Sudo 30. Sayı","kill","pkill"]
 permalink: "surec-sonlandirma"
 summary: ""
 image: "1.jpg"

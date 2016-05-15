@@ -2,7 +2,7 @@
 title: "3, 2, 1! Kayıttayız! - Ardour"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 52. Sayı","Ardour","canlı","kayıt"]
+tags: ["Sudo 52. Sayı","canlı kayıt"]
 permalink: "monty_python"
 summary: "Ardour, canlı enstrüman ve vokal kaydı yapmamızı sağlayan bir araç. Nasıl yapılacağını merak ediyorsanız yazımıza buyurun."
 image: "1.jpg"

@@ -1,0 +1,4 @@
+---
+title: "bash"
+code: "bash"
+---

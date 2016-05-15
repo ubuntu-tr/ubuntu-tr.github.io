@@ -1,0 +1,4 @@
+---
+title: "fstab"
+code: "fstab"
+---

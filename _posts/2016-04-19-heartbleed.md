@@ -2,7 +2,7 @@
 title: "Heartbleed"
 date: 2016-04-19 02:11
 categories: "k1"
-tags: ["Sudo 58. Sayı","heartbleed","openssl","heartbeat","zaafiyet"]
+tags: ["Sudo 58. Sayı","heartbleed","openssl","heartbeat","güvenlik"]
 permalink: "heartbleed"
 summary: "Düşünün, internet dünyasının %70’i tehlike altında ve bu tehlike aracılığı ile korsanlar parolalarınız ile hesaplarınızda cirit atıyorlar. Garip, değil mi?"
 image: "heartbleed.jpg"

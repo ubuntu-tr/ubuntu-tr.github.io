@@ -2,7 +2,7 @@
 title: "Paralel Hesaplama - Beowulf Cluster"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 57. Sayı","Beowulf","Cluster","Paralel","hesaplama"]
+tags: ["Sudo 57. Sayı","cluster","paralel hesaplama"]
 permalink: "paralel-hesaplama-beowulf-cluster"
 summary: "Yapmanız gereken büyük hesaplar varsa ve elinizdeki kaynaklar buna yeterli gelmiyorsa Beowulf Cluster yapısı tam da aradığınız şeydir. Başlangıç olarak, ihtiyacınızı karşılamak için bu kaynak size yetecektir."
 image: "kapak.png"

@@ -2,7 +2,7 @@
 title: "\"Kapat\", \"Yeniden Başlat\" Gibi Butonları Unity Ana Seçkeye Nasıl Ekleriz?"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 58. Sayı","Unity","Kapat","Yeniden başlat","buton","power commands"]
+tags: ["Sudo 58. Sayı","unity","düğme","seçke"]
 permalink: "kapat-yeniden-baslat-gibi-butonlari-unity-ana-seckeye-nasil-ekleriz"
 summary: "Diyelim ki sistemde yaşadığınız bir sorun sonucu, sistemi yeniden başlatmanız gerekiyor; ama Ubuntu üst panel ortalarda görünmüyor. Seçeneklerimiz neler olurdu acaba?"
 image: "1.png"

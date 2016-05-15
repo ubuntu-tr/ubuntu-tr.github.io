@@ -2,7 +2,7 @@
 title: "Subversion Sürüm Kontrol Sistemi Kurulumu ve Apache Yapılandırması"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 32. Sayı","sürüm","kontrol","subversion"]
+tags: ["Sudo 32. Sayı","sürüm kontrol","subversion"]
 permalink: "subversion"
 summary: ""
 image: "1.png"

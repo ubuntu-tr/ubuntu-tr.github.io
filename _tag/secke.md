@@ -1,0 +1,4 @@
+---
+title: "seçke"
+code: "secke"
+---

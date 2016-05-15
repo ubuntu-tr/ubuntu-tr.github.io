@@ -2,7 +2,7 @@
 title: "SparkleShare"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 34. Sayı","sparkleshare","bulut","GitHub","Kurulum","sunucu"]
+tags: ["Sudo 34. Sayı","bulut bilişim","sunucu"]
 permalink: "sparkleshare"
 summary: ""
 image: "3.png"

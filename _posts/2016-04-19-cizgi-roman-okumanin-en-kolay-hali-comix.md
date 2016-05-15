@@ -2,7 +2,7 @@
 title: "Çizgi Roman Okumanın En Kolay Hâli: Comix"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 60. Sayı","Comix","çizgi roman","Python"]
+tags: ["Sudo 60. Sayı","çizgi roman"]
 permalink: "cizgi-roman-okumanin-en-kolay-hali-comix"
 summary: "Çok sevdiğimiz çizgi romanları bilgisayardan okumak, epey meşakkatli olabiliyor. Resim görüntüleyici programları ile açıp okumak, insanı çizgi romandan bile soğutur. Ama bunu kolaylaştıran güzel bir uygulamamız var: Comix."
 image: "comix_gorsel_1.png"

@@ -2,7 +2,7 @@
 title: "Pyhton Programlama - Seri II"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["python","programlama","yazı dizisi","Sudo 61. Sayı"]
+tags: ["python","programlama","Sudo 61. Sayı"]
 permalink: "pyhton-programlama-seri-ii"
 summary: ""
 image: "pyhton-programlama-seri-ii.jpeg"

@@ -1,0 +1,4 @@
+---
+title: "otomasyon"
+code: "otomasyon"
+---

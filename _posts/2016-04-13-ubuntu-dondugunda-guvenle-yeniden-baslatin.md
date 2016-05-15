@@ -2,7 +2,7 @@
 title: "Ubuntu Donduğunda Güvenle Yeniden Başlatın"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 44. Sayı","SysRq","yeniden başlat","Ubuntu"]
+tags: ["Sudo 44. Sayı","sysRq","yeniden başlat","ubuntu","linux"]
 permalink: "ubuntu-dondugunda-guvenle-yeniden-baslatin"
 summary: ""
 image: "1.jpg"

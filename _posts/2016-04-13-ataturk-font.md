@@ -1,5 +1,5 @@
 ---
-title: "Atattürk Fontu ve Tasarım Süreci"
+title: "Atatürk Fontu ve Tasarım Süreci"
 date: 2016-04-19 02:11
 categories: "k5"
 tags: ["Sudo 52. Sayı","Atatürk","font"]

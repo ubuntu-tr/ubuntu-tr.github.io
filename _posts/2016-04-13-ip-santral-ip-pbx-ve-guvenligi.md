@@ -2,7 +2,7 @@
 title: "IP Santral (IP PBX) ve Güvenliği"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 43. Sayı","ip","güvenlik","santral","IP PBX","Asterisk"]
+tags: ["Sudo 43. Sayı","IP","güvenlik","santral","IP PBX","asterisk"]
 permalink: "ip-santral-ip-pbx-ve-guvenligi"
 summary: ""
 image: "kapak.png"

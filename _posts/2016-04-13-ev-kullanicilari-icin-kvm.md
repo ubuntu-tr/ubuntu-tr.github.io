@@ -2,7 +2,7 @@
 title: "Ev Kullanıcıları İçin KVM"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 51. Sayı","kernel","sanal","makine","KVM"]
+tags: ["Sudo 51. Sayı","kernel","sanal makine","KVM"]
 permalink: "kvm"
 summary: ""
 image: "1.png"

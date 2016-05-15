@@ -1,0 +1,4 @@
+---
+title: "yönlendirici"
+code: "yonlendirici"
+---

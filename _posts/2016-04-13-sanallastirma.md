@@ -2,7 +2,7 @@
 title: "Sanallaştırma Nedir?"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 50. Sayı","Sanal","virtual","makine"]
+tags: ["Sudo 50. Sayı","sanal makine"]
 permalink: "sanallastirma"
 summary: "Sanal makinelerin tanımını ilk kez Popek ve Goldberg yaptı. Onlara göre sanal makine “gerçek makinenin etkili, soyutlanmış bir kopyasıydı”."
 image: "01.jpg"

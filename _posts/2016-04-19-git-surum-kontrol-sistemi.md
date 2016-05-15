@@ -2,7 +2,7 @@
 title: "Git Sürüm Kontrol Sistemi "
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 33. Sayı","Git","Subversion","Blob","commit","tag","SVN"]
+tags: ["Sudo 33. Sayı","git","sürüm kontrol"]
 permalink: "git-surum-kontrol-sistemi"
 summary: ""
 image: "1.png"

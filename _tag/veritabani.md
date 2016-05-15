@@ -1,0 +1,4 @@
+---
+title: "veritabanı"
+code: "veritabani"
+---

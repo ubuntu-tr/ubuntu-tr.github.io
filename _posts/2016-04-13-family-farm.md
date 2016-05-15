@@ -2,7 +2,7 @@
 title: "Family Farm"
 date: 2016-04-19 02:11
 categories: "k3"
-tags: ["Sudo 55. Sayı","family farm","oyun","linux"]
+tags: ["Sudo 55. Sayı","oyun"]
 permalink: "ffarm"
 summary: "Bir aile çiftliğini işletmek, sanal ortamda gerçekten oldukça kolay. Family Farm, toprak ve hayvanlarla uğraşmanın zorluklarını atlatarak eğlencesini bize yaşatıyor."
 image: "ffarmlogo.jpg"

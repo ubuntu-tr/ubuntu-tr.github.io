@@ -2,7 +2,7 @@
 title: "Yazmaya Odaklan: FocusWriter"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 60. Sayı","FocusWriter"]
+tags: ["Sudo 60. Sayı","metin editörü"]
 permalink: "yazmaya-odaklan-focuswriter"
 summary: "Eğer yazmanız gereken yazılar, düzenlemeniz gereken metin belgeleri çoksa FocusWriter, bunları dikkatinizin dağılmasına izin vermeden kontrol edebilmenizi sağlayan, şık bir uygulama."
 image: "focus_gorsel_1.png"

@@ -1,0 +1,4 @@
+---
+title: "eleştiri"
+code: "elestiri"
+---

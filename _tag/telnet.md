@@ -1,0 +1,4 @@
+---
+title: "telnet"
+code: "telnet"
+---

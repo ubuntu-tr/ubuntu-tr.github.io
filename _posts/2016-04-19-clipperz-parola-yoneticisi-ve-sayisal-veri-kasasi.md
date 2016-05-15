@@ -2,7 +2,7 @@
 title: "Clipperz Parola Yöneticisi ve Sayısal Veri Kasası"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 57. Sayı","clipperz","parola","yönetim","sayısal","veri"]
+tags: ["Sudo 57. Sayı","güvenlik","parola yöneticisi"]
 permalink: "clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi"
 summary: "Son zamanların havalı terimi bulut bilişim malumunuz. Bulut servislerin yaygınlaşmasıyla birlikte kullandığımız çevrimiçi hesapların sayısı da doğal olarak arttı. Peki her yeni hesap için farklı parolalar mı kullanıyoruz yoksa var olan parolalarımızı yeniden kullanmayı mı tercih ediyoruz?"
 image: "clipperz.png"

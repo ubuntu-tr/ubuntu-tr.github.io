@@ -2,7 +2,7 @@
 title: "Linux'taki Temel Dosya Sistemleri: ext2,ext3,ext4,jfs & xfs"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 60. Sayı","dosya","sistem","ext2","ext3","ext4","jfs","xfs"]
+tags: ["Sudo 60. Sayı","dosya sistemi","ext4"]
 permalink: "linux-taki-temel-dosya-sistemleri-ext2-ext3-ext4-jfs"
 summary: "Orijinal Linux sistemi, Unix dosya sistemine işlevsellik bakımından benzeyen basit bir dosya sistemi kullanır. Bu makalede Linux'ta kullanılan temel dosya sistemlerini tartışacağız."
 image: "1.png"

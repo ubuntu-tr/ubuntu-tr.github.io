@@ -1,0 +1,4 @@
+---
+title: "Atatürk"
+code: "ataturk"
+---

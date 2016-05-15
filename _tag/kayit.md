@@ -1,0 +1,4 @@
+---
+title: "kayıt"
+code: "kayit"
+---

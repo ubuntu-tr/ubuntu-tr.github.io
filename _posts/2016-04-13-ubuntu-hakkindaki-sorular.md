@@ -2,7 +2,7 @@
 title: "Ubuntu Hakkında En Çok Sorulan Sorular"
 date: 2016-04-19 02:11
 categories: "k4"
-tags: ["Sudo 49. Sayı","ubuntu","soru","hakkında"]
+tags: ["Sudo 49. Sayı","ubuntu","sık sorulan sorular","linux"]
 permalink: "ubuntu-sorular"
 summary: ""
 image: "1.jpg"

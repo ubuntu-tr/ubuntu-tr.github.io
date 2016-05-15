@@ -2,7 +2,7 @@
 title: "Eski Bir Bilgisayar Bir Dosya Paylaşım Sunucusuna Nasıl Çevrilir?"
 date: 2016-04-19 02:11
 categories: "k2"
-tags: ["Sudo 51. Sayı","samba","server","sunucu","dosya","paylaşım","nasıl"]
+tags: ["Sudo 51. Sayı","samba","sunucu","dosya paylaşım"]
 permalink: "samba-server"
 summary: "Eğer kullanmadığınız eski bir bilgisayarınız varsa -ki artık hemen hemen herkesin vardır artık günümüzde herhâlde- onu kolayca bir sunucuya çevirebilirsiniz."
 image: "1.jpg"

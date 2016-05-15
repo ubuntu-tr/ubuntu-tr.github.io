@@ -2,7 +2,7 @@
 title: "Çekirdek Nedir? Ne yapar?"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 58. Sayı","çekirdek","kernel","Mikrokernel","monolitik","HybridKernel"]
+tags: ["Sudo 58. Sayı","çekirdek","kernel"]
 permalink: "cekirdek-nedir-ne-yapar"
 summary: "Çekirdek, en alt katmanda çalışan ve donanımları kullanmamızı sağlayan uygulamalara arayüzlük yapan bir programdır diyebiliriz."
 image: "1.jpg"

@@ -2,7 +2,7 @@
 title: "Güvenli Önyükleyici ile Güvenlik Seviyenizi Artırın"
 date: 2016-04-19 02:11
 categories: "k1"
-tags: ["Sudo 49. Sayı","Önyükleyici","güvenlik","boot","Secure","Bootloader"]
+tags: ["Sudo 49. Sayı","önyükleyici","güvenlik","boot","bootloader"]
 permalink: "secure-boot-loader"
 summary: "MacOS'nin yıllardır benzerini kullandığı güvenlik optimizasyonu artık bütün Linux dağıtımlarında olacak."
 image: "1.png"

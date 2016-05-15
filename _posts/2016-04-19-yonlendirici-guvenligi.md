@@ -2,7 +2,7 @@
 title: "Yönlendirici Güvenliği"
 date: 2016-04-19 02:11
 categories: "k5"
-tags: ["Sudo 35. Sayı","router","yönlendirici","güvenlik","routing","filtreleme","Spoofing","SYN","Smurf","log","SNMP","RAT","Nessus"]
+tags: ["Sudo 35. Sayı","yönlendirici","güvenlik","filtreleme","spoofing","SYN","smurf","log","SNMP","RAT","nessus"]
 permalink: "yonlendirici-guvenligi"
 summary: ""
 image: "kapak.png"
