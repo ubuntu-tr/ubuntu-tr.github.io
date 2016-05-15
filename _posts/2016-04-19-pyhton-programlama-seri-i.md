@@ -51,11 +51,11 @@ Aslında bakarsanız programlama bilgisayara uygun dilde verilen emirlerle yapı
 
 Sonuç olarak programlama aslında bilgisayara verilen emirlerdir. Bunu bilgisayarın anlayacağı dilde vermek gerekir. Örneğin Gedit'i açıp;
 
-> "Ekrana 'Merhaba Dünya' yaz"
+>"Ekrana 'Merhaba Dünya' yaz"
 
 demek ile, sadece Japonca bilen birine Türkçe 'İğneyle kuyu kazmak' deyimini anlatmak aynı şeydir. Eğer bunu Python ile yapmak istersek ileride öğreneceğimiz biçimlerde;
 
-```python3
+```python
 print("Merhaba Dünya")
 
 ```
@@ -162,14 +162,14 @@ Kullanacağımız dil, Python, iki ana sürümle ayrılmaktadır: 2. sürüm ail
 * UTF-8 kodlama diline geçildi: Python2 dilinde varsayılan kodlama dili ASCII iken Python3 ailesinde varsayılan kodlama dili UTF-8 oldu. Bu durum Türkçe programlama yapanlar için yararlı oldu. Çünkü ASCII kodlama dili Türkçe karakterleri tam olarak desteklemiyordu.
 * Print bir fonksiyon oldu: Python 2 ailesinde ekranda bir çıktı göstermek için şöyle bir yol izliyorduk:
 
-```python2
+```python
 print "Merhaba Dünya"
 
 ```
 
 Ancak Python3 ailesinde durum değişti. Print deyimi yalnızca fonksiyon oldu ve yeni, kullanışlı parametreler eklendi.
 
-```python3
+```python
 print("Merhaba Dünya")
 
 ```
@@ -192,7 +192,7 @@ Python'un 2 ve 3. sürümleri zaten birçok GNU/Linux dağıtımında hazır ola
 
 komutunu verdikten sonra '>>>' işaretini görebilirsiniz bu Python'un hazır olduğu anlamına gelir. Peki biz yukarıda iki Python ailesinden bahsettik, 'Bu kullandığımız  hangisi?' diye sorabilirsiniz. O hâlde uçbirimde Python hazırken ('>>>' işareti) şu kodu yazıp çalıştıralım:
 
-```python3
+```python
 print("Merhaba Dünya")
 
 ```
@@ -203,7 +203,7 @@ Eğer buraya kadar sorunsuz geldiysek şöyle bir ekran karşımıza çıkmalı:
 
 Yukarıdaki yazıya göre göre bu biraz garip kaçtı. Eğer dikkat ettiyseniz uçbirime 'python' komutu verdiğimizde bize döndürülen ilk bilgi çalışan programın Python 2.7 olduğu bilgisiydi. Biz Python3 ailesine göre print komutu girdiğimiz hâlde bize doğru çıktı ulaştı. Birde normal şekilde print deyimine bakalım:
 
-```python2
+```python
 print "Merhaba Dünya"
 
 ```
@@ -217,12 +217,12 @@ Bu kodları da yazdığımızda bize aynı çıktının ulaştırıldığını g
 
 kodunu girelim, öncekine benzer bir ekran gördük. Ancak bu kez döndürülen ilk bilgi, programın Python3 ailesinden bir sürüme ait olduğunu belirtiyor. Dilerseniz aynı kodları tekrar deneyelim:
 
-```python3
+```python
 print("Merhaba Dünya")
 
 ```
 
-```python2
+```python
 print "Merhaba Dünya"
 
 ```
@@ -297,7 +297,7 @@ Programlama insanlara düşünmeyi öğretir. İyi bir programcı yazdığı kod
 
 Umarım yorum satırlarının gerekliliğini şimdi daha iyi anlatmışımdır. Şimdi dilerseniz yorum satırını Ipython programında deneyelim. Ipython programını açıp içine şu satırları yazalım:
 
-```python3
+```python
 #Bu bir yorum satırıdır.
 ```
 
@@ -307,7 +307,7 @@ Gördüğünüz gibi etkileşimli kabuk hiçbir şey yapmadan bir alt satıra ge
 
 Python %100 nesne yönelimli bir programlama dili olduğundan, Python'da her şeye bir isim vermeliyiz. Ya da şöyle ifade edelim Python'da her şey bir nesnedir (Şimdilik değişkendir diyebiliriz.). Ancak bizim bu nesnelere ulaşabilmemiz için ona bir isim vermemiz gerekir. Hemen bir örnek:
 
-```python3
+```python
 A = 5
 
 ```
@@ -316,7 +316,7 @@ Bu satırı Ipython'da yazdığınız zaman 5 sayısını 'A' olarak isimlendirm
 
 Bu nesneleri teker teker atayabileceğimiz gibi birkaç nesneyi bir satır kod ile de atayabiliriz.
 
-```python3
+```python
 A,B = 5, 3
 
 ```
@@ -325,7 +325,7 @@ Bu şekilde 'A' ve 'B' olarak iki değer atamış olduk. Dilerseniz Ipython'a 'A
 
 Python büyük ve küçük harflere duyarlıdır. Yani Ipython'a şu satırları yazdığınızda:
 
-```python3
+```python
 B = 5
 A = 3
 b = 7
@@ -391,7 +391,7 @@ Bu bölümde öncelikle genel anlamda programlama hatalarından bahsedeceğim. �
 
 Başka programlama dillerini öğrendiyseniz ya da öğreniyorsanız bilirsiniz. Bu işler hep 'Hello World' programlarıyla başlar. Bu bir âdettir. Hatta kültürdür bile diyebiliriz. Aslında çoğu kez bu işin eşiğine kadar geldik, defalarca bu programı yazdık, çalştırdık. Ancak artık ciddi anlamda programlamaya başlayacağımızdan bunuda kısacık bi' görelim bakalım. Bu programı yapmak Python dilinde tek satırdan ibarettir:
 
-```python3
+```python
 print("Merhaba Dünya")
 
 ```
@@ -418,7 +418,7 @@ Programlama fonksiyonları da bu şekilde işler. İçinde verilen değeri belir
 
 Print fonksiyonuna vereceğimiz parametre bir yazı dizisi ise bu yazı dizisini tırnak işareti("") içine almamız gerekir. Aksi takdirde hata alırız. Aldığımız hataya bi' göz atalım:
 
-```python3
+```python
   File "<stdin>", line 1
     print(Merhaba Dünya)
                       ^
@@ -427,23 +427,23 @@ SyntaxError: invalid syntax
 
 Python bize bir sözdizimi hatası yaptığımızı belirtti. Şimdi Ipython3 yazılımını açıp birkaç deneme yapalım:
 
-```python3
+```python
 print("Bu bir parametredir.")
 ```
 
-```python3
+```python
 print("Print bir fonksiyondur")
 ```
 
-```python3
+```python
 print("Print aldığı parametreleri ekrana yazar")
 ```
 
-```python3
+```python
 print("Verilen parametre bir yazı dizisi ise tırnak işareti kullanmak gerekir")
 ```
 
-```python3
+```python
 print("1234567890*-!'^+%&/()=?:;|}][{¾½$#")
 ```
 
@@ -451,13 +451,13 @@ Gördüğünüz gibi print ona ne parametre verirsek ekrana yazdırdı, tabii t�
 
 Örneğin ""İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kemal Beyatlı)" satırını ekrana yazdırmak için ne yapabiliriz? Önce bir tırnak içine koyarak deneyelim:
 
-```python3
+```python
 print(""İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kemal Beyatlı)")
 ```
 
 Aldığımız hata:
 
-```python3
+```python
 File "<stdin>", line 1
     print(""İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kemal Beyatlı)")
                 ^
@@ -474,29 +474,29 @@ Bunlardan birincisi bildiğimiz çift tırnak işareti. Bunun üzerinde zaten du
 
 İkinci yol ise tek tırnak işareti (' '). Bu ifade yoluyla da karakter dizisi oluşturabiliriz. Çift tırnak işaretinde farkı yoktur. Yalnızca karmaşayı önlemede yardımcı olur.
 
-```python3
+```python
 print('Merhaba Dünya')
 ```
 
 Üçüncü yol ise (""") yöntemidir. Yani karakter dizisinin başına ve sonuna üç adet çift tırnak işareti koymaktır.
 
-```python3
+```python
 print("""Merhaba Dünya""")
 ```
 
 Bu ifade şöyle de kullanılabilir:
 
-```python3
+```python
 print('''Merhaba Dünya''')
 ```
 
 Bunlardan hangisi ile karakter dizisi oluşturmaya başlarsanız karakter dizini yine sadece seçtiğiniz yöntemin işareti ile bitirebilirsiniz. Yani bu aşağıdaki satırları çalıştırdığınızda hata almayacaksınız demektir:
 
-```python3
+```python
 print(' "İzmir üzerine dünyada bir şehir daha yoktur! " diyorlar. (Yahya Kemal Beyatlı) ')
 ```
 
-```python3
+```python
 print("'İzmir üzerine dünyada bir şehir daha yoktur!' diyorlar. (Yahya Kemal Beyatlı)")
 ```
 
@@ -504,7 +504,7 @@ Siz de diğer kombinasyonlarla deneyip aldığınız hataların sebeplerini ara�
 
 Print fonksiyonuna sadece bir parametre vermek zorunlu değildir. Parametreler virgüllerle ayrılır. Print fonksiyonuna birden fazla karakter dizinini parametre olarak verebiliriz. Yani şu ifade yanlış değildir:
 
-```python3
+```python
 print('Merhaba Dünya', "Ben Geldim")
 ```
 
@@ -518,7 +518,7 @@ Python'da nesneleştirdiğimiz her şey bilgisayarın belleğine kaydedilir. Bu 
 
 Bu ufak bilgiden sonra bir iki tane nesneleme örneği vereyim:
 
-```python3
+```python
 a = 2
 b = 'Nesne'
 c = '2 kalem'
@@ -531,7 +531,7 @@ Aslında nesneleme işlemi eşitlemektir. Yani yukarıdaki kodları şöyle çev
 
 Madem bunlar aynı şeyler, biz bunları print içinde uygulayabiliriz. Örneklere bakalım ve IPython3'te uygulayalım:
 
-```python3
+```python
 a = 5
 b = 4
 c = 'Pazardan'
@@ -549,7 +549,7 @@ Print fonksiyonu sadece sizin vereceğiniz parametrelerle sınırlı değildir. 
 
 1\. __sep:__ Bu parametreyi anlatırken önceden verdiğimiz bir örnek üzerinden gideyim.
 
-```python3
+```python
 print('Merhaba Dünya', "Ben Geldim")
 ```
 
@@ -561,7 +561,7 @@ olur. Ancak fark ettiyseniz Python hiçbir şey demeden araya boşluk bırakıp 
 
 Evet, değiştirebiliyoruz. Bunu 'sep' parametresi ile yapıyoruz. Yani sep parametresine verdiğimiz değeri print, ekrana yazdıracağımız değerlerin arasına koyuyor. Mmm karışık gibi.. Örnek olsa daha iyi olacak:
 
-```python3
+```python
 a = "Fizik"
 b = "Kimya"
 c = "Biyoloji"
@@ -575,7 +575,7 @@ Ipython3'te bunun aynısını yaptığımızda aldığımız çıktı:
 
 Ancak biz bunu şu şekilde yazarsak daha iyi olur sanki:
 
-```python3
+```python
 a = "Fizik"
 b = "Kimya"
 c = "Biyoloji"
@@ -591,7 +591,7 @@ Bu kez alacağımız çıktı:
 
 Print fonksiyonunun son yaptığı şey alt satıra geçmektir. Yani tüm işerini bitirip alt satıra geçer. Bu durum bazı durumlarda sinir bozucu olabilir. Şimdi bir örnek vereyim ve örneği açıklayıp yeni konumuza geçelim:
 
-```python3
+```python
 print('Nane', 'Nane', sep=" - ", end=" ")
 ```
 
@@ -599,7 +599,7 @@ Eğer bu örneği IPython3 te çalıştırdıysanız hiçbir değişiklik gözle
 
 Burada yapmış olduğumuz şey print fonksiyonuna 'işin bitince alt satıra geçme bir boşluk bırakıp devam et' demek. Ve bu söylemi print'e end="  " ifadesiyle anlattık. İşimiz bitince bir kez daha nane yazdırmak isteseydik böyle bir kod yazabilirdik:
 
-```python3
+```python
 print('Nane', 'Nane', sep=" - ", end="Nane")
 ```
 
@@ -611,7 +611,7 @@ Buraya kadar print fonksiyonu hakkında çok şey öğrendik. Ancak print ile ya
 
 Input fonksiyonuna giriş adına bu örneği IPython'a yazalım:
 
-```python3
+```python
 input("Giriş: ")
 ```
 
@@ -621,7 +621,7 @@ Bu kodu tekrar çalıştırıp Giriş: yazısına herhangi bir şey yazın. OUT[
 
 Yani input fonksiyounun içine yazdığımız karakter dizisi önce ekranda görünür. Ardından Python bizden cevap bekler. Cevabı verip 'enter' tuşuna basınca input fonksiyonu bu cevabı döndürür. Input fonsiyonu için birkaç örnek:
 
-```python3
+```python
 input('Giriniz:')
 input('Lütfen Giriş Yapın: ')
 input("Merhaba sen kimsin ")
@@ -630,13 +630,13 @@ input("Merhaba sen kimsin ")
 **Input'tan nesneye, beni Python gönderdi:**
 Input fonksiyonu kullanıcıdan bir değer alıp bu değeri döndürür. Eğer biz bu fonksiyonu yukarıdaki gibi kullanırsak alınan veriyi bir daha kullanamayız. Aldığımız veriyi kullanmak için input fonksiyonunu bir nesneye atamalıyız:
 
-```python3
+```python
 a = input("a'nın değeri: ")
 ```
 
 Bu kodu çalıştırdığımızda bize a'nın değerini sordu, ancak verdiğimiz cevabı bize göstermedi. Çünkü Python o cevabı a nesnesine yükleyip belleğe gönderdi. Şimdi aynı ekrana 'a' yazdığınızda verdiğiniz değer dönecektir. Yani şunu demek istiyorum:
 
-```python3
+```python
 a = input("a'nın değeri: ")
 a
 ```
@@ -647,19 +647,19 @@ Bir önceki bölümde input fonksiyonunu nesneye atadık. Şimdi bu atadığım�
 
 Öncelikle Python yorumlayıcısını açalım ve bir input nesnesi oluşturalım örneğin:
 
-```python3
+```python
 Giriş = input('Lütfen Kullanıcı Adınızı Girin: ')
 ```
 
  Bu input nesnesini artık istediğimiz gibi kullanabiliriz. Örneğin :
 
-```python3
+```python
 print(Giriş)
 ```
 
 Tabii bu çok kolay oldu. Şimdi öğrendiklerimizle daha kullanışlı bir şeyler yapalım:
 
-```python3
+```python
 Hoşgeldiniz_Yazısı = """
 Hoş Geldiniz...
 Bu program Python diliyle konsol
@@ -680,7 +680,7 @@ Ondalıklı sayılarda tam kısım ve kesir kısım Türkçe kullanımının aks
 
 Python'da 4 işlem çok basitçe yapılabilir:
 
-```python3
+```python
 a = 2 + 3
 b = 5 - 6
 c = 3 * 2
@@ -703,7 +703,7 @@ d = 3 / 1
 ```
 Yani burada programlama adına yaptığımız tek şey sonuçları nesnelendrimek. Şimdi bu konuda daha karışık bir örnek vereyim. Siz bu satırları kopyalayarak Ipython3'te çalıştırabilirsiniz:
 
-```python3
+```python
 x = 3
 değ = ((((2*(x+4)+3) / 7 - 4) + 129/8) * x + 5)/((x*2)/7)
 print(değ)
@@ -715,13 +715,13 @@ Bu aritmetik operatörler dışında 2 operatör daha bilmemiz bize yarar sağla
 
 * __%:__ Bölme işleminden kalanı verir
 
-```python3
+```python
 8 % 3
 ```
 
 * __**:__ Sayının kuvvetini almaya yarar. Şimdi çıktıları ile birlikte örnek yapalım:
 
-```python3
+```python
 >>>3 ** 2
 9
 
@@ -734,14 +734,14 @@ Konunun başında aritmetik işleçler sadece sayılar için kullanılır dedik.
 
 Python'da karakter dizilerine kendi aralarında toplama işlemi uygulamak bu dizileri birleştirmek demektir. Hemen bir örnek:
 
-```python3
+```python
 >>> a = 'bir'+'sen'+'bir'+'ben'+'birde'+'bebek'
 'birsenbirbenbirdebebek'
 ```
 
 Daha işe yarar bir örnek:
 
-```python3
+```python
 >>> a = 'Sen'
 >>> b = 'Ben'
 >>> c = 've'
@@ -751,7 +751,7 @@ Daha işe yarar bir örnek:
 
 Aritmetik işleçleri karakter dizileri için kullandığımız bir diğer nokta çarpma sembolüdür. Çarpma sembolünün bir tarafında karakter dizisi varken öteki tarafında sayı bulunur.
 
-```python3
+```python
 >>> "Karakter " * 3
 'Karakter Karakter Karakter '
 ```
