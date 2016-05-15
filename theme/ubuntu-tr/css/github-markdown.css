@@ -404,7 +404,7 @@
 }
 
 .markdown-body blockquote.onemli {
-  border-left: 4px solid #f44336;
+  border-left: 12px solid #FB0C0C;
 }
 
 .markdown-body blockquote>:first-child {
@@ -659,4 +659,3 @@
   position: relative;
   border-color: #4078c0;
 }
-
