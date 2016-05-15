@@ -34,7 +34,7 @@
                         <div class="markdown-body">
                             {{ content }}
                         </div>
-                        <div class="extra content ui labels orange">
+                        <div class="extra content ui labels grey basic tiny">
                             {% include helper/tag.html %}
                         </div>
                     </div>
@@ -50,9 +50,9 @@
                             };
                             (function() {  // DON'T EDIT BELOW THIS LINE
                                 var d = document, s = d.createElement('script');
-                                
+
                                 s.src = '//{{ site.disqus_id }}.disqus.com/embed.js';
-                                
+
                                 s.setAttribute('data-timestamp', +new Date());
                                 (d.head || d.body).appendChild(s);
                             })();
@@ -69,7 +69,7 @@
                     <div id="toc" class="ui items divided link">
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
