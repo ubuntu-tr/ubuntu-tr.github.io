@@ -196,7 +196,7 @@ Ben piyano ve bas kaydedeceğim (piyano synth elbette, evde kuyruklu piyano yok.
 Steinway piyanomun sesi kuru geldi biraz, "Rackarrack"ten reverb açarak kaydı yaptım. Yalnız sorun şu; yaptığım kaydı dinlediğimde ses efektsiz geliyor. Sebebini patchbay'i açtığımda görüyorum:
 
 
-![](images/post/monty_python/patchbay_hata.png)
+![](images/post/monty_python/ptchby_hata.png)
 
 
 JACK bağlantıyı bu şekilde yapmayı uygun görmüş. Burada sesin izlediği yol (signal flow) şu:
@@ -222,7 +222,7 @@ Bu şekilde bağladığımızda ses akışı:
 O zaman demin kaydettiğim piano'ya bu efekti "yapıştırıp" Rackarrack'i kapatacağım. Kuru piyano kaydı zaten duruyor, kuru piyanoyu Rackarrack'ten geçirip "pianoFX" diye yeni bir kanala kaydederim olur biter. Açalım gene patchbay'i:
 
 
-![](images/post/monty_python/patchbay_fx_rec.png)
+![](images/post/monty_python/ptchby_fx_rec.png)
 
 
 Burada da mikrofon girişinden gelen bağlantıyı iptal ettim, ihtiyaç yok. Sinyal akış yolu:
@@ -243,7 +243,7 @@ Kayıt genelde güzel ama kısa bir bölümüne girip çıkmak istiyorsanız; da
 İlk aktif ettiğinizde bütün "timeline" seçili olacak, biz kısa bir yere girip çıkmak istiyoruz. Bunun için önce rastgele bir alan seçin. Sonra Transport > Punch sekmesinden "Set Punch From Region"ı tıkladığınızda, seçilen alan punch in/out'un sınırlarını belirleyecek. İnce ayarı üstteki kırmızı bayraklardan yapabilirsiniz.
 
 
-![](images/post/monty_python/punch.jpg)
+![](images/post/monty_python/punch.JPG)
 
 
 Bu şekilde üzerine kayıt yapılacak kanalı "rec arm" yapıp kaydederek ilerlediğinizde kayıt yapmayacak, sadece punch in noktasından kayda girip punch out'dan çıkacak.
