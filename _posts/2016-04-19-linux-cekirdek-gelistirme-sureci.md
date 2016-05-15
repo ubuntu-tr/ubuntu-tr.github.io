@@ -1,8 +1,8 @@
 ---
 title: "Linux Çekirdek Geliştirme Süreci"
 date: 2016-04-19 02:11
-categories: "k4"
-tags: ["Sudo 40. Sayı"]
+categories: "k5"
+tags: ["Sudo 40. Sayı","Linux","çekirdek","geliştirme","kernel"]
 permalink: "linux-cekirdek-gelistirme-sureci"
 summary: ""
 image: "1.png"
@@ -74,7 +74,7 @@ Yazının girişinde 800'den fazla şirketten 7800'den fazla geliştiricinin çe
 
 Linus Torvalds'ın en çok katkı yapan ilk 30 arasında bulunmaması eğlenceli bir gerçektir. 2.6.35'ten bu yana 231, toplamda 1113 değişiklik yapan Torvalds'ın çekirdeğe katkısı tabii ki yalnızca yaptığı değişiklikler ile ölçülemez. Kendisi hâlâ gelişim sürecinde aktif ve önemli bir rol üstlenmektedir.
 
-Kim destek oluyor?
+## Kim destek oluyor?
 
 En çok değişiklikte bulunan 10 sponsor (bağımsız geliştiriciler ve tespit edilemeyenler de hesaba katıldığında) bütün çekirdeğin %60'ını oluşturuyor. Bir şirketle ilişkisi tespit edilemeyenler bağımsız katkıcı olarak sayılsa bile, tüm çekirdeğin %75'inden fazlasının bu iş için para alan geliştiriciler tarafından oluşturulduğu aşağıdaki tablodan görülebilir:
 

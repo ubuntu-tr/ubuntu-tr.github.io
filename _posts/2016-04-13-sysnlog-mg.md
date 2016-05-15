@@ -13,12 +13,6 @@ author: "Bahadır Demircioğlu"
 
 
 
-
-## Syslog-ng
-
-
-
-
 Günlük kayıtları(Log) çalışan sistemler için çok önemlidir. Eğer kişisel kullanıcıysanız bu kayıtlara
 bakarak sisteminizdeki sorunları çözebilir, eğer sunucu sistemlerini yönetiyorsanız bu kayıtlara bakarak hem sorunlarınızı çözebilir hemde sisteminizde sizden habersiz olup biten olaylar var ise bunları görebilirsiniz.
 
