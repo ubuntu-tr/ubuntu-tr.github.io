@@ -3,6 +3,8 @@ themeDir: theme/ubuntu-tr
 layouts_dir:  ./theme/ubuntu-tr/_layouts
 includes_dir: ./theme/ubuntu-tr/_includes
 
+disqus_id: bugra9
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
