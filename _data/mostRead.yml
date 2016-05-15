@@ -1,14 +1,24 @@
-- thumb: heartbleed.jpeg
+- thumb: heartbleed.jpg
   title: "Heartbleed"
   url: /heartbleed
   category: k1
 
-- thumb: 1.jpeg
+- thumb: 1.jpg
   title: "Eski Bir Bilgisayar Bir Dosya Paylaşım Sunucusuna Nasıl Çevrilir?"
   url: /samba-server
   category: k2
 
-- thumb: The_Cave_Logo.jpg
+- thumb: the-cave.jpeg
   title: "The Cave"
   url: /thecave
   category: k3
+
+- thumb: 1.jpg
+  title: "Ubuntu Hakkında En Çok Sorulan Sorular"
+  url: /ubuntu-sorular
+  category: k4
+
+- thumb: 1.png
+  title: "Git Sürüm Kontrol Sistemi"
+  url: /git-surum-kontrol-sistemi
+  category: k5
