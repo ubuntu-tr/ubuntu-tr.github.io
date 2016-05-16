@@ -15,3 +15,21 @@ html > body {
     line-height: 1.6;
     padding: 20px;
 }
+<<<<<<< HEAD
+=======
+
+.markdown-body pre.highlight:before {
+    content: '\f121';
+    font-family: Icons;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #ededed;
+}
+.markdown-body pre.highlight {
+    position: relative;
+    padding-top:30px;
+}
+>>>>>>> 8e0e6879377c54fa5270a5868cfdf51a7afef447
