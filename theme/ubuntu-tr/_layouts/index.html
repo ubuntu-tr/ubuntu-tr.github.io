@@ -37,18 +37,6 @@
                         {% include list/item.html %}
                     </div>
                     <h3 class="ui header orange dividing">
-                      Etiketler
-                    </h3>
-                    <div class="ui labels orange tiny">
-                        {% assign tags = site.tags | sort %}
-                        {% for tag in tags %}
-                            {% assign c = tag | last | size %}
-                            {% if c > 1 %}
-                            <a href="/etiket/{{ tag | first | slugify }}/" class="ui label">{{ tag[0] }} ({{ c }})</a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    <h3 class="ui header orange dividing">
                       Forumdan son yazılar
                     </h3>
 
