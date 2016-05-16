@@ -2,7 +2,7 @@
 title: "MineCraft"
 date: 2016-04-19 02:11
 categories: "k3"
-tags: ["Sudo 58. Sayı"]
+tags: ["Sudo 58. Sayı","oyun"]
 permalink: "minecraft"
 summary: "Minecraft, küplerle çeşitli tasarımlar yapmanızı sağlayan 2 ve 3 boyutlu oynanabilen bir oyundur."
 image: "1.png"
