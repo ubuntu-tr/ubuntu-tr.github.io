@@ -24,47 +24,6 @@
                     </div>
                     <div class="column five wide">
 
-                      <!---neynefes indirme bağlantısı denemesi--->
-
-                      <div class="ui card">
-                        <div class="content">
-                          <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.svg"> Ubuntu'nun Son Güncel Sürümü
-                        </div>
-                        <div class="image">
-                          <img src="{{ site.themeDir }}/images/16-04.svg">
-                        </div>
-                        <div class="extra content">
-                          <button class="tiny ui button">
-                                  <i class="cloud download icon"></i>
-                            32 Bit İndir</button>
-
-                          <button class="tiny ui right button">
-                                  <i class="cloud download icon"></i>
-                            64 Bit İndir</button>
-                        </div>
-                      </div>
-
-                      <div class="ui card">
-                        <div class="content">
-                          <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.svg"> Ubuntu'nun Uzun Dönem Destekli Sürümü
-                        </div>
-                        <div class="image">
-                          <img src="{{ site.themeDir }}/images/14-04.png">
-                        </div>
-                        <div class="extra content">
-                          <button class="tiny ui button">
-                                  <i class="cloud download icon"></i>
-                            32 Bit İndir</button>
-
-                          <button class="tiny ui right button">
-                                  <i class="cloud download icon"></i>
-                            64 Bit İndir</button>
-                        </div>
-                      </div>
-
-                      <!---neynefes indirme bağlantısı denemesi--->
-
-
                         <h3 class="ui header orange dividing">
                           Duyurular
                         </h3>
@@ -72,6 +31,38 @@
                             {% assign list = site.data.news %}
                             {% include list/item.html %}
                         </div>
+
+                        <!-- İndirme Linkleri Başlangıcı -->
+                        <div class="ui card fluid">
+                            <div class="content">
+                              <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.svg"> Ubuntu'nun Son Güncel Sürümü
+                            </div>
+                            <div class="extra content ui buttons">
+                              <button class="ui button blue">
+                                      <i class="cloud download icon"></i>
+                                32 Bit İndir</button>
+
+                              <button class="ui button orange">
+                                      <i class="cloud download icon"></i>
+                                64 Bit İndir</button>
+                            </div>
+                        </div>
+
+                        <div class="ui card fluid">
+                            <div class="content">
+                              <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.svg"> Ubuntu'nun Uzun Dönem Destekli Sürümü
+                            </div>
+                            <div class="extra content ui buttons">
+                              <button class="ui button blue">
+                                      <i class="cloud download icon"></i>
+                                32 Bit İndir</button>
+
+                              <button class="ui button orange">
+                                      <i class="cloud download icon"></i>
+                                64 Bit İndir</button>
+                            </div>
+                        </div>
+                        <!-- İndirme Linkleri Sonu -->
 
                         <h3 class="ui header orange dividing">
                           En Çok Okunanlar
