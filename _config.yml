@@ -3,7 +3,7 @@ themeDir: theme/ubuntu-tr
 layouts_dir:  ./theme/ubuntu-tr/_layouts
 includes_dir: ./theme/ubuntu-tr/_includes
 
-disqus_id: bugra9
+disqus_id: sudoportal
 
 # Build settings
 markdown: kramdown
