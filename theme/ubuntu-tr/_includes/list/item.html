@@ -1,10 +1,10 @@
 {% for post in list %}
-	<div class="item">
+	<a class="item" href="{{post.url}}">
 	    <div class="ui tiny image">
 	        <img src="images/post{{post.url}}/{{post.thumb}}">
 	    </div>
 	    <div class="middle aligned content">
-	        <a class="header" href="{{post.url}}">{{post.title}}</a>
+	        <div class="header">{{post.title}}</div>
 	    </div>
-	</div>
+	</a>
 {% endfor %}
