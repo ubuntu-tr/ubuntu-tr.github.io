@@ -3,9 +3,15 @@
  * Author: @gregfranko
  */
 
+@media only screen and (min-width: 1200px) {
+    div.tocify {
+        width: 332px;
+    }
+}
+
 /* The Table of Contents container element */
 .tocify {
-    width: 25%;
+    width: 272px;
     max-height: 90%;
     overflow: auto;
     margin-left: 2%;
