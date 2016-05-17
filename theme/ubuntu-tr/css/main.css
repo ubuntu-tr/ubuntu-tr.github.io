@@ -27,13 +27,11 @@ html > body {
     background-color: #ededed;
 }
 .markdown-body pre.highlight {
-    position: relative;
     padding-top:30px;
 }
 
-.markdown-body pre.highlight code {
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.markdown-body div.highlighter-rouge {
+    position: relative;
 }
 
 .markdown-body pre.highlight code {
