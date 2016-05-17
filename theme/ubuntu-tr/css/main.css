@@ -41,3 +41,7 @@ html > body {
 .ui.cards.infinite > .card.hidden {
     display: none !important;
 }
+
+.ui.cards.infinite > .card > .ui.image > .ui.label {
+    z-index: 1;
+}
