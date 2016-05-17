@@ -5,6 +5,7 @@ header, footer {
     line-height: 1.5;
     font-weight: 400;
     color: #333;
+    margin-bottom: 20px;
 }
 
 footer {
