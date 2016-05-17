@@ -30,3 +30,7 @@ html > body {
     position: relative;
     padding-top:30px;
 }
+
+.markdown-body pre.highlight code {
+    color: #d4d4d4;
+}
