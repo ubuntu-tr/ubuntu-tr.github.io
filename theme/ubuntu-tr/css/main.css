@@ -45,3 +45,24 @@ html > body {
 .ui.cards.infinite > .card > .ui.image > .ui.label {
     z-index: 1;
 }
+
+@media only screen and (min-width: 1200px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 370px;
+        height: 220px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 303px;
+        height: 181px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 231px;
+        height: 138px;
+    }
+}
