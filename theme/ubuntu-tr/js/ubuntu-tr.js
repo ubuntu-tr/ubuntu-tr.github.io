@@ -1,3 +1,5 @@
+var itemIndex = 20;
+
 (function($) {
   $.extend({
     jGFeed: function(url, fnk, num, key) {
@@ -33,11 +35,41 @@ $( document ).ready(function() {
     $('label[for=g2]').click();
   }
 
-  $("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", scrollHistory: true, extendPage: false});
+  //$("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", scrollHistory: true, extendPage: false});
   $( document ).scroll(function() {
     if($(document).scrollTop() > 300)
       $('#rp').hide();
     else
       $('#rp').show();
   });
+
+$('.infinite > .card:nth-child(n+'+(itemIndex-9)+')').addClass('hidden');
+
+$('.ui.cards .image img').visibility({
+            type       : 'image',
+            transition : 'fade in',
+            duration   : 1000
+          });
+
+$('.ui.cards')
+  .visibility({
+    once: false,
+    // update size when new content loads
+    observeChanges: true,
+    // load content on bottom edge visible
+    onBottomVisible: function() {
+      // loads a max of 5 times
+      $('.ui.cards > .card:nth-child(-n + '+itemIndex+')').removeClass('hidden');
+      itemIndex += 10;
+      $('.ui.cards .image img').visibility({
+            type       : 'image',
+            transition : 'fade in',
+            duration   : 1000
+          });
+      $(this).visibility('refresh');
+    }
+  })
+;
+
 });
+

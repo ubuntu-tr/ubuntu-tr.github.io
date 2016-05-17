@@ -10,7 +10,7 @@
         <div class="ui container">
             <div class="ui grid equal width stackable">
                 <div class="column">
-                    <div class="ui cards link two stackable">
+                    <div class="ui cards link two stackable infinite">
                         {% assign list = page.id | remove:'/o/' | split:"/" %}
                         {% assign list = site.posts | where: list[0], page.code %}
                         {% include list/card.html %}

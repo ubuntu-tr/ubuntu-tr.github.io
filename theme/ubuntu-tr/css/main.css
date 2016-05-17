@@ -37,3 +37,7 @@ html > body {
 .markdown-body pre.highlight code {
     color: #d4d4d4;
 }
+
+.ui.cards.infinite > .card.hidden {
+    display: none !important;
+}
