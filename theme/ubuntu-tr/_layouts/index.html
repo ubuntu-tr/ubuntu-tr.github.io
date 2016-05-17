@@ -32,6 +32,21 @@
                             {% include list/item.html %}
                         </div>
 
+                        <h3 class="ui header orange dividing">
+                          En Çok Okunanlar
+                        </h3>
+                        <div class="ui items divided link">
+                            {% assign list = site.data.mostRead %}
+                            {% include list/item.html %}
+                        </div>
+                        <h3 class="ui header orange dividing">
+                          Forumdan son yazılar
+                        </h3>
+
+                        <div id="rssForum" class="ui list">
+
+                        </div>
+
                         <!-- İndirme Linkleri Başlangıcı -->
                         <div class="ui card fluid">
                             <div class="content">
@@ -63,22 +78,6 @@
                             </div>
                         </div>
                         <!-- İndirme Linkleri Sonu -->
-
-                        <h3 class="ui header orange dividing">
-                          En Çok Okunanlar
-                        </h3>
-                        <div class="ui items divided link">
-                            {% assign list = site.data.mostRead %}
-                            {% include list/item.html %}
-                        </div>
-                        <h3 class="ui header orange dividing">
-                          Forumdan son yazılar
-                        </h3>
-
-                        <div id="rssForum" class="ui list">
-
-                        </div>
-
 
                     </div>
                 </div>
