@@ -1,0 +1,264 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>B-Tree Dosya Sistemi (BTRFS)</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">B-Tree Dosya Sistemi (BTRFS)</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Alev Erzurumlu</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/b-tree-dosya-sistemi-btrfs/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Sabit disk için tek önemli konu kapasitesi değildir. Dikkat edilmesi gereken önemli bir konu da kullanılan dosya sistemidir. Günümüzde birçok Linux dağıtımı ext4 dosya sistemini kullansa da, bize sunduğu özellikler göz önüne alındığında gelecekte tercih edilecek olan dosya sistemi Btrfs olacak gibi görünüyor.</p>
+
+<h2 id="peki-nedir-bu-dosya-sistemi">Peki nedir bu dosya sistemi?</h2>
+<p>Dosya sistemi sabit diskin dosyaları nasıl depolayacağını, dosyalara nasıl erişeceğini ve yöneteceğini belirleyen sistemdir. Kısaca, disk üzerindeki dosyaların organize edilmesidir diyebiliriz. Aynı sabit disk üzerinde farklı işletim sistemleri kullanılabilmesine rağmen, bu işletim sistemleri aynı dosya sistemini kullanmazlar. Farklı işletim sistemleri farklı dosya sistemlerini kullanır. Windows NTFS kullanmayı tercih ederken, MAC OS X şu anda HFS+ dosya sistemini kullanmaktadır. Linux dağıtımlarının birçoğu ise ext4 dosya sistemi kullanmayı tercih etmektedir.</p>
+
+<h2 id="dosya-sistemi-ifadesini-anladk-btrfs-nedir">Dosya sistemi ifadesini anladık, Btrfs nedir?</h2>
+<p>B-Tree dosya sistemi Oracle tarafından 2007 yılında oluşturuldu ve Linux 2.6.29 çekirdeğine 2009 yılında eklendi.</p>
+
+<p>Maksimum dosya sayısı 2^64 adet ve maksimum dosya uzunluğu 255 karakterdir. Teorik olarak maksimum dosya boyutu limiti 16 EB ya da Linux’un çekirdek sınırlamasına göre 8 EB olabiliyor.</p>
+
+<p>BTRFS dosya sistemi parçalanmayı azaltmaya yardımcı oluyor. Depolama aygıtları parçalanmadan ötürü genellikle başarım kaybına uğrarlar. BTRFS çevrimiçi disk birleştirmeye olanak tanır.</p>
+
+<p>Dosya sisteminin dolmasını önlemek için BTRFS sıkıştırmayı da destekliyor. Sıkıştırma işlemi için iki seçenek var: LZO ve zlib. Zlib’in daha hızlı sıkıştırma yapmasına karşın LZO daha küçük dosyalar oluşturur. Hangisini kullanacağınızı belirlemek için BTRFS biriminizi aşağıdakilerden biri ile bağlayabilirsiniz:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>*compress=LZO
+*compress=zlib
+</code></pre>
+</div>
+
+<p>Disk alanı dolduğunda var olan BTRFS birimine alan eklemek mümkündür. Bunun için Çevrimiçi Yeniden Boyutlandırma yöntemini kullanabilirsiniz. Bu işlem için BTRFS dosya sisteminin bağının kaldırılması ya da çevrimdışı olması gerekmez. Tüm dosya sistemini yeniden boyutlandırmak adına var olan bir birim eklenebilir ya da kaldırılabilir.</p>
+
+<p>Eğer bir birim ext3 ya da ext4 dosya sistemine sahipse, bu birim BTRFS’e dönüştürülebilir. Bu dönüşüm yerinde yapılan bir dönüşümdür, yani mevcut veri dosya sistemi dönüştürülmeden önce kaldırılmak zorunda değildir. Dönüşümün başarısız olması ve veri kaybı ihtimaline karşı için yedek almak iyi bir uygulama olacaktır.</p>
+
+<p>BTRFS aynı veriyi kullanan birden çok görev olduğunda kaynakları idare etmek için Copy On Write (COW - Yazarken Kopyasını Oluştur) yöntemini kullanır. Bir uygulama bir dosyadaki veriyi talep ediyorsa, veri belleğe ya da önbelleğe gönderilir. Daha sonra her uygulama kendi bellek alanına sahip olur. Eğer birden çok uygulama aynı veriyi talep ederse, COW tek bellek alanı ayırır ve tüm uygulamalara bu alanı gösterir. Eğer uygulamalardan birisi veriyi değiştirirse, bu uygulamaya yeni güncellenen bilgi ile birlikte kendi bellek alanı tahsis edilir. Diğer uygulamalar ise orijinal veri ile eski gösterileni kullanmaya devam ederler. COW’un kullanımı birçok uygulamanın eski veriyi kullanabilmesini gerektirir.</p>
+
+<p>Verinin yedeklenmesi için BTRFS RAID’i destekler, özellikle RAID 0, RAID 1 ve RAID 10’u. RAID 0 çoklu sürücüler arasında veri bölüştürmek içindir. RAID 0 yedekleme sağlamaz fakat çoklu sabit diskleri tek seferde okuyup yazarak başarımı (performansı) geliştirir. RAID 1 veriyi iki sabit diske ikizleyerek yedek oluşturur. Bir sürücüde veri oluşturulduğunda ya da değiştirildiğinde, aynı işlemler diğer sürücüde de yapılır. Uygulamaların veri okuması gerektiğinde her iki sürücüden de okunabilir ve biri meşgul ise diğerinden okunur, böylece başarım kaybı oluşmaz. RAID 10 çoklu sürücüler arasında veri bölüştürmeyi kullanır, ayrıca bölüştürülen veriler diğer sürücülere de ikizlenir. RAID 10 başarım muazzam bir artış sağlar. Veri temizleme kullanılabilir, özellikle RAID 1 ile. Veri temizleme, dosya sisteminin veri bütünlüğünü kontrol eden bir artalan görevidir ve (varsa) hataları onarır. Bütünlük hataları, hata ciddi sorunlara yol açmadan ve tüm diskte bozulma oluşmadan önce düzeltilmelidir. Veri temizleme birim bağlı iken gerçekleştirilebilir.</p>
+
+<p>İleriki zamanlarda sisteme RAID 5’in eklenmesi planlanıyor. RAID 5, RAID 0’ın bir uzantısıdır. Bölüştürülebilmesine ek olarak, veri aynı zamanda eşlik bilgisi (parity) içerir. Eşlik bilgisinin kullanılmasıyla, RAID 0 yedekleme imkânına kavuşur. Eğer RAID’deki bir diskte hata oluşursa, veri eşlik bilgisi kullanılarak yeni bir disk üzerinde yeniden oluşturulabilir. Bir diskte hata oluştuğunda, dosyalar eşlik bilgisinden RAM üzerinde yeniden oluşturulur ve veriye şerit kümesinden (stripe set) erişilebilir. Sistem RAM üzerinde dosyaları yeniden oluştururken başarım azalacaktır. Bozuk disk değiştirilinceye dek yedekleme yürürlükte olmayacaktır. Disk değişimi yapılmadan önce diğer diskte de hata oluşursa, RAID kümesi kaybolur ve yedekten geri yüklenmek zorunda kalınır.</p>
+
+<p>Eğer dosya sistemi bozulursa, uygunsuz kapatma gibi, sistem kendini çevrimdışı olarak onarabilir. Dosya sistemi kontrol edilirken BTRFS biriminin bağlı olmaması gerekir. Dosya sistemi kontrolü hızlı bir işlemdir. Gelecekteki planlar dosya sistemi kontrolünü çevrimiçi süreçte yapmayı amaçlamaktadır.</p>
+
+<p>Dizini etiketleyerek çoklu kök dizinleri oluşturulabilir. Dizinler sanki ayrı sürücülermiş gibi bağlanabilir. Alt birimler etiket adına göre bağlanır.</p>
+
+<p>Alan tüketimini kontrol etmek için alt birimler Disk Kotası içerebilir. Disk kotaları kullanıcı ve gruplar tarafından kullanılan sürücü alanını azaltmak bakımından önemli olabilir.</p>
+
+<p>BTRFS salt-okunur anlık görüntülere (snapshot) ve alt birimlerin okunur-yazılır kopyalarına izin verir.</p>
+
+<p>Farklar sistemin Anlık Görüntülerinden yapılabilir ve iki anlık görüntü arasındaki değişimi göstermek için bir ikili dosya oluşturabilir. Bu farklar daha sonra farklı bir BTRFS dosya sistemini oluşturmada kullanılabilir. Bu prosedür gönder/al olarak adlandırılır.</p>
+
+<p>Dosya sistemi yayımlamak özgün dosya sisteminin salt-okunur kopyasını yapmakla mümkündür. Dosyalarda yapılan değişiklikler dağıtım yapılan farklı aygıtlarda bulunan dosya sistemlerinde yapılır. Bu süreç eğer birden çok dağıtım yapılan aygıt var ise diğer kopyaları üretmek için COW kullanır.</p>
+
+<h2 id="btrfs-kullanma-hazr-m">Btrfs kullanıma hazır mı?</h2>
+<p>Bir yazılımın kararlı olması onun fazla değiştirilmemesi anlamına gelir. Btrfs’in şu anda yoğun bir geliştirme döneminde olduğunu düşünürsek, Btrfs şu an için kararlı değil diyebiliriz. Bu sebeple Btrfs şu anda deneysel amaçlı olarak nitelendiriliyor ve Linux dağıtımlarında varsayılan dosya sistemi olarak kullanılmıyor.</p>
+
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p><a href="http://www.linux.org/threads/b-tree-file-system-btrfs.4430/">http://www.linux.org/threads/b-tree-file-system-btrfs.4430/</a><br />
+<a href="http://www.maketecheasier.com/what-is-btrfs/">http://www.maketecheasier.com/what-is-btrfs/</a><br />
+<a href="http://www.belgeler.org/">http://www.belgeler.org/</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-61-sayi" class="ui label"> Sudo 61. Sayı </a>
+
+    
+    
+    <a href="/etiket/dosya-sistemi" class="ui label"> dosya sistemi </a>
+
+    
+    
+    <a href="/etiket/btrfs" class="ui label"> btrfs </a>
+
+    
+    
+    <a href="/etiket/b-tree" class="ui label"> b-tree </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/b-tree-dosya-sistemi-btrfs';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

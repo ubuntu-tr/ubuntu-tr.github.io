@@ -1,0 +1,427 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paralel Hesaplama - Beowulf Cluster</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Paralel Hesaplama - Beowulf Cluster</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Bahadır Demircioğlu</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                Yapmanız gereken büyük hesaplar varsa ve elinizdeki kaynaklar buna yeterli gelmiyorsa Beowulf Cluster yapısı tam da aradığınız şeydir. Başlangıç olarak, ihtiyacınızı karşılamak için bu kaynak size yetecektir.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/paralel-hesaplama-beowulf-cluster/kapak.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Ev kullanıcıları büyük hesaplama gücüne ihtiyaç duyduğunda sahip oldukları işlemci gücü ya da RAM miktarı yetersiz gelecektir. Bu sorunları aşmak için 1994 senesinde Donald Becker ve Thomas Sterling tarafından Beowulf adını verdikleri çalışma başladı. Bu çalışmanın amacı düşük maliyetli ev bilgisayarları ile süper hesaplamalar yapabilecek kaynakları elde etmekti. Hazırladıkları ilk yapıda çoğumuzun adını dahi duymadığı Pentium I ve 486 sınıf üzerinde Linux olan makineler kullandılar. Bu çalışmalar sayesinde elimizde çok pahalı kaynaklar olmadan da büyük hesaplamalar yapabileceğimiz kanıtlanmış oldu. Bu çalışmaların tek dez avantajı ise hesaplama düğümlerinin birbirleri ile haberleşirken network üzerinde kaybettikleri zaman. Elimizde çok büyük kaynaklar yoksa ve bunları karşılayacak maddi bir desteğimiz de yoksa sanırım bu kayıp gözardı edilebilir. Daha detaylı bilgi almak isteyenler <strong>[1]</strong> adresine göz gezdirebilirler.</p>
+
+<p>Anlatıma başlamadan önce biraz iştah kabartması için birkaç fotoğraf göstermek istiyorum :)
+<img src="images/post/paralel-hesaplama-beowulf-cluster/1.jpg" alt="" />
+<img src="images/post/paralel-hesaplama-beowulf-cluster/2.jpg" alt="" />
+<img src="images/post/paralel-hesaplama-beowulf-cluster/3.jpg" alt="" /></p>
+
+<p>Elimde şu an için dört adet ev kullanıcı bilgisayarı bulunmakta. Bundan dolayı Beowulf yapısını bir adet
+ana makine ve üç adet hesaplama düğümünden oluşturacağım. Ana makineden hesaplarımızı vereceğiz, aynı zamanda bu makine hesaplama düğümleri ile birlikte hesap işinede katkı sağlayacaktır. (İsterseniz, ilk çalışmanız için, fiziksel makinenizde sanal makineler oluşturup bu işlemleri adım adım yapabilirsiniz.)</p>
+
+<p><img src="images/post/paralel-hesaplama-beowulf-cluster/yapi.png" alt="" /></p>
+
+<p>Öncelikli olarak makinelerim için tanımlamalarım;
+İş teslimi yapacağımız ana sunucumuz;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>hostname	ip
+node0		192.168.1.10
+</code></pre>
+</div>
+
+<p>Hesaplama düğümleri olarak adlandıracağımz makineler;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>hostname	ip
+node1		192.168.1.11
+node2		192.168.1.12
+node		192.168.1.13
+</code></pre>
+</div>
+
+<p><strong>1)</strong> İlk iş olarak makinelerimizin birbirini “hostname”lerinden tanıması için hosts dosyalarımızı değiştirelim.
+/etc/hosts dosyalarına aşağıdaki satırları ekleyelim. Bu dosya 4 makinede de aynı olacak. Burada dikkat edilmesi gereken ilk nokta, hostnamelerin doğru olması, ikincisi ise 127.0.0.1 kesinlikle sadece localhost olarak kalacak.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>127.0.0.1	localhost
+192.168.1.10	node0
+192.168.1.11	node1
+192.168.1.12	node2
+192.168.1.13	node3
+</code></pre>
+</div>
+
+<p><strong>2)</strong> Hesaplamalarımızı yapmak için her makinede bir adet kullanıcı oluşturalım. Bu kullanıcıların adlarının
+aynı olması karışıklığı önleyeceği gibi işimizi de kolaylaştıracaktır. Bunun için dört makinede;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo adduser mpiuser --uid 999
+</code></pre>
+</div>
+
+<p>Bu kullanıcılara istediğin şifreyi verebilirsin. Karışıklığı önlemek adına hepsine aynı şifre verirseniz işiniz bir adım daha kolaylaşacaktır. Dikakt edilmesi gereken nokta ise her makinede oluşan kullanıcıların ID’lerinin aynı olması ve 1000’den düşük olması gerekliliği.</p>
+
+<p><strong>3)</strong> Hesaplarımızı mpiuser kullanıcısı üzeriden vereceğimiz için makinelerimiz bu kullanıcı üzerinden haberleşecek. Bunun için her makinedeki mpiuser kullanıcılarını şifresiz olarak ssh üzerinden haberleşmesini sağlayacağız. Öncelikle node0 üzerinde bu işlemleri yapalım.</p>
+
+<p>mpiuser kullanıcı hesabına giriş yapalım. Burada dikkat etmemiz gereken şey; /root dizinine değil de /home/mpiuser dizinine düşmemiz gerektiği.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su mpiuser
+</code></pre>
+</div>
+
+<p>Şifresiz haberleşmeyi sağlamak için ssh anahtarı oluşturacağız. Bize şifre soracaktır, boş bırakabilirsiniz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-keygen -t rsa
+</code></pre>
+</div>
+
+<p>Şimdi oluşturduğumuz bu anahtarı hesap düğümleri makinelerimize gönderelim.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-copy-id node1
+ssh-copy-id node2
+ssh-copy-id node3
+</code></pre>
+</div>
+
+<p>Deneme yapamak için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh node1
+</code></pre>
+</div>
+
+<p>dediğimizde şifre istemeden node1 makinesine (192.168.1.11) ve mpiuser kullanıcısına eriştiysek sorun yok demektir.</p>
+
+<p>Diğer nodelar için de bu işlemleri tekrarlayacağız.</p>
+
+<p>node1 için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su mpiuser
+ssh-keygen -t rsa
+</code></pre>
+</div>
+
+<p>oluşan anahtarı bu sefer node0, node2, node3’e göndereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-copy-id node0
+ssh-copy-id node2
+ssh-copy-id node3
+</code></pre>
+</div>
+
+<p>node2 için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su mpiuser
+ssh-keygen -t rsa
+</code></pre>
+</div>
+
+<p>oluşan anahtarı bu sefer node0, node1, node3’e göndereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-copy-id node0
+ssh-copy-id node1
+ssh-copy-id node3
+</code></pre>
+</div>
+
+<p>node3 için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su mpiuser
+ssh-keygen -t rsa
+</code></pre>
+</div>
+
+<p>oluşan anahtarı bu sefer node0, node1, node2’ye göndereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-copy-id node0
+ssh-copy-id node1
+ssh-copy-id node2
+</code></pre>
+</div>
+
+<p>Bu şekilde artık bütün makinelerimiz şifresiz olarak mpiuser kullanıcıları üzerinde haberleşir duruma geldi.</p>
+
+<p><strong>4)</strong> Hesaplama yaparken her makinede hesaplama dosyalarının bulunması gerekmekte. Bunun için ben bir dizini hesaplama dosyalarımı koyacağım yer olarak seçiyorum ve bu dizinin diğer makineler ile aynı olmasını sağlamak için nfs dosya sistemini kullanacağım. Her makineye gerekli paketleri yükleyelim ve bir adet dizin oluşturup bu dizine mpiuser kullanıcısı sahibi yapalım. Bu komutları tüm makinelerde vereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install nfs-kernel-server
+sudo mkdir /mirror
+sudo chown mpiuser:mpiuser /mirror
+</code></pre>
+</div>
+
+<p>Aynalama işlemi için ise /etc/exports dosyası içine aşağıdaki satırı ekleyelim.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/mirror *(rw,sync,no_subtree_check)
+</code></pre>
+</div>
+
+<p>Artık her makinede servisi yeniden başlatıp aynalama işlemini başlatabiliriz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo /etc/init.d/nfs-kernel-server restart
+</code></pre>
+</div>
+
+<p><strong>5)</strong> Eğer makinelerde güvenlik duvarınız çalışıyor durumda ise makinelerin birbirine sorun çıkartmaması için
+gerekli kuralları verelim. Her makineye;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo ufw allow from 192.168.1.10/192.168.1.13
+</code></pre>
+</div>
+
+<p><strong>6)</strong> Şu dakikadan sonra elimizde birbiri ile şifresiz olarak haberleşen 4 adet makine bulunuyor. Ben bu dört
+makineyi paralel hesaplama için kullanacağımdan dolayı makinelerime mpich2 kütüphanesini kuracağım. Her makinede;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install mpich2 mpd
+</code></pre>
+</div>
+
+<p><strong>7)</strong> Son olarak geriye mpich2 için yapılandırma dosyalarımızı oluşturmak kaldı. Bunun için bu dosyaları node0 üzerinde oluşturup diğer makinelere gönderelim.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mpiuser@node0:~$ touch ~/mpd.hosts
+mpiuser@node0:~$ touch ~/.mpd.conf
+</code></pre>
+</div>
+
+<p>mpd.hosts dosyası içine her makinedeki çekirdek sayısı kadar hostname yazacağız. Örneğin benim ana makinem 4 çekirdekli ve hesaplama makinelerim iki çekirdekli ise mpd.hosts dosyamın içeriği;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>node0
+node0
+node0
+node0
+node1
+node1
+node2
+node2
+node3
+node3
+</code></pre>
+</div>
+
+<p>.mpd.conf dosyamın dosya izninin 600 olaması gerekiyor ve bu dosya içine bir gizli kelime yazmamız gerekiyor.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mpiuser@node0:~$ chmod 600 ~/.mpd.conf
+</code></pre>
+</div>
+
+<p>dosya içeriği ise;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>secretword=KELİME_BURAYA_GELECEK
+</code></pre>
+</div>
+
+<p>Artık ana makinede oluşturduğumuz bu dosyaları diğer makinelere gönderelim.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mpiuser@node0:~$scp -p .mpd.conf node1:/home/mpiuser/
+mpiuser@node0:~$scp -p .mpd.conf node2:/home/mpiuser/
+mpiuser@node0:~$scp -p .mpd.conf node3:/home/mpiuser/
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mpiuser@node0:~$scp -p mpd.hosts node1:/home/mpiuser/
+mpiuser@node0:~$scp -p mpd.hosts node2:/home/mpiuser/
+mpiuser@node0:~$scp -p mpd.hosts node3:/home/mpiuser/
+</code></pre>
+</div>
+
+<p>Bu noktadan sonrası yapacağınız hesaplamalar doğrultusunda değişmektedir. Bunun için <strong>[2]</strong> adresinde Paralel Programlama bölümü altındaki başlıkları incelemenizde fayda var.</p>
+
+<h3 id="kaynak">Kaynak:</h3>
+<p>[1] <a href="http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html">http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html</a> <br />
+[2] <a href="http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa">http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-57-sayi" class="ui label"> Sudo 57. Sayı </a>
+
+    
+    
+    <a href="/etiket/cluster" class="ui label"> cluster </a>
+
+    
+    
+    <a href="/etiket/paralel-hesaplama" class="ui label"> paralel hesaplama </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/paralel-hesaplama-beowulf-cluster';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

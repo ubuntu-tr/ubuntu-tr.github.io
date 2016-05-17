@@ -1,0 +1,389 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>"Hot Standby Streaming Replication" Sunucu Yapılandırması</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">"Hot Standby Streaming Replication" Sunucu Yapılandırması</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Bahadır Demircioğlu</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                Bilindiği gibi en iyilerden olan postgreSQL, sorgulama yapabilmemiz ya da yüksek ulaşılabilirlik için bize "hot standby" adı altında bir özellik sunmakta. Bu yazıda bu özelliği repmgr yazılımını kullanarak nasıl yapabileceğini göreceğiz.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/postgresql/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Öncelikli olarak tabii ki postgreSQl kurulumunun yapılması gerekiyor. Ben depolardan kurmak yerine son kararlı sürümü EnterpriseDB sitesinden indirip kuruyorum. Bunun için;</p>
+
+<p><a href="http://www.enterprisedb.com/products-services-training/pgdownload">http://www.enterprisedb.com/products-services-training/pgdownload</a></p>
+
+<p>adresinden uyumlu sürümü indirip kurabilirsiniz.
+İkinci olarak makinelerimiz;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Master: 192.168.222.100
+Slave(Standby):192.168.222.101
+</code></pre>
+</div>
+
+<p>Kurulum tamamlandıktan sonra adım adım ilerlemeye başlayabiliriz.</p>
+
+<p><strong>1)</strong> /opt/PostgreSQL/9.2 dizininin sahibinin postgres olması gerekmekte.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>chown -R postgres /opt/PostgreSQL/9.2
+</code></pre>
+</div>
+
+<p><strong>2)</strong> Postgres kullanıcısı için şifresiz haberleşmeyi sağlamak için master node’da ssh key oluşturacağız.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su -postgrtes
+ssh-keygen -t rsa
+</code></pre>
+</div>
+
+<p><strong>3)</strong> Key dosyasını standby sunucu için postgres kullanıcısına atalım.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-copy-id -i /opt/PostgreSQL/9.2/.ssh/id_rsa.pub 192.168.222.101
+</code></pre>
+</div>
+
+<p><strong>4)</strong> Slave node üzerindeki postgres kullanıcısınında master node’a şifresiz erişimi için slave node’da ssh key oluşturacağız ve master node’da göndereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.222.100
+</code></pre>
+</div>
+
+<p>Herhangi bir sorun yok ise artık yapılandırmaya başlayabiliriz.</p>
+
+<p><strong>5)</strong> Master üzerindeki postgresql.conf dosyası üzerinde;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>listen_addresses = "*"
+wal_level = hot_standby
+checkpoint_segments=30
+archive_mode=on
+archive_command='cd .'
+max_wal_senders=2
+wal_keep_segments=5000
+hot_standby=on
+</code></pre>
+</div>
+
+<p>olarak yapılandıralım.</p>
+
+<p><strong>6)</strong> Master node üzerinde pg_hba.conf dosyası;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>host all all 192.168.222.1/24 trust
+host replication all 192.168.222.1/24 trust
+</code></pre>
+</div>
+
+<p><strong>7)</strong> Şu an için postgresql yapılandırmamız bitti. Test database’i oluşturalım:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su -postgres
+createdb pgbench
+</code></pre>
+</div>
+
+<p><strong>8)</strong> Database üzerinde biraz data oluşturalım.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pgbench -i -s 10 pgbench
+</code></pre>
+</div>
+
+<p><strong>9)</strong> Slave node üzerindeki bütün datayı silelim bakalım ne olacak! Öncelikle tabii ki postgrs sunucusunu kapatalım.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/etc/init.d/postgresql-9.2 stop
+rm -rf /opt/PostgreSQL/9.2/data/*
+</code></pre>
+</div>
+
+<p><strong>10)</strong> Master node üzerinde database’e bağlanabilirliği test edelim. Bu komutu slave node üzerinden vereceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>psql -h 192.168.222.100 -d pgbench
+</code></pre>
+</div>
+
+<p>Bağlantıda sorun yok ise artık repgmr uygulamasını kurup yapılandırmaya başlayabiliriz.</p>
+
+<p><strong>11)</strong> repmgr kuralım. Buynun için source code’dan derleme yapacağız. Bu adımları hem master hem de slave için yapıyoruz.</p>
+
+<p>Yüklememiz gerek paketler:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>apt-get install make gcc libpam0g-dev openssl libkrb5-dev libssl-dev libpam-dev libxslt-dev libedit-dev
+</code></pre>
+</div>
+
+<p>Dikkat edilmesi gereken şey postgresql’in path de tanımlı olması gerektiği.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>wget http://www.repmgr.org/download/repmgr-1.2.0.tar.gz
+tar xvfz repmgr-1.2.0
+cd repmgr-1.2.0
+make USE_PGXS=1
+make USE_PGXS=1 install
+</code></pre>
+</div>
+
+<p><strong>12)</strong> Master node’un klonunu alacağız. Bunu slave node üzerinde yapıyoruz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>su - postgres
+repmgr -D /opt/PostgreSQL/9.2/data/ -d pgbench -p 5432 -R postgres --verbose standby clone 192.168.222.100
+</code></pre>
+</div>
+
+<p><strong>13)</strong> Artık slave node’u çalıştırabiliriz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/etc/init.d/postgresql start
+</code></pre>
+</div>
+
+<p><strong>14)</strong> repmgr.conf dosyası süzenleyeceğiz. Master için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cluster=test
+node=1
+conninfo='host=192.168.222.100 user=postgres dbname=pgbench'
+</code></pre>
+</div>
+
+<p>Slave için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cluster=test
+node=2
+conninfo='host=192.168.222.101 user=postgres dbname=pgbench'
+</code></pre>
+</div>
+
+<p><strong>15)</strong> Register etmek için;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>master	------------&gt;&gt; repmgr -f /path/to/repmgr.conf --verbose master register
+slave	------------&gt;&gt; repmgr -f /path/to/repmgr.conf --verbose standby register
+</code></pre>
+</div>
+
+<p><strong>16)</strong> İşlem bitti. Atık test etmek için master node üzerinde işlemler yapıp slave node üzerinde var mı bakalım.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>psql pgbench -c "create table test ( test varchar(30));"
+psql pgbench -c "insert into test values ( 'test123');"
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>psql -h 192.168.222.101 pgbench -c "select * from test"
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>postgres@slave:~$ psql pgbench -c "select * from test"
+Password:
+  test   
+---------
+ test123
+(1 row)
+</code></pre>
+</div>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-54-sayi" class="ui label"> Sudo 54. Sayı </a>
+
+    
+    
+    <a href="/etiket/sunucu-yapilandirma" class="ui label"> sunucu yapılandırma </a>
+
+    
+    
+    <a href="/etiket/sunucu" class="ui label"> sunucu </a>
+
+    
+    
+    <a href="/etiket/yapilandirma" class="ui label"> yapılandırma </a>
+
+    
+    
+    <a href="/etiket/postgresql" class="ui label"> postgreSQL </a>
+
+    
+    
+    <a href="/etiket/repmgr" class="ui label"> repmgr </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/postgresql';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

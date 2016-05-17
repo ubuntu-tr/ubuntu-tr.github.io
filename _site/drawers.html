@@ -1,0 +1,287 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unity Başlatıcınızı Toparlayın: Drawers</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Unity Başlatıcınızı Toparlayın: Drawers</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Serkan Çalış</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/drawers/1.jpg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Unity Başlatıcısı, ekranımızın sol tarafında bulunan ve uygulamaları eklediğimiz, başlattığımız yerin adıdır. Gün geçtikçe elimizin altında bulunmasını istediğimiz uygulamaları buraya birer birer ekleriz. Ekledikçe çoğalır ve Başlatıcı karışık bir hâl alır. Doğası gereği biz uygulamaları seçmek için faremizle başlatıcıya yaklaştığımızda uygulama simgeleri aşağı veya yukarı doğru akar. Aralarından istediğimizi bulur ve açmak için tıklarız.</p>
+
+<p>Peki, bu şekilde çalışmak yerine dilediğiniz uygulamaları gruplayarak başlatıcıda tutsanız ve daha sonra tek tıkla aralarından istediğinizi seçebilseniz? Evet, bunu yapmanın farklı yolları mevcut; ancak kısa süre önce geliştirilmeye başlanan ve süratle yol kat eden Drawers isimli uygulama bunu son derece basit ve etkili bir biçimde yapıyor. Hem de sadece uygulamalarla sınırlı kalmadan, her türlü dosyanızı ekleyebileceğiniz şekilde çalışıyor. Unity sayesinde seçkeyi kullanarak klavye ile uygulamaları rahatlıkla açabiliyoruz, fakat İnternet üzerindeki ekran görüntülerinde kullanıcıların birçoğunun hâlâ Başlatıcıya uygulama eklediklerini ve fare ile açtıklarını görebiliyoruz. Hâliyle, başlatıcı ve onun düzenini korumak bazılarımız için hâlâ bir gereklilik gibi görünmekte.</p>
+
+<p>Uygulamanın nasıl çalıştığına göz atmadan önce kurulumundan bahsedelim. Drawers depolarda bulunmuyor, kendisini kurmak için harici bir depo, yani PPA eklemeniz gerekiyor. Aşağıdaki komutları uygulayarak bunu basitçe yapabilirsiniz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:ian-berke/ppa-drawers
+sudo apt-get update
+sudo apt-get install drawers
+</code></pre>
+</div>
+
+<p>Şimdi uygulamanın nasıl çalıştığını bir örnek üzerinden anlatalım. Örneğimizde elimizin altında sürekli bulunmasını istediğimiz uygulamaları toplayalım. Drawers basit bir araç. Kurduktan sonra Unity seçkesini kullanarak kendisini çalıştırabilirsiniz.</p>
+
+<p><img src="images/post/drawers/drawers1.png" alt="" /></p>
+
+<p>Uygulamayı açtığınızda sizden bir adet isim isteyecektir. Bu kullanacağınız çekmecenin ismi olacak. Uygulama, oluşturulacak bu şeye “Drawer” yani çekmece diyor. Zaten öntanımlı simgesi de çekmece. İsim olarak “Araçlar” diyor ve yolumuza devam ediyoruz.</p>
+
+<p><img src="images/post/drawers/drawers2.png" alt="" /></p>
+
+<p>İsmi girip onayladıktan sonra Drawers çekmecemizi oluşturacak ve bize ilgili bilgileri verecektir.</p>
+
+<p><img src="images/post/drawers/drawers3.png" alt="" /></p>
+
+<p>Burada kabaca çekmecemizin oluşturulduğu, nerede olduğu ve nasıl kullanacağımız anlatılmakta. Çekmecemizi kullanmak için basitçe şunu yapıyoruz: Ev dizinimiz içindeki gizli olan .local dizini altındaki share/applications dizinine gidiyoruz. Bunu zaten çekmece oluşturulduktan sonra karşımıza çıkan dialog ekranında da görebiliyoruz. Tıklayarak hemen gidebiliriz bu dizine. Eğer bir şekilde bu ekranı kapattıysanız ev dizini içindeyken ctrl+h ile gizli dizinleri görebilir ve .local/share/applications dizinine gidebilirsiniz. Bu dizinin görünümü şuna benzer şekilde olacaktır:</p>
+
+<p><img src="images/post/drawers/drawers4.png" alt="" /></p>
+
+<p>Gördüğümüz üzere yeni oluşturduğumuz çekmecemiz ilgili dizinde bulunuyor. Şimdi, bu çekmeceyi tutup Unity Başlatıcımıza sürüklüyoruz ve istediğimiz yere bırakıyoruz.</p>
+
+<p><img src="images/post/drawers/drawers5.png" alt="" /></p>
+
+<p>Artık çekmecemiz Başlatıcıya eklendi ve kullanımıza hazır. Kendisine tıkladığımızda küçük ve boş bir pencerenin açıldığını göreceksiniz. Henüz hiçbir uygulama eklemediğimiz için kendisi boş durumda. Çeşitli yollarla uygulama ekleyebiliriz bu çekmeceye. Örneğin Unity seçkesinde uygulamayı bulup bu pencereye sürükle bırak yöntemini kullanabiliriz. Eğer masaüstünde bir başlatıcı varsa buradan sürükleyip bırakabiliriz. Öntanımlı olarak çekmece penceremiz sürekli pencerelerin üzerinde durmuyor. Bunu aşmak için boş olan bu çekmecenin sağ üst tarafında gördüğünüz oka tıklayın ve üçüncü simgeyi (raptiye) kullanın. Böylece artık çekmece tüm pencerelerin üzerinde sabitlenmiş olacak. Buradan aynı zamanda düzenleme ve kapatma işlemleri yapılabilir. Bu kısma yazının ilerleyen bölümünde değineceğimiz için elimizin altında bulunması gereken uygulamaları bu çekmecemize ekleyerek yolumuza devam ediyoruz.</p>
+
+<p>Örnek olması açısından ben altı adet uygulamayı çekmeceye ekledim. Öntanımlı olarak bir sırada beş adet uygulama bulunduran Drawers, bu sayıdan sonra bir sonraki sıraya geçiyor.</p>
+
+<p><img src="images/post/drawers/drawers6.png" alt="" /></p>
+
+<p>Çekmecemizin son hâli bu şekilde. Son hâline dikkatle bakacak olursanız ilk durumda sağ üstteki ok yok, zira çekmecemizin boyutu büyüdüğü için artık simgeleri üst çubukta görebiliyoruz. Bu simgelerden ilki çekmecemizi düzenlemeye yarıyor. Tıkladığımızda karşımıza şöyle bir araç çıkacaktır:</p>
+
+<p><img src="images/post/drawers/drawers7.png" alt="" /></p>
+
+<p>Buradan simge, yazı tipi boyutu, bir sırada kaç adet uygulama bulunacağı, çekmecenin ekran üzerindeki konumu (zira çekmece sürüklenemiyor ekran üzerinde), şeffaflık ve diğer ayarlar yapılabiliyor. Bazı ayarların etkin hâle gelmesi için çekmecenin kapatılıp yeniden açılması gerekebiliyor, örneğin yazı tipi boyutu. İlerleyen zamanlarda bu gibi ufak tefek sorunların aşılacağını düşünüyorum. İkinci simge çekmeceyi kapatmaya yarıyor. Üçüncü simge ise çekmeceyi tüm pencerelerin üzerinde tutmaya yarıyor.</p>
+
+<p>Çekmeceye ulaşmak için Başlatıcıdan tıklamak yeterli. Fakat uygulamaları açmak için illa çekmecenin kendisini açmamız gerekmiyor. Uygulamanın güzel özelliklerinden biri de sizin için Unity hızlı listesini hazırlaması. Kısacası çekmeceye sağ tıklayarak barındırdığı uygulamaları görüp istediğinizi tek tıkla açabilirsiniz.</p>
+
+<p><img src="images/post/drawers/drawers8.png" alt="" /></p>
+
+<p>Anlatımı biraz uzun olsa da aslında Drawers ile bu şekilde bir çekmece hazırlamak çok kısa zaman almakta. Drawers’ın güzel yanı sadece uygulamalarla sınırlı kalmaması. Örneğin işiniz için üzerinde çalıştığınız bir dosyalar topluluğu var ve siz bunu bir dizinde saklıyorsunuz. Sürekli bu dizine gidip dosyaları açmak yerine dosyalarınızı tutması için bir çekmece oluşturabilirsiniz.</p>
+
+<p><img src="images/post/drawers/drawers9.png" alt="" /></p>
+
+<p>Yazının sonunda uygulamanın sahip olduğu ve bizi derinden etkileyen bir sorunundan bahsedelim. Uygulama şimdilik Türkçe karakter barındıran dizin ve dosyalarda doğrudan çalışmıyor ne yazık ki. Kısacası dosyalarınız Türkçe karakter barındıran bir dizindeyse veya dosyalarınızın isminin kendisinde Türkçe karakter varsa Drawers bu uygulama ve dosyaları doğrudan açamıyor. Dolaylı yoldan düzeltmenin bir yolu mevcut. Mesela çekmecenize ismi “çalışma3.txt” olan bir dosya eklediniz. Bu dosyaya tıkladığınızda Drawes açamayacaktır. Altında yatan sebep ise ilgili masaüastü dosyasına doğru karakterlerle giriş yapamaması. Düzeltmek için çekmece dosyanızın ismi neyse şu şekilde açın:
+Benim iş için kullandığım çekmecenin ismi İş-İcabı olduğu için masaüstü dosyası İş-İcabı.desktop isminde ~/.local/share/applications altında oluşturulmuş durumda. Dikkat, eğer dizine gidip çift tıklarsanız bu dosyaya doğrudan çekmece açılır. Bizim amacımız bu değil, dosyayı düzenlemek istiyoruz. Bu sebepten ötürü şu komutla dosyamızı açıyoruz:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gedit ~/.local/share/applications/İş-İcabı.desktop
+</code></pre>
+</div>
+<p>Dosya içeriğinde şu şekilde girişler göreceksiniz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Actions=calisma1.txt;calisma2.odt;calisma3.ods;%C3%A7al%C4%B1%C5%9Fma3.txt
+[Desktop Action %C3%A7al%C4%B1%C5%9Fma3.txt]
+Exec=xdg-open "/home/serkan/calismalar/%C3%A7al%C4%B1%C5%9Fma3.txt"
+Name=%C3%A7al%C4%B1%C5%9Fma3.txt
+</code></pre>
+</div>
+
+<p>Bu dört bölümü doğru isimle düzenlerseniz, çekmeceniz düzgün bir hâl alacaktır. Gedit üzerinden toplu değiştirme özelliğini kullanabilirsiniz. Kısacası %C3%A7al%C4%B1%C5%9Fma3 -&gt; çalışma3 değişikliği yaparsanız Değiştir üzerinden sorun çözülüyor. Tabii bu çok hoş bir durum ve çözüm değil. Uygulama henüz çok yeni olduğu için bu sorunun aşılmasını beklemek zorundayız. Ancak geliştiricisi sorunlarla çok ilgili ve bu konuda açılan hata kaydına 1 saat içinde cevap vermiş durumda. Hata kaydını ve gelişmeleri şuradan <strong>[1]</strong> takip edebilirsiniz.</p>
+
+<h3 id="kaynak">Kaynak:</h3>
+<p>[1] <a href="https://bugs.launchpad.net/drawers/+bug/1034201">https://bugs.launchpad.net/drawers/+bug/1034201</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-44-sayi" class="ui label"> Sudo 44. Sayı </a>
+
+    
+    
+    <a href="/etiket/unity" class="ui label"> unity </a>
+
+    
+    
+    <a href="" class="ui label">  </a>
+
+    
+    
+    <a href="/etiket/secke" class="ui label"> seçke </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/drawers';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

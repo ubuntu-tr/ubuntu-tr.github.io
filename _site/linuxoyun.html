@@ -1,0 +1,246 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linux Oyunlarının Kırılma Noktaları</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Linux Oyunlarının Kırılma Noktaları</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Emre Güntekin</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/oyun-eglence/">Oyun / Eğlence</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                Linux oyunlarının zayıf yönleri, oyuncuların serzenişlerine ekleniyor. Windows oyunları güçlü, yeni ve pırıl pırıl. Linux oyunları ve oyuncuları ise bunların karşısında her yönden saldırıya açıklar. Çok ciddi, artık büyümüş (!) oyun oynamayan Linux kullanıcıları da biraz düşünmeli bunu. Ne o, alındınız mı? Biraz da siz alının, hep biz mi alınacağız?
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/linuxoyun/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Hemen birkaç cümle ile özetleyeyim: GNU/Linux oyunları, Windows platformunun başından beri hep gerisinden gitti ve hâlâ da öyle. En güncel ve yeni oyunlar, daima önce (pek çoğu ise sadece) Windows için çıkar. Ardından ekonomik ömrünü tamamlayınca da Linux’a port edilir ya da daha güzeli hiç edilmez.</p>
+
+<blockquote>
+  <p>-Yeni ve güncel oyunları Linux’ta oynayabilir miyim?<br />
+-Hayır.<br />
+-Ya eski oyunları?<br />
+-Eh…Belki.</p>
+</blockquote>
+
+<p>Hangi açıdan bakarsanız bakın, oyuncular, en son çıkan oyunları oynamak isterler. Oyun sektörünün, bilgisayar pazarına yön veren en etkin sektörlerin başında geldiği, suyun götüremeyeceği, balçığın sıvayamayacağı bir gerçek. Sebepleri de aslında hiç de gizli sayılmazlar.
+Oyunların, Linux desteği olmayan (ve muhtemelen asla da olmayacak olan) DirectX API’si ile yazılmaları. Bunun sonucu da OpenGL kullanımımın, ev kullanıcılarının oyun makinelerinde yeterince yaygınlaşamaması. Microsoft’un tekelci politikalarının, oyunlarda da kendini göstermesi. Microsoft, oyun platformunu kendi sistemine bağlayarak, sektörde tekel olma konusunda çok güzel iş çıkarıyor. En güçlü grafikler, platform bağımsız olan OpenGL yerine, Windows API’si olan Direct3D ile kodlanıyor. Windows’un yaygın olması ve kendi uygulamalarından başka uygulamalara hayat hakkı tanımaması, DirectX’in de yaygınlaşmasını sağlıyor. Grafik kartı üreticilerinden, oyun yapımcılarına kadar tüm bu alanlarda çalışan şirketler de, bu yüzden  DirectX API’si kullanmaya başlıyorlar. Küçük bir azınlık olan Linux kullanıcılarını görmezden geliyor ya da bu pazara para ayırıp da, zarar etmek istemiyorlar. Dolayısıyla çalışmalar, geri beslemeler, ayrılan fonlar da düşüyor. Bu da oyuncuların ve oyun tasarımcılarının kafalarına, tek seçeneğin Microsoft uygulamaları olduğunu sokuyor ister istemez Bunların bir de güçlü sermaye, profesyonel ekipler ve Microsoft’un tekelci anlaşmaları ile de desteklenince; Linux oyunlarının gelişiminin önünde gerçekten güçlü bir direnç oluşturuyorlar.</p>
+
+<p>Şirketlerin yazdıkları oyun teknolojileri, (yapay zeka, 3D motorlar vs…) ticari ve teknik endişelerden dolayı, kapalı kaynak yapılarak, geliştirici ve kullanıcıların erişimlerine açılmıyorlar. Gerçi Linux oyunlarının illa ki de açık kaynak olması gerekmiyor. Ancak yine de bu tip bir alana akış olabilmesi için, pazar olması gerekiyor ki, o da Linux topluluğunda olan bir şey değil ne yazık ki.
+Sanıyorum bunlar ile ilgili bu kadar ahkâm kesmek yeterli. Benim aslında toparlamak istediğim, Linux oyunlarının, ben başladığımdaki yeri ile şimdi geldiği yer ve gördüğüm olayların bir panoramasını çıkarmak.</p>
+
+<p>Şirketlerin ve sermayenin gittiği yön bellidir: Pazar. Linux (ya da deha geniş anlamıyla özgür yazılım topluluğu) oyun pazarında varlık göstermemiştir. Sebep olarak, Linux kullanıcılarının oyunlarla pek arası olmaması ve son kullanıcı sayısının, Windows’a oranla daha az olması gösterilebilir belki. Ama bu sebep ne olursa olsun, oyun sektöründe Windows tartışmasız en üst seviyede ve yakın zamanda da tahtından inecek gibi görünmüyor (biz PC oyunlarından bahsettiğimiz için, konsolları konumuz dışında tutuyorum).</p>
+
+<p>Linux tarafında ise, geliştiriciler kendi oyunlarını yazmakla işe başladılar. Kaynak kodları açık ve tüm topluluk tarafından geliştirilen oyunlar, Linux felsefesine de uygun olarak, özgür ve platform bağımsız olarak yayımlandılar. Yani Windows altında da çalışabiliyorlardı. Eeee? Yani sadece Linux’a mı yazılacaktı ya bu oyunlar? Elbette hayır. Böyle bir şey zaten GNU felsefesine aykırı. Ama Windows tarafı böyle değil.</p>
+
+<p>Bunun yanısıra, kendi özel zamanlarından ayırdıkları zamanlarla oyunları yapan geliştiricilerin çabaları; arkalarında bir film ekibi gibi insan gücü, milyon dolarlık sermaye ve dev şirketlerin bulunduğu oyunlarla boy ölçüşmek durumunda kaldılar. Amaçları bu olmasa bile, ister istemez bu kıyaslamalara tabi kaldılar. Bu oyunlar, son derece kaliteli oyunlar da olasalar, iş sadece programcıda bitmediği için, güncel oyunların şatafatını topluluk oyunlarında bulmak zor oldu. Usta ve profesyonel tasarımcılar ve sanatçılar, para karşılığı iş yaptıklarından, sermayeli oyunların kaplamaları ve efektleri çok daha kaliteli oluyor. Özellikle zaman geçtikçe, oyunlara Half Life ve PES serileri ile başlayan veletler, parlamalı efektler görmezlerse, hemen “bu oyun iyyyyrenç!”i yapıştırıveriyorlar.</p>
+
+<p>Topluluğun ikinci bir çabası ise, Windows uygulamalarını Linux altında çalıştırma yolunu izlemek oldu. Evet, bildiniz; Wine’dan bahsediyorum.  Elbette, front-end olarak PlayOnLinux, ticari olarak CrossOver da var. Bu uygulamalar, Windows uygulamalarını, Linux altında çalıştırarak, oldukça güç bir işi başarıyorlar. Burası aslında topluluğun gücünü gösteren en güzel örneklerden sadece biri. Ama ne yazık ki, farklı bir platform için tasarlanmış bir uygulamayı, alakasız bir platformda çalıştırmaya zorladıklarından, her zaman başarılı olamıyorlar. Hele de oyunlar gibi karmaşık uygulamalar söz konusu olunca, hiç çalışmaması ya da performans kaybı yaşaması gibi durumlarla sık karşılaşabiliyor oyuncular. Yani bunların da bir garantisi yok.</p>
+
+<p>Topluluk oyunlarının ardından, bağımsız (Indie) oyunlar geliyor. Bağımsız geliştiricilerin ve oyun firmalarının geliştirdiği genelde DRM-Free denilen, özgür yazılım ile ticari oyunların arasında olan bir oyun çeşidi. Topluluk üyelerinin yaptıkları oyunlardan farklı olarak, arkalarında bir nebze para ve şirket gücü olabiliyor bu oyunların. Oyunlar genelde ücretli oluyorlar. Ancak belli bir ücretle alınabilindikleri gibi, “pay as you want” (istediğin kadar öde) şeklinde de satılabiliniyorlar. Bu oyunlar tam olarak özgür yazılım değiller. Kodları açık değil. Ancak DRM’ye dahil değiller. Yani bu oyunu bir kere aldığınızda, birden fazla makineye kurabilir, arkadaşlarınızla istediğiniz kadar paylaşabilirsiniz. Bu oyun türü, Desura’nın ModDB ve IndieDB projeleri ve Steam’in Greenlight projeleri ile (bunlardan SUDO’nun 51. sayısında bahsetmiştik) yaygınlaşmaya ve duyulmaya başladı. Linux, bu projelerin de sayesinde, bağımsız oyunların merkezi haline geldi. Yine de bu oyunlar, ticari oyunlar ile kıyaslanabilecek seviyede değiller. Ama bu seviyeye ulaşma potansiyeline sahipler. Sorun ise işte bundan sonrası zaten. Ticari oyun tarafına geçmeleri; pazarın olduğu yere, yani Windows’a yönelmeleri potansiyeline de sahipler. Acaba IndieRoyale ve HumbleBundle’ın girdiği yol bu mu?</p>
+
+<p>En son noktada ise ticari oyunlar geliyor. Eski ticari oyunları Linux’a port etmek en eski yöntem. Bunu yapan Loki Games ve Linux Game Publishing (LGP) vardı. Ancak bu firmalar, artık yoklar. Eski usul DVD gönderme ile işlerine devam eden bu iki firma, dijital indirme platformları ile başa çıkamadı. İlgisizlik sonucunda her ikisi de kapandılar. LGP bir ara Desura vasıtasıyla oyunlarını pazarlayacağını düşündürdü bize. Ancak bir – iki oyunun ardından gerisi gelmedi. En iyi Linux oyun veritabanı olan Happypenguin’in kapanması ile LGP, güle güle demiş oldu. Ticari oyun bölümünde ise son iki önemli gelişme, Desura ve Steam’in Linux’a gelmesi oldu. 51. sayıda her ikisini de incelemiştik. Orada da bahsettiğimiz gibi, Desura şu an bağımsız (Indie) oyunlara ağırlık vermiş durumda. Özgür ve ticari oyunlar da veri tabanında mevcut. Yine de oldukça sorunlu ve güncellenmemesinden dem vurmuştuk. Geçen sayımızda haberlerde belirttiğimiz üzere Desura, sahip değiştirdi. Linden Labs. tarafından satın alınınca, Desura’nın bağımsız oyunlarında artış oldu. Yine de Desura’nın, Linux oyuncularının ilgisini yeterli derecede gördüğünden şüpheliyim. Ancak Desura bu konuda biraz ketum. Sitesinde ya da istemcisinde Windows ya da Linux kullanıcıları oranlarıyla ilgili bir bilgi bulamadım.</p>
+
+<p>Desura için söylediklerimin çoğu Steam için de geçerli. Steam oldukça hızlı başladı. Ancak başlardaki hızını biraz düşürdü.LGP’nin port işini, şu an Valve üstlenmiş durumda. Peki sonu da LGP gibi olur mu? Acaba hâlâ %2’yi geçemeyen Linux oyuncularının değmeyeceğini düşünmeye başlamış olabilir mi? Biraz erken sanırım bu kanı için, ancak gidişat o yönde görünüyor.  Hatta daha güzeli, kendi itirafları olarak, Steam for Linux, Steam for Android  ve SteamBox konsolu için bir atlama tahtası olabilir mi?</p>
+
+<p>Daha genel bir soru sorayım. Linux tarafına gelen her oyuncu ve oyun geliştiricisi, hüsranla mı karşılaşacak? Çözüm dual-boot ile Windows’u tutmak mı olacak daima?? Var mı verecek cevabı olan??</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-56-sayi" class="ui label"> Sudo 56. Sayı </a>
+
+    
+    
+    <a href="/etiket/linux" class="ui label"> linux </a>
+
+    
+    
+    <a href="/etiket/oyun" class="ui label"> oyun </a>
+
+    
+    
+    <a href="/etiket/elestiri" class="ui label"> eleştiri </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/linuxoyun';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

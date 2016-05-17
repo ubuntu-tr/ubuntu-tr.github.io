@@ -1,0 +1,306 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ubuntu Donduğunda Güvenle Yeniden Başlatın</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Ubuntu Donduğunda Güvenle Yeniden Başlatın</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Decent</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/ubuntu-dondugunda-guvenle-yeniden-baslatin/1.jpg">
+                        </div>
+                        <div class="markdown-body">
+                            <h2 id="kullandnz-ubuntu-sisteminiz-ile-hi-donma-yaadnz-m">Kullandığınız Ubuntu sisteminiz ile hiç donma yaşadınız mı?</h2>
+<p>Fareyi oynattığınız ya da klavyeden tuşlara bastığınız hâlde hiçbir şey olmuyor! Bu sorunla karşılaştığımızda güç düğmesine basarak sistemi yeniden başlatmak son çare olmalı, öyle değil mi? Hepimizin bildiği gibi -yanlışsa düzeltin- sistemi sıklıkla güç düğmesinden yeniden başlatmak donanım üzerinde özellikle sabit disk üzerinde hasara neden olabilir. Peki, donmuş bir Ubuntu sistemini yeniden başlatmanın doğru yolu var mı? Evet var. Sistemi sağlıklı bir şekilde yeniden başlatmak için “Sihirli SysRq Tuşu”nu kullanacağız.</p>
+
+<p>Bu tuşun konumuzla ilgili olan görevi doğrudan Linux klavye sürücüsünün bir parçası olarak uygulanmaktadır.
+Sadece “kernel panic” sorununda bu tuş devredışı kalmaktadır, kernel çalışmaya devam ettiği sürece etkindir. “kernel panic” dışındaki tüm donmalarda güvenli yeniden başlatma için “SysRq” tuşunu kullanabilirsiniz. SysRq tuşu klavyenin üst kısmında ve Scroll Lock tuşunun yanında yer alır ve genellikle Print Screen tuşu ile aynı tuşu paylaşır.</p>
+
+<p><img src="images/post/ubuntu-dondugunda-guvenle-yeniden-baslatin/Resim-1_sysrq.jpg" alt="" /></p>
+
+<p>Bu sihiri kullanmak için aşağıdaki komutu yürüterek “/proc/sys/kernel/sysrq” dosyasının değerini kontrol edeceğiz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cat /proc/sys/kernel/sysrq
+</code></pre>
+</div>
+
+<p>Eğer komutun çıktısı “1” ise sihirli tuş etkindir ve kullanmaya hazırız demektir.
+Değilse aşağıdaki komutu yürütüp dosyanın değerini “1” olarak değiştiriyoruz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo echo "1" &gt; /proc/sys/kernel/sysrq
+</code></pre>
+</div>
+
+<p>Ve Sihir Başlıyor</p>
+
+<p>Ubuntu donduğu anda yalnızca “Alt+SysRq” tuş bileşimini basılı tutun ve sırayla aşağıdaki tuşlara basın, tuşlara basarken arada birkaç saniye bekleyin:</p>
+
+<p>“reisub”</p>
+
+<p>Kullanım şu şekildedir:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Alt+SysRq+&lt;komut tuşu&gt;
+</code></pre>
+</div>
+
+<p>Örnek:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Alt+SysRq+r
+</code></pre>
+</div>
+
+<h2 id="sihir-ne-e-yaryor">Sihir Ne İşe Yarıyor?</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tuş</th>
+      <th>İşlevi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>r</td>
+      <td>Klavye kontrolünü X sunucusundan alır, çekirdek kontrolünde ham klavye kipine çevirir.</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>Nezaketen bütün uygulamalara sonlandırma sinyali gönderir.</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>Tüm uygulamaları derhâl sonlandırmaya zorlar, tüm süreçlere “kill” sinyali gönderir.</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>Önbelleğinizi diske aktarır.</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>Tüm dosya sistemlerini salt-okunur olarak yeniden bağlar.</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>Bilgisayarınızı yeniden başlatır.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Sihirli tuş ile kullanılabilen diğer komutlar ve ayrıntılı bilgi için:<br />
+<a href="http://kernel.org/doc/Documentation/sysrq.txt">http://kernel.org/doc/Documentation/sysrq.txt</a><br />
+belgesini inceleyebilirsiniz.</p>
+
+<p>Ayrıca aşağıda bulunan adreslerdeki yazılara bakabilirsiniz;</p>
+
+<ul>
+  <li><a href="http://www.howtogeek.com/119293/4-ways-to-recover-from-a-crashed-or-frozen-x-server-on-linux/">http://www.howtogeek.com/119293/4-ways-to-recover-from-a-crashed-or-frozen-x-server-on-linux/</a></li>
+  <li><a href="http://www.howtogeek.com/119127/use-the-magic-sysrq-key-on-linux-to-fix-frozen-x-servers-cleanly-reboot-and-run-other-low-level-commands/">http://www.howtogeek.com/119127/use-the-magic-sysrq-key-on-linux-to-fix-frozen-x-servers-cleanly-reboot-and-run-other-low-level-commands/</a></li>
+</ul>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-44-sayi" class="ui label"> Sudo 44. Sayı </a>
+
+    
+    
+    <a href="/etiket/sysrq" class="ui label"> sysRq </a>
+
+    
+    
+    <a href="/etiket/yeniden-baslat" class="ui label"> yeniden başlat </a>
+
+    
+    
+    <a href="/etiket/ubuntu" class="ui label"> ubuntu </a>
+
+    
+    
+    <a href="/etiket/linux" class="ui label"> linux </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/ubuntu-dondugunda-guvenle-yeniden-baslatin';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

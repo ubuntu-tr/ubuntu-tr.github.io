@@ -1,0 +1,361 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thunderbird ve GnuPG ile Güvenli Haberleşme</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Thunderbird ve GnuPG ile Güvenli Haberleşme</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Çağrı Emer</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/1.jpg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>İlk örneklerini altmışlı yıllarda gördüğümüz e-posta sistemi, zaman içinde hızla evrilerek günümüzdeki şeklini aldı. Bu süre zarfında doğal olarak kullanıcıların ihtiyaçları da değişti. İlk çıktığı zamanlarda akademik iletişim hizmetini gören e-posta teknolojisi günümüzde artık temel iletişim ihtiyaçlarımız arasında önemli bir yer edinmiş durumda.</p>
+
+<p>Elektronik posta teknolojisinin yaygınlaşıp, hayatımızın her alanına girmeye başlamasıyla, kötü amaçlı e-postalar da kullanıcılar için büyük bir problem haline geldi. 2010 Ağustos tahminlerine göre her gün gönderilen e-postaların 200 milyar adedi <strong>[1]</strong> spam adı verilen istenmeyen postalardan oluşuyor.</p>
+
+<p>E-postaların bir güvenlik sorunu haline gelmesi, geliştiricileri ister istemez çözümler aramaya itti. Bunun sonucu olarak, gönderenin doğrulanması için sertifika ya da şifreleme çözümleri ortaya çıktı. Bu yazıda GnuPG temelli Enigmail eklentisi ile Thunderbird üzerinden gönderilen postaların nasıl imzalandığını ve şifrelendiğini anlatmaya çalışacağım.</p>
+
+<h2 id="nasl-alyor">Nasıl çalışıyor?</h2>
+
+<p>Gönderdiğimiz postaların, sadece istediğimiz alıcı tarafından içeriğine ulaşılmasını ve alıcının da mesajı bizim yolladığımızdan emin olmasını sağlayan bu sistemi arkadaşımıza verdiğimiz fakat anahtarı bizde duran bir asma kilide benzetebiliriz. Yani, diyelim ki benim bir kutum var ve arkadaşıma o kutu içerisinde çok önemli bir mesaj yollayacağım. Bu mesajın taşıyıcı tarafından görülmesini istemiyorum. Ayrıca arkadaşım kutuyu aldığında o kutuyu yollayanın ben olduğunu anlayabilmeli ki, eğer taşıyıcı, kutuyu benzeriyle değiştirmişse aldığı mesajı dikkate almasın.</p>
+
+<h2 id="ifreleme">Şifreleme</h2>
+
+<p>Arkadaşım, önce gidip bir asma kilit alıyor ve bana yolluyor. Ben o kilit ile kutumu kilitliyorum ve arkadaşıma yolluyorum. Taşıyıcıda anahtar olmadığından kutuyu açıp içindeki mesajı okuyamıyor. Teknik olarak ifade etmek gerekirse asma kilit genel anahtar, kilidi açan anahtar da özel anahtar oluyor.  Peki arkadaşımın bana yolladığı kilidin gerçekten onun kilidi olup olmadığını nasıl anlayabilirim? Bunun için arkadaşımız asma kilidini onu tanıyanlara dağıtıyor ve üzerine kendi imzalarını atmalarını istiyor. Böylelikle ben arkadaşımdan gelen kilidi aldığımda üzerindeki imzalara bakarak o kilidin gerçekten arkadaşıma ait olduğunu anlayabiliyorum. Bu analoji imzaların taklit edilemeyeceği varsayımından ötürü gerçek dünyada kusurludur fakat 1’ler ve 0’lar dünyasında o imzalar pratik olarak taklit edilemezler.</p>
+
+<h2 id="mzalama">İmzalama</h2>
+
+<p>Eğer imzaların taklit edilemeyeceğini kabul edersek, arkadaşım ona yolladığım kutu üzerinde benim imzamı görünce de, kutunun gerçekten benden geldiğine ve yolda değiştirilmediğine emin oluyor. Böylelikle güvenli şekilde mesajımızı arkadaşımıza iletmiş oluyoruz. Umarım örnek yeterince açıklayıcı olmuştur. Zira daha iyisini bulamadım.</p>
+
+<h2 id="bu-ii-nasl-yapyoruz">Bu işi nasıl yapıyoruz?</h2>
+
+<p>Ubuntu 11.04 depolarında Thunderbird 3.1 ve bununla uyumlu olan Enigmail eklentisi  halihazırda bulunuyor. Yapmamız gereken Ubuntu Yazılım Merkezi’ne girip thunderbird diye aramak ve gelen sonuçlar arasından Enigmail ve Thunderbird’ü kurmaktan ibaret.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/1.png" alt="" /></p>
+
+<p>Thunderbird’de kullanıcı hesaplarının tanıtılması</p>
+
+<p>Öncelikle Thunderbird’ü açıyoruz. Bizi şöyle bir ekran karşılıyor.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/2.png" alt="" /></p>
+
+<p>Bu ekranda posta hesabımızın adresini ve şifresini yazıp Devam’a tıklıyoruz. Yenilenen ekranda Thunderbird posta sunucumuzun ayarlarını bulmaya çalışıyor. Eğer büyük sağlayıcılardan birini kullanıyorsanız bu kısımda ekstra bir ayar yapmanıza gerek yok. Yok Thunderbird ayarlarınızı tanıyamazsa elle ayarlamaları yapabilirsiniz. Hesap oluştur diyerek devam ediyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/3.png" alt="" /></p>
+
+<p>Eğer Thunderbird tarafından tanınan sertifika sağlayıcıların birinden alınmış bir sertifikaya sahipse posta sağlayıcınız bu kısımda aşağıdaki ekranı görmeyeceksiniz. Eğer thunderbird tarafından tanınmayan bir sağlayıcıdan alınmış sertifika kullanıyorsa aşağıdaki gibi bir ekran göreceksiniz. Bu bir güvenlik açığı olarak düşünülmemelidir. Sadece, posta sunucunuz kendi sertifikasını kullanıyor olabilir. Güvenlik İstisnasını Onayla diyerek devam ediyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/4.png" alt="" /></p>
+
+<p>Gelen ekran bize Thunderbird’ü ontanımlı olarak hangi işlemler için kullanmak istediğimizi soruyor. Buradan ihtiyacımıza uygun olanı seçip devam ediyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/5.png" alt="" /></p>
+
+<p>Üstteki soruyu yanıtladığımızda artık posta hesabımız tanıtılmış ve Enigmail eklentisi kurulmuş bir halde Thunderbird’ü kullanabiliriz. Panelde OpenPGP menüsünü görüyorsanız Enigmail’in kurulmuş olduğundan emin olabilirsiniz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/6.png" alt="" /></p>
+
+<p>Bu menüye tıklayıp Kurulum Sihirbazı’nı açıyoruz. Aslında kendi anahtarlarımızı kendi seçeneklerimize göre oluşturabiliriz fakat başlangıç için sihirbazı kullanmanın daha uygun olacağını düşündüm. Bizi aşağıdaki gibi bir ekran karşılıyor.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/7.png" alt="" /></p>
+
+<p>İleri tuşu ile devam ediyoruz. Gelen ekranda Thunderbird’e tanımlı olan hangi hesaplar için anahtar üretmek istediğimiz soruyor. Ben her hesap için farklı anahtar çifti kullanmayı tercih ettiğimden sadece şu anda kullanacağım hesap için anahtar üretmeyi seçtim.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/8.png" alt="" /></p>
+
+<p>Aşağıdaki ekran varsayılan olarak bütün postaları imzalamak isteyip istemediğimizi soruyor. Yine bir tercih meselesi, ben alıcıya göre imzalamaya karar vereceğimi söyleyip devam ediyorum.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/9.png" alt="" /></p>
+
+<p>Bir sonraki aşamada bize bütün postaları şifrelemeyi isteyip istemediğimiz soruyor. Bu soruya da alıcıya göre karar vereceğimi söyleyip tamamlıyorum.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/10.png" alt="" /></p>
+
+<p>Gelen ekranda performans için bazı ayarlar yapmak istediğini söylüyor. Kabul ediyorum. Siz burada detaylar butonuna tıklayıp hangi ayarların değiştirileceğini görebilir ve hangilerinin değiştirileceğine karar verebilirsiniz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/11.png" alt="" /></p>
+
+<p>Gelen ekranda yeni bir anahtar çifti mi oluşturacağımı yoksa olan bir çifti mi kullanacağımı soruyor ben yeni bir tane oluşturacağımı söyleyip devam ediyorum. Bir sonraki ekranda unutmamamız gereken bir şifre belirleyip yazıyoruz ve devam ediyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/12.png" alt="" /></p>
+
+<p>Bize oluşturacağı anahtarın özelliklerini söylüyor. Bu ekrani da geçiyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/13.png" alt="" /></p>
+
+<p>Anahtar üretimine başlıyor. Anahtar üretmek üstelik 2048 bitlik bir anahtar üretmek biraz zaman isteyen bir iş. Hızlı olmasını istiyorsak disk kullanımını gerektiren işlemler yapabilir, internette gezebiliriz. Anahtar üretimi bitince bizi şöyle bir ekran karşılıyor. Bu noktada bir iptal sertifikası oluşturmak yararımıza olacaktır. İleride artık anahtarımızı daha fazla kullanmak istemediğimizde ya da yeni bir anahtar üretmek istediğimiz zamanlar için bir kenarda bulunması her daim iyidir.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/14.png" alt="" /></p>
+
+<p>Sertifikayı oluşturunca şöyle bir uyarı veriyor.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/15.png" alt="" /></p>
+
+<p>Bu uyarıyı da geçtiğimizde artık anahtar çiftimizi kullanabilir haldeyiz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/16.png" alt="" /></p>
+
+<p>Şimdi genel anahtarımızı bir anahtar sunucuya yükleyelim ki bizi arayanlar bulabilsinler. OpenPGP menüsünden Anahtar Yönetimi’ne geliyoruz ve Açılan pencerede Ontanımlı olarak tüm anahtarları göster dedikten sonra oluşturduğumuz anahtara sağ tıklayıp  Genel Anahtarları Anahtar Sunucusuna Yükle seçeneğiyle bir anahtar sunucuya yüklemek istediğimizi söylüyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/17.png" alt="" /></p>
+
+<p>Bu aşamayı da tamamladıktan sonra artık günlük kullanımımız için bu işlemleri bir daha yapmak zorunda değiliz. Yeni bir posta yazıp anahtarlarımızı deneyelim.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/18.png" alt="" /></p>
+
+<p>Bu ekranda OpenPGP menüsü altında imzalama veya şifreleme ya da her ikisini de seçebiliriz. Sağ altta gördüğünüz sarı renkteki anahtar ve kalem postanın hem imzalanacağını hem de şifreleneceğini anlatıyor.</p>
+
+<p>Postamızı yolladığımızda karşıdaki kullanıcı gelen postanın üzerinde yeşil bir kısım görüyor. Bu kısım postanın gerçekten de benden geldiğini belli eden kısım. Mühürlü mektup ve kilit işaretleri de ayrıca şifreleme yapıldığını anlatıyor. Bu işaretlerden birine tıklayıp detaylı bilgilere ulaşabiliriz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/19.png" alt="" /></p>
+
+<p>Eğer şifrelediğimiz postayı yolda biri ele geçirip okumaya kalksaydı arkadaşımızın anahtarı olmadığından şöyle bir ekranla karşılaşacaktı.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/20.png" alt="" /></p>
+
+<p>Gördüğünüz gibi mesajımız şifrelenmiş durumda ve sadece arkadaşımız tarafından deşifre edilebiliyor.</p>
+
+<p>Şimdi tanıdığımız birinin anahtarını nasıl imzalarız ona bakalım. Yine Anahtar Yönetimi penceresini açıyoruz ve imzalamak istediğimiz anahtarın üzerine sağ tıklayıp Anahtarı İmzala diyoruz. Gelen pencerede anahtarın gerçekten arkadaşımıza ait olup olmadığını ne kadar dikkatli kontrol ettiğimizi seçip Tamam diyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/21.png" alt="" /></p>
+
+<p>Bu işlem bittikten sonra tekrar anahtarlarımızı sunucuya yükleyelim ki imzalanmış halleri sunucuda da bulunsun. Şimdi gidip anahtarımızı yüklediğimiz anahtar sunucudan anahtarımızın nasıl gözüktüğüne bakabiliriz. Anahtarımızı yüklediğimiz sunucuya gidiyor ve posta adresimizi aratıyoruz.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/22.png" alt="" /></p>
+
+<p>Gelen ekranda posta adresine tıklıyoruz ve anahtar özellikleri açılıyor. Burada göreceğiniz gibi anahtar hem anahtarı üreten kişi hem de kullanıcı2 tarafından imzalanmış. Ne kadar çok imza o kadar çok güvenilirlik anlamına geliyor. Hatta dünyanın çeşitli yerlerinde geliştiriciler genellikle buluştuğunda anahtar imzalama partileri düzenlenir. Bunu da bir ek bilgi olarak verelim. Bir ek daha Debian geliştiricisi olmak için anahtarınızın, sizinle mümkünse yüzyüze görüşmüş bir Debian geliştiricisi tarafından imzalanması gereklidir.  Özetle, imza iyidir.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/23.png" alt="" /></p>
+
+<p>Son olarak anahtarımızı artık kullanmak istemediğimizde neler yapmamız gerektiğine bir bakalım. Tekrar Anahtar Yönetimi’ne dönüyoruz. Kullanmak istemediğimiz anahtara sağ tıklayıp Anahtar Feshet diyoruz. Bu işlem bittikten sonra anahtarımızı tekrar anahtar sunucuya yüklüyoruz ki bakanlar artık kullanmadığımızı bilsinler.</p>
+
+<p><img src="images/post/thunderbird-ve-gnupg-ile-guvenli-haberlesme/24.png" alt="" /></p>
+
+<p>Kullanmadığınız anahtarlarınızı silmenize gerek yok fakat illa silmek istiyorsanız önce dosyaya aktar diyerek özel anahtarınızla birlikte bir yedeğini almanızı tavsiye ederim. Daha sonra  penceresinde sağ tıklayıp “Anahtarı Sil” diyebilirsiniz. Yedeğini almadığınız anahtarı asla ama asla geçersiz kılmadan önce silmeyin. Bu işlemin geri dönüşü yoktur. Üstelik sildiğiniz anahtarla şifrelenmiş postaları anahtarınızı sildikten sonra okuyamayacağınız da aklınızda bulunsun.</p>
+
+<p>Eğer daha önce size posta göndermemiş birine şifrelenmiş posta göndermek istiyorsanız, o posta hesabına ait genel anahtara ihtiyacınız olacaktır. Anahtar sunucular bu işi yaparlar ve kişilerin genel anahtarlarını tutarlar. Böylelikle biz daha önce hiç imzalanmış postasını almadığımız birinin genel anahtarını anahtar sunucudan bilgisayarımıza aktararak o kişiye şifrelenmiş posta gönderebiliriz.
+Güvenli postalar dilerim :)</p>
+
+<h2 id="kaynak">Kaynak</h2>
+<p>[1] <a href="http://en.wikipedia.org/wiki/E-mail_spam#Statistics_and_estimates">http://en.wikipedia.org/wiki/E-mail_spam#Statistics_and_estimates</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-33-sayi" class="ui label"> Sudo 33. Sayı </a>
+
+    
+    
+    <a href="/etiket/thunderbird" class="ui label"> thunderbird </a>
+
+    
+    
+    <a href="/etiket/gnupg" class="ui label"> GnuPG </a>
+
+    
+    
+    <a href="/etiket/guvenlik" class="ui label"> güvenlik </a>
+
+    
+    
+    <a href="/etiket/haberlesme" class="ui label"> haberleşme </a>
+
+    
+    
+    <a href="/etiket/eposta" class="ui label"> eposta </a>
+
+    
+    
+    <a href="/etiket/spam" class="ui label"> spam </a>
+
+    
+    
+    <a href="/etiket/sifreleme" class="ui label"> şifreleme </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/thunderbird-ve-gnupg-ile-guvenli-haberlesme';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

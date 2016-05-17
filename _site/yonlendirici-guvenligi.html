@@ -1,0 +1,426 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yönlendirici Güvenliği</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Yönlendirici Güvenliği</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Aysel Aksu</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/yonlendirici-guvenligi/kapak.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Uzun bir süreden sonra döndüm tekrar ağ temelleri alanıma. Geçtiğimiz yaz okulunda aldım Ağ Temelleri dersimi. 2. sınıfa yeni geçmiş olduğumdan 3. sınıfın ikinci dönemine ait olan bu ders, gerçeği söylemek gerekirse çok zorladı beni. Kısa sürede o kadar çok teknik konuyu öğrenmek, uygulamaya geçirmek ve sonrasında da sınavda çıkabilecek türde inceliklerini bellemek ciddi anlamda yordu hepimizi. Yaz okulundan sonra tekrar çalıştım bu derse. Bu sefer dersi geçmek için değil; cidden öğrenmek için. Şimdi sizlere yönlendiriciler hakkında öğrendiklerimi aktaracağım.</p>
+
+<p>Bilgisayar ağları denildiğinde akla gelecek ilk şey paylaşımdır. İki ya da daha çok bilgisayarın birbiriyle bilgi, program ya da herhangi bir donanımı paylaşmasını amaçlamaktadır bilgisayar ağları.</p>
+
+<p>7 katmandan oluşan OSI ağ modeline göre ağa bırakılan veri, uygulama katmanı ile fiziksel katman arasındaki yolculuğu sonucunda bir bilgisayardan diğer bir bilgisayara ya da bir ağdan başka bir ağa iletilebilir. Fakat şöyle bir ince nokta vardır ki; bir bilgi ağa bırakıldığında göndericiden alıcıya direkt gidemez. Gönderilmesi sırasında üzerinde uygulanması gereken temel prosedürler vardır ki biz bunlara protokol diyoruz. Verilerin bir serverdan bir terminale (alıcı bilgisayar) gönderilmesi sırasında yerel alan ağlarında switch ve hub kullanılıyorken; geniş alan ağlarında (WAN) routerlar (yönlendirici) kullanılmaktadır.</p>
+
+<h2 id="ynlendirici-router-nedir">Yönlendirici (Router) Nedir?</h2>
+
+<p>Yerel ağlardan gelen paketlerin yollarının belirlenmesi ve paketlenmelerinde görev alan temel birimlere yönlendirici denilmektedir. Bu sayede yerel alan ağlarını birbirine bağlıyor iken; geniş alan ağlarının da bağlantı noktalarını oluşturmaktadırlar.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/1.jpg" alt="" /></p>
+
+<h2 id="ynlendiricilerin-grevleri-nelerdir">Yönlendiricilerin Görevleri Nelerdir?</h2>
+
+<p><strong>Yol Seçmek (Routing):</strong>  Yönlendiriciler kendilerine bağlı olan ağ elemanlarının ağ adreslerini bünyesinde bulunan routing tablolarında tutmaktadır. Kendisine gelen verinin nereye gönderileceğini öğrenen yönlendirici, bu adresi routing tabloları ile kıyaslayarak, hangi portu kullanarak göndereceğine karar verir.</p>
+
+<p><strong>Paket Filtreleme:</strong> Bu görev, IP adresleme, servis ve protokole göre bilgi transferini kontrol etmektir. Bu kontroller ACL denilen erişim listeleri ile yapılmaktadır. ACL, verinin geldiği, gönderileceği ya da gönderilmesi sırasında kullanılacak protokollere kadar kısıtlamalar yapabilmektedir.</p>
+
+<p>Yönlendirici Güvenliği 4 Ana Başlık Altında İncelenebilir:</p>
+
+<ul>
+  <li>Yönlendirici cihazının güvenliği</li>
+  <li>Yönlendirici cihazla ağ güvenliği</li>
+  <li>Sistem Takibi</li>
+  <li>Sisteme güvenlik testleri uygulamak.</li>
+</ul>
+
+<p>Türkiye’de öncü ağ şirketi CISCO üzerinden anlatacağım sizlere güvenlik konusunu. Bölüm olarak da CISCO üzerinden aldık bu dersi, bu yüzden bu sistemde anlatmak daha kolayıma gidiyor açıkçası.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/cisco.jpg" alt="" /></p>
+
+<h2 id="ynlendirici-cihazn-gvenlii">Yönlendirici Cihazın Güvenliği</h2>
+
+<p>Öncelikle yönlendiriciler ağa bağlı birer donanım elemanı olduklarından dolayı kendi güvenliklerinin sağlanmış olması gerekmektedir. Cihazın güvevliğini şu alt başlıklarda inceleyebiliriz:</p>
+
+<p><strong>Fiziksel Güvenlik:</strong> Öncelikle yapmanız gereken şey yönlendiricilerin olduğu odanın kapısını kilitli tutmak ve yetkililer dışındaki kişileri bu odalara almamaktır. Daha sonra, oda çok fazla elektronik ve manyetik alan içerisinde olmamalıdır. Eğer yönlendiriciler için ayrılacak bir odanız yok ise; yönlendiricilerinizi kilitli dolaplarda muhafaza etmeniz de iyi bir güvenlik yöntemidir. Yönlendiricinin bulunduğu odaya gelen elektriğin de kesilmemesi çok önemlidir. Bu sorun için, UPS dediğimiz; elektrik kesintisi anında elektrik sinyalleri üreten donanım birimleri kullanılabilir. Yönlendricinizin yakınlarında da IP ya da şifre gibi güvenlik bilgilerini bulundurmamanız güvenliğiniz açısından iyi olacaktır.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/3.jpg" alt="" /></p>
+
+<p><strong>Yönlendiriciye Erişim Hakları:</strong> Yönlendiriciyi kimin, ne şekilde kullanacağı kesin bir şekilde belirlenmelidir ki herhangi bir sorun yaşandığında, altından kalkılması kolay olsun.</p>
+
+<p>Genellikle yönlendiricilere kullanıcı ve yönetici olmak üzere iki çeşit erişim hakkı bulunmaktadır. Eğer ki kullanıcı hesabına sahip iseniz sadece belirli kontrolleri yapabiliyor iken; yönetici modunda giriş yapabiliyorsanız, donanım cihazlarının konfigürasyonlarını da yapabilirsiniz. Her iki erişimde de 15 seviyeli erişim mekanizmasıyla desteklenen ve üç adet erişim seviyesine sahip olan bir yapı üzerinde çalışılmaktadır.</p>
+
+<p>1. Seviyede, yalnızca enable, disable, help ve logout komutları çalışabilmektedir.
+2. Seviyede, kullanıcı modundaki komutlar (router&gt;) çalışmaktadır.
+15. Seviyede, exec modu (router#) denilen yönetici komutları çalışmaktadır.</p>
+
+<p>Eğer ki farklı komutları, farklı seviyelerde kullanmak istiyorsak; belirli ayarlamalar ile  bunları belirleyebilirsiniz. Örneğin yönetici, kullanıcıya ping komutunu serbest bırakıyor iken snmp-server community komutunu kullanmasını istemiyor olabilir. Buna göre ayarlamaları server hesabından yapabilmektedir.</p>
+
+<p><strong>Şifrelerin Güvenliği:</strong> Günümüzü düşündüğümüzde hack dediğimiz kırma işlemleri genel olarak şifre tahmini ile yapılmaktadır. Bu sebepledir ki şifre seçimimize büyük önem vermeliyiz. CISCO yönlendiricilerinde kullanıcı adı ve şifrenin konfigürasyon dosyasında açık olarak görünmesini engellemek için; “service password-encription” komutu kullanılmaktadır. “enable password” çok fazla zayıf bir algoritma olduğundan dolayı bu seçenek kaldırılmalıdır. Bunun yerine MD-5 tabanlı algoritma ile şifreleme yapan “enable secret” komutu kullanılmalıdır.</p>
+
+<p><strong>Erişim Protokollerinin Güvenliği:</strong> Yönlendiricilere, konsol portu yardımı ile ulaşılır. Bunun sağlanabilmesi için de fiziksel güvenlik sağlam olmalıdır. HTP, Telnet, TFTP, SSH ve FTP gibi erişim yöntemleri kullanıldığında, TCP/IP protokolünün sahip olduğu eksikliklere karşı önlem alınması gerekmektedir. Alınması gereken önlemleri şu şekilde sıralayabiliriz:</p>
+
+<p>Belirli IP’lerin Cihaza Erişimine İzin Vermek: Bu işlemde cihazlara yalnızca önceden belirlenmiş olan IP adreslerine sahip kullanıcılar ulaşabilir. Bunu da access-list dediğimiz ulaşım listesi aracılığı ile yapabiliriz.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/4.jpg" alt="" /></p>
+
+<p>Örneğin;  CISCO IOS’de yalnızca 200.100.172.4 ve  200.100.172.5   IP’lerinin erişimine izin verelim ve diğer IP’ler engellensin. Ulaşım adresimiz aşağıdaki gibi olacaktır:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  access-list 7 permit 200.100.17.4
+  access-list 7 permit 200.100.17.5
+  access-list 7 deny any log
+</code></pre>
+</div>
+
+<p><strong>HTTP Erişimi:</strong> HTTP protokolü, web arayüzünü kullanarak İnternet’e erişmemizi sağlar. HTTP 80 numaralı portta kurulmuş bir web sunucusudur.  Eğer HTTP erişimine izin verilecek ise belirli IP’lere özgü izin verilmelidir. Yönlendiricilerin güvenliğini düşündüğümüzde, erişim ne kadar kısıtlı olursa o kadar güvenlik sağlanır. Eğer ki yönetim web üzerinden gerçekleşiyorsa sadece yönetici kişinin bileceği port kullanılarak, örneğin “ip http server port 510” komutu ile 510 numaralı portta çalışabilecek şekide ayarlanmalıdır.</p>
+
+<p>Şifrenin Ağda Düz Metin Olarak Görüntülenmesini Engellemek: HTTP, Telnet ve SNMP protokollerinde cihaza erişim sağlanıyor iken; şifre direkt olarak ekranda görüntülendiğinden güvenlik açığı oluşmaktadır. Özellikle hub kullanılan bir ortamda saldırgan, ağ üzerinde dinleme (sniff) yaparak bilgiyi elde etmektedir. Bunu engellemek aşağıdaki yöntemleri izlemek ile mümkündür:</p>
+
+<p>Konsol Kablosunu Yönetici Bilgisayara (server) Çekmek:  Eğer ki yönetimi tek bir bilgisayar üzerinden yapıyorsanız; o bilgisayarın com  portu üzerinden çekilen bir utp kablo, konsol iletişiminizi sağlayacaktır. Bu sayede erişim tek bir kablo üzerinden sağlanmış olacaktır.</p>
+
+<p><strong>Telnet Yerine SSH Kullanmak:</strong> SSH, iletilen veriyi şifrelediğinden;  SSH’ a bağlanabilmeyi sağlayan işletim sistemi güncelleştirmelerini yapmalısınız.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/5.png" alt="" /></p>
+
+<p><strong>Güncel SNMP Versiyonlarını Kullanmak:</strong>  SNMP 1, şifre doğrulamasını  direkt düz metin olarak yapmaktadır; yani SNMP 1’de girdiğiniz şifrenizi düz metin olarak göstermektedir. SNMP 3 ya da 2 kullanmanız sizin için daha güvenli olacaktır; çünkü bu SNMP versiyonları, öz (digest)   doğrulama şeması dediğimiz  yönetim bilgilerine erişimi kısıtlamaktadır.</p>
+
+<p><strong>Hub Kullanılan Ortamlarda Yönlendiriciye Erişim Yapmamak:</strong> Hub bulunan ortamlarda yönlendiriciye mümkün olduğunca erişim yapmamalıyız; eğer illa ki kullanmamız gerekiyor ise Linux/Unix çekirdekli bir sunucu kullanmalıyız. Bunu da direkt kullanarak değil; bu sunucuya bağlanarak yönlendiriciye Telnet üzerinden erişim sağlamalıyız.</p>
+
+<p><strong>Doğrulama Mekanizmalarını Sağlamak:</strong> HTTP kullanırken; doğrulama   mekanizması (şifre girişi ve girilen şifrenin kontrolü) düz metin olarak sağlanmatadır. Bu yüzden bu kullanım güvenli ve etkili değildir. Doğrulama mekanizması, Radius gibi onay sunucuları kullanılarak yapılabilir.</p>
+
+<p><strong>Acil Durum Erişimini Düzenlemek:</strong> Yönlendiriciye bağlanamadığımız durumlarda erişim telefon hattı üzerinden gerçekleşmektedir. Böylesi bir erişimde PPP dediğimiz noktadan nokataya protokoller üzerinde, CHAP doğrulama methodu kullanılmaktadır. Bu method, uçtan uca bağlantılarda uç noktayı engeller, izinsiz yapılacak herhangi bir erişim engellenmiş olur.</p>
+
+<p>Saymış olduğumuz tüm önlemlere rağmen yönlendiriciler ele geçirilebilmektedir. Bu durumun önüne geçmek için de yönlendiricilerin etrafında bir yere, yönlendiricinin hakkı olmayan bir kişi tarafından kullanımı durumunda cezai işlemlerin uygulanacağının duyurulduğu bir yönerge asılmalıdır. Cihaza herhangi bir yerden, herhangi bir kişi tarafından erişim gerçekleştiğinde uyarı mesajı görüntülenmesi de güzel bir güvenlik yöntemidir. Bu mesajı: “banner motd” komutunu kullanarak yapabiliriz. Örneğin; banner motd^C yazdığımızda karşımıza:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  ------------------------------------------------------------------------
+  Bu cihaza yetkisiz erisim yasaktir. Erisim bilgileriniz kayitlanmistir.
+
+  Unauthorized access to this device is prohibited. All access has been
+  logged.
+  ------------------------------------------------------------------------^
+</code></pre>
+</div>
+
+<p>mesajı gelecektir.</p>
+
+<p><strong>Gereksiz Servisleri Kapatmak:</strong>  Öncelikle kullanmadığınız yönlendirici servislerinizi kapatmalısınız.  Kullanılmayan bilgisayarların bağlı olduğu birimler de aynı şekilde kapatılmalıdır.  Hatta bu cihazlara bağlı kişiler hakkında saldırgan kişilere bilgi verebilecek “ finger” servisi de kapatılmalıdır. (no service finger) Aynı şekilde, web sunucularını da yönlendiricinizde açmayınız; kullanmak zorunda olmadığınız durumlarda kapatınız. (no ip http server )</p>
+
+<p><strong>İşletim Sistemi:</strong> İşletim sistemi seçiminde dikkate alınması gereken iki nokta vardır: Birincisi donanım uyumluluğu, ikincisi ise güvenlik açıklarıdır. Hangi işletim sistemini kullanırsanız kullanın, güncellemeleri sürekli takip etmeniz yararınıza olacaktır. Bir işletim sisteminin en son sürümü, «en iyi sürümü» demek değildir. Hatta bir sürüm geriden gitmenizi size önerebilirim; çünkü yeni çıkan bir sürümün illa ki eksikleri olacaktır. Güvenlik açısından eksiklerinin kapatılmasını ya da bir başka sürümünün çıkmasını beklemek yararlı olacaktır.</p>
+
+<h2 id="ynlendirici-cihazla-a-gvenlii">Yönlendirici Cihazla Ağ Güvenliği</h2>
+
+<p>Yönlendirici, bulunduğu ağda güvenlik duvarı görevini de üstlenebilmektedir. Bu işlevi yönlendiriciye vermek ya da yönlendiricinin üzerinden almak bizim elimizdedir. Fakat şunu da bilmeliyiz ki bir yönlendiricinin görevi güvenlik değil, yönlendirmedir. Bu iki görev cihaza ağır geleceğinden, performansını olumsuz yönde etkileceyecektir. Güvenlik için, cihaz yerine güvenlik duvarı (firewall) kullanmalıyız.</p>
+
+<p>Yönlendiriciler aracılığı bilgisayarlarımızın karşılaşabileceği tehditlerden korunmak için:</p>
+
+<ul>
+  <li>Riskli portları kapatmalıyız.</li>
+  <li>Saldırı tekniklerini bilmeli ve her birine özgü alınması gereken önlemleri almalıyız.</li>
+  <li>Yönlendiricilerin gelişmiş ayarlarına hakim olmalıyız.</li>
+</ul>
+
+<p><strong>Riskli Portları Kapatmak:</strong>  İnternet üzerinden çalışan servisler, bilgi alışverişi yaparken bazı sanal portları kullanmaktadırlar. Örneğin; HTTP , 80 numaralı sanal portu kullanmaktadır. Riskli portların engellendiği bir liste oluşturmanızda yarar vardır.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>access-list 101 deny udp any any eq 445
+access-list 101 deny tcp any any eq finger
+access-list 101 permit ip any any
+</code></pre>
+</div>
+
+<p>Yukarıdaki listede 445 numaralı sanal port (UDP portu) erişime kapatılmıştır.</p>
+
+<p><strong>Saldırı Teknikleri:</strong> Saldırgan yazılımlar, sisteminize zarar vermek isteyen kişiler tarafından birçok şekilde kullanılmaktadır. Eğer siz bu yöntemlerden haberdar olursanız sisteminiz daha güvenli olacaktır.</p>
+
+<p><strong>IP Spoofing:</strong> Kötü amaçlı kişiler tarafından uygulanan en yaygın tekniktir. Bilgi transferi sırasında eğer IP numaranızı saklamıyorsanız çok büyük tehlikedesiniz. Biri sizi izliyor olabilir. Hatta sizin adınıza karşı tarafa bir şeyler gönderiyor ya da karşı taraftan bir şeyler alıyor olabilirler.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/6.jpg" alt="" /></p>
+
+<p>Siz bilgi alışverişi yapıyorken IP’lerinizi izleyerek, sizin IP’nizi kendisininmiş gibi göstererek uygulanan bu yöntem neredeyse hiç fark edilmemektedir. Bu yüzden IP’nizin görünmesini engellemelisiniz. (no ip source-route komutu ile)</p>
+
+<p><strong>Rooting Protokolüne Yapılan Saldırılar:</strong> Saldırgan, siz yönlendiriciler  arasında iletişim halindeyken sizin gönderdiğiniz ya da size gönderilen   verilerin birer kopyasını kendisinde saklıyor olabilir. Bu yöntem ile kişisel   bilgileriniz yanında kredi kartınızın numarası gibi çok ciddi hasarlara   sebep olacak bilgilerinize de ulaşabilmektedir. Hatta iki yönlendirici  arasındaki iletişimi de bir anda kesebilir. Bu gibi saldırılardan kurtulmanın   yolu genel giden paketleri filtrelemektir.</p>
+
+<p><strong>Giriş – Çıkış Erişim Listeleri:</strong> Bahsedilen listelerde, yönlendiriciye iletilen paketlerin kaynak IP’leri ve gidecekleri yönlendiricilerin IP  adresleri bulunmaktadır.</p>
+
+<p><img src="images/post/yonlendirici-guvenligi/7.jpg" alt="" /></p>
+
+<p>Dış ağlardan gelen verilerin kontrollerinin yapılması olayına giriş filtreleme denilmektedir. Bu kontrol işleminde, dışarıdan gelen verinin   başında İnternet ortamında kullanılamayacak bilgilerin olup olmadığına  bakılır ve eğer var ise kabul edilmezler.</p>
+
+<p>İç ağdan dış ağlardan herhangi birine giden paketlerin kontrolüne ise, çıkış filtreleme denilmektedir. Göndericinin ağ IP aralığında olmayan veri   dışarı çıkamaz. Bu sayede kurumun IP adresi üzerinden, dışarıda   kullanılabilecek bilgiler saklanmış olur ve güvenlik bir nebze sağlanmış  olur.</p>
+
+<p><strong>SYN Saldırıları:</strong>  Saldırgan kişiler, bu yöntemi şu şekilde kullanmaktadır: Saldırmak istediği ,daha açık bir söylem kullanılması gerekirse,   çalışmasını engellemek istediği bilgisayara aynı nitelikteki gereksiz olarak nitelendirilebilecek bağlantı istekleri göndermektedir. Kullanıcı bu istekleri açtığında ağın çalışması yavaşlar ve hatta sistem çok yoğunlaşacağından çalışmaz hale dahi gelebilir.</p>
+
+<p><strong>Smurf Attack:</strong> Aynı ağdaki herkese gönderme yöntemi de denilen bu yöntemde amaç, gereksiz trafik yaratmaktır. Saldırgan, hedef bilgisayar  tarafından gönderildiğinin sanılması için bu IP’ye ait olan “broadcast ping” leri  oluşturur ve herhangi bir başka kullanıcıya gönderir. Gerçekte hiçbir şey göndermeyen bu bilgisayar, karşısındaki kişiler tarafından göndermiş gibi algılanır. Bu olayı “no ip  directed-broadcast” komutu ile engelleyebiliriz.</p>
+
+<p><strong>Gelişmiş Ayarlar:</strong>  Yönlendiricilerin yönetilmesinde kullanılan işletim sistemlerine IOS denir. IOS’lerin bazı gelişmiş sürümlerinde güvenlik kontrollerinin yapılabilmesi için ek ayarlar bulunmaktadır. Bu ek ayarlar sayesinde gelen HTTP paketlerinde istenilen örüntülerin aranması, VPN uygulamaların gibi gelişmiş güvenlik yöntemleri de kullanılabilmektedir.</p>
+
+<h2 id="sistem-takibi">Sistem Takibi</h2>
+
+<p>Ağ cihazlarının güvenliğini sağlamak, kontrollerini yapmak için çeşitli yöntemler kulanılmaktadır. Kontroller genellikle, ağ yönetim istasyonu denilen birden fazla bilgisayar tarafından yapılmaktadır. Bu bilgisayar, SNMP dediğimiz, bilgisayarların ağda kullandıkları  doğrulama bilgilerini ve saldırı girişimlerini tutmaktadırlar. Bu yüzden, öncelikli hedef olmaktan kaçınamaz bu ana bilgisayarlar. Bu sebepledir ki gerek yazılım anlamında, gerekse donanımsal açıdan güvenliklerinin sağlanması gereklidir. Sistem şu yöntemler ile sağlanmaktadır:</p>
+
+<ul>
+  <li>Kayıtlama (Logging)</li>
+  <li>SNMP</li>
+</ul>
+
+<p><strong>Kayıtlama (Logging):</strong> Ağ cihazları, gerçekleşen sistemsel olayları kayıt etmektedirler. Arayüz değişimleri, IP değişiklikleri, giriş-çıkış erişim listeleri gibi güvenlik için büyük önem taşıyan bilgiler cihazlarda tutulmaktadır.</p>
+
+<p><strong>SNMP:</strong>  Basit Ağ Yönetim Protokolü olan SNMP,  yönlendirciler ve server’lar için asla vazgeçilemeyecek bir protokoldür. Bu protokol aracılığı ile bellek ve işlemci kullanımından tutun da trafik istatistiklerine kadar birçok şey hakkında bilgi edinilmektedir.</p>
+
+<p>SNMP kullanılırken şunlara dikkat edilmelidir:</p>
+
+<p>Önceden de söylediğimiz gibi, 1 versiyonunda güvenlik açıkları bulunmaktadır. Bu yüzden 2. ve 3. versiyonlarından birini kullanmanız önerilir.</p>
+
+<p>Read – Only ve Read-Write gibi önemli işlevleri olan komutların SNMP şifreleri özelleştirilmelidir. Birbirinden farklı olması daha iyi olacaktır.</p>
+
+<p>SNMP erişimi özelleştirilmiş (önceden belirlenmiş) IP adreslerine verilmelidir.</p>
+
+<h2 id="sisteme-gvenik-testleri-uygulamak">Sisteme Güvenik Testleri Uygulamak</h2>
+
+<p>Bu yazımın son alt başlığındayız şimdi. Ağımızın bulunduğu kurumun güvenliğinin sürekli kontrol ediliyor olması da güvenliğin yapıtaşlarındandır. Bu işlem için aşağıdaki araçlar kullanılmaktadır:</p>
+
+<p><strong>RAT ( Router Audit Tool):</strong>  <a href="http://www.cisecurity.org/bench_cisco.html">http://www.cisecurity.org/bench_cisco.html</a> adresinden ücretsiz olarak indirebileceğiniz bu program, bir kontrol ve karşılaştırma aracıdır. Karşılaştırmalarda, Cisco marka yönlendiricinin işletim sistemi ve üzerinde yapılan konfigürasyonlar için raporlama da yapabilmektedir.</p>
+
+<p><strong>Tarayıcılar İle Ağı Denetlemek:</strong> Nessus gibi tarayıcılar, erişim listelerinin ve IP adreslerinin çalışıp çalışmadığının dışarıdan kontrolünü sağlamakta önde gelen tarayıcılardır. <a href="http://www.nessus.org">http://www.nessus.org</a></p>
+
+<p><img src="images/post/yonlendirici-guvenligi/8.png" alt="" /></p>
+
+<p><strong>Doğruluk- Bütünlük Kontrolleri:</strong> Cihazın işletim sisteminde ya da IP dizilimlerinde bir hata ya da değişiklik olup olmadığını gösteren bir kontrol tipidir. Bu kontrol, yapılan kontrollerin bir yerde saklanıp yeni yapılanlar ile kontrolü sonucunda gerçekleşir.</p>
+
+<p>Biliyorum, çok uzun bir yazı oldu. Fakat, bu konu öyle ayrıntılı ve önemli bir konu ki ağda çıkacak bir güvenlik açığı bir kurumun bütün bilgilerinin şirket dışına çıkmasına yol açabilir. Bu yüzden, bu konuya önem vermeniz iyi olacaktır. Eğer ki bahsettiğimiz konulardan birinde eksiğiniz var ise bence bu eksiği kapatınız. Bir sonraki yazılarımda UTP, güvenlik duvarı ve VPN gibi konular ile devam edeceğim ağ güvenliği konumuza. Şimdilik görüşmek üzere.</p>
+
+<p>Hoşçakalın.</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-35-sayi" class="ui label"> Sudo 35. Sayı </a>
+
+    
+    
+    <a href="/etiket/yonlendirici" class="ui label"> yönlendirici </a>
+
+    
+    
+    <a href="/etiket/guvenlik" class="ui label"> güvenlik </a>
+
+    
+    
+    <a href="/etiket/filtreleme" class="ui label"> filtreleme </a>
+
+    
+    
+    <a href="/etiket/spoofing" class="ui label"> spoofing </a>
+
+    
+    
+    <a href="/etiket/syn" class="ui label"> SYN </a>
+
+    
+    
+    <a href="/etiket/smurf" class="ui label"> smurf </a>
+
+    
+    
+    <a href="/etiket/log" class="ui label"> log </a>
+
+    
+    
+    <a href="/etiket/snmp" class="ui label"> SNMP </a>
+
+    
+    
+    <a href="/etiket/rat" class="ui label"> RAT </a>
+
+    
+    
+    <a href="/etiket/nessus" class="ui label"> nessus </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/yonlendirici-guvenligi';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

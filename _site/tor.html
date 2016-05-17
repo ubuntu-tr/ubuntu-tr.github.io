@@ -1,0 +1,290 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TOR</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">TOR</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Emre Güntekin</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                İnternet üzerindeki gizlilik ve mahremiyet sorunu, İnternet kadar eskidir sanırım. Para amaçlı bilgi toplama, izleme ve hatta daha da ilerisi yasaklama hep var olmuştur. Kullanıcılar da kendilerini, bunlardan korumanın yollarını aramak zorunda kalmışlardır. Bu yazıda geçen TOR projesi de herhangi bir bilgi gerektirmeden, kolayca gizliliği sağlayabilecek bir özgür yazılım projesi olarak karşımıza çıkıyor.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/tor/torlogo.jpg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>TOR (The Onion Router) <strong>[1]</strong>, tek cümle ile anlatacak olursak, çevrimiçi gizliliğinizi sağlayan özgür bir tünelleme yazılımıdır. Sizi, herhangi bir ağ gözetleme ya da ağ akış analizlerinden kaçındırmak için, gönüllü aktarıcılar (relay) üzerinden, şifrelenmiş şekilde İnternet’e bağlar. Bu da İnternet’te gezinme, çevrimiçi mesaj ya da anında mesajlaşma ve web üzerindeki herhangi bir iletişim biçimini, anonim olarak yapmanıza olanak verir. Bunu, düz bir ana yolda ilerleyerek hedefe ulaşmak yerine, arka sokaklardan sağ-sol yaparak aynı yere gitmeye benzetebiliriz.</p>
+
+<p>TOR, Birleşik Devletler Deniz Kuvvetleri Araştırma Laboratuarları’nın gelişridiği “soğan yönlendirme (onion routing)” sistemi üzerine kuruludur (DARPA). Ancak kullanılan sistemin dayandığı nokta burası. TOR Projesi, şu an resmi olmayan bir eğitim ve araştırma vakfı hâlinde gelişiyor. Yani, BSD lisansına sahip TOR Projesi, topluluk üzerinde. ABD ordusuyla falan bir alakası hiç yok.</p>
+
+<p>Sisteme “soğan” denmesinin sebebi, çalışma biçiminin üst üste katmanlardan oluşması. Aynı bir soğan gibi yani.</p>
+
+<p><img src="images/post/tor/katman.png" alt="" /></p>
+
+<p>Yukarıdaki grafik, TOR’un çalışma sistemini gösteriyor. TOR’u çalıştırdığınızda, bilgisayarınızdan çıkan veri 3 kademeli olarak şifrelenir ve TOR yansıtıcılarına gönderilir. Veri, TOR ağında bulunan rastgele ve her veri aktarımında da değişen bir yansıtıcı bilgisayara yönlendirilir. İlk katman, birinci şifreyi çözerek, veriyi ikinci katmana yansıtır. İkinci katman ise, kendi şifresini çözerek, üçüncü katmana yönlendirme yapar. Üçüncü ve son katman ise, veriyi İnternet’e ulaştırır. Bu işlemde izlenen rota, her veri transferi talebinde de rastgele olarak değişir. Bu da verinin ilk olarak kimden geldiğinin takibini imkânsız hâle getirir.</p>
+
+<p>Ancak TOR, kendi ağı ve yansıtıcıları arasındaki veri akışını şifreleyebilse de, TOR ağı ve İnternet arasındaki veriyi şifreleyemez. Yani ağa giriş ve ağdan çıkış noktaları belli olduğu için, ağ akış trafiği analizi yapılamasa da akış trafik doğrulaması gizlenemez.</p>
+
+<p>İkinci olarak TOR, Firefox’un uyarlanmış bir sürümünü kullanmaktadır. Ayarlamalarla kendi web tarayıcınız için de TOR’u kullanabilirsiniz. Ancak yapılandırmayı düzgün yapamazsanız, gizleme sağlayamayabilirsiniz. Bu yüzden, TOR ile gelen tarayıcıyı kullanmanızı tavsiye edeceğim.</p>
+
+<p>TOR, yukarıda belirttiğimizi gibi, webde gezinme, anında mesajlaşma ve sitelere yorum yazma gibi  unsurları gizleyebilir. Ancak, TOR tarayıcısına kuracağınız eklentiler (plugin) ve 3. parti yazılımlar (indirme yöneticileri gibi) TOR’un şifrelemesi dışında çalışarak açığa çıkmanıza sebep olur. Bunları kullanmaktan kaçının ve TOR tarayıcısına eklenti kurmayın. Yine TOR üzerinden indirmiş olduğunuz belgeler (DOC ve PDF gibi) çevrimiçi olarak açtığınızda, İnternet üzerinden veri aktarımı fonksiyonu göstererek, açığa çıkmanıza sebep olabilirler.</p>
+
+<p>TOR, kendi ağı ve İnternet arasındaki veriyi şifreleyemese de arada bir güvenli katman (SL – secure layer) kullanan sitelerde, bu aradaki veri de şifrelenecektir. Yani “https://” ile başlayan adreslerde. Yine de, veri şifrelense bile, eğer bir hesaba giriş yapacaksanız, kendiniz açığa çıkarırsınız.</p>
+
+<p>Gelelim TOR’u nasıl kurup kullanacağımıza. Yukarıda anlatılanlar karmaşık bir sistem gibi gelebilir belki ama hiç de öyle değil. TOR’u indirip de sıradan bir istemci olarak çalıştırmak için herhangi bir yapılandırma ya da ayar yapmaya ihtiyacınız yok. Tek yapmanız gereken, sayfasından <strong>[2]</strong> TOR’un sisteminize uygun sürümünü (32 ya da 64 bit) olanını indirip, inen *.tar.gz dosyasının içindeki “start-tor-browser” dosyasını çalştırmak.</p>
+
+<p>Bu dosyayı çalıştırdığınızda, önünüze Vidalia kontrol paneli gelecek. Tek yapacağınız, TOR’un ağa bağlanmasını beklemek. Ardından otomatik olarak Firefox (sizin tarayıcını değil elbette) başlayacak ve TOR’un koruması altında gezinmenize başlayabileceksiniz.</p>
+
+<p><img src="images/post/tor/validia.png" alt="" /></p>
+
+<p>Evet. Uygulama Türkçe desteğine sahip. :-) Ancak açıldığında İngilizce geliyor. Türkçeye çevirmek için “Settings” altındaki “Appearance” sekmesindeki “Language” kısmını Türkçe yaparak “OK” düğmesine basın. Ancak altındaki temayı ben değiştiremedim. Ne zaman denesem, Vidalia kapandı. Vidalia kontrol paneli açıldığı anda, en üstte TOR ağına bağlantı durmunu gösteren bir bar dolmaya başlayacaktır. Görüntüde görüldüğü üzere, yeşil soğan logosunun yanında “Tor ağına bağlandı!” mesajı, TOR’un başladığı anlamına gelir. Aynı şekilde bu soğan simgesi, sistem çekmecenize de yerleşir. Eğer TOR bağlantı sağlyamazsa:</p>
+
+<p>İlk olarak bir Proxy ya da güvenlik duvarı (Firewall) ardında iseniz, bunları ayarlamanız gerekir. Proxy için, Vidalia panelinden “Ayarlar”a girin ve “Ağ” sekmesi altındaki “İnternet erişimimde Proxy kullanıyorum” ayarının yanındaki kutucuğu işaretleyerek, açılan Proxy bilgisi alanlarını (proxy adresi, bağlantı portu, kullanıcı adı ve şifre (şifre gerektiriyorsa) gibi) doldurun ve “Tamam” düğmesine basın. TOR, Proxy üzerinden çıkış yapacaktır. Güvenlik duvarı içinse iki yöntem var:</p>
+
+<p>İlki güvenlik duvarını yapılandırmak. Vidalia, “Ayarlar”, “Gelişmiş” sekmesi altında TOR’un bağlantı bilgilerini bulabilirsiniz. Mesela bende 9151 numaralı portun kullanıldığı görülüyor. Güvenlik duvarınızı, burada gördüğünüz porta izin verecek şekilde yapılandırmanız gerekiyor. Yine modeminizde NAT yönetiminden bu portu ulaşıma açmanız gerekebilir. Bu artık pek geçerli bir yol değil. Pek çok standart modem, artık NAT ayarlarını kendisi otomatik yapıyor. Ancak çok eski modemlerde, elle bu portu açmak gerekebilir. Var mı aranızda, ilk çıktığı zamanlarda çok oyunculu olarak İnternet üzerinden Starcraft ya da Age of Empires oynayan? Varsa ne demek istediğimi anlamıştır. :-D</p>
+
+<p>İkinci yöntem ise, güvenlik duvarını yapılandıramamanız durumunda, TOR’un port ayarını değiştirip duvarın izin verdiği bir portu kullanmak. Bunun için “Ağ” sekmesi altında “Firewall sadece belli portlara izin versin” seçeneğini işaretleyerek, açılan bölüme güvenlik duvarının izin verdiği portları yazabilirsiniz.</p>
+
+<p>TOR’un bağlanamamasının bir sebebi de ISP kısıtlamaları olabilir. Bunu aşmak ya da ISP kısıtlamasa da ekstradan gizlilik için, TOR aktarma köprülerini (bridge) kullanabilirsiniz. Bunun için öncelikle bir köprüye ihtiyacınız var. TOR köprülerinin mevcut durmunu “bridges” adresinden <strong>[3]</strong> öğrenebilirsiniz. Buradaki köprü adresleri ve portlarını TOR’a girmemiz gerek. Bunun için “Ayarlar” altındaki “Ağ” sekmesinden “İnternet sağlayıcım Tor ağını engelliyor” kutucuğunu işaretleyip, açılan menüye bulduğunuz köprüleri girmek. Bir tane köprü girmeniz yeterli, ancak köprülerin her zaman açık olacağı garanti değil. Bu yüzden birden fazla köprü tanımlamanzı ve zaman zaman köprü listesini kontrol edip güncellemeniz, sağlam bir bağlantı elde etmenizi sağlayacaktır.</p>
+
+<p>Vidalia’nın kısa yolları basit. İlk “Tor’u Durdur / Başlat” TOR’u açıp kapatmanıza yarar. Hemen yanında “Ayna Ayarları” geliyor. Buraya “Ayarlar” -&gt; “Paylaşım” yoluyla da erişebilirsiniz. Burası, varsayılan olarak, sadece istemci biçiminde yapılandırılmış gelir. Eğer, yukarıda bahsettiğimiz, TOR ağının gönüllü yansıtıcılarından birisi olmak isterseniz, buradan ayarlayabilirsiniz. Bu ayara dokunmazsanız, sadece istemci olursunuz ve veri yansıtılmasında bilgisayarınız kullanılmaz. Eğer ikinci seçeneğe (ara sunucu) geçerseniz, ara yansıtıcı olarak TOR ağına bağlanırsınız. Gelen veri, ara katmana yerleşen bilgisayarınızdan geçerek, bir başka TOR yansıtıcısına gider. Üçüncü seçeneği seçerseniz (son sunucu) son katmana yerleşerek, gelen veriyi doğrudan İnternet’e açan sunuculardan biri olursunuz. Farkı, gelen veri son sunucu olmanzı durumunda size kadar takip edilebilir. Ara sunucu olmanız durumunda ise üzerinizden geçen veri herhangi bir şekilde takip edilemez. Hemen bir örnek göstereyim:</p>
+
+<p><img src="images/post/tor/torsuz.png" alt="" /></p>
+
+<p>Yukarıdaki görüntü, whatismyip.com adresinden, TOR kullanılmadan alındı. Site, bana gelen veriyi, hizmet aldığım servis sağlayıcısına (ISP) kadar takip edebildi. Sonrasında takip edemedi. Ancak ISP ardında benim bilgisayarım var. Elbette ben Ankara’da değil; Bursa’dayım. Ancak oldukça yaklaştı.</p>
+
+<p><img src="images/post/tor/torlu.png" alt="" /></p>
+
+<p>Aynı siteden, bu sefer TOR ağına bağlıyken talep ettiğim veri takibi bu da. Almanya’nın Nuremberg kenti. Eh, en azından Atlas okyanusunun doğru tarafında. :-) Site, bana gönderdiği veriyi, TOR ağının son sunucularından birisinin ISP’sine kadar izleyebildi. Son sunucu olmanın farkı burada görülüyor.</p>
+
+<p>Alttaki “Ağı Göster” bölümünden ise gönüllü TOR yansıtıcılarının listesini görebilirsiniz. “Kimliği Yenile” kısmı da TOR ağıyla olan bağlantımızı yeniden başlatarak, yeni bir noktdan ağa girmemizi sağlar. TOR’un sağladığı sahte IP adresimiz değişir.</p>
+
+<p>Alt bölümde ise TOR’un ağ ve sistem hareketleri ile ilgili kayıtlara ve can alıcı kısımlarını yukarıda zaten açıkladığımız “Ayarlar” kısmına erişebilirsiniz. Burada Vidalia ve Vidalia – TOR uyarlamaları ile ilgili ayarları yapabilirsiniz. Bunlar oldukça açık ve zaten bir sorunla karşılaşmazsanız, ihtiyacınız olmayacak ayarlar.</p>
+
+<p>Diğer uygulamalarınız için TOR kullanımı ise, kullanmak istediğiniz uygulamayı Proxy kullanacak şekilde yapılandırarak, Proxy bilgilerine TOR’un ayarlarını girmek. Bu bilgileri “Ayarlar” bölümünde “Gelişmiş” sekmesi altında Tor Kontrolü’nde bulabilirsiniz. Mesela Pidgin’i TOR kullandırmak için Pidgin2in Ayarlar -&gt; Ağ -&gt; Proxy kısmına giderek, Pidgin’i Proxy kullancak şekilde ayarlayıp, Proxy bilgileri içinse şunları giriyoruz:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Proxy type: SOCKS 5
+Host: 127.0.0.1
+Port: 9151
+</code></pre>
+</div>
+
+<p>Sizde bu değerler farklı olabilir.</p>
+
+<p>Son olarak da TOR, ağ bağlantı hızınızı oldukça düşürüyor. Çünkü verileriniz, dağları denizleri hatta belki okyanusu geçerek geliyor. Pratik kullanım için tek söyleyebileceğim, yasaklı sitelere hiçbir ayar vs. gerektirmeden girebiliyorsunuz.</p>
+
+<p><img src="images/post/tor/tor1.png" alt="" /></p>
+
+<h6 id="kaynak">Kaynak:</h6>
+<p>[1] <a href="https://www.torproject.org">https://www.torproject.org</a> <br />
+[2] <a href="https://www.torproject.org/download/download-easy.html.en">https://www.torproject.org/download/download-easy.html.en</a> <br />
+[3] <a href="https://bridges.torproject.org/">https://bridges.torproject.org/</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-54-sayi" class="ui label"> Sudo 54. Sayı </a>
+
+    
+    
+    <a href="/etiket/tor" class="ui label"> tor </a>
+
+    
+    
+    <a href="/etiket/gizlilik" class="ui label"> gizlilik </a>
+
+    
+    
+    <a href="/etiket/tarayici" class="ui label"> tarayıcı </a>
+
+    
+    
+    <a href="/etiket/tunel" class="ui label"> tünel </a>
+
+    
+    
+    <a href="/etiket/vpn" class="ui label"> vpn </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/tor';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

@@ -1,0 +1,1048 @@
+{
+    "categories": [
+        
+        
+        
+          {
+            "name": "Haberler",
+            "id": "k1"
+          }
+        
+        ,
+          {
+            "name": "Nasıl?",
+            "id": "k2"
+          }
+        
+        ,
+          {
+            "name": "Oyun / Eğlence",
+            "id": "k3"
+          }
+        
+        ,
+          {
+            "name": "Ubuntu+1",
+            "id": "k4"
+          }
+        
+        ,
+          {
+            "name": "Tanıtım",
+            "id": "k5"
+          }
+        
+    ],
+    "tags": [
+        
+        
+        
+          {
+            "name": "açık kaynak",
+            "id": "acik-kaynak"
+          }
+        
+        ,
+          {
+            "name": "ağ izleme",
+            "id": "ag-izleme"
+          }
+        
+        ,
+          {
+            "name": "ağ protokolü",
+            "id": "ag-protokolu"
+          }
+        
+        ,
+          {
+            "name": "ağ",
+            "id": "ag"
+          }
+        
+        ,
+          {
+            "name": "arayüz",
+            "id": "arayuz"
+          }
+        
+        ,
+          {
+            "name": "asterisk",
+            "id": "asterisk"
+          }
+        
+        ,
+          {
+            "name": "Atatürk",
+            "id": "ataturk"
+          }
+        
+        ,
+          {
+            "name": "b-tree",
+            "id": "b-tree"
+          }
+        
+        ,
+          {
+            "name": "bash",
+            "id": "bash"
+          }
+        
+        ,
+          {
+            "name": "baslatici",
+            "id": "baslatici"
+          }
+        
+        ,
+          {
+            "name": "belge görüntüleyici",
+            "id": "belge-goruntuleyici"
+          }
+        
+        ,
+          {
+            "name": "boot",
+            "id": "boot"
+          }
+        
+        ,
+          {
+            "name": "bootloader",
+            "id": "bootloader"
+          }
+        
+        ,
+          {
+            "name": "btrfs",
+            "id": "btrfs"
+          }
+        
+        ,
+          {
+            "name": "bulut bilişim",
+            "id": "bulut-bilisim"
+          }
+        
+        ,
+          {
+            "name": "bütünlük",
+            "id": "butunluk"
+          }
+        
+        ,
+          {
+            "name": "canlı kayıt",
+            "id": "canli-kayit"
+          }
+        
+        ,
+          {
+            "name": "çekirdek",
+            "id": "cekirdek"
+          }
+        
+        ,
+          {
+            "name": "çizgi roman",
+            "id": "cizgi-roman"
+          }
+        
+        ,
+          {
+            "name": "cluster",
+            "id": "cluster"
+          }
+        
+        ,
+          {
+            "name": "denetim",
+            "id": "denetim"
+          }
+        
+        ,
+          {
+            "name": "disk",
+            "id": "disk"
+          }
+        
+        ,
+          {
+            "name": "dosya aktarım",
+            "id": "dosya-aktarim"
+          }
+        
+        ,
+          {
+            "name": "dosya paylaşım",
+            "id": "dosya-paylasim"
+          }
+        
+        ,
+          {
+            "name": "dosya sistemi",
+            "id": "dosya-sistemi"
+          }
+        
+        ,
+          {
+            "name": "düğme",
+            "id": "dugme"
+          }
+        
+        ,
+          {
+            "name": "eklenti",
+            "id": "eklenti"
+          }
+        
+        ,
+          {
+            "name": "eleştiri",
+            "id": "elestiri"
+          }
+        
+        ,
+          {
+            "name": "eposta",
+            "id": "eposta"
+          }
+        
+        ,
+          {
+            "name": "ext4",
+            "id": "ext4"
+          }
+        
+        ,
+          {
+            "name": "filezilla",
+            "id": "filezilla"
+          }
+        
+        ,
+          {
+            "name": "filtreleme",
+            "id": "filtreleme"
+          }
+        
+        ,
+          {
+            "name": "firewall",
+            "id": "firewall"
+          }
+        
+        ,
+          {
+            "name": "font",
+            "id": "font"
+          }
+        
+        ,
+          {
+            "name": "fstab",
+            "id": "fstab"
+          }
+        
+        ,
+          {
+            "name": "FTP",
+            "id": "ftp"
+          }
+        
+        ,
+          {
+            "name": "git",
+            "id": "git"
+          }
+        
+        ,
+          {
+            "name": "gizlilik",
+            "id": "gizlilik"
+          }
+        
+        ,
+          {
+            "name": "GnuPG",
+            "id": "gnupg"
+          }
+        
+        ,
+          {
+            "name": "gparted",
+            "id": "gparted"
+          }
+        
+        ,
+          {
+            "name": "GTK",
+            "id": "gtk"
+          }
+        
+        ,
+          {
+            "name": "günlük",
+            "id": "gunluk"
+          }
+        
+        ,
+          {
+            "name": "güvenlik duvarı",
+            "id": "guvenlik-duvari"
+          }
+        
+        ,
+          {
+            "name": "güvenlik",
+            "id": "guvenlik"
+          }
+        
+        ,
+          {
+            "name": "haberleşme",
+            "id": "haberlesme"
+          }
+        
+        ,
+          {
+            "name": "hdd",
+            "id": "hdd"
+          }
+        
+        ,
+          {
+            "name": "heartbeat",
+            "id": "heartbeat"
+          }
+        
+        ,
+          {
+            "name": "heartbleed",
+            "id": "heartbleed"
+          }
+        
+        ,
+          {
+            "name": "HTTP",
+            "id": "http"
+          }
+        
+        ,
+          {
+            "name": "init",
+            "id": "init"
+          }
+        
+        ,
+          {
+            "name": "IP PBX",
+            "id": "ip-pbx"
+          }
+        
+        ,
+          {
+            "name": "IP",
+            "id": "ip"
+          }
+        
+        ,
+          {
+            "name": "iptables",
+            "id": "iptables"
+          }
+        
+        ,
+          {
+            "name": "kabuk",
+            "id": "kabuk"
+          }
+        
+        ,
+          {
+            "name": "kayıt",
+            "id": "kayit"
+          }
+        
+        ,
+          {
+            "name": "kaynak yönetimi",
+            "id": "kaynak-yonetimi"
+          }
+        
+        ,
+          {
+            "name": "KVM",
+            "id": "kvm"
+          }
+        
+        ,
+          {
+            "name": "linux",
+            "id": "linux"
+          }
+        
+        ,
+          {
+            "name": "log",
+            "id": "log"
+          }
+        
+        ,
+          {
+            "name": "metin editörü",
+            "id": "metin-editoru"
+          }
+        
+        ,
+          {
+            "name": "mongoDB",
+            "id": "mongodb"
+          }
+        
+        ,
+          {
+            "name": "nessus",
+            "id": "nessus"
+          }
+        
+        ,
+          {
+            "name": "netfilter",
+            "id": "netfilter"
+          }
+        
+        ,
+          {
+            "name": "nmap",
+            "id": "nmap"
+          }
+        
+        ,
+          {
+            "name": "NNTP",
+            "id": "nntp"
+          }
+        
+        ,
+          {
+            "name": "nosql",
+            "id": "nosql"
+          }
+        
+        ,
+          {
+            "name": "ntfs",
+            "id": "ntfs"
+          }
+        
+        ,
+          {
+            "name": "öğrenme",
+            "id": "ogrenme"
+          }
+        
+        ,
+          {
+            "name": "önbellek",
+            "id": "onbellek"
+          }
+        
+        ,
+          {
+            "name": "önyükleyici",
+            "id": "onyukleyici"
+          }
+        
+        ,
+          {
+            "name": "openssl",
+            "id": "openssl"
+          }
+        
+        ,
+          {
+            "name": "otomasyon",
+            "id": "otomasyon"
+          }
+        
+        ,
+          {
+            "name": "oyun",
+            "id": "oyun"
+          }
+        
+        ,
+          {
+            "name": "paralel hesaplama",
+            "id": "paralel-hesaplama"
+          }
+        
+        ,
+          {
+            "name": "parola yöneticisi",
+            "id": "parola-yoneticisi"
+          }
+        
+        ,
+          {
+            "name": "pdf reader",
+            "id": "pdf-reader"
+          }
+        
+        ,
+          {
+            "name": "php",
+            "id": "php"
+          }
+        
+        ,
+          {
+            "name": "pkill",
+            "id": "pkill"
+          }
+        
+        ,
+          {
+            "name": "postgreSQL",
+            "id": "postgresql"
+          }
+        
+        ,
+          {
+            "name": "proc",
+            "id": "proc"
+          }
+        
+        ,
+          {
+            "name": "programlama",
+            "id": "programlama"
+          }
+        
+        ,
+          {
+            "name": "python",
+            "id": "python"
+          }
+        
+        ,
+          {
+            "name": "RAD",
+            "id": "rad"
+          }
+        
+        ,
+          {
+            "name": "RAT",
+            "id": "rat"
+          }
+        
+        ,
+          {
+            "name": "repmgr",
+            "id": "repmgr"
+          }
+        
+        ,
+          {
+            "name": "rss",
+            "id": "rss"
+          }
+        
+        ,
+          {
+            "name": "samba",
+            "id": "samba"
+          }
+        
+        ,
+          {
+            "name": "sanal makine",
+            "id": "sanal-makine"
+          }
+        
+        ,
+          {
+            "name": "santral",
+            "id": "santral"
+          }
+        
+        ,
+          {
+            "name": "screen",
+            "id": "screen"
+          }
+        
+        ,
+          {
+            "name": "SDL",
+            "id": "sdl"
+          }
+        
+        ,
+          {
+            "name": "seçke",
+            "id": "secke"
+          }
+        
+        ,
+          {
+            "name": "şifreleme",
+            "id": "sifreleme"
+          }
+        
+        ,
+          {
+            "name": "sistem",
+            "id": "sistem"
+          }
+        
+        ,
+          {
+            "name": "SMTP",
+            "id": "smtp"
+          }
+        
+        ,
+          {
+            "name": "smurf",
+            "id": "smurf"
+          }
+        
+        ,
+          {
+            "name": "SNMP",
+            "id": "snmp"
+          }
+        
+        ,
+          {
+            "name": "spam",
+            "id": "spam"
+          }
+        
+        ,
+          {
+            "name": "spoofing",
+            "id": "spoofing"
+          }
+        
+        ,
+          {
+            "name": "SQL",
+            "id": "sql"
+          }
+        
+        ,
+          {
+            "name": "SQLite",
+            "id": "sqlite"
+          }
+        
+        ,
+          {
+            "name": "sık sorulan sorular",
+            "id": "sss"
+          }
+        
+        ,
+          {
+            "name": "subversion",
+            "id": "subversion"
+          }
+        
+        ,
+          {
+            "name": "Sudo 30. Sayı",
+            "id": "sudo-30-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 31. Sayı",
+            "id": "sudo-31-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 32. Sayı",
+            "id": "sudo-32-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 33. Sayı",
+            "id": "sudo-33-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 34. Sayı",
+            "id": "sudo-34-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 35. Sayı",
+            "id": "sudo-35-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 36. Sayı",
+            "id": "sudo-36-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 37. Sayı",
+            "id": "sudo-37-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 38. Sayı",
+            "id": "sudo-38-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 39. Sayı",
+            "id": "sudo-39-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 40. Sayı",
+            "id": "sudo-40-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 41. Sayı",
+            "id": "sudo-41-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 42. Sayı",
+            "id": "sudo-42-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 43. Sayı",
+            "id": "sudo-43-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 44. Sayı",
+            "id": "sudo-44-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 45. Sayı",
+            "id": "sudo-45-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 46. Sayı",
+            "id": "sudo-46-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 47. Sayı",
+            "id": "sudo-47-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 48. Sayı",
+            "id": "sudo-48-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 49. Sayı",
+            "id": "sudo-49-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 50. Sayı",
+            "id": "sudo-50-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 51. Sayı",
+            "id": "sudo-51-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 52. Sayı",
+            "id": "sudo-52-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 53. Sayı",
+            "id": "sudo-53-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 54. Sayı",
+            "id": "sudo-54-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 55. Sayı",
+            "id": "sudo-55-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 56. Sayı",
+            "id": "sudo-56-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 57. Sayı",
+            "id": "sudo-57-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 58. Sayı",
+            "id": "sudo-58-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 59. Sayı",
+            "id": "sudo-59-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 60. Sayı",
+            "id": "sudo-60-sayi"
+          }
+        
+        ,
+          {
+            "name": "Sudo 61. Sayı",
+            "id": "sudo-61-sayi"
+          }
+        
+        ,
+          {
+            "name": "sunucu yapılandırma",
+            "id": "sunucu-yapilandirma"
+          }
+        
+        ,
+          {
+            "name": "sunucu",
+            "id": "sunucu"
+          }
+        
+        ,
+          {
+            "name": "sürüm kontrol",
+            "id": "surum-kontrol"
+          }
+        
+        ,
+          {
+            "name": "SYN",
+            "id": "syn"
+          }
+        
+        ,
+          {
+            "name": "sysRq",
+            "id": "sysrq"
+          }
+        
+        ,
+          {
+            "name": "tarayıcı",
+            "id": "tarayici"
+          }
+        
+        ,
+          {
+            "name": "TCP",
+            "id": "tcp"
+          }
+        
+        ,
+          {
+            "name": "telnet",
+            "id": "telnet"
+          }
+        
+        ,
+          {
+            "name": "test",
+            "id": "test"
+          }
+        
+        ,
+          {
+            "name": "testdisk",
+            "id": "testdisk"
+          }
+        
+        ,
+          {
+            "name": "thunderbird",
+            "id": "thunderbird"
+          }
+        
+        ,
+          {
+            "name": "tor",
+            "id": "tor"
+          }
+        
+        ,
+          {
+            "name": "torrent",
+            "id": "torrent"
+          }
+        
+        ,
+          {
+            "name": "tünel",
+            "id": "tunel"
+          }
+        
+        ,
+          {
+            "name": "ubuntu",
+            "id": "ubuntu"
+          }
+        
+        ,
+          {
+            "name": "uçbirim",
+            "id": "ucbirim"
+          }
+        
+        ,
+          {
+            "name": "unity",
+            "id": "unity"
+          }
+        
+        ,
+          {
+            "name": "UTM",
+            "id": "utm"
+          }
+        
+        ,
+          {
+            "name": "vala",
+            "id": "vala"
+          }
+        
+        ,
+          {
+            "name": "vekil sunucu",
+            "id": "vekil-sunucu"
+          }
+        
+        ,
+          {
+            "name": "veri kurtarma",
+            "id": "veri-kurtarma"
+          }
+        
+        ,
+          {
+            "name": "veritabanı",
+            "id": "veritabani"
+          }
+        
+        ,
+          {
+            "name": "virüs",
+            "id": "virus"
+          }
+        
+        ,
+          {
+            "name": "vpn",
+            "id": "vpn"
+          }
+        
+        ,
+          {
+            "name": "wireshark",
+            "id": "wireshark"
+          }
+        
+        ,
+          {
+            "name": "wordpress",
+            "id": "wordpress"
+          }
+        
+        ,
+          {
+            "name": "yapılandırma",
+            "id": "yapilandirma"
+          }
+        
+        ,
+          {
+            "name": "yazı dizisi",
+            "id": "yazi-dizisi"
+          }
+        
+        ,
+          {
+            "name": "yedekleme",
+            "id": "yedekleme"
+          }
+        
+        ,
+          {
+            "name": "yeniden başlat",
+            "id": "yeniden-baslat"
+          }
+        
+        ,
+          {
+            "name": "yönetim sistemi",
+            "id": "yonetim-sistemi"
+          }
+        
+        ,
+          {
+            "name": "yönlendirici",
+            "id": "yonlendirici"
+          }
+        
+        ,
+          {
+            "name": "zenmap",
+            "id": "zenmap"
+          }
+        
+    ]
+}

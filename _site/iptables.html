@@ -1,0 +1,415 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Iptables</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Iptables</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Deniz Özibrişim</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/iptables/1.jpg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Bu yazı içerik filtreleme (Dansguardian) hakkında olacaktı; fakat bu yolda ilerlerken kullanacağımız iptables’ı anlatmadan geçmenin doğru olmayacağını düşündüm. Evet belki sadece birkaç yönlendirme komutu işimizi görecekti, ama açıkçası içime sinmedi. Bu yüzden ağırdan alıp kullanacaklarımıza (iptables, squid, dansguardian, webmin v.b) tek tek göz attıktan sonra, sonunda sadece bir dansguardian anlatımına nazaran konuya çok daha fazla hakim olacağımızı düşünüyorum.</p>
+
+<p>Iptables çok kuvvetlidir, detaylı anlatımı tabii ki bu yazıya sığmayacaktır, fakat buradan yola çıkarak ilerideki kullanım tecrübelerinizle emin olun birçok ücretli ürünün yaptığından daha fazlasını yapabileceğini göreceksiniz.</p>
+
+<p><strong>Iptables Nedir?</strong></p>
+
+<p>Linux, daha doğrusu *NIX ve *BSD sistemler üzerinde çalışan, zamanında görevini ipchain’den devralmış (hatırlayanlar vardır), üzerinden geçen trafiği verilen kurallara göre yorumlayan açık kaynak güvenlik/ateş duvarı (Firewall) yazılımıdır. Linux çekirdeği ile gelen (2.3 ve daha yeni) Netfilter’ı yönetmemizi sağlar.</p>
+
+<p>Bu konuyu okumaya karar vermiş, içerik filtreleme, ya da vekil sunucu kullanmayı düşünen kişiler zaten güvenlik duvarının aşağı yukarı ne olduğunu bildikleri için lafı uzatmadan anlatıma geçiyorum.</p>
+
+<p>Iptables, sizin verdiğiniz kurallar zincirine göre hareket eder, gelen veya giden ya da yönlendirilen bütün paketler bu kurallara uyar.</p>
+
+<p>Kurallar zincirlerini siz oluşturabildiğiniz gibi aşağıda standart gelen zincirler mevcuttur.</p>
+
+<p><strong>INPUT :</strong>    Gelen paketler için  kurallar zinciri.<br />
+<strong>OUTPUT :</strong>   Giden paketler için kurallar zinciri.<br />
+<strong>FORWARD :</strong>  Yönlendirilen paketler için kurallar zinciri.</p>
+
+<p>NAT tarafı için,<br />
+<strong>PREROUTING :</strong>  Gelen paketlerin değiştirilmesi/yönlendirilmesi için.<br />
+<strong>POSTROUTING :</strong> Giden paketlerin değiştirilmesi/yönlendirilmesi için.</p>
+
+<p>NAT kuralları da önemlidir, zira ağ geçidi olarak kullanmayı düşündüğünüz Linux bilgisayarınız ile NAT kullanmak zorundasınız. Hatta olaya şu açıdan bakabilirsiniz; bugün evimizde kullandığımız neredeyse bütün ADSL modemler NAT yapıyor.</p>
+
+<p>Bu kurallar zincirini yönetmek için belirli parametreler vardır ki kural ekleme, çıkarma vb. durumları belirtir,</p>
+
+<ul>
+  <li>
+    <p><strong>-A    (append) :</strong>
+Belirtilen zincire kural ekler.</p>
+  </li>
+  <li>
+    <p><strong>-D    (delete) :</strong>
+Belirtilen kural zincirinden belirtilen numaradaki kuralı siler.</p>
+  </li>
+  <li>
+    <p><strong>-E    (rename) :</strong>
+Belirtilen zinciri yeniden adlandırır.</p>
+  </li>
+  <li>
+    <p><strong>-L    (list) :</strong>
+Kuralları gösterir, listeler. Zincir belirtilirse, sadece o zincirin kurallarını listeler.</p>
+  </li>
+  <li>
+    <p><strong>-l    (insert) :</strong>
+Belirtilen zincirde, belirtilen kural sıralamasında araya bir kural eklemek için kullanılır. (Daha önceden girdiğimiz bir kuralın, söz konusu paket için farklı kural uygulamaması adına, kuralı araya girebilmemiz için gerekebilir.)</p>
+  </li>
+  <li>
+    <p><strong>-R    (replace) :</strong>
+Zincirde belirtilen numarada ki alana başka kural koyar.</p>
+  </li>
+  <li>
+    <p><strong>-P    (policy) :</strong>
+Herhangi bir kurala uymayan paketlerin başına ne geleceğini belirtir. :)</p>
+  </li>
+  <li>
+    <p><strong>-N    (new) :</strong>
+Yeni bir zincir oluşturur.</p>
+  </li>
+  <li>
+    <p><strong>-X    (delete) :</strong>
+Oluşturduğumuz kural zincirini siler.</p>
+  </li>
+  <li>
+    <p><strong>-F    (flush) :</strong>
+Zincirdeki kuralların tümünü siler.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Yukarıda verdiğimiz kurallar zincirleri ile paketler değerlendirilecek, değerlendirme sonunda bir de pakete uygulanması için verdiğimiz son karar olması lazım ki şöyle:</p>
+
+<p><strong>ACCEPT :</strong> Paketlerin geçişine izin verilir.</p>
+
+<p><strong>DROP :</strong> Paketlerin geçişine izin verilmez. [Paket düşürülür, hedefe hiç ulaşmamış gibi. Mantıklı gözükse de bazı güvenlik açıklarını doğurabilir. Özellikle DDOS (Önceki sayılarda kısaca bahsetmiştik.) için korunmayan bir yapıda, yönlendirici arkasında paketleri ‘DROP’lamak ‘router’ın yönlendirici tablosunu aşırı yüklemeden cevap veremez hâle getirebilir.]</p>
+
+<p><strong>REJECT :</strong> Paketlerin erişimi reddedilir ve gönderen bilgilendirilir. (DROP yerine REJECT kullanımını öneririm.) Paketin neden geri çevrildiğine ilişkin bilgi eklenebilir.</p>
+
+<p><strong>RETURN :</strong> Zincirin sonuna gönderilir.</p>
+
+<p><strong>QUEUE :</strong> Paketler kullanıcı alanına gönderilir.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Seçenekler</th>
+      <th>Açıklama</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-s</td>
+      <td>(source) Kaynak adresini belirtir.</td>
+    </tr>
+    <tr>
+      <td>–sport</td>
+      <td>(source port) Kaynak portu belirtir.</td>
+    </tr>
+    <tr>
+      <td>-d</td>
+      <td>(destination) Hedef adresidir.</td>
+    </tr>
+    <tr>
+      <td>–dport</td>
+      <td>(destination port) Hedef portudur.</td>
+    </tr>
+    <tr>
+      <td>-p</td>
+      <td>Protokolü belirtir, TCP ya da UDP gibi. ALL hepsi için kullanılır.</td>
+    </tr>
+    <tr>
+      <td>-i</td>
+      <td>(interface) Ara birim belirtir, eth0 gibi.</td>
+    </tr>
+    <tr>
+      <td>-o</td>
+      <td>Çıkan veya yönlendirilen kural zincirinde kullanılır. (-o eth1 gibi)</td>
+    </tr>
+    <tr>
+      <td>-t</td>
+      <td>Tabloyu belirtir, nat tablosu için -t nat şeklinde kullanılır.</td>
+    </tr>
+    <tr>
+      <td>-m</td>
+      <td>Kullanılacak modülü belirtir, -m limit gibi.</td>
+    </tr>
+    <tr>
+      <td>-j</td>
+      <td>Belirtilen kural zincirine uygulanacak seçim, -j ACCEPT gibi..</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>Yazılan kuralı tersine çevirir. (Neredeyse bütün seçenekler ile kullanılabilir.)</td>
+    </tr>
+    <tr>
+      <td>–tcp-flags</td>
+      <td>TCP flag’leri. (ACK, FIN, RST, URG, SYN, PS veya ALL.)</td>
+    </tr>
+    <tr>
+      <td>–syn</td>
+      <td>SYN paketlerini kontrol etmek için kullanılır.</td>
+    </tr>
+    <tr>
+      <td>–state</td>
+      <td>State (durum) modülü içindir. ESTABLISHED ve RELATED gibi. (Bağlı olan bağlantıların kayıtlarını tutar vb.)</td>
+    </tr>
+    <tr>
+      <td>–limit</td>
+      <td>Saniye saniye eşleşme hızını kontrol etmek için kullanılır.</td>
+    </tr>
+    <tr>
+      <td>–mac-source</td>
+      <td>Belirtilen mac adresi için işlem yapılır.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>NAT (Network Address Translation) Seçenekleri :</strong> NAT yapacaklar için, yönlendirici vb. durumlarda kullanacaklar için,</p>
+
+<p><strong>DNAT – PREROUTING :</strong> (Destination NAT) Hedef NAT, Size gelen isteği yerel ağınızdaki bir bilgisayara yönlendirmek için kullanılır. Gelen paketin başlığına (Header) hedef adresi değiştirip yazar. Örnek olarak, içeride web sunucusu olarak hizmet veren bir sunucu varsa, 80 portuna gelen istekleri içerideki web sunucunuza yönlendirebilirsiniz. Uzak masaüstü vb. birçok durum için geçerli.</p>
+
+<p><strong>SNAT  - POSTROUTING :</strong> (Source NAT)  Kaynak NAT, DNAT’ın tersine, paket başlığındaki kaynak adresi değiştirip yazar.</p>
+
+<p><strong>MASQUERADE :</strong> Bir SNAT türü, pakete maskeleme yapar, paketin kaynak adresi ve kaynak portu, sunucu adresiyle ve boş bir portla eşleşerek hedefe gider. Örnek olarak, ağdaki bütün istemciler aynı IP adresinden dışarı çıkar.</p>
+
+<p><strong>REDIRECT :</strong> (Yeniden yönlendirme) Gelen paketi direkt olarak başka bir portla ilişkilendirir/yönlendirir.</p>
+
+<p>Yukarıda bahsi geçen “durum” (–state), derin bir mevzu olmamakla birlikte, biraz açmamız kullanım açısından iyi olacaktır.</p>
+
+<p>State kullanabileceğimiz durumlar aşağıdaki gibidir:</p>
+
+<p><strong>NEW :</strong> SYN isteği doğrultusunda NEW state alırız, yeni bir bağlantı vardır, birkaç şekilde kullanılır ama örnek verme açısından; sisteme girişte yeni bir bağlantı açılır “NEW”, gelen paket içerisinde SYN açık ACK boşsa, bu tür paketleri düşürmek saldırı durumunda avantaj olacaktır. Zira normalde “header” içi bu şekilde boş olmaz.</p>
+
+<p><strong>ESTABLISHED :</strong> Açık olan bağlantılara ait paketler. Paketler karşılıklı gidip gelip, bilgisayarlar arası sohbet başladığı zaman, bağlantı “NEW” durumundan “ESTABLISHED” durumuna geçer.</p>
+
+<p><strong>RELATED :</strong> An itibarıyla sistemde “ESTABLISHED” bağlantı varsa, aynı yerden aynı konu ile ilgili benzer istek geldiği zaman, durumu fark edip “hımm bunlar aynı konu üzerinde konuşuyor” diyerek bu bağlantıyı “RELATED” olarak işaretler. “RELATED” bağlantı gördüğümüzde böyle bir durum olduğunu anlarız.</p>
+
+<p><strong>INVALID :</strong> Diğer durumlara “state” uymayan durumlardır. Genelde bu paketler düşürülür. (Hata mesajı döndüren paketler vb.)</p>
+
+<p>Bir sonraki yazıda, burada gördüğümüz teorik durumu pratiğe dökerek değişik senaryolar yaratıp, örnek oluşturup, üzerinde kendinize göre değişiklik yapacağınız ve geliştirebileceğiniz iptables “firewall” uygulamaları yer alacaktır.</p>
+
+<p>Görüşmek üzere…</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-45-sayi" class="ui label"> Sudo 45. Sayı </a>
+
+    
+    
+    <a href="/etiket/firewall" class="ui label"> firewall </a>
+
+    
+    
+    <a href="/etiket/guvenlik" class="ui label"> güvenlik </a>
+
+    
+    
+    <a href="/etiket/guvenlik-duvari" class="ui label"> güvenlik duvarı </a>
+
+    
+    
+    <a href="/etiket/netfilter" class="ui label"> netfilter </a>
+
+    
+    
+    <a href="/etiket/iptables" class="ui label"> iptables </a>
+
+    
+    
+    <a href="/etiket/filtreleme" class="ui label"> filtreleme </a>
+
+    
+    
+    <a href="/etiket/sunucu" class="ui label"> sunucu </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/iptables';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

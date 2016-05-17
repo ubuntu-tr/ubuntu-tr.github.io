@@ -1,0 +1,288 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sistemi İzleme Merkezi: /proc</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Sistemi İzleme Merkezi: /proc</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Erkan Esmer</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/ubuntu+1/">Ubuntu+1</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                /proc dizini sistemi izleme ve tahlil yapma anlamında çok önemli bir yerdir. Hâlihazırda çalışan uygulamaları inceleyebileceğimiz ve müdahale edebileceğimiz gibi sistemin sabit özellikleri hakkında da bilgilere erişebiliriz.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/proc-dizini/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Merhaba. Bu sayıdaki konumuz /proc dizini olacak. Yazımızda /proc klasöründen ve işlevlerinden bahsedeceğiz.</p>
+
+<p>Sistemin tanımını bir cümle ile yapmak kolay değildir lakin temel olarak sistem, birtakım görevler ve bunlardan doğan işlemler bütünüdür. Her görevin ve beraberinde işlemin bir süreci vardır. İşlemler bütünü olması ve bu işlemlerin merkezi olmasından dolayı sistemi izlemek, durum tahlili yapmak ve gerekirse müdahale etmek çok önemlidir. Linux sistemlerde sistemin durumunu inceleme, kayıtlarını izleme, sistem hakkında bilgiler edinebilme ve çalışan programların bilgilerini öğrenebilmemiz için özel dosyalar barındıran sistem klasörünün adı /proc’dur. Sistemdeki yolu da /proc şeklindedir.</p>
+
+<p>/proc klasörü içindeki dosyalar, okunmaya çalışıldığında içerdiği fonksiyon tarafından bir değer üretir. Bu dönen değer, yapılan izlemenin ve tahlilin sonucudur. Bizim /proc klasörü içinden çağırıp okumaya çalıştığımız her dosya aslında sonuç dönmek üzere bir çağrıdır, diyebiliriz.</p>
+
+<p>/proc aslında dosya sistemi olmadığı hâlde geçici bellekte oluşturulan sanal bir dosya sistemidir ve diskte yer kaplamaz. /proc dizini de yerel bir aygıtmış gibi sisteme eklenir. Eklendiği yol bizim de üzerinde çalıştığımız /proc yoludur. /proc dizinini fstab dosyası, sistemin açılışında yükler ve sisteme bağlar. (/etc/fstab)</p>
+
+<p><img src="images/post/proc-dizini/fstab.png" alt="" /></p>
+
+<p>Yukarıda da tarif ettiğimiz gibi /proc dizininden hâlihazırda çalışan programların bilgilerine ulaşmak mümkündür. Örneğin top komutu ile çalışan uygulamalara bir bakalım.</p>
+
+<p><img src="images/post/proc-dizini/top1.png" alt="" /></p>
+
+<p>Top komutunun çıktısında gördüğümüz soldaki kolon, işlem numarasını belirtir. /proc dizininin altında her işlemin numarası ile adlandırılmış işlemin ve sürecinin detaylarını barındıran klasörler-dosyalar yer alır. Şöyle ki /proc klasörü altında numaralardan oluşan klasörleri ve sistem hakkında bilgiler içeren diğer dosyaları görebiliriz.</p>
+
+<p><img src="images/post/proc-dizini/proc1.png" alt="" /></p>
+
+<p>Örneğimizden devam edecek olursak, 17 numaralı işlemin dizini olan 17 isimli klasörün içine baktığımızda o işleme ait dosya ve klasörleri görürüz. Buradaki cwd, exe, root dosyaları asıl dosyalarına kısayoldur. Cwd işlemin çalıştığı asıl klasörü temsil eder. Exe işleme ait olan çalıştırılabilir dosyaları temsil eder. Root ise işlemin ana dizinini temsil eder. 17 isimli dizinin diğer dosyalarına baktığımızda, mesela cat status dediğimizde gelen çıktıda, migration/3 isimli işlemin beklemede olduğunu gözlemliyoruz.</p>
+
+<p><img src="images/post/proc-dizini/proc-17-status.png" alt="" /></p>
+
+<p>Aynı şekilde 17 isimli işlem için oluşan dizin dışında diğer dosyalar ile başka işlemlerin ve durumların bilgisini alabiliriz. Şimdi /proc dizini altındaki dosyalara görevleri ile birlikte değinelim.</p>
+
+<p><strong>/proc/1</strong> – Örneğini yukarıda verdiğimiz gibi 1 isimli sürecin dizinidir. Bu dizinin içinde sürece ait durum bilgisi alabileceğimiz dosyalar mevcuttur. Yine yukarıda örnek verdiğimiz 17 isimli süreç ve dizini gibi.</p>
+
+<p><strong>/proc/cpuinfo</strong> – Sistemin işlemcisinin üreticisini, modelini, hızını ve teknik detaylarını öğrenebileceğimiz dosyadır.</p>
+
+<p><strong>/proc/iomem</strong> – Geçici bellek için inceleyebileceğimiz dosyadır. Geçici bellek (RAM) adreslerinin nerelere ayrıldığını gözlemleyebiliriz. Yandaki çıktıda örneğin Video Rom için ayrılan adres aralığını, önceden rezerv edilmiş adres aralıklarını görmekteyiz.</p>
+
+<p><img src="images/post/proc-dizini/iomem.png" alt="" /></p>
+
+<p><strong>/proc/devices</strong> – Sistemde o an çalışan aygıt sürücülerinin listesini görürüz.</p>
+
+<p><strong>/proc/filesystems</strong> - Sistemde tanımlı olan, kullanılabilen dosya sistemlerini görürüz. Ayrıca bu tür durum bildirmeyip ayar tutan dosyalarda değişiklikler yapabiliriz.</p>
+
+<p><strong>/proc/interrupts</strong> – Sistemde o an kullanılan ve beklemede olan kesmeleri gösterir.</p>
+
+<p><strong>/proc/ioports</strong> – Sistemde kullanılan giriş/çıkış portlarını gösterir.</p>
+
+<p><strong>/proc/mounts</strong> – Sisteme bağlı olan aygıtların listesini tutan dosyadır.</p>
+
+<p><strong>/proc/kcore</strong> – Sistemdeki fiziksel belleğin bir görüntüsünü verir. Aldığımız çıktı, gerçek belleğin görüntüsüdür, gerçek bellek değildir. İlgili dosyayı incelemek root yetkisindedir.</p>
+
+<p><img src="images/post/proc-dizini/kcore1.png" alt="" /></p>
+
+<p><strong>/proc/kmsg</strong> – Sistem mesajlarını tutan dosyadır. Dosyayı incelemek root yetkisindedir. Yoğun bir dosya olduğundan, dosya çağrıldığında cevap vermesi uzun sürebilir.</p>
+
+<p><strong>/proc/loadavg</strong> – Sistemin ortalama yükünü gözlemleyeceğimiz dosyadır. Sistemin o an ne kadar çalıştığını gösterir.</p>
+
+<p><strong>/proc/meminfo</strong> – Sistemin bellek kullanımının dökümünü veren dosyadır. Çıktısında toplam bellek miktarını kullanılmayan bellek miktarını ve takas alanını gözlemleyebiliriz.</p>
+
+<p><strong>/proc/net</strong> – Ağ bilgilerini alabileceğimiz ve durumunu gözlemleyebileceğimiz bir proc dizinidir. İçeriğinde dosyalar ve dizinler mevcut olup ağ bağlantıları, protokoller, mesajlar ile ilgili bilgi alabiliriz.</p>
+
+<p><strong>/proc/diskstats</strong> – Disk durumlarını tutan bir dosyadır.</p>
+
+<p><strong>/proc/uptime</strong> – Sistemin ne kadar zamandır çalıştığını tutan dosyadır.</p>
+
+<p><strong>/proc/version</strong> – Sistemin çekirdek versiyonunu tutan dosyadır.</p>
+
+<p>Görüldüğü üzere /proc dizinine direkt ulaşarak ve yukarıdaki gibi kullanarak bilgiler edinebilir ve /proc dizininin hizmetinden yararlanabiliriz. Bunlarla beraber ayrıca birtakım komutlar da bize /proc dizinine bakmadan bilgi alma imkânı verir. Tabii ki /proc dizinini kullanarak. Buna birkaç örnek verecek olursak;</p>
+
+<p><strong>#free komutu</strong>
+/proc/meminfo dosyasını okur ve çıktıda bize kullanılmayan bellek miktarını belirtir.</p>
+
+<p><strong>#uptime komutu</strong>
+/proc/uptime ve loadavg dosyalarını okur ve çıktısında bize saati, sistemin çalıştığı süreyi ve sistemin ortalama yükünü verir.</p>
+
+<p><strong>#mount komutu</strong>
+/proc/mounts dosyasını okur ve sisteme bağlı aygıtların listesini verir.</p>
+
+<p>Yazımızda /proc dizinini ve içerdiği dosyaları incelemeye ve tarif etmeye çalıştık. Buraya kadar izah etmeye çalıştıklarımızla da anlaşılacağı üzere /proc dizini sistemi izleme ve tahlil yapma anlamında çok önemli bir yerdir. Hâlihazırda çalışan uygulamaları inceleyebileceğimiz ve müdahale edebileceğimiz gibi sistemin sabit özellikleri hakkında da bilgilere erişebiliriz. Sistemi sağlıklı şekilde ayakta tutmak ve çalıştırmak görevinde /proc dosyası uğranılacak ilk adrestir.</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-48-sayi" class="ui label"> Sudo 48. Sayı </a>
+
+    
+    
+    <a href="/etiket/proc" class="ui label"> proc </a>
+
+    
+    
+    <a href="/etiket/dosya-sistemi" class="ui label"> dosya sistemi </a>
+
+    
+    
+    <a href="/etiket/linux" class="ui label"> linux </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/proc-dizini';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

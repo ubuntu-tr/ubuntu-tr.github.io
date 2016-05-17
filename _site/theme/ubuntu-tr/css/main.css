@@ -1,0 +1,35 @@
+html > body {
+    font-family: "Verdana", "Arial", "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+    background: url("../images/pattern6.png") repeat scroll 0 0 #F5F5F5;
+}
+
+.ui.card > .markdown-body {
+    color: #606c76;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    padding: 20px;
+}
+<<<<<<< HEAD
+=======
+
+.markdown-body pre.highlight:before {
+    content: '\f121';
+    font-family: Icons;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #ededed;
+}
+.markdown-body pre.highlight {
+    position: relative;
+    padding-top:30px;
+}
+>>>>>>> 8e0e6879377c54fa5270a5868cfdf51a7afef447

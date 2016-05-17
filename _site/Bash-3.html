@@ -1,0 +1,292 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kabuk Programlama (Bash) - 3</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Kabuk Programlama (Bash) - 3</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Erkan Esmer</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                Merhaba Kabuk Programlama Bash yazı dizimizin 3. bölümüyle devam ediyoruz.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/Bash-3/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Bu bölümde şimdiye kadar tüm işlediklerimizi kapsayan bir örnek yapıp yeni konularımıza da bu örneğimizden devam edeceğiz. Amacımız, öğrendiklermizin tümünü örneklendirebildiğimiz bir uygulama veya uygulamalar bütününü ortaya çıkartmaktır.</p>
+
+<p>Şimdi bu bölümümüzde yapacağımız örneğimizi detaylandıralım. Böylece hem örneğimizi belirlemiş olacağız hem de önceki konuların üzerinden geçmiş olacağız.</p>
+
+<p>Örneğimiz, kullanıcının belirlediği isimlerde klasör oluşturan, klasörler içinde dosya oluşturan ve bu dosyanın içine de kullanıcının belirlediği rakamlarla matematiksel işlem yapıp kaydeden bir uygulama olacak.</p>
+
+<p>Şimdi örneğimizin haritasını çıkartalım.</p>
+
+<ul>
+  <li>İlk önce kullanıcıdan oluşturacağımız iki adet klasör için isim girmesini isteyeceğiz.</li>
+  <li>Echo ile isteyip read ile değişkeni okuyacağız.</li>
+  <li>Ardından kaydettiğimiz değişken isimlerini mkdir komutuna paramatre olarak göndererek 2 klasörümüzü de oluşturacağız.</li>
+  <li>Klasörleri oluşturduktan sonra bir klasörümüzün içinde touch komutuna kullanıcının ismini girdiği değişkenimizi parametre olarak göndererek bir dosya oluşturacağız.</li>
+  <li>Bundan sonra kullanıcıdan 2 adet sayı isteyeceğiz ve bu sayıları matematik işlemine tabi tutarak sonucu oluşturduğumuz dosyaya yazacağız.</li>
+</ul>
+
+<p>Yukarıdaki maddelere uygun olarak yazdığımız script dosyamızın görüntüsünü aşağıda görmekteyiz.</p>
+
+<p><img src="images/post/Bash-3/Resim-1.png" alt="" /></p>
+
+<p>Şimdi satır satır uygulamamızı inceleyelim. Bu uygulamamızı daha önceki iki yazımızda işlediğimiz konular ile gerçekleştirdik. Dolayısıyla örnek uygulamamız 2 yazımızı da kapsıyor.</p>
+
+<p>Gördüğünüz gibi 1. ve 2. echo komutu ile ekrana mesaj bastırıp read ile de değişkenlerimizi tutuyoruz. Böylece kullanıcının girdiği isimleri almış olduk.</p>
+
+<p>mkdir $klasor1 ve mkdir $klasor2 satırları ile de mkdir komutuna değişkenlerimizi parametre olarak gönderip belirlenen isimlerde klasör oluşturuyoruz.</p>
+
+<p>Yine echo komutuyla ekrana mesajımızı bastırdık.
+Ardından read dosya1 satırında oluşturacağımız dosyanın ismini aldık ve touch komutuna $klasor1 ve $dosya1 değişkenlerini parametre yaptık ve kullanıcının belirlediği isimde dosyamızı da oluşturmuş olduk.
+Sonrasında sayi1 ve sayi2 değişkenlerini alıyor ve sonuc değişkenine iki sayının toplamını atıyoruz.</p>
+
+<p>Yaptığımız işlemin sonucu $sonuc değişkeninde. Bunu echo $sonuc &gt; $klasor1/$klasor2 satırıyla daha önce açtığımız dosyanın içine yazıyoruz. Bu satırların üstünde yazdığımız typeset -i sonuc ibaresini, hatırlayacağınız üzere sonuc adında tamsayı değişkeni oluşturmak için kullandık.</p>
+
+<p>Son echo satırımız ile de sonucu ve sonucun yazdığı dosyanın yolunu ekrana bastırıyoruz.</p>
+
+<p>İşte şimdiye dek öğrendiklerimizi kullanarak bir script dosyası yazmış olduk. Bunu yapabilmiş olmamız önceki konularla ilgili bir problemimizin olmadığını göstermekte.</p>
+
+<p>Peki, uygulama bu hâliyle çalışmakta yalnız uygulamada birtakım hatalar meydana getirip uygulamanın çalışmasının yarıda kesilmesi şu anki hâliyle sizce mümkün müdür? Evet mümkündür. Mesela sayıları kesirli girmemiz veya sayı yerine karakter girmemiz uygulamaya hata verdirir ve çalışmaz. İsterseniz deneyebilirsiniz.</p>
+
+<p>İşte geldiğimiz bu noktada kontrol deyimlerine ihtiyaç ortaya çıkıyor. Kapasitesi ne olursa olsun programlamada kontrol deyimleri hayati önem taşımaktadır.
+Kontrol deyimi olarak if-then-else komutlarından bahsetmekteyiz. Şimdi son örneğimizi if-then-else ile kontrole tabi tutup hata payını sıfırlamaya çalışalım. Böylece uygulama hem daha kararlı hâle gelecek hem de biz yeni ve önemli bir konuya başlayacağız.</p>
+
+<p><strong>Şimdi örneğimizi şu şekilde değiştirelim:</strong><br />
+Şimdilik kontrollere başlangıç yapmamız açısından kolay bir kontrol kurgusu kuralım. Örneğin kullanıcının gireceği ilk gireceği sayı ikinci gireceği sayıdan büyük olsun. İşlem olarak da çıkartma işlemi yapalım. İlk sayı büyük olacağı için - sonuç çıkmayacak. Böylece uygulama hep doğru-mantıklı çalışacak yani anlamsız hatalara düşmeyecek. Bunu sağlamamız durumunda en basit ifadeyle kararlılığı sağlamış oluyoruz diyebiliriz.</p>
+
+<p>Şimdi ilk önce matematik işlemimizde eskiden toplam alan ifadeyi çıkartma yapalım.</p>
+
+<p><img src="images/post/Bash-3/Resim-2.png" alt="" /></p>
+
+<p>Şimdi de 1.sayıyı 2.sayıdan büyük girmesine zorlayan kontrolümüzü koyacağız.</p>
+
+<p>Kontrolü koda eklemeden evvel kontrol terimlerine değinelim. Kullanacağımız kontrol programlama dillerinde sık kullanılan ve önemli işlevler üstlenen if-then-else deyimi.</p>
+
+<p>Biz sayı1 ve sayı2 değerlerini kullanıcıdan alıp hemen sonrasında if’i kullanarak sayıları karşılaştıracağız. Yaptığımız karşılaştırmanın sonucuna göre de eğer sorduğumuz soru olumlu dönerse yani true olursa işlemi yapacağız. Burası kontrol deyiminin then tarafını oluşturuyor. Şayet sorduğumuz soru olumsuz dönerse yani false olursa kullanıcıyı tekrar sayı girmeye zorlayacağız. Burası da kontrolün else tarafını oluşturmakta.</p>
+
+<p>İf ile eğer sayı1, sayı2‘den küçükse diye soruyoruz.
+Sayı1, sayı2‘den küçükse then (ise) kısmıyla normal işlemimizi gerçekleştiriyoruz. Eğer küçük değilse else (değilse) kısmıyla sayıları tekrar alıyoruz.</p>
+
+<p>İşte bunu yaparak kullanıcıyı belli bir çerçevede sayı girmeye zorluyor ve yapacağımız matematiksel işleme uygun sonuç çıkaracak değerleri alıyoruz. Uygun değerleri aldığımız, uygun olmayan değerleri reddettiğimiz için uygulamamız yaptığı matematik işleminde anormal bir sonuç çıkartmıyor. İşte bu kontrol sayesinde uygulamamız kararlı (stabil) çalışıyor.</p>
+
+<blockquote>
+  <p>Yaptığımız işlem yazdığımız koda kontrol koymaktı. Biz kontrolün içinde soruyu tekrar soran zorlayıcı bir ifadeye de yer verdik. Bu ifade için de kodun başına bir fonksiyon ekledik. Buna bu yazımızda değinmeyeceğiz. Önümüzdeki yazımızda kontrol deyimleri kullanımına daha derinlemesine bakarken kontrolle beraber kullandığımız zorlayıcı ifadeyi de açıklamaya çalışacağız. Daha detaylı inceleme yapacağımız için konu daha da pekişecek.</p>
+</blockquote>
+
+<p>Şimdi yukarıda açıkladığımız kontrolümüzü kodumuza ekleyelim.</p>
+
+<p><img src="images/post/Bash-3/Resim-3.png" alt="" /></p>
+
+<p>İşte if ile başlayıp fi ile biten ve içinde işlemimizi barındıran kontrol deyimimiz. Kontrol deyimimizdeki detaylara önümüzdeki sayıda değineceğiz.</p>
+
+<p><strong>Uygulamamızın son değişikliklerden sonraki hâli şöyledir:</strong></p>
+
+<p><img src="images/post/Bash-3/Resim-4.png" alt="" /></p>
+
+<p>Kodun tümünde göreceğiniz gibi bu yazımızda değinmediğimiz fonsiyon tanımı ve if-then-else deyimini görmektesiniz.</p>
+
+<p>Sizler de gelecek sayıda değineceğimiz bu kodlara çalışabilir ve bize denemelerinizi gönderebilirsiniz. Burada yayınlamaktan ve beraber geliştirmekten zevk duyarız. Gelecek sayıda yine bu yazımızı toparlama mahiyetinde özetleyeceğiz ve kontrol deyimlerine, fonksiyonlara bakacağız.</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-51-sayi" class="ui label"> Sudo 51. Sayı </a>
+
+    
+    
+    <a href="/etiket/kabuk" class="ui label"> kabuk </a>
+
+    
+    
+    <a href="/etiket/programlama" class="ui label"> programlama </a>
+
+    
+    
+    <a href="/etiket/bash" class="ui label"> bash </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/Bash-3';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

@@ -1,0 +1,324 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MongoDB</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">MongoDB</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Doğan Aydın</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/uygulama-tanitimlari/">Tanıtım</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/mongodb/1.jpeg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>MongoDB, ölçeklenebilir, yüksek performanslı, alışık olduğumuz veri tabanlarında kullanılan şemalar yerine doküman odaklı bir veri tabanıdır. C++ ile yazılmıştır. Bazı özelliklerini sıralamamız gerekirse:</p>
+
+<ol>
+  <li>Doküman odaklı.</li>
+  <li>İndexleme.</li>
+  <li>Replikasyon ve yüksek kullanılabilirlik.</li>
+  <li>Otomatik bölümleme.</li>
+  <li>Sorgulama.</li>
+  <li>Map/reduce</li>
+  <li>GridFS</li>
+</ol>
+
+<h2 id="geleneksel-veri-tabanlar-ve-mongodb">Geleneksel Veri Tabanları Ve MongoDB</h2>
+
+<p>Geleneksel veri tabanları dediğimiz şey aslında sql kullanan veri tabanlarıdır. Sorgulama dili olarak sql kullanırlar ve bazı yerlerde bizi kullanmaya zorladıkları şema yapıları nedeniyle çok kısıtlayıcılardır. Blog, forum, içerik yönetim sistemleri gibi uygulamalarda bu kısıtlamalar çok önemli olmasa da bizi kendilerine uymak zorunda bırakırlar. Tek zorlukları da şemaları değildir. Eğer büyük ölçekli bir proje geliştiriyorsanız ölçeklenmesi, replikasyonu ve bölümlemesi epey zordur.</p>
+
+<p>Ama gelişen teknoloji bize bu konuda alternatifler sunmaya devam ediyor. Son zamanlarda adları çok sık duyulmaya başlayan bu yeni nesil veri tabanlarının genel adları NoSQL veri tabanlarıdır. NoSQL veri tabanları adlarından da anlaşılacağı gibi sql dilini kullanmazlar. Her birinin kendine göre sorgulama yöntemleri vardır.</p>
+
+<p>MongoDB bu veri tabanları arasında önde gelenlerdendir. Json benzeri bir veri saklama yöntemi kullanır. Replikasyon ve bölümleme işlemleri bir komut kadar kolaydır. Yazının ilerleyen bölümlerinde de geleneksel veri tabanları denildiğinde mysql,postgresql,sqlite gibi veri tabanları gelsin.</p>
+
+<h2 id="dokman-odakl">Doküman Odaklı</h2>
+<p>MySQL ve diğer geleneksel veri tabanlarında kullanılan kısıtlayıcı şemalar yerine JSON benzeri bir doküman stilini kullanır. Bu sayede bizi kısıtlamaz ve veri tabanımızın daha hızlı ve daha ölçeklenebilir olmasını sağlar.</p>
+
+<p>MongoDB’de veri tabanları doküman, tablolar da koleksiyon olarak geçer. Örnek olarak isim, soyisim, telefon bilgilerini tutan bir mysql tablosu ve mongodb koleksiyonunu kullanan bir uygulama yapalım. Hazırladığım mysql tablosu:</p>
+
+<p><img src="images/post/mongodb/RESIM_1.png" alt="" /></p>
+
+<p>MongoDB koleksiyonu oluşturmak için bir komut yoktur. Siz olmayan bir koleksiyonu veri eklerseniz o koleksiyon veri ekleme anında oluşturulur. Yukarıdaki aynı şemayı oluşturmak için arkadas_listesi isimli koleksiyonu ilk veriyi eklemeniz yeterlidir.</p>
+
+<p><img src="images/post/mongodb/RESIM_2.png" alt="" /></p>
+
+<p>Gördüğünüz gibi verilerimiz eklediğimiz zaman koleksiyon veya mysql ismiyle tablomuz oluştu. Hatta eklemediğimiz halde _id alanı eklendi. Bu alan varsayılan olarak tüm koleksiyonlara eklenir ve tektir (unique). MongoDB de yazdığım kod çoğu programcıya tanıdık gelmiştir. Çünkü yazının başından beri dediğim gibi mongodb json benzeri bir yapı kullanır. Tam olarak adı BSON(Binary JSON)’dur.</p>
+
+<h2 id="ndexleme">İndexleme</h2>
+<p>Geleneksel veri tabanlarından çok farklı mongodb’de geleneksel veri tabanlarında olduğu gibi indexleme özelliğini kullanabilirsiniz. MongoDB de yeni olan ise “Geospatial Indexing” dir. Bu özellik sayesinde yer yüzü koordinatları gibi 2 boyutlu verilerin tutulduğu alanları indexleyebiliriz.</p>
+
+<p><img src="images/post/mongodb/RESIM_3.png" alt="" /></p>
+
+<h2 id="replikasyon-ve-yksek-kullanlabilirlik">Replikasyon Ve Yüksek Kullanılabilirlik</h2>
+<p>Replikasyon özelliği sayesinde veri tabanımızın kopyalarını ağ üzerinden erişilebilir duruma getirebiliriz. Üstelik bu özelliği diğer veri tabanlarından çok daha kolay uygulayabiliriz. Mongodb tek komut ile replikasyon oluşturmanıza yardımcı olur.</p>
+
+<p>Replikasyon için iki tane server gereklidir. Deneme amaçlı olarak sanal sunucu kurabilirsiniz. Master yani ana sunucumuz için mongodb yi fazladan bir parametre ile çalıştırmak yeterlidir. Aynı şekilde slave yani köle veya ikincil sunucuları eklemekte aynı şekilde tek parametre ile yapılabilir.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Master Sunucu: /srv/mongodb/bin/mongodb --dbpath /srv/data --master
+Slave Sunucu:  /srv/mongodb/bin/mongodb --dbpath /srv/data --slave source localhost:27017
+</code></pre>
+</div>
+
+<h2 id="otomatik-blmleme">Otomatik Bölümleme</h2>
+<p>Eğer elimizdeki veriler çok fazlaysa bunları saklamak için tek bir sunucu yetmeyecektir. Yapılması gereken sunucuya yeni hard disk eklemek veya yeni ve büyük kapasiteli bir sunucu almaktır. Veya çok daha ucuz olan veri tabanlarının bize sağladığı bir yöntemi kullanmaktır. Bölümleme özelliği olan veri tabanlarında ağımıza küçük ve ucuz bilgisayarlar ekleyerek verilerimizi bunlara paylaştırabiliriz. MongoDB’nin bize sağladığı avantaj ise bu işlemi bir kaç satır komutla çok kolay halledebilmemizdir. Bu konu hakkında detaylı bir video vermek istiyorum. <br />
+<a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=IK80yYujO1A">http://www.youtube.com/watch?feature=player_embedded&amp;v=IK80yYujO1A</a></p>
+
+<h2 id="sorgulama">Sorgulama</h2>
+<p>MongoDB de sorgulama işlemleri geleneksel veri tabanlarında kullanılar sql dili yerine json kullanılarak yapılır. Bazı sql komutlarını mongodb de kullanmak için çevirirsek:</p>
+
+<p><img src="images/post/mongodb/RESIM_4.png" alt="" /></p>
+
+<h2 id="mapreduce">Map/Reduce</h2>
+
+<p>Map/reduce işlemi çok çok büyük verileri kolaylıkla işlemek için geliştirilmiş bir yöntemdir. Günümüzde neredeyse bütün büyük şirketler tarafından kullanılmakta ve geliştirilmektedir. Sql tarafından bakacak olursak group komutu gibi çalışır.
+Diyelim ki elimizde bu şekilde bir kayıtlardan oluşan bir koleksiyon olsun.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+</span><span class="err">isim:</span><span class="w"> </span><span class="nt">"Ahmet"</span><span class="err">,</span><span class="w">
+    	</span><span class="err">begeni</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    	</span><span class="err">text</span><span class="p">:</span><span class="w"> </span><span class="s2">"Merhaba MongoDB!"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">Bu</span><span class="w"> </span><span class="err">veriler</span><span class="w"> </span><span class="err">üzerinde</span><span class="w"> </span><span class="err">basit</span><span class="w"> </span><span class="err">bir</span><span class="w"> </span><span class="err">map/reduce</span><span class="w"> </span><span class="err">işlemi</span><span class="w"> </span><span class="err">uygulayalım:</span><span class="w">
+	</span><span class="err">Map</span><span class="w"> </span><span class="err">fonksiyonumuz:</span><span class="w">
+	</span><span class="err">m</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">function()</span><span class="w"> </span><span class="p">{</span><span class="w">
+    		</span><span class="err">emit(</span><span class="w"> </span><span class="err">this.isim,</span><span class="w"> </span><span class="err">{toplam:</span><span class="w"> </span><span class="err">1,</span><span class="w"> </span><span class="err">begeni:</span><span class="w"> </span><span class="err">this.begeni</span><span class="p">}</span><span class="w"> </span><span class="err">);</span><span class="w">
+  	</span><span class="err">}</span><span class="w">
+
+	</span><span class="err">Reduce</span><span class="w"> </span><span class="err">fonksiyonumuz:</span><span class="w">
+	</span><span class="err">r</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">function(key,</span><span class="w"> </span><span class="err">values)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    		</span><span class="err">var</span><span class="w"> </span><span class="err">result</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">{toplam:</span><span class="w"> </span><span class="err">0,</span><span class="w"> </span><span class="err">begeni:</span><span class="w"> </span><span class="err">0</span><span class="p">}</span><span class="err">;</span><span class="w">
+    		</span><span class="err">values.forEach(function(value)</span><span class="w"> </span><span class="p">{</span><span class="w">
+      		</span><span class="err">result.toplam</span><span class="w"> </span><span class="err">+=</span><span class="w"> </span><span class="err">value.toplam;</span><span class="w">
+      		</span><span class="err">result.begeni</span><span class="w"> </span><span class="err">+=</span><span class="w"> </span><span class="err">value.begeni;</span><span class="w">
+    		</span><span class="p">}</span><span class="err">);</span><span class="w">
+    		</span><span class="err">return</span><span class="w"> </span><span class="err">result;</span><span class="w">
+  	</span><span class="err">}</span><span class="w">
+
+	</span><span class="err">Map/Reduce</span><span class="w"> </span><span class="err">işlemi:</span><span class="w">
+	</span><span class="err">res</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">db.yorum.mapReduce(m,r,</span><span class="p">{</span><span class="err">query:{isim:”Ahmet”</span><span class="p">}</span><span class="err">,out:</span><span class="s2">"ciktimiz"</span><span class="err">});</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>Map/Reduce işlemini uyguladıktan sonra res adında map/reduce işleminin kayıtlarını tutan bir geçici koleksiyon oluşur. Bu koleksiyon üzerinde sorgulama işlemlerimizi yapabiliriz:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>	res.find({});
+	{ "_id" : "Ahmet", "value" : { "toplam" : 2, "begeni" : 64 } }
+</code></pre>
+</div>
+
+<p>Yukarıda görüldüği gibi Ahmet isimli kullanıcının toplam 2 yorumundan 64 begenisi varmış.</p>
+
+<h2 id="gridfs">GridFS</h2>
+
+<p>MongoDB gridfs ile birlikte bize dağıtık bir dosya sistemi sunar. GridFS ile birlikte büyük/küçük dosyaları tek bir bilgisayarda tutmak yerine bunları küçük parçalara böler. Eğer veri tabanı bölümlemesi yapmışsak bu küçük parçaları tüm veri tabanı sunucularımıza dağıtır. Bölümleme yapmamışsak sadece kendi sunucusunda küçük parçalar halinde saklar. Diyelim ki elimizde 10gb ve 20gb arası boyutlarda video dosyalarımız var ve bu dosyalarda arama yapmamız lazım. En başta bu aramayı gerçekleştirebilmek için tüm dosyanın belleğe yüklenmesi lazım. Yani en az 10gb belleğimiz olmalı. GridFS dosyaları küçük parçalar halinde sakladığı gibi sorgulamayı da bu küçük parçalar üzerinde yapar ve bu küçük parçaların en büyüğü 4mb ile sınırlıdır. Ayrıca GridFS işletim sisteminin sınırlamalarından bağımsız çalışır. Mesela bir dizinde işletim sisteminin normalde izin vermediği kadar dosya saklayabilirsiniz ve işletim sisteminin izin vermediği (uzunluk veya kullanılan karakterler) isimleri verebilirsiniz. GridFS eklenen her dosya hakkında bazı bilgiler tutar. Bunlardan bazıları id,dosya ismi,yükleme tarihi ve md5 bilgileridir.</p>
+
+<h2 id="notlar">Notlar</h2>
+<p>Bilgi almak istediğiniz her konuda dogan1aydin@gmail.com adresinden ve ubuntu-tr forumlarından bana ulaşabilirsiniz. Bu yazıda kullandığım MongoDB sürümü 1.9.2-pre dir. Daha eski veya daha yeni sürümlerde kullandığım fonksiyonlar değişmiş ve çalışmıyor olabilir.
+MongoDB GNU AGPL v3.0 ile lisanslanmıştır. mongodb.org tarafından desteklenen sürücüler yani kütüphaneler ise Apache License v2.0 ile lisanslanmıştır.</p>
+
+<h2 id="kaynak">Kaynak</h2>
+<p>MongoDB : <a href="http://www.mongodb.org/">http://www.mongodb.org/</a></p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-33-sayi" class="ui label"> Sudo 33. Sayı </a>
+
+    
+    
+    <a href="/etiket/mongodb" class="ui label"> mongoDB </a>
+
+    
+    
+    <a href="/etiket/veritabani" class="ui label"> veritabanı </a>
+
+    
+    
+    <a href="/etiket/nosql" class="ui label"> nosql </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/mongodb';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

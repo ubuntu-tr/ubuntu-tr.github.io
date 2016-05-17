@@ -1,0 +1,993 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pyhton Programlama - Seri II</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Pyhton Programlama - Seri II</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Berkay Dedeoğlu</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/pyhton-programlama-seri-ii/pyhton-programlama-seri-ii.jpeg">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Tekrar merhaba…</p>
+
+<p>İnsanlar siyah ekranın üzerindeki yeşil - hızlı akan yazılardan, buna eşlik eden taramalı silah sesine benzeyen ve her tuştan farklı tonda ses çıkaran klavyeden; en önemlisi tüm bunları sağlayan bilgisayar başındaki o kişiden neden bu kadar korkar ki?</p>
+
+<p>Geçmişte, geçmiş derken bilgisayarın henüz üniversite ve büyük kurumlara yayıldığı zamanlarda, bu durum çok normal karşılanıyordu.. Henüz grafik ekran yoktu, bu kadar iş yapan bilgisayar komutları yoktu.. Bu denli işe yarar program yazılacak diller bile yoktu…</p>
+
+<p>İnsanlar neden bu denli korkar bilmiyorum ama bu korku bu durumu sağlayabilenler açısından çok büyük fırsattır. Karşısındaki insan henüz programlamanın bu kadar kolay olduğunu bilmiyor. Aslında yapılan iş basit… Bilgisayara onun anladığı dilden konuşacaksın bu kadar…</p>
+
+<p>Programlama dili öğrenmek kolaydır. Asıl olay bu öğrenileni fikirlerinle birleştirebilmektir. Ancak bu şekilde bir hesap makinesi yapabilirsiniz.. Ve yine ancak bu şekilde bir füzeyi uzaya yollayabilirsiniz…</p>
+
+<p>Lafı uzatmayalım, hemen öğrenmemize devam edelim.</p>
+
+<h2 id="geen-sayda-neler-yaptk">Geçen Sayıda Neler Yaptık?</h2>
+
+<p>Geçen sayımızda programlamanın ne işe yaradığını, neden programlama yapıldığını, programların nasıl hazırlandığını, bilgisayarların bizi nasıl anlayacağını ve neden Python seçtiğimizi öğrendik.</p>
+
+<p>Bununla birlikte Python’a ufak bi’ giriş yapıp Python kodlarının sözdizimini anlayıp ileride bizleri neyin beklediğini anlamaya çalıştık.. Bu sayımızda Python’da daha da derinlere ineceğiz. Ve kesinlikle daha elle tutulur şeyler yapmayı deneyeceğiz.</p>
+
+<h2 id="pythonda-art-fadeleri">Python’da Şart İfadeleri</h2>
+
+<p>Programlama yaparken şart ifadeleri programın gerçekten çok büyük bir bölümünü kapsar. Kullanıcının istekleri, işletim sisteminin uyumluluğu, donanımın uyumluluğu ve daha bir çok kontrol şart ifadeleri tarafından yapılır.</p>
+
+<p>Bir robot tasarladığımızı düşünelim. Robotun yürüme fonksiyonlarını tanımlıyoruz. Robotun yürüme işini adam akıllı yapabilmesi için ona anlayacağı dilde (Makine dili ya da makine diline çevrilebilen bir dilde) şu ifadeleri söylememiz gerekir:</p>
+
+<ul>
+  <li>Eğer karşında bir cisim varsa yönünü değiştir ve karşında bir cisim olup olmadığını kontrol et.</li>
+  <li>Yok, karşında bir cisim yoksa yoluna devam et.</li>
+</ul>
+
+<p>Bu şekilde robotumuz biryerlere çarpmadan ilerleyebilir. Farkındaysanız bunu şart ifadeleriyle sağladık. Yani robotun yürüme işini şarta bağladık. Ya da şöyle bir örnek verelim:</p>
+
+<p>Bir program yazdık. Programın bir kısmında kullanıcının bastığı tuşa göre işlem yapacağız. ‘Ç’ tuşu programdan çıkmaya, ‘D’ tuşu devam etmeye yarasın. O halde programa yine anlayacağı dilde şöyle söylememiz gerekir:</p>
+
+<ul>
+  <li>Eğer kullanıcı ‘Ç’ tuşuna basarsa programdan çık.</li>
+  <li>Yok eğer kullanıcı ‘D’ tuşuna basarsa programa devam et.</li>
+</ul>
+
+<p>Bu işlemi yapmak için yine şart ifadelerini kullanmalıyız.</p>
+
+<p>Eğer şart ifadelerinin mantığı anlaşıldıysa şimdi bunu Python dilinde nasıl ifade edebileceğimizi görelim.</p>
+
+<h3 id="if-deyimi">If Deyimi</h3>
+
+<p>Python’da şart ifadeleri bir bütündür. Genellikle tek kullanılmazlar. Ancak if deyimi şart ifadelerinin temelini oluşturur.</p>
+
+<p>Şart ifadelerini ‘if’ deyimi ile başlatırız. İf deyimini kullanmayı öğrenmeden önce girintilerde ilgili bir hatırlatma yapayım:</p>
+
+<p>Python sözdizimi girintiler ile yazılır. Python’da ‘:’ ifadesinden sonra girinti gelmelidir. Eğer IPython3 kullanmıyorsanız ‘:’ ifadesinden sonra kendiniz girinti bırakmalısınız. Bunu 4 boşluk ya da ‘tab’ tuşu ile sağlayabilirsiniz. Daha detaylı bilgi için önceki sayıya bakabilirsiniz.</p>
+
+<p>Bu ufak hatırlatmadan sonra if deyimini nasıl kullanacağımızı göstereyim:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if şartifadesi:
+	Çalışacak 1. kod
+	Çalışacak 2. kod
+	             .
+	             .
+	Çalışacak n. kod
+</code></pre>
+</div>
+
+<p>Kodlarımızı bu formüle göre yazdığımızda eğer şart sağlanırsa altına yazdığımız kodlar çalışacaktır. Şimdi daha iyi anlamak için bir örnek verelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'a değeri 5 olduğundan if ifadesinin içine girildi'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Bu kodları çalıştırdığımızda ‘a değeri 5 olduğundan if ifadesinin içine girildi’ çıktısını alacaksınız. Çünkü yazdığımız kodlar bizim dilimizde aşağıdaki ifadeye takabul ediyor:</p>
+
+<ul>
+  <li>Eğer a değeri 5 ise ‘a değeri 5 olduğundan if ifadesinin içine girildi’ ifadesini döndür.</li>
+</ul>
+
+<p>a değeri gerçektende 5 olduğu için if deyiminin altına yazdığımız kodlar çalıştı. Birde şöyle deneyelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"a değeri 3'tür. Bu yüzden bu yazıyı görüyorsunuz."</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Bu kez hiçbir çıktı almadık. Çünkü a’nın değeri 3 değil. Yani ‘if’ deyimi karşısındaki ifade doğru olduğunda bünyesindeki kodların çalışmasına izin veriyor.</p>
+
+<p>Bu arada if deyimini kullanırken eşitlik belirtmek için ‘==’ ifadesini kullanıyoruz. Python’da bu tip ifadelere işleç denir. İşleçleri ileride detaylı biçimde görecek olsakta şimdilik sadece göstermem şart ifadelerini anlamak için gereklidir.</p>
+
+<blockquote>
+  <ul>
+    <li><strong>’==’  :</strong> Eşitlik bildirir. İki ifadenin birbirine eşit olduğunu kontrol eder.</li>
+    <li><strong>’!=’  :</strong> Eşitsizlik bildirir. İki ifadenin birbirine eşit olmadığını kontrol eder.</li>
+    <li><strong>’&lt;’ :</strong> Küçüklük bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu kontrol eder.</li>
+    <li><strong>’&gt;’ :</strong> Büyüklük bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu kontrol eder.</li>
+    <li><strong>’&lt;=’ :</strong> Küçük - eşitlik bildirir. İlk ifadenin ikinci ifadeden küçük olduğunu ya da eşit olduğunu kontrol eder.</li>
+    <li><strong>’&gt;=’ :</strong> Büyük - eşitlik bildirir. İlk ifadenin ikinci ifadeden büyük olduğunu ya da eşit olduğunu kontrol eder.</li>
+  </ul>
+</blockquote>
+
+<p>Aslında kontrolü bu işleçler yapar. Yani eğer bu işleçler yaptıkları kontrole göre True ya da False değeri döndürürler. Bunu, aşağıda da görebilirsiniz:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="s">'qwe'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="s">'qwerty'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="s">'qwe'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">==</span> <span class="n">f</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">==</span> <span class="n">e</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="n">e</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="n">e</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="n">d</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">==</span> <span class="n">d</span>
+<span class="bp">False</span>
+</code></pre>
+</div>
+
+<p>Eğer bu işleçlerin yaptığı kontrollerden olumlu sonuç alınıyorsa True değeri döndürülür. Eğer ‘if’ deyiminin karşısında True değeri varsa aşağısındaki kodlar çalıştırılır. Yani ‘if’ deyimini şu şekilde de kullanabilirsiniz:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'İf deyiminin karşısındaki ifade doğru'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Bu şekilde if deyimi kontrol yapmadan bünyesindeki kodları çalıştırır. Python’da True ifadesi sayısal biçimde 1 olarak gösterilir. Yani bir önceki örnekle aşağıdaki örnek tamamen aynıdır:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'İf deyiminin karşısındaki ifade doğru'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Dilerseniz ‘if’ deyiminin karşısına bu kez de False değeri verelim. Aşağıdaki iki örnekte tıpkı yukarıdakiler gibi aynı şeyi ifade eder:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'İf deyiminin karşısındaki ifade doğru'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="bp">False</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'İf deyiminin karşısındaki ifade doğru'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Yukarıdaki kodlardan birini denediyseniz hiçbir çıktı alınmadığını görmüşsünüzdür.</p>
+
+<p>Şimdi çok küçük bir parola denetim programı yapıp konumuza devam edelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">ş</span><span class="n">ifre</span> <span class="o">=</span> <span class="s">'abcde555'</span>
+
+<span class="n">giri</span><span class="err">ş</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Lütfen şifreyi girin: '</span><span class="p">)</span>
+<span class="c">#Bu kısımda istediğiniz bir şifre deneyin...</span>
+
+<span class="k">if</span> <span class="err">ş</span><span class="n">ifre</span> <span class="o">==</span> <span class="n">giri</span><span class="err">ş</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Giriş Başarılı"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Eğer input fonksiyonuna verdiğiniz cevap başta tanımladığınız şifrenin aynısı ise ‘Giriş Başarılı’ ifadesi dönmeli.</p>
+
+<p>İf deyimi hakkında oldukça şey öğrendik. Şimdi şart ifadelerinin diğer deyimine geçelim.</p>
+
+<h3 id="else-deyimi">Else Deyimi</h3>
+
+<p>‘if’ kelimesi İngilizce de ‘eğer’ anlamına gelirken, ‘else’ ifadesi ‘aksi halde’ anlamına gelir. Python dilindede bu deyimleri gerçek anlamlarında kullanırız.</p>
+
+<p>‘Else’ deyimine şöyle bir örnek vereyim:</p>
+
+<ul>
+  <li>a değeri 7 ‘dir.</li>
+  <li>eğer a değeri 3 ise ekrana ‘Doğru’ yazdır. Aksi halde ekrana ‘Yanlış Cevap’ yazdır.</li>
+</ul>
+
+<p>Şimdi bu ifadeyi Python’da yazalım:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Doğru'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Yanlış Cevap'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Yukarıdaki kodlardada anlaşıldığı gibi eğer şartımız doğru değilse hiçbir kontrol yapmadan ‘else’ deyiminin altındaki kodlar çalıştırılıyor. Yani a değeri 4,6,88,100 ve 3 haricindeki hangi sayı/değer olursa olsun ekranda ‘Yanlış Cevap’ yazısı döndürülecek.</p>
+
+<p>Kısacası if deyiminin kodları çalıştırılmazsa else deyiminin kodları çalıştırılır. İf deyiminin kodları çalıştırılırsa else deyiminin kodları çalıştırılmaz. Ufak bir örnek verip devam edelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="err">ş</span><span class="n">ifre</span> <span class="o">=</span> <span class="s">'SuDoPyThoN55'</span>
+
+<span class="n">al</span><span class="err">ı</span><span class="n">nan</span> <span class="o">=</span> <span class="s">'123456'</span>
+
+<span class="k">if</span> <span class="err">ş</span><span class="n">ifre</span> <span class="o">==</span> <span class="n">al</span><span class="err">ı</span><span class="n">nan</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Tebrikler sisteme başarı ile giriş yaptınız...'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Malesef hatalı giriş yaptınız.'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h3 id="elif-deyimi">Elif Deyimi</h3>
+
+<p>Elif deyimi else ve if deyiminin karışımıdır. Genellikle if ve else deyimlerinin arasına girer. İf deyiminin karşısındaki şartın yanlış olduğu durumda işletilir. Else deyiminden farkı ise karşısına şart almasıdır.</p>
+
+<p>Biraz havada kaldı gibi :) Hemen bi’ örnek vereyim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="k">print</span><span class="p">(</span><span class="s">'2+7'</span> <span class="o">+</span> <span class="s">'ya da '</span> <span class="o">+</span> <span class="s">'5 + 5'</span> <span class="o">+</span> <span class="s">'7 + 5'</span> <span class="o">+</span> <span class="s">'sorularından birini cevaplayın'</span><span class="p">)</span>
+
+<span class="n">cevap</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Cevap: '</span><span class="p">)</span>
+<span class="c">#Cevap bu fonksiyona verilir.</span>
+
+<span class="k">if</span> <span class="n">cevap</span> <span class="o">==</span> <span class="s">'9'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'1. soruya verdiğiniz cevap doğru'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">cevap</span> <span class="o">==</span> <span class="s">'10'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'2. soruya verdiğiniz cevap doğru'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">cevap</span> <span class="o">==</span> <span class="s">'12'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'3. soruya verdiğiniz cevap doğru'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Hiçbir Soruya doğru cevap veremediniz.'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Bu örnek if, elif ve else deyimlerini anlatıyor. Elif deyiminin sınırı yoktur istediğiniz kadar elif kullanabilirsiniz. Ancak iyi bir programcı bunu en aza indirmelidir.</p>
+
+<p>Ben elif yazmam onun yerine hepsine if yazarım diyorsanız size önerim yukarıdaki örneğin aynısını sadece elif deyimlerini if olarak değiştirip denemenizdir.</p>
+
+<p>Bir sorun var değil mi? Eğer hala çözemediyseniz foruma bekleriz .</p>
+
+<h3 id="art-fadelerinde-dier-leler">Şart İfadelerinde Diğer İşleçler</h3>
+
+<p>Şart ifadelerinde kullandığımız ve gerçekten işe yarayan iki önemli işlecimiz daha var. Kullanımı oldukça basit; ‘and’ ve ‘or’.</p>
+
+<ul>
+  <li><strong>‘and’:</strong> ‘ve’ anlamına gelir. Sağında ve solundaki her iki ifadenin doğru olması gerekir. Aksi takdirde True değeri dönmez.</li>
+  <li><strong>‘or’:</strong> ‘veya’ anlamına gelir. Bağladığı ifadelerden en az birinin doğru olması True değerinin dönmesi için yeterlidir.</li>
+</ul>
+
+<p>Aşağıdaki örneklere bakın:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">d</span> <span class="o">=</span> <span class="s">'a'</span>
+<span class="n">e</span> <span class="o">=</span> <span class="s">'li'</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="c">#--------------True Değerleri---------------#</span>
+<span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">(</span><span class="n">f</span> <span class="o">-</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="n">e</span> <span class="o">==</span> <span class="s">'ali'</span><span class="p">)</span>
+<span class="p">(</span> <span class="p">(</span><span class="mi">8</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">==</span><span class="mi">7</span><span class="p">)</span> <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="n">e</span> <span class="o">==</span><span class="s">'ali'</span><span class="p">)</span>
+
+ <span class="c">#------------False Değerleri-----------------#</span>
+<span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="n">d</span> <span class="o">==</span> <span class="s">'ali'</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">(</span><span class="n">f</span> <span class="o">-</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">e</span> <span class="o">+</span> <span class="n">d</span> <span class="o">==</span> <span class="s">'ali'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Bu işleçler yaptığı kontroller sonucunda ‘True’ ya da ‘False’ değeri döndürüyor. O halde biz bu işleçleri şart ifadelerinde rahatlıkla kullanabiliriz.</p>
+
+<h2 id="ubirimdekiler-uar-idedekiler-kalr">Uçbirimdekiler Uçar IDE’dekiler Kalır</h2>
+
+<p>Bu kısımla birlikte programcılık serüvenimizde adeta bir çağı kapatıp yeni bir çağ  açacağız. Neden bu başlığı bu kadar büyüttüm? Çünkü bu zamana kadar Python’da yaptığımız her şey başlıkta yazdığı gibi uçbirimdeydi (IPython da python uçbirimi olarak görülebilir) ve uçtu. :) Ayrıca açık konuşayım yaptıklarımız çokta işe yaramıyordu. Aslında bu bildiklerimizle çok güzel uygulamalar yapabiliriz ama yorum satırında çalışmak bize büyük engel.</p>
+
+<p>Esasında bu kısımdan önceki örnekler bu engelden ötürü hep aynı şeylerin etrafında dönüyordu. Ama artık çok daha geniş kapsamlı ve çok daha kaliteli uygulamalar yapabileceğiz.</p>
+
+<p>Bu bahsettiklerimin tamamının sonu bir IDE’ye varıyor. Peki IDE nedir? Türkçe’ye tümleşik geliştirme ortamı olarak çevrilen ve kodlamacılara kod yazımı süresince yardımcı olan metin editörleridir. Aslında kimi geliştiriciler programlamaya yeni başlayanların çok gelişmiş bir IDE kullanmamasını önerirler. Çünkü çok gelişmiş IDE’ler ciddi anlamla leb demeden leblebiyi anlayacak düzeyde olabilirler. Bu durumun öğrenmeyi zorlaştırdığı söylenir. Yani küçük bir çocuğun ödevlerine yardım edeyim ayağına ödevlerin tamamını tek başına bitirmek gibi. Bu geliştiriciler çok gelişmiş IDE’leri birde çok profesyonelce tasarlandığı için tavsiye etmezler. Çok gelişmiş IDE’ler büyük projeler için geliştirildiğinden küçük denemelerde fazla sayıda klasör, bilinmeyen terimler, bilinmeyen dosya uzantıları gibi  fazla detayları küçücük bir deneme programı için oluşturur. Bu da tedirginlik yaratabilir.</p>
+
+<p>Öte yandan bir grup geliştirici ise çok gelişmiş IDE’lerin yeni başlayan programcıların öğreniminde bir sakınca olmadığını hatta yardımcı olduğunu savunur. Akıllı kod renklendirme, düzenli görünüm, her şeyin elin altında olması gibi özellikler savunmalarını oluşturur. Aslında bu da doğru bir yaklaşımdır.</p>
+
+<p>Bana kalırsa her iki görüşte doğrudur. Bu yüzden bu güne kadar kullandığım ve memnun kaldığım tüm IDE’leri anlatacağım. İsteyen kişi istediği IDE’yi seçebilir. Bana kalırsa bu seviye için ilk anlatacağım IDE olan IDLE bizler için en uygunudur. Dediğim gibi tercih sizin…</p>
+
+<h3 id="idle">IDLE</h3>
+
+<p>IDLE Python’un resmi olarak desteklediği çok gelişmiş olmayan her seviyedeki geliştirici için kullanılabilir ve Python’a tam olarak uyumlu bir tümleşik geliştirici ortamıdır.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonIDLE1.png" alt="" /></p>
+
+<p>Kullanımı oldukça basittir. İndirdiğinizde Python’a tam uyumlu şekilde gelir. İçinde birde gelişmiş bir Python yorumlayıcı bulundurur. Programı ilk açtığınızda sizi bu yorumlayıcı karşılar. CTRL-N tuş kombinasyonu ile kodların yazılacağı kısma ulaşabilirsiniz. Yazdığınız programı F5 tuşuna basarak kaydedip çalıştırabilirsiniz.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonIDLE2.png" alt="" /></p>
+
+<p>Ubuntu ve türevlerinde bu uygulamayı kurmak için:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install idle-python3.4
+</code></pre>
+</div>
+
+<h3 id="ninja-ide">Ninja IDE</h3>
+
+<p>Ninja IDE açık kaynak kodludur. Python için düzenlenmiştir. IDLE gibi bu yazılım da Python ile yazılmıştır. Gelişmiş bir IDE’dir. Python projeleri için alışıldığında vazgeçilmeyecek bir programdır.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonNinja1.png" alt="" /></p>
+
+<p>Kurulduğunda sizi yukarıdaki gibi bir başlangıç ekranı karşılar. İyi seviyedeki programcılar için oldukça yararlıdır. Eklenti desteği vardır. Yazılan betikler F8 tuşu ile çalıştırılabilir.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonNinja2.png" alt="" /></p>
+
+<p>Kaliteli bir kod renklendirmesi vardır. Hızlı ve kullanıcı dostudur. Kurulduktan sonra hemen program yazmaya başlayabilirsiniz. Herhangi bir özelleştirme gerektimez.</p>
+
+<p>İndirme komutu:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install ninja-ide
+</code></pre>
+</div>
+
+<h3 id="geany">Geany</h3>
+
+<p>Geany oldukça hafif bir IDE’dir. Program sadece Python için yazılmasa da Python için rahatlıkla ve zorlanmadan kullanılabilir. Acemi kullanıcıların kafasını karıştırmayacak düzeydedir.</p>
+
+<p>Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyorum ama kendimi aşırı biçimde de yormak istemiyorum derseniz ve IDLE’yi de bağenmediyseniz Geany ikinci alternatifiniz olabilir. F5 tuşu ile yazdığınız betik çalıştırılır.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonGeany.png" alt="" /></p>
+
+<p>İndirip kurmak için aşağıdaki komutu çalıştırmalısınız:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install geany
+</code></pre>
+</div>
+
+<p>Diğer bazı IDE’leri ve Python’da kullanımlarını forumda Python bölümünde bulabilirsiniz.</p>
+
+<h2 id="yazlanlarn-kaydedilmesi-ve-altrlmas">Yazılanların Kaydedilmesi ve Çalıştırılması</h2>
+
+<p>Yukarıda bahsettiğim programlar aracılığıyla programlarımızı yazabiliriz. Biz bir süre boyunca anlatırken IDLE programını kullanacağız. Şimdi IDLE programını açalım.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonIdleHello1.png" alt="" /></p>
+
+<p>Karşımıza yukarıdaki gibi bir ekran çıkmış olmalı. Kodlarımızı buraya yazmayalım. Çünkü burası Python kabuğu, yani Python yorumlayıcısı. CTRL-N tuşları ya da File»New File yolunu izleyerek kodları yazacağımız alana geçelim.</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonIdleHello2.png" alt="" /></p>
+
+<p>Evet artık programlarımızı oluşturacağımız ekrana ulaştık. Bundan sonra kodlarımızı buradan yazacağız. Her seferinde CTRL-N ya da File»New File yapmak istemiyorsanız; bu ekranda Options»Configure IDLE»General yolunu izleyip, bu ekranda ‘Startup Preferences’ bölümünde ‘Open Edit Window’ kutucuğunu işaretleyebilirsiniz.</p>
+
+<p>Şimdi basit bir program yazalım bu ekrana:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">yazd</span><span class="err">ı</span><span class="n">r</span> <span class="o">=</span> <span class="s">"""
+Merhaba Dünya
+Ben bir Python3 programıyım.
+"""</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">yazd</span><span class="err">ı</span><span class="n">r</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Programı açıklamaya gerek yok. Tabi bir istisna hariç; eğer bir önceki sayıda bahsettiğimiz <strong>string</strong> ifadelerini üç tırnak ile oluşturuyorsak dilediğimiz gibi alt satıra geçebiliriz, boşluk bırakabiliriz. Bu durum sadece <strong>string</strong> ifadesini üç tırnak ile oluşturduğunuzda geçerlidir. Şimdi bu programı çalıştıralım:</p>
+
+<h3 id="ubirim-ile">Uçbirim ile</h3>
+
+<p>Python programlarını uçbirim ile çalıştırmak en makul yol denilebilir. Çünkü eğer hata varsa uçbirim ekranından hatayı rahatlıkla görebiliriz.</p>
+
+<p>Yazdığımız programı uçbirimden çalıştırmak için öncelikle bir yere kaydetmeliyiz. Bunun için IDLE ekranında CTRL-S tuş kombinasyonunu ya da File»Save File yolunu uygulamalıyız. Karşımıza çıkan diyalog pencerede dosyanın kaydedileceği yer belirlenir ve uygun bir isimle dosya kaydedilir.</p>
+
+<p>Programı  “/home/Kul…Adı/Programlarım/”  şeklinde bir dizine ‘deneme.py’ adıyla kaydettiğinizi varsayarsak (Tabi burada ‘Kul…Adı’ sizin kullanıcı adınızdır) program şu komutlarla çalıştırılır:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>cd ./Programlarım/
+python3 deneme.py
+</code></pre>
+</div>
+
+<p>Bu komutları açıklayacak olursak;
+Öncelikle uçbirimden dosyanın olduğu yere gidilir. Bu cd komutuna verilen bir parametre ile yapılır. ‘./’ ise o anki dizine kadar olan yerleri yazmamak içindir. Yani ‘./’ yazdığımda “/home/Kul..Adı” yazmama gerek kalmadı.</p>
+
+<p>Daha sonra programımızı python3 komutuna belirterek çalıştırıyoruz.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python3 deneme.py
+</code></pre>
+</div>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonProgram%C3%87al%C4%B1%C5%9Ft%C4%B1rma1.png" alt="" /></p>
+
+<p>Yukarıdaki ekranı görüyorsanız programı başarı ile çalıştırdınız demektir. Programımız burada çok basit bir program olduğu için uçbirim ekranında sadece ‘Merhaba Dünya’ yazdırıp kendini sonlandırıyor.</p>
+
+<h3 id="ift-tklama-ile">Çift Tıklama ile</h3>
+
+<p>Linux dağıtımlarında bizim hazırladığımız tarzdaki metin belgelerini çalıştırabilmek için bu dosyayı çalıştırılabilir yapmamız yeterlidir. Ancak Ubuntu’nun da varsayılan olarak kullandığı Nautilus dosya yöneticisi, bu tip dosyaları, çalıştırılabilir olmasına rağmen program gibi çalışmasına izin vermez. Eğer Nautilus dosya yöneticisini kullanıyorsanız ve programlarınızı çift tıklama ile çalıştırmak istiyorsanız Nautilus’un bu özelliğini devre dışı bırakmalısınız.</p>
+
+<p>Eğer Naltilus kullanıyorsanız, yukarıdaki özelliği devredışı bırakmak için Nautilus dosya yöneticisini açıp <em>Değiştir»Tercihler»Davranış</em> yolunu izlemeniz gerekir. Karşınızdaki pencere aşağıdaki gibi olmalıdır:</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/Python%C3%87al%C4%B1%C5%9Ft%C4%B1r%C4%B1labilir1.png" alt="" /></p>
+
+<p>Bu pencerede <strong>Çalıştırılabilir Metin Dosyaları</strong> kısmında üç seçenek bulunuyor. Bunlar arasından son seçenek olan <em>‘Her zaman sor’u</em> seçip kapat düğmesine basın.</p>
+
+<p>Bu işlemi yalnızca bir kez yapmanız yeterlidir. Daha sonra programımıza çalışma yetkisi vermeliyiz. Biraz önceki programdan devam edelim. Programımız <em>Programlarım</em> klasöründeydi ve adı <em>deneme.py</em> idi. Şimdi bu programı çalıştırılabilir yapalım:</p>
+
+<p>İki yol var. Dilerseniz .py uzantılı dosyaya sağ tıklayıp özellikler diyin. <em>Erişim Hakları</em> sekmesinden <em>Dosyanın bir program gibi çalışmasına izin ver</em> kutucuğunu işaretleyip kapatın. Ya da uçbirimde Programlarım dizinine ulaşıp şu komutu verin:</p>
+
+<div class="language-text highlighter-rouge"><pre class="highlight"><code>chmod +x deneme.py
+</code></pre>
+</div>
+
+<p>Bu şekilde dosyamızı çalıştırılabilirde yaptık. Bu sayede dosyaya çift tıklayınca bilgisayar bu dosyayı çalıştırmaya çalışacak.</p>
+
+<p>Ancak denediyseniz görmüşsünüzdür ki program çalışmadı. Çünkü işletim sistemine bu programı nasıl çalıştıracağına dair bir ipucu vermiyoruz. O halde programın kodlarını tekrar açıp ipucumuzu programın en başına yazalım:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#! /usr/bin/env python3</span>
+</code></pre>
+</div>
+
+<p>Bu yorum satırına benzesede yorum satırı değildir. İşletim sistemi için önemli bir satırdır. Programı python3 ile çalışacağını bildirir. Tüm bu işlemlerden sonra program çift tıklanınca ve onay kutusundan <strong>Uçbirim ile Çalıştır</strong> düğmesine basınca program çalışır.</p>
+
+<p>Tabi bizim yazmış olduğumuz programda bir istisnai durum var. Programlar işlerini bitirene kadar çalışırlar. İşlerini bitirir bitirmez kapanırlar. Ee bizim programımızın işi uçbirime ‘Merhaba Dünya’ yazdırmak. Bu işini bitirnce kapanıyor. Bizde ne olup bittiğini göremiyoruz. Bu yüzden programın sonuna birde şu kodu ekleyelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">input</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>Artık programımızı çift tıklayarak çalıştırabiliriz. Program, biz bir tuşa basana kadar kapanmaz.</p>
+
+<h2 id="programlamaya-devam">Programlamaya Devam</h2>
+
+<p>Programlarımızı kaydetmeyi öğrenmişken hemen bir örnek yapalım ve bu işe ısınalım.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="c">#! /usr/bin/env python3</span>
+
+<span class="s">"""
+Program ilk program olduğu için geçmişte öğrendiklerimizi pekiştirme
+amaçlıdır. Bir amaca hizmet etmeyen bu program kullanıcıdan kod olarak
+aldığı veriyi ekrana yazdırır.
+
+"""</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"""
+--Programa Hoşgeldiniz--
+
+Lütfen ekrana yazdırmak istediğiniz şeyin kodunu girin.
+Eğer eğer kendiniz bir şeyler yazdırmak istiyorsanız '6' kodunu
+girebilirsiniz.
+
+1 -) 'Merhaba Dünya'
+2 -) 'Hayat Nasıl'
+3 -) 'Ben Python dili ile yazıldım'
+4 -) 'İyi Bayramlar'
+5 -) 'İyi geceler'
+6 -) Kendim Gireceğim
+"""</span><span class="p">)</span>
+
+<span class="c">#Programımızın giriş yazısı yazıldı.</span>
+
+<span class="n">giri</span><span class="err">ş</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Kod: ")</span><span class="err">
+
+</span><span class="s">if giriş == "1":</span><span class="err">
+</span><span class="s">    print('</span><span class="n">Merhaba</span> <span class="n">D</span><span class="err">ü</span><span class="n">nya</span><span class="s">')</span><span class="err">
+
+</span><span class="s">elif giriş == "2":</span><span class="err">
+</span><span class="s">    print('</span><span class="n">Hayat</span> <span class="n">Nas</span><span class="err">ı</span><span class="n">l</span><span class="s">')</span><span class="err">
+
+</span><span class="s">elif giriş == "3":</span><span class="err">
+</span><span class="s">    print('</span><span class="n">Ben</span> <span class="n">Python</span> <span class="n">dili</span> <span class="n">ile</span> <span class="n">yaz</span><span class="err">ı</span><span class="n">ld</span><span class="err">ı</span><span class="n">m</span><span class="s">')</span><span class="err">
+
+</span><span class="s">elif giriş == "4":</span><span class="err">
+</span><span class="s">    print('</span><span class="err">İ</span><span class="n">yi</span> <span class="n">Bayramlar</span><span class="s">')</span><span class="err">
+
+</span><span class="s">elif giriş == "5":</span><span class="err">
+</span><span class="s">    print('</span><span class="err">İ</span><span class="n">yi</span> <span class="n">Geceler</span><span class="s">')</span><span class="err">
+
+</span><span class="s">elif giriş == "6":</span><span class="err">
+</span><span class="s">    giriş2 = input('</span><span class="n">Girece</span><span class="err">ğ</span><span class="n">iniz</span> <span class="n">C</span><span class="err">ü</span><span class="n">mle</span><span class="p">:</span> <span class="s">')</span><span class="err">
+</span><span class="s">    print(giriş2)</span><span class="err">
+
+</span><span class="s">else:</span><span class="err">
+</span><span class="s">    print("Yanlış bir giriş yaptınız.")</span><span class="err">
+
+</span><span class="s">input('</span><span class="err">Çı</span><span class="n">k</span><span class="err">ış</span> <span class="n">yapmak</span> <span class="n">i</span><span class="err">ç</span><span class="ow">in</span> <span class="n">bir</span> <span class="n">tu</span><span class="err">ş</span><span class="n">a</span> <span class="n">bas</span><span class="err">ı</span><span class="n">n</span><span class="o">...</span><span class="s">')</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Şimdi bu programı detaylıca açıklayayım:</p>
+
+<p>Programımızın ilk satırı malum; işletim sisteminin programı nasıl çalıştıracağını bildiriyor. Yani eğer çift tıklayarak çalıştırmayacaksanız bunu yazmanız zorunluluk değil. Bu satırın altında <strong>”"”</strong> işareti ile başlattığımız bir string tipi var. Aslında biz bu ifadeyi yorum satırı olarak kullandık. Programımızın çalışma düzenini, amacını, başlangıç tarihini, bitiş tarihini v.s. burada belirtebiliriz. Zorunluluk değildir. Ancak kodları tekrar okuduğunuzda ya da başka biri okuduğunda iyi bir rehber olacaktır. Bu kısmı yorum satırı işareti olan ‘#’ ile de elirteilirdik ancak bu kez her yeni satırda yeni bir yorum satırı işareti (#) bırakmak zorunda kalırdık. Her ikisine de sıklıkla rastlayacaksınız.</p>
+
+<p>Bir altında bildiğimiz bir fonksiyon olan <em>print</em> var. İçindeki yazı, programımız başladığında ekranda gösterilecek yazıdır. Yine düzenli gözükmesi için (Alt satıra rahat geçebilmek için) <strong>”"”</strong> işareti kullandım. Bir altta bir yorum satırı… Bunu açıklamama gerek yoktur umarım :)</p>
+
+<p>Hemen altında bir <em>input</em> fonksiyonu… Bu fonksiyon, daha alt satırlarda kullanmak için kullanıcının gireceği kodu istiyor. Yani bu kod parçacığı sayesinde yorumlayıcı  önce bir üstteki giriş yazısını andından <strong><em>Kod:</em></strong> soorgusunu gösterecek. Kullanıcı bu sorguya cevap vermelidir.</p>
+
+<p>Cevap verip ‘Enter’ tuşuna bastığı anda bir alttaki kod çalışır. Bu bir şart ifadesidir. Ve bunu dilimize ‘Eğer kullanıcının girdiği değer 1 ise’ diye çevirebiliriz. Burada ‘1’ sayısını tırnak içine almamın sebebi input fonksiyonundan aldığımız cevap bize string şeklinde ulaştırılır. Yani eğer bu şart ifadesinde 1 sayısını tırnak içine almasaydım hata alırdım.</p>
+
+<p>Eğer kullanıcı ‘1’ kodunu seçerse ekrana ‘Merhaba Dünya’ yazılması için bir print fonksiyonu yazdım.</p>
+
+<p>Diğer şart ifadelerini yazmamdaki amaç ilk ifadeyi yazmamdaki amaç ile aynı. Ancak diğerlerinde ‘elif’ deyimini kullandığıma dikkat edin.</p>
+
+<p>Biraz sonra 6. şart deyimini görüyoruz. Bu diğerlerinden farklı ama yine çok basit. Bu kez kullanıcının ‘6’ kodunu  seçmesi durumunda kullanıcıya bir soru daha soruyorum (input ile). Kullanıcıdan aldığım cevabı giriş2 olarak isimlendiriyorum. Bu şekilde kullanıcının girdiği yazı dizisini bir alt satırda ekrana yazdırıyorum.</p>
+
+<p>Birde else deyimi var. Burada kullanıcının yanlış bir şey yaptığını ona bildirmeye çalışıyorum. Bu satırı yazmamış olsaydım ve kullanıcı kod olarak ‘50’ sayısını verseydi program hata verip kapatırdı. Yani else deyimi ile 1,2,3,4,5,6 haricindeki tüm kodları kapsayan bir elif deyimi yazmış gibi oluyorum. Kullanıcı bu bu sayılar dışında bir şey girdiğinde ona bunun yanlış olduğunu bildiriyorum.</p>
+
+<p>Ve son olarak bir input fonksiyonu görüyorsunuz. Bu fonksiyonun mantığı programın çat diye kapanmasını önlemek. Öğrneğin kullanıcı 1 kodunu seçti bu durumda hemen birinci şart ifadesi çalışıyor. Diğer şart ifadeleri uygun olmadığından geçiyor. Program tam kapanacakken input fonksiyonu onu engelliyor. Bu engel olmazsa kullanıcı daha ‘Merhaba Dünya’ yazısını göremeden program hızla kapanacak.</p>
+
+<p>Ve bu şekilde program sonlanıyor. Şimdi bu bilgilerle programı tekrar çalıştırın. Eminim her şey yerine oturmuştur. Eğer bu konuda yanılıyorsam sorularınızı forumun Python bölümünde sorabilirsiniz. :)</p>
+
+<h3 id="len-fonksiyonu">Len() Fonksiyonu</h3>
+
+<p>Programlamaya bir fonksiyon ile devam edeceğiz. Bu fonksiyon kullanımı açısından daha önce detaylıca öğrendiğimiz ‘print’ ve ‘input’ fonksiyonlarına benzer.</p>
+
+<p>Bu fonksiyonun amacı, ona verdiğimiz değerin kaç karakterden oluştuğunu bize belirtmektir. Şimdi bir örnek verelim. Bu örneği herhangi bir IDE ile kaydetmenize gerek yok IPython3 ile çalıştırabilirsiniz:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">De</span><span class="err">ğ</span><span class="n">er</span> <span class="o">=</span> <span class="s">"Bu ifade 26 karakterlidir."</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">De</span><span class="err">ğ</span><span class="n">er</span><span class="p">)</span>
+<span class="mi">26</span>
+</code></pre>
+</div>
+
+<p>Gördüğünüz gibi önce bir string ifadesi oluşturduk. Daha sonra bu string ifadesini bir nesneye atayıp ‘len’ fonksiyonuna verdik. ‘len’ fonksiyonu bu nesneyi işleyerek 26 diye bir sayı değeri döndürdü. Eğer boşlukları da dahil ederek saymışsanız gerçektende bu ifade 26 karakterden oluşuyor. Bu ifadeyi nesneye tanımlamak zorunda değildik. Yani şu biçimde de len fonksiyonu işini başarı ile yapar:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span><span class="nb">len</span><span class="p">(</span><span class="s">"Bu ifade 26 karakterlidir."</span><span class="p">)</span>
+<span class="mi">26</span>
+</code></pre>
+</div>
+
+<p>Farzedelim ki Selim Çarkıfelek televizyon programı için bir yazılım yapacak. Selim’den istenilen; ana bilgisayar’ın başındaki kişinin girdiği cümlenin harf sayısını bildirmesi ve bilgisayar başındaki kullanıcıya güzelce bildirmesi. Şimdi Selime yardım edelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code>
+<span class="c">#! /usr/bin/env python3</span>
+
+<span class="c">################################################</span>
+<span class="c"># Program Selim BAŞINDANKAYNARSULARDÖKÜLMEZ tarafından  #</span>
+<span class="c">#                 Çarkıfelek programı için hazırlanmıştır.                               #</span>
+<span class="c">#                                                                                                                    #</span>
+<span class="c">#  Programın amacı girilen cümlenin karakter sayısını kullanıcıya      #</span>
+<span class="c">#                                       bildirmektir.                                                        #</span>
+<span class="c">################################################</span>
+
+
+
+<span class="n">A</span><span class="err">çı</span><span class="n">l</span><span class="err">ış</span><span class="n">_Yaz</span><span class="err">ı</span><span class="n">s</span><span class="err">ı</span> <span class="o">=</span> <span class="s">"Lütfen Sorgulamak İstediğiniz Cümleyi ya da Kelimeyi girin: "</span>
+<span class="n">girilen</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">A</span><span class="err">çı</span><span class="n">l</span><span class="err">ış</span><span class="n">_Yaz</span><span class="err">ı</span><span class="n">s</span><span class="err">ı</span><span class="p">)</span>
+
+<span class="c">#####Sorgulama Bölümü#####</span>
+
+<span class="n">Ka</span><span class="err">ç</span><span class="n">Kar</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">girilen</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">Ka</span><span class="err">ç</span><span class="n">Kar</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Girdiğiniz ifade "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Ka</span><span class="err">ç</span><span class="n">Kar</span><span class="p">)</span> <span class="o">+</span> <span class="s">"karakterden oluşuyor."</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hiçbir ifade girmediniz"</span><span class="p">)</span>
+
+<span class="nb">input</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>Selim’den istenilen programı, mevcut bilgilerimizle, bu şekilde yazabiliriz. Tabi ki bu program istenileni kısmen karşılayabiliyor. Zaten amaç öğrenmek olduğundan herhangi bir problem yok.</p>
+
+<p>Bu programda giriş kısmını yorum satırları ile yaptık. Önce kullanıcıdan cümleyi aldık. Daha sonra bu cümleyi nesneye iliştirip işlemesi için ‘len’ fonksiyonuna verdik. ‘len’ fonksiyonunu da tekrar bir nesneye bağladık. Çünkü ‘len’ fonksiyonunun bize vereceği değer programın geri kalan kısmında bize lazım. Yani alınan değerin hafızada tutulması gerekiyor. Bu da nesnelendirme ile mümkün.</p>
+
+<p>Aslında dikkatinizi bir şeyin çekmiş olması gerek.</p>
+
+<p>‘KaçKar’ nesnesini print fonksiyonu içinde belirtirken ‘str’ şeklinde bi’ ifade kullandık. Bunun asıl sebebi ‘len’ fonksiyonunun sayı değeri döndürmesi. Yani, print ifadesine aynı anda hem sayı değeri, hemde string değeri kabul etmiyor. Biz hata almamak için ‘KaçKar’ nesnesini yeniden string ifadeye çevirdik. Anlatım biraz kapalı oldu farkındayım. O zaman hemen açık bir anlatıma geçelim.</p>
+
+<h2 id="pythonda-tip-dnmleri">Python’da Tip Dönüşümleri</h2>
+
+<p>Python’da şu anda veritipi olarak iki tip hakkında bilgi sahibiyiz. Bunlardan biri karakter dizileri (string) ve sayı değerleri.</p>
+
+<p>Karakter dizilerini tırnak işareti ile belirtirken, sayı tipinde verileri belirtmek için herhangi bir özel karaktere ihtiyacımız yoktur. Bu iki tip dışında yeni bir veri tipi ise ondalık sayılardır.</p>
+
+<p>Ondalık sayılar bildiğimiz matematikteki ondalık sayılardır. ‘ 10.4 ‘, ‘5.3’ gibi. Burada normal bildiklerimizden farklı olan tek şey Türkçe’de bildiğimiz ondalıklı sayılar şeklinde ifade edilmediğidir; virgül yerine nokta kullanılmasıdır.</p>
+
+<p>Python veritipleri ile ünlü bir programlama dilidir. Bu nedenle fazla ilerlemeden bu konu hakkındaki bilgimizi artıralım derim:</p>
+
+<p>Python programlama dilinde bir verinin ne tipte olduğunu öğrenmek için ‘type’ fonksiyonu kullanılır. Burada verilen çıktı verinin tipidir. Tabi ki çıktılar ingilizcedir.</p>
+
+<ul>
+  <li><strong>&lt;class ‘int’&gt; :</strong> ‘type’ fonksiyonundan aldığınız bu yanıt, ona verdiğiniz nesnenin bir sayı nesnesi olduğuu belirtir.</li>
+  <li><strong>&lt;class ‘str’&gt; :</strong> Bu çıktı verdiğiniz nesnenin karakter dizisi (string) değeri olduğunu belirtir.</li>
+  <li><strong>&lt;class ‘float’&gt; :</strong> Bu çıktı ise nesnenin ondalık sayı olduğunu belirtir.</li>
+</ul>
+
+<p>Aşağıdaki örnekleri IPython3 veya uçbirimden deneyebilirsiniz:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="s">'DenizKızı'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="s">' 8 Kebap'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="s">"12"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="mf">12.58</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="s">"12.58"</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt; type(b)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;type(c)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;type(d)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;type(e)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">float</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;type(f)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Eğer genel anlamda anlaşıldıysa bu veritipleri hakkında detaylı bilgi edinelim.</p>
+
+<h3 id="say-deerleri-integer">Sayı Değerleri (Integer)</h3>
+
+<p>Python’da sayı değerleri bildiğimiz sayı değerleri ile eşdeğerdir. Yani matematik dersinde kullandığımız tam sayı değerleri. Aritmetik işlemler yapılırken kullanılabilir.</p>
+
+<p>Sayı değeri oluşturmak için ek bir şey yapmaya gerek yok. Örneğin</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<p>ifadesinde ‘a’ bir sayı değeridir.</p>
+
+<p>İfadeleri sayı değerine dönüştürmek için ‘int’ fonksiyonuna ihtiyaç duyarız.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s">"3"</span>
+<span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Şu anda tanımladığımız ‘a’ değeri karakter dizisi. Şimdi aynı ‘a’ nesnesini ‘int’ fonksiyonu ile sayı değerine dönüştürelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Şu anda ‘int’ fonksiyonunun yaptığı işi gördük ama bu durum kalıcı olmadı. Tekrar ‘type(a)’ kodunu denerseniz bu nesnenin hala string ifadesi olduğunu görürsünüz. Bunun kalıcı olması için çeviri sonucunu başka bir nesneye atamalıyız. Hemen görelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="s">"123456"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;type(c)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Tabi ki siz bu işi şöylede yapabilirsiniz. Bu şekilde birgisayar belleğinden tasarruf edersiniz.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">karakter</span> <span class="o">=</span> <span class="s">"34"</span>
+<span class="n">karakter</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">karakter</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+<p>Bu şekilde ‘karakter’ nesnesini iki kez tanımladık. En son ne şekilde tanımlandıysa nesne odur. Bu örnekte ‘karakter’ nesnesi artık bir sayı değeridir.</p>
+
+<h3 id="karakter-dizisi-string">Karakter Dizisi (String)</h3>
+
+<p>Karakter dizilerini aslında birçok yerde gördük. Yani bu tipe aşinayız. Öncelikle karakter dizilerini nasıl tanımlıyorduk bunları görelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">K_dizi_1</span> <span class="o">=</span> <span class="s">"Bu Bir Karakter Dizisidir"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">K_dizi_1</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt; K_dizi_2 = '</span><span class="n">E</span> <span class="n">Buda</span> <span class="n">Bir</span> <span class="n">Karakter</span> <span class="n">Dizisidir</span><span class="s">'</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; type(K_dizi_2)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt; K_dizi_3 = """Bu Bir karakter dizisimidir?</span><span class="err">
+</span><span class="s">. . .  Tabiki Karakter Dizisidir."""</span><span class="err">
+</span><span class="s">&gt;&gt;&gt;type(K_dizi_3)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+
+</span></code></pre>
+</div>
+
+<p>Karakter dizilerini bu şekilde tanımlıyorduk. Tanımlama işinin böyle 3 seçeneği olmasının nedeni ihtiyaçlardı. Örneğin şu ifadeyi tanımlayabilmek için;</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Karakter</span> <span class="o">=</span> <span class="s">" 'İzmir Belalısı' ile başım dertte (!) "</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">Karakter</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">str</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>kodlarını kullandık. İllaha ‘İzmir Belalısı’ ifadesini tek tırnak ile kullanacaksak şöylede yazabilirdik:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">Karakter</span> <span class="o">=</span> <span class="s">""" 'İzmir Belalısı' ile başım dertte (!) """</span>
+
+</code></pre>
+</div>
+
+<p>Verileri karakter dizisine çevirmek için str() fonksiyonundan yararlanırız.</p>
+
+<p>Yani elimizde bir sayı değeri varsa bu değeri ‘str()’ fonksiyonu sayesinde karakter  dizisi haline çevirebiliriz.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>     
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">int</span><span class="s">'&gt;</span><span class="err">
+
+</span><span class="s">&gt;&gt;&gt;a = str(a)</span><span class="err">
+</span><span class="s">&gt;&gt;&gt;type(a)</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="nb">str</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Python yorumlayıcısı önce eşitliğin sağ tarafındaki işi yapar.
+daha sonra yaptığı işlemin sonucunda çıkan değeri eşitliğin solundaki nesneye atar.</p>
+
+<p>Hatırlarsanız Çarkıfelek için hazırladığımız uygulamada bu fonksiyonu kullandık.
+Uygulamamızı ana hatlarıyla birdaha hazırlayalım ve anlatayım.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">A</span><span class="err">çı</span><span class="n">l</span><span class="err">ış</span> <span class="o">=</span> <span class="s">'''Programa Hoşgeldiniz'''</span>
+<span class="n">Al</span><span class="err">ı</span><span class="n">nan</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Lütfen araştırmak istediğiniz cümleyi girin:"</span><span class="p">)</span>
+<span class="n">Karakter_Say</span><span class="err">ı</span><span class="n">s</span><span class="err">ı</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">Al</span><span class="err">ı</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Girdiğiniz veri"</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">Karakter_Say</span><span class="err">ı</span><span class="n">s</span><span class="err">ı</span><span class="p">),</span> <span class="s">"karakter içeriyor"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Programın daha detaylı hali önceki sayfalarda anlatıldığı için biz şimdi asıl konumuza dönelim. ‘len()’ fonksiyonundan aldığımız değer bir sayı değeridir. ‘print()’ fonksiyonu ise hem sayı değerini hemde karakter dizisini aynı anda ekranda gösteremez. Biz de ‘print()’ e yardımcı oluyoruz ve sayı değeri olarak döndürülen değeri karakter dizisine çeviriyoruz.
+Programda bizi ilgilendiren kısmın yazılmasını birkaç farklı şekilde yapabiliriz. Bunlardan işe en çok yarayanı seçip kullanmak algoritmik düşünce yeteneği gerektirir.</p>
+
+<p>Burada ‘Karakter_Sayısı’ nesnesinin karakter dizisine dönüştürülmüş hali işimize sadece bir defa yaradığı için bu dönüştürmeyi ‘print()’ fonksiyonunun içinde yaptık.
+Bu nesneyle daha çok uğraşmamız gerekseydi farklı bir yolla yapabilirdik. Birdahaki sayıda karakter dizilerinin metotlarını öğreneceğiz. O zaman bu programı daha farklı ve işe yarar biçimde düzenleyeceğiz.</p>
+
+<h3 id="ondalk-say-float">Ondalık Sayı (Float)</h3>
+
+<p>İsmindende anlaşıldığı üzere ondalık sayılar üzerinde duracağız. Merak edip alıştırmalar yapma şansını bulmuşsanız sayı değerlerinde bazı durumlarda verinin tipi farklı oluyordu. Evet programlama işi cümle değil. Ya da bu iş benim işim değil. Ben bir örnekle anlatatayım.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">float</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre>
+</div>
+
+<p>Anlatmak istediğim buydu. Ben sayı(integer) değerlerle uğraştım ama bana gelen değer ‘float’. Sebebi 5’in 2’ye bölünmesinden çıkan sonucun 2,5 olması. Python sonucu otomatik olarak float değerine çevirdi.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="mf">2.5</span>
+</code></pre>
+</div>
+
+<p>Buradaki bir diğer hususta Python’un ondalık sayıları ayırırken Türkçe’deki gibi virgül değil nokta işareti kullanmasıdır. Zaten virgül kullanırsanız hata alacaksınız.</p>
+
+<p>Bir nesneyi ondalık sayıya dönüştürürken ‘float()’ fonksiyonunu kullanacağız.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="mf">3.0</span>
+</code></pre>
+</div>
+
+<p>Eğer bir ondalık sayı nesnesinin sadece tam kısmına ihtiyaç duyuyorsanız bu nesneyi tekrar sayı değerine çevirebilirsiniz.</p>
+
+<h2 id="son">Son</h2>
+
+<p>Bu serimizin 2. sayısınında sonuna geldik. Umarım amacıma ulaşmışımdır. Bu seri hakkında istek ve önerilerinizi forumda SUDO E-Dergi bölümünde. Python ile ilgili sorularınızı forumda Yazılım»Programlama»Python bölümünde belirtebilirsiniz.</p>
+
+<h2 id="sorular">Sorular</h2>
+
+<p><strong>Soru 1:</strong>
+    Ondalık sayıları yuvarlamak için ‘round()’ fonksiyonunu kullanırız. Round fonksiyonu iki parametre alır. Birincisi yuvarlanaak sayı, ikincisi     noktadan sonra hangi rakamın yuvarlanacağı. Parametreler birbirinden virgül ile ayrılır. Bir örnek verelim:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="mf">125.563</span> <span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mf">125.56</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">12.8</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">round</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="mf">13.0</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Sizden herhangi bir IDE ile sayıların istenilen basamağından yuvarlanmasını sağlayan biz program yapmanızı istiyoruz. Program önce kullanıcıdan    sayıyı almalı. Daha sonra kullanıcıdan hangi basamağın yuvarlanacağını almalı. Daha sonra yuvarlayıp kullanıcıya değeri göstermeli. Eğer yuvarlanacak taban negatif bir sayı ise kullanıcıya bu işi yapmayacağını belirten bir mesaj vermeli.
+
+_İpucu_: 'round' fonksiyonu sadece ondalıklı sayı ve sayı değeri alabilir.
+</code></pre>
+</div>
+
+<p><strong>Soru 2:</strong>
+    Bir program yapma programı yaptığınızı ve şu an bu programda veritipleri ile uğraştığınızı düşünün. Kullanıcı önce veriyi girecek sonra bir menü ile hangi tipe dönüştürmek istediği sorulacak istenilen tipe dönüştürülecek ve kullanıcıya bildiirilecek. Yani program aşağı yukarı böyle olacak:</p>
+
+<p><img src="images/post/pyhton-programlama-seri-ii/PythonSoru.png" alt="" /></p>
+
+<p>Soruların çözümlerini tartışmak, çözümlerin nasıl hazırlanacağı hakkında fikir sahibi olmanız için sizi foruma bekliyoruz…</p>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/python" class="ui label"> python </a>
+
+    
+    
+    <a href="/etiket/programlama" class="ui label"> programlama </a>
+
+    
+    
+    <a href="/etiket/sudo-61-sayi" class="ui label"> Sudo 61. Sayı </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/pyhton-programlama-seri-ii';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>

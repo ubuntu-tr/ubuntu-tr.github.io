@@ -1,0 +1,328 @@
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kabuk Programlama (Bash) - 5</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/main.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/ubuntu-tr.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/github-markdown.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/highlight.css">
+<link rel="stylesheet" href="theme/ubuntu-tr/css/flexslider.css">
+<script src="theme/ubuntu-tr/js/jquery-2.2.0.min.js"></script>
+<script src="theme/ubuntu-tr/js/ubuntu-tr.js"></script>
+<script src="theme/ubuntu-tr/js/jquery.flexslider-min.js"></script>
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#dd4814">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#dd4814">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="icon" sizes="192x192" href="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png">
+
+        <script src="theme/ubuntu-tr/js/relatedPosts.js"></script>
+        <script src="theme/ubuntu-tr/js/jquery-ui.min.js"></script>
+        <script src="theme/ubuntu-tr/js/tocify.js"></script>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/tocify.css">
+    </head>
+    <body>
+        <input type="checkbox" name="menuDugme" id="menuDugme1">
+<header>
+    <nav class="ustMenu">
+        <a href="http://www.ubuntu-tr.net/">Anasayfa</a>
+        <a href="https://forum.ubuntu-tr.net/">Forum</a>
+        <a class="aktif" href="/">SUDO</a>
+        <a href="http://wiki.ubuntu-tr.net/">Wiki</a>
+        <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+        <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
+        <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
+        <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
+    </nav>
+    <nav class="menu">
+        <a class="logo" href="">
+            <label for="menuDugme1">
+               <img src="theme/ubuntu-tr/images/menu.png" class="menuIcon"/>
+            </label>
+            sudo
+        </a>
+        <a href="/">Ana Sayfa</a>
+        
+        
+	<a href="/haberler/">Haberler</a>
+
+	<a href="/uygulama-tanitimlari/">Tanıtım</a>
+
+	<a href="/nasil-yapilir/">Nasıl?</a>
+
+	<a href="/oyun-eglence/">Oyun / Eğlence</a>
+
+	<a href="/ubuntu+1/">Ubuntu+1</a>
+
+
+        <a></a>
+    </nav>
+</header>
+
+        <div class="ui container">
+        <br /><br />
+            <div class="ui grid equal width stackable">
+                <div class="column">
+                    <div class="ui card fluid">
+                        <div class="content">
+                            <h1 class="ui header">Kabuk Programlama (Bash) - 5</h1>
+                            <div class="meta">
+                                <span><b class="ui sub header orange">Yazar:</b> Erkan Esmer</span>
+                                <span><b class="ui sub header orange">Kategori:</b> <a href="/nasil-yapilir/">Nasıl?</a></span>
+                                <span class="right floated">19 Nisan 2016 tarihinde yayımlandı.</span>
+                            </div>
+                            <div class="description">
+                                Merhaba bir sayılık aradan sonra Bash yazı diziminizin 5. bölümüyle bu sayımızda devam ediyoruz. Hatırlayacağınız üzre baştan başlayıp temel konulara değinerek birçok başlığı işlediğimiz küçük bir uygulama oluşturmaya çalışıyoruz.
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="images/post/Bash-5/1.png">
+                        </div>
+                        <div class="markdown-body">
+                            <p>Bu uygulama her yazı dizimiz sonucunda yeni özellik bir kazanıyor veya yaptığı işlemi daha kısayoldan yapıyor. Şimdiye kadarki ilerleme şeklimiz ve durumumuz için önceki sayılarımıza bakabilirsiniz.</p>
+
+<p>Giriş mahiyetinde bakacak olursak bir klasör ve dosya oluşturup yaptığımız matematiksel işlemi bu dosya ve klasöre kaydeden bir uygulama yaptık şimdiye kadar. İf kontrolleri kullandık. GoTo deyimini kullanıp ardından bunu döngüye çevirdik. Fonksiyon kullanıp kaldırdık.</p>
+
+<p>Bu sayımızda da uygulamamıza, temel matematik işlemlerini seçimimize bağlı olarak yaptıracağız. Uygulama sadece çıkartma işlemi yapıyordu. Şimdi uygulama bizden yine sayıları isteyecek ve ardından yapacağımız işlemi bize seçtirip sonucunu verecek. Bunu Case-Esac kalıbını kullanarak yapacağız.</p>
+
+<p>Ayrıca dergi okurlarımızdan forum isimleri jayw ve monthy_python arkadaşlarımızın ricası üzerine kodları text biçiminde yazımızda kullanacağız. Umarız sizin için kolaylık olur.
+Dergimize göstermiş olduğunuz ilgiden dolayı çok teşekkür ederiz.</p>
+
+<p><strong>Başlıyoruz;</strong></p>
+
+<p>Case-Esac Kalıbı: Bir işlem için birden fazla seçeneğin olduğu durumlarda kullanılır. Bir menü tasarımı yapılıp kullanıcıya bu menüden işlem seçimi yaptırılabilir.</p>
+
+<p>Şimdi uygulamamızın son hâlini hatırlayalım.</p>
+
+<p><img src="images/post/Bash-5/UyugulamaKod-1.png" alt="" /></p>
+
+<p>Burada while döngüsünü girilen sayıların büyük/küçük karşılaştırmasını yapıyoruz. Bu kontrolü temel matematik işlemlerinde sadece çıkartmada kullanacağız. Bu kontolü yapıp ardından typeset -i sonuc ile başlayan işlemimizle çıkartma işlemini yapıyoruz.</p>
+
+<p>Şimdi bu araya Case-Esac kalıbıyla bir ekleme yapıp istediğimiz işlemi yapıp sonucunu alacağız.
+While döngüsünden önceki birinci ve ikinci sayıyı aldığımız kodun arkasına işlemler için seçim menüsünü oluşturalım.</p>
+
+<p><img src="images/post/Bash-5/Case-Esac-Menu.PNG" alt="" /></p>
+
+<p>Burada ekrana “Yapılacak islemi seciniz” mesajıyla beraber 1, 2, 3, 4 şeklinde maddelendirerek “secenek “ değişkenimize atayacağımız işlemin seçimini yansıtıyoruz.</p>
+
+<p>Daha sonra ekrana yansıyan 4 maddeden herhangi birinin seçilmesi ile yapılacak işlemleri belirtiyoruz.</p>
+
+<p><img src="images/post/Bash-5/Case-Kodu-1.PNG" alt="" /></p>
+
+<p>Gördüğümüz gibi 1), 2), 3), 4) şeklinde sonları ;; ile biten kodlar girdik.</p>
+
+<p>1) alanında typeset -i ile başlayan kodumuzla direkt girilen 2 sayıyı toplayıp sonucu klasör ve dosyaya yazıyoruz. Burada toplama işlemi yaptığımız için sayılara büyük/küçük karşılaştırması yapmadık.</p>
+
+<p>2) alanında ise çıkartma işlemi yapıyoruz. Eksi sonuç vermemesi için while [ $sayı1 -lt $sayi2 ] do döngümüz ile girilen sayılara büyük/küçük karşılaştırması yapıyoruz.</p>
+
+<blockquote>
+  <p><strong>Not:</strong>-Siz de diğer işlemler için buna benzer kontroller yapabilirsiniz.- 52. sayımızdaki yazıda -lt, gt ve diğer aritmetik karşılaştırmaları belirtmiştik.</p>
+</blockquote>
+
+<p>3) ve 4) alanlarında da herhangi bir   kontrol yapmadan işlemi yapıp kaydı gerçekleştiriyoruz.</p>
+
+<p>Şimdi uygulamayı çalıştırıp kullanalım. Sarı renkli satırlarda göreceğiniz gibi Case-Esac kalıbı sayıları aldıktan sonra bize seçim menüsünü çıkartıyor.  Biz de bu ekranda 1 numaralı seçimi yapıp toplama işlemini yaptırıyoruz.</p>
+
+<p><img src="images/post/Bash-5/UygulamaCalisti-1.PNG" alt="" /></p>
+
+<p>Bir de çıkartma işlemine koyduğumuz kontrolün çalışıp çalışmadığına bakalım.</p>
+
+<p><img src="images/post/Bash-5/UygulamaCalisti-2.PNG" alt="" /></p>
+
+<p>Uygulamayı tekrar çalıştırıp aynı sayılarla bu çıkartma işlemini seçtiğimizde karşılaştırma yapılıp eksi sonuç vermemesi için uygulama, sayıyı bizden tekrar istiyor.</p>
+
+<p>Böylece Case-Esac kalıbını da kullanmış olduk. Daha çeşitli ve karmaşık kullanımlar için sizler de denemeler yapabilirsiniz. Daha önce de söylediğimiz gibi bizimle de paylaşabilirsiniz.
+Uygulamamızın kodları aşağıdadır.</p>
+
+<p>Görüşmek üzere,</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">"Lutfen birinci klasorun ismini giriniz."</span>
+<span class="nb">read </span>klasor1
+<span class="nb">echo</span> <span class="s2">"Lutfen ikinci klasorun ismini giriniz."</span>
+<span class="nb">read </span>klasor2
+
+mkdir <span class="nv">$klasor1</span>
+mkdir <span class="nv">$klasor2</span>
+<span class="nb">echo</span> <span class="nv">$klasor1</span> <span class="s2">" ve "</span> <span class="nv">$klasor2</span> <span class="s2">" isiminde klasorler olusturuldu. "</span>
+
+<span class="nb">echo</span> <span class="s2">"Lutfen olusturulacak dosyanin ismini giriniz."</span>
+<span class="nb">read </span>dosya1
+touch <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span>
+<span class="nb">echo</span> <span class="nv">$dosya1</span> <span class="s2">" isimli dosya olusturuldu."</span>
+
+<span class="nb">echo</span> <span class="s2">"Lutfen birinci sayiyi giriniz."</span>
+<span class="nb">read </span>sayi1
+<span class="nb">echo</span> <span class="s2">"Lutfen ikinci sayiyi giriniz."</span>
+<span class="nb">read </span>sayi2
+
+<span class="nb">echo</span> <span class="s2">"Yapilacak islemi seciniz."</span>
+<span class="nb">echo</span> <span class="s2">"1-Topla"</span>
+<span class="nb">echo</span> <span class="s2">"2-Cikart"</span>
+<span class="nb">echo</span> <span class="s2">"3-Bol"</span>
+<span class="nb">echo</span> <span class="s2">"4-Carp"</span>
+<span class="nb">read </span>secenek
+<span class="k">case</span> <span class="nv">$secenek</span> <span class="k">in
+
+</span>1<span class="p">)</span><span class="nb">typeset</span> -i sonuc
+<span class="nv">sonuc</span><span class="o">=</span><span class="nv">$sayi1</span>+<span class="nv">$sayi2</span>
+<span class="nb">echo</span> <span class="nv">$sonuc</span> &gt; <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span>
+<span class="nb">echo</span> <span class="s2">"Islemin sonucu:"</span> <span class="nv">$sonuc</span> <span class="s2">" Dosya yolu:"</span> <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span><span class="p">;;</span>
+2<span class="p">)</span><span class="k">while</span> <span class="o">[</span> <span class="nv">$sayi1</span> -lt <span class="nv">$sayi2</span> <span class="o">]</span>;
+<span class="k">do
+</span><span class="nb">echo</span> <span class="s2">"Birinci sayi ikinci sayidan kucuk. Lutfen birinci sayiyi tekrat giriniz."</span>
+<span class="nb">read </span>sayi1
+<span class="nb">echo</span> <span class="s2">"Lutfen ikinci sayiyi giriniz."</span>
+<span class="nb">read </span>sayi2
+<span class="k">done
+</span><span class="nb">typeset</span> -i sonuc
+<span class="nv">sonuc</span><span class="o">=</span><span class="nv">$sayi1</span>-<span class="nv">$sayi2</span>
+<span class="nb">echo</span> <span class="nv">$sonuc</span> &gt; <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span>
+<span class="nb">echo</span> <span class="s2">"Islemin sonucu:"</span> <span class="nv">$sonuc</span> <span class="s2">" Dosya yolu:"</span> <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span><span class="p">;;</span>
+
+3<span class="p">)</span><span class="nb">typeset</span> -i sonuc
+<span class="nv">sonuc</span><span class="o">=</span><span class="nv">$sayi1</span>/<span class="nv">$sayi2</span>
+<span class="nb">echo</span> <span class="nv">$sonuc</span> &gt; <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span>
+<span class="nb">echo</span> <span class="s2">"Islemin sonucu:"</span> <span class="nv">$sonuc</span> <span class="s2">" Dosya yolu:"</span> <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span><span class="p">;;</span>
+4<span class="p">)</span><span class="nb">typeset</span> -i sonuc
+<span class="nv">sonuc</span><span class="o">=</span><span class="nv">$sayi1</span><span class="k">*</span><span class="nv">$sayi2</span>
+<span class="nb">echo</span> <span class="nv">$sonuc</span> &gt; <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span>
+<span class="nb">echo</span> <span class="s2">"Islemin sonucu:"</span> <span class="nv">$sonuc</span> <span class="s2">" Dosya yolu:"</span> <span class="nv">$klasor1</span>/<span class="nv">$dosya1</span><span class="p">;;</span>
+<span class="k">esac</span>
+</code></pre>
+</div>
+
+                        </div>
+                        <div class="extra content ui labels grey basic tiny">
+                            
+
+
+    
+    
+    <a href="/etiket/sudo-54-sayi" class="ui label"> Sudo 54. Sayı </a>
+
+    
+    
+    <a href="/etiket/kabuk" class="ui label"> kabuk </a>
+
+    
+    
+    <a href="/etiket/programlama" class="ui label"> programlama </a>
+
+    
+    
+    <a href="/etiket/bash" class="ui label"> bash </a>
+
+
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            /**
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                             */
+                            var disqus_config = function () {
+                                this.page.identifier = '/Bash-5';
+                            };
+                            (function() {  // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = '//bugra9.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <div class="column five wide computer only">
+                    <h3 class="ui header orange dividing">
+                      Benzer Yazılar
+                    </h3>
+                    <div id="rp" class="ui items divided link">
+
+                    </div>
+                    <div id="toc" class="ui items divided link">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+    <nav>
+        <div>
+            <a href="https://ubuntu-tr.net/">Anasayfa</a>
+            <a href="https://ubuntu-tr.net/bize-katilin/">Bize Katılın!</a>
+            <a href="https://ubuntu-tr.net/iletisim/">İletişim</a>
+            <a href="https://ubuntu-tr.net/indir/">İndir</a>
+            <a href="https://ubuntu-tr.net/ubuntu-hakkinda/">Ubuntu Hakkında</a>
+        </div>
+        <div>
+            <a href="https://forum.ubuntu-tr.net/">Forum</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?action=login">Giriş Yap</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=2.0">Duyurular</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?board=142.0">Acemiler için İlk Durak</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
+        </div>
+        <div>
+            <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
+            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
+            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+        </div>
+        <div>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
+            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+        </div>
+        <div>
+            <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
+            <a href="http://gezegen.ubuntu-tr.net/basliklar">Tüm Başlıklar</a>
+            <a href="http://gezegen.ubuntu-tr.net/kunye/">Künye</a>
+            <a href="http://gezegen.ubuntu-tr.net/feed">RSS</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=17310.0">Gezegen’e Başvur</a>
+        </div>
+        <div>
+            <a href="http://www.ubuntu.com/">Ubuntu</a>
+            <a href="http://askubuntu.com/">AskUbuntu</a>
+            <a href="http://ubuntuforums.org/">Ubuntu Forums</a>
+            <a href="http://www.ubuntu.com/download">Download</a>
+            <a href="https://launchpad.net/">Launchpad</a>
+        </div>
+    </nav>
+    <div class="ayirac"></div>
+    <div class="bilgi">
+        <img src="theme/ubuntu-tr/images/GitHub-Mark-120px-plus.png" />
+        <p>Ubuntu-TR Sudo <a href="https://github.com/ubuntu-tr/ubuntu-tr.github.io">Github</a> desteği ile barındırılmaktadır.</p>
+        <p>Tasarım: <a href="https://ubuntu-tr.net/">Ubuntu Türkiye</a> • Alt yapı: <a href="https://jekyllrb.com/">Jekyll</a></p>
+        <img src="theme/ubuntu-tr/images/cc-by-sa2.png" />
+        <p>Bu sitedeki makaleler <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> lisansı altındadır.</p>
+    </div>
+
+</footer>
+
+
+    </body>
+</html>
