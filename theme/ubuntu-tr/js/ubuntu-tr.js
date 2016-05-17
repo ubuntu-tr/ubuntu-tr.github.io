@@ -59,13 +59,11 @@ $('.ui.cards')
     // load content on bottom edge visible
     onBottomVisible: function() {
       // loads a max of 5 times
+      if($('.ui.cards > .card.hidden').size() === 0)
+        return;
       $('.ui.cards > .card:nth-child(-n + '+itemIndex+')').removeClass('hidden');
       itemIndex += 10;
-      $('.ui.cards .image img').visibility({
-            type       : 'image',
-            transition : 'fade in',
-            duration   : 1000
-          });
+      $('.ui.cards .image img').visibility('refresh');
       $(this).visibility('refresh');
     }
   })
