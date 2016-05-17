@@ -1,3 +1,0 @@
-Ubuntu-TR Sudo Projesi
-====================
-
