@@ -44,12 +44,10 @@ $( document ).ready(function() {
   });
 
 $('.infinite > .card:nth-child(n+'+(itemIndex-9)+')').addClass('hidden');
+$('.infinite > .card:nth-child(-n+10) img').each(function( ) {
+  $(this).attr('src', $(this).attr('data-src'));
+});
 
-$('.ui.cards .image img').visibility({
-            type       : 'image',
-            transition : 'fade in',
-            duration   : 1000
-          });
 
 $('.ui.cards')
   .visibility({
@@ -62,8 +60,10 @@ $('.ui.cards')
       if($('.ui.cards > .card.hidden').size() === 0)
         return;
       $('.ui.cards > .card:nth-child(-n + '+itemIndex+')').removeClass('hidden');
+      $('.ui.cards > .card:not(.hidden):nth-child(n+'+(itemIndex-9)+') img').each(function( ) {
+        $(this).attr('src', $(this).attr('data-src'));
+      });
       itemIndex += 10;
-      $('.ui.cards .image img').visibility('refresh');
       $(this).visibility('refresh');
     }
   })

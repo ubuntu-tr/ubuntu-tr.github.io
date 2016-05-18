@@ -1,10 +1,18 @@
 {% for post in list %}
     {% include helper/date.html %}
     {% include helper/category.html %}
+    {% if forloop.index < 10 %}
     <a class="card" href="{{post.url}}">
+    {% else %}
+    <a class="card hidden" href="{{post.url}}">
+    {% endif %} 
         <div class="ui image"> 
             <div class="ui {{ cat.color }} ribbon label">{{ cat.title }}</div>
-            <img class="transition visible" src="http://semantic-ui.com/images/wireframe/square-image.png" data-src="images/post{{post.url}}/{{post.thumb}}"> 
+            {% if forloop.index < 10 %}
+            <img src="images/post{{post.url}}/{{post.thumb}}">
+            {% else %}
+            <img data-src="images/post{{post.url}}/{{post.thumb}}">
+            {% endif %} 
         </div>
         <div class="content">
             <div class="header">{{post.title}}</div>
