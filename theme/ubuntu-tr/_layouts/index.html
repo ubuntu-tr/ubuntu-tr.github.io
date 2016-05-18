@@ -36,7 +36,7 @@
                           En Çok Okunanlar
                         </h3>
                         <div class="ui items divided link">
-                            {% assign list = site.data.mostRead %}
+                            {% assign list = site.data.mostRead | where:'category', 'home' %}
                             {% include list/item.html %}
                         </div>
                         <h3 class="ui header orange dividing">

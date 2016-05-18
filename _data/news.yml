@@ -1,7 +1,7 @@
-- thumb: 15-10-dan-16-04-e-yukseltme.jpeg
-  title: "15.10'dan 16.04'e Yükseltme"
-  url: /15-10-dan-16-04-e-yukseltme
+- thumb: 1.jpeg
+  title: "MongoDB 3.2 yayınlandı"
+  url: /mongodb
   
-- thumb: pyhton-programlama-seri-ii.jpeg
-  title: "PYHTON PROGRAMLAMA - Seri II"
-  url: /pyhton-programlama-seri-ii
+- thumb: heartbleed.jpg
+  title: "İnternet dünyasının %70'i tehlike altında"
+  url: /heartbleed

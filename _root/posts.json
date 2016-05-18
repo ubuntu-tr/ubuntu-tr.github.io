@@ -6,12 +6,19 @@
         {% for post in posts %}
             {% if forloop.index != 1 %},{% endif %}
           {
-            "title": "{{ post.title }}",
+            "title": "{{ post.title | smartify }}",
             "url": "{{ post.url }}",
             "thumb": "{{ post.thumb }}",
             "tags": "{{ post.tags | join:',' }}",
             "category": "{{ post.categories }}"
           }
         {% endfor %}
-    ]
+    ],
+    "categories": {
+        {% assign posts = site.category %}
+        {% for post in posts %}
+        {% if forloop.index != 1 %},{% endif %}
+          "{{ post.code }}": "{{ post.title }}"
+        {% endfor %}
+    }
 }

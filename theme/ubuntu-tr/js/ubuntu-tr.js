@@ -35,7 +35,6 @@ $( document ).ready(function() {
     $('label[for=g2]').click();
   }
 
-  //$("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", scrollHistory: true, extendPage: false});
   $( document ).scroll(function() {
     if($(document).scrollTop() > 300)
       $('#rp').hide();
@@ -66,8 +65,11 @@ $('.ui.cards')
       itemIndex += 10;
       $(this).visibility('refresh');
     }
-  })
-;
+  });
+
+  $('.ui.cards > .card').dimmer({
+    on: 'hover'
+  });
 
 });
 

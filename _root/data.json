@@ -4,7 +4,7 @@
     "categories": [
         {% assign posts = site.category %}
         {% for post in posts %}
-        {% if post.code != site.category.first.code %},{% endif %}
+        {% if forloop.index != 1 %},{% endif %}
           {
             "name": "{{ post.title }}",
             "id": "{{ post.code }}"
@@ -14,7 +14,17 @@
     "tags": [
         {% assign posts = site.tag %}
         {% for post in posts %}
-        {% if post.code != site.tag.first.code %},{% endif %}
+        {% if forloop.index != 1 %},{% endif %}
+          {
+            "name": "{{ post.title }}",
+            "id": "{{ post.code }}"
+          }
+        {% endfor %}
+    ],
+    "authors": [
+        {% assign posts = site.other %}
+        {% for post in posts %}
+        {% if forloop.index != 1 %},{% endif %}
           {
             "name": "{{ post.title }}",
             "id": "{{ post.code }}"

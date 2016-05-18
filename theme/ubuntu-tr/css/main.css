@@ -46,6 +46,16 @@ html > body {
     z-index: 1;
 }
 
+.dimmer p {
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+.dimmer h2.ui.header {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 1200px) {
     .ui.cards.infinite > .card > .ui.image > img {
         width: 370px;

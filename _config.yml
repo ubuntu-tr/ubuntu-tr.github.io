@@ -23,6 +23,7 @@ collections:
     permalink: /etiket/:path
   other:
     output: true
+    permalink: /o/:title
   pages:
     output: true
     permalink: /:path
