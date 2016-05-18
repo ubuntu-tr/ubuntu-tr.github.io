@@ -5,9 +5,6 @@
     <head>
         <title>{{ page.title }}</title>
         {% include head.html %}
-        <script src="{{ site.themeDir }}/js/relatedPosts.js"></script>
-        <script src="{{ site.themeDir }}/js/jquery-ui.min.js"></script>
-        <script src="{{ site.themeDir }}/js/tocify.js"></script>
         <link rel="stylesheet" href="{{ site.themeDir }}/css/tocify.css">
     </head>
     <body>
@@ -73,8 +70,11 @@
             </div>
         </div>
         {% include footer.html %}
+        {% include foot.html %}
+        <script src="{{ site.themeDir }}/js/relatedPosts.js"></script>
+        <script src="{{ site.themeDir }}/js/jquery-ui.min.js"></script>
+        <script src="{{ site.themeDir }}/js/tocify.js"></script>
         <script>$("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", extendPage: false});</script>
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ubuntutr"></script>
-
     </body>
 </html>
