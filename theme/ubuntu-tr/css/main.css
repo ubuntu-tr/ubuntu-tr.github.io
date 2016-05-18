@@ -62,7 +62,7 @@ html > body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .ui.cards.infinite > .card > .ui.image > img {
-        width: 231px;
-        height: 138px;
+        width: 348px;
+        height: 208px;
     }
 }
