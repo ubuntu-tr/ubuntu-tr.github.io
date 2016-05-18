@@ -6,7 +6,7 @@
         {% for post in posts %}
             {% if forloop.index != 1 %},{% endif %}
           {
-            "title": "{{ post.title | smartify }}",
+            "title": "{{ post.title | escape }}",
             "url": "{{ post.url }}",
             "thumb": "{{ post.thumb }}",
             "tags": "{{ post.tags | join:',' }}",
