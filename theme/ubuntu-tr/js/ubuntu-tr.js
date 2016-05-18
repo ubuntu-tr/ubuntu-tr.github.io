@@ -43,10 +43,6 @@ $( document ).ready(function() {
   });
 
 $('.infinite > .card:nth-child(n+'+(itemIndex-9)+')').addClass('hidden');
-$('.infinite > .card:nth-child(-n+10) img').each(function( ) {
-  $(this).attr('src', $(this).attr('data-src'));
-});
-
 
 $('.ui.cards')
   .visibility({
