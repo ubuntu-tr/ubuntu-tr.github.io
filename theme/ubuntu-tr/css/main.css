@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu%20Mono:400,700,400italic,700italic&subset=latin);
+
 html > body {
     background: url("../images/pattern6.png") repeat scroll 0 0 #F5F5F5;
 }

@@ -181,7 +181,7 @@
 }
 
 .markdown-body code {
-  font-family: Ubuntu, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "Ubuntu Mono",Ubuntu, Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
 
