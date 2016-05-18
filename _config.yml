@@ -11,9 +11,6 @@ highlighter: rouge
 
 timezone: Europe/Istanbul
 
-exclude: ['node_modules', 'Gruntfile.js', 'package.json']
-gems: [jekyll-paginate]
-
 collections:
   category:
     output: true
