@@ -23,7 +23,7 @@ $( document ).ready(function() {
       data2.posts.splice(index, 1);
       data2.posts.sort(function(a,b) {return b.score - a.score;} );
       for(var i = 0; i < 3; ++i)
-        $('#rp').append('<div class="item"> <div class="ui tiny image"> <img src="images/post'+data2.posts[i].url+'/'+data2.posts[i].thumb+'"> </div> <div class="middle aligned content"> <a class="header" href="'+data2.posts[i].url+'">'+data2.posts[i].title+'</a> </div> </div>');
+        $('#rp').append('<div class="item"> <div class="ui tiny image"> <img src="images/post'+data2.posts[i].url+'/'+data2.posts[i].thumb+'@4"> </div> <div class="middle aligned content"> <a class="header" href="'+data2.posts[i].url+'">'+data2.posts[i].title+'</a> </div> </div>');
         //$('select.dropdown').append('<option value="'+data2.categories[i].id+'">'+data2.categories[i].name+'</option>');
     });
   }
