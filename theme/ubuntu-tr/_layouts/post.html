@@ -9,7 +9,7 @@
     </head>
     <body>
         {% include header.html %}
-        <div class="ui container">
+        <main class="ui container">
             <div class="ui grid equal width stackable">
                 <div class="column">
                     <div class="ui card fluid">
@@ -27,9 +27,9 @@
                         <div class="image">
                             <img src="images/post{{page.url}}/{{page.image}}">
                         </div>
-                        <div class="markdown-body">
+                        <article class="markdown-body">
                             {{ content }}
-                        </div>
+                        </article>
                         <div class="extra content ui labels grey basic tiny">
                             {% include helper/tag.html %}
                         </div>
@@ -68,7 +68,7 @@
 
                 </div>
             </div>
-        </div>
+        </main>
         {% include footer.html %}
         {% include foot.html %}
         <script src="{{ site.themeDir }}/js/relatedPosts.js"></script>
