@@ -126,6 +126,7 @@ nav > a:last-child {
     border-top: 2px solid #DD4814;
     color: #DD4814;
     opacity: 1;
+    padding-top: 3px;
 }
 
 .menu {
