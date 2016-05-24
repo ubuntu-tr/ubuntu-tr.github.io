@@ -5,8 +5,8 @@ categories: "k5"
 tags: ["Sudo 42. Sayı","denetim","bütünlük","güvenlik"]
 permalink: "sistemde-butunluk-denetim-uygulamasi-samhain"
 summary: ""
-image: "ikinci resim.jpg"
-thumb: "ikinci resim.jpg"
+image: "ikinci_resim.jpg"
+thumb: "ikinci_resim.jpg"
 author: "Deniz Özibrisim"
 ---
 
@@ -63,7 +63,7 @@ Ctrl+Alt+t tuş kombinasyonu ile Uçbirim penceremizi açıyoruz ve aşağıdaki
 sudo apt-get install samhain
 ```
 
-![](images/post/sistemde-butunluk-denetim-uygulamasi-samhain/ilk resim.jpg)
+![](images/post/sistemde-butunluk-denetim-uygulamasi-samhain/ilk_resim.jpg)
 
 Bilgi almak için,
 
@@ -190,7 +190,7 @@ Komutunu kullanmamız yeterli.
 Kontrol sonucu için /var/log/samhain/samhain.log dosyasına bakıyoruz.
 
 
-![](images/post/sistemde-butunluk-denetim-uygulamasi-samhain/ikinci resim.jpg)
+![](images/post/sistemde-butunluk-denetim-uygulamasi-samhain/ikinci_resim.jpg)
 
 
 Log dosyamızda gördüğümüz gibi ilk kutu içerisinde /etc/tripwire için kritik vermiş. Dosya yaratma ve değişiklik zamanı bilgileri vermiş.
