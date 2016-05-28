@@ -4,7 +4,7 @@
 }
 
 .markdown-body {
-  -webkit-text-size-adjust: auto;
+  -webkit-text-size-adjust: 60%;
   text-size-adjust: 100%;
   color: #333;
   font-size: 16px;
