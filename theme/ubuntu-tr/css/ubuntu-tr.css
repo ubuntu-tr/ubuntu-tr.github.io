@@ -89,7 +89,7 @@ nav > a:first-child {
 nav > a:last-child {
     margin-right: 0;
 }
-@media only screen and (max-device-width: 600px){
+@media only screen and (max-device-width: 768px){
     nav > a:nth-child(n+5){
         display:none;
     }
