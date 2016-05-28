@@ -69,18 +69,17 @@ html > body {
     }
 }
 
-
-@media only screen and (max-width: 800px) {
-    .ui.card > .markdown-body, .ui.card .description {
-        color: #606c76;
-        font-size: 14px;
-        line-height: 1.2;
-    }
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .ui.cards.infinite > .card > .ui.image > img {
         width: 348px;
         height: 208px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ui.card > .markdown-body, .ui.card .description {
+        color: #606c76;
+        font-size: 14px;
+        line-height: 1.2;
     }
 }
