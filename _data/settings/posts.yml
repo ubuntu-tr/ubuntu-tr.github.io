@@ -1,0 +1,32 @@
+active: true
+dir: "extension/widget-postList/posts"
+
+hook: 
+  index:
+    main:
+      name: "all"
+      settings:
+        container: "cards link two stackable infinite"
+        layout: card
+        limit: 200
+  categories:
+    main:
+      name: "categories"
+      settings:
+        container: "cards link two stackable infinite"
+        layout: card
+        limit: 200
+  tags:
+    main:
+      name: "tags"
+      settings:
+        container: "cards link two stackable infinite"
+        layout: card
+        limit: 200
+  others:
+    main:
+      name: "others"
+      settings:
+        container: "cards link two stackable infinite"
+        layout: card
+        limit: 200

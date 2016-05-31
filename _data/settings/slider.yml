@@ -1,0 +1,11 @@
+active: true
+dir: "extension/widget-block/slider"
+
+hook: 
+  index:
+    top: 
+      name: "index"
+      settings:
+    foot: 
+      name: "asset"
+      settings:

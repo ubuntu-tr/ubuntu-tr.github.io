@@ -1,7 +1,10 @@
 # Site settings
+theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
+listDir: theme/ubuntu-tr/_layouts/list
+blockDir: theme/ubuntu-tr/_layouts/block
 layouts_dir:  ./theme/ubuntu-tr/_layouts
-includes_dir: ./theme/ubuntu-tr/_includes
+includes_dir: .
 
 disqus_id: sudoportal
 
@@ -21,9 +24,6 @@ collections:
   other:
     output: true
     permalink: /o/:title
-  pages:
-    output: true
-    permalink: /:path
   root:
     output: true
     permalink: /:path
@@ -34,25 +34,22 @@ defaults:
       type: category
     values:
       type: categories
-      layout: categories
+      layout: layout121
   - scope:
       path: ""
       type: tag
     values:
       type: tags
-      layout: tags
+      layout: layout121
   - scope:
       path: ""
       type: posts
     values:
-      layout: post
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: page
+      type: posts
+      layout: layout121
   - scope:
       path: ""
       type: other
     values:
-      layout: others
+      type: others
+      layout: layout121

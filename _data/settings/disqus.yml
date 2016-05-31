@@ -1,0 +1,8 @@
+active: true
+dir: "extension/widget-block/disqus"
+
+hook: 
+  posts:
+    main: 
+      name: "index"
+      settings:

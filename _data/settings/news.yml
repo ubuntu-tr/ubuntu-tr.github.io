@@ -1,0 +1,16 @@
+active: true
+dir: "extension/widget-postList/news"
+
+hook: 
+  index:
+    top: 
+
+    sidebar:
+      name: "index"
+      order: 2
+      settings:
+        header: "Duyurular"
+        headerLayout: header2
+        container: "items divided link"
+        layout: item
+        limit: 5

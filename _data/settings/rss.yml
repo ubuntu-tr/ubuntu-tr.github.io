@@ -1,0 +1,13 @@
+active: true
+dir: "extension/widget-list/rss"
+
+hook: 
+  index:
+    top: 
+
+    sidebar:
+      name: "index"
+      order: 4
+      settings:
+        header: "Forumdan son yazılar"
+        headerLayout: header2

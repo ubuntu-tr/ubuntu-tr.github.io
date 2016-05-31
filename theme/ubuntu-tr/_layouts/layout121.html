@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SUDO Portal</title>
+        {% assign level = page.url | append: '.' | split: '/'  | size %}{% if level != 2 %}<base href="/">{% endif %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="{{ site.themeDir }}/css/main.css">
+        <link rel="stylesheet" href="{{ site.themeDir }}/css/ubuntu-tr.css">
+        <link rel="stylesheet" href="{{ site.themeDir }}/css/semantic.min.css">
+        {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="head" %}
+        {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="head" %}
+    </head>
+    {% assign theme = site.data[site.theme].settings %}
+    {% assign themeT = site.data[site.theme].settings.type[page.type] %}
+    {% assign layout = site.data[site.theme][page.layout] %}
+    {% assign layoutT = site.data[site.theme][page.layout].type[page.type] %}
+    {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}
+    {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
+    <body>
+
+        {% include {{site.blockDir}}/header.html %}
+
+        <div class="ui container">
+            <div class="ui grid equal width stackable">
+                <div class="row computer only">
+                    <div class="column">
+                        {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="top" %}
+                        {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="top" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="main" %}
+                        {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="main" %}
+                    </div>
+                    <div class="column five wide computer only">
+                        {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="sidebar" %}
+                        {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="sidebar" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include {{site.blockDir}}/footer.html %}
+
+        <script src="{{ site.themeDir }}/js/jquery-2.2.0.min.js"></script>
+        <script src="{{ site.themeDir }}/js/semantic.min.js"></script>
+        <script src="{{ site.themeDir }}/js/ubuntu-tr.js"></script>
+        {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="foot" %}
+        {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="foot" %}
+    </body>
+</html>

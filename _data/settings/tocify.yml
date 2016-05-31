@@ -1,0 +1,12 @@
+active: true
+dir: "extension/widget-list/tocify"
+
+hook: 
+  posts:
+    sidebar:
+      name: "index"
+      settings:
+        
+    foot: 
+      name: "asset"
+      settings:

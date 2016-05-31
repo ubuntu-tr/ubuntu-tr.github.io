@@ -1,0 +1,22 @@
+<div class="ui card fluid">
+    <div class="content">
+        <h1 class="ui header">{{ page.title }}</h1>
+        <div class="meta">
+            <span><b class="ui header tiny orange">Yazar:</b> <a href="{% assign author = site.other | where: 'title', page.author %}{{ author[0].url }}">{{ page.author }}</a></span>
+            <span><b class="ui header tiny orange">Kategori:</b> <a href="{{cat.url}}">{{cat.title}}</a></span>
+            <span class="right floated">{{ date }} {{ page.date | date: "%-Y" }} tarihinde yayımlandı.</span>
+        </div>
+        <div class="description">
+            {{page.summary}}
+        </div>
+    </div>
+    <div class="image">
+        <img src="images/post{{page.url}}/{{page.image}}">
+    </div>
+    <article class="markdown-body">
+        {{ content }}
+    </article>
+    <div class="extra content ui labels grey basic tiny">
+        {% include {{site.data.settings.tags.dir}}/_post.html %}
+    </div>
+</div>

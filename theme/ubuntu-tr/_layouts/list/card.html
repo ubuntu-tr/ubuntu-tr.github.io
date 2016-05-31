@@ -1,0 +1,30 @@
+
+{% include {{site.data.settings.hook.dir}}/_theme.html hookPos="card" %}
+{% include {{site.data.settings.hook.dir}}/_extension.html hookPos="card" %}
+{% if forloop.index0 == 10 %} {% assign hidden='hidden' %} {% endif %} 
+<a class="card {{hidden}}" href="{{post.url}}">
+    <div class="ui image"> 
+        <div class="ui {{ cat.color }} ribbon label">{{ cat.title }}</div>
+        {% if forloop.index0 < 10 %}
+        <img src="images/post{{post.url}}/{{post.thumb}}@3">
+        {% else %}
+        <img data-src="images/post{{post.url}}/{{post.thumb}}@3">
+        {% endif %} 
+    </div>
+    <div class="content">
+        <div class="header">{{post.title}}</div>
+    </div>
+    <div class="extra content"> 
+        <span class="right floated"> {{ date }} </span> 
+        <span> <i class="user icon"></i> {{post.author}} </span> 
+    </div>
+
+    <div class="ui dimmer">
+        <div class="content">
+            <div>
+                <h2 class="ui inverted header">{{post.title}}</h2>
+                <p>{{ post.summary }}</p>
+            </div>
+        </div>
+    </div>
+</a>

@@ -1,0 +1,13 @@
+active: true
+dir: "extension/widget-block/download"
+
+hook: 
+  index:
+    top: 
+
+    sidebar:
+      name: "index"
+      order: 5
+      settings:
+        header: "Ubuntu İndirme Bağlantısı"
+        headerLayout: header2

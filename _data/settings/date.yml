@@ -1,0 +1,24 @@
+active: true
+dir: "extension/filter/date"
+
+hook: 
+  index:
+    card:
+      name: "tr"
+      settings:
+  categories:
+    card:
+      name: "tr"
+      settings:
+  tags:
+    card:
+      name: "tr"
+      settings:
+  others:
+    card:
+      name: "tr"
+      settings:
+  posts:
+    filter:
+      name: "tr"
+      settings:

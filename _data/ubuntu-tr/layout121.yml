@@ -1,0 +1,6 @@
+hook:
+  posts:
+    main:
+      - name: "loadBlock/index"
+        settings:
+          name: "post"

@@ -1,0 +1,9 @@
+active: true
+dir: "extension/asset/highlightCSS"
+
+hook: 
+  posts:
+    head: 
+      name: "asset"
+      order: 4
+      settings:
