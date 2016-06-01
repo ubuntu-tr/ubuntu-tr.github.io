@@ -34,7 +34,7 @@ hook:
 
   categories:
     sidebar:
-      name: "index"
+      name: "category"
       settings:
         header: "En Çok Okunanlar"
         headerLayout: header2
