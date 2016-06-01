@@ -1,3 +1,14 @@
+# index:
+#   style: "style1"
+# posts:
+#   style: "style1"
+# categories:
+#   style: "style1"
+# tags:
+#   style: "style1"
+# others:
+#   style: "style1"
+
 hook:
   posts:
     main:

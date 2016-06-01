@@ -74,6 +74,28 @@ div.r16_9 > * {
     height: 100%;
 }
 
+.ui.grid > .row > .white.column,
+.ui.grid > .row > .lightGrey.column {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.ui.grid > .white.row,
+.ui.grid > .white.column,
+.ui.grid > .row > .white.column {
+  background-color: white !important;
+}
+.ui.grid > .lightGrey.row,
+.ui.grid > .lightGrey.column,
+.ui.grid > .row > .lightGrey.column {
+  background-color: #EFEFEF !important;
+}
+
+.clearPadding {
+    padding: 0 !important;
+}
+
 @media only screen and (min-width: 1200px) {
     .ui.cards.infinite > .card > .ui.image > img {
         width: 370px;
@@ -95,7 +117,7 @@ div.r16_9 > * {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .ui.card > .markdown-body, .ui.card .description {
         color: #606c76;
         font-size: 14px;

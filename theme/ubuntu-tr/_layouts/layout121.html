@@ -12,29 +12,29 @@
         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="head" %}
     </head>
     {% assign theme = site.data[site.theme].settings %}
-    {% assign themeT = site.data[site.theme].settings.type[page.type] %}
+    {% assign themeT = site.data[site.theme].settings[page.type] %}
     {% assign layout = site.data[site.theme][page.layout] %}
-    {% assign layoutT = site.data[site.theme][page.layout].type[page.type] %}
+    {% assign layoutT = site.data[site.theme][page.layout][page.type] %}
     {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}
     {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
     <body>
 
         {% include {{site.blockDir}}/header.html %}
 
-        <div class="ui container">
-            <div class="ui grid equal width stackable">
-                <div class="row computer only">
-                    <div class="column">
+        <div class="{% include {{site.data.settings.style.dir}}/_get.html get='container' %}">
+            <div class="{% include {{site.data.settings.style.dir}}/_get.html get='grid' %}">
+                <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row1' %}">
+                    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row1column' %}">
                         {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="top" %}
                         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="top" %}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="column">
+                <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row2' %}">
+                    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row2column1' %}">
                         {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="main" %}
                         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="main" %}
                     </div>
-                    <div class="column five wide computer only">
+                    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row2column2' %}">
                         {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="sidebar" %}
                         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="sidebar" %}
                     </div>

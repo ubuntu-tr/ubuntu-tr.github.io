@@ -3,8 +3,8 @@
 {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="card" %}
 {% if forloop.index0 == 10 %} {% assign hidden='hidden' %} {% endif %} 
 <a class="card {{hidden}}" href="{{post.url}}">
-    <div class="ui image"> 
-        <div class="ui {{ cat.color }} ribbon label">{{ cat.title }}</div>
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='cardImage' %}"> 
+        <div class="{{ cat.color }} {% include {{site.data.settings.style.dir}}/_get.html get='cardCategory' %}">{{ cat.title }}</div>
         {% if forloop.index0 < 10 %}
         <img src="images/post{{post.url}}/{{post.thumb}}@3">
         {% else %}
@@ -12,18 +12,18 @@
         {% endif %} 
     </div>
     <div class="content">
-        <div class="header">{{post.title}}</div>
+        <div class="{% include {{site.data.settings.style.dir}}/_get.html get='cardHeader' %}">{{post.title}}</div>
     </div>
     <div class="extra content"> 
-        <span class="right floated"> {{ date }} </span> 
-        <span> <i class="user icon"></i> {{post.author}} </span> 
+        <span class="{% include {{site.data.settings.style.dir}}/_get.html get='cardDate' %}"> {{ date }} </span> 
+        <span> <i class="{% include {{site.data.settings.style.dir}}/_get.html get='cardAuthorIcon' %}"></i> {{post.author}} </span> 
     </div>
 
-    <div class="ui dimmer">
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='cardDimmer' %}">
         <div class="content">
             <div>
-                <h2 class="ui inverted header">{{post.title}}</h2>
-                <p>{{ post.summary }}</p>
+                <h2 class="{% include {{site.data.settings.style.dir}}/_get.html get='cardDimmerHeader' %}">{{post.title}}</h2>
+                <p class="{% include {{site.data.settings.style.dir}}/_get.html get='cardDimmerP' %}">{{ post.summary }}</p>
             </div>
         </div>
     </div>

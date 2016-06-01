@@ -1,8 +1,8 @@
 <a class="item" href="{{post.url}}">
-    <div class="ui tiny image">
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='itemImage' %}">
         <img src="images/post{{post.url}}/{{post.thumb}}@4">
     </div>
-    <div class="middle aligned content">
-        <div class="header">{{post.title}}</div>
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='itemContent' %}">
+        <div class="{% include {{site.data.settings.style.dir}}/_get.html get='itemHeader' %}">{{post.title}}</div>
     </div>
 </a>

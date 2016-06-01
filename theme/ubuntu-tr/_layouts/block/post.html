@@ -1,22 +1,22 @@
-<div class="ui card fluid">
+<div class="{% include {{site.data.settings.style.dir}}/_get.html get='postContainer' %}">
     <div class="content">
-        <h1 class="ui header">{{ page.title }}</h1>
+        <h1 class="{% include {{site.data.settings.style.dir}}/_get.html get='postHeader' %}">{{ page.title }}</h1>
         <div class="meta">
-            <span><b class="ui header tiny orange">Yazar:</b> <a href="{% assign author = site.other | where: 'title', page.author %}{{ author[0].url }}">{{ page.author }}</a></span>
-            <span><b class="ui header tiny orange">Kategori:</b> <a href="{{cat.url}}">{{cat.title}}</a></span>
-            <span class="right floated">{{ date }} {{ page.date | date: "%-Y" }} tarihinde yayımlandı.</span>
+            <span><b class="{% include {{site.data.settings.style.dir}}/_get.html get='postAuthor' %}">Yazar:</b> <a href="{% assign author = site.other | where: 'title', page.author %}{{ author[0].url }}">{{ page.author }}</a></span>
+            <span><b class="{% include {{site.data.settings.style.dir}}/_get.html get='postCategory' %}">Kategori:</b> <a href="{{cat.url}}">{{cat.title}}</a></span>
+            <span class="{% include {{site.data.settings.style.dir}}/_get.html get='postDate' %}">{{ date }} {{ page.date | date: "%-Y" }} tarihinde yayımlandı.</span>
         </div>
-        <div class="description">
+        <div class="{% include {{site.data.settings.style.dir}}/_get.html get='postSummary' %}">
             {{page.summary}}
         </div>
     </div>
-    <div class="image">
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='postImage' %}">
         <img src="images/post{{page.url}}/{{page.image}}">
     </div>
-    <article class="markdown-body">
+    <article class="{% include {{site.data.settings.style.dir}}/_get.html get='postContent' %}">
         {{ content }}
     </article>
-    <div class="extra content ui labels grey basic tiny">
+    <div class="{% include {{site.data.settings.style.dir}}/_get.html get='postTags' %}">
         {% include {{site.data.settings.tags.dir}}/_post.html %}
     </div>
 </div>
