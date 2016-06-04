@@ -2,5 +2,5 @@
 <link rel="stylesheet" href="{{ bbb.dir }}/tocify.css">
 <script src="{{ bbb.dir }}/tocify.js"></script>
 <script>
-	$("#toc").tocify({context: ".markdown-body", selectors: "h2, h3, h4", scrollTo: "100", extendPage: false});
+	$("#toc").tocify({context: ".markdown-body", selectors: "h2:not(blockquote>h2), h3:not(blockquote>h3)", scrollTo: "100", extendPage: false});
 </script>

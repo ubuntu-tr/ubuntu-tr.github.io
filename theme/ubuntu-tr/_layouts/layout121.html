@@ -11,16 +11,14 @@
         {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="head" %}
         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="head" %}
     </head>
-    {% assign theme = site.data[site.theme].settings %}
-    {% assign themeT = site.data[site.theme].settings[page.type] %}
-    {% assign layout = site.data[site.theme][page.layout] %}
-    {% assign layoutT = site.data[site.theme][page.layout][page.type] %}
-    {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}
-    {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
+    {% assign theme = site.data[site.theme].settings %}{% 
+    assign themeT = site.data[site.theme].settings[page.type] %}{% 
+    assign layout = site.data[site.theme][page.layout] %}{% 
+    assign layoutT = site.data[site.theme][page.layout][page.type] %}{% 
+    include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}{% 
+    include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
     <body>
-
         {% include {{site.blockDir}}/header.html %}
-
         <div class="{% include {{site.data.settings.style.dir}}/_get.html get='container' %}">
             <div class="{% include {{site.data.settings.style.dir}}/_get.html get='grid' %}">
                 <div class="{% include {{site.data.settings.style.dir}}/_get.html get='row1' %}">
@@ -41,9 +39,7 @@
                 </div>
             </div>
         </div>
-
         {% include {{site.blockDir}}/footer.html %}
-
         <script src="{{ site.themeDir }}/js/jquery-2.2.0.min.js"></script>
         <script src="{{ site.themeDir }}/js/semantic.min.js"></script>
         <script src="{{ site.themeDir }}/js/ubuntu-tr.js"></script>

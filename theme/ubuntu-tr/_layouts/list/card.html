@@ -1,7 +1,6 @@
-
-{% include {{site.data.settings.hook.dir}}/_theme.html hookPos="card" %}
-{% include {{site.data.settings.hook.dir}}/_extension.html hookPos="card" %}
-{% if forloop.index0 == 10 %} {% assign hidden='hidden' %} {% endif %} 
+{% include {{site.data.settings.hook.dir}}/_theme.html hookPos="card" %}{% 
+include {{site.data.settings.hook.dir}}/_extension.html hookPos="card" %}{% 
+if forloop.index0 == 10 %}{% assign hidden='hidden' %}{% endif %} 
 <a class="card {{hidden}}" href="{{post.url}}">
     <div class="{% include {{site.data.settings.style.dir}}/_get.html get='cardImage' %}"> 
         <div class="{{ cat.color }} {% include {{site.data.settings.style.dir}}/_get.html get='cardCategory' %}">{{ cat.title }}</div>
