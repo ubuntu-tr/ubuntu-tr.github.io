@@ -124,3 +124,12 @@ div.r16_9 > * {
         line-height: 1.2;
     }
 }
+
+/* MARKDOWN */
+p,
+dd {
+    white-space: pre-line;
+}
+dd > * {  
+    white-space: normal; 
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sudo - Sen de Yaz</title>
+        <link rel="stylesheet" href="theme/ubuntu-tr/css/semantic.min.css">
+        <link rel="stylesheet" href="sendeyaz/simplemde.min.css">
+        <link rel="stylesheet" href="sendeyaz/sendeyaz.css">
+        <link rel="stylesheet" href="extension/asset/markdownCSS/github-markdown.css"> 
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/latest/styles/github.min.css">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//oss.maxcdn.com/semantic-ui/2.1.7/semantic.min.js"></script>
+        <script src="//cdn.jsdelivr.net/highlight.js/latest/highlight.min.js"></script>
+        <script src="sendeyaz/simplemde.min.js"></script>
+        <script type="text/javascript" src="sendeyaz/sendeyaz.js"></script>
+    </head>
+
+    <body>
+        <form class="ui form">
+            <div id="makale" class="field">
+                <textarea name="makale"></textarea>
+            </div>
+            <div class="ui dimmer page">
+                <div class="ui modal">
+                    <div class="header">Makale Gönder (2/2)</div>
+                    <div class="content">
+                        <div class="field">
+                            <label>Başlık</label>
+                            <input name="baslik" placeholder="Başlık" type="text">
+                        </div>
+                        <div class="field">
+                            <label>Özet</label>
+                            <textarea name="ozet" rows="2"></textarea>
+                        </div>
+
+                        <div class="ui stackable equal width grid">
+                            <div class="column">
+
+                                <div class="field">
+                                    <label>Kategori</label>
+                                    <select name="kategori" class="ui dropdown">
+                                        <option value="">Seç</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label>Resim Bağlantısı</label>
+                                    <input name="resim" placeholder="http://" type="text">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label>Yazar</label>
+                                    <select name="yazar" class="ui search dropdown">
+                                        <option value="">Seç</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label>Eposta</label>
+                                    <input name="eposta" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="field">
+                            <label>Etiketler</label>
+                            <div class="ui fluid multiple search selection dropdown">
+                                <input value="" name="etiket" type="hidden">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Seç</div>
+                                <div class="menu">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input class="hidden" name="kural" tabindex="0" type="checkbox">
+                                <label>Kullanım koşullarını kabul ediyorum. (<a href="https://www.google.com.tr" target="_blank">Görmek için tıklayın.</a>)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="ui send positive button">Makaleyi Gönder</div>
+                        <div class="ui cancel negative button">İptal</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="loader" class="ui page dimmer">
+            <div class="ui indeterminate text loader">Makale Gönderiliyor</div>
+        </div>
+    </body>
+</html>

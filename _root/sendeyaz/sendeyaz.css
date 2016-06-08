@@ -1,0 +1,57 @@
+.m2 {
+    float: right;
+    margin-top: -3px !important;
+}
+.fa-arrows-alt {
+    display: none !important;
+}
+.CodeMirror-lines span {
+        margin-top: 0;
+        margin-bottom: 16px;
+        margin: 0 0 1em;
+        line-height: 1.4285em;  
+}
+.CodeMirror-lines .CodeMirror-code  .CodeMirror-line  .cm-header{
+    margin-top: 2em;
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #db4814;
+    margin: calc(2rem - .14285em) 0 1rem;
+    padding: 0;
+}
+.CodeMirror-lines .CodeMirror-code  .CodeMirror-line  .cm-header-4 {
+    font-size: 1em;
+    line-height: 1.4;
+}
+.CodeMirror-lines .CodeMirror-code  .CodeMirror-line  .cm-header-3 {
+    font-size: 1.25em;
+    line-height: 1.43;
+}
+.CodeMirror-lines .CodeMirror-code  .CodeMirror-line  .cm-header-2 {
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    line-height: 1.225;
+}
+
+
+.CodeMirror-code > *:first-child span {
+    margin-top: 0 !important;
+}
+
+.CodeMirror-lines {
+    color: #333;
+    font-size: 16px;
+    padding-top: 0;
+}
+
+/* MARKDOWN */
+p,
+dd {
+    white-space: pre-line;
+}
+dd > * {  
+    white-space: normal; 
+}
+.ui.modal {
+    top: 30px;
+}
