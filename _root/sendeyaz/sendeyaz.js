@@ -38,7 +38,6 @@ $( document ).ready(function() {
 				},
 				className: "ui m2 positive button",
 				title: "Kategori, etiket gibi diğer alanları ayarla",
-				text: "Makaleyi Gönder (1/2)",
 				tagName: "div"
 			}
 		],
@@ -103,16 +102,9 @@ $( document ).ready(function() {
 		}
 	});
 	simplemde.toggleFullScreen();
-	simplemde.toggleSideBySide();
+	if(screen.width > 1000)
+		simplemde.toggleSideBySide();
 
-	$('input:text, .ui.button', '.ui.action.input').on('click', function(e) {
-		$('input:file', $(e.target).parents()).click();
-	});
-
-	$('input:file', '.ui.action.input').on('change', function(e) {
-		var name = e.target.files[0].name;
-		$('input:text', $(e.target).parent()).val(name);
-	});
 	$('.ui.checkbox').checkbox();
 
 	$('.ui.form').form({
@@ -166,10 +158,13 @@ $( document ).ready(function() {
 function modalToggle() {
 	if($('.ui.modal').hasClass('active')) {
 		$('.ui.modal').removeClass('active');
+		$('.ui.modal').removeClass('scroll');
 		$('.ui.modal').parent().removeClass('active');
 	}
 	else {
 		$('.ui.modal').addClass('active');
 		$('.ui.modal').parent().addClass('active');
+		if(screen.height < 620)
+			$('.ui.modal').addClass('scroll');
 	}
 }

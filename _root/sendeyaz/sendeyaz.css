@@ -1,7 +1,45 @@
+
 .m2 {
     float: right;
     margin-top: -3px !important;
+    position: absolute;
+    right: 10px;
 }
+.m2::before {
+    content: "Makaleyi Gönder (1/2)";
+}
+
+@media only screen and (max-width: 581px) {
+    .editor-toolbar.fullscreen {
+        display: flex;
+        flex-wrap:wrap;
+        height: 80px;
+        align-items: center;
+    }
+    .CodeMirror {
+        top: 80px;
+    }
+    .m2 {
+        padding: 7px 10px !important;
+        height: 28px;
+        position: initial;
+    }
+}
+@media only screen and (max-width: 737px) {
+    .m2::before {
+        content: "Devam";
+    }
+}
+
+.scroll {
+    height: 95vh;
+    overflow: auto;
+}
+.ui.stackable.grid {
+    margin: -14px !important;
+}
+
+
 .fa-arrows-alt {
     display: none !important;
 }
