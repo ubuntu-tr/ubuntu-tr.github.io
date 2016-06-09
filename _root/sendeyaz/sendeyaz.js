@@ -150,10 +150,6 @@ $( document ).ready(function() {
 	$('.ui.modal .cancel').on('click', function() {
 		modalToggle();
 	});
-	$('.ui.modal .send').on('click', function() {
-		$('form').submit();
-	});
-
 });
 
 function modalToggle() {
