@@ -79,6 +79,7 @@ $( document ).ready(function() {
 			delay: 3000,
 		},
 		promptURLs: true,
+		autofocus: true,
 		tabSize: 4,
 		previewClassName: "markdown-body",
 		renderingConfig: {
@@ -127,7 +128,7 @@ $( document ).ready(function() {
 			return;
 
 		$('#loader').addClass("active");
-		var url = "https://sudo.ubuntu-tr.net/";
+		var url = "https://forum.ubuntu-tr.net/index.php?action=makaleGonder";
 		$.ajax({
 			type: "POST",
 			url: url,
