@@ -4,6 +4,18 @@ html > body {
     background: url("../images/pattern6.png") repeat scroll 0 0 #F5F5F5;
 }
 
+.hidden,
+.ui.stackable.cards > .card.hidden {
+    display: none !important;
+}
+.pointer,
+.ui.pagination > * {
+    cursor:pointer;
+}
+.ui.cards + .ui.button.fluid {
+    margin-top: 10px;
+}
+
 .ui.card > .markdown-body, .ui.card .description {
     color: #606c76;
     font-size: 16px;

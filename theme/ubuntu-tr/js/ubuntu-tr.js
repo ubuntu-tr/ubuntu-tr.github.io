@@ -42,27 +42,6 @@ $( document ).ready(function() {
       $('#rp').show();
   });
 
-$('.infinite > .card:nth-child(n+'+(itemIndex-9)+')').addClass('hidden');
-
-$('.ui.cards')
-  .visibility({
-    once: false,
-    // update size when new content loads
-    observeChanges: true,
-    // load content on bottom edge visible
-    onBottomVisible: function() {
-      // loads a max of 5 times
-      if($('.ui.cards > .card.hidden').size() === 0)
-        return;
-      $('.ui.cards > .card:nth-child(-n + '+itemIndex+')').removeClass('hidden');
-      $('.ui.cards > .card:not(.hidden):nth-child(n+'+(itemIndex-9)+') img').each(function( ) {
-        $(this).attr('src', $(this).attr('data-src'));
-      });
-      itemIndex += 10;
-      $(this).visibility('refresh');
-    }
-  });
-
   $('.ui.cards > .card').dimmer({
     on: 'hover'
   });
