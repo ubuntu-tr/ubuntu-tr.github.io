@@ -1,0 +1,19 @@
+active: true
+dir: "extension/asset/backToTop"
+
+hook: 
+  index:
+    foot: 
+      name: "asset"
+  posts:
+    foot: 
+      name: "asset"
+  categories:
+    foot: 
+      name: "asset"
+  tags:
+    foot: 
+      name: "asset"
+  others:
+    foot: 
+      name: "asset"

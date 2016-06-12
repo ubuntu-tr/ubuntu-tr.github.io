@@ -1,0 +1,30 @@
+<script>
+$( document ).ready(function() {
+	$( document ).scroll(function() {
+		if($(document).scrollTop() > 700 && $(document).scrollTop() < 1000)
+			$('.backToTop').removeClass('hidden');
+		else if($(document).scrollTop() < 700 && $(document).scrollTop() > 400)
+			$('.backToTop').addClass('hidden');
+	});
+
+	$('body').append('<div class="backToTop hidden"></div>');
+	$('.backToTop').on('click', function() {
+		$('body,html').animate({ scrollTop: 0 }, 700);
+	});
+});
+</script>
+<style>
+.backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 38px;
+    padding: 10px 12px 12px;
+    background-color: #F2711C;
+    color: white;
+    cursor: pointer;
+}
+.backToTop:before {
+    content: "\f106";
+}
+</style>
