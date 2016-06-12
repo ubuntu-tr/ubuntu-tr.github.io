@@ -8,6 +8,7 @@ row2: "row"
 row2column1: "column"
 row2column2: "column five wide computer only"
 
+blockContainer: "ui segment"
 blockHeader: "ui header orange dividing"
 
 postContainer: "ui card fluid"

@@ -14,9 +14,13 @@ assign orderedList = orderedList | split:' ' | sort %}{%
 for b in orderedList %}{% 
 	assign bbb = b | split: ',' | last %}{% 
 	assign bbb = site.data.settings[bbb] %}{% 
-	assign aaa = bbb.hook[page.type][include.hookPos] %} {% 
-	if aaa.settings.headerLayout != nil %}{% 
-		include {{ site.blockDir }}/{{ aaa.settings.headerLayout }}.html title=aaa.settings.header %}{% 
-	endif %}{% 
-	include {{bbb.dir}}/_{{aaa.name}}.html param=aaa.settings %}{% 
+	assign aaa = bbb.hook[page.type][include.hookPos] %}
+		{% if aaa.settings.headerLayout != nil %}
+	<div class="{% include {{site.data.settings.style.dir}}/_get.html get='blockContainer' %}">
+			{% include {{ site.blockDir }}/{{ aaa.settings.headerLayout }}.html title=aaa.settings.header %}{% 
+		endif %}{% 
+		include {{bbb.dir}}/_{{aaa.name}}.html param=aaa.settings %}{% 
+	if aaa.settings.headerLayout != nil %} 
+	</div>
+	{% endif %}{% 
 endfor %}
