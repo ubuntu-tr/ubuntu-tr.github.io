@@ -77,7 +77,7 @@ Son kısımda ise artık loglama işleminin nasıl yapılacağını tanımlıyor
 	};
 ```
 
-Basit olarak yapılandırmamız bu kadar. Daha detaylı bir yapılandırma dosyası için **[1]** adresinden bilgi alabilirsiniz.
+Basit olarak yapılandırmamız bu kadar. Daha detaylı bir yapılandırma dosyası için [^1] adresinden bilgi alabilirsiniz.
 
 Artık yazımızın ikinci kısmına geçebiliriz. Bu işi yapacak birçok uygulama var. Ben arayüzü daha sıcak geldiği için LogAnalyzer kullanacağım. Öncelikle sitesinden uygulamayı indireceğiz.
 
@@ -153,4 +153,4 @@ Ve kurulum tamamlandı
 
 
 ###### Kaynak:
-[1] <http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/syslog-ng.conf.5.html>
+[^1]: <http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/syslog-ng.conf.5.html>

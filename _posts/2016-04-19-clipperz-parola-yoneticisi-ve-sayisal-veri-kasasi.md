@@ -10,9 +10,9 @@ thumb: "clipperz.png"
 author: "Çağrı Emer"
 ---
 
-Bir finans firmasının araştırmasına göre ortalama 26 çevrimiçi servis için kullanıcılar 5 farklı parola kullanıyorlarmış.**[1]** Her hesabımız için farklı ve yeterli entropiye sahip bir parola kullanıp bütün bu parolaları akılda tutmak mümkün mü? Bu arada parola demişken XKCD klasiklerinden birini de paylaşmadan geçmeyelim.**[2]**
+Bir finans firmasının araştırmasına göre ortalama 26 çevrimiçi servis için kullanıcılar 5 farklı parola kullanıyorlarmış.[^1] Her hesabımız için farklı ve yeterli entropiye sahip bir parola kullanıp bütün bu parolaları akılda tutmak mümkün mü? Bu arada parola demişken XKCD klasiklerinden birini de paylaşmadan geçmeyelim.[^2]
 
-Bir önceki paragraftaki soruya benim cevabım hayır olduğundan bir süredir işimi görecek bir parola yöneticisi arıyordum. Bu yazının konusu olan Clipperz ile bu sayede tanıştım. Clipperz, LastPass gibi çevrimiçi çalışabilen fakat yerelinizde de sorunsuzca kullanabileceğiniz dijital bir kasa görevini üstleniyor. Böylelikle tek bir ana parola ile tüm kullandığınız servislere erişme imkânınız oluyor. Üstelik bir hesaba ait bilgilerin çalınması durumunda diğer hesaplarınızı nasıl koruyacağınızı düşünmenize gerek kalmıyor.  Clipperz özel notlarınızı, kredi kartı bilgilerinizi, eğer kullanıyorsanız çeşitli yazılımlara ait anahtarları ve de parolalarınızı 256 bit anahtar uzunluğuna sahip AES şifreleme methodu ile şifreliyor.**[3]** (Aramızdaki kripto meraklıları için CTR modunun kullanıldığı notunu da düşelim.) Dikkate değer diğer bir özelliği de AGPL ile lisanslanmış özgür bir yazılım olması.
+Bir önceki paragraftaki soruya benim cevabım hayır olduğundan bir süredir işimi görecek bir parola yöneticisi arıyordum. Bu yazının konusu olan Clipperz ile bu sayede tanıştım. Clipperz, LastPass gibi çevrimiçi çalışabilen fakat yerelinizde de sorunsuzca kullanabileceğiniz dijital bir kasa görevini üstleniyor. Böylelikle tek bir ana parola ile tüm kullandığınız servislere erişme imkânınız oluyor. Üstelik bir hesaba ait bilgilerin çalınması durumunda diğer hesaplarınızı nasıl koruyacağınızı düşünmenize gerek kalmıyor.  Clipperz özel notlarınızı, kredi kartı bilgilerinizi, eğer kullanıyorsanız çeşitli yazılımlara ait anahtarları ve de parolalarınızı 256 bit anahtar uzunluğuna sahip AES şifreleme methodu ile şifreliyor.[^3] (Aramızdaki kripto meraklıları için CTR modunun kullanıldığı notunu da düşelim.) Dikkate değer diğer bir özelliği de AGPL ile lisanslanmış özgür bir yazılım olması.
 
 Clipperz'ı github'dan alıp kurulumuna geçmeden önce öne çıkan diğer özelliklerinden de biraz bahsetmekte fayda var. Yazının ilerleyen kısımlarında uygulamalarını göreceğimiz bu özellikler kabaca şöyle;
 
@@ -153,6 +153,6 @@ Uygulamanın son kısmı olan ve daha önce baktığımız "Tools" sekmesi ise 4
 İşte Clipperz, ister yerelinize isterseniz de genel internetçe erişilebilen sunucunuza kurabileceğiniz, kurması kadar kullanması da oldukça basit olan çok işlevli ve AGPL lisanslı bir özgür yazılım projesi. Sayesinde her hesabınızı aynı şifreyle kullanmaktan kurtulabilir ve bir hesabınızın güvenliğini eskisi kadar dert etmemeye başlayabilirsiniz. Şifrelerinizi hatırlamanız gerekmediğinden normalde kullanacağınız şifrelerden daha uzun ve daha karmaşık şifreler oluşturarak hesaplarınızı brute-force tekniklerine karşı da nispeten daha güvenli hâle getirebilirsiniz. Tabii %100 güvenlik diye bir şeyin söz konusu olmadığını şimdiye kadar bilmiyorduysak bile güncel olaylar sayesinde öğrenmiş olmamız gerekiyor. Buna rağmen Clipperz benim hesaplarımı yönetim şeklimi oldukça kolaylaştırdı. Umarım sizin için de bunu başarabilir.
 
 ## Kaynak
-[1] <http://www.techradar.com/au/news/internet/online-fraud-too-many-accounts-too-few-passwords-1089283> \\
-[2] <https://xkcd.com/936/> \\
-[3] <https://www.clipperz.com/security_privacy/crypto_algorithms/> \\
+[^1]: <http://www.techradar.com/au/news/internet/online-fraud-too-many-accounts-too-few-passwords-1089283>
+[^2]: <https://xkcd.com/936/>
+[^3]: <https://www.clipperz.com/security_privacy/crypto_algorithms/>

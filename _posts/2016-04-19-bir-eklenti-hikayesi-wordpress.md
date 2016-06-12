@@ -237,7 +237,7 @@ Ajax dosyasından ileti ile ilgili bilgiler geldiği zaman işlemlere başlıyor
 
 ## Sıra geldi ayıklayıcı fonksiyonumuza
 
-Yukarıda WordPress'te Ajax kullanımını anlatmış, kullanımın JS kanadını göstermiştim. Şimdi ise WP'de Ajax kullanımının PHP kanadını göstereceğim. Yapacağımız şey, “wp_ajax_forumhaber_ayikla” etiketi ile bir eylem kancası türetip yazdığımız fonksiyonumuzu bu kancaya tutturmak. Fonksiyon içerisinde de $_GET ile gelen URL bilgisini alıp bu adrese gidip iletinin içeriğini ayıklayacağız. Yalnız ayıklama kısmının teknik ayrıntılarına fazla girmeyeceğim maalesef.
+Yukarıda WordPress'te Ajax kullanımını anlatmış, kullanımın JS kanadını göstermiştim. Şimdi ise WP'de Ajax kullanımının PHP kanadını göstereceğim. Yapacağımız şey, “wp_ajax_forumhaber_ayikla” etiketi ile bir eylem kancası türetip yazdığımız fonksiyonumuzu bu kancaya tutturmak. Fonksiyon içerisinde de $\_GET ile gelen URL bilgisini alıp bu adrese gidip iletinin içeriğini ayıklayacağız. Yalnız ayıklama kısmının teknik ayrıntılarına fazla girmeyeceğim maalesef.
 
 ```php
 add_action('wp_ajax_forumhaber_ayikla', 'forumhaber_ayikla');
@@ -261,21 +261,21 @@ function forumhaber_ayikla() {
   }
 
   preg_match('/msg(\w+)/', $_GET['forumurl'], $msgid);
-  $msg = $msgid[1];
+  $msg = $msgid[^1];
 
   preg_match('#<a id="msg' . $msg . '"></a>.*?windowbg.*?>(.*?)<hr class="post_separator" />#si', $data, $div);
-  $div = $div[1];
+  $div = $div[^1];
   $div = preg_replace('#PHPSESSID=.*?&amp;#si', '', $div);
 
   preg_match('#action=profile;u=(.*?)".*?>(.*?)</a>#si', $div, $user);
-  $username = $user[2];
-  $userid = $user[1];
+  $username = $user[^2];
+  $userid = $user[^1];
 
   preg_match('#<h5 id="subject_' . $msg . '">.*?<a.*?>(.*?)</a>.*?</h5>#si', $div, $title);
-  $return['baslik'] = str_replace("Ynt: ","",$title[1]);
+  $return['baslik'] = str_replace("Ynt: ","",$title[^1]);
 
   preg_match('#&\#171;(.*?)&\#187;#si', $div, $date);
-  $date = trim(preg_replace('#<strong>.*?</strong>#si', '', $date[1]));
+  $date = trim(preg_replace('#<strong>.*?</strong>#si', '', $date[^1]));
   $date = preg_replace('#<b>.*?Bugün.*?</b>.*?,#si', date_i18n('d F Y') . " - ", $date);
 
   $r=substr($div,strpos($div,'<div class="inner" id="msg_'.$msg.'">'));
@@ -303,7 +303,7 @@ function forumhaber_ayikla() {
 }
 ```
 
-Oldukça karmaşık bir fonksiyon olduğunun farkındayım. Kabaca bu fonksiyonda neler olup bittiğinden, neler döndüğünden biraz bahsetmeye çalışayım. Öncelikle eğer $_GET değişkeni içerisinde “forumurl” değeri gönderilmemişse işleri baştan kesip atıyoruz. Daha sonra da sunucuda cURL paketinin kurulu olup olmadığına bakıp, kurulu ise cURL ile değilse PHP'nin yerleşik fonksiyonlarından olan file_get_contents fonksiyonu ile iletinin olduğu sayfanın HTML kaynak kodunu okuyoruz.
+Oldukça karmaşık bir fonksiyon olduğunun farkındayım. Kabaca bu fonksiyonda neler olup bittiğinden, neler döndüğünden biraz bahsetmeye çalışayım. Öncelikle eğer $\_GET değişkeni içerisinde “forumurl” değeri gönderilmemişse işleri baştan kesip atıyoruz. Daha sonra da sunucuda cURL paketinin kurulu olup olmadığına bakıp, kurulu ise cURL ile değilse PHP'nin yerleşik fonksiyonlarından olan file_get_contents fonksiyonu ile iletinin olduğu sayfanın HTML kaynak kodunu okuyoruz.
 
 Önemli bir hususu burada belirtmek zorundayım. Bu fonksiyonun doğru bir şekilde, sağlıklı olarak çalışması için, girilen ileti adresinde “msg123456” şeklinde bir ifade bulunmak zorundadır. Çünkü içeriği okunacak olan iletinin olduğu kısmı, verilen adres bilgisinde bu kısmı okuduktan sonra elde ettiği o sayısal ifadeye göre ayıklayacak şekilde yazdım. Bu ayıklama kodu daha da pratikleştirilebilir, daha etkili yapılabilir veya başka siteler için sil baştan yazılabilir.
 

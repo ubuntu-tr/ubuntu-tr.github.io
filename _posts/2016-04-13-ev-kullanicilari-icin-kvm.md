@@ -26,7 +26,7 @@ Yazının geri kalanında kurumsal ihtiyaçlara yönelik KVM senaryoları yerine
 
 ### Peki KVM hangi konuk işletim sistemlerini çalıştırabiliyor?
 
-Windows XP'den Android'e, Slackware'den OpenBSD'ye, Solaris'ten Amiga'ya kadar uzanan geniş bir yelpazede aklınıza gelebilecek hemen hemen her işletim sistemini çalıştırabiliyor. Tüm listeye proje sayfasından **[1]** ulaşmak mümkün. Gelelim KVM'in konak makinemize kurulumunun nasıl yapılacağına. Ubuntu her zaman olduğu gibi bu sefer de işimizi çok kolaylaştırıyor. Yüklememiz gereken paketler şunlar.
+Windows XP'den Android'e, Slackware'den OpenBSD'ye, Solaris'ten Amiga'ya kadar uzanan geniş bir yelpazede aklınıza gelebilecek hemen hemen her işletim sistemini çalıştırabiliyor. Tüm listeye proje sayfasından [^1] ulaşmak mümkün. Gelelim KVM'in konak makinemize kurulumunun nasıl yapılacağına. Ubuntu her zaman olduğu gibi bu sefer de işimizi çok kolaylaştırıyor. Yüklememiz gereken paketler şunlar.
 
 | Paket | İşlevi |
 |----------|---------|
@@ -133,4 +133,4 @@ KVM genel hatlarıyla işte bu kadar basit. Ubuntu 3 paket sayesinde sisteme ço
 Yazıyı burada bitirirken VirtualBox'a alternatif olarak KVM kullanmanız için gereken tüm bilgileri paylaştığımızı umuyoruz. Yaşadığınız sorunları her zamanki gibi forumumuzda dile getirebilirsiniz.
 
 ###### Kaynak:
-[1] <http://www.linux-kvm.org/page/Guest_Support_Status>
+[^1]: <http://www.linux-kvm.org/page/Guest_Support_Status>

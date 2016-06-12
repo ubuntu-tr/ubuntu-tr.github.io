@@ -17,7 +17,7 @@ Var mıdır bu tip hayalleriniz? Çok uzun hikâye değil mi? Herkes bırakıp g
 
 Neyse ki sanal ortamda hayal ettiğiniz kişi olmak, bu kadar zahmetli değil. Family Farm, sıfırdan başlayarak, hayallerinizdeki aile çiftliğinizi kurabileceğimiz bir dünyaya götürüyor bizi. Küçük bir kulübe içinde yaşayan, birkaç meyve ağacı ve birkaç tavuğu olan sevimli bir çift olarak başladığımız oyunda, hem ailemizi hem de çiftliğimizi büyütmeye çalışıyoruz.
 
-Oyunumuz, bağımsız bir geliştirici olan Hammerware tarafından geliştirilen DRM-Free lisanslı bir oyun. GNU/Linux sürümü, Desura üzerinden, Ubuntu Yazılım Merkezi'nden ve Gameolith sitesinden **[1]** 15$ karşılığında alabilirsiniz.
+Oyunumuz, bağımsız bir geliştirici olan Hammerware tarafından geliştirilen DRM-Free lisanslı bir oyun. GNU/Linux sürümü, Desura üzerinden, Ubuntu Yazılım Merkezi'nden ve Gameolith sitesinden [^1] 15$ karşılığında alabilirsiniz.
 
 **Oyunun asgari sistem gereksinimleri:**
 
@@ -140,4 +140,4 @@ Zorlayıcılık ve eğlence seviyesi iyi ayarlanmış. Oldukça iyi bir zaman ka
 
 
 ###### Kaynak:
-[1] <http://www.gameolith.com/game/family-farm/>
+[^1]: <http://www.gameolith.com/game/family-farm/>
