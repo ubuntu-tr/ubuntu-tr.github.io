@@ -1,7 +1,14 @@
+{% assign theme = site.data[site.theme].settings %}{% 
+assign themeT = site.data[site.theme].settings[page.type] %}{% 
+assign layout = site.data[site.theme][page.layout] %}{% 
+assign layoutT = site.data[site.theme][page.layout][page.type] %}{% 
+include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}{% 
+include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title>SUDO Portal</title>
+        <title>{{ themeT.title | replace: "*title", page.title }}</title>
+        {% if themeT.description %}<meta name="description" content="{{ themeT.description | replace: '*title', page.title }}" />{% endif %}
         {% assign level = page.url | append: '.' | split: '/'  | size %}{% if level != 2 %}<base href="/">{% endif %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,12 +18,6 @@
         {% include {{site.data.settings.hook.dir}}/_theme.html hookPos="head" %}
         {% include {{site.data.settings.hook.dir}}/_extension.html hookPos="head" %}
     </head>
-    {% assign theme = site.data[site.theme].settings %}{% 
-    assign themeT = site.data[site.theme].settings[page.type] %}{% 
-    assign layout = site.data[site.theme][page.layout] %}{% 
-    assign layoutT = site.data[site.theme][page.layout][page.type] %}{% 
-    include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}{% 
-    include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
     <body>
         {% include {{site.blockDir}}/header.html %}
         <div class="{% include {{site.data.settings.style.dir}}/_get.html get='container' %}">
