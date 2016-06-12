@@ -50,6 +50,9 @@ $(document).ready(function() {
 
 	$('.p-button+.button').on('click', function() {
 		showNext();
+		if($(this).prev().children('.hidden').size() === 0)
+			$(this).remove();
+
 	});
 
 });
