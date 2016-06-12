@@ -10,7 +10,7 @@ thumb: "kapak.png"
 author: "Bahadır Demircioğlu"
 ---
 
-Ev kullanıcıları büyük hesaplama gücüne ihtiyaç duyduğunda sahip oldukları işlemci gücü ya da RAM miktarı yetersiz gelecektir. Bu sorunları aşmak için 1994 senesinde Donald Becker ve Thomas Sterling tarafından Beowulf adını verdikleri çalışma başladı. Bu çalışmanın amacı düşük maliyetli ev bilgisayarları ile süper hesaplamalar yapabilecek kaynakları elde etmekti. Hazırladıkları ilk yapıda çoğumuzun adını dahi duymadığı Pentium I ve 486 sınıf üzerinde Linux olan makineler kullandılar. Bu çalışmalar sayesinde elimizde çok pahalı kaynaklar olmadan da büyük hesaplamalar yapabileceğimiz kanıtlanmış oldu. Bu çalışmaların tek dez avantajı ise hesaplama düğümlerinin birbirleri ile haberleşirken network üzerinde kaybettikleri zaman. Elimizde çok büyük kaynaklar yoksa ve bunları karşılayacak maddi bir desteğimiz de yoksa sanırım bu kayıp gözardı edilebilir. Daha detaylı bilgi almak isteyenler **[1]** adresine göz gezdirebilirler.
+Ev kullanıcıları büyük hesaplama gücüne ihtiyaç duyduğunda sahip oldukları işlemci gücü ya da RAM miktarı yetersiz gelecektir. Bu sorunları aşmak için 1994 senesinde Donald Becker ve Thomas Sterling tarafından Beowulf adını verdikleri çalışma başladı. Bu çalışmanın amacı düşük maliyetli ev bilgisayarları ile süper hesaplamalar yapabilecek kaynakları elde etmekti. Hazırladıkları ilk yapıda çoğumuzun adını dahi duymadığı Pentium I ve 486 sınıf üzerinde Linux olan makineler kullandılar. Bu çalışmalar sayesinde elimizde çok pahalı kaynaklar olmadan da büyük hesaplamalar yapabileceğimiz kanıtlanmış oldu. Bu çalışmaların tek dez avantajı ise hesaplama düğümlerinin birbirleri ile haberleşirken network üzerinde kaybettikleri zaman. Elimizde çok büyük kaynaklar yoksa ve bunları karşılayacak maddi bir desteğimiz de yoksa sanırım bu kayıp gözardı edilebilir. Daha detaylı bilgi almak isteyenler [^1] adresine göz gezdirebilirler.
 
 Anlatıma başlamadan önce biraz iştah kabartması için birkaç fotoğraf göstermek istiyorum :)
 ![](images/post/paralel-hesaplama-beowulf-cluster/1.jpg)
@@ -222,8 +222,8 @@ mpiuser@node0:~$scp -p mpd.hosts node2:/home/mpiuser/
 mpiuser@node0:~$scp -p mpd.hosts node3:/home/mpiuser/
 ```
 
-Bu noktadan sonrası yapacağınız hesaplamalar doğrultusunda değişmektedir. Bunun için **[2]** adresinde Paralel Programlama bölümü altındaki başlıkları incelemenizde fayda var.
+Bu noktadan sonrası yapacağınız hesaplamalar doğrultusunda değişmektedir. Bunun için [^2] adresinde Paralel Programlama bölümü altındaki başlıkları incelemenizde fayda var.
 
 ### Kaynak:
-[1] <http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html> \\
-[2] <http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa>
+[^1]: <http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html>
+[^2]: <http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa>

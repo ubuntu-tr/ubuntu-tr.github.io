@@ -12,7 +12,7 @@ author: "Çağrı Emer"
 
 İlk örneklerini altmışlı yıllarda gördüğümüz e-posta sistemi, zaman içinde hızla evrilerek günümüzdeki şeklini aldı. Bu süre zarfında doğal olarak kullanıcıların ihtiyaçları da değişti. İlk çıktığı zamanlarda akademik iletişim hizmetini gören e-posta teknolojisi günümüzde artık temel iletişim ihtiyaçlarımız arasında önemli bir yer edinmiş durumda.
 
-Elektronik posta teknolojisinin yaygınlaşıp, hayatımızın her alanına girmeye başlamasıyla, kötü amaçlı e-postalar da kullanıcılar için büyük bir problem haline geldi. 2010 Ağustos tahminlerine göre her gün gönderilen e-postaların 200 milyar adedi **[1]** spam adı verilen istenmeyen postalardan oluşuyor.
+Elektronik posta teknolojisinin yaygınlaşıp, hayatımızın her alanına girmeye başlamasıyla, kötü amaçlı e-postalar da kullanıcılar için büyük bir problem haline geldi. 2010 Ağustos tahminlerine göre her gün gönderilen e-postaların 200 milyar adedi[^1] spam adı verilen istenmeyen postalardan oluşuyor.
 
 E-postaların bir güvenlik sorunu haline gelmesi, geliştiricileri ister istemez çözümler aramaya itti. Bunun sonucu olarak, gönderenin doğrulanması için sertifika ya da şifreleme çözümleri ortaya çıktı. Bu yazıda GnuPG temelli Enigmail eklentisi ile Thunderbird üzerinden gönderilen postaların nasıl imzalandığını ve şifrelendiğini anlatmaya çalışacağım.
 
@@ -138,4 +138,4 @@ Eğer daha önce size posta göndermemiş birine şifrelenmiş posta göndermek 
 Güvenli postalar dilerim :)
 
 ## Kaynak
-[1] <http://en.wikipedia.org/wiki/E-mail_spam#Statistics_and_estimates>
+[^1]: <http://en.wikipedia.org/wiki/E-mail_spam#Statistics_and_estimates>
