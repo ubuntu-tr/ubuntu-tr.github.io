@@ -5,7 +5,7 @@ hook:
   index:
     top: 
       name: "index"
-      settings:
     foot: 
-      name: "asset"
-      settings:
+      name: "js"
+    head: 
+      name: "css"
