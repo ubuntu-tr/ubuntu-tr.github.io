@@ -5,9 +5,9 @@ if forloop.index0 == 10 %}{% assign hidden='hidden' %}{% endif %}
     <div class="{% include {{site.data.settings.style.dir}}/_get.html get='cardImage' %}"> 
         <div class="{{ cat.color }} {% include {{site.data.settings.style.dir}}/_get.html get='cardCategory' %}">{{ cat.title }}</div>
         {% if forloop.index0 < 10 %}
-        <img src="images/post{{post.url}}/{{post.thumb}}@3">
+        <img src="images/post{{post.url}}/card_{{post.thumb}}">
         {% else %}
-        <img data-src="images/post{{post.url}}/{{post.thumb}}@3">
+        <img data-src="images/post{{post.url}}/card_{{post.thumb}}">
         {% endif %} 
     </div>
     <div class="content">

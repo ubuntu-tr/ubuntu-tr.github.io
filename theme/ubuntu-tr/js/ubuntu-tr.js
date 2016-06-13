@@ -42,9 +42,24 @@ $( document ).ready(function() {
       $('#rp').show();
   });
 
-  $('.ui.cards > .card').dimmer({
-    on: 'hover'
-  });
+  if(!is_touch_device()) {
+    $('.ui.cards > .card').dimmer({
+      on: 'hover'
+    });
+  }
+  else {
+    $('.ui.cards > .card').on('click', function() {
+      if(!$(this).hasClass('dimmed')) {
+        $('.dimmed').dimmer('hide');
+        $(this).dimmer('show');
+        return false;
+      }
+    });
+  }
+
 
 });
 
+function is_touch_device() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
