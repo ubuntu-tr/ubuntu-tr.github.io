@@ -1,0 +1,11 @@
+active: true
+dir: "extension/widget-block/heroSlider"
+
+hook: 
+  index:
+    header: 
+      name: "index"
+    foot: 
+      name: "foot"
+    head: 
+      name: "head"
