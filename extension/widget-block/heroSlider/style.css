@@ -15,8 +15,13 @@ time, mark, audio, video {
   padding: 0;
 }
 
+body > header {
+  margin: 0 !important;
+}
+
 .cd-hero {
   line-height: 1;
+  z-index: 9;
 }
 .cd-hero ol, ul {
   list-style: none;

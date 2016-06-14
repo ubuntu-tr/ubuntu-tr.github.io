@@ -1,5 +1,5 @@
 /* Footer */
-header, footer {
+body > header, body > footer {
     font-family: "Ubuntu", "Verdana", "Arial", "Helvetica", sans-serif;
     font-size: 13px;
     line-height: 1.5;
@@ -7,11 +7,11 @@ header, footer {
     color: #333;
 }
 
-header {
+body > header {
     margin-bottom: 20px;
 }
 
-footer {
+body > footer {
     clear: both;
     width: 100%;
     margin-top:20px;
