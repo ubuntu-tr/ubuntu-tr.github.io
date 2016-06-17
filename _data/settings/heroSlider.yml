@@ -1,4 +1,4 @@
-active: true
+active: false
 dir: "extension/widget-block/heroSlider"
 
 hook: 

@@ -1,4 +1,4 @@
-active: false
+active: true
 dir: "extension/widget-block/slider"
 
 hook: 
