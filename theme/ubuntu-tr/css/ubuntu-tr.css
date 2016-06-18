@@ -233,13 +233,13 @@ nav > a:last-child {
     #menuDugme1:checked + header > nav.menu {
         flex-direction:column;
     }
-    #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:last-child) {
+    #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
         background: #DD4814;
         border-top: 1px solid #EC5B29;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
-        color: green;
+        color: black;
     }
     #menuDugme1:checked + header + * {
         opacity:0.1;
