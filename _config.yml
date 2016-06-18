@@ -1,4 +1,6 @@
 # Site settings
+url: "https://sudo.ubuntu-tr.net/"
+
 theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
 listDir: theme/ubuntu-tr/_layouts/list
