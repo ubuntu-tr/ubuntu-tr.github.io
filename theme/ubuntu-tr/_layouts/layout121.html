@@ -1,12 +1,21 @@
-{% assign theme = site.data[site.theme].settings %}{% 
-assign themeT = site.data[site.theme].settings[page.type] %}{% 
-assign layout = site.data[site.theme][page.layout] %}{% 
-assign layoutT = site.data[site.theme][page.layout][page.type] %}{% 
-include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}{% 
+{% assign theme = site.data[site.theme].settings %}{%
+assign themeT = site.data[site.theme].settings[page.type] %}{%
+assign layout = site.data[site.theme][page.layout] %}{%
+assign layoutT = site.data[site.theme][page.layout][page.type] %}{%
+include {{site.data.settings.hook.dir}}/_theme.html hookPos="filter" %}{%
 include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
 <!DOCTYPE html>
 <html>
     <head>
+
+      <!-- Chrome, Firefox OS and Opera -->
+      <meta name="theme-color" content="#E95420">
+      <!-- Windows Phone -->
+      <meta name="msapplication-navbutton-color" content="#E95420">
+      <!-- iOS Safari -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
         <title>{{ themeT.title | replace: "*title", page.title }}</title>
         {% if themeT.description %}<meta name="description" content="{{ themeT.description | replace: '*title', page.title }}" />{% endif %}
         {% assign level = page.url | append: '.' | split: '/'  | size %}{% if level != 2 %}<base href="/">{% endif %}
