@@ -190,7 +190,7 @@ nav > a:last-child {
 .search-field {
     background-color: rgba(0, 0, 0, 0);
     color: black;
-    background-image: url("https://forum.ubuntu-tr.net/Themes/ubuntu/images/search-icon.png");
+    background-image: url("../images/search-icon.png");
     background-position: 5px center;
     background-repeat: no-repeat;
     background-size: 24px 24px;
