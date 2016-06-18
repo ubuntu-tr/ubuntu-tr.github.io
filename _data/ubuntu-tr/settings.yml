@@ -1,6 +1,6 @@
 style: "style1"
 
-index: 
+index:
   title: "SUDO Portal"
   description: "Linux ile ilgili haberleri, uygulamaları ve incelemeleri içerir."
 
@@ -15,4 +15,3 @@ tags:
 
 others:
   title: "*title  Makaleleri"
-
