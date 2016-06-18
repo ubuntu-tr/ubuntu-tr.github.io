@@ -120,17 +120,17 @@ nav > a:last-child {
     display: block;
 }
 .ustMenu > a:hover {
-    color: #DD4814;
+    color: #E95420;
 }
 .ustMenu >  a.aktif {
-    border-top: 2px solid #DD4814;
-    color: #DD4814;
+    border-top: 2px solid #E95420;
+    color: #E95420;
     opacity: 1;
     padding-top: 3px;
 }
 
 .menu {
-    background: none repeat scroll 0 0 #DD4814;
+    background: none repeat scroll 0 0 #E95420;
     box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
     width: 100%;
     height: 47px;
@@ -235,7 +235,7 @@ nav > a:last-child {
     }
     #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
-        background: #DD4814;
+        background: #E95420;
         border-top: 1px solid #EC5B29;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
