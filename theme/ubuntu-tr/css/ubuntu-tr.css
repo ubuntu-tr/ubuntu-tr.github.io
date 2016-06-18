@@ -167,10 +167,11 @@ nav > a:last-child {
     font-size: 28px;
     padding: 0px;
     padding-right: 14px;
-    text-align: right;
+    text-align: left;
 }
 .logo > label {
-    float: left;
+    float: right;
+    margin-right: 30px;
     display: none;
 }
 .menuIcon {
@@ -178,6 +179,39 @@ nav > a:last-child {
     height: 32px;
 }
 
+.search-form {
+    position: absolute;
+    right: 5%;
+    top: 1px;
+}
+.search-form .search-submit {
+    display: none;
+}
+.search-field {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    background-image: url("https://forum.ubuntu-tr.net/Themes/ubuntu/images/search-icon.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: medium none;
+    cursor: pointer;
+    height: 37px;
+    margin: 2px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    transition: width 400ms ease 0s, background 400ms ease 0s;
+    -webkit-transition: width 400ms ease 0s, background 400ms ease 0s;
+    width: 1px;
+    -webkit-appearance: textfield;
+}
+.search-field:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #C3C0AB;
+    cursor: text;
+    outline: 0 none;
+    width: 250px;
+}
 
 @media only screen and (max-width: 1150px) {
 }
