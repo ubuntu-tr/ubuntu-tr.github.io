@@ -57,28 +57,31 @@ $( document ).ready(function() {
     });
   }
 
-  var ara = get('ara').split('+');
-  console.log('Ara: '+ara);
-  $( ".ui.cards > .card" ).removeClass('hidden');
-  $( ".ui.cards > .card" ).each(function( index ) {
-    var status = false;
-    for(var i in ara) {
-      if(ara[i].substr(0, 3) == '%2B' && $(this).text().search(new RegExp(ara[i].substring(3), "i")) == -1) {
-        status = false;
-        break;
+  if($('.ui.cards').size() === 0)
+    $('.search-form').hide();
+  var ara = get('ara');
+  if(ara !== undefined) {
+    ara = ara.split('+');
+    $( ".ui.cards > .card" ).removeClass('hidden');
+    $( ".ui.cards > .card" ).each(function( index ) {
+      var status = false;
+      for(var i in ara) {
+        if(ara[i].substr(0, 3) == '%2B' && $(this).text().search(new RegExp(ara[i].substring(3), "i")) == -1) {
+          status = false;
+          break;
+        }
+        else if(ara[i].substr(0, 3) == '%2B' || $(this).text().search(new RegExp(ara[i], "i")) != -1)
+          status = true;
       }
-      else if(ara[i].substr(0, 3) == '%2B' || $(this).text().search(new RegExp(ara[i], "i")) != -1)
-        status = true;
-    }
-    if(!status)
-      $(this).addClass('removed');
-  });
-  $( ".removed" ).remove();
-  $( ".ui.cards > .card:nth-child(n+11)" ).addClass('hidden');
-  $( ".ui.cards > .card:not('.hidden') img" ).each(function() {
-    $(this).attr('src', $(this).attr('data-src'));
-  });
-
+      if(!status)
+        $(this).addClass('removed');
+    });
+    $( ".removed" ).remove();
+    $( ".ui.cards > .card:nth-child(n+11)" ).addClass('hidden');
+    $( ".ui.cards > .card:not('.hidden') img" ).each(function() {
+      $(this).attr('src', $(this).attr('data-src'));
+    });
+  }
 });
 
 function is_touch_device() {
