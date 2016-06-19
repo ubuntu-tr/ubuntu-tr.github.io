@@ -1,5 +1,5 @@
 # Site settings
-url: "https://sudo.ubuntu-tr.net/"
+url: "https://sudo.ubuntu-tr.net"
 
 theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
