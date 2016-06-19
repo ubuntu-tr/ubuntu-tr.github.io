@@ -12,7 +12,7 @@ include {{site.data.settings.hook.dir}}/_extension.html hookPos="filter" %}
         {% assign level = page.url | append: '.' | split: '/'  | size %}{% if level != 2 %}<base href="/">{% endif %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href='{{site.url}}feed.xml' rel='alternate' type='application/atom+xml'>
+        <link href='{{site.url}}/feed.xml' rel='alternate' type='application/atom+xml'>
         <link rel="stylesheet" href="{{ site.themeDir }}/css/main.css">
         <link rel="stylesheet" href="{{ site.themeDir }}/css/ubuntu-tr.css">
         <link rel="stylesheet" href="{{ site.themeDir }}/css/semantic.min.css">
