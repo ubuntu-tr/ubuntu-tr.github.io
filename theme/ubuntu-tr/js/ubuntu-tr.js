@@ -35,12 +35,12 @@ $( document ).ready(function() {
     $('label[for=g2]').click();
   }
 
-  $( document ).scroll(function() {
-    if($(document).scrollTop() > 300)
-      $('#rp').hide();
-    else
-      $('#rp').show();
-  });
+  $('#toc')
+    .visibility({
+      type   : 'fixed',
+      offset : 20 // give some space from top of screen
+    })
+  ;
 
   if(!is_touch_device()) {
     $('.ui.cards > .card').dimmer({
@@ -48,12 +48,8 @@ $( document ).ready(function() {
     });
   }
   else {
-    $('.ui.cards > .card').on('click', function() {
-      if(!$(this).hasClass('dimmed')) {
-        $('.dimmed').dimmer('hide');
-        $(this).dimmer('show');
-        return false;
-      }
+    $('.ui.cards > .card').each(function() {
+      $(this).find('.dimmer p').addClass('description').appendTo($(this).children('.content:not(.extra)'));
     });
   }
 

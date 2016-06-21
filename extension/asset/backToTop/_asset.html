@@ -1,9 +1,9 @@
 <script>
 $( document ).ready(function() {
 	$( document ).scroll(function() {
-		if($(document).scrollTop() > 700 && $(document).scrollTop() < 1000)
+		if($(document).scrollTop() > 700)
 			$('.backToTop').removeClass('hidden');
-		else if($(document).scrollTop() < 700 && $(document).scrollTop() > 400)
+		else if($(document).scrollTop() < 700)
 			$('.backToTop').addClass('hidden');
 	});
 
@@ -16,7 +16,7 @@ $( document ).ready(function() {
 <style>
 .backToTop {
     position: fixed;
-    bottom: 20px;
+    bottom: 55px;
     right: 20px;
     font-size: 38px;
     padding: 10px 12px 12px;
@@ -24,7 +24,6 @@ $( document ).ready(function() {
     color: white;
     cursor: pointer;
     font-family: Icons;
-    z-index: 9999;
 }
 .backToTop::before {
     content: "\f106";
