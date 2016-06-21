@@ -53,8 +53,10 @@ $( document ).ready(function() {
     });
   }
 
-  if($('.ui.cards').size() === 0)
+  if($('.ui.cards').size() === 0) {
     $('.search-form').hide();
+    $('.logo > label').css('margin-right', '-20px');
+  }
   var ara = get('ara');
   if(ara !== undefined) {
     ara = ara.split('+');
