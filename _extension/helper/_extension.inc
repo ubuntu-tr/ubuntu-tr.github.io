@@ -1,7 +1,7 @@
 {% for ext in site.extension %}{% 
     if ext[page.type2] == "classAll" %}{% assign class = ext.content | split: "," %}{% endif %}{% 
 endfor %}{% 
-assign items = site.theme | sort: 'order' %}{% 
+assign items = site.theme | sort: 'order', 'last' %}{% 
 for ext in items %}{% 
     if ext[page.type2] == page.position %}{% 
         if page.outputType == "basic" %}{{ ext.content }}{% continue %}{% endif %}{% 
