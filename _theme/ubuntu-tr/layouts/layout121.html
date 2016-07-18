@@ -1,0 +1,41 @@
+{% include _extension/helper/_system.inc %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ themeT.title | replace: "*title", page.title }}</title>
+        {% if themeT.description %}<meta name="description" content="{{ themeT.description | replace: '*title', page.title }}" />{% endif %}
+        {% assign level = page.url | append: '.' | split: '/'  | size %}{% if level != 2 %}<base href="/">{% endif %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='{{site.url}}/system/feed.xml' rel='alternate' type='application/atom+xml'>
+        {{ systemMeta }}
+        <style>
+        {{ systemHead }}
+        </style>
+    </head>
+    <body>
+        {{ systemHeader }}
+        <div class="{{ class[0] }}">
+            <div class="{{ class[1] }}">
+                <div class="{{ class[2] }}">
+                    <div class="{{ class[3] }}">
+                        {{ systemTop }}
+                    </div>
+                </div>
+
+                <div class="{{ class[4] }}">
+                    <div class="{{ class[5] }}">
+                        {{ systemMain }}
+                    </div>
+                    <div class="{{ class[6] }}">
+                        {{ systemSidebar }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ systemFooter }}
+        <link rel="stylesheet" href="system/{{ page.type }}.css">
+        <script src="system/{{ page.type }}.js"></script>
+        {{ systemFoot }}
+    </body>
+</html>

@@ -1,0 +1,262 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+/* Footer */
+body > header, body > footer {
+    font-family: "Ubuntu", "Verdana", "Arial", "Helvetica", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+}
+
+body > header {
+    margin-bottom: 20px;
+}
+
+body > footer {
+    clear: both;
+    width: 100%;
+    margin-top:20px;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 -2px 2px rgba(0,0,0,.2);
+}
+footer > .ayirac {
+    height: 15px;
+    border-top: 1px solid #D8D8D8;
+    width: 100%;
+}
+footer > nav {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow:row nowrap;
+    padding: 50px 10px 30px;
+}
+footer > nav > div {
+    flex: 1;
+}
+footer > nav > div > a {
+    display: block;
+    color: #333333;
+    font-size: 10.5px;
+    line-height: 2;
+    padding: 3px;
+}
+footer > nav > div > a:first-child {
+    font-weight: bold;
+}
+footer > nav a:hover {
+    color: #E6402A;
+    text-decoration: underline;
+}
+
+footer > .bilgi {
+    width: 90%;
+    margin: 0 auto;
+    background: url("theme/ubuntu-tr/images/logo-ubuntu-grey.png") no-repeat scroll right 20px rgba(0, 0, 0, 0);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+}
+footer > .bilgi > img {
+    width: 48px;
+    float: left;
+    margin-right: 10px;
+}
+footer > .bilgi a {
+    color: #772953;
+}
+footer > .bilgi a:hover {
+    color: #E6402A;
+}
+
+
+/* HEADER */
+header > nav {
+    padding: 0 5%;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: #333;
+}
+header > .menu a:hover {
+    color: white;
+}
+
+nav > a:first-child {
+    margin-left: 0;
+}
+nav > a:last-child {
+    margin-right: 0;
+}
+@media only screen and (max-device-width: 768px){
+    nav > a:nth-child(n+5){
+        display:none;
+    }
+}
+#menuDugme1 {
+    display: none;
+}
+
+.ustMenu {
+    background: none repeat scroll 0 0 #EFEFEF;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    height: 30px;
+    line-height: 19.2px;
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.ustMenu > a {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    position: relative;
+    display: block;
+}
+.ustMenu > a:hover {
+    color: #E95420;
+}
+.ustMenu >  a.aktif {
+    border-top: 2px solid #E95420;
+    color: #E95420;
+    opacity: 1;
+    padding-top: 3px;
+}
+
+.menu {
+    background: none repeat scroll 0 0 #E95420;
+    box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
+    width: 100%;
+    height: 47px;
+    color: white;
+    display: flex;
+    z-index: 2;
+    position: relative;
+}
+.menu > a {
+    color: white;
+    display: block;
+    padding: 12px 14px 0px;
+    font-size: 14px;
+    border-left: 1px solid #C64012;
+    height: 47px;
+}
+.menu > a.aktif {
+    background: #B83A10;
+}
+.menu > a:not(:first-child):not(:last-child):hover {
+    background: #E1662F;
+}
+.menu > a:not(:first-child)::before {
+    content: " ";
+    border-left: 1px solid #EC5B29;
+    padding-right: 14px;
+    margin: -12px 0 0 -14px;
+    display: block;
+    float: left;
+    height: 47px;
+}
+.menu > a.logo {
+    border: none;
+    font-size: 28px;
+    padding: 0px;
+    padding-right: 14px;
+    text-align: left;
+}
+.logo > label {
+    float: right;
+    margin-right: 30px;
+    display: none;
+}
+.menuIcon {
+    margin-top: 5px;
+    height: 32px;
+}
+
+.search-form {
+    position: absolute;
+    right: 5%;
+    top: 2px;
+}
+.search-form .search-submit {
+    display: none;
+}
+input[type=search].search-field {
+    box-sizing: inherit;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    background-image: url("theme/ubuntu-tr/images/search-icon.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: medium none;
+    cursor: pointer;
+    height: 38px;
+    margin: 2px 0;
+    padding: 0 0 0 34px;
+    position: relative;
+    transition: width 400ms ease 0s, background 400ms ease 0s;
+    -webkit-transition: width 400ms ease 0s, background 400ms ease 0s;
+    width: 1px;
+    -webkit-appearance: textfield;
+}
+input[type=search].search-field:focus {
+    background-color: #FFFFFF;
+    border: 2px solid #C3C0AB;
+    cursor: text;
+    outline: 0 none;
+    width: 250px;
+}
+
+@media only screen and (max-width: 1150px) {
+}
+@media only screen and (max-width: 950px) {
+    header > nav.menu > a.logo > label {
+        display: block;
+    }
+    header > nav.menu > a:not(.logo) {
+        display: none;
+    }
+    header > nav.menu > a {
+        flex: 1;
+        border: none;
+        min-height: 47px;
+    }
+    header > nav.menu > a::before {
+        border-left: none !important;
+    }
+    #menuDugme1:checked + header > nav.menu {
+        flex-direction:column;
+    }
+    #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
+        display: block;
+        background: #E95420;
+        border-top: 1px solid #EC5B29;
+    }
+    #menuDugme1:checked + header > nav.menu > a > label {
+        color: black;
+    }
+    #menuDugme1:checked + header + * {
+        opacity:0.1;
+    }
+}
+@media only screen and (max-width: 800px) {
+    footer > nav, footer > .ayirac {
+        display: none;
+    }
+}
+@media only screen and (max-width: 550px) {
+}

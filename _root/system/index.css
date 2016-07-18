@@ -1,0 +1,8 @@
+---
+type2: index
+position: css
+outputType: basic
+---
+{% capture temp2 %}
+{% include  _extension/helper/_extension.inc %}
+{% endcapture %}{{ temp2 | strip_newlines }}

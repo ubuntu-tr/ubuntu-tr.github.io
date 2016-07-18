@@ -1,0 +1,11 @@
+---
+index: systemHead
+---
+{% capture temp2 %}
+	{% for ext in site.theme %}{% 
+	    if ext.index == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+	{% for ext in site.extension %}{% 
+	    if ext.index == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+{% endcapture %}{{ temp2 | scssify }}

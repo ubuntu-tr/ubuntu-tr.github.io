@@ -1,0 +1,13 @@
+---
+order: 3
+index: sidebar
+
+listLayout: item
+container: "items divided link"
+header: "Duyurular"
+---
+<div class="ui {{ page.container }}">
+{% for post in site.data.news %}{% 
+	include {{ site.listDir }}/{{ page.listLayout }}.html %}{% 
+endfor %}
+</div>

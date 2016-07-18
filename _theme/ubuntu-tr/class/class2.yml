@@ -1,0 +1,17 @@
+---
+order: 2
+
+index: class
+post: class
+category: class
+tag: class
+other: class
+
+
+grid: "ui grid equal width stackable celled"
+row1column: "column clearPadding"
+row2column1: "column white"
+row2column2: "column five wide computer only lightGrey"
+
+blockContainer: "ui segment basic"
+---

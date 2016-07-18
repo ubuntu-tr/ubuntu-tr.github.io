@@ -1,3 +1,0 @@
-{% assign list = page.path | remove:'_other/' | split:"/" %}
-{% assign list = site.posts | where: list[0], page.title %}
-{% include {{ site.data.settings.list.dir }}/_index.html param=include.param %}

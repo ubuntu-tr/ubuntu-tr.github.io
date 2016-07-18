@@ -3,20 +3,25 @@ url: "https://sudo.ubuntu-tr.net"
 
 theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
-listDir: theme/ubuntu-tr/_layouts/list
-blockDir: theme/ubuntu-tr/_layouts/block
-layouts_dir:  ./theme/ubuntu-tr/_layouts
+listDir: _theme/ubuntu-tr/layouts/list
+blockDir: _theme/ubuntu-tr/layouts/block
+layouts_dir:  ./_theme/ubuntu-tr/layouts
 includes_dir: .
-
-disqus_id: sudoportal
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
+sass:
+  style: compressed
+
 timezone: Europe/Istanbul
 
 collections:
+  theme:
+    output: false
+  extension:
+    output: false
   category:
     output: true
     permalink: /:title/
@@ -35,23 +40,23 @@ defaults:
       path: ""
       type: category
     values:
-      type: categories
+      type: category
       layout: layout121
   - scope:
       path: ""
       type: tag
     values:
-      type: tags
+      type: tag
       layout: layout121
   - scope:
       path: ""
       type: posts
     values:
-      type: posts
+      type: post
       layout: layout121
   - scope:
       path: ""
       type: other
     values:
-      type: others
+      type: other
       layout: layout121

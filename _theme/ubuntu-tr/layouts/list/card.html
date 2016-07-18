@@ -1,0 +1,29 @@
+{% include _extension/helper/category.inc %}
+{% include _extension/helper/dateTR.inc %}
+{% if forloop.index0 == 10 %}{% assign hidden='hidden' %}{% endif %} 
+<a class="card {{hidden}}" href="{{post.url}}">
+    <div class="{{ class[18] }}"> 
+        <div class="{{ cat.color }} {{ class[19] }}">{{ cat.title }}</div>
+        {% if forloop.index0 < 10 %}
+        <img src="images/post{{post.url}}/card_{{post.thumb}}">
+        {% else %}
+        <img data-src="images/post{{post.url}}/card_{{post.thumb}}">
+        {% endif %} 
+    </div>
+    <div class="content">
+        <div class="{{ class[20] }}">{{post.title}}</div>
+    </div>
+    <div class="extra content"> 
+        <span class="{{ class[21] }}"> {{ date }} </span> 
+        <span> <i class="{{ class[22] }}"></i> {{post.author}} </span> 
+    </div>
+
+    <div class="{{ class[23] }}">
+        <div class="content">
+            <div>
+                <h2 class="{{ class[24] }}">{{post.title}}</h2>
+                <p class="{{ class[25] }}">{{ post.summary }}</p>
+            </div>
+        </div>
+    </div>
+</a>

@@ -1,8 +1,0 @@
-active: true
-dir: "extension/asset/markdownCSS"
-
-hook: 
-  posts:
-    head: 
-      name: "asset"
-      settings:

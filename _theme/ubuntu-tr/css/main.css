@@ -1,0 +1,152 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+html > body {
+    background-color: #EDEDEC;
+}
+
+.hidden,
+.ui.stackable.cards > .card.hidden {
+    display: none !important;
+}
+.pointer,
+.ui.pagination > * {
+    cursor:pointer;
+}
+.ui.cards + .ui.button.fluid {
+    margin-top: 10px;
+}
+
+.ui.card > .markdown-body, .ui.card .description {
+    color: #606c76;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+}
+.ui.card > .markdown-body {
+    padding: 20px;
+}
+
+.markdown-body pre.highlight:before {
+    content: '\f121';
+    font-family: Icons;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #ededed;
+}
+.markdown-body pre.highlight {
+    padding-top:30px;
+}
+
+.markdown-body div.highlighter-rouge {
+    position: relative;
+}
+
+.markdown-body pre.highlight code {
+    color: #d4d4d4;
+}
+
+.ui.cards.infinite > .card.hidden {
+    display: none !important;
+}
+
+.ui.cards.infinite > .card > .ui.image > .ui.label {
+    z-index: 1;
+}
+
+.dimmer p {
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 0 10px;
+}
+.dimmer h2.ui.header {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+div.r16_9 {
+    position: relative;
+    width: 100%;
+}
+div.r16_9::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;  /* 16:9*/
+}
+div.r16_9 > * {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ui.grid > .row > .white.column,
+.ui.grid > .row > .lightGrey.column {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.ui.grid > .white.row,
+.ui.grid > .white.column,
+.ui.grid > .row > .white.column {
+  background-color: white !important;
+}
+.ui.grid > .lightGrey.row,
+.ui.grid > .lightGrey.column,
+.ui.grid > .row > .lightGrey.column {
+  background-color: #EFEFEF !important;
+}
+
+.clearPadding {
+    padding: 0 !important;
+}
+
+@media only screen and (min-width: 1200px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 370px;
+        height: 220px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 303px;
+        height: 181px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ui.cards.infinite > .card > .ui.image > img {
+        width: 348px;
+        height: 208px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.card > .markdown-body, .ui.card .description {
+        color: #606c76;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+/* MARKDOWN */
+p,
+dd {
+    white-space: pre-line;
+}
+dd > * {  
+    white-space: normal; 
+}

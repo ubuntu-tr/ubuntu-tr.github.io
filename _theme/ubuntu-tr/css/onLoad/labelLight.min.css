@@ -1,0 +1,126 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+/*!
+ * # Semantic UI 2.1.8 - Label
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Label
+*******************************/
+
+.ui.label {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0em 0.14285714em;
+  background-color: #E8E8E8;
+  background-image: none;
+  padding: 0.5833em 0.833em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: none;
+  font-weight: bold;
+  border: 0px solid transparent;
+  border-radius: 0.28571429rem;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
+}
+.ui.label:first-child {
+  margin-left: 0em;
+}
+.ui.label:last-child {
+  margin-right: 0em;
+}
+
+/* Link */
+a.ui.label {
+  cursor: pointer;
+}
+
+/*******************************
+             Types
+*******************************/
+
+/*-------------------
+       Ribbon
+--------------------*/
+
+.ui.ribbon.label {
+  position: relative;
+  margin: 0em;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  border-radius: 0em 0.28571429rem 0.28571429rem 0em;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.ui.ribbon.label:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0%;
+  background-color: transparent !important;
+  border-style: solid;
+  border-width: 0em 1.2em 1.2em 0em;
+  border-color: transparent;
+  border-right-color: inherit;
+  width: 0em;
+  height: 0em;
+}
+
+/* Positioning */
+.ui.ribbon.label {
+  left: calc( -1rem  -  1.2em );
+  margin-right: -1.2em;
+  padding-left: calc( 1rem  +  1.2em );
+  padding-right: 1.2em;
+}
+
+/* Inside Table */
+.ui.image > .ribbon.label,
+.ui.card .image > .ribbon.label {
+  position: absolute;
+  top: 1rem;
+}
+.ui.card .image > .ui.ribbon.label,
+.ui.image > .ui.ribbon.label {
+  left: calc( 0.05rem  -  1.2em );
+}
+.ui.card .image > .ui[class*="right ribbon"].label,
+.ui.image > .ui[class*="right ribbon"].label {
+  left: calc(100% +  -0.05rem  +  1.2em );
+  padding-left: 0.833em;
+}
+
+/*******************************
+             States
+*******************************/
+
+
+/*******************************
+           Variations
+*******************************/
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

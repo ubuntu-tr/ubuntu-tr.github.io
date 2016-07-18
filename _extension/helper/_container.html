@@ -1,0 +1,14 @@
+{% capture temp %}
+    {% if ext.segment %}
+        <div class="{{ ext.segment }}">
+    {% elsif ext.segment != false %}
+        <div class="{{ class[7] }}">
+    {% endif %}
+    {% if ext.header != nil %}
+        <h3 class="ui header orange dividing">{{ ext.header }}</h3>
+    {% endif %}
+    {% include {{ ext.path | replace:'.html','.inc' }} config=ext %}
+    {% if ext.segment != false %}
+        </div>
+    {% endif %}
+{% endcapture %}

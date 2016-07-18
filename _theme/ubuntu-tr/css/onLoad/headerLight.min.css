@@ -1,0 +1,178 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+/*!
+ * # Semantic UI 2.1.8 - Header
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Header
+*******************************/
+
+
+/* Standard */
+.ui.header {
+  border: none;
+  margin: calc(2rem -  0.14285em ) 0em 1rem;
+  padding: 0em 0em;
+  font-family: 'Ubuntu', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1.2857em;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+.ui.header:first-child {
+  margin-top: -0.14285em;
+}
+.ui.header:last-child {
+  margin-bottom: 0em;
+}
+
+/*--------------
+   Sub Header
+---------------*/
+
+.ui.header .sub.header {
+  display: block;
+  font-weight: normal;
+  padding: 0em;
+  margin: 0em;
+  font-size: 1rem;
+  line-height: 1.2em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/*******************************
+            Types
+*******************************/
+
+
+/*--------------
+     Page
+---------------*/
+
+h1.ui.header {
+  font-size: 2rem;
+}
+h2.ui.header {
+  font-size: 1.714rem;
+}
+h3.ui.header {
+  font-size: 1.28rem;
+}
+h4.ui.header {
+  font-size: 1.071rem;
+}
+h5.ui.header {
+  font-size: 1rem;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+
+/*-------------------
+      Inverted
+--------------------*/
+
+.ui.inverted.header {
+  color: #FFFFFF;
+}
+.ui.inverted.header .sub.header {
+  color: rgba(255, 255, 255, 0.8);
+}
+.ui.inverted.block.header {
+  background: #545454 -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  background: #545454 linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  box-shadow: none;
+}
+.ui.inverted.block.header {
+  border-bottom: none;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+
+/*--- Orange ---*/
+
+.ui.orange.header {
+  color: #F2711C !important;
+}
+a.ui.orange.header:hover {
+  color: #f26202 !important;
+}
+.ui.orange.dividing.header {
+  border-bottom: 2px solid #F2711C;
+}
+
+/* Inverted */
+.ui.inverted.orange.header {
+  color: #FF851B !important;
+}
+a.ui.inverted.orange.header:hover {
+  color: #ff7701 !important;
+}
+
+/*-------------------
+      Dividing
+--------------------*/
+
+.ui.dividing.header {
+  padding-bottom: 0.21428571rem;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+}
+.ui.dividing.header .sub.header {
+  padding-bottom: 0.21428571rem;
+}
+.ui.dividing.header .icon {
+  margin-bottom: 0em;
+}
+.ui.inverted.dividing.header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/*-------------------
+        Block
+--------------------*/
+
+.ui.block.header {
+  background: #F3F4F5;
+  padding: 0.71428571rem 1rem;
+  box-shadow: none;
+  border: 1px solid #D4D4D5;
+  border-radius: 0.28571429rem;
+}
+
+/*-------------------
+        Sizing
+--------------------*/
+
+.ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-size: 1.28em;
+}
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

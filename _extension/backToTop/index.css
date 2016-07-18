@@ -1,0 +1,23 @@
+---
+order: 5
+
+index: css
+posts: css
+categories: css
+tags: css
+others: css
+---
+.backToTop {
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    font-size: 38px;
+    padding: 10px 12px 12px;
+    background-color: #F4AA90;
+    color: white;
+    cursor: pointer;
+    font-family: Icons;
+}
+.backToTop::before {
+    content: "\f106";
+}

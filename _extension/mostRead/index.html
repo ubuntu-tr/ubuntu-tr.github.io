@@ -1,0 +1,17 @@
+---
+order: 4
+
+index: sidebar
+tag: sidebar
+other: sidebar
+
+listLayout: item
+container: "items divided link"
+header: "En Çok Okunanlar"
+---
+<div class="ui {{ page.container }}">
+{% assign list = site.data.mostRead | where:'category', 'home' %}
+{% for post in list %}{% 
+	include {{ site.listDir }}/{{ page.listLayout }}.html %}{% 
+endfor %}
+</div>

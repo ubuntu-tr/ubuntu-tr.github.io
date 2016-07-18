@@ -1,0 +1,11 @@
+---
+category: systemHead
+---
+{% capture temp2 %}
+	{% for ext in site.theme %}{% 
+	    if ext.category == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+	{% for ext in site.extension %}{% 
+	    if ext.category == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+{% endcapture %}{{ temp2 | scssify }}

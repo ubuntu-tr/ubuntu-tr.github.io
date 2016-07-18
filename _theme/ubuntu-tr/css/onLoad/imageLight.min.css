@@ -1,0 +1,66 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+/*!
+ * # Semantic UI 2.1.8 - Image
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2015 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+             Image
+*******************************/
+
+.ui.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+}
+img.ui.image {
+  display: block;
+}
+.ui.image svg,
+.ui.image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+/*******************************
+          Variations
+*******************************/
+
+
+
+/*******************************
+              Groups
+*******************************/
+
+
+/*******************************
+         Theme Overrides
+*******************************/
+
+
+
+/*******************************
+         Site Overrides
+*******************************/
+

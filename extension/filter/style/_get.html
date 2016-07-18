@@ -1,8 +1,0 @@
-{% capture cache2 %}
-	{% for i in style %} 
-		{% if site.data[site.theme][i][include.get] != nil %}
-			{{ site.data[site.theme][i][include.get] }}
-			{% break %}
-		{% endif %}
-	{% endfor %}
-{% endcapture %}{{cache2 | strip}}
