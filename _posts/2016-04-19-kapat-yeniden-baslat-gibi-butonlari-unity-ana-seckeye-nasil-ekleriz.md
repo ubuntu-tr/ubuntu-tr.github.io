@@ -42,5 +42,5 @@ Yüklemeden hemen sonra butonların Ana Seçkedeki yerini almış olması gereki
 
 Daha sonra silme gereksinimi duyarsanız da Ubuntu Yazılım Merkezi'nden "Power Commands" diye aratıp "sil" butonuna tıklamanız yeterli olacaktır.
 
-### Kaynak
+**Kaynak**
 OMG!Ubuntu!

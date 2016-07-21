@@ -152,5 +152,5 @@ Ve kurulum tamamlandı
 ![](images/post/syslog-ng/6.png)
 
 
-###### Kaynak:
+**Kaynak:**
 [^1]: <http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/en/syslog-ng-ose-v3.3-guide-admin-en/html/syslog-ng.conf.5.html>

@@ -9,6 +9,8 @@ image: "pyhton-programlama-seri-ii.jpeg"
 thumb: "pyhton-programlama-seri-ii.jpeg"
 author: "Berkay Dedeoğlu"
 ---
+## Giriş
+
 Tekrar merhaba...
 
 İnsanlar siyah ekranın üzerindeki yeşil - hızlı akan yazılardan, buna eşlik eden taramalı silah sesine benzeyen ve her tuştan farklı tonda ses çıkaran klavyeden; en önemlisi tüm bunları sağlayan bilgisayar başındaki o kişiden neden bu kadar korkar ki?

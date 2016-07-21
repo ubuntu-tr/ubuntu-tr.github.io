@@ -9,8 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Çağrı Emer"
 ---
-
-
+## Giriş
 
 Bundan altı sene önce 2.6.20 çekirdeği ile kullanıma sunulan KVM (kernel-based virtual machines) 2010 civarına kadar geçen süre zarfında çekirdeğe eklenmiş en heyecan verici değişiklik olarak addediliyordu. Duyurulmasından bu yana gün geçtikçe daha kararlı hale gelen ve hızlanan KVM günümüzde pekçok sanallaştırma probleminin altından kalkabiliyor.
 
@@ -24,7 +23,7 @@ Eğer 0'dan farklı bir sayı görüyorsanız yazının geri kalanındaki komutl
 
 Yazının geri kalanında kurumsal ihtiyaçlara yönelik KVM senaryoları yerine ev kullanıcısının ihtiyacını görecek bir senaryo işlenip KVM'e kısa da olsa bir giriş yapılmaya çalışılacaktır.
 
-### Peki KVM hangi konuk işletim sistemlerini çalıştırabiliyor?
+## Peki KVM hangi konuk işletim sistemlerini çalıştırabiliyor?
 
 Windows XP'den Android'e, Slackware'den OpenBSD'ye, Solaris'ten Amiga'ya kadar uzanan geniş bir yelpazede aklınıza gelebilecek hemen hemen her işletim sistemini çalıştırabiliyor. Tüm listeye proje sayfasından [^1] ulaşmak mümkün. Gelelim KVM'in konak makinemize kurulumunun nasıl yapılacağına. Ubuntu her zaman olduğu gibi bu sefer de işimizi çok kolaylaştırıyor. Yüklememiz gereken paketler şunlar.
 
@@ -132,5 +131,5 @@ KVM genel hatlarıyla işte bu kadar basit. Ubuntu 3 paket sayesinde sisteme ço
 
 Yazıyı burada bitirirken VirtualBox'a alternatif olarak KVM kullanmanız için gereken tüm bilgileri paylaştığımızı umuyoruz. Yaşadığınız sorunları her zamanki gibi forumumuzda dile getirebilirsiniz.
 
-###### Kaynak:
+## Kaynak:
 [^1]: <http://www.linux-kvm.org/page/Guest_Support_Status>

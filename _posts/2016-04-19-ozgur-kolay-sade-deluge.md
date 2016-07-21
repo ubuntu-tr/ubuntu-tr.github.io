@@ -18,7 +18,7 @@ En çok kullandığımız programlar arasında yer alır Bittorrent istemcileri.
 
 Kullanımı oldukça basit Deluge'nin. “Torrent Ekle” diyerek açılan pencereden indirdiğimiz torrent dosyasını seçiyoruz. “Seçenekler” sekmesinden dosyayı nereye indireceğimizi belirliyoruz. Buradan bant genişliğini de ayarlama imkanımız var. “Ekle” dediğimiz anda uygulama, belirlediğimiz yere dosyayı indirmeye başlayacaktır. Uygulamanın ana ekranında “Durum, Ayrıntılar, Dosyalar, Eşler, Seçenekler” sekmelerinden indirdiğiniz dosyayla ilgili detaylara ulaşabilirsiniz.
 
-![](images/post/ozgur-kolay-sade-deluge/Ekran Görüntüsü-8.png)
+![](images/post/ozgur-kolay-sade-deluge/Ekran_Görüntüsü-8.png)
 
 “Tercihler” sekmesinde yine “Bant Genişliği” ve “Arayüz” ile ilgili ayarlar yapabiliyoruz. Deluge'nin sağladığı “Vekil Sunucu” desteği ile ilgili düzenlemeleri de yine bu sekmede yapıyoruz. Ancak bu sekmede asıl üzerinde durulması gereken başlık ise “Eklentiler”.
 
@@ -35,7 +35,7 @@ Eklentiler, benzer uygulamaların hepsinde mevcut. Deluge de eklenti açısında
 
 Şayet, buradaki eklentilerden farklı, uygulamayı daha da geliştirecek eklentiler isterseniz, “Eklentiler” sekmesindeki “Daha Fazla Eklenti Bul” düğmesine tıklamalısınız. Buradan Deluge'nin internet sitesindeki eklentiler sayfasına ulaşacaksınız. İndireceğiniz eklentileri, yine “Eklentiler” sekmesinde yer alan “Eklenti Yükle” düğmesine tıklayarak programa ekleyebilirsiniz. Bu şekilde, programın yeteneklerini arttıracak ve onu daha özellikli hale getireceksiniz.
 
-![](images/post/ozgur-kolay-sade-deluge/Ekran Görüntüsü.png)
+![](images/post/ozgur-kolay-sade-deluge/Ekran_Görüntüsü.png)
 
 Kullanımı oldukça basit ve sade olan Deluge, size istediklerinize daha kolay ulaşma imkanı sunuyor. Tıpkı diğer özgür yazılımlar gibi...
 

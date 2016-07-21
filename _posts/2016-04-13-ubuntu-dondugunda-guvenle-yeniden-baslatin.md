@@ -11,6 +11,7 @@ author: "Decent"
 ---
 
 ## Kullandığınız Ubuntu sisteminiz ile hiç donma yaşadınız mı?
+
 Fareyi oynattığınız ya da klavyeden tuşlara bastığınız hâlde hiçbir şey olmuyor! Bu sorunla karşılaştığımızda güç düğmesine basarak sistemi yeniden başlatmak son çare olmalı, öyle değil mi? Hepimizin bildiği gibi -yanlışsa düzeltin- sistemi sıklıkla güç düğmesinden yeniden başlatmak donanım üzerinde özellikle sabit disk üzerinde hasara neden olabilir. Peki, donmuş bir Ubuntu sistemini yeniden başlatmanın doğru yolu var mı? Evet var. Sistemi sağlıklı bir şekilde yeniden başlatmak için "Sihirli SysRq Tuşu"nu kullanacağız.
 
 Bu tuşun konumuzla ilgili olan görevi doğrudan Linux klavye sürücüsünün bir parçası olarak uygulanmaktadır.

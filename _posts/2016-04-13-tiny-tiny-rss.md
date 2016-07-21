@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Heartsmagic"
 ---
+## Giriş
 
 RSS, senelerdir var olan bir teknoloji. Birden fazla kaynağı takip etmek için var olanlar arasında muhtemelen en güzeli de. Özellikle mobil tarafın hayatımıza çekirge sürüsü gibi giren akıllı telefonlarla baskın hâle gelmesiyle beraber, RSS kullanımı daha da kolaylaştı. Zira elimizin altında aklımıza geldiği anda "Neler yazmış bakalım takip ettiğim yerler?" sorusuna cevap alabileceğimiz bir bilgisayar mevcut.
 

@@ -9,6 +9,7 @@ image: "3.png"
 thumb: "3.png"
 author: "Çağrı Emer"
 ---
+## Giriş
 
 Bilgisayarların hayatımızın her alanında yer alması sonucu çoğumuz artık işlerini birden çok bilgisayar ya da bilgisayar benzeri tablet, akıllı telefon gibi cihazlar üzerinde hallediyor. Birden çok aracın kullanımı temelde işleri kolaylaştırıyor gibi görünse de kimi zaman hangi dosyayı nerede oluşturduğumuzu, son değişikliği nerede yaptığımızı hatırlayamıyoruz. Bu sorunun çözümü olarak kimimiz dosyalarını harici bir bellekte sürekli yanında bulundurmayı, kimimiz sunucusunda kimimiz de eposta adresinde saklamayı tercih ediyor. Peki ya çeşitli dosyalar üzerinde sadece biz değil de başkalarının da çalışması gerekiyorsa? Örneğin yazılacak bir proje raporunun sadece bir bölümünden siz sorumluysanız fakat diğerlerinin de ne yazdığını görmek istiyorsanız? İşte bu noktada devreye bulut bilişim giriyor. Hali hazırda var olan uygulamalardan Dropbox ve Ubuntu One sanırım bulut bilişim örneğinden en çok bilinen iki eşitleme servisi. Ben bu yazıda henüz daha çok tanınmamış fakat Dropbox ve Ubuntu One'a nazaran ziyadesiyle güçlü bir servis olan SparkleShare'i tanıtıp, kendi sunucumuzda ve GitHub entegrasyonu ile bu servisi nasıl kullanabileceğimizi anlatmaya çalışacağım.  
 

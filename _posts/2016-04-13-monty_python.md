@@ -9,9 +9,7 @@ image: "1.jpg"
 thumb: "1.jpg"
 author: "Monty_Python"
 ---
-
-
-
+## Giriş
 
 Merhabalar. Bu yazıda Ardour'la canlı enstrüman ve vokal kaydının nasıl yapılacağını anlatacağım. Önce tavsiyeler:
 
@@ -19,7 +17,6 @@ Merhabalar. Bu yazıda Ardour'la canlı enstrüman ve vokal kaydının nasıl ya
 * Güç tasarrufu, ekran koruması tarzı uygulamaları iptal edin.
 * İmkân varsa, ses kaydı için sistem diskinden farklı bir disk (farklı bir bölüm değil) kullanın. Özellikle dizüstü bilgisayarların sabit diskleri 5-10 kanaldan fazla kayıt yapmak için yeterince hızlı değil.
 * Mikrofon kullanacaksanız sessiz bir ortamda, tercihen gecenin bir yarısı yapın kaydı. Gece hem sessiz olur hem de ilham perileri uçuşur etrafta.
-{: .onemli}
 
 
 Şu notu da ekleyelim:\\
@@ -31,7 +28,7 @@ Merhabalar. Bu yazıda Ardour'la canlı enstrüman ve vokal kaydının nasıl ya
 
 
 
-### Kablolar, Bağlantılar
+## Kablolar, Bağlantılar
 
 Temel olarak üç farklı seviyede analog ses girişi vardır. Bunlar:
 
@@ -88,7 +85,7 @@ Tuşlu (synth gibi) çalgıların çıkışı line seviyesidir, mikrofon girişi
 Gitar, bas ya da akustik enstrümanlara yapıştırılan manyetiklerin sesi de mikrofon girişine fazla gelecek. Ses ayarı varsa (gitar/bass gibi) enstrümandan, yoksa (yapıştırma manyetik gibi) alsa mixer mic girişinden sesi düşürün. Yine dip ses olabilir biraz, yapacak bir şey yok, mikrofon girişini her şey için kullanmaya çalışıyoruz. Makul seviyedeki dip ses ve gürültüye katlanacağız.
 
 
-### Gecikme (Latency) Ayarı
+## Gecikme (Latency) Ayarı
 
 Ubuntu üzerinde ses programlarını verimli bir şekilde kullanabilmek ve özellikle kayıtta yaşanan gecikmeyi azaltmak için buna uygun çekirdeği (realtime veya low latency kernel) yüklemek gerekiyor.
 
@@ -110,7 +107,7 @@ Sizin dağıtımda eksik programlar varsa, KXStudio depolarını ekleyebilirsini
 (<http://kxstudio.sourceforge.net/KXStudio:Repositories>)
 
 
-### JACK'ın Kayıt için Ayarlanması
+## JACK'ın Kayıt için Ayarlanması
 
 Kayıttan önce yapmamız gereken, işletim sistemini bilgisayarın kaldırabileceği minimum gecikmeye ayarlamak. Bunu bilgisayar açıldığında otomatik olarak stüdyo oturumu açan "cadence" üzerinden yapacağız.
 
@@ -147,7 +144,7 @@ Ardour çalışırken seste çıtlama, tıklama, farenin anormal yavaşlaması y
 Canlı enstrüman ve vokal kaydı bittikten sonra yaptığımız parçayı mixlerken, bilgisayarın gücünü "hız"dan alıp "işlem fazlalığı"na vereceğiz. Buffer Size'ı 2048 veya üzeri bir değere ayarlayacağız ki plugin eklemek, otomasyon yapmak vs. gibi işlere güç yetsin.
 
 
-### Kayıt
+## Kayıt
 
 Ardour'u başlatıp bir proje açıyoruz. Öntanımlı ayarları değiştirmeye gerek yok.
 

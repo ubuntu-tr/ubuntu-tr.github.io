@@ -9,6 +9,7 @@ image: "1.jpg"
 thumb: "1.jpg"
 author: "Sinan Ateş"
 ---
+## Giriş
 
 Bilgisayar kullanmaya hemen hemen hepimiz ilk olarak oyun oynayarak başlamışızdır. Biraz daha ileri gittiğimizde artık bir programlama dili öğreniriz ve konsol ekranında çalışan programlar yazarız. Bu programlardan sonra bir seviye daha atlayarak Grafik Arayüzü olan programlar yazarız. Bütün bu süreç içerisinde bazılarımızın içerisinde hep hayallerindeki bir oyunu yazmak vardır. Bu yazı dizisinde kendi oyunlarımızı yazabilmek için gerekli bir alt yapıyı oluşturmaya çalışacağız.Umarım bu yazı dizisi ilginizi çeker.
 

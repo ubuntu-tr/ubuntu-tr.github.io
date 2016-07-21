@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Çağrı Emer"
 ---
+## Giriş
 
 Linux Vakfı, bu ay Linux çekirdeğini geliştirme süreci üzerine bir rapor yayımladı. Rapora göre 7800'den fazla geliştirici çekirdeğe katkıda bulunuyor. Ve çekirdeğe kısa süreler içinde milyonla ifade edilen kod satırları ilave ediliyor.
 

@@ -53,11 +53,11 @@ Bunları "ek bilgi" olarak değerlendirdim, çünkü bu komutları (killall, pki
 
 Şimdi sonlandırma kısmına gelecek olursak; gördüğünüz gibi yanıt alamadığımız süreçleri uçbirim üzerinden sonlandırabiliriyoruz. Hatta uçbirim üzerinden sonlandırmak için de tek alternatifimiz bu komutlar değil. Sanırım çoğumuz gerekli durumlarda sistemin anlık durumunu gözetlemek için "top" komutunu kullanıyoruzdur. Uçbirimden "top" komutu ile sistemi izlerken "k" tuşuna basın (burada da aynı durum mevcut, yani k kısayolu kill'den geliyor fakat sadece sonlandırma işlemi yapmak zorunda değiliz). k tuşuna bastıktan sonra sizden bir pid numarası istenecek;
 
-## PID to kill
+**PID to kill**
 
 Buraya işlem yapacağınız sürecin pid numarasını girin (istenilen süreç listede olmayabilir de, pid numarasını öğrenmenin alternatif bir yolu için, ipuçları bölümüne bakabilirsiniz).  Daha sonra sizden bir girdi daha istenecek;
 
-## Kill PID 3460 with signal [15]
+**Kill PID 3460 with signal [15]**
 
 Bu bölümde de bize sorulan sürece göndermek istediğimiz sinyalin numarasıdır. Yine 9 göndererek sonlandırabiliriz (SIGKILL).
 

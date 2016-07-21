@@ -224,6 +224,6 @@ mpiuser@node0:~$scp -p mpd.hosts node3:/home/mpiuser/
 
 Bu noktadan sonrası yapacağınız hesaplamalar doğrultusunda değişmektedir. Bunun için [^2] adresinde Paralel Programlama bölümü altındaki başlıkları incelemenizde fayda var.
 
-### Kaynak:
+**Kaynak**
 [^1]: <http://yclept.ucdavis.edu/Beowulf/aboutbeowulf.html>
 [^2]: <http://wiki.uhem.itu.edu.tr/wiki/Ana_Sayfa>

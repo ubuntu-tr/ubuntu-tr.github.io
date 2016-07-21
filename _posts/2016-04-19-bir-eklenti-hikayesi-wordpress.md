@@ -83,7 +83,7 @@ Son olarak da kullanılacak değişkenlerde ve fonksiyonlarda dikkat edilmesi ge
 
 Şimdi başlayabiliriz.
 
-## PHP sayfamızın eklenti olduğunu WordPress'e anlatarak başlıyoruz
+**PHP sayfamızın eklenti olduğunu WordPress'e anlatarak başlıyoruz**
 Bildiğiniz gibi her WordPress eklentisi şu satırlarla başlamak zorundadır. Eklenmediği takdirde WP bu PHP sayfasının bir eklenti olduğunu anlayamaz ve sonuç olarak eklentiyi kullanamazsınız. Bu satırlar eklentiye ait bilgileri içerir.
 
 ```php
@@ -99,7 +99,7 @@ License: GPLv2
 */
 ```
 
-## WordPress Yazı Ekle sayfasına eklentimizin kutusunu yerleştirelim
+**WordPress Yazı Ekle sayfasına eklentimizin kutusunu yerleştirelim**
 WordPress'te Yazı Ekle/Düzenle sayfası oluşturulurken, o gördüğümüz kutuların eklenmesi esnasında tetiklenen bir eylem vardır. Daha doğrusu WP'nin her köşesinde bir şekilde tetiklenen eylem ve süzgeçler vardır. Bu kısımda, yani bizim işimize yarayacak kısımda tetiklenecek olan eylem kancasının etiketi de “add_meta_boxes” etiketi. Ekrana ihtiyacımız olan kutuyu yerleştirecek fonksiyonumuzu bu kancaya tutturuyoruz.
 
 ```php
@@ -127,7 +127,7 @@ Kutunun ekleneceği sayfa derken, bu parametre iki adet değer alabilir; birisi 
 
 Kutumuzun yerleşeceği konum için, fonksiyonu yazarken "normal" ve "default" değerlerini kullandık. WP Yazı Ekle sayfasını gözünüzde şöyle canlandırın; soldaki sütunu üst ve alt iki bölmeye ayrılmış olan, iki sütunlu bir sayfa. Sol üst bölmenin karşılığı “normal”, sol alt bölmenin karşılığı “advanced”, sağ sütunun karşılığı ise “side”. Bu üç bölmeden hangisine yerleştireceğinize karar verdikten sonra önceliğini belirleyeceksiniz. Bu belirtilen konumlarda, kutular şu sıraya göre yerleşir : "high" » "core" » "default" » "low" (Ayrıntısı için şu resme bakabilirsiniz : <http://www.wproots.com/wp-content/uploads/2011/08/positions.png>)
 
-## Kutu içeriğini oluşturalım
+**Kutu içeriğini oluşturalım**
 Yukarıda belirttiğimiz gibi kutumuzun içini dolduracak fonksiyonumuzun ismini "forumhaber_kutu_icerigi" olarak seçtik. Bu fonksiyonda yapacaklarımız şu şekilde; öncelikle o an düzenlenmekte olan bir yazı varsa o yazıyla ilgili bilgimizi alacağız, daha sonra form elemanlarımızı yerleştireceğiz. Sonra da eklentimize has bir özellik olarak bu kutuyu sayfanın en başına yerleştireceğiz.
 
 Bildiğiniz gibi <?php ?> etiketlerinin içerisindeyken sadece “echo” ve muadili olan fonksiyonlarla ekrana yazı yazılabilir. Ama bu etiketlerin dışına çıkıldıktan sonra konulmuş olan her türlü şey doğrudan ekrana yazı olarak gider. Biz de HTML ve JS türündeki içeriği ekrana yazarken her seferinde “echo” fonksiyonuyla uğraşmak yerine PHP etiketinden çıkıp normal bir HTML sayfası hazırlar gibi kodlarımızı yazacağız.
@@ -235,7 +235,7 @@ WordPress, kullanılacak olan “ajax.php” dosyasının yolunu sayfanın baş�
 
 Ajax dosyasından ileti ile ilgili bilgiler geldiği zaman işlemlere başlıyoruz. İlk olarak WP'de başlığı girdiğimiz kutuda "Başlığı girin" şeklinde soluk bir şekilde görünen, "title-prompt-text" kimliğine sahip olan yazıyı gizliyoruz. Daha sonra başlık kutusuna, yani "title" kimliğine sahip olan metin kutusuna Ajax sayfasından dönen bilgi içerisinden aldığımız başlığı yazıyoruz. Sonra da Yazı Ekle sayfasındaki düzenleyicilerin içerisine ileti içeriğini ekliyoruz. (Bildiğiniz üzere iki düzenleyici var, HTML ve Görsel düzenleyici.) Görsel düzenleyici, esasında bir "iframe" elemanı olduğu için bu kısmı biraz dolambaçlı yapmak zorundayız. En sonunda da "yükleniyor" canlandırmamızı tekrar gizli hâle getiriyoruz.
 
-## Sıra geldi ayıklayıcı fonksiyonumuza
+**Sıra geldi ayıklayıcı fonksiyonumuza**
 
 Yukarıda WordPress'te Ajax kullanımını anlatmış, kullanımın JS kanadını göstermiştim. Şimdi ise WP'de Ajax kullanımının PHP kanadını göstereceğim. Yapacağımız şey, “wp_ajax_forumhaber_ayikla” etiketi ile bir eylem kancası türetip yazdığımız fonksiyonumuzu bu kancaya tutturmak. Fonksiyon içerisinde de $\_GET ile gelen URL bilgisini alıp bu adrese gidip iletinin içeriğini ayıklayacağız. Yalnız ayıklama kısmının teknik ayrıntılarına fazla girmeyeceğim maalesef.
 
@@ -311,8 +311,7 @@ Oldukça karmaşık bir fonksiyon olduğunun farkındayım. Kabaca bu fonksiyond
 
 Değer döndürmek derken bildiğiniz üzere Ajax kullanımı esnasında bilgi döndürmek demek ekrana bir şeyler yazmak demektir. Biz de bunu echo fonksiyonuyla yaptık. WordPress'te Ajax fonksiyonlarınızın işi bittiği zaman die() fonksiyonuyla sonlandırmanız, Ajax sürecinizin daha çabuk bitmesini sağlayacaktır.
 
-## Son olarak da kayıt fonksiyonumuzu oluşturalım
-
+**Son olarak da kayıt fonksiyonumuzu oluşturalım**
 Artık eklentimizin neredeyse en kolay kısmına geldik ve bitiriyoruz. Bu adımda yapacaklarımız şunlar: Öncelikle WordPress'in yazı kaydetme esnasında tetiklediği eylemin kancasına fonksiyonumuzu tutturacağız. Bu kancanın etiketi “save_post”. Daha sonra da kayıt işlemi için herhangi bir engel var mı yok mu kontrol edeceğiz; yoksa ileti adresini kaydedeceğiz.
 
 ```php

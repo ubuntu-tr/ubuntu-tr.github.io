@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Çağrı Emer"
 ---
+## Giriş
 
 2000 yılında CollabNet, Inc. tarafından başlatılan açık kaynak Subversion projesi, geçtiğimiz on yıl içerisinde büyük başarılara imza atarak neredeyse piyasa standardı haline gelen bir sürüm kontrol sistemidir. Yakın geçmişte Apache Software Foundation çatısı altına girmiş olan Subversion, bir Apache projesi olarak hayatına devam etmektedir.
 

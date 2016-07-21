@@ -9,12 +9,11 @@ image: "1.jpg"
 thumb: "1.jpg"
 author: "Ceren Çalıcı"
 ---
-
-
+## Giriş
 
 Sunucu dediğimiz şey, basitçe söylemek gerekirse bilgisayarlar arasında veri paylaşımını sağlar. Bilgisayarınızla İnternet'e bağlandıktan sonra dosyaları paylaşmamızı sağlayan bir protokole ihtiyacımız var. Samba, bütün sistemleri birbirine bağlayabildiği için daha çok tercih edilir.
 
-### Samba'yı İndirip Kurma
+## Samba'yı İndirip Kurma
 
 Bilgisayarınızı sunucuya çevirmek için önce Samba'yı indirip kurmanız gerekecektir. Bunun için Ubuntu Yazılım Merkezi'ni kullanabilirsiniz. Ya da daha kolayı uçbirimden şu komutları yürütebilirsiniz:
 
@@ -56,7 +55,7 @@ Açtığınız metin belgesi üzerinde, eğer ne yaptığınızı bilmiyorsanız
 
 Samba ile ilgili düzenlemeleri tamamladıktan sonra bilgisayarınızı yeniden başlatırsanız Samba çalışmaya başlayacaktır.
 
-### Yeni Sunucunuza Bağlanma
+## Yeni Sunucunuza Bağlanma
 
 Yerel ağınız aracılığıyla kullandığınız dosya yöneticisi ile sunucunuza giriş yapabilirsiniz. Nasıl ki herhangi bir cihazı bilgisayarınıza bağladığınızda Nautilus'ta bu cihazı görebiliyorsunuz, aynı şekilde sunucunuzu da görebilirsiniz.
 
@@ -68,7 +67,7 @@ smb://<IP adresi ya da sunucunuzun sistem adı>/<share name>
 
 Ve artık kendi sunucunuza sahipsiniz.
 
-###### Kaynak:
+## Kaynak:
 Samba ile ilgili daha fazla bilgiye Ubuntu Wiki'den ulaşabilirsiniz:\\
 <https://help.ubuntu.com/community/Samba>
 

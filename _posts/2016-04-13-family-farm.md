@@ -139,5 +139,5 @@ Zorlayıcılık ve eğlence seviyesi iyi ayarlanmış. Oldukça iyi bir zaman ka
 ![](images/post/ffarm/ff7.png)
 
 
-###### Kaynak:
+**Kaynak:**
 [^1]: <http://www.gameolith.com/game/family-farm/>

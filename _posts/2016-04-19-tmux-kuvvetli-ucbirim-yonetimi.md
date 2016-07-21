@@ -9,6 +9,7 @@ image: "resim1.jpg"
 thumb: "resim1.jpg"
 author: "Heartsmagic"
 ---
+## Giriş
 
 Tmux bir Screen muadilidir, yani uçbirim çoklayıcısı. Bir uygulamayı başka bir uygulamanın muadili olarak tanıtmak demek örnek alınan, yani dengi olarak kabul edilen uygulamayı genel kullanımda belki de "de facto" olarak kabul etmek demektir. Özellikle de örnek yine özgür yazılım camiasının içinden bir uygulamaysa. Kısacası, yazımızın konusu olan Tmux'un (Y.N: Okuyabildiğim her şeyi Türkçe okumaya gayret gösteririm) örnek aldığı Screen saygı duyulacak ve hatta saygı duyulması gereken bir uygulamadır.
 

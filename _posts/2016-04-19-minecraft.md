@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Yusuf Düzgün"
 ---
+## Giriş
 
 Minecraft'ı anlatmaya ilk olarak Wikipedia'dan aldığım şu tanımla başlayabiliriz :).
 

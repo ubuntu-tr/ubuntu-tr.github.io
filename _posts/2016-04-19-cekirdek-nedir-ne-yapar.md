@@ -9,6 +9,7 @@ image: "1.jpg"
 thumb: "1.jpg"
 author: "Erkan Esmer"
 ---
+## Giriş
 
 Çekirdek, en alt katmanda çalışan ve donanımları kullanmamızı sağlayan uygulamalara arayüzlük yapan bir programdır diyebiliriz.
 

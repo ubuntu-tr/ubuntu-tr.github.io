@@ -9,6 +9,7 @@ image: "kapak.png"
 thumb: "kapak.png"
 author: "Aysel Aksu"
 ---
+## Giriş
 
 Uzun bir süreden sonra döndüm tekrar ağ temelleri alanıma. Geçtiğimiz yaz okulunda aldım Ağ Temelleri dersimi. 2. sınıfa yeni geçmiş olduğumdan 3. sınıfın ikinci dönemine ait olan bu ders, gerçeği söylemek gerekirse çok zorladı beni. Kısa sürede o kadar çok teknik konuyu öğrenmek, uygulamaya geçirmek ve sonrasında da sınavda çıkabilecek türde inceliklerini bellemek ciddi anlamda yordu hepimizi. Yaz okulundan sonra tekrar çalıştım bu derse. Bu sefer dersi geçmek için değil; cidden öğrenmek için. Şimdi sizlere yönlendiriciler hakkında öğrendiklerimi aktaracağım.
 

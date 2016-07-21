@@ -382,8 +382,7 @@ Bu bölümde öncelikle genel anlamda programlama hatalarından bahsedeceğim. �
 >
     >\>> 1 + 1 = __11__
 
-    >*Evet. Biraz komik, biraz hüzünlü, garip bir hikâye ile size bu konuyu böyle anlatan ilk kişiyim diye düşünüyorum. Burada Serhat'ın düştüğü hataya aynı biçimde olmasa da ben de okulda düştüm. Açıkçası ben de çok gülmüştüm. Burada Serhat'ın doğru sonucu alamaması bir anlamsal hatadır. Program hata vermedi ancak istenilen sonucu da vermedi. Sanırım bu hata tipini de anladınız.
-    Serhat'ın yapığı programı ve doğrusunu serimizin ikinci sayısında beraber göreceğiz.*
+    >*Evet. Biraz komik, biraz hüzünlü, garip bir hikâye ile size bu konuyu böyle anlatan ilk kişiyim diye düşünüyorum. Burada Serhat'ın düştüğü hataya aynı biçimde olmasa da ben de okulda düştüm. Açıkçası ben de çok gülmüştüm. Burada Serhat'ın doğru sonucu alamaması bir anlamsal hatadır. Program hata vermedi ancak istenilen sonucu da vermedi. Sanırım bu hata tipini de anladınız. Serhat'ın yapığı programı ve doğrusunu serimizin ikinci sayısında beraber göreceğiz.*
 
 * ___Çalıştırma Zamanı Hataları:___ Bu hata tipi ile genelde kullanıcılar karşılaşır. Programın farklı zamanlarda farklı davranış göstermesidir. Örneğin döviz kurlarını her açıldığında internetten alan bir program internet olmadığında hata verip kapanıyor, bu bir hatadır ve bu hatanın adı çalıştırma zamanı hatasıdır. İyi bir programcı bu hataları henüz yazım sürecindeyken görmelidir, önlemini almalıdır. Programcılar çok çok iyi olsa bile bu hataların tamamını saptayamayabilir. İşte açık kaynak kodlu yazılımların avantajı burada görülür. Açık kaynak kodlu yazılımları kullanan kişiler bu hataları fark edip hataların yerini saptayabilir. Ancak açık kaynak kodlu olmayan yazılımlarda bu hatalar fark edilse de ancak programcıya haber verip programcının hatayı çözmesini bekleyebilir.
 
@@ -670,7 +669,7 @@ K_Adı = input('Lütfen Kullanıcı Adını Girin: ')
 print(K_Adı, 'Adlı Üye Başarıyla Giriş Yaptı!')
 ```
 
-Bu kısımda (" " ") işaretinin kullanımına dikkatinizi çekmek isterim. Eğer karakter dizilerini bu şekilde kullanırsak girmiş olduğumuz yeni satırlarda karakter dizisine dahil olacaktır. Bu sadece bu şekilde karakter dizisi tanımlamanın özelliğidir. Geri kalan şekillerde yeni satıra geçme işi '\n' ifadesiyle yapılır.
+Bu kısımda (" " ") işaretinin kullanımına dikkatinizi çekmek isterim. Eğer karakter dizilerini bu şekilde kullanırsak girmiş olduğumuz yeni satırlarda karakter dizisine dahil olacaktır. Bu sadece bu şekilde karakter dizisi tanımlamanın özelliğidir. Geri kalan şekillerde yeni satıra geçme işi '\\n' ifadesiyle yapılır.
 
 ### Hesap Makinesi Python!
 

@@ -9,13 +9,11 @@ image: "1.jpg"
 thumb: "1.jpg"
 author: "Erkan Esmer"
 ---
-
-
-
+## Giriş
 
 Yazımızda, başlangıç ve tanıtma amacıyla gerek kendi sistemimizi gerekse uzaktaki sistemleri test etmeye yarayan, sistemlerimizi kontrol etmeye ve devam eden süreçleri ve sonuçlarını izlemeye yardımcı olan birkaç araca değineceğiz.
 
-### Nessus
+## Nessus
 
 Nessus, sistemimiz veya herhangi bir alan adımız için birtakım sorgulamalar yapan, testler uygulayan ve rapor ile sonuç bildiren bir nevi sağlamlık, uygunluk test aracıdır.
 
@@ -66,7 +64,7 @@ Satırın detayında gördüğünüz gibi Severity=Medium olan, yani orta seviye
 
 İşte temel bir bakışla Nessus, kontrol ettiğimiz sistemimizle ilgili güvenlik testleri uygulamamızı ve bilgiler edinmemizi sağlayan başarılı bir araçtır. Kullanıcılar için vazgeçilmezdir.
 
-### Nmap-Zenmap
+## Nmap-Zenmap
 
 Nmap ile belirlediğiniz bir bilgisayarın işletim sistemini, açık portlarını ve portları kullanan servislerinin tespitini yapabilirsiniz.
 
@@ -106,7 +104,7 @@ Host Details sekmesinde ise tarama yaptığımız makinenin açık port sayısı
 
 Scans sekmesinde ise yaptığımız taramaları liste hâlinde ve komutu ile birlikte görürüz. Tekrar belirtmeye gerek var mı bilemiyorum ama nmap'da olduğu gibi Zenmap'te de ağ dışı sistemleri tarayabiliriz. Mesela bu bir alanadı olabilir.
 
-### Wireshark
+## Wireshark
 
 Wireshark, bir ağ protokol analiz aracıdır. Wireshark, yakaladığı paketleri protokol bilgileriyle birlikte görüntüler. Wireshark ile ağınızdaki veya kendi sisteminizdeki trafiği inceleyebilir, analizler yapabilirsiniz. Örneğin kendi sisteminizden yaptığınız bir işlem sonucu (bir web sayfası açma gibi) nasıl bir trafik doğduğunu veya bir ağ içerisinde makinelerin işlemleri sonucu doğan trafiği izleyebilirsiniz.
 

@@ -9,6 +9,7 @@ image: "clipperz.png"
 thumb: "clipperz.png"
 author: "Çağrı Emer"
 ---
+## Giriş
 
 Bir finans firmasının araştırmasına göre ortalama 26 çevrimiçi servis için kullanıcılar 5 farklı parola kullanıyorlarmış.[^1] Her hesabımız için farklı ve yeterli entropiye sahip bir parola kullanıp bütün bu parolaları akılda tutmak mümkün mü? Bu arada parola demişken XKCD klasiklerinden birini de paylaşmadan geçmeyelim.[^2]
 

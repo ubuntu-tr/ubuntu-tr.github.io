@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Alev Erzurumlu"
 ---
+## Giriş
 
 Sabit disk için tek önemli konu kapasitesi değildir. Dikkat edilmesi gereken önemli bir konu da kullanılan dosya sistemidir. Günümüzde birçok Linux dağıtımı ext4 dosya sistemini kullansa da, bize sunduğu özellikler göz önüne alındığında gelecekte tercih edilecek olan dosya sistemi Btrfs olacak gibi görünüyor.
 

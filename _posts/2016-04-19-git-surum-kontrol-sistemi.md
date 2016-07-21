@@ -9,6 +9,7 @@ image: "1.png"
 thumb: "1.png"
 author: "Çağrı Emer"
 ---
+## Giriş
 
 Daha önceki yazımda Subversion'dan bahsetmiş ve Git'e ileriki bir zamanda değineceğimi söylemiştim. Bu yazıda Git'in temel yapısı ve Subversion ile arasındaki farklardan bahsetmeye çalışacağım.
 
