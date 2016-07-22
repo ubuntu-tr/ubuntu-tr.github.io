@@ -1,8 +1,6 @@
 #!/bin/bash
 
 FILES=./_posts/*
-#FILES=./_posts/2016-04-19-pyhton-programlama-seri-i.md
-#FILES=./_posts/2016-04-13-bash-3.md
 latexTemplate="_extension/helper/_pdf.latex"
 mainFont="Times New Roman"
 for f in $FILES
