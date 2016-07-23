@@ -2,10 +2,12 @@
     include _extension/helper/category.inc %}{% 
     include _extension/helper/dateTR.inc %}{% 
     capture systemHead %}{% 
-        for ext in site.theme %}{% 
+        assign items = site.theme | sort: 'order', 'last' %}{% 
+        for ext in items %}{% 
             if ext.post == "head" %}{{ ext.content }}{% endif %}{% 
         endfor %}{% 
-        for ext in site.extension %}{% 
+        assign items = site.extension | sort: 'order' %}{% 
+        for ext in items %}{% 
             if ext.post == "head" %}{{ ext.content }}{% endif %}{% 
         endfor %}{% 
     endcapture %}{% 
