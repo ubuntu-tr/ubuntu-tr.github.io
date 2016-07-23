@@ -1,0 +1,33 @@
+---
+index: head
+post: head
+category: head
+tag: head
+other: head
+---
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.cards > .card img {
+		width: 230px !important;
+		height: 137px !important;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.cards > .card img {
+		width: 302px !important;
+		height: 180px !important;
+	}
+	.items > .item img {
+		width: 80px !important;
+		height: 45px !important;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.cards > .card img {
+		width: 370px !important;
+		height: 220px !important;
+	}
+	.items > .item img {
+		width: 80px !important;
+		height: 45px !important;
+	}
+}
