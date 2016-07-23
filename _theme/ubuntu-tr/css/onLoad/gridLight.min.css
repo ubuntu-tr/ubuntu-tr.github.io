@@ -193,6 +193,12 @@ other: head
 .ui.column.grid > [class*="five wide"].column {
   width: 31.25% !important;
 }
+.ui.grid > .row > [class*="eleven wide"].column,
+.ui.grid > .column.row > [class*="eleven wide"].column,
+.ui.grid > [class*="eleven wide"].column,
+.ui.column.grid > [class*="eleven wide"].column {
+  width: 68.75% !important;
+}
 
 /*----------------------
       Equal Width

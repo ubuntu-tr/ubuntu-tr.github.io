@@ -9,13 +9,13 @@ other: class
 
 
 container: "ui container"
-grid: "ui grid equal width stackable"
+grid: "ui grid stackable"
 
 row1: "row computer only"
 row1column: "column"
 
 row2: "row"
-row2column1: "column"
+row2column1: "column eleven wide"
 row2column2: "column five wide computer only"
 
 blockContainer: "ui segment"
