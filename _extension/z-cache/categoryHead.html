@@ -2,10 +2,12 @@
 category: systemHead
 ---
 {% capture temp2 %}
-	{% for ext in site.theme %}{% 
+	{% assign items = site.theme | sort: 'order', 'last' %}
+	{% for ext in items %}{% 
 	    if ext.category == "head" %}{{ ext.content }}{% endif %}{% 
 	endfor %}
-	{% for ext in site.extension %}{% 
+	{% assign items = site.extension | sort: 'order' %}
+	{% for ext in items %}{%  
 	    if ext.category == "head" %}{{ ext.content }}{% endif %}{% 
 	endfor %}
 {% endcapture %}{{ temp2 | scssify }}
