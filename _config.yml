@@ -1,7 +1,6 @@
 # Site settings
 url: "https://sudo.ubuntu-tr.net"
 
-theme: ubuntu-tr
 themeDir: theme/ubuntu-tr
 listDir: _theme/ubuntu-tr/layouts/list
 blockDir: _theme/ubuntu-tr/layouts/block
