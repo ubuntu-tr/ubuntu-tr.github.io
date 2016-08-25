@@ -2,10 +2,10 @@
 order: 5
 
 index: css
-posts: css
-categories: css
-tags: css
-others: css
+post: css
+category: css
+tag: css
+other: css
 ---
 .backToTop {
     position: fixed;

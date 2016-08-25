@@ -2,10 +2,10 @@
 order: 5
 
 index: js
-posts: js
-categories: js
-tags: js
-others: js
+post: js
+category: js
+tag: js
+other: js
 ---
 $( document ).ready(function() {
 	$( document ).scroll(function() {
