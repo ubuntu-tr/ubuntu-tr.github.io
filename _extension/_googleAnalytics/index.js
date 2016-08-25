@@ -3,10 +3,10 @@ accountID: ""
 
 
 index: js
-posts: js
-categories: js
-tags: js
-others: js
+post: js
+category: js
+tag: js
+other: js
 ---
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', '{{ page.accountID }}']);
