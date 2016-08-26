@@ -34,8 +34,8 @@
             </div>
         </div>
         {{ systemFooter }}
-        <link rel="stylesheet" href="system/{{ page.type }}.css">
-        <script src="system/{{ page.type }}.js"></script>
+        <link rel="stylesheet" href="system/{{ page.type }}.css?v={{ site.time | date: '%s' }}">
+        <script src="system/{{ page.type }}.js?v={{ site.time | date: '%s' }}"></script>
         {{ systemFoot }}
     </body>
 </html>
