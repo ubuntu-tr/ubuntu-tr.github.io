@@ -98,6 +98,15 @@ $( document ).ready(function() {
 					return tag1+'<dl><dt>'+x+'</dt><dd>'+y+'</dd></dl>'+tag2;
 				}
 			);
+			/* Video */
+			console.log(v);
+			v = v.replace(
+				/<a href="https:\/\/www.youtube.com\/embed\/(.*?)">https:\/\/www.youtube.com\/embed\/(.*?)<\/a>/gmi,
+				function myFunction2(t, id) {
+					console.log(t);
+					return '<div class="r16_9"><iframe src="https://www.youtube.com/embed/'+id+'" frameborder="0" allowfullscreen> </iframe></div>';
+				}
+			);
 
 			return v;
 		}
