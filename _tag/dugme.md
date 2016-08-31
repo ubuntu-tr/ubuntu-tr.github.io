@@ -1,4 +1,3 @@
 ---
 title: "düğme"
-code: "dugme"
 ---

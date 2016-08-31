@@ -1,4 +1,3 @@
 ---
 title: "btrfs"
-code: "btrfs"
 ---

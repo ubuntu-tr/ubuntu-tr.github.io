@@ -1,4 +1,3 @@
 ---
 title: "veritabanı"
-code: "veritabani"
 ---

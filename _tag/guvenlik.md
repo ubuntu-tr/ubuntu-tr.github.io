@@ -1,4 +1,3 @@
 ---
 title: "güvenlik"
-code: "guvenlik"
 ---

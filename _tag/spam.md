@@ -1,4 +1,3 @@
 ---
 title: "spam"
-code: "spam"
 ---

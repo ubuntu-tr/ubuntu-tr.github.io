@@ -1,4 +1,3 @@
 ---
 title: "SQLite"
-code: "sqlite"
 ---

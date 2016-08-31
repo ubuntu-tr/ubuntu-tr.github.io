@@ -1,4 +1,3 @@
 ---
 title: "programlama"
-code: "programlama"
 ---

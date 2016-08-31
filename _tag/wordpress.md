@@ -1,4 +1,3 @@
 ---
 title: "wordpress"
-code: "wordpress"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "günlük"
-code: "gunluk"
 ---

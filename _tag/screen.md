@@ -1,4 +1,3 @@
 ---
 title: "screen"
-code: "screen"
 ---

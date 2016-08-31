@@ -1,4 +1,3 @@
 ---
 title: "tor"
-code: "tor"
 ---

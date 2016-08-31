@@ -1,4 +1,3 @@
 ---
 title: "tarayıcı"
-code: "tarayici"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "vpn"
-code: "vpn"
 ---

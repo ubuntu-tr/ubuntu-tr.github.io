@@ -1,4 +1,3 @@
 ---
 title: "smurf"
-code: "smurf"
 ---

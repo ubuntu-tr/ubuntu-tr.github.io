@@ -1,4 +1,3 @@
 ---
 title: "arayüz"
-code: "arayuz"
 ---

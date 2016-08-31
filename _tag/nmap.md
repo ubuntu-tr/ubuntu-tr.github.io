@@ -1,4 +1,3 @@
 ---
 title: "nmap"
-code: "nmap"
 ---

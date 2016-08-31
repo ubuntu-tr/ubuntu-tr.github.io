@@ -1,4 +1,3 @@
 ---
 title: "sistem"
-code: "sistem"
 ---

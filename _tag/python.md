@@ -1,4 +1,3 @@
 ---
 title: "python"
-code: "python"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "NNTP"
-code: "nntp"
 ---

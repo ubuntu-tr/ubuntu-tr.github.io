@@ -1,4 +1,3 @@
 ---
 title: "uçbirim"
-code: "ucbirim"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "eposta"
-code: "eposta"
 ---

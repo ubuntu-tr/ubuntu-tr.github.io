@@ -1,4 +1,3 @@
 ---
 title: "GTK"
-code: "gtk"
 ---

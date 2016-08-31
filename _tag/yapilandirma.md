@@ -1,4 +1,3 @@
 ---
 title: "yapılandırma"
-code: "yapilandirma"
 ---

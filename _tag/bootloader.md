@@ -1,4 +1,3 @@
 ---
 title: "bootloader"
-code: "bootloader"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "öğrenme"
-code: "ogrenme"
 ---

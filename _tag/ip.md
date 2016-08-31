@@ -1,4 +1,3 @@
 ---
 title: "IP"
-code: "ip"
 ---

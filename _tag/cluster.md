@@ -1,4 +1,3 @@
 ---
 title: "cluster"
-code: "cluster"
 ---

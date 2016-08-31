@@ -1,4 +1,3 @@
 ---
 title: "test"
-code: "test"
 ---

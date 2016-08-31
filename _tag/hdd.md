@@ -1,4 +1,3 @@
 ---
 title: "hdd"
-code: "hdd"
 ---

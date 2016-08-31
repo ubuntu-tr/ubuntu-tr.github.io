@@ -1,4 +1,3 @@
 ---
 title: "eklenti"
-code: "eklenti"
 ---

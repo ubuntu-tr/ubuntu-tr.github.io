@@ -1,4 +1,3 @@
 ---
 title: "SQL"
-code: "sql"
 ---

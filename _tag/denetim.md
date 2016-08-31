@@ -1,4 +1,3 @@
 ---
 title: "denetim"
-code: "denetim"
 ---

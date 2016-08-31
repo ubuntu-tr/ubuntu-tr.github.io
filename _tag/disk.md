@@ -1,4 +1,3 @@
 ---
 title: "disk"
-code: "disk"
 ---

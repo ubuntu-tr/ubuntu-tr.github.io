@@ -1,4 +1,3 @@
 ---
 title: "nosql"
-code: "nosql"
 ---

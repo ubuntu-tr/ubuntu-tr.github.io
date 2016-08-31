@@ -1,4 +1,3 @@
 ---
 title: "KVM"
-code: "kvm"
 ---

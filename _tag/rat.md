@@ -1,4 +1,3 @@
 ---
 title: "RAT"
-code: "rat"
 ---

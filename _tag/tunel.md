@@ -1,4 +1,3 @@
 ---
 title: "tünel"
-code: "tunel"
 ---

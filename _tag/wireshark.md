@@ -1,4 +1,3 @@
 ---
 title: "wireshark"
-code: "wireshark"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "vala"
-code: "vala"
 ---

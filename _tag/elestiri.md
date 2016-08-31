@@ -1,4 +1,3 @@
 ---
 title: "eleştiri"
-code: "elestiri"
 ---

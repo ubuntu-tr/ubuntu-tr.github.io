@@ -1,4 +1,3 @@
 ---
 title: "log"
-code: "log"
 ---

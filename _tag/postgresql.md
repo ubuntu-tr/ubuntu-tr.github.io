@@ -1,4 +1,3 @@
 ---
 title: "postgreSQL"
-code: "postgresql"
 ---

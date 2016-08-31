@@ -1,4 +1,3 @@
 ---
 title: "iptables"
-code: "iptables"
 ---

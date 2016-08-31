@@ -1,4 +1,3 @@
 ---
 title: "boot"
-code: "boot"
 ---

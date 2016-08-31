@@ -1,4 +1,3 @@
 ---
 title: "kayıt"
-code: "kayit"
 ---

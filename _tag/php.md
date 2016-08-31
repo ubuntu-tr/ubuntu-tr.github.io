@@ -1,4 +1,3 @@
 ---
 title: "php"
-code: "php"
 ---

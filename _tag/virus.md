@@ -1,4 +1,3 @@
 ---
 title: "virüs"
-code: "virus"
 ---

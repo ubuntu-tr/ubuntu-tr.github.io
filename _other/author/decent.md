@@ -1,4 +1,3 @@
 ---
 title: "Decent"
-code: "decent"
 ---

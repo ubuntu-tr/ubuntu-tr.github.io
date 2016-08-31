@@ -1,4 +1,3 @@
 ---
 title: "haberleşme"
-code: "haberlesme"
 ---

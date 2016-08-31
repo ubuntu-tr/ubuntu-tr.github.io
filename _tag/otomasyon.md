@@ -1,4 +1,3 @@
 ---
 title: "otomasyon"
-code: "otomasyon"
 ---

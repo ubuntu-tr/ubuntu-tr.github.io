@@ -1,4 +1,3 @@
 ---
 title: "torrent"
-code: "torrent"
 ---

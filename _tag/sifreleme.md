@@ -1,4 +1,3 @@
 ---
 title: "şifreleme"
-code: "sifreleme"
 ---

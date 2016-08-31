@@ -1,4 +1,3 @@
 ---
 title: "gparted"
-code: "gparted"
 ---

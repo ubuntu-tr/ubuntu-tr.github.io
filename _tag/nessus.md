@@ -1,4 +1,3 @@
 ---
 title: "nessus"
-code: "nessus"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "HTTP"
-code: "http"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "RAD"
-code: "rad"
 ---

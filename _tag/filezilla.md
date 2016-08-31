@@ -1,4 +1,3 @@
 ---
 title: "filezilla"
-code: "filezilla"
 ---

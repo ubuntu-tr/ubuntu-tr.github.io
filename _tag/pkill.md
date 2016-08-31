@@ -1,4 +1,3 @@
 ---
 title: "pkill"
-code: "pkill"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "proc"
-code: "proc"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "asterisk"
-code: "asterisk"
 ---

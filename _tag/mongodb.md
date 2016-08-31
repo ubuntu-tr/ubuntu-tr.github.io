@@ -1,4 +1,3 @@
 ---
 title: "mongoDB"
-code: "mongodb"
 ---

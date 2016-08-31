@@ -1,4 +1,3 @@
 ---
 title: "Heartsmagic"
-code: "heartsmagic"
 ---

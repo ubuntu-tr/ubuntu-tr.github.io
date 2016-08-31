@@ -1,4 +1,3 @@
 ---
 title: "önbellek"
-code: "onbellek"
 ---

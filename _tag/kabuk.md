@@ -1,4 +1,3 @@
 ---
 title: "kabuk"
-code: "kabuk"
 ---

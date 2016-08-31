@@ -1,4 +1,3 @@
 ---
 title: "SNMP"
-code: "snmp"
 ---

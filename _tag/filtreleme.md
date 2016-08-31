@@ -1,4 +1,3 @@
 ---
 title: "filtreleme"
-code: "filtreleme"
 ---

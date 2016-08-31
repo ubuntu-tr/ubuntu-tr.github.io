@@ -1,4 +1,3 @@
 ---
 title: "hitokiri"
-code: "hitokiri"
 ---

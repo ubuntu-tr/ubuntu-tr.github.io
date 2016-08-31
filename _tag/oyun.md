@@ -1,4 +1,3 @@
 ---
 title: "oyun"
-code: "oyun"
 ---

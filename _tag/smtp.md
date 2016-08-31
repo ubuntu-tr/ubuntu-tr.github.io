@@ -1,4 +1,3 @@
 ---
 title: "SMTP"
-code: "smtp"
 ---

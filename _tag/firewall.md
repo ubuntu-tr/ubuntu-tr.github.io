@@ -1,4 +1,3 @@
 ---
 title: "firewall"
-code: "firewall"
 ---

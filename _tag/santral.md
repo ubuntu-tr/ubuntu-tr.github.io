@@ -1,4 +1,3 @@
 ---
 title: "santral"
-code: "santral"
 ---

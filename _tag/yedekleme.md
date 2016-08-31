@@ -1,4 +1,3 @@
 ---
 title: "yedekleme"
-code: "yedekleme"
 ---

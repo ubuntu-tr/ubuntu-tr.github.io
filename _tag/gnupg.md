@@ -1,4 +1,3 @@
 ---
 title: "GnuPG"
-code: "gnupg"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "önyükleyici"
-code: "onyukleyici"
 ---

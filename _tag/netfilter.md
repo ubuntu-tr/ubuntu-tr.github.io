@@ -1,4 +1,3 @@
 ---
 title: "netfilter"
-code: "netfilter"
 ---

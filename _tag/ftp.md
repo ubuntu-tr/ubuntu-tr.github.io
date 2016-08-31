@@ -1,4 +1,3 @@
 ---
 title: "FTP"
-code: "ftp"
 ---

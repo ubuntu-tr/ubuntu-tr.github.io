@@ -1,4 +1,3 @@
 ---
 title: "çekirdek"
-code: "cekirdek"
 ---

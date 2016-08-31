@@ -1,4 +1,3 @@
 ---
 title: "heartbleed"
-code: "heartbleed"
 ---

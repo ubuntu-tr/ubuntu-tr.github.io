@@ -1,4 +1,3 @@
 ---
 title: "gizlilik"
-code: "gizlilik"
 ---

@@ -1,4 +1,3 @@
 ---
 title: "rss"
-code: "rss"
 ---

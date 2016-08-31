@@ -1,4 +1,3 @@
 ---
 title: "TCP"
-code: "tcp"
 ---

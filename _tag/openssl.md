@@ -1,4 +1,3 @@
 ---
 title: "openssl"
-code: "openssl"
 ---

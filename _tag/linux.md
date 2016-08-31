@@ -1,4 +1,3 @@
 ---
 title: "linux"
-code: "linux"
 ---

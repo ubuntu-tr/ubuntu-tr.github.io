@@ -1,4 +1,3 @@
 ---
 title: "samba"
-code: "samba"
 ---

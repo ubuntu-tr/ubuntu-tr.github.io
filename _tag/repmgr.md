@@ -1,4 +1,3 @@
 ---
 title: "repmgr"
-code: "repmgr"
 ---

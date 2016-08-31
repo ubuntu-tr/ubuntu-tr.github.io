@@ -1,4 +1,3 @@
 ---
 title: "bütünlük"
-code: "butunluk"
 ---
