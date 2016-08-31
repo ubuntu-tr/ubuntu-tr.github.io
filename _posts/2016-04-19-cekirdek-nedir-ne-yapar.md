@@ -30,7 +30,7 @@ Linux çekirdeği en büyük açık kaynak projelerinden biridir. Belki de en b�
 **Monolitik**, **Mikrokernel** ve **Hybrid** olmak üzere 3 çekirdek yapısından bahsedebiliriz. Tabiiki duruma ve ihtiyaca göre çekirdek yapısı oluşturma durumu her zaman için geçerlidir. Biz, genel olarak sıklıkla tercih edilen yapı modellerine kısaca değineceğiz.
 
 ### Mikrokernel
-![](images/post/cekirdek-nedir-ne-yapar/MicroKernel.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/MicroKernel.png)
 
 Mikrokernel, işlemci, geçici bellek gibi donanımları ve işlemler arası ilerişimi -IPC- yönetir. Mikrokernel çekirdekte en alt seviyedeki fonsiyonlar, kullanıcı seviyesinde servisler ile sunulur. Mikrokernel modüler yapıdadır. Modüller arası trafik greksinimi olduğundan diğer çekirdek tiplerine nispeten performans sorunları ortaya çıkabilir. İşlemler, kullanıcı seviyesinde sunulduğundan hatalar da burada gerçekleşir ve bütün sistemi etkilemez. Mikrokernel, kullanıcı modunda donanımı kullandırır. Yüksek erişim gerektiren işlemlerde bulunmaz.
 
@@ -48,7 +48,7 @@ Süreçler kuyrukta beklemek zorundadır. Süreçlerden biri tamamlanmadan diğe
 
 
 ### Monolitik Kernel
-![](images/post/cekirdek-nedir-ne-yapar/MonolithicKernel.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/MonolithicKernel.png)
 
 Monolitik Kernel, Mikrokernel gibi sadece işlemci, hafıza gibi bileşenleri yönetmez. Bunlarla beraber aygıt sürücüleri, dosya sistemi yönetimi gibi konular da monolitik kernelin yönetimi kapsamındadır. Monolitik Kernel, tek bir dosyadan oluşur ve tüm gereksinimleri bu dosyadadır. Dolayısıyla modüler değildir. Bu da yapılacak işlemlerde süreç sırası dezavantajını ortadan kaldırır.
 
@@ -71,7 +71,7 @@ Monolitik Kernel'de birçok işlem yönetici modunda ve tek bir süreçmiş gibi
 
 
 ### Hybrid Kernel
-![](images/post/cekirdek-nedir-ne-yapar/HybridKernel.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/HybridKernel.png)
 
 Hybrid Kernel, diğer kernel tiplerindeki gibi tek bir modda çalışmaz. Yani duruma göre kullanıcı modu ve yönetici modu çalışma durumuna sahiptir. Genellikle donanım sürücüleri ve dosya sistemi gibi bileşenlerde kullanıcı modunda çalışır. IPC ve sunucu çağrıları gibi bileşenlerde ise yönetici modunda çalışır.
 

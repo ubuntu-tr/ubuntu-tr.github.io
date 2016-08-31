@@ -19,7 +19,7 @@ Nessus, sistemimiz veya herhangi bir alan adımız için birtakım sorgulamalar 
 
 Nessus ile sistemimiz veya ağımızdaki bir bilgisayar üzerinde kontroller yapabiliriz. Bu kontrol sonucu alacağımız rapor ile çalışan servisleri ve kullanılan portları görebilir, risk içeren durumlar için de çözüm önerisi ile birlikte yapmamız gereken müdahaleyi belirleyebiliriz.
 
-![](images/post/sistem-ag-denetleme-araclari/Nessus-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/Nessus-1.jpg)
 
 Aynı zamanda Nessus ile uzaktaki bir sisteme de test uygulayabiliriz. Örneğin bir IP adresi arkasındaki makineye test uygulayıp gereklilikler üzerine kontrol yapabiliriz. Bu kontrol sonucu alacağımız rapor ile, örneğin bu bir web sayfasını barındıran bir sistem olsun, "SSL ile ilgili bir problem var mı?", "Imap, Pop ve diğer protokoller ile ilgili bilgi veya alarm niteliğinde bir sonuç var mı?" gibi sorulara cevap alabiliriz.
 
@@ -48,17 +48,17 @@ adresini çağırdığımızda Nessus açılacak ve bizden giriş yapmamızı be
 
 Şimdi örnek olarak alınmış iki raporu temel anlamda inceleyelim.
 
-![](images/post/sistem-ag-denetleme-araclari/nessus-2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/nessus-2.jpg)
 
 İlk örneğimizde smb isimli servis için yapılan kontrolde 139 ve 445 numaralı portlar kullanılmaktaymış. Bu portların kullanılması, dolayısıyla açık olması ile ilgili açıklamayı "Description" alanında görmekteyiz. Severity alanı yanında İnfo-Bilgi mesajı olduğunu, herhangi bir risk taşımadığını ve çözüme gerek olmadığını görüyoruz. İncelediğimiz bu sonuca göre bilgi bazında bir dönüş aldık ve riskli bir durumla karşılaşmadık.
 
 İkinci örneğimize bakalım. Aşağıda bir alan adının taraması sonucu oluşan raporu görmekteyiz.
 
-![](images/post/sistem-ag-denetleme-araclari/nessus-3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/nessus-3.jpg)
 
 İncelemek istediğimiz satırı seçtiğimizde detayları ve çözüm önerisini görebiliyoruz.
 
-![](images/post/sistem-ag-denetleme-araclari/nessus-4.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/nessus-4.jpg)
 
 Satırın detayında gördüğünüz gibi Severity=Medium olan, yani orta seviye bir güvenlik açığı bulunmakta. Bununla ilgili açıklamayı Description kısmında görüyoruz. Çözüm önerisi olarak da Apache servisini 2.2 veya daha yukarısına güncellememiz gerektiği yazmakta.
 
@@ -75,7 +75,7 @@ nmap -v -sP 192.168.0.9/16   //komutuyla ağdaki bilgisayarı gözden geçirebil
 
 Örneğin resimde gördüğünüz gibi yaptığımız tarama sonucunda
 
-![](images/post/sistem-ag-denetleme-araclari/nmap-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/nmap-1.jpg)
 
 >21 portu ProFtpD servisi tarafından kullanılıyor ve açık.
 80 portu açık ve Httpd servisi tarafından kullanılıyor.
@@ -93,14 +93,14 @@ sudo apt-get install zenmap
 
 komutu ile kurar, uçbirime "zenmap" yazarak çalıştırırız. Zenmap uygulamasında da nmap gibi sonuçlar alırız. Zenmap ekranına bakacak olursak
 
-![](images/post/sistem-ag-denetleme-araclari/zenmap-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/zenmap-1.jpg)
 
 Nmap Output sekmesinde yaptığımız taramanın sonuçlarını görürüz.
 Ports/Hosts sekmesi, tarama yaptığımız sistemde aktif olarak kullanılan portları ve kullandığı servisleri versiyonları ile birlikte listeler.
 Topology sekmesinde, yaptığımız taramalar sonucu oluşan tarama haritamızı görüntüleyebiliriz. Bu ayrıca sistemimizden yapılan çıkış noktalarını da göstereceği için aydınlatıcı bir ağ haritamız olarak da nitelendirilebilir. Aynı zamanda bu çıkışı resim olarak da kayıt edebiliriz.
 Host Details sekmesinde ise tarama yaptığımız makinenin açık port sayısı, kapalı port sayısı, işletim sistemi gibi bilgilerini görüntüleriz.
 
-![](images/post/sistem-ag-denetleme-araclari/zenmap-2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/zenmap-2.jpg)
 
 Scans sekmesinde ise yaptığımız taramaları liste hâlinde ve komutu ile birlikte görürüz. Tekrar belirtmeye gerek var mı bilemiyorum ama nmap'da olduğu gibi Zenmap'te de ağ dışı sistemleri tarayabiliriz. Mesela bu bir alanadı olabilir.
 
@@ -110,25 +110,25 @@ Wireshark, bir ağ protokol analiz aracıdır. Wireshark, yakaladığı paketler
 
 Wireshark, açılınca bizden izleyeceği arabirimi seçmemizi ister. “Interface List” başlığı altından izleyeceğimiz arabirimi seçeriz. Genelde 1 veya 2 adet ethernet kartı olduğunu varsayarsak eth0 seçimini yaparız.
 
-![](images/post/sistem-ag-denetleme-araclari/wireshark-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/wireshark-1.jpg)
 
 İzleme başladığında resimde gördüğümüz gibi trafikteki paketin kaynağını, hedefini, kullandığı protokolü ve bilgisini görebiliriz.
 
-![](images/post/sistem-ag-denetleme-araclari/wireshark-2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/wireshark-2.jpg)
 
 Buradaki düğmeleri kullanarak izlemeyi durdurabilir tekrar başlatabiliriz.
 
-![](images/post/sistem-ag-denetleme-araclari/wireshark-3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/wireshark-3.jpg)
 
 Wireshark ekranında yakalanan paketleri gördüğümüz bölümün altındaki bölümde, seçtiğimiz satırın teknik detaylarını görebiliriz. Şimdi satırla beraber detayının da sonuçlarına bakalım. Örneğin seçtiğimiz satırda 0.64 IP numaralı makinenin tüm ağa yayın yaparak bir isim sorgulaması yaptığını görüyoruz. Bu satırın detayına, satırı seçerek alttaki bölümden ulaşabiliriz. Ya da satıra çift tıkladığımızda detay ekranı açılır. Buradan kaynak ve hedef portu, datanın uzunluğu, kullanılan protokolün versiyonu gibi bilgilere ulaşabiliriz.
 
-![](images/post/sistem-ag-denetleme-araclari/wireshark-4.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/wireshark-4.jpg)
 
 Bu kayıt, ağ ortamında sıradan bir aksiyon olarak nitelendirilebilir.
 
 Bir de aşağıdaki çıktımıza bakacak olursak; hedef port 10019 olan, kaynağı ise her seferinde farklı olan ve farklı IP no'lu bilgisayarlardan gelen aksiyonlar var. Adet olarak da dikkat çekici diyebiliriz.
 
-![](images/post/sistem-ag-denetleme-araclari/wireshark-5.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/wireshark-5.jpg)
 
 Bu aldığımız çıktı, çalışma esnasında gerçek ortamdan alınmıştır. Yazımızın konusu detaylı bir analizi içermediği için satırlarla ilgili yorumlardan ziyade işlevselliği üzerine dikkat çekmeyi şimdilik yeterli görüyoruz. Yakaladığımız satırlarda 10019 portuyla ilgili çok kayıt var ve her satırda kaynak portlarının farklı olması kesin doğru olmamakla birlikte şüphe uyandırıcı ve ilgilenilmesi gereken bir durumu işaret ediyor olabilir.
 

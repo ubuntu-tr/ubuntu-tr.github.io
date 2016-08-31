@@ -43,19 +43,19 @@ Nadiren, kimi durumlarda bilgisayarda hiçbir analog giriş bulunmaz. Bu durumda
 3.5 mm, mikrofon girişinden ses alacağımıza göre bilgisayara giren uç şu şekilde olacak:
 
 
-![](images/post/monty_python/3.5mm2.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.5mm2.JPG)
 
 
 Şunun gibi bir mikrofon bağlayacaksak sorun yok, girişi uyumlu, tak çalıştır.
 
 
-![](images/post/monty_python/vasat_mic.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/vasat_mic.JPG)
 
 
 Ama örneğin akustik saza yapıştırılan manyetik kullanacaksak 6.3 mm jack'ı 3.5 mm'ye dönüştürmek için biraz kablo katliamı yapmamız gerekecek.
 
 
-![](images/post/monty_python/Manyeto.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/Manyeto.JPG)
 
 
 
@@ -63,19 +63,19 @@ Ama örneğin akustik saza yapıştırılan manyetik kullanacaksak 6.3 mm jack'�
 2. Kullanmadığın bir kulaklığı bu hayırlı amaç için kurban et.
 
 
-![](images/post/monty_python/kes2.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/kes2.JPG)
 
 
 Burada kırmızı uç Ardour input 1, beyazı Ardour input 2 (ya da tersi, jack'ın içini açmadan bilemeyiz. En uç sol, ortadaki alan sağ, plastiğin en yakınında kalan kısım da şasedir.). Renkli kablolar canlı, sesi bunlar aktarıyor, metal olan ise şasedir. Kırmızı ve beyazı birleştirip ucu mono yapıyoruz.
 
 
-![](images/post/monty_python/3.5mm1.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.5mm1.JPG)
 
 
 Böylece bizim mono sinyal hem input 1'e hem de input 2'ye gidecek.
 
 
-![](images/post/monty_python/mono_bagli.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/mono_bagli.JPG)
 
 
 Peki kolay yoldan bir "6.3 mm'den 3.5 mm'ye dönüştürücü" alıp işi hâlletmek varken konuyu niye uzatıyorum? Çünkü sinyal akışını bilmek bize esneklik sağlar. Diyelim iki kişi aynı anda çalmak ve farklı kanallara kayıt yapmak istiyor. Bu durumda kırmızı kablo + şase ilk enstrümana, beyaz + şase ikinciye bağlanacak.
@@ -112,7 +112,7 @@ Sizin dağıtımda eksik programlar varsa, KXStudio depolarını ekleyebilirsini
 Kayıttan önce yapmamız gereken, işletim sistemini bilgisayarın kaldırabileceği minimum gecikmeye ayarlamak. Bunu bilgisayar açıldığında otomatik olarak stüdyo oturumu açan "cadence" üzerinden yapacağız.
 
 
-![](images/post/monty_python/cadence_1024.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/cadence_1024.png)
 
 
 "Auto-start JACK or LADISH" kutusu tıklı değilse tıklayın. Bilgisayar açıldığında kayda hazır olsun, her açışta ayarla mayarla uğraşmayalım.
@@ -121,20 +121,20 @@ Daha sonra cadence'i "stop" ile durdurup "configure" diyoruz.
 "Engine" bölümünde "Realtime" tıklı değilse tıklıyoruz.
 
 
-![](images/post/monty_python/cadence_realtime_engine.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/cadence_realtime_engine.png)
 
 
 "Driver" bölümünde "Buffer Size" öntanımlı olarak 1024 olarak geliyor. Bu, girilen sesi 23 ms sonra duyacağız demek. Bu kadar gecikmeli duyumla düzgün kayıt yapmak imkânsız. Buffer Size'ı önce hata verene kadar düşüreceğiz (Bilgisayarımızın sınırlarını görelim.).
 
 
-![](images/post/monty_python/cadence_256.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/cadence_256.png)
 
 
 Ben Buffer Size 32'deyken aşağıdaki hatayı alıyorum:
 (Buffer Size ayarlanıp "OK" ile onaylandıktan sonra cadence'i tekrar "start" ile başlatmak gerekiyor hatayı verebilmesi için.)
 
 
-![](images/post/monty_python/cadence_32buffer_error.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/cadence_32buffer_error.png)
 
 
 Hatayı aldığımız ayarın iki üzeri kayıt ayarımız. Bir üzeri yetmez, bu şekilde henüz sadece JACK çalışıyor çünkü, Ardour'a da işlemci ayırmak lazım.
@@ -149,19 +149,19 @@ Canlı enstrüman ve vokal kaydı bittikten sonra yaptığımız parçayı mixle
 Ardour'u başlatıp bir proje açıyoruz. Öntanımlı ayarları değiştirmeye gerek yok.
 
 
-![](images/post/monty_python/open_prj.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/open_prj.png)
 
 
 Meter, tempo, time code gibi birçok değer "timeline"ın üzerinde ekranımızı daraltıyor. Bu alanın sol tarafına sağ tıklayıp istemediklerimizi kaldırabiliriz. Tempo ve meter şu an için yeterli.
 
 
-![](images/post/monty_python/ar_ekran.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ar_ekran.png)
 
 
 Solda master kanal yazan yerin altındaki boşluğa sağ tıklayarak (veya Ctrl Shift N ile) yeni bir mono kanal açıyorum.
 
 
-![](images/post/monty_python/ar_yenikanal.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ar_yenikanal.png)
 
 
 Sağ üstteki "Click"i tıklayıp aktif ediyorum. Soldaki Tempo yazısına sağ tıklayıp tempoya istediğim BPM'i giriyorum.
@@ -169,7 +169,7 @@ Sağ üstteki "Click"i tıklayıp aktif ediyorum. Soldaki Tempo yazısına sağ 
 İşletim sistemiyle yüklü gelen "patchbay" programlarından birini (Patchage, Catia, Carla...) açıp kim, nereye bağlı kontrol ediyorum. Catia'yı açalım:
 
 
-![](images/post/monty_python/patchbay1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/patchbay1.png)
 
 
 İleride kanal sayısı arttıkça buradaki bağlantılar artıp görüntü karmaşıklaşacağından, basitken ne nedir anlayalım önce:
@@ -193,7 +193,7 @@ Ben piyano ve bas kaydedeceğim (piyano synth elbette, evde kuyruklu piyano yok.
 Steinway piyanomun sesi kuru geldi biraz, "Rackarrack"ten reverb açarak kaydı yaptım. Yalnız sorun şu; yaptığım kaydı dinlediğimde ses efektsiz geliyor. Sebebini patchbay'i açtığımda görüyorum:
 
 
-![](images/post/monty_python/ptchby_hata.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ptchby_hata.png)
 
 
 JACK bağlantıyı bu şekilde yapmayı uygun görmüş. Burada sesin izlediği yol (signal flow) şu:
@@ -202,14 +202,14 @@ Mikrofon girişinden (system/capture) ses ikiye ayrılmış. Biri piyano diye ad
 O zaman patchbay'den bağlantıyı değiştirelim:
 
 
-![](images/post/monty_python/ptchby_preFx.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ptchby_preFx.png)
 
 
 Bu şekilde sinyal önce Rackarrack'a giriyor, efekt uygulanmış olarak "piano" kanalına kaydediliyor. Bu şekilde bağlamanın avantajı şu; sistem kaynağını iktisatlı kullanmak için kayıttan sonra Rackarrack'ı kapatabiliriz, onunla işimiz bitecek.
 
 Dezavantajı avantajından baskın ama: Ya sonradan vazgeçersek bu efekti kullanmaktan? Piyano kaydını efektsiz duyma şansımız yok artık. O zaman şöyle bağlayalım:
 
-![](images/post/monty_python/ptchby_postFx.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ptchby_postFx.png)
 
 (Karışık görünmesin diye click ve auditioner bağlantılarını ben iptal ettim, burada ihtiyaç yok onlara.)
 
@@ -219,7 +219,7 @@ Bu şekilde bağladığımızda ses akışı:
 O zaman demin kaydettiğim piano'ya bu efekti "yapıştırıp" Rackarrack'i kapatacağım. Kuru piyano kaydı zaten duruyor, kuru piyanoyu Rackarrack'ten geçirip "pianoFX" diye yeni bir kanala kaydederim olur biter. Açalım gene patchbay'i:
 
 
-![](images/post/monty_python/ptchby_fx_rec.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ptchby_fx_rec.png)
 
 
 Burada da mikrofon girişinden gelen bağlantıyı iptal ettim, ihtiyaç yok. Sinyal akış yolu:
@@ -240,7 +240,7 @@ Kayıt genelde güzel ama kısa bir bölümüne girip çıkmak istiyorsanız; da
 İlk aktif ettiğinizde bütün "timeline" seçili olacak, biz kısa bir yere girip çıkmak istiyoruz. Bunun için önce rastgele bir alan seçin. Sonra Transport > Punch sekmesinden "Set Punch From Region"ı tıkladığınızda, seçilen alan punch in/out'un sınırlarını belirleyecek. İnce ayarı üstteki kırmızı bayraklardan yapabilirsiniz.
 
 
-![](images/post/monty_python/punch.JPG)
+![]({{ site.assetsDir }}{{ page.permalink }}/punch.JPG)
 
 
 Bu şekilde üzerine kayıt yapılacak kanalı "rec arm" yapıp kaydederek ilerlediğinizde kayıt yapmayacak, sadece punch in noktasından kayda girip punch out'dan çıkacak.
@@ -255,7 +255,7 @@ Insert efekt'leri Rackarrack'a yaptığımız gibi sesin üstüne "yapıştırma
 E ne yapacağız o zaman? Yapılacak olan; vokal kanalının insert'ine bir equalizer koyup alt frekansları (mesela 500 Hz altını) tıraşlamak. Altlarını aldığınız ses parlar, diğerleri arasından duyulur hâle gelir. Bunun için Ardour'un mikserini açıp kanalın üst kısmındaki siyah bölüme sağ tıklayıp istediğimiz efekti açıyoruz, sonra efektin adının üzerine sağ tık > edit deyip efekti istediğimiz ayara getiriyoruz.
 
 
-![](images/post/monty_python/insert.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/insert.jpg)
 
 
 Gerisi sizin yaratıcılığınıza kalmış, iyi eğlenceler :)

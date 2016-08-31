@@ -115,18 +115,18 @@ Artık kurulumlar tamamlandı. LogAnalyzer yapılandırmasını yapabiliriz. Bir
 
 yazdığımızda karşımıza uyarı ekranı gelecek.
 
-![](images/post/syslog-ng/1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.png)
 
 "here" yazan yere tıklayalım ve devam edelim.
 
 “Next” diyerek geçiyoruz.
 
-![](images/post/syslog-ng/2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/2.png)
 
 
 config.php dosyamız olmasa ya da yazma izni olmasaydı hata alacaktık. Şu an için hata almadığımızdan “Next” diyerek devam ediyoruz.
 
-![](images/post/syslog-ng/3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.png)
 
 
 Eğer varsayılan ayarları kullanmak istiyorsak "Next" diyerek devam ediyoruz.
@@ -139,17 +139,17 @@ Eğer varsayılan ayarları kullanmak istiyorsak "Next" diyerek devam ediyoruz.
 **Enable User Database**\\
 
 
-![](images/post/syslog-ng/4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/4.png)
 
 Name of the Source	istediğimiz gibi isim verebiliriz.
 Source Type DiskFİle/MysqlNative/Database/MongoDB seçeneklerimiz var. Logları kaynak olarak nereden okuyacağının ayarını yapıyoruz. Ben disk text dosyalarından okutacağım için DiskFile seçtim.
 LogLine syslog-ng kullandığımız için Syslog/Rsyslog seçtim
 
-![](images/post/syslog-ng/5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/5.png)
 
 Ve kurulum tamamlandı
 
-![](images/post/syslog-ng/6.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/6.png)
 
 
 **Kaynak:**

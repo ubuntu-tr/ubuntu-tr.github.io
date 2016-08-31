@@ -16,17 +16,17 @@ author: "Mehmet Zaki Bilgi"
 
 İki uçuk akıllı, bir gaz istasyonu, bir kitabı bulmak için gelen kadın, kayıp bir amca... Bunların hepsini bir araya getirmek oldukça zor görünüyor. Ama The Journey Down için bunun tam tersi bir durum söz konusu.
 
-![](images/post/the-journey-down/adsız.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/adsız.jpg)
 
 Bwana ve Kito çok küçükken tanışmış iki sokak çoçuğudur. Kaonandodo, gaz istasyonunun sahibi, onları küçüklükten yanına almış, bir süre sonra da ortadan kaybolmuştur. Hiç beklenmedik bir anda bir kadın, bazılarının aradığı bir kitap için gelir.
 
-![](images/post/the-journey-down/resim-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim-1.jpg)
 
 Güzel bir demodan sonra oyun başlar. Elektrikleri kesilmiş bir gaz istasyonundan nasıl para kazanıp fatura ödenebilir ki? Tabii ki ikisinin de, her işi çözmekte kullandıkları, çok ilginç bir o kadar da parlak fikirleri yardımlarına koşar.
 
 Konuşmalar bitip iş bana kalınca basıyorum 'w,a,s,d' tuşlarına, hiçbir şey olmuyor. Sağ tuşu, sol tuşu deniyorum, yine bir şey yok. En sonunda ampül yanıyor, fark ediyorum ki bu bir 'point and click adventure' oyunu. Çok uzun zamandır oynamadığım için ilk başta biraz bocalasam da elektrikleri geri getirdikten sonra keyfim yerine geliyor. Birkaç küçük sorunu da çözünce asıl macera başlıyor.
 
-![](images/post/the-journey-down/resim-2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim-2.jpg)
 
 Oyunun en çok sevdiğim özelliklerinden biri, çok komik olması. İlk kez kendimi bir oyun oynarken, kahkahalarla güler bir hâlde buldum. Ancak şunu belirtmeliyim ki oyundaki esprileri anlamak için orta derecenin biraz üstü bir İngilizce lazım. Konuşma sırasında verilen altyazı desteği de bu bakımdan çok iyi olmuş. Neredeyse bütün karakterler sokak İngilizcesi konuşuyor. Bunu da altyazıya güzel bir şekilde aktarmayı başarmışlar.
 
@@ -34,7 +34,7 @@ Oyun, diğer 'işaretle ve tıkla' oyunları gibi, bulmacalardan oluşuyor. Bu b
 
 Seslendirmeler ve müziklerle çok uğraşıldığı belli. Açıkca söylemeliyim ki Linux için çıkan bir oyunda bu kadar emek beklememiştim. Arka planda oyun için yapılmış çok hoş özgün müzikler çalıyor ve genelin aksine bu müzikler sizi strese sokacağına, rahatlatıp oyuna daha rahat konsantre olmanızı sağlıyor. Bu özgünlük, oyunun genel çizim havasına da yansımış. Arka planların hepsi ilk önce el ile çizilip daha sonra bilgisayar ortamında oynanmış. Buna karakterlerin yüzleri de dahil. Oyunun bu yanı sizi kendine bir hayli çekebiliyor.
 
-![](images/post/the-journey-down/resim-3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim-3.jpg)
 
 Oyunda ilerledikçe fark ettiklerimden biri de oyunun, biraz da olsa, sistem eleştirisi içermesiydi. Günümüzdeki birçok oyunun aksine, kesinlikle para kullanmıyorsunuz, bunu yerine zekânızı çalıştırıp ucuz yollu, hatta bedava bir şekilde sorunları hâllediyorsunuz. Bu açıdan özgür yazılım felsefesinden nasibini aldığını çok rahatlıkla söyleyebilirim.
 

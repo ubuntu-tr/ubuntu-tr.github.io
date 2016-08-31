@@ -13,14 +13,14 @@ author: "Bahadır Demircioğlu"
 Ev kullanıcıları büyük hesaplama gücüne ihtiyaç duyduğunda sahip oldukları işlemci gücü ya da RAM miktarı yetersiz gelecektir. Bu sorunları aşmak için 1994 senesinde Donald Becker ve Thomas Sterling tarafından Beowulf adını verdikleri çalışma başladı. Bu çalışmanın amacı düşük maliyetli ev bilgisayarları ile süper hesaplamalar yapabilecek kaynakları elde etmekti. Hazırladıkları ilk yapıda çoğumuzun adını dahi duymadığı Pentium I ve 486 sınıf üzerinde Linux olan makineler kullandılar. Bu çalışmalar sayesinde elimizde çok pahalı kaynaklar olmadan da büyük hesaplamalar yapabileceğimiz kanıtlanmış oldu. Bu çalışmaların tek dez avantajı ise hesaplama düğümlerinin birbirleri ile haberleşirken network üzerinde kaybettikleri zaman. Elimizde çok büyük kaynaklar yoksa ve bunları karşılayacak maddi bir desteğimiz de yoksa sanırım bu kayıp gözardı edilebilir. Daha detaylı bilgi almak isteyenler [^1] adresine göz gezdirebilirler.
 
 Anlatıma başlamadan önce biraz iştah kabartması için birkaç fotoğraf göstermek istiyorum :)
-![](images/post/paralel-hesaplama-beowulf-cluster/1.jpg)
-![](images/post/paralel-hesaplama-beowulf-cluster/2.jpg)
-![](images/post/paralel-hesaplama-beowulf-cluster/3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.jpg)
 
 Elimde şu an için dört adet ev kullanıcı bilgisayarı bulunmakta. Bundan dolayı Beowulf yapısını bir adet
 ana makine ve üç adet hesaplama düğümünden oluşturacağım. Ana makineden hesaplarımızı vereceğiz, aynı zamanda bu makine hesaplama düğümleri ile birlikte hesap işinede katkı sağlayacaktır. (İsterseniz, ilk çalışmanız için, fiziksel makinenizde sanal makineler oluşturup bu işlemleri adım adım yapabilirsiniz.)
 
-![](images/post/paralel-hesaplama-beowulf-cluster/yapi.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/yapi.png)
 
 
 Öncelikli olarak makinelerim için tanımlamalarım;

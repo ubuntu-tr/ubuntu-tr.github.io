@@ -199,7 +199,7 @@ print("Merhaba Dünya")
 
 Eğer buraya kadar sorunsuz geldiysek şöyle bir ekran karşımıza çıkmalı:
 
-![Python2Konsol](images/post/pyhton-programlama-seri-i/Python2KonsolMer1.png)
+![Python2Konsol]({{ site.assetsDir }}{{ page.permalink }}/Python2KonsolMer1.png)
 
 Yukarıdaki yazıya göre göre bu biraz garip kaçtı. Eğer dikkat ettiyseniz uçbirime 'python' komutu verdiğimizde bize döndürülen ilk bilgi çalışan programın Python 2.7 olduğu bilgisiydi. Biz Python3 ailesine göre print komutu girdiğimiz hâlde bize doğru çıktı ulaştı. Birde normal şekilde print deyimine bakalım:
 
@@ -270,7 +270,7 @@ Eğer normal Ipython3 programını kurmak isterseniz kullanacağınız komut şu
 
 Tabii bu komutlar yalnızca Debian tabanlı sistemler içindir. Kurulum sonucu programı çalıştırdığınızda aşağıdaki gibi bir görüntü elde edeceksiniz:
 
-![Ipython3G](images/post/pyhton-programlama-seri-i/Ipython3Giriş.png)
+![Ipython3G]({{ site.assetsDir }}{{ page.permalink }}/Ipython3Giriş.png)
 
 Henüz Pyhton hakkında pek bir şey öğrenmiş olmadığımızdan programın önemli özelliklerini gösteremiyorum. Ancak seri boyunca bu etkileşimli kabuğu kullanacağımdan birçok özelliği belki de fark etmeden öğrenmiş olacaksınız. Siz bu süre boyunca klasik etkileşimli kabuğu kullanabileceğiniz gibi 'Bpython3' yazılımına kullanabilirsiniz.
 
@@ -287,7 +287,7 @@ Ipython, klasik etkileşimli kabuğa göre daha gelişmiş olduğundan ':' görd
 
 Gelin şimdi bu öğrendiğimizi Ipython programında deneyelim. Programı açıp 'In[1]:' kısmına sadece ':' işareti koyalım. Göreceksiniz ki program dört boşluğu kendisi atayarak imleci bir alt satırda dört boşluk öteye sürüklemiştir:
 
-![Girinti](images/post/pyhton-programlama-seri-i/Girinti.png)
+![Girinti]({{ site.assetsDir }}{{ page.permalink }}/Girinti.png)
 
 #### Yorum Satırları
 

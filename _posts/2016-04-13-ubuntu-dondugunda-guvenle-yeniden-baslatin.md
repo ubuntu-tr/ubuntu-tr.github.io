@@ -18,7 +18,7 @@ Bu tuşun konumuzla ilgili olan görevi doğrudan Linux klavye sürücüsünün 
 Sadece "kernel panic" sorununda bu tuş devredışı kalmaktadır, kernel çalışmaya devam ettiği sürece etkindir. "kernel panic" dışındaki tüm donmalarda güvenli yeniden başlatma için "SysRq" tuşunu kullanabilirsiniz. SysRq tuşu klavyenin üst kısmında ve Scroll Lock tuşunun yanında yer alır ve genellikle Print Screen tuşu ile aynı tuşu paylaşır.
 
 
-![](images/post/ubuntu-dondugunda-guvenle-yeniden-baslatin/Resim-1_sysrq.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/Resim-1_sysrq.jpg)
 
 
 Bu sihiri kullanmak için aşağıdaki komutu yürüterek "/proc/sys/kernel/sysrq" dosyasının değerini kontrol edeceğiz.

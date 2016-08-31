@@ -28,7 +28,7 @@ IP Santraller, bilgisayar tabanlı santrallerdir. Asterisk, GNU/Linux üzerinde 
 
 Önce alt yapı (zayıf akım) olarak olaya bakarsak, daha firma kurulurken bile 'telefon kablosu' çektirmenize gerek yoktur. yerel ağınız üzerinden çalıştığı için ayrı bir kablolama maliyeti çıkarmaz, bu durumda, şirkette bir odadan başka bir odaya taşınırken bile telefoncu çağırıp telefon hattınızı diğer odaya aktarmasını isteyip servis ücreti ödemezsiniz. Telefonunuzu fişinden ve ağ kablosundan çıkarıp, istediğiniz odaya geçip tekrar elektrik ve ağ kablosunu takmanız yeterlidir. IP Telefon açılırken sistemden IP alacak ve ağınızdaki IP Santral'i görüp dahili numarası ile kayıt olacaktır, kullanıma hazırdır bile.
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/5.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/5.jpg)
 
 Buradaki mantığa göre, IP telefonunuzun aldığı bir IP adresi var, İnternet tarayıcıya telefonunuzun IP adresini yazarak telefona bağlanıyorsunuz ve ayarlarını yapıyorsunuz. IP Telefonun IP Santral'e bağlanabilmesi için, IP Santral'inizin yerel ağınızdaki IP adresini telefon ayarlarına yazarak, telefonun IP Santral'e bağlanmasını sağlıyorsunuz.
 
@@ -39,7 +39,7 @@ Peki bir de olaya şu açıdan bakalım: İşten çıktım, eve gittim ve Adsl m
 Gördüğünüz gibi evimdeyim ama şirkette kullandığım telefonu eve getirip sanki şirketteymişim gibi kullanabiliyorum ve şirketteki bütün dahili telefonlarla aramdaki görüşmeler ücretsiz oluyor. Eğer dış arama yaparsam bu konuşma şirket hatları üzerinden çıkıyor.
 Bunu uzak şubeli şirketler için düşünürsek, “devrim” derken ne demek istediğimi anlatmış olurum sanırım.
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/6.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/6.jpg)
 
 Uluslar arası şubesi olan firmalar için de aynı durum geçerlidir. Tek santral üzerinden bütün şubeleri yönetebilir ve şubeler arasındaki görüşmeler için %100 kazanç sağlayabilirsiniz.
 
@@ -72,7 +72,7 @@ Bodrum'da bazı dönemler yağmur çok olur ve telefon hatlarına yıldırım d�
 - Ses kayıt; analog santrallerde olduğu gibi ses kayıt için ek bir modüle gerek yoktur, bütün dahili ve harici görüşmeler kayıt altına alınabilir.
 - SIP Protokolü (RFC 3261) kullanan diğer cihazlar, örneğin  Android, iOS, Symbian sistemli cep telefonları, santrale kayıt olup dahili masa telefonu gibi kullanılabilir. (Şahsen şirkette telsiz telefon taşımıyorum, cep telefonum santrale bağlı.)
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/7.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/7.png)
 
 Aslında özellikler daha saymakla bitmeyecektir. Biraz hayal gücümüzle de sınırlı, arayan kişiyi direkt cebime yönlendirebiliyorsam daha şık olması için önce ses kayıt ile karşılarım: 'Aradığınız kişi şu anda yerinde değil, cep telefonundan ulaşmak için 1'e basınız.” Bence bayağı havalı oldu. :)
 
@@ -144,7 +144,7 @@ iptables -A INPUT -j REJECT
 echo “Kurallar Aktif Edildi...”
 ```
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.png)
 
 Kaydedip çıkıyoruz, dosyaya çalıştırma yetkisi veriyoruz ve açılışta çalışmasını sağlıyoruz,
 
@@ -153,7 +153,7 @@ chmod 755 /sbin/guvenlik.sh
 echo “/sbin/guvenlik.sh” >> /etc/rc.local
 ```
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/2.png)
 
 rc.local'a yazıp yazmadığına bakmak isterseniz eğer,
 
@@ -161,7 +161,7 @@ rc.local'a yazıp yazmadığına bakmak isterseniz eğer,
 cat /etc/rc.local
 ```
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.png)
 
 Sunucuyu yeniden başlatmadan kuralları aktif etmek için,
 
@@ -175,7 +175,7 @@ Kurallar Aktif Edildi... çıktısını alıyoruz, kuralları görmek için,
 iptables -L
 ```
 
-![](images/post/ip-santral-ip-pbx-ve-guvenligi/4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/4.png)
 
 
 

@@ -28,25 +28,25 @@ Minecraft basit grafikleri olmasına rağmen çok eğlenceli bir oyundur. Oyunun
 
 Bu modda rastgele oluşan haritada, herhangi bir yerde doğarak oyuna başlıyorsunuz. Adı üstünde amacımız hayattta kalmak. Hemen bir ağaç kesiyor onları işledikten sonra silah , kürek , kazma gibi çeşitli araç gereçler üretiyorsunuz. Üretmek deyince oyunun şahsım adına en eğlenceli yönü bu.
 
-![](images/post/minecraft/4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/4.png)
 
 İnek , tavuk vs hayvanları keserek etlerini topluyoruz ve karnımızı doyuruyoruz veya tarlamıza buğday ekip bu buğdaylardan ekmek yapıyoruz. Kazdığımız taşlardan ocak yapıp etleri pişirdiğimizde karnımız daha çok doyuyor :). Karanlık çökünce yavaş yavaş canavarlar ortaya çıkıyor . İlk gece için kendimize ufak bi barınak yapmamız, kömür ve çubuk ile yaptığımız meşalelerle barınağımızı ışıklandırmamız çok önemli. Karanlık olan heryerde, bu evimiz bile olsa, canavarlar doğabiliyor.
 
-![](images/post/minecraft/15.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/15.png)
 
 Resimde göründüğü gibi içeride yatağım var. Odun ve koyunlardan topladığım yünle yaptım :). Yatakta sadece geceleri uyuyabiliyorsunuz ve uyuduğunuz zaman direk sabah oluyor . Güneşi gören zombiler ölüyor. Gündüz çalışmamız bizim için daha güvenli. Yatakta bir kere uyuduğumuz zaman orası bizim öldüğümüzde tekrar doğuş noktamız (spawn point) oluyor. Aksi halde öldüğünüzde oyunun başlangıcında ilk doğduğunuz yerde doğuyorsunuz :).
 
-![](images/post/minecraft/8.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/8.png)
 
 Gelelim oyunun adı olan minecraftlara. Taş kazmamızı ürettikten sonra yerin altına doğru kazmaya başlıyoruz. Kömür , demir , altın , elmas vs çeşitli madenler buluyoruz. Bu madenleri işledikten sonra ray ve vagon üretiyoruz . Bunlar sayesinde daha hızlı yolculuk yapıp , madenlerimiz daha rahat taşıyoruz.
 
-![](images/post/minecraft/7.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/7.png)
 
 ## İnşaa Modu
 
 İnşaa modunda oyunda bulunan her hammade veya üründen elimizde sınırsız sayıda bulunuyor. Ölümsüz oluyor ve istediğinizde hava uçabiliyorsunuz. Yani inşaa yapmamız için ortam ve kaynaklar hazır olarak bize sunuluyor. Bizde var olan veya hayalimizdeki bir yapıyı oyuna döküyoruz.
 
-![](images/post/minecraft/16.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/16.png)
 
 Bu resmi internetten buldum. Gördüğünüz gibi koca bir camii inşaa etmiş. Gayet mükemmel bir çalışma olmuş ve emek verilmiş :). Siz de internetten araştırabilir, örnekler bulabilirsiniz. Diğer modu daha çok sevsem de insanların bu moda olan ilgilerini de anlıyorum. Üç beş arkadaş birleşip, bir yapı seçip, beraberce inşaaya başlıyorlar. İnşaa yarışmaları oluyor, onlara katılıyorlar. Siz de kendi dünyanızda bir mimar, inşaat mühendisi olabilirsiniz :).
 
@@ -72,7 +72,7 @@ sudo apt-get install minetest
 
 Minetest'e ait bir görüntü :
 
-![](images/post/minecraft/17.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/17.png)
 
 Herkese iyi eğlenceler , bol elmaslı madenler :)
 

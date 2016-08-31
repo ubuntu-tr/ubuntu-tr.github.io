@@ -41,13 +41,13 @@ Linus Torvalds'ın yaptığı her büyük sürümden sonra, çekirdeğin "kararl
 
 Konsensüs sonrası arzu edilen büyük çekirdek sürümü dönemi 8-12 ay olarak belirlenmiştir. Daha kısa süreler testçilere yeni sürümdeki problemleri bulmaları için yeterince zaman tanımazken, daha uzun süreler ise sürümler arasında yapılması gereken işlerin çok birikmesine neden olmaktadır. 2.6.11 sürümünden itibaren sürüm tarihçesi şöyledir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo1.png)
 
 ## Değişim Hızı
 
 Geliştiriciler Linux çekirdeğine göndermek üzere işlerini hazırlarlarken, büyük değişikliklerini "yama" adı verilen küçük birimlere bölerler. Bu yamalar birbirleri ardısıra uygulandığında kaynak kodda ilgili satırları silerek, yeni satırlar ekleyerek ya da var olan satırları değiştirerek sadece bir tek görev yaparlar. Her yama tek başına uygulandığında çekirdeğin düzgün şekilde derlenmesi ve çalışması için gereken değişiklikleri içermelidir. Sürümler arasındaki yamalar aşağıdaki tabloda gösterilmiştir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo2.png)
 
 Yapılan yama sayısı ve sürümler arasındaki gün kullanılarak, saat başına çekirdeğe gönderilen ortalama yama sayısı hesaplandığında, 2.6.11 ve 3.2 çekirdek sürümleri arasında 4.3 sayısı elde edilecektir. Linux çekirdeği büyüdükçe, yapılan yama sayısı da büyümektedir.
 
@@ -55,7 +55,7 @@ Yapılan yama sayısı ve sürümler arasındaki gün kullanılarak, saat başı
 
 Büyük sürümler arası koda yapılan düzeltmelerin geldiği kararlı güncellemelerin adedi ve düzeltilen hata sayısı aşağıdaki tabloda verilmiştir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo3.png)
 
 2.6.32 sürümünün aldığı güncelleme sayısı bazı dağıtıcıların hâlâ bu sürümü kullanması dolayısıyladır. Yukarıda da değinildiği gibi gömülü aygıtlar için destek süresinin 2011 yılı itibarıyla iki seneye çıkarılması 3.0 sürümü ile başlayacaktır.
 
@@ -63,7 +63,7 @@ Büyük sürümler arası koda yapılan düzeltmelerin geldiği kararlı güncel
 
 Daha fazla donanım desteği ve yeni özellikler çekirdeğe eklendikçe, çekirdek de boyut olarak büyümektedir. Aşağıdaki tablo verilen çekirdek sürümleri için yazılan satır sayısını ve oluşturulan dosya adedini göstermektedir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo4.png)
 
 Görüldüğü gibi çekirdek, 2.6.11 sürümünden bu yana 8 milyon satır koddan fazla büyümüştür. 2010 güncellemesinden bu yana büyüme miktarı 1.5 milyon satırdır. 1991 yılında ilk sürümü çıktığında 10000 satır koddan oluştuğu düşünülürse, gelişimin ne kadar hızlı devam ettiği görülecektir.
 
@@ -71,7 +71,7 @@ Görüldüğü gibi çekirdek, 2.6.11 sürümünden bu yana 8 milyon satır kodd
 
 Yazının girişinde 800'den fazla şirketten 7800'den fazla geliştiricinin çekirdeğe katkı verdiğinden bahsetmiştik. Her çekirdek sürümüyle katkı verenlerin sayısı da artmaktadır. Hatta son üç yılda bağımsız katkıcıların sayısı iki katına çıkmıştır. Son 5.5 yılda çekirdeğe en çok katkıda bulunan 10 geliştirici toplam çekirdeğin %9'unu oluşturmuştur. En çok katkıda bulunan 30 geliştirici göz önüne alındığında bu oran %20'ye çıkmaktadır. Aşağıdaki tablo 2.6.12'den bu yana git deposuna bakıldığında geliştiriciler ve yaptıkları değişiklerin sayısını vermektedir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo5.png)
 
 Linus Torvalds'ın en çok katkı yapan ilk 30 arasında bulunmaması eğlenceli bir gerçektir. 2.6.35'ten bu yana 231, toplamda 1113 değişiklik yapan Torvalds'ın çekirdeğe katkısı tabii ki yalnızca yaptığı değişiklikler ile ölçülemez. Kendisi hâlâ gelişim sürecinde aktif ve önemli bir rol üstlenmektedir.
 
@@ -79,7 +79,7 @@ Linus Torvalds'ın en çok katkı yapan ilk 30 arasında bulunmaması eğlenceli
 
 En çok değişiklikte bulunan 10 sponsor (bağımsız geliştiriciler ve tespit edilemeyenler de hesaba katıldığında) bütün çekirdeğin %60'ını oluşturuyor. Bir şirketle ilişkisi tespit edilemeyenler bağımsız katkıcı olarak sayılsa bile, tüm çekirdeğin %75'inden fazlasının bu iş için para alan geliştiriciler tarafından oluşturulduğu aşağıdaki tablodan görülebilir:
 
-![](images/post/linux-cekirdek-gelistirme-sureci/tablo6.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/tablo6.png)
 
 ## Sonuç
 

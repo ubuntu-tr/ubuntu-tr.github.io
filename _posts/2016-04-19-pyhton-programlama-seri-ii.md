@@ -307,11 +307,11 @@ Bana kalırsa her iki görüşte doğrudur. Bu yüzden bu güne kadar kullandı�
 
 IDLE Python'un resmi olarak desteklediği çok gelişmiş olmayan her seviyedeki geliştirici için kullanılabilir ve Python'a tam olarak uyumlu bir tümleşik geliştirici ortamıdır.
 
-![](images/post/pyhton-programlama-seri-ii/PythonIDLE1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonIDLE1.png)
 
 Kullanımı oldukça basittir. İndirdiğinizde Python'a tam uyumlu şekilde gelir. İçinde birde gelişmiş bir Python yorumlayıcı bulundurur. Programı ilk açtığınızda sizi bu yorumlayıcı karşılar. CTRL-N tuş kombinasyonu ile kodların yazılacağı kısma ulaşabilirsiniz. Yazdığınız programı F5 tuşuna basarak kaydedip çalıştırabilirsiniz.
 
-![](images/post/pyhton-programlama-seri-ii/PythonIDLE2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonIDLE2.png)
 
 Ubuntu ve türevlerinde bu uygulamayı kurmak için:
 
@@ -327,11 +327,11 @@ sudo apt-get install idle-python3.4
 
 Ninja IDE açık kaynak kodludur. Python için düzenlenmiştir. IDLE gibi bu yazılım da Python ile yazılmıştır. Gelişmiş bir IDE'dir. Python projeleri için alışıldığında vazgeçilmeyecek bir programdır.
 
-![](images/post/pyhton-programlama-seri-ii/PythonNinja1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonNinja1.png)
 
 Kurulduğunda sizi yukarıdaki gibi bir başlangıç ekranı karşılar. İyi seviyedeki programcılar için oldukça yararlıdır. Eklenti desteği vardır. Yazılan betikler F8 tuşu ile çalıştırılabilir.
 
-![](images/post/pyhton-programlama-seri-ii/PythonNinja2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonNinja2.png)
 
 Kaliteli bir kod renklendirmesi vardır. Hızlı ve kullanıcı dostudur. Kurulduktan sonra hemen program yazmaya başlayabilirsiniz. Herhangi bir özelleştirme gerektimez.
 
@@ -350,7 +350,7 @@ Geany oldukça hafif bir IDE'dir. Program sadece Python için yazılmasa da Pyth
 
 Eğer yukarıda bahsettiğimiz meseleye göre gelişmiş IDE kullanmak istemiyorum ama kendimi aşırı biçimde de yormak istemiyorum derseniz ve IDLE'yi de bağenmediyseniz Geany ikinci alternatifiniz olabilir. F5 tuşu ile yazdığınız betik çalıştırılır.
 
-![](images/post/pyhton-programlama-seri-ii/PythonGeany.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonGeany.png)
 
 İndirip kurmak için aşağıdaki komutu çalıştırmalısınız:
 
@@ -368,11 +368,11 @@ Diğer bazı IDE'leri ve Python'da kullanımlarını forumda Python bölümünde
 
 Yukarıda bahsettiğim programlar aracılığıyla programlarımızı yazabiliriz. Biz bir süre boyunca anlatırken IDLE programını kullanacağız. Şimdi IDLE programını açalım.
 
-![](images/post/pyhton-programlama-seri-ii/PythonIdleHello1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonIdleHello1.png)
 
 Karşımıza yukarıdaki gibi bir ekran çıkmış olmalı. Kodlarımızı buraya yazmayalım. Çünkü burası Python kabuğu, yani Python yorumlayıcısı. CTRL-N tuşları ya da File>>New File yolunu izleyerek kodları yazacağımız alana geçelim.
 
-![](images/post/pyhton-programlama-seri-ii/PythonIdleHello2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonIdleHello2.png)
 
 Evet artık programlarımızı oluşturacağımız ekrana ulaştık. Bundan sonra kodlarımızı buradan yazacağız. Her seferinde CTRL-N ya da File>>New File yapmak istemiyorsanız; bu ekranda Options>>Configure IDLE>>General yolunu izleyip, bu ekranda 'Startup Preferences' bölümünde 'Open Edit Window' kutucuğunu işaretleyebilirsiniz.
 
@@ -415,7 +415,7 @@ Daha sonra programımızı python3 komutuna belirterek çalıştırıyoruz.
 python3 deneme.py
 ```
 
-![](images/post/pyhton-programlama-seri-ii/PythonProgram%C3%87al%C4%B1%C5%9Ft%C4%B1rma1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonProgram%C3%87al%C4%B1%C5%9Ft%C4%B1rma1.png)
 
 Yukarıdaki ekranı görüyorsanız programı başarı ile çalıştırdınız demektir. Programımız burada çok basit bir program olduğu için uçbirim ekranında sadece 'Merhaba Dünya' yazdırıp kendini sonlandırıyor.
 
@@ -429,7 +429,7 @@ Linux dağıtımlarında bizim hazırladığımız tarzdaki metin belgelerini ç
 
 Eğer Naltilus kullanıyorsanız, yukarıdaki özelliği devredışı bırakmak için Nautilus dosya yöneticisini açıp _Değiştir>>Tercihler>>Davranış_ yolunu izlemeniz gerekir. Karşınızdaki pencere aşağıdaki gibi olmalıdır:
 
-![](images/post/pyhton-programlama-seri-ii/Python%C3%87al%C4%B1%C5%9Ft%C4%B1r%C4%B1labilir1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/Python%C3%87al%C4%B1%C5%9Ft%C4%B1r%C4%B1labilir1.png)
 
 Bu pencerede __Çalıştırılabilir Metin Dosyaları__ kısmında üç seçenek bulunuyor. Bunlar arasından son seçenek olan _'Her zaman sor'u_ seçip kapat düğmesine basın.
 
@@ -855,6 +855,6 @@ __Soru 1:__
 __Soru 2:__
     Bir program yapma programı yaptığınızı ve şu an bu programda veritipleri ile uğraştığınızı düşünün. Kullanıcı önce veriyi girecek sonra bir menü ile hangi tipe dönüştürmek istediği sorulacak istenilen tipe dönüştürülecek ve kullanıcıya bildiirilecek. Yani program aşağı yukarı böyle olacak:
 
-![](images/post/pyhton-programlama-seri-ii/PythonSoru.png)    
+![]({{ site.assetsDir }}{{ page.permalink }}/PythonSoru.png)    
 
 Soruların çözümlerini tartışmak, çözümlerin nasıl hazırlanacağı hakkında fikir sahibi olmanız için sizi foruma bekliyoruz...

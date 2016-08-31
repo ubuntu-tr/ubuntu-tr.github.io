@@ -18,19 +18,19 @@ Sistemin tanımını bir cümle ile yapmak kolay değildir lakin temel olarak si
 
 /proc aslında dosya sistemi olmadığı hâlde geçici bellekte oluşturulan sanal bir dosya sistemidir ve diskte yer kaplamaz. /proc dizini de yerel bir aygıtmış gibi sisteme eklenir. Eklendiği yol bizim de üzerinde çalıştığımız /proc yoludur. /proc dizinini fstab dosyası, sistemin açılışında yükler ve sisteme bağlar. (/etc/fstab)
 
-![](images/post/proc-dizini/fstab.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/fstab.png)
 
 Yukarıda da tarif ettiğimiz gibi /proc dizininden hâlihazırda çalışan programların bilgilerine ulaşmak mümkündür. Örneğin top komutu ile çalışan uygulamalara bir bakalım.
 
-![](images/post/proc-dizini/top1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/top1.png)
 
 Top komutunun çıktısında gördüğümüz soldaki kolon, işlem numarasını belirtir. /proc dizininin altında her işlemin numarası ile adlandırılmış işlemin ve sürecinin detaylarını barındıran klasörler-dosyalar yer alır. Şöyle ki /proc klasörü altında numaralardan oluşan klasörleri ve sistem hakkında bilgiler içeren diğer dosyaları görebiliriz.   
 
-![](images/post/proc-dizini/proc1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/proc1.png)
 
 Örneğimizden devam edecek olursak, 17 numaralı işlemin dizini olan 17 isimli klasörün içine baktığımızda o işleme ait dosya ve klasörleri görürüz. Buradaki cwd, exe, root dosyaları asıl dosyalarına kısayoldur. Cwd işlemin çalıştığı asıl klasörü temsil eder. Exe işleme ait olan çalıştırılabilir dosyaları temsil eder. Root ise işlemin ana dizinini temsil eder. 17 isimli dizinin diğer dosyalarına baktığımızda, mesela cat status dediğimizde gelen çıktıda, migration/3 isimli işlemin beklemede olduğunu gözlemliyoruz.
 
-![](images/post/proc-dizini/proc-17-status.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/proc-17-status.png)
 
 Aynı şekilde 17 isimli işlem için oluşan dizin dışında diğer dosyalar ile başka işlemlerin ve durumların bilgisini alabiliriz. Şimdi /proc dizini altındaki dosyalara görevleri ile birlikte değinelim.
 
@@ -40,7 +40,7 @@ Aynı şekilde 17 isimli işlem için oluşan dizin dışında diğer dosyalar i
 
 **/proc/iomem** – Geçici bellek için inceleyebileceğimiz dosyadır. Geçici bellek (RAM) adreslerinin nerelere ayrıldığını gözlemleyebiliriz. Yandaki çıktıda örneğin Video Rom için ayrılan adres aralığını, önceden rezerv edilmiş adres aralıklarını görmekteyiz.
 
-![](images/post/proc-dizini/iomem.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/iomem.png)
 
 **/proc/devices** – Sistemde o an çalışan aygıt sürücülerinin listesini görürüz.
 
@@ -54,7 +54,7 @@ Aynı şekilde 17 isimli işlem için oluşan dizin dışında diğer dosyalar i
 
 **/proc/kcore** – Sistemdeki fiziksel belleğin bir görüntüsünü verir. Aldığımız çıktı, gerçek belleğin görüntüsüdür, gerçek bellek değildir. İlgili dosyayı incelemek root yetkisindedir.
 
-![](images/post/proc-dizini/kcore1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/kcore1.png)
 
 **/proc/kmsg** – Sistem mesajlarını tutan dosyadır. Dosyayı incelemek root yetkisindedir. Yoğun bir dosya olduğundan, dosya çağrıldığında cevap vermesi uzun sürebilir.
 

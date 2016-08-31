@@ -35,7 +35,7 @@ Aynı sunucumuza yine SSH ile bağlı olduğumuzu ve uçbirimden işimizi görd�
 
 İşte, yine tam bu durumda uygulamalarımız ihtiyacımızı karşılamak için imdadımıza yetişiyorlar: Pencereleri bölme, boyutlandırma, özelleştirme. Yeni pencere oluşturmak güzeldi, peki oluşturduğumuz bir pencereyi bölerek kullanabiliyor olmamız daha güzel olmaz mı? Zahmet çektiğimiz konuyu düşünelim. Penceremizin üst tarafında istediğimiz çıktı akıyor, bizse bölerek kullandığımız alt tarafta dosyamızı bu çıktıya göre düzenliyoruz. Hatta aynı pencerenin yan bölmesinde de "top" komutu ile sunucuyu gözlemliyoruz! Sanırım aşağıdaki resim ne demek istediğimi tam olarak ifade edecektir.
 
-![](images/post/tmux-kuvvetli-ucbirim-yonetimi/resim1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim1.jpg)
 
 Resimden de görülebileceği üzere pencerelerimizi dilediğimiz gibi şekillendirmemiz mümkün. Sunucu üzerinde bu şekilde oluşturulmuş bir çalışma ortamı bize oldukça rahatlık sağlayacaktır.
 

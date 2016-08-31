@@ -27,7 +27,7 @@ Oyunumuz, bağımsız bir geliştirici olan Hammerware tarafından geliştirilen
 - 250 MB disk alanı
 - 128 MB OpenGL 2.0 destekli GeForce FX5200 ya da Radeon 9500 ekran kartı
 
-![](images/post/ffarm/ff1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff1.png)
 
 Oyunumuz Ogre motorunu kullanıyor. MIT lisansına sahip motor, özgür bir yazılım. Oyunu ilk açtığınızda, bir kayıt slotu için sizden profil adı girmeniz istenecek. Sonrasında ise ana menü önünüze gelecek. Oldukça basit.
 
@@ -47,7 +47,7 @@ Oyunumuz Ogre motorunu kullanıyor. MIT lisansına sahip motor, özgür bir yaz�
 
 Oyunu açtığınızda, "Start a story" diyerek, ilk görevimizi ve çiftliğimizi alıyoruz.
 
-![](images/post/ffarm/ff2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff2.png)
 
 
 İlk görev, bir çeşit alıştırma görevi. Sol alt köşedeki şapkalı amcamız, bize neyi nasıl yapmamız gerektiğini görev boyunca anlatacak. Oyunumuzun ekranı yukarıda görüldüğü şekilde. Oldukça kolay kontrollere sahip basit bir oyun Family Farm.
@@ -60,7 +60,7 @@ Hemen yanında ise tecrübe durumumuz var. Aldığınız işleri bitirdikçe tec
 
 Ortadaki işçi simgesi ise, o an boşta olan kaç işçimiz olduğunu belirtiyor. Bu simgeye her tıklayışımızda, boşta olan işçler seçili hâle geliyor. Her defasında bir işçi seçebiliyoruz. Birden fazla işçiyi aynı anda seçmek gibi bir fonksiyon yok. Bunu gerektirecek bir durumla da karşılaşmıyorsunuz zaten.
 
-![](images/post/ffarm/ff3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff3.jpg)
 
 Bir işçiyi seçtiğinizde üzerinde elmasa benzer bir işaret çıkıyor. Sağ üst köşede ise seçili işçimizin bilgileri çıkıyor. İşçimizin portresi ve adının sağ tarafında bulunan işaretler, bu işçinin yorgunluk ve açlık durumunu gösteriyor. Daire içindeki Z harfi, işçi yoruldukça; çatal bıçak ise acıktıkça dolacaktır. Burada Carl, hiç yorgun değil ancak çimleri yiyecek kadar aç. :-)
 
@@ -78,7 +78,7 @@ Her işçinin 5 yeteneği ve 4 tane de özelliği var. Yetenekler, işçileri yo
 
 **Cooking:** Aşçılık yeteneği. Yukarıda işçilerimizin acıktıklarından bahsetmiştik. İşçilerimizi doyurmak için, mutfağımızda yemek hazırlamak durumundayız.
 
-![](images/post/ffarm/ff4.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff4.jpg)
 
 Evinizde, üzerinde küçük bir çan olan duvar mutfağınızı gösteriyor. Buraya tıkladığınızda yemek menünüz açılır. Buradan yapacağınız yemeği seçmeniz gerekiyor. Yemeğe tıkladığınızda, sağ tarafta açıklamaları görebilirsiniz. Yemeğin portresinin altında yemeğin bir porsiyon fiyatını görebilirsiniz. Yani bu yemekten hazırlamanın bir işçi için olan fiyatı. Bu yemeği yapmanın fiyatı buradaki rakam çarpı işçi sayınız oluyor. Üstteki yıldızlar, o yemeği yapmak için görevlendireceğiniz aşçının, Cooking yetenek seviyesini göstermektedir. Eğer hiç yıldız yoksa, herhangi bir işçi, o yemeği hazırlayabilir demektir. Burada da elbette tecrübe durumumuza göre açılmış olan yemekleri pişirebiliyoruz. Yemeklerin, işçilerin morallerini yükseltme etkilerinden başka, sol alt kısmında bulunan "+" işareti, o yemeğin, işçilerin özelliklerinden birini yükselteceği anlamına geliyor. Bu özelliğin süresi ise, o yemeği pişiren aşçının, aşçılık yeteneğine göre değişiyor.
 
@@ -97,7 +97,7 @@ Yeteneklerimiz bunlar. Buralarda işçileri çalıştırdıkça bu yetenekler ge
 
 Ekranın sağ alt köşesinde bulunan simgelerden en soldaki iş alanları simgesi.
 
-![](images/post/ffarm/ff5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff5.png)
 
 Yani, buradan çiftliğinizin arazisi üzerine istediğiniz iş alanını (ağıl, kümes, sebze bahçesi, tarla gibi) yerleştirebiliyorsunuz. Elbette bunun için paranız olması gerekiyor. Çiftliğimizdeki iş alanlarımız sol baştan başlarsak:
 
@@ -120,7 +120,7 @@ Hemen onun sağında ise katalog simgemiz var. Buraya, zaten hayvan almak, tohum
 
 Ekranın sol alt kısmında ise zamanı gösteren saatimiz var.
 
-![](images/post/ffarm/ff6.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff6.jpg)
 
 Mevsimler, oyunda bir gün olarak geçiyor. Sabah saat 8'den, akşam saat 6'ya kadar çalışıyoruz. Saat 6 olup da aile eve döndüğünde bir mevsim geçmiş oluyor ve 4 mevsim (oyunda 4 gün oluyor) geçince bir sene geçmiş oluyor. Yani işleri yaparken bir gözünüz saatin üzerinde olsun. Saatin sol üstünde hava durmunu görebiliyoruz. Buradaki durum, ektiğimiz ekinlerimiz için önemli. Hasat zamanı geldiğinde, hasada başlayacağınızda, ekinlerinizin üzerinde bir % göreceksiniz (%65 gibi). Hava ve toprak koşulları ekininiz için uygunsa, bu yüzde oranı da o kadar yüksek olacaktır. Yani o kadar fazla hasat alabileceksiniz.
 
@@ -136,7 +136,7 @@ Oyunda sesler de oldukça az. Konuşma yok. Ara sıra hayvan sesleri, tabiat ses
 
 Zorlayıcılık ve eğlence seviyesi iyi ayarlanmış. Oldukça iyi bir zaman katili olmuş oyun. Ancak başladıktan sonra, birden bırakabileceğiniz bir oyun değil. Sezon ortasında oyunu kaydedemiyorsunuz. Kayıt olayı otomatik sezon sonlarında oluyor. Yani bir sezonu ortasında oyunu bırakırsanız, menüden "Continue" dediğinizde o sezonun başından başlıyorsunuz. İlk başlarda önemli olmasa da sonraki kademlerde işler arttıkça, aynı yeri baştan oynamak zorlayabiliyor. Bu tip oyunlardan hoşlanmasanız bile, eğlenceli vakit geçirmek istediğiniz zaman bu oyunu deneyebilirsiniz.
 
-![](images/post/ffarm/ff7.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ff7.png)
 
 
 **Kaynak:**

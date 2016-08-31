@@ -131,15 +131,15 @@ sudo chown -R www-data:www-data /var/www/
 
 Bütün bu işlemleri tamamladığımızda artık Clipperz uygulamasını kullanabiliriz demektir. http://localhost/beta adresine gidip sağ taraftaki giriş formunun altında bulunan "create one" bağlantısına tıklayıp bir hesap oluşturduktan sonra uygulamaya giriş yapabiliriz. Bu aşamada bizi aşağıdaki gibi bir ekran karşılayacak.
 
-![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.png)
 
 Sol üstteki "Logout" ve "Lock" butonları adı üzerinde uygulamadan çıkma ve eğer bilgisayarın başından bir süre ayrılacaksanız hesabınızı kilitleme işlevini görüyorlar. Sağ taraftaki "Cards" sekmesi uygulamada sanıyorum ki en çok kullanılacak bölüm. Burada saklamak istediğimiz her veri için bir kart oluşturabiliyoruz. Fakat her kartı elle oluşturmak istemeyeceksinizdir. Clipperz uygulaması bizim için bunu da düşünmüş ve tarayıcımıza ekleyebileceğimiz bir yer imi yapmış. Yeni bir kart oluşturmadan önce bu yer imini tarayıcımıza ekleyelim ve ilk kartımızı kolayca oluşturalım. Sağ üstteki "Tools" sekmesine gelip açılan sayfada sol taraftaki menüden "Bookmarklet" butonuna tıklıyoruz. Gelen sayfadaki "Add to Clipperz" bağlantısını sürükleyerek sık kullanılanlar çubuğuna bırakıyoruz. Eğer her şey yolunda gittiyse sık kullanılanlar çubuğunda "Add to Clipperz" yeriminin görünmesi gerekiyor. Kısayolun kullanımı ise çok kolay. Diyelim ki Google posta hesabımızı uygulamaya eklemek istiyoruz. İlk olarak giriş yapacağımız sayfayı açıp ilgili alanları dolduruyoruz. Ardından sık kullanılanlar çubuğuna eklediğimiz "Add to Clipperz" butonuna basıyoruz. Bize bir pencere içerisinde kopyalamamız gereken metni getiriyor.
 
-![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/2.png)
 
 Bu metni kopyalayıp uygulamadaki "Cards" sekmesine dönüyoruz ve "Add new card" tuşuna basıyoruz. Gelen pencerede "Direct login"i seçip az önce kopyaladığımız metni hemen aşağıdaki metin kutusuna yapıştırıyor ve "Create" tuşuna basıyoruz. Gelen sayfada herhangi bir alanı değiştirmemize gerek yok fakat istersek bu karta istediğimiz başka alanları ekleme şansımız var. "Save" diyerek işlemi tamamlıyoruz. Bu işlemin sonunda bizi aşağıdaki gibi bir pencere bekliyor.
 
-![](images/post/clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi/3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.png)
 
 Artık bu karttaki "Direct Logins" kısmından ilgili bağlantıya tıklarsak uygulama sayfası açılacak ve Clipperz bizim için hesap bilgilerimizi girecektir. Direkt girişler dışında Clipperz'da banka kartlarınızı, web hesap bilgilerinizi, adres bilgilerinizi ve hatta kendi alanlarınızı oluşturabileceğiniz özel bilgileri güvenli bir şekilde tutabilirsiniz. Eğer bir kartı silmek isterseniz o kartı seçip "Delete card" tuşuna basmanız yeterli olacaktır. Kartlar hakkında genel bilgiyi verdiğimize göre artık "Account" sekmesine bakabiliriz.
 

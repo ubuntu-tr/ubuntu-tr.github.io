@@ -15,8 +15,8 @@ Temel olarak sanallaştırma; sahip olduğumuz fiziksel donanımı, sanal makine
 
 Sanallaştırma yazılımları, sanal makinelere ortak olarak donanımları paylaştırır. Bu paylaşım ne kadar iyi yapılırsa, o kadar fazla verim alınacaktır. Maliyet o oranda azalacak ve sistem performansı da o oranda artacaktır. Temel Sanallaştırma mimarimiz ise aşağıdaki gibi gösterilebilir.
 
-![](images/post/sanallastirma/1.jpg)
-![](images/post/sanallastirma/1-1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/1-1.jpg)
 
 
 ## Peki bu sanallaştırma bize ne gibi yararlar sağlayacak?

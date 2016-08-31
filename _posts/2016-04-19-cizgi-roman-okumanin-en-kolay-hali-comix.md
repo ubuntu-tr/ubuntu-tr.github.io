@@ -16,23 +16,23 @@ Comix, Python tabanlı basit bir resim görüntüleyici aslında, ama özellikle
 
 Benim çizgi romanlarım ağırlıklı olarak .jpg ve .cbr formatında. Mesela "V for Vendetta" sıralı .jpg belgelerinden oluşuyor. Bu belgelerden birini Comix'te açmam, onun sıralı bir biçimde, okunmak üzere ekranımda belirmesi için yeterli oluyor. Ekranın sol tarafında tüm dosyanın önizlemesini görmek de mümkün.
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_1.png)
 
 Eğer başka bir çizgi romanı açmak istersem, birinde kaldığım yere ayraç ekleyip diğer belgeyi açabilirim. Açtığım diğer belge, Hobbit.cbr belgesi. Yine buna da ayraç eklersem artık üstteki menüde yer alan "Bookmarks" ile çizgi romanlarım arasında kolaylıkla geçiş yapabiliyorum. Yani bir belgeyi Comix'te bir kere açınca, ayraç eklediğim sürece, Comix üzerinden bütün çizgi romanlarıma erişimimi sağlıyor (Her defasında dizindi, dosyaydı, bu neredeydi diye uğraşmıyorum yani.).
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_2.png)
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_3.png)
 
 Bir de sayfa boyutlandırması özelliği hakkında konuşalım. Comix size dört farklı seçenek sunuyor bu noktada. Sayfayı ekrana enine, boyuna göre yerleştirebilir ya da ben kendim büyütüp de okurum, sen bir şey yapma, diyebilirsiniz. Yine sayfa görünümü açısından da ayarlamalar mevcut. Dedik ya çizgi romanlara göre tasarlanmış diye, çizgi romanlarınızı yan yana iki sayfa veya tek sayfa görüntüleyebilirsiniz. Hatta, art arda gelen sayfaların yerini değiştirmeniz de mümkün.
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_4.png)
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_5.png)
 
 Bütün bunları sağ üst köşedeki altı butonla yapabiliyorsunuz.
 
-![](images/post/cizgi-roman-okumanin-en-kolay-hali-comix/comix_gorsel_6.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/comix_gorsel_6.png)
 
 Menüleri oldukça kolay Comix'in. Belki Edit > Preferences menüsü üzerinde biraz durabiliriz. Burada üç farklı basamak çıkıyor karşımıza: Apperance, Behaviour, Display. Bu menü üzerinden uygulamanızın nasıl görüneceğini, sonraki sayfaya nasıl geçiş yapacağınızı, açılışta sizi hangi ekranın karşılayacağını düzenleyebiliyorsunuz.
 

@@ -31,7 +31,7 @@ Bu emniyeti sağlamada Güvenlik Duvarı sistemleri kullanılır. Temel olarak y
 
 Sistemlerde bu görevi icra eden cihazlara Güvenlik Duvarı denir. Güvenlik Duvarı, sistemin sağlıklı çalışması için en önemli güvenlik objelerinden biridir.
 
-![](images/post/acik-kaynak-guvenlik-duvari-sistemi/resim1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim1.png)
 
 ## Güvenlik Duvarı Özelliklerinin Gelişimi
 
@@ -79,7 +79,7 @@ Güvenlik Duvarı çözümleri, ihtiyaçlara göre gelişme sağlarken, birbirin
 
 Üzerinde güvenlik duvarı, antivirüs, antispam, VPN, IDS/IPS gibi servisleri barındıran Güvenlik Duvarı Yönetim Sistemlerine UTM -Birleştirilmiş Güvenlik Yönetimi Sistemi denir.
 
-![](images/post/acik-kaynak-guvenlik-duvari-sistemi/resim2.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/resim2.jpg)
 
 Bu resmin,  üstteki bölümünde UTM olmayan bir güvenlik çözümünü görüyorsunuz. E-posta filtreleme ve web filtreleme ayrı ayrı cihazlarla yapılmakta. Böyle bir düzeni kurmaktan ziyade yönetmek daha güç olsa gerek.
 Altta ise VPN, e-posta, web filter modüllerinin bir arada uygulanışını, aynı cihaz üzerinden yönetimini görebilirsiniz.

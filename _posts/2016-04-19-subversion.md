@@ -64,7 +64,7 @@ Tebrikler ilk svn deponuzu oluşturmuş oldunuz. Şimdi deponuzu Apache üzerind
 </VirtualHost>
 ```
 
-![](images/post/subversion/RESIM_1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/RESIM_1.png)
 
 Apache'yi yeniden başlattığınızda http://svn.ornek.com adresi üzerinden deponuza erişebilirsiniz. Lakin şu anda içinde herhangi bir şey olmadığı için boş olarak gözükecektir. Bu yapılandırmada bir erişim izini ya da erişim kontrolü oluşturmadık. Bunlar daha üst düzeyde ayarlar olduğundan ve hepsini anlatmak mümkün olmadığından çok temel iki tanesi ile devam edeceğim. Dahası için mutlaka kullanıcı kılavuzunu okumalısınız.
 

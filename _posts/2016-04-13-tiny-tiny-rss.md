@@ -65,7 +65,7 @@ http://alan-adı/rss/tt-rss
 
 Karşımıza şöyle bir ekran çıkıyor:
 
-![](images/post/tiny-tiny-rss/ttrss_1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ttrss_1.png)
 
 Buradaki ilgili alanları kendi yapılandırmamıza göre doldurmamız gerekiyor. Görülebileceği üzere çok basit bir kurulum söz konusu. Sayfanın en altındaki "Test configuration" bağlantısına tıkladığımızda yapılandırmamızı denetleyip bize sorun olup olmadığını söylüyor uygulama. Temiz bir LAMP veya LEMP kurulumundan sonra mızmızlanabileceği tek konu PHP'nin curl desteği olacaktır. Bunu da sağlamak için şu paket kurulabilir:
 
@@ -76,13 +76,13 @@ service nginx restart
 
 Tekrar yapılandırmayı denetlediğimizde artık bize "Configuration check succeeded." demesi gerekmekte. Bu aşamdan sonra önemli olan husus veritabanının ilklendirilmesi. Onun için de en alttaki "Initialize database" bağlantısını tıklamamız yeterli. Bu aşamada uygulama veritabanını ilklendirip gerekli verileri basacaktır. Hemen sonrasında bize ana dizine (tt-rss dizini) yerleştirmemiz için bir dosya üretecektir. Bu dosya, uygulamanın yapılandırma dosyası olup eğer varsa ihtiyaçlarımız, bakıp düzenlememizi gerektirir. Bu aşamanın ekran görüntüsü şu şekilde:
 
-![](images/post/tiny-tiny-rss/ttrss_2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ttrss_2.png)
 
 Dosyayı veya içinde yazanları kopyalayıp istediğimiz bir şekilde ana dizine kopyalayabileceğimiz gibi, uygulamanın bunu bizim yerimize yapmasını da sağlayabiliriz. En alttaki "Save configuration" bağlantısını takip ettiğimizde eğer dizine yazma hakkı varsa bizim yerimize uygulama bunu yapacaktır (www-data kullanıcısının yazabiliyor olması gerekmekte). Her şey yolunda gittiyse şu iletiyi alacağız: "Successfully saved config.php. You can try loading tt-rss now."
 
 Burada "loading tt-rss now" bağlantısını takip ettiğimizde ya da elle http://alan-adı/rss/tt-rss bağlantısına gittiğimizde artık uygulamanın kurulmuş ve bizi şu ekranla karşılıyor olması gerekmekte:
 
-![](images/post/tiny-tiny-rss/ttrss_3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/ttrss_3.png)
 
 ## Yapılandırma
 

@@ -23,7 +23,7 @@ Ama biz şöyle bir olay kurgulayalım: Diyelim ki bilgisayarınızda, sistemini
  - Oturumu kapat
  - Ekranı kilitle
 
-![](images/post/kapat-yeniden-baslat-gibi-butonlari-unity-ana-seckeye-nasil-ekleriz/1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.png)
 
 Şimdiden bir uyarı yapalım. Bu seçeneklerden birine tıkladığınız anda dileğiniz yerine geliyor. Sistem size dönüp "Emin misiniz?" deyip teyit beklemiyor. Bu yüzden kazara tıkladığınızda da başınıza geleceklere hazırlıklı olun.
 

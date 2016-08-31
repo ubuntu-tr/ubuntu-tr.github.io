@@ -15,37 +15,37 @@ Bilgisayarların hayatımızın her alanında yer alması sonucu çoğumuz artı
 
 Dosyaların zaman içindeki hallerinin, yetkisi olan herkesin erişebileceği bir sunucuda saklanarak kullanıcının istediği an dosyanın en güncel haline ulaşabilmesini sağlayan versiyon kontrol sistemlerinden bazılarını daha önce yazarak tanıtmaya çalışmıştık. Bu sistemlerin son kullanıcılar için en kötü yani, grafik arayüzleri olmadığından nispeten kullanmayı öğrenmelerinin biraz zaman istemesiydi. Zaten Dropbox ve Ubuntu One, arayüz işini kıvırabildikleri için bu kadar popüler oldular. Fakat onların da versiyon tutma gibi bir özellikleri yoktu. Bu eksikliği gören geliştirici Hylke Bons, grafik arayüz ile versiyon kontrolü birleştirdiği, arkaplanda git (mercurial seçeneği de mevcut) kullanan bir uygulama yaptı ve bu uygulamayı SparkleShare adıyla, GNU GPLv3 lisansı altında bizlerin kullanımına sundu.
 
-![](images/post/sparkleshare/1.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.png)
 
 SparkleShare Oneiric Ocelot ile depolarımızda olacak fakat Natty Narwhal üzerinde de backports deposunu etkinleştirerek uygulamayı yazılım merkezinden ya da eğer daha rahat ediyorsak apt-get ile kurmak mümkün.
 
-![](images/post/sparkleshare/2.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/2.png)
 
 Program ilk açıldığında karşımıza aşağıdaki gibi bir ekran gelecek. Bu ekranda bizden bir isim ve eposta adresi istiyor. Kendimize göre düzenleyip Next tuşuna basarak devam ediyoruz.
 
-![](images/post/sparkleshare/3.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.png)
 
 Bu ekranda bizden servisi ne şekilde kullanacağımıza dair bilgiler istiyor. SparkleShare programını şu anda GitHub, Gitorius ya da kendi sunucumuz üzerinden kullanabiliyoruz. Daha önce de dediğim gibi ben GitHub ve kendi sunucumuz ile kullanımını anlatmaya çalışacağım.
 
-![](images/post/sparkleshare/4.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/4.png)
 
 ## GitHub ile Kurulum
 
-![](images/post/sparkleshare/5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/5.png)
 
 Sistemin GitHub hesabımıza erişebilmesi için öncelikle kullanıcı dizinimiz altına oluşturduğu SparkleShare klasörü içinde yer alan SSH anahtarını kopyalayıp bir web tarayıcısı yardımıyla GitHub hesabımızın ayarlar kısmından bilinen SSH anahtarları altına kısmına yapıştırıyoruz.
 
-![](images/post/sparkleshare/6.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/6.png)
 
 Artık projemizi eşitlemeye hazırız. Seçeneklerden GitHub'i seçip Folder Name yazan kısıma kullanıcıadımız:projeismi şeklinde dosya adımızı yazdıktan sonra Sync tuşuna basıyoruz. Projenizin büyüklüğüne göre eşitleme işleminin süresi de değişeceğinden bu boşluğu çay suyu koyarak değerlendirebiliriz.
 
-![](images/post/sparkleshare/7.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/7.png)
 
 Eşitleme işi bittiğinde bizi aşağıdakine benzer bir ekran karşılayacak. Finish tuşu ile işlemi tamamlıyoruz. Dosyalarımızı yerel bilgisayarımızdan düzenleyebiliriz. Bu yaptığımız değişiklikler anında GitHub ile eşitleneceklerdir.
 
-![](images/post/sparkleshare/8.png)
-![](images/post/sparkleshare/9.png)
-![](images/post/sparkleshare/10.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/8.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/9.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/10.png)
 
 ## Kendi Sunucumuza Kurulum
 

@@ -112,7 +112,7 @@ Satyr, yerleşik belleği olmayan parazitik olarak bilinen zararsız Linux virü
 
 Ramen, Red Hat Linux 6.2 ve 7.0 varsayılan kurulumları çalıştıran sistemleri etkiler. Bilgisayar ağı aracılığı ile yayılır ve karmaşık bir solucan/virüs olduğu bilinir. Üç açığı istismar ederek yayılan virüs (bkz; wu-ftpd, rpc.statd and lpd services), sisteme "brute force" tekniği ile sızmaya çalışır. Sızdıktan sonra web sunucusu dahilinde tüm sistemin “index.html” dosyalarını aşağıdaki metin ile değiştirir.
 
-![](images/post/linux-virusleri-ile-tanisin/Ramen-Worm.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/Ramen-Worm.jpg)
 
 ## KOOBFACE
 

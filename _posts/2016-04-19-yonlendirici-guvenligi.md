@@ -23,7 +23,7 @@ Bilgisayar ağları denildiğinde akla gelecek ilk şey paylaşımdır. İki ya 
 
 Yerel ağlardan gelen paketlerin yollarının belirlenmesi ve paketlenmelerinde görev alan temel birimlere yönlendirici denilmektedir. Bu sayede yerel alan ağlarını birbirine bağlıyor iken; geniş alan ağlarının da bağlantı noktalarını oluşturmaktadırlar.
 
-![](images/post/yonlendirici-guvenligi/1.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/1.jpg)
 
 ## Yönlendiricilerin Görevleri Nelerdir?
 
@@ -42,7 +42,7 @@ Yönlendirici Güvenliği 4 Ana Başlık Altında İncelenebilir:
 
 Türkiye'de öncü ağ şirketi CISCO üzerinden anlatacağım sizlere güvenlik konusunu. Bölüm olarak da CISCO üzerinden aldık bu dersi, bu yüzden bu sistemde anlatmak daha kolayıma gidiyor açıkçası.
 
-![](images/post/yonlendirici-guvenligi/cisco.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/cisco.jpg)
 
 ## Yönlendirici Cihazın Güvenliği
 
@@ -50,7 +50,7 @@ Türkiye'de öncü ağ şirketi CISCO üzerinden anlatacağım sizlere güvenlik
 
 **Fiziksel Güvenlik:** Öncelikle yapmanız gereken şey yönlendiricilerin olduğu odanın kapısını kilitli tutmak ve yetkililer dışındaki kişileri bu odalara almamaktır. Daha sonra, oda çok fazla elektronik ve manyetik alan içerisinde olmamalıdır. Eğer yönlendiriciler için ayrılacak bir odanız yok ise; yönlendiricilerinizi kilitli dolaplarda muhafaza etmeniz de iyi bir güvenlik yöntemidir. Yönlendiricinin bulunduğu odaya gelen elektriğin de kesilmemesi çok önemlidir. Bu sorun için, UPS dediğimiz; elektrik kesintisi anında elektrik sinyalleri üreten donanım birimleri kullanılabilir. Yönlendricinizin yakınlarında da IP ya da şifre gibi güvenlik bilgilerini bulundurmamanız güvenliğiniz açısından iyi olacaktır.
 
-![](images/post/yonlendirici-guvenligi/3.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/3.jpg)
 
 **Yönlendiriciye Erişim Hakları:** Yönlendiriciyi kimin, ne şekilde kullanacağı kesin bir şekilde belirlenmelidir ki herhangi bir sorun yaşandığında, altından kalkılması kolay olsun.
 
@@ -71,7 +71,7 @@ Eğer ki farklı komutları, farklı seviyelerde kullanmak istiyorsak; belirli a
 
 Belirli IP'lerin Cihaza Erişimine İzin Vermek: Bu işlemde cihazlara yalnızca önceden belirlenmiş olan IP adreslerine sahip kullanıcılar ulaşabilir. Bunu da access-list dediğimiz ulaşım listesi aracılığı ile yapabiliriz.
 
-![](images/post/yonlendirici-guvenligi/4.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/4.jpg)
 
 Örneğin;  CISCO IOS'de yalnızca 200.100.172.4 ve  200.100.172.5   IP'lerinin erişimine izin verelim ve diğer IP'ler engellensin. Ulaşım adresimiz aşağıdaki gibi olacaktır:
 
@@ -90,7 +90,7 @@ Konsol Kablosunu Yönetici Bilgisayara (server) Çekmek:  Eğer ki yönetimi tek
 
 **Telnet Yerine SSH Kullanmak:** SSH, iletilen veriyi şifrelediğinden;  SSH' a bağlanabilmeyi sağlayan işletim sistemi güncelleştirmelerini yapmalısınız.
 
-![](images/post/yonlendirici-guvenligi/5.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/5.png)
 
 **Güncel SNMP Versiyonlarını Kullanmak:**  SNMP 1, şifre doğrulamasını  direkt düz metin olarak yapmaktadır; yani SNMP 1'de girdiğiniz şifrenizi düz metin olarak göstermektedir. SNMP 3 ya da 2 kullanmanız sizin için daha güvenli olacaktır; çünkü bu SNMP versiyonları, öz (digest)   doğrulama şeması dediğimiz  yönetim bilgilerine erişimi kısıtlamaktadır.
 
@@ -148,7 +148,7 @@ Yukarıdaki listede 445 numaralı sanal port (UDP portu) erişime kapatılmışt
 
 **IP Spoofing:** Kötü amaçlı kişiler tarafından uygulanan en yaygın tekniktir. Bilgi transferi sırasında eğer IP numaranızı saklamıyorsanız çok büyük tehlikedesiniz. Biri sizi izliyor olabilir. Hatta sizin adınıza karşı tarafa bir şeyler gönderiyor ya da karşı taraftan bir şeyler alıyor olabilirler.
 
-![](images/post/yonlendirici-guvenligi/6.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/6.jpg)
 
 Siz bilgi alışverişi yapıyorken IP'lerinizi izleyerek, sizin IP'nizi kendisininmiş gibi göstererek uygulanan bu yöntem neredeyse hiç fark edilmemektedir. Bu yüzden IP'nizin görünmesini engellemelisiniz. (no ip source-route komutu ile)  
 
@@ -156,7 +156,7 @@ Siz bilgi alışverişi yapıyorken IP'lerinizi izleyerek, sizin IP'nizi kendisi
 
 **Giriş – Çıkış Erişim Listeleri:** Bahsedilen listelerde, yönlendiriciye iletilen paketlerin kaynak IP'leri ve gidecekleri yönlendiricilerin IP  adresleri bulunmaktadır.
 
-![](images/post/yonlendirici-guvenligi/7.jpg)
+![]({{ site.assetsDir }}{{ page.permalink }}/7.jpg)
 
 Dış ağlardan gelen verilerin kontrollerinin yapılması olayına giriş filtreleme denilmektedir. Bu kontrol işleminde, dışarıdan gelen verinin   başında İnternet ortamında kullanılamayacak bilgilerin olup olmadığına  bakılır ve eğer var ise kabul edilmezler.
 
@@ -202,7 +202,7 @@ Bu yazımın son alt başlığındayız şimdi. Ağımızın bulunduğu kurumun 
 
 **Tarayıcılar İle Ağı Denetlemek:** Nessus gibi tarayıcılar, erişim listelerinin ve IP adreslerinin çalışıp çalışmadığının dışarıdan kontrolünü sağlamakta önde gelen tarayıcılardır. <http://www.nessus.org>
 
-![](images/post/yonlendirici-guvenligi/8.png)
+![]({{ site.assetsDir }}{{ page.permalink }}/8.png)
 
 **Doğruluk- Bütünlük Kontrolleri:** Cihazın işletim sisteminde ya da IP dizilimlerinde bir hata ya da değişiklik olup olmadığını gösteren bir kontrol tipidir. Bu kontrol, yapılan kontrollerin bir yerde saklanıp yeni yapılanlar ile kontrolü sonucunda gerçekleşir.
 
