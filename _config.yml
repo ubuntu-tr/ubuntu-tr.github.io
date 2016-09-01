@@ -5,7 +5,7 @@ themeDir: theme/ubuntu-tr
 listDir: _theme/ubuntu-tr/layouts/list
 blockDir: _theme/ubuntu-tr/layouts/block
 layouts_dir:  ./_theme/ubuntu-tr/layouts
-assetsDir: images/post/
+assetsDir: assets/post/
 includes_dir: .
 
 # Build settings
