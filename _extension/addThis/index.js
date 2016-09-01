@@ -1,8 +1,7 @@
 ---
-order: 5
-
 pubId: ubuntutr
 
+order: 5
 post: js
 ---
 var js = document.createElement("script");
