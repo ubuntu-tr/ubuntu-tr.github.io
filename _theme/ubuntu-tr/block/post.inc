@@ -5,7 +5,7 @@
             <span><b class="{{ class[11] }}">Yazar:</b> <a href="{% assign author = site.other | where: 'title', page.author %}{{ author[0].url }}">{{ page.author }}</a></span>
             <span><b class="{{ class[12] }}">Kategori:</b> <a href="{{cat.url}}">{{cat.title}}</a></span>
             <span><b class="{{ class[12] }}">Yazdır:</b> <a href="{{site.assetsDir}}{{page.permalink}}/{{page.permalink}}.pdf"><i class="file pdf outline icon"></i> PDF</a></span>
-            <span class="{{ class[13] }}">{{ date }} {{ page.date | date: "%-Y" }} tarihinde yayımlandı.</span>
+            <span class="{{ class[13] }}">{{ date }} tarihinde yayımlandı.</span>
         </div>
         <div class="{{ class[14] }}">
             {{page.summary}}

@@ -1,11 +1,13 @@
 #!/bin/bash
 
+# sudo apt install pandoc texlive-xetex texlive-lang-european
+
 mkdir temp
 cp _posts/$1* temp/
 
 FILES=./temp/*
 latexTemplate="_extension/helper/_pdf.latex"
-mainFont="Times New Roman"
+mainFont="Ubuntu"
 lang="turkish"
 for f in $FILES
 do

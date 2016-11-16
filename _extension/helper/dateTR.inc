@@ -19,5 +19,6 @@
         {% when '11' %}{% assign m = 'Kasım' %}
         {% when '12' %}{% assign m = 'Aralık' %}
       {% endcase %}
-    {% capture date %}{{ date2 | date: "%-d" }} {{ m }}{% endcapture %}
+    {% assign y = date2 | date: "%-Y" %}
+    {% capture date %}{{ date2 | date: "%-d" }} {{ m }} {{ y }} {% endcapture %}
 {% endcapture %}
