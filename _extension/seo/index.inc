@@ -1,0 +1,2 @@
+<title>{{ include.config.type[page.type].title | replace: "*title", page.title }}</title>
+		{% if include.config.type[page.type].description %}<meta name="description" content="{{ include.config.type[page.type].description | replace: '*title', page.title }}" />{% endif %}

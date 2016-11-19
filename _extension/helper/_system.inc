@@ -50,6 +50,11 @@ for ext in site.theme %}{%
             include {{ ext.path | replace:'.html','.inc' }} config=ext %}{% 
         endcapture %}{% 
         assign systemFooter = systemFooter | append: temp %}{% 
+    elsif ext[page.type] == "includeMeta0" %}{% 
+        capture temp %}{% 
+            include {{ ext.path | replace:'.html','.inc' }} config=ext %}{% 
+        endcapture %}{% 
+        assign systemMeta0 = systemMeta0 | append: temp %}{% 
     endif %}{% 
 endfor %}{% 
 for ext in site.extension %}{% 
@@ -72,5 +77,10 @@ for ext in site.extension %}{%
             include {{ ext.path | replace:'.html','.inc' }} config=ext %}{% 
         endcapture %}{% 
         assign systemFooter = systemFooter | append: temp %}{% 
+    elsif ext[page.type] == "includeMeta0" %}{% 
+        capture temp %}{% 
+            include {{ ext.path | replace:'.html','.inc' }} config=ext %}{% 
+        endcapture %}{% 
+        assign systemMeta0 = systemMeta0 | append: temp %}{% 
     endif %}{% 
 endfor %}
