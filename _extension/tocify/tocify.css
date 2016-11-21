@@ -12,6 +12,12 @@ post: css
     }
 }
 
+#toc {counter-reset: ul2}
+#toc > ul {counter-reset: ul3}
+
+#toc > ul > li > a:before {counter-increment: ul2; content: counter(ul2) ". "}
+#toc > ul > ul > li > a:before {counter-increment: ul3; content: counter(ul2) "." counter(ul3) ". "}
+
 /* The Table of Contents container element */
 .tocify {
     width: 272px;
@@ -22,6 +28,8 @@ post: css
     webkit-border-radius: 6px;
     moz-border-radius: 6px;
     border-radius: 6px;
+    font-size: 12px;
+    overflow: hidden;
 }
 
 .tocify-item.active {
@@ -38,6 +46,9 @@ post: css
     padding: 0;
     border: none;
     line-height: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    color: #4183C4;
 }
 
 /* Top level header elements */
@@ -53,7 +64,7 @@ post: css
 
 /* Makes the font smaller for all subheader elements. */
 .tocify-subheader li {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* Further indents second level subheader elements. */
@@ -74,4 +85,5 @@ post: css
 /* Twitter Bootstrap Override Style */
 .nav-list > li > a {
     padding: 5px;
+    white-space: nowrap;
 }
