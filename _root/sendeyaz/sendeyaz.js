@@ -157,20 +157,22 @@ $( document ).ready(function() {
 	});
 
 	$('.ui.modal .cancel').on('click', function() {
-		modalToggle();
+		modalToggle(this);
 	});
 });
 
-function modalToggle() {
-	if($('.ui.modal').hasClass('active')) {
-		$('.ui.modal').removeClass('active');
-		$('.ui.modal').removeClass('scroll');
-		$('.ui.modal').parent().removeClass('active');
+function modalToggle(v) {
+	v = typeof v !== 'undefined' ?  v : $('form .ui.modal .cancel');
+	if($(v).parents('.ui.modal').hasClass('active')) {
+		$(v).parents('.ui.modal').removeClass('active');
+		$(v).parents('.ui.modal').removeClass('scroll');
+		$(v).parents('.ui.modal').parent().removeClass('active');
 	}
 	else {
-		$('.ui.modal').addClass('active');
-		$('.ui.modal').parent().addClass('active');
+		$(v).parents('.ui.modal').addClass('active');
+		$(v).parents('.ui.modal').parent().addClass('active');
 		if(screen.height < 620)
-			$('.ui.modal').addClass('scroll');
+			$(v).parents('.ui.modal').addClass('scroll');
 	}
 }
+$('.ui.modal.d').modal('show');
