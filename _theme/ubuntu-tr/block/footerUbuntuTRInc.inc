@@ -16,7 +16,7 @@
         </div>
         <div>
             <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
-            <a href="https://sudo.ubuntu-tr.net/sudo/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
             <a href="https://sudo.ubuntu-tr.net/sendeyaz/">Sen de Yaz</a>
             <a href="https://forum.ubuntu-tr.net/index.php?topic=26354.msg315930#msg315930">Eski Sayılar</a>
         </div>
