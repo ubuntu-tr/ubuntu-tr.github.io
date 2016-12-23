@@ -16,10 +16,9 @@
         </div>
         <div>
             <a href="https://sudo.ubuntu-tr.net/">SUDO</a>
-            <a href="https://sudo.ubuntu-tr.net/hakkinda/">Hakkında</a>
-            <a href="https://sudo.ubuntu-tr.net/sudo-tayfasi/">SUDO Tayfası</a>
-            <a href="https://sudo.ubuntu-tr.net/yazar-ol/">Yazar Ol</a>
-            <a href="https://sudo.ubuntu-tr.net/butun-sayilar/">Bütün Sayılar</a>
+            <a href="https://sudo.ubuntu-tr.net/sudo/">Hakkında</a>
+            <a href="https://sudo.ubuntu-tr.net/sendeyaz/">Sen de Yaz</a>
+            <a href="https://forum.ubuntu-tr.net/index.php?topic=26354.msg315930#msg315930">Eski Sayılar</a>
         </div>
         <div>
             <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
