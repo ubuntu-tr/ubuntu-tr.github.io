@@ -11,11 +11,11 @@ author: "siberoloji"
 ---
 Bazen, arkadaşlarınıza Linux içerisinde bir işlemin nasıl yapılacağını yazıyla tarif etmekte sorun yaşıyor olabilirsiniz. Örneğin, "Sistem ayarlarına gir, şuraya tıkla" vb. tarifler, karşılıklı aynı ekran ve masaüstü yöneticisi kullanmıyorsanız daha da karmaşık hale gelebilir. Bunun çözümünü Linux kullanıcıları komut satırını kullanarak halletmeye çalışırlar. Öyle veya böyle, görsellik her zaman daha etkili bir çözümdür.
 
-Bu yazıda size, ekranın istediğiniz bir bölümünü animated gif olarak kaydedip paylaşmanızı sağlayacak bir programı tanıtacağım.Programımızın ismi Peek. Bu program, video kaydediciler gibi tam olarak tüm fonksiyonları üzerinde barındırmıyor ancak çok kullanışlı olduğunu beliteyim. Basit ve tek bir amacı var. Ekranın belli bir bölümünü kaydet ve animated gif haline getir. Kurulumdan sonra nasıl kullanacağınız tamamen hayal gücünüze kalmış. Ben, Ubuntu forumda *bir şeyler tarif etmek isteyenlerin çok işine yarayacağını düşünüyorum.
+Bu yazıda size, ekranın istediğiniz bir bölümünü animated gif olarak kaydedip paylaşmanızı sağlayacak bir programı tanıtacağım.Programımızın ismi Peek. Bu program, video kaydediciler gibi tam olarak tüm fonksiyonları üzerinde barındırmıyor ancak çok kullanışlı olduğunu belirteyim. Basit ve tek bir amacı var. Ekranın belli bir bölümünü kaydet ve animated gif haline getir. Kurulumdan sonra nasıl kullanacağınız tamamen hayal gücünüze kalmış. Ben, Ubuntu forumda bir şeyler tarif etmek isteyenlerin çok işine yarayacağını düşünüyorum.
 
 **Kurulum:**
 
-**1.** Programın çalışması için öncelikle gereklilik olan `ffmpeg` yazılımını kurmalısınız.
+**1.** Programın çalışması için öncelikle, gereklilik olan `ffmpeg` yazılımını kurmalısınız.
 
 ```
 sudo apt install ffmpeg
