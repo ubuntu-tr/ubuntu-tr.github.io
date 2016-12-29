@@ -15,13 +15,13 @@ Bu yazıda size, ekranın istediğiniz bir bölümünü animated gif olarak kayd
 
 **Kurulum:**
 
-.1. Programın çalışması için öncelikle gereklilik olan ffmpeg yazılımını kurmalısınız.
+**1.** Programın çalışması için öncelikle gereklilik olan ffmpeg yazılımını kurmalısınız.
 
 ```
 sudo apt install ffmpeg
 ```
 
-.2. Peek yazılımının en yeni sürümü .deb formatında, github [ana sayfasında](https://github.com/phw/peek/releases) bulunan bağlantıdan indirilebilir. Aşağıdaki komutta bulunan sürüm numarası, bu yazının yazıldığı tarihteki en yeni sürümdür. 
+**2.** Peek yazılımının en yeni sürümü .deb formatında, github [ana sayfasında](https://github.com/phw/peek/releases) bulunan bağlantıdan indirilebilir. Aşağıdaki komutta bulunan sürüm numarası, bu yazının yazıldığı tarihteki en yeni sürümdür. 
 
 ```
 cd ~
@@ -29,6 +29,6 @@ wget https://github.com/phw/peek/releases/download/v0.8.0/peek-0.8.0-Linux.deb
 sudo dpkg -i peek-0.8.0-Linux.deb 
 ```
 
-.3. Program kendisini menülere otomatik kaydeder. Yazılım menüsünden peek programını bulup çalıştırıyoruz. Karşımıza çıkan ekran penceresini istediğimiz gibi köşelerinden tutup büyütüyoruz. Kayıt etmek istediğimiz alanı kaplayacak şekilde pencere büyüklüğünü ayarlayıp Record tuşuna basıyoruz. Peek, Kayıt başlamadan 3 sn. bekleyecek ve kayıt başlayacaktır.
+**3.** Program kendisini menülere otomatik kaydeder. Yazılım menüsünden peek programını bulup çalıştırıyoruz. Karşımıza çıkan ekran penceresini istediğimiz gibi köşelerinden tutup büyütüyoruz. Kayıt etmek istediğimiz alanı kaplayacak şekilde pencere büyüklüğünü ayarlayıp Record tuşuna basıyoruz. Peek, Kayıt başlamadan 3 sn. bekleyecek ve kayıt başlayacaktır.
 
 Kullanım tecrübelerinizi ve görüşlerinizi bildirmenizi rica ediyoruz. Ayrıca bu yazıyı paylaşarak destek olmanız ümidiyle.
