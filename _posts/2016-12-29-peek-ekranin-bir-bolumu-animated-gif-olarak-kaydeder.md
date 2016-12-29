@@ -15,7 +15,7 @@ Bu yazıda size, ekranın istediğiniz bir bölümünü animated gif olarak kayd
 
 **Kurulum:**
 
-**1.** Programın çalışması için öncelikle gereklilik olan ffmpeg yazılımını kurmalısınız.
+**1.** Programın çalışması için öncelikle gereklilik olan `ffmpeg` yazılımını kurmalısınız.
 
 ```
 sudo apt install ffmpeg
