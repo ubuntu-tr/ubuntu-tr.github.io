@@ -1,5 +1,5 @@
 ---
-title: "Pyhton Programlama"
+title: "Python Programlama"
 date: 2014-06-24 02:11
 categories: "k2"
 tags: ["python","programlama","Sudo 60. Sayı"]

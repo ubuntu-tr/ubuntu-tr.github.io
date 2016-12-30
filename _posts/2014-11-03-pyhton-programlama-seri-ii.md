@@ -1,5 +1,5 @@
 ---
-title: "Pyhton Programlama - Seri II"
+title: "Python Programlama - Seri II"
 date: 2014-11-03 02:11
 categories: "k2"
 tags: ["python","programlama","Sudo 61. Sayı"]
