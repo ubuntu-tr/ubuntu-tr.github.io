@@ -16,9 +16,8 @@ Bu yeni eklenecek özellik sayesinde Apple Airprint ile kullanılan yazıcılar 
 
 Yapılan çağrıda, otomatik ve manuel hazırlık aşamasından sonra sistemin kullanılması anlatılıyor. Ubuntu 17.04 Zesty Zapus test sürümünde bulunan özelliğin test edilerek, hangi yazıcılarda çalıştığının rapor edilmesi isteniyor.
 
-## Otomatik Yöntem
-Öncelikle sisteminizde gerekli tüm güncellemeleri yapmalısınız.
-`sudo apt update && sudo apt upgrade && sudo apt dist-upgrade -y`
+### Otomatik Yöntem
+Öncelikle sisteminizde gerekli tüm güncellemeleri yapmalısınız. `sudo apt update && sudo apt upgrade && sudo apt dist-upgrade -y`
 Güncelleme işleminden sonra `/ect/cups/cups-browsed.conf` isimli dosyayı açarak içerisine aşağıdaki satırı eklemelisiniz.
 
 ```
@@ -34,7 +33,7 @@ sudo systemctl start cups-browsed
 
 Artık ağa bağlı yazıcınız sisteminizde görünecektir.
 
-## Manuel Yöntem
+### Manuel Yöntem
 Tarayıcınızda http://localhost:631/ adresini açın ve üst taraftaki "Administration" bölümünü seçin. Açılan sayfada "Add Printer" seçeneğini tıklayın ve kullanıcı bilgilerinizle oturum açın.
 
 "Discovered Network Printers:" bölümünde, isminde "driverless" geçen yazıcıyı seçin, "Continue" seçeneği ile devam edin.
