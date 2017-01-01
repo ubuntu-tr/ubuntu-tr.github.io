@@ -78,7 +78,11 @@
 
                                 <div class="field">
                                     <label>Resim Bağlantısı</label>
-                                    <input name="resim" placeholder="http://" type="text">
+                                    <div class="ui fluid file input action">
+                                        <input type="text" name="resim" placeholder="http://">
+                                        <input type="file" style="display: none;" autocomplete="off">
+                                        <div class="ui button">Seç... </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="column">
@@ -119,6 +123,24 @@
                 </div>
             </div>
         </form>
+
+        <div class="ui dimmer page">
+            <div class="ui modal" id="imageModal">
+                <div class="header">Resim Ekle</div>
+                <div class="content">
+                        <div class="ui fluid file input action">
+                            <input type="text" placeholder="http://">
+                            <input type="file" style="display: none;" autocomplete="off">
+                            <div class="ui button">Seç... </div>
+                        </div>
+                </div>
+                <div class="actions">
+                        <div class="ui positive button">Resmi Ekle</div>
+                        <div class="ui cancel negative button">İptal</div>
+                </div>
+            </div>
+        </div>
+
         <div id="loader" class="ui page dimmer">
             <div class="ui indeterminate text loader">Makale Gönderiliyor</div>
         </div>

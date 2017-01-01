@@ -22,7 +22,7 @@ $( document ).ready(function() {
 		        	var cm = editor.codemirror;
 					var startPoint = cm.getCursor("start");
 					var endPoint = cm.getCursor("end");
-					text = cm.getSelection();
+					var text = cm.getSelection();
 					cm.replaceSelection("Tanımlanacak İsim\n: Buraya tanım yazılacak.");
 					cm.setSelection(startPoint, endPoint);
 		        },
@@ -30,7 +30,33 @@ $( document ).ready(function() {
 		        title: "İsim Tanımlama",
 		    },
 			"|", "quote", "code", "unordered-list", "ordered-list", "|", 
-			"link", "image", "table", "horizontal-rule", "|", "preview", "side-by-side", "fullscreen",
+			"link", 
+			{
+				name: "Resim",
+				title: "Resim ekle",
+				className: "fa fa-picture-o",
+				tagName: "a",
+				action: function(editor){
+					cm = editor.codemirror;
+					$('#imageModal input:text').val('');
+					modalToggle($('#imageModal'));
+
+					if(!$('#imageModal .positive.button').hasClass('ok')) {
+						$('#imageModal .positive.button').addClass('ok');
+						$('#imageModal .positive.button').on('click', function() {
+							$('#imageModal').removeClass('active');$('#imageModal').parent().removeClass('active');
+							var startPoint = cm.getCursor("start");
+							var endPoint = cm.getCursor("end");
+							var text = cm.getSelection();
+							var url = $('#imageModal input:text').val();
+
+							cm.replaceSelection("!["+text+"]("+url+")");
+							cm.setSelection(startPoint, endPoint);
+						});
+					}
+				}
+			}, 
+			"table", "horizontal-rule", "|", "preview", "side-by-side", "fullscreen",
 			{
 				name: "Makaleyi Gönder",
 				action: function(editor){
@@ -99,7 +125,6 @@ $( document ).ready(function() {
 				}
 			);
 			/* Video */
-			console.log(v);
 			v = v.replace(
 				/<a href="https:\/\/www.youtube.com\/embed\/(.*?)">https:\/\/www.youtube.com\/embed\/(.*?)<\/a>/gmi,
 				function myFunction2(t, id) {
@@ -159,20 +184,74 @@ $( document ).ready(function() {
 	$('.ui.modal .cancel').on('click', function() {
 		modalToggle(this);
 	});
+
+
+	$('.ui.file.input').find('.ui.button').on('click', function(e) {
+		$(e.target).parent().find('input:file').click();
+	});
+	$('input:file').on('change', function(e) {
+		var file = $(e.target);
+		var name = '';
+
+		for (var i=0; i<e.target.files.length; i++) {
+		  name += e.target.files[i].name + ', ';
+		}
+		// remove trailing ","
+		name = name.replace(/,\s*$/, '');
+
+		$(this).parent().find('input:text').val("Resim yükleniyor... Lütfen bekleyiniz.");
+		var url = uploadImage(this);
+		$($(this).parent().find('input:text'), file.parent()).val(url);
+	});
+
 });
+
+function uploadImage(file) {
+	var url = "";
+	var formData = new FormData();
+	formData.append('Filedata', file.files[0]);
+	formData.append('upload_session', 'Lx9pua3GBDDc9SCOzNStV0GCK4ZkyAGW');
+	formData.append('token', '61aa06d6116f7331ad7b2ba9c7fb707ec9b182e8');
+	formData.append('numfiles', '1');
+	formData.append('gallery', '');
+	formData.append('adult', '0');
+	formData.append('optsize', '0');
+	formData.append('expire', 'undefined');
+	formData.append('upload_referer', '');
+	formData.append('forum', '');
+
+    var request = new XMLHttpRequest();
+	request.open("POST", "https://postimage.org/upload.php", false);
+	request.send(formData);
+
+	if (request.status === 200 || request.status === 201) {
+		var url2 = JSON.parse(request.responseText).url;
+		request = new XMLHttpRequest();
+		request.open("GET", "https://postimage.org/modredir.php?dz=1&to="+url2+"&mode=phpbb3&hash=1&lang=english&code=hotlink&content=&forumurl=http://postimage.org/&areaid=0&errors=0", false);
+		request.send();
+		if (request.status === 200 || request.status === 201)
+			url = request.responseText.match(/\[img\](.*)\[\/img\]/)[1];
+		else
+			console.log("ERROR: "+request.status);
+	}
+	else 
+		console.log("ERROR: "+request.status);
+
+	return url;
+}
 
 function modalToggle(v) {
 	v = typeof v !== 'undefined' ?  v : $('form .ui.modal .cancel');
-	if($(v).parents('.ui.modal').hasClass('active')) {
-		$(v).parents('.ui.modal').removeClass('active');
-		$(v).parents('.ui.modal').removeClass('scroll');
-		$(v).parents('.ui.modal').parent().removeClass('active');
+	if($(v).closest('.ui.modal').hasClass('active')) {
+		$(v).closest('.ui.modal').removeClass('active');
+		$(v).closest('.ui.modal').removeClass('scroll');
+		$(v).closest('.ui.modal').parent().removeClass('active');
 	}
 	else {
-		$(v).parents('.ui.modal').addClass('active');
-		$(v).parents('.ui.modal').parent().addClass('active');
+		$(v).closest('.ui.modal').addClass('active');
+		$(v).closest('.ui.modal').parent().addClass('active');
 		if(screen.height < 620)
-			$(v).parents('.ui.modal').addClass('scroll');
+			$(v).closest('.ui.modal').addClass('scroll');
 	}
 }
 $('.ui.modal.d').modal('show');
