@@ -155,10 +155,10 @@ $if(dir)$
 \fi
 $endif$
 
+% Şimdilik ana başlıklar yeni sayfayla başlasın ama bunu koşul altına almak lazım.
+% Eğer altında başka bir alt başlık yoksa yeni sayfayla başlamasının da anlamı yok.
 \let\oldsection\section
 \renewcommand\section{\clearpage\oldsection}
-
-
 
 % Contents of listings-setup.tex
 \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
@@ -267,6 +267,7 @@ $if(toc)$
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
+\newpage
 }
 $endif$
 $if(lot)$
