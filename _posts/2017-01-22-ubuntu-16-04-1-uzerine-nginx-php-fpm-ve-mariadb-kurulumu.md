@@ -165,7 +165,7 @@ Daha önce kurulmuş bir MariaDB olmadığı için root kullanıcı için bir ş
 ```bash
     Enter current password for root (enter for none):
     OK, successfully used password, moving on...
- ```
+```
 
 Sonraki adımda betik sizden MariaDB root kullanıcısı için bir şifre belirlemenizi isteyecek.
 Seçtiğiniz şifreyi girip onaylayın:
