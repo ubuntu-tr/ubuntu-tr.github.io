@@ -19,6 +19,7 @@
             <a href="https://sudo.ubuntu-tr.net/hakkinda">Hakkında</a>
             <a href="https://sudo.ubuntu-tr.net/sendeyaz/">Sen de Yaz</a>
             <a href="https://forum.ubuntu-tr.net/index.php?topic=26354.msg315930#msg315930">Eski Sayılar</a>
+            <a href="http://feeds.feedburner.com/ubuntu-tr/sudo">RSS</a>
         </div>
         <div>
             <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
