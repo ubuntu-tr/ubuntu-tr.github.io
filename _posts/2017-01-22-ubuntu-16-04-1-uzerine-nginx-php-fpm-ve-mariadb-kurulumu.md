@@ -9,7 +9,7 @@ image: "ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu.jpg"
 thumb: "ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu.jpg"
 author: "if"
 ---
-Ubuntu Türkiye Takımı olarak sunucularımızda <a href="https://www.nginx.com/" target="_blank">NGINX</a> web sunucusu, PHP'nin FastGCI uygulaması olan <a href="https://secure.php.net/manual/en/install.fpm.php" target="_blank">FastGCI Süreç Yöneticisi</a> (<abbr title="FastGCI Porecess Manager">FPM</abbr>) ve <a href="https://mariadb.org/" target="_blank">MariaDB</a> veri tabanı yönetimi sistemini kullanmaktayız. Bu makalede bu uygulamaların Ubuntu'nun 16.04.1 sürümüne kurulumu anlatılmaktadır.
+Ubuntu Türkiye Takımı olarak sunucularımızda <a href="https://www.nginx.com/">NGINX</a> web sunucusu, PHP'nin FastGCI uygulaması olan <a href="https://secure.php.net/manual/en/install.fpm.php">FastGCI Süreç Yöneticisi</a> (<abbr title="FastGCI Porecess Manager">FPM</abbr>) ve <a href="https://mariadb.org/">MariaDB</a> veri tabanı yönetimi sistemini kullanmaktayız. Bu makalede bu uygulamaların Ubuntu'nun 16.04.1 sürümüne kurulumu anlatılmaktadır.
 
 ## NGINX kurulumu
 
@@ -41,13 +41,13 @@ Kurulumun ardından NGINX servisinin başladığını teyit etmek için aşağı
     Oca 14 21:46:37 lts systemd[1]: Started A high performance web server and a reverse proxy server.
 ```
 
-Servis yüklenmiş (loaded) ve çalışır vaziyette (active) ise devam edebilirsiniz. Değilse servisi 
+Servis yüklenmiş (loaded) ve çalışır vaziyette (active) ise devam edebilirsiniz. Değilse servisi
 
 ```bash
     sudo systemctl restart nginx.service
 ```
 
-komutu ile başlatmayı deneyin. NGINX'in <a href="https://tools.ietf.org/html/rfc793" target="_blank">TCP</a> protokolünün HTTP için <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2" target="_blank">80</a> ve HTTPS için <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=8" target="_blank">443</a> portları üzerinden IPv4 ve IPv6 adreslerinden gelen istekleri kabul edebilmesi için güvenlik duvarı uygulamanız aracılığıyla bu portların açılması gerekmektedir. Güvenlik duvarı yapılandırması bu anlatımın dışında olduğu için burada anlatılmayacaktır. Fakat kolaylık olması açısından <a href="https://wiki.ubuntu.com/UncomplicatedFirewall" target="_blank">UFW</a> için temel komutlar aşağıda verilmiştir.
+komutu ile başlatmayı deneyin. NGINX'in <a href="https://tools.ietf.org/html/rfc793">TCP</a> protokolünün HTTP için <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=2">80</a> ve HTTPS için <a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?&page=8">443</a> portları üzerinden IPv4 ve IPv6 adreslerinden gelen istekleri kabul edebilmesi için güvenlik duvarı uygulamanız aracılığıyla bu portların açılması gerekmektedir. Güvenlik duvarı yapılandırması bu anlatımın dışında olduğu için burada anlatılmayacaktır. Fakat kolaylık olması açısından <a href="https://wiki.ubuntu.com/UncomplicatedFirewall">UFW</a> için temel komutlar aşağıda verilmiştir.
 
 ```bash
     sudo ufw default deny incoming
@@ -152,22 +152,22 @@ Komut sizden rast gele 16 adet değer girmenizi isteyecek. Girdikten sonra <kbd>
      NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
            SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
 
-    In order to log into MariaDB to secure it, we'll need the current
-    password for the root user.  If you've just installed MariaDB, and
-    you haven't set the root password yet, the password will be blank,
+    In order to log into MariaDB to secure it, we\'ll need the current
+    password for the root user.  If you\'ve just installed MariaDB, and
+    you haven\'t set the root password yet, the password will be blank,
     so you should just press enter here.
-    
-    Enter current password for root (enter for none): 
+
+    Enter current password for root (enter for none):
 ```
 
 Daha önce kurulmuş bir MariaDB olmadığı için root kullanıcı için bir şifre de bulunmamaktadır. Bu yüzden ilk adımda sadece <kbd>ENTER</kbd> tuşuna basıp devam edebilirsiniz. Daha önce tanımladığınız bir MariaDB root kullanıcınız varsa, bu kullanıcıya ait şifreyi girmelisiniz.
 
 ```bash
-    Enter current password for root (enter for none): 
+    Enter current password for root (enter for none):
     OK, successfully used password, moving on...
  ```
- 
-Sonraki adımda betik sizden MariaDB root kullanıcısı için bir şifre belirlemenizi isteyecek. 
+
+Sonraki adımda betik sizden MariaDB root kullanıcısı için bir şifre belirlemenizi isteyecek.
 Seçtiğiniz şifreyi girip onaylayın:
 
 ```bash
@@ -176,7 +176,7 @@ Seçtiğiniz şifreyi girip onaylayın:
 
     Set root password? [Y/n] y
     New password:
-    Re-enter new password: 
+    Re-enter new password:
     Password updated successfully!
     Reloading privilege tables..
     ... Success!
@@ -230,7 +230,7 @@ Bu zamana kadar yapılan değişikliklerin kaydedilmesi istenecek:
 
     Cleaning up...
 
-    All done!  If you've completed all of the above steps, your MariaDB
+    All done!  If you\'ve completed all of the above steps, your MariaDB
     installation should now be secure.
 
     Thanks for using MariaDB!
