@@ -57,13 +57,13 @@ phpBB'nin 3.2 sürümü henüz Ubuntu depolarına girmediği için forum yazıl�
 curl -O https://www.phpbb.com/files/release/phpBB-3.2.0.tar.bz2
 ```
 
-İndirdiğiniz sıkıştırılmış dosyanın herhangi bir şekilde indirme sırasında değiştirilmediğini teyit etmek için SHA256 ileti özetini hesaplayınızı öneririm. Bu işlemi `sha256sum` komutuyla yapabilirsiniz.
+İndirdiğiniz sıkıştırılmış dosyanın herhangi bir şekilde indirme sırasında değiştirilmediğini teyit etmek için SHA256 ileti özetini hesaplamanızı öneririm. Bu işlemi `sha256sum` komutuyla yapabilirsiniz.
 
 ```bash
 sha256sum phpBB-3.2.0.tar.bz2
 ```
 
-Yukarıdaki komutun yürütümü sonrasında alacağınız SHA256 değerini phpBB'nin [indirme]{:target="\_blank"} bağlantısındaki indirdiğiniz paketle ilgili değerler karşılaştırın. Değer yanlış ise indirdiğiniz paketi silip tekrar indirin; doğru ise indirdiğiniz paketi açma işlemiyle devam edebilirsiniz.
+Yukarıdaki komutun yürütümü sonrasında alacağınız SHA256 değerini phpBB'nin [indirme]{:target="\_blank"} bağlantısındaki indirdiğiniz paketle ilgili değerle karşılaştırın. Değer yanlış ise indirdiğiniz paketi silip tekrar indirin; doğru ise indirdiğiniz paketi açma işlemiyle devam edebilirsiniz.
 
 ```bash
 tar xf phpBB-3.2.0.tar.bz2
@@ -73,7 +73,7 @@ tar xf phpBB-3.2.0.tar.bz2
 
 ## NGINX Ayarları
 
-phpBB kurumuna başlamadan önce NGINX'in siteyi sunacak şekilde yapılandırılması gerekmektedir. Bunu sağlamak adına siteniz için bir ayar dosyasının oluşturulup, gerekli NGINX direktiflerinin girilmesi gerekmektedir. Ayar dosyasını doldurmadan önce 4 direktif için gerekli parametrenin ne olması gerektiğine karar vermelisiniz. Bu direktifler
+phpBB kurulumuna başlamadan önce NGINX'in siteyi sunacak şekilde yapılandırılması gerekmektedir. Bunu sağlamak adına siteniz için bir ayar dosyasının oluşturulup, gerekli NGINX direktiflerinin girilmesi gerekmektedir. Ayar dosyasını doldurmadan önce 4 direktif için gerekli parametrenin ne olması gerektiğine karar vermelisiniz.
 
 Direktif | Açıklama
 ---------- | ----------
@@ -98,7 +98,7 @@ sudo mkdir /var/www/phpbb
 sudo cp -R phpBB3/* /var/www/phpbb/
 ```
 
-Sitenin sunulacağı dizin ve bu dizin altındaki dizin ve dosyaların sahiplik ve gurubunu `www-data` kullanıcısına geçirin. www-data, web sunucular için güvenlik amacıyla özellikle oluşturulmuş hakları kısıtlanmış bir kullanıcıdır. Bu yüzden siteye ait dosyalar bu sunucu ve gruba ait olmalıdır.
+Sitenin sunulacağı dizin ve bu dizin altındaki dizin ve dosyaların sahiplik ve grubunu `www-data` kullanıcısına geçirin. www-data, web sunucular için güvenlik amacıyla özellikle oluşturulmuş hakları kısıtlanmış bir kullanıcıdır. Bu yüzden siteye ait dosyalar bu sunucu ve gruba ait olmalıdır.
 
 ```bash
 sudo chown -R www-data:www-data /var/www/phpbb/
@@ -132,7 +132,7 @@ sudo touch forum
 nano forum
 ```
 
-Dosya içerisine parametrelerine karar verdiğimiz tukarıdaki direktif ve bu direktiflere karşılık gelen parametreleri yazın.
+Dosya içerisine parametrelerine karar verdiğimiz yukarıdaki direktif ve bu direktiflere karşılık gelen parametreleri yazın.
 
 ```
     root /var/www/phpbb/;
@@ -142,7 +142,7 @@ Dosya içerisine parametrelerine karar verdiğimiz tukarıdaki direktif ve bu di
     access_log /var/www/log/forum-access.log;
 ```
 
-phpBB'nin 3.2 sürümünün yeni yapısından dolayı hem kurulum hem de kurulum ardında phpBB'nin kullandığı kimi PHP betikelerinin NGINX tarafından doğru sunulabilmesi için aşağıdaki direktifler ve parametreleri de ayar dosyanıza eklemelisiniz.
+phpBB'nin 3.2 sürümünün yeni yapısından dolayı hem kurulum hem de kurulum ardında phpBB'nin kullandığı kimi PHP betiklerinin NGINX tarafından doğru sunulabilmesi için aşağıdaki direktifler ve parametreleri de ayar dosyanıza eklemelisiniz.
 
 ```
     location / {
@@ -258,7 +258,7 @@ cd /etc/nginx/sites-enabled
 sudo ln -s ../sites-available/forum .
 ```
 
-Son olarak ayar dosyanızda herhangi bir yazım yanlışı vs. olmadığını yetit edin.
+Son olarak ayar dosyanızda herhangi bir yazım yanlışı vs. olmadığını teyit edin.
 
 ```bash
 sudo nginx -t
@@ -282,7 +282,7 @@ Sizi ilk karşılayacak sayfa tanıtım sayfasıdır.
 
 <kbd>INSTALL</kbd> sekmesine tıklayıp kuruluma geçebilirsiniz.
 
-İkinci sayfada sizi phpBB kurulumu için neye gerksinim duyacağınızı açıklayan bilgiler karşılayacaktır. Bu gereksinimleri karşıladığınız için <kbd>Install</kbd> tuşuna basıp devam edin.
+İkinci sayfada sizi phpBB kurulumu için neye gereksinim duyacağınızı açıklayan bilgiler karşılayacaktır. Bu gereksinimleri karşıladığınız için <kbd>Install</kbd> tuşuna basıp devam edin.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb2.png)
 
@@ -290,7 +290,7 @@ Sizi ilk karşılayacak sayfa tanıtım sayfasıdır.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb3.png)
 
-Dördüncü sayfa veri tabanı ayarları için ayrılmıştır. Veri tabanınız yerel sunucunuz üzerinde çalıştığı için veritabanı sunucusunun nereden sunulduğunu belirten değer (Database server hostname or DNS) için `localhost` yazmanız gerekmekte. Makalenin "Veri Tabanı ve Kullanıcısının Oluşturulup Gerekli İzinlerin Verilmesi" bölümünde oluşturduğunuz ya da eski veri tabanına ait veri tabanı kullanıcısı, şifresi ve veri tabanı adını ilgili seçeneklerin karşısına yazın. Veri tabanı önekini değiştirmeden devam ein.
+Dördüncü sayfa veri tabanı ayarları için ayrılmıştır. Veri tabanınız yerel sunucunuz üzerinde çalıştığı için veritabanı sunucusunun nereden sunulduğunu belirten değer (Database server hostname or DNS) için `localhost` yazmanız gerekmekte. Makalenin "Veri Tabanı ve Kullanıcısının Oluşturulup Gerekli İzinlerin Verilmesi" bölümünde oluşturduğunuz ya da eski veri tabanına ait veri tabanı kullanıcısı, şifresi ve veri tabanı adını ilgili seçeneklerin karşısına yazın. Veri tabanı önekini değiştirmeden devam edin.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb4.png)
 
@@ -298,7 +298,7 @@ Bir sonraki sayfada sunucu yapılandırması ile ilgili seçenekler bulunmaktad�
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb5.png)
 
-Altıncı sayfada forumunuz için bir başlık ve kısa bir tanımın yazın.
+Altıncı sayfada forumunuz için bir başlık ve kısa bir tanıtım yazın.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb6.png)
 
@@ -306,7 +306,7 @@ Devam ettiğinizde kurulum uygulanmaya başlanacaktır.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb7.png)
 
-Son olarak kurulumn bittiğni gösteren sayfa ile karşılaşacaksınz.
+Son olarak kurulumun bittiğini gösteren sayfa ile karşılaşacaksınz.
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/phpbb9.png)
 
@@ -316,7 +316,7 @@ Artık alan adınızı kullanarak forumunuza ulaşabilirsiniz.
 
 ## Temizlik
 
-Kurulumun tamamlanması için kurulum dizininin silinmesi gerekmekte. Silmek yerine dizinin adını ve izinlerini de değiştirrebilirsiniz.
+Kurulumun tamamlanması için kurulum dizininin silinmesi gerekmekte. Silmek yerine dizinin adını ve izinlerini de değiştirebilirsiniz.
 
 ```bash
 sudo mv /var/www/phpbb/install /var/www/phpbb/silinecek
@@ -334,7 +334,7 @@ sudo mysql --user root --password forum < eki_veri_tabanı_yedeği.sql
 
 ## Son Söz
 
-Umarım bu makale forum yazılımı için phpBB'yi tercih edenlerin phpBB'nin 3.2 sürümüyle glen yeni yapısından kaynaklanan kurulum zorluklarını kolayca aşmalarını sağlar. Makaleyle ilgili herhangi bir hata ya da görüşünüzü bildirmenizden memnun olurum.
+Umarım bu makale forum yazılımı için phpBB'yi tercih edenlerin phpBB'nin 3.2 sürümüyle gelen yeni yapısından kaynaklanan kurulum zorluklarını kolayca aşmalarını sağlar. Makaleyle ilgili herhangi bir hata ya da görüşünüzü bildirmenizden memnun olurum.
 
 [makalesini]: https://sudo.ubuntu-tr.net/ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu
 [bu]: https://mariadb.com/kb/en/mariadb/grant/#database-privileges
