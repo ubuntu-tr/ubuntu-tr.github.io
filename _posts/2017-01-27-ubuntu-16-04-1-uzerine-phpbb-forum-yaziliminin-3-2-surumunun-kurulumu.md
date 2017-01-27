@@ -11,12 +11,12 @@ author: "if"
 ---
 ## Gerekli Servis ve Paketlerin Kurulumu
 
-phpBB forum yazılımını kurmadan önce bir web sunucusunun, PHP-FPM süreç yöneticisinin ve bir veri tabanı yöneticisinin kurulmuş olması gerekmektedir. İlgili servislerin kurulumu için SUDO Portal'da yayımlanan Ubuntu 16.04.1 Üzerine NGINX, PHP-FPM ve MariaDB Kurulumu [makalesini]{:target="_blank"} okuyabilirsiniz.
+phpBB forum yazılımını kurmadan önce bir web sunucusunun, PHP-FPM süreç yöneticisinin ve bir veri tabanı yöneticisinin kurulmuş olması gerekmektedir. İlgili servislerin kurulumu için SUDO Portal'da yayımlanan Ubuntu 16.04.1 Üzerine NGINX, PHP-FPM ve MariaDB Kurulumu [makalesini]{:target="\_blank"} okuyabilirsiniz.
 
-Yukarıda bahsedilen servislerin kurulumu ardından PHP'nin grafik çizimi modülünün ve XML eklentisinin sağlandığı paketleri aşağıdaki komutla kurun. 
+Yukarıda bahsedilen servislerin kurulumu ardından PHP'nin grafik çizimi modülünün ve XML eklentisinin sağlandığı paketleri aşağıdaki komutla kurun.
 
 ```bash
-    sudo apt install php-gd php-xml
+sudo apt install php-gd php-xml
 ```
 
 Böylece phpBB forum yöneticisi için gerekli servis ve paketlerin kurulumu tamamlanacaktır.
@@ -26,27 +26,27 @@ Böylece phpBB forum yöneticisi için gerekli servis ve paketlerin kurulumu tam
 İletilerin, üyelerin ve bunlarla ilgili tüm bilgilerin tutulması için bir veri tabanına ihtiyaç var. Forumun kullanacağı veri tabanını oluşturmak için aşağıdaki komutu kullanabilirsiniz. Bu anlatımda forum veri tabanı için `forum` adı kullanılmıştır. Eğer forumunuz için var olan bir veri tabanını yeni kurulumda kullanmak istiyorsanız `forum` değerini var olan veri tabanı adıyla değiştirin. Böyle bir ihtiyacınız bulunmuyorsa `forum` değerini uygun gördüğünüz bir değerle değiştirin.
 
 ```bash
-    sudo mysqladmin create forum
+sudo mysqladmin create forum
 ```
 
-Sonraki adımda bu veri tabanı için bir kullanıcı oluşturup, kullanıcıya şifresini atayın. Aşağıdaki komutta veri tabanının `root` kullanıcısı olarak `forumcu` adlı yeni bir veri tabanı kullanıcısı oluşturulmuş ve bu kullanıcının şifresi için `çokgizlişifre` değerleri kullanılmıştır. Veri tabanı adında olduğu gibi, var olan bir veri tabanını kullanmak istiyorsanız veri tabanı kullanıcısı ve bu kullanıcıya ait şfreyi var olan veri tabanına ait değerlerle değiştirmeniz gerekmektedir. Var olan bir veri tabanını kullanmayacaksanız ilgili değerler için uygun değerler girmeyi unutmayın. 
+Sonraki adımda bu veri tabanı için bir kullanıcı oluşturup, kullanıcıya şifresini atayın. Aşağıdaki komutta veri tabanının `root` kullanıcısı olarak `forumcu` adlı yeni bir veri tabanı kullanıcısı oluşturulmuş ve bu kullanıcının şifresi için `çokgizlişifre` değerleri kullanılmıştır. Veri tabanı adında olduğu gibi, var olan bir veri tabanını kullanmak istiyorsanız veri tabanı kullanıcısı ve bu kullanıcıya ait şfreyi var olan veri tabanına ait değerlerle değiştirmeniz gerekmektedir. Var olan bir veri tabanını kullanmayacaksanız ilgili değerler için uygun değerler girmeyi unutmayın.
 
 ```bash
-    sudo mysql --user=root --password --batch --silent --execute="create user 'forumcu'@'localhost' identified by 'çokgizlişifre';"
+sudo mysql --user=root --password --batch --silent --execute="create user 'forumcu'@'localhost' identified by 'çokgizlişifre';"
 ```
 
-Kullanıcı oluşturma işleminden sonra bu kullanıcıya gerekli yetkilerin verilmesi gerekmektedir. MariaDB, global, veritabanı, sütun gibi farklı yetki düzeyleri barındırmaktadır. Burada yapılmak istenen *forumcu* kullanıcısının *forum* veritabanı üzerinde işlem yapabilmesidir. Bu yüzden veri tabanı düzeyinde yetkilerin bu kullanıcıya atanması gerekmektedir. MariaDB'nin veri tabanı düzeyinde kullandığı yetkiler için [bu]{:target="_blank"} bağlantıya bakabilirsiniz.
+Kullanıcı oluşturma işleminden sonra bu kullanıcıya gerekli yetkilerin verilmesi gerekmektedir. MariaDB, global, veritabanı, sütun gibi farklı yetki düzeyleri barındırmaktadır. Burada yapılmak istenen *forumcu* kullanıcısının *forum* veritabanı üzerinde işlem yapabilmesidir. Bu yüzden veri tabanı düzeyinde yetkilerin bu kullanıcıya atanması gerekmektedir. MariaDB'nin veri tabanı düzeyinde kullandığı yetkiler için [bu]{:target="\_blank"} bağlantıya bakabilirsiniz.
 
 Kullanıcıya veri tabanı düzeyindeki yetkileri aşağıdaki komutla atayabilirsiniz.
 
 ```bash
-    sudo mysql --user=root --password --batch --silent --execute="grant all privileges on \`forum\`.* to 'forumcu'@'localhost';"
+sudo mysql --user=root --password --batch --silent --execute="grant all privileges on \`forum\`.* to 'forumcu'@'localhost';"
 ```
 
 Son olarak yetki tablolarını güncelleyin.
 
 ```bash
-    sudo mysqladmin flush-privileges
+sudo mysqladmin flush-privileges
 ```
 
 ## phpBB'nin Elde Edilmesi
@@ -54,31 +54,33 @@ Son olarak yetki tablolarını güncelleyin.
 phpBB'nin 3.2 sürümü henüz Ubuntu depolarına girmediği için forum yazılımı, sitesinden sunulan sıkıştırılmış dosya aracılığıyla kurulacak. Sıkıştırılmış dosyayı aşağıdaki komutla yazılımın kurulacağı makineye indirebilirsiniz.
 
 ```bash
-    curl -O https://www.phpbb.com/files/release/phpBB-3.2.0.tar.bz2
+curl -O https://www.phpbb.com/files/release/phpBB-3.2.0.tar.bz2
 ```
 
 İndirdiğiniz sıkıştırılmış dosyanın herhangi bir şekilde indirme sırasında değiştirilmediğini teyit etmek için SHA256 ileti özetini hesaplayınızı öneririm. Bu işlemi `sha256sum` komutuyla yapabilirsiniz.
 
 ```bash
-    sha256sum phpBB-3.2.0.tar.bz2
+sha256sum phpBB-3.2.0.tar.bz2
 ```
 
-Yukarıdaki komutun yürütümü sonrasında alacağınız SHA256 değerini phpBB'nin [indirme]{:target="_blank"} bağlantısındaki indirdiğiniz paketle ilgili değerler karşılaştırın. Değer yanlış ise indirdiğiniz paketi silip tekrar indirin; doğru ise indirdiğiniz paketi açma işlemiyle devam edebilirsiniz.
+Yukarıdaki komutun yürütümü sonrasında alacağınız SHA256 değerini phpBB'nin [indirme]{:target="\_blank"} bağlantısındaki indirdiğiniz paketle ilgili değerler karşılaştırın. Değer yanlış ise indirdiğiniz paketi silip tekrar indirin; doğru ise indirdiğiniz paketi açma işlemiyle devam edebilirsiniz.
 
 ```bash
-    tar xf phpBB-3.2.0.tar.bz2
+tar xf phpBB-3.2.0.tar.bz2
 ```
 
-Çıkartma işleminden sonra komutu uyguladığınız dizinde phpBB3 dizini oluşacaktır. 
+Çıkartma işleminden sonra komutu uyguladığınız dizinde phpBB3 dizini oluşacaktır.
 
 ## NGINX Ayarları
 
-phpBB kurumuna başlamadan önce NGINX'in siteyi sunacak şekilde yapılandırılması gerekmektedir. Bunu sağlamak adına siteniz için bir ayar dosyasının oluşturulupp, gerekli NGINX direktiflerinin girilmesi gerekmektedir. Ayar dosyasını doldurmadan önce 4 direktif için gerekli parametrenin ne olması gerektiğine karar vermelisiniz. Bu direktifler
+phpBB kurumuna başlamadan önce NGINX'in siteyi sunacak şekilde yapılandırılması gerekmektedir. Bunu sağlamak adına siteniz için bir ayar dosyasının oluşturulup, gerekli NGINX direktiflerinin girilmesi gerekmektedir. Ayar dosyasını doldurmadan önce 4 direktif için gerekli parametrenin ne olması gerektiğine karar vermelisiniz. Bu direktifler
 
-1. root: Sitenizin sunulacağı dizin
-2. server_name: Alan adınız
-3. error_log: Siteye yapılan istekler sonucu oluşan hataların tutulacağı dosya
-4. access_log: Siteye yapılan isteklerin tutulacağı dosya
+Direktif | Açıklama
+:—|—:|:—
+root| Sitenizin sunulacağı dizin
+server_name | Alan adınız
+error_log | Siteye yapılan istekler sonucu oluşan hataların tutulacağı dosya
+access_log | Siteye yapılan isteklerin tutulacağı dosya
 
 Bu makalede `root` direktifi için `/var/www/phpbb` dizini; `server_name` direktifi için `www.example.com` ; `error_log` ve `access_log` direktifleri için `var/www/log` dizini altında oluşturulacak ilgili dosyalar kullanılacaktır.
 
@@ -87,7 +89,7 @@ Bu makalede `root` direktifi için `/var/www/phpbb` dizini; `server_name` direkt
 `root` direktifi için gerekli dizini oluşturun.
 
 ```bash
-    sudo mkdir /var/www/phpbb
+sudo mkdir /var/www/phpbb
 ```
 
 İndirdikten sonra açtığımız phpBB dizininin içeriğini sitenizin sunulacağı dizin içine kopyalayın.
@@ -99,15 +101,15 @@ sudo cp -R phpBB3/* /var/www/phpbb/
 Sitenin sunulacağı dizin ve bu dizin altındaki dizin ve dosyaların sahiplik ve gurubunu `www-data` kullanıcısına geçirin. www-data, web sunucular için güvenlik amacıyla özellikle oluşturulmuş hakları kısıtlanmış bir kullanıcıdır. Bu yüzden siteye ait dosyalar bu sunucu ve gruba ait olmalıdır.
 
 ```bash
-    sudo chown -R www-data:www-data /var/www/phpbb/
+sudo chown -R www-data:www-data /var/www/phpbb/
 ```
 
 Bu işlemden sonra forum yazılımının kurulabilmesi ve kurulum ardından forum yazılımının eksiksiz çalışabilmesi için kimi dizin ve dosyalar için gerekli izinleri ayarlayın.
 
 ```bash
-    cd /var/www/phpbb
-    sudo chmod 660 images/avatars/upload/ config.php
-    sudo chmod 770 store/ cache/ files/
+cd /var/www/phpbb
+sudo chmod 660 images/avatars/upload/ config.php
+sudo chmod 770 store/ cache/ files/
 ```
 
 ### error_log ve access_log direktifleri
@@ -115,9 +117,9 @@ Bu işlemden sonra forum yazılımının kurulabilmesi ve kurulum ardından foru
 İlgili direktiflerin parametreleri için gerekli dizini oluşturup, izinlerini atayın.
 
 ```bash
-    mkdir /var/www/log
-    touch /var/www/log/forum-{error,access}.log
-    sudo chown www-data:www-data -R /var/www/log
+mkdir /var/www/log
+touch /var/www/log/forum-{error,access}.log
+sudo chown www-data:www-data -R /var/www/log
 ```
 
 ### NGINX Ayar Dosyası
@@ -125,9 +127,9 @@ Bu işlemden sonra forum yazılımının kurulabilmesi ve kurulum ardından foru
 Bu adımlardan sonra sitenizin ayar dosyasını oluşturmaya ve gerekli NGINX direktiflerini girmeye geçebilirsiniz. NGINX, sanal konak olarak adlandırılan alan adlarına dair ayar dosyalarını `/etc/nginx/sites-available` dizininde barındırmaktadır. Bu dizinde forumunuz için bir ayar dosyası oluşturun.
 
 ```bash
-    cd /etc/nginx/sites-available
-    sudo touch forum
-    nano forum
+cd /etc/nginx/sites-available
+sudo touch forum
+nano forum
 ```
 
 Dosya içerisine parametrelerine karar verdiğimiz tukarıdaki direktif ve bu direktiflere karşılık gelen parametreleri yazın.
@@ -155,7 +157,7 @@ phpBB'nin 3.2 sürümünün yeni yapısından dolayı hem kurulum hem de kurulum
     location /install/app.php {
         try_files $uri $uri/ /install/app.php?$query_string;
     }
-    
+
     # kurulum için aşağıdaki direktif de terih edilebilir
     #location @rewrite_installapp {
     #     rewrite ^(.*)$ /install/app.php/$1 last;
@@ -252,22 +254,22 @@ Sonuç olarak phpBB 3.2 sürümü için asgari bir NGINX ayar dosyası örneği 
 NGINX ayar dosyasını doldurduktan sonra bu dosyayı NGINX'in işleve koyması için `/etc/nginx/sites-enabled` dizini altında sembolik bağ oluşturmanız gerekmekte.
 
 ```bash
-    cd /etc/nginx/sites-enabled
-    sudo ln -s ../sites-available/forum .
+cd /etc/nginx/sites-enabled
+sudo ln -s ../sites-available/forum .
 ```
 
 Son olarak ayar dosyanızda herhangi bir yazım yanlışı vs. olmadığını yetit edin.
 
 ```bash
-    sudo nginx -t
+sudo nginx -t
 ```
 
 Herhangi bir yanlışlık yoksa NGINX, PHP-FPM ve MariaDB servislerinizi yeniden başlatın.
 
 ```bash
-    sudo systemctl restat mysql.service
-     sudo systemctl restart php7.0-fpm.service
-    sudo systemctl restart nginx.service
+sudo systemctl restat mysql.service
+sudo systemctl restart php7.0-fpm.service
+sudo systemctl restart nginx.service
 ```
 
 ## phpBB Kurulumu
@@ -317,9 +319,9 @@ Artık alan adınızı kullanarak forumunuza ulaşabilirsiniz.
 Kurulumun tamamlanması için kurulum dizininin silinmesi gerekmekte. Silmek yerine dizinin adını ve izinlerini de değiştirrebilirsiniz.
 
 ```bash
-    sudo mv /var/www/phpbb/install /var/www/phpbb/silinecek
-    sudo chown root:root -R /var/www/phpbb/silinecek
-    sudo chmod 440 -R /var/www/phpbb/silinecek
+sudo mv /var/www/phpbb/install /var/www/phpbb/silinecek
+sudo chown root:root -R /var/www/phpbb/silinecek
+sudo chmod 440 -R /var/www/phpbb/silinecek
 ```
 
 ## Eski Veri Tabanının Yüklenmesi
@@ -327,7 +329,7 @@ Kurulumun tamamlanması için kurulum dizininin silinmesi gerekmekte. Silmek yer
 Forumunuza ait eski veri tabanını kullanmak istiyorsanız, temizliğin ardından bu veri tabanını yükleyebilirsiniz. Aşağıdaki komuttaki `forum` değerini eski veri tabanı adı ile değiştirmeniz gerekmektedir.
 
 ```bash
-    sudo mysql --user root --password forum < eki_veri_tabanı_yedeği.sql
+sudo mysql --user root --password forum < eki_veri_tabanı_yedeği.sql
 ```
 
 ## Son Söz
