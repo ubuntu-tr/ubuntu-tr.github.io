@@ -76,7 +76,7 @@ tar xf phpBB-3.2.0.tar.bz2
 phpBB kurumuna başlamadan önce NGINX'in siteyi sunacak şekilde yapılandırılması gerekmektedir. Bunu sağlamak adına siteniz için bir ayar dosyasının oluşturulup, gerekli NGINX direktiflerinin girilmesi gerekmektedir. Ayar dosyasını doldurmadan önce 4 direktif için gerekli parametrenin ne olması gerektiğine karar vermelisiniz. Bu direktifler
 
 Direktif | Açıklama
-:—|—:|:—
+---------- | ----------
 root| Sitenizin sunulacağı dizin
 server_name | Alan adınız
 error_log | Siteye yapılan istekler sonucu oluşan hataların tutulacağı dosya
