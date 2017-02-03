@@ -11,7 +11,7 @@
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
 				<dc:creator>{{ post.author | xml_escape }}</dc:creator>      
-				<description>&lt;p&gt;&lt;img src="{{ site.url }}/assets/post{{post.url}}/card_{{post.thumb}}" /&gt; {{ post.summary | xml_escape }}&lt;/p&gt;</description>
+				<description>&lt;p&gt;&lt;img src="{{ site.url }}/assets/post{{post.url}}/{{post.thumb}}" /&gt; {{ post.summary | xml_escape }}&lt;/p&gt;</description>
 				<pubDate>{{ post.date | append: ':00' | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
