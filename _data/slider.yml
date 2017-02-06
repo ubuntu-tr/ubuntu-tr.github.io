@@ -1,4 +1,6 @@
+- image: 1.png
+  url: 'https://sudo.ubuntu-tr.net'
+
 - image: 2.jpg
   url: '#'
-- image: 1.png
-  url: '#'
+
