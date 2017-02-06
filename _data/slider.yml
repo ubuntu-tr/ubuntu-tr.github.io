@@ -4,3 +4,5 @@
 - image: nginx_if.png
   url: 'https://sudo.ubuntu-tr.net/ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu'
 
+- image: python_berkay.png
+  url: 'https://sudo.ubuntu-tr.net/pyhton-programlama-seri-i'
