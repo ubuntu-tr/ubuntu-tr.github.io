@@ -22,7 +22,7 @@ Firefox'a, ihtiyaçlarınıza uygun çeşitli eklentiler kurarak onu size özel,
 
 **Eklentiler nasıl kurulur?**
 
-<i class="setting icon"></i> Eklentiler [addons.mozilla.org](https://addons.mozilla.org/) adresinden temin edilirler ve sitedeki **+Add to Firefox**  düğmesine tıklanarak kurulurlar. Kurduğunuz eklenti, çalışabilmek için eğer Firefox'un yeniden başlatılmasına ihtiyaç duyuyorsa size bildirimde bulunur. Kurduğunuz bazı eklentinin isteğinize uygun bir şekilde çalışmasını sağlamak için bazı ayarlamalar yapmanız gerekebilir. Pek çok eklentinin ayar seçeneklerine "**Menü > Eklentiler > Eklentiler > Seçenekler**" yolu izlenerek ulaşılabilir.
+Eklentiler [addons.mozilla.org](https://addons.mozilla.org/) adresinden temin edilirler ve sitedeki **+Add to Firefox**  düğmesine tıklanarak kurulurlar. Kurduğunuz eklenti, çalışabilmek için eğer Firefox'un yeniden başlatılmasına ihtiyaç duyuyorsa size bildirimde bulunur. Kurduğunuz bazı eklentinin isteğinize uygun bir şekilde çalışmasını sağlamak için bazı ayarlamalar yapmanız gerekebilir. Pek çok eklentinin ayar seçeneklerine "**Menü > Eklentiler > Eklentiler > Seçenekler**" yolu izlenerek ulaşılabilir.
 
 Şimdi, Firefox eklentilerinden birkaçını inceleyelim.
 
