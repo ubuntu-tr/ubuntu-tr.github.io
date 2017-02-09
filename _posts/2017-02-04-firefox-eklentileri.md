@@ -32,7 +32,7 @@ Eklentiler [addons.mozilla.org](https://addons.mozilla.org/) adresinden temin ed
 YouTube ve benzeri sitelerden ya da video dosyaları barındıran herhangi bir web sitesinden video indirmek için kullanabileceğiniz pek çok eklenti var, Video DownloadHelper, bu tür eklentiler içinde en popüler olanı. Çünkü video indirmenin yanında daha başka özellikler de sunuyor.
 Eklentiyi kurduğunuzda Firefox arayüzünde sağ üst tarafa üç top şeklinde bir simge yerleşir. Bir web sayfasındaki videoyu indirmek için **öncelikle videoyu oynatmaya başlayın** ardından eklentinin simgesine tıklayın. Açılan menü de, söz konusu videoyu farklı kalitelerde (çözünürlük) indirebilme seçenekleri sunabilir bu seçeneklerden istediğinize tıklayıp indirme işlemini başlatabilirsiniz. İndirme devam ederken söz konusu videonun bulunduğu sekmeyi kapatmanızın bir sakıncası yoktur.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/video_downloadhelper.png)
+![video]({{ site.assetsDir }}{{ page.permalink }}/video_downloadhelper.png)
 
 
 Eklentinin belli başlı özellikleri web sayfasında şöyle sıralanmış:
@@ -50,7 +50,7 @@ Eklentinin belli başlı özellikleri web sayfasında şöyle sıralanmış:
 ### Google Translator for Firefox
 Bu eklenti, bir web sayfası içinde seçtiğiniz bir metnin çevirisini yapar ya da isterseniz sayfayı bütünüyle çevirir. Eklenti, çeviri sonucunu yeni bir sekmede ya da açılır bir pencerede sunmuyor bunun yerine çeviri sonucunu otomatikman seçtiğiniz metnin yerine yerleştiriyor. Yani çevirmeye çalıştığınız metin kayboluyor ve yerine Türkçesi yerleşiyor. Denemek için yabancı dilde bir web sayfasını açın, çevirmek istediğiniz bir cümleyi ya da paragrafı seçip "Sağ tık > Seçiliyi Google Translate ile çevir" yolunu izleyin ve sonucuna bakın.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/google_translator_for_firefox.png)
+![translate]({{ site.assetsDir }}{{ page.permalink }}/google_translator_for_firefox.png)
 
 
 Tüm sayfayı çevirmek istediğinizde ise; sayfada herhangi bir yere sağ tıkladığınızda menüde ortaya çıkan "*Bu sayfayı Google Translate ile çevir*" seçeneğini kullanabilirsiniz ya da Firefox arayüzünde sağ üst tarafa yerleşen "T" harf şeklindeki düğmeye tıklayabilirsiniz. Firefox arayüzüne yerleşen bu T şeklindeki düğme pek de hoş bir görüntüye sahip değil. Eğer kaldırmak isterseniz "*Firefox Menüsü > Özelleştir*" yolunu izleyin, simgeye tıklayıp aşağıda uygun gördüğünüz bir alana sürükleyip bırakın.
@@ -68,7 +68,7 @@ uBlock Origin, en yaygın kullanılan Firefox eklentilerinden biri olup ilk olar
 
 Reklam önleyici eklentilerinin dünya çapında yüz milyonlarca kullanıcıya ulaşması ile beraber gelir kaybına uğrayan bir çok site bu tür eklentileri atlatmaya yönelik önlemler geliştirdi. Bu nedenle uBlock Origin ile web de gezinirken bazı siteler tarafından *"Reklam engelleyici tespit edildi" , "AdBlock tespit edildi", "Adblock Detected"* vb. bir ibare ile başlayan ve site içeriğini görüntüleyebilmeniz için eklentiyi devre dışı bırakmanızı isteyen bir bildirimle karşılaşabilirsiniz. Bu tür bir web sitesi ile karşılaştığınızda uBlock menüsündeki büyük kapatma düğmesine tıklayarak **o site için** eklentiyi devre dışı bırakabilirsiniz. Söz konusu kapatma düğmesi uBlock'u tüm siteler için değil sadece görüntülenmekte olan site için devre dışı bırakır. Bu düğmeyi kullandıktan sonra açmaya çalıştığınız sayfayı kapatıp yeni bir sekmede açın.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/ublock_origin.png)
+![ublock]({{ site.assetsDir }}{{ page.permalink }}/ublock_origin.png)
 
 
 uBlock Origin ile gelen filtrelerin algılayamadığı bir reklamla karşılaştığınızda o reklama sağ tıklayıp "**Öğeyi engelle**" seçeneğini kullanarak o reklamı kalıcı olarak engelleyebilirsiniz/filtreleyebilirsiniz. Eklediğiniz filtreleri daha sonra görüntülemek/yönetmek isterseniz ayar ekranında "Süzgeçlerim" sekmesinden ulaşabilirsiniz.
@@ -85,7 +85,7 @@ Eklentinin görevine geçmeden önce, bilmeyenler için Web'in RSS denilen güze
 
 Her gün, ilgi alanınıza giren (teknoloji, haber, linux, müzik, kişisel günlükler gibi) beş - on tane siteye düzenli olarak girerek yeni içerikleri kontrol etmek istediğinizi farz edin. RSS tüm bu sitelerdeki yeni haberleri ayrı ayrı sitelere girmeden tek bir web sayfası ya da bir program arayüzü üzerinden rahatça takip etmenizi sağlar. Yeni içerikler özet halinde ve bir ekran görüntüsü ile alt alta dizilir. Okuyucu dilediği haberi genişleterek tam halini okur. RSS haber kaynaklarını takip etmek için [Feedly.com](https://feedly.com/) , [Inoreader.com](http://www.inoreader.com/) gibi RSS takip siteleri kullanılabilir ya da RSS okuyucu adı verilen çeşitli masaüstü/mobil uygulamaları kullanılabilir.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/feedly_notifier.png)
+![feedly]({{ site.assetsDir }}{{ page.permalink }}/feedly_notifier.png)
 
 
 Feedly Notifier'e gelecek olursak, bu eklenti Feedly.com hesabınız üzerinden size yeni haber bildirimlerinde bulunmayı sağlıyor. Aslında Feedly hesabınızda gün içerisinde yüzlerce yeni haber bildirimi alan bir kullanıcıysanız bu eklenti sizin için pek bir şey ifade etmeyebilir. Eklentinin bana göre asıl faydasını, RSS'yi sadece ara ara ve kısıtlı sayıda içerik sunan siteleri takip etmek için kullanan kullanıcılar görebilir. Örneğin ben RSS'yi sadece Linux ve özgür yazılım ile ilgili bir kaç site için kullanıyorum ([Linux Gezegeni](https://gezegen.linux.org.tr/?feed=rss2),  [SUDO](http://feeds.feedburner.com/ubuntu-tr/sudo), [Omg!Ubuntu!](http://feeds.feedburner.com/d0od) , [LibreOffice Günlüğü](https://blog.documentfoundation.org/feed/)  gibi). Bu siteler de genelde bir kaç günde / haftada bir yeni içerik yayınlıyor. Ben bu siteleri her gün kontrol etmek yerine işimi Feedly Notifier'a bırakıyorum, yeni bir haber eklendiğinde o bana bildiriyor.
@@ -109,7 +109,7 @@ Eklentiyi kurduktan sonra Firefox'un sağ tıklama menüsüne Screengrab seçene
 ### X-notifier
 X-notifier ile Gmail, Hotmail, Yahoo gibi e-posta hesaplarınızın kullanıcı adı ve parolasını tanımlayarak, belli aralıklarla (örneğin her 10 dakikada bir) yeni bir posta gelip gelmediğini kontrol ettirebilirsiniz. Aynı e-posta servisi üzerinden birden fazla hesap kullanmayı da destekler. Yeni posta iletileri küçük bir açılır pencere üzerinden ve sesli olarak bildirilmektedir. Ayrıca istediğiniz zaman eklentinin simgesine tıklayıp "Check Now" (şimdi kontrol et) seçeneğine tıklayarak elle de kontrol edebilirsiniz.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/xnotifier.png)
+![xnotifier]({{ site.assetsDir }}{{ page.permalink }}/xnotifier.png)
 
 
 Eklentiye e-posta adreslerinizi tanımlamak için Firefox arayüzüne yerleşen simgesine sağ tıklayıp Options düğmesine basın. Açılan pencerede öntanımlı olarak Gmail yazan yere tıklayarak, tanımlayacağınız e-posta hesabınızın türünü (yani Gmail mi, Hotmail mi? gibi...) seçin, e-posta adresinizi ve parolanızı girin ardından Add (ekle) düğmesine basın. Bu şekilde tüm e-posta adreslerinizi tanımladıktan sonra Save yapıp çıkabilirsiniz.
@@ -129,7 +129,7 @@ Snap Links Plus, bir arada sıralanmış çok sayıda bağlantıyı bir çerçev
 ### Restart
 Firefox'un donması halinde ya da çok sayıda sekme açmanız gibi nedenlerle ağırlaşmaya başladığında bu eklentiyi kullanarak sekmelerinizi kaybetmeden Firefox'a rahat bir nefes aldırabilirsiniz. Ayrıca sık sık yeni eklentiler kurup deniyorsanız bazı eklentiler için gereken yeniden başlatma işlemini Restart sayesinde erteleyebilirsiniz. Bu eklentinin, Firefox'u yeniden başlatmaktan başka hiçbir görevi yoktur. Firefox'u çarpı düğmesiyle kapatmaktan farklı olarak bu eklenti, o sırada açık olan sekmeleri de kaydederek yeniden başlatır.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/restart.png)
+![restart]({{ site.assetsDir }}{{ page.permalink }}/restart.png)
 
 
 Eklentiyi kurup Firefox'u yeniden başlattıktan sonra artık rahat bir nefes aldırmak istediğinizde Ctrl + Alt + R kısayolunu kullanabilirsiniz ya da Firefox menüsünde en altta çıkış düğmesinin yanına yerleşen simgeyi kullanabilirsiniz.
