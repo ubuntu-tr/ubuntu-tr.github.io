@@ -278,41 +278,41 @@ Servislerin yeniden başlatılması ardından tarayıcının adres satırında `
 
 Sizi ilk karşılayacak sayfa tanıtım sayfasıdır.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb1.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb1.png)
 
 <kbd>INSTALL</kbd> sekmesine tıklayıp kuruluma geçebilirsiniz.
 
 İkinci sayfada sizi phpBB kurulumu için neye gereksinim duyacağınızı açıklayan bilgiler karşılayacaktır. Bu gereksinimleri karşıladığınız için <kbd>Install</kbd> tuşuna basıp devam edin.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb2.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb2.png)
 
 Üçüncü sayfa forum yöneticisinin oluşturulması aşamasıdır. Yöeticinin kullanıcı adı (administrator username), e-postası ve şifresini belirledikten sonra <kbd>Submit</kbd> tuşuna basarak bir sonraki adıma geçin.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb3.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb3.png)
 
 Dördüncü sayfa veri tabanı ayarları için ayrılmıştır. Veri tabanınız yerel sunucunuz üzerinde çalıştığı için veritabanı sunucusunun nereden sunulduğunu belirten değer (Database server hostname or DNS) için `localhost` yazmanız gerekmekte. Makalenin "Veri Tabanı ve Kullanıcısının Oluşturulup Gerekli İzinlerin Verilmesi" bölümünde oluşturduğunuz ya da eski veri tabanına ait veri tabanı kullanıcısı, şifresi ve veri tabanı adını ilgili seçeneklerin karşısına yazın. Veri tabanı önekini değiştirmeden devam edin.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb4.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb4.png)
 
 Bir sonraki sayfada sunucu yapılandırması ile ilgili seçenekler bulunmaktadır. Alan adınızı HTTPS protokolü üzerinde sunacaksanız *Güvenli çerez* (Cookie secure) seçeneğine evet demelisiniz. Yine HTTPS protokolü kullanılacaksa *Sunucu protokolü* seçeneğini `https://` olarak değiştirmelisiniz. *Alan adı* (Domain name) seçeneği için alan adınızı ve bu alan adı için kullanılan *port* numarasını (server port) NGINX ayar dosyasındaki değerlere göre değiştirmeniz gerekmekte. Bu makaledeki örnek için ilgili seçenekler `www.example.com` ve `80` olmalıdır. *Betik yolu* (Script path) seçeneğini değiştirmeden devam edin.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb5.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb5.png)
 
 Altıncı sayfada forumunuz için bir başlık ve kısa bir tanıtım yazın.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb6.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb6.png)
 
 Devam ettiğinizde kurulum uygulanmaya başlanacaktır.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb7.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb7.png)
 
 Son olarak kurulumun bittiğini gösteren sayfa ile karşılaşacaksınz.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb9.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb9.png)
 
 Artık alan adınızı kullanarak forumunuza ulaşabilirsiniz.
 
-![]({{ site.assetsDir }}{{ page.permalink }}/phpbb10.png)
+![phpbb]({{ site.assetsDir }}{{ page.permalink }}/phpbb10.png)
 
 ## Temizlik
 
