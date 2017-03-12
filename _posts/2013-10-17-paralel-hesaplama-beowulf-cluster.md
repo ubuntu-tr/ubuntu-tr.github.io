@@ -6,7 +6,6 @@ tags: ["Sudo 57. Sayı","cluster","paralel hesaplama"]
 permalink: "paralel-hesaplama-beowulf-cluster"
 summary: "Yapmanız gereken büyük hesaplar varsa ve elinizdeki kaynaklar buna yeterli gelmiyorsa Beowulf Cluster yapısı tam da aradığınız şeydir. Başlangıç olarak, ihtiyacınızı karşılamak için bu kaynak size yetecektir."
 image: "kapak.png"
-thumb: "kapak.png"
 author: "Bahadır Demircioğlu"
 ---
 

@@ -6,7 +6,6 @@ tags: ["Sudo 35. Sayı","yönlendirici","güvenlik","filtreleme","spoofing","SYN
 permalink: "yonlendirici-guvenligi"
 summary: ""
 image: "kapak.png"
-thumb: "kapak.png"
 author: "Aysel Aksu"
 ---
 ## Giriş

@@ -8,7 +8,6 @@ summary: "Bilindiği gibi en iyilerden olan postgreSQL, sorgulama yapabilmemiz y
 bize \"hot standby\" adı altında bir özellik sunmakta. Bu yazıda bu özelliği repmgr yazılımını kullanarak
 nasıl yapabileceğini göreceğiz."
 image: "1.png"
-thumb: "1.png"
 author: "Bahadır Demircioğlu"
 ---
 

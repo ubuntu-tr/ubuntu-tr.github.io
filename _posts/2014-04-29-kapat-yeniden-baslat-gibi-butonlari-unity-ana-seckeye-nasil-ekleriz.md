@@ -6,7 +6,6 @@ tags: ["Sudo 58. Sayı","unity","düğme","seçke"]
 permalink: "kapat-yeniden-baslat-gibi-butonlari-unity-ana-seckeye-nasil-ekleriz"
 summary: "Diyelim ki sistemde yaşadığınız bir sorun sonucu, sistemi yeniden başlatmanız gerekiyor; ama Ubuntu üst panel ortalarda görünmüyor. Seçeneklerimiz neler olurdu acaba?"
 image: "1.png"
-thumb: "1.png"
 author: "Ceren Çalıcı"
 ---
 

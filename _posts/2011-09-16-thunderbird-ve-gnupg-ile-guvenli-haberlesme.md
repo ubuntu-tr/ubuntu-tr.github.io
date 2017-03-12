@@ -6,7 +6,6 @@ tags: ["Sudo 33. Sayı","thunderbird","GnuPG","güvenlik","haberleşme","eposta"
 permalink: "thunderbird-ve-gnupg-ile-guvenli-haberlesme"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Çağrı Emer"
 ---
 ## Giriş

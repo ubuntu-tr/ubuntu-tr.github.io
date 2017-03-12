@@ -6,7 +6,6 @@ tags: ["Sudo 40. Sayı","linux","çekirdek","kernel"]
 permalink: "linux-cekirdek-gelistirme-sureci"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

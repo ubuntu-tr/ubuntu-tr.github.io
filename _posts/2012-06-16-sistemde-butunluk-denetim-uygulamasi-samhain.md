@@ -6,7 +6,6 @@ tags: ["Sudo 42. Sayı","denetim","bütünlük","güvenlik"]
 permalink: "sistemde-butunluk-denetim-uygulamasi-samhain"
 summary: ""
 image: "ikinci_resim.jpg"
-thumb: "ikinci_resim.jpg"
 author: "Deniz Özibrisim"
 ---
 

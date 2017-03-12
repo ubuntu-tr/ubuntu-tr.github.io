@@ -6,7 +6,6 @@ tags: ["Sudo 33. Sayı","git","sürüm kontrol"]
 permalink: "git-surum-kontrol-sistemi"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

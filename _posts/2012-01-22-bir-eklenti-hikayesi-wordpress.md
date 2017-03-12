@@ -6,7 +6,6 @@ tags: ["Sudo 37. Sayı", "php", "wordpress", "eklenti"]
 permalink: "bir-eklenti-hikayesi-wordpress"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "İbrahim Altunok"
 ---
 

@@ -6,7 +6,6 @@ tags: ["phpbb", "sunucu yapılandırma", "16.04.1", "xenial", "nginx", "mariadb"
 permalink: "ubuntu-16-04-1-uzerine-phpbb-forum-yaziliminin-3-2-surumunun-kurulumu"
 summary: "Bu makalede phpBB forum yazılımının 3.2 sürümünün Ubuntu'nun 16.04.1 sürümü üzerine kurulumu, gerekli NGINX ayar dosyasının oluşturulması ve veri tabanının hazırlanması anlatılmaktadır."
 image: "ubuntu-16-04-1-uzerine-phpbb-forum-yaziliminin-3-2-surumunun-kurulumu.jpg"
-thumb: "ubuntu-16-04-1-uzerine-phpbb-forum-yaziliminin-3-2-surumunun-kurulumu.jpg"
 author: "if"
 ---
 ## Gerekli Servis ve Paketlerin Kurulumu

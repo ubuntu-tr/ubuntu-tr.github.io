@@ -6,7 +6,6 @@ tags: ["Sudo 34. Sayı","bulut bilişim","sunucu"]
 permalink: "sparkleshare"
 summary: ""
 image: "3.png"
-thumb: "3.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

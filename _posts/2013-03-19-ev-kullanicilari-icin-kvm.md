@@ -6,7 +6,6 @@ tags: ["Sudo 51. Sayı","kernel","sanal makine","KVM"]
 permalink: "kvm"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

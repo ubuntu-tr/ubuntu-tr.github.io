@@ -6,7 +6,6 @@ tags: ["nginx", "php-fpm", "mariadb", "lemp", "xenial", "sunucu yapılandırma",
 permalink: "ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu"
 summary: "Bu makalede Ubuntu'nun 16.04.1 uzun dönem desteklenen sürümüne NGINX web sunucusu, PHP-FPM FastGCI süreç yöneticisi ve MariaDB veri tabanı yöneticisinin kurulumu anlatılmaktadır."
 image: "ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu.jpg"
-thumb: "ubuntu-16-04-1-uzerine-nginx-php-fpm-ve-mariadb-kurulumu.jpg"
 author: "if"
 ---
 Ubuntu Türkiye Takımı olarak sunucularımızda <a href="https://www.nginx.com/">NGINX</a> web sunucusu, PHP'nin FastGCI uygulaması olan <a href="https://secure.php.net/manual/en/install.fpm.php">FastGCI Süreç Yöneticisi</a> (<abbr title="FastGCI Porecess Manager">FPM</abbr>) ve <a href="https://mariadb.org/">MariaDB</a> veri tabanı yönetimi sistemini kullanmaktayız. Bu makalede bu uygulamaların Ubuntu'nun 16.04.1 sürümüne kurulumu anlatılmaktadır.

@@ -6,7 +6,6 @@ tags: ["case", "bash", "bash programlama", "bash betik oluşturma", "linux bash"
 permalink: "bash-programlamada-case-yapisi"
 summary: "Bu yazıda, BASH progralama ile komut betikleri yazarken kullanabileceğiniz CASE yapısı açıklanmaktadır."
 image: "bash-programlamada-case-yapisi.jpg"
-thumb: "bash-programlamada-case-yapisi.jpg"
 author: "siberoloji"
 ---
 Bu yazıda sizelere, Bash Programlama içerisinde kullanılan CASE yapısından bahsetmek istiyorum.  Bazen bash betikleri yazarken, if ve elif yapılarının kullanımını çok karışık hale gelebilir. Bu tür durumlarda, işlemleri daha basit hale getiren CASE yapısını kullanabilirsiniz. Case yapısında, belirttiğimiz değişkenin alabileceği değerlere göre farklı komutları yürütmemiz mümkündür. 

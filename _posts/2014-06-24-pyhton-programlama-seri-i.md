@@ -6,7 +6,6 @@ tags: ["python","programlama","Sudo 60. Sayı"]
 permalink: "pyhton-programlama-seri-i"
 summary: "Python programlama dili güçlü, kullanışlı, çabuk yazılabilen, eğlenceli ve kolay okunabilen, yorumlamalı bir programlama dilidir. Bu anlatım, Python programlama dilini hiç bilmeyen kullanıcıların dahi anlayabileceği bir seviyede sürecektir."
 image: "pyhton-programlama.jpeg"
-thumb: "pyhton-programlama.jpeg"
 author: "Berkay Dedeoğlu"
 ---
 

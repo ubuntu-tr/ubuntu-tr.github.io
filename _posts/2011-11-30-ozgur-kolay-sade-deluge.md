@@ -6,7 +6,6 @@ tags: ["Sudo 35. Sayı","torrent"]
 permalink: "ozgur-kolay-sade-deluge"
 summary: ""
 image: "deluge.png"
-thumb: "deluge.png"
 author: "Ceren Çalıcı"
 ---
 

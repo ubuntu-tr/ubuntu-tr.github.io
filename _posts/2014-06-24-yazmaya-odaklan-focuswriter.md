@@ -6,7 +6,6 @@ tags: ["Sudo 60. Sayı","metin editörü"]
 permalink: "yazmaya-odaklan-focuswriter"
 summary: "Eğer yazmanız gereken yazılar, düzenlemeniz gereken metin belgeleri çoksa FocusWriter, bunları dikkatinizin dağılmasına izin vermeden kontrol edebilmenizi sağlayan, şık bir uygulama."
 image: "focus_gorsel_1.png"
-thumb: "focus_gorsel_1.png"
 author: "Ceren Çalıcı"
 ---
 

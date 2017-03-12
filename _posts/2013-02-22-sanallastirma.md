@@ -6,7 +6,6 @@ tags: ["Sudo 50. Sayı","sanal makine"]
 permalink: "sanallastirma"
 summary: "Sanal makinelerin tanımını ilk kez Popek ve Goldberg yaptı. Onlara göre sanal makine “gerçek makinenin etkili, soyutlanmış bir kopyasıydı”."
 image: "01.jpg"
-thumb: "01.jpg"
 author: "Bahadır Demircioğlu"
 ---
 ## Giriş

@@ -6,7 +6,6 @@ tags: ["Sudo 61. Sayı","dosya sistemi","btrfs","b-tree"]
 permalink: "b-tree-dosya-sistemi-btrfs"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Alev Erzurumlu"
 ---
 ## Giriş

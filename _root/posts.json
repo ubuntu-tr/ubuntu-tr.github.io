@@ -8,7 +8,7 @@
           {
             "title": "{{ post.title | escape }}",
             "url": "{{ post.url }}",
-            "thumb": "{{ post.thumb }}",
+            "image": "{{ post.image }}",
             "tags": "{{ post.tags | join:',' }}",
             "category": "{{ post.categories }}"
           }

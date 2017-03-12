@@ -6,7 +6,6 @@ tags: ["Sudo 49. Sayı","önyükleyici","güvenlik","boot","bootloader"]
 permalink: "secure-boot-loader"
 summary: "MacOS'nin yıllardır benzerini kullandığı güvenlik optimizasyonu artık bütün Linux dağıtımlarında olacak."
 image: "1.png"
-thumb: "1.png"
 author: "Bahadır Demircioğlu"
 ---
 

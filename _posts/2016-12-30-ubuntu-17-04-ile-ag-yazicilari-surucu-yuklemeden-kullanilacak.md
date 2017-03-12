@@ -6,7 +6,6 @@ tags: ["sürücüsüz yazıcı", "IPP everywhere", "Ubuntu ağ yazıcı desteği
 permalink: "ubuntu-17-04-ile-ag-yazicilari-surucu-yuklemeden-kullanilacak"
 summary: "Ubuntu 17.04 sürümünden itibaren IPP Everywhere özelliği olan ağ yazıcıları kullanılabilir olacak."
 image: "ubuntu-17-04-ile-ag-yazicilari-surucu-yuklemeden-kullanilacak.jpg"
-thumb: "ubuntu-17-04-ile-ag-yazicilari-surucu-yuklemeden-kullanilacak.jpg"
 author: "siberoloji"
 ---
 Ubuntu 17.04 sürümünden itibaren kullanılmaya başlanması planlanan yeni bir özellik geliyor.  Canonical'dan Till Kamppeter, topluluk eposta listesine gönderdiği bir posta ile, IPP Everywhere özelliği olarak ifade edilen Ağa Bağlı Yazıcılar için yeni bir kullanımı duyurdu.

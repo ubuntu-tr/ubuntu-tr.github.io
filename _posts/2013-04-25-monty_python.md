@@ -6,7 +6,6 @@ tags: ["Sudo 52. Sayı","canlı kayıt"]
 permalink: "monty_python"
 summary: "Ardour, canlı enstrüman ve vokal kaydı yapmamızı sağlayan bir araç. Nasıl yapılacağını merak ediyorsanız yazımıza buyurun."
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Monty_Python"
 ---
 ## Giriş

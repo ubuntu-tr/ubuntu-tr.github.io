@@ -6,7 +6,6 @@ tags: ["Sudo 45. Sayı","linux","virüs"]
 permalink: "linux-virusleri-ile-tanisin"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Barış Can"
 ---
 ## Giriş

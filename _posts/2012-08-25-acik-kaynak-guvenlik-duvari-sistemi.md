@@ -6,7 +6,6 @@ tags: ["Sudo 44. Sayı","güvenlik","açık kaynak","firewall","güvenlik duvar�
 permalink: "acik-kaynak-guvenlik-duvari-sistemi"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Erkan Esmer"
 ---
 

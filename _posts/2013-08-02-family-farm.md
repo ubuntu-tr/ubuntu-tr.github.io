@@ -6,7 +6,6 @@ tags: ["Sudo 55. Sayı","oyun"]
 permalink: "ffarm"
 summary: "Bir aile çiftliğini işletmek, sanal ortamda gerçekten oldukça kolay. Family Farm, toprak ve hayvanlarla uğraşmanın zorluklarını atlatarak eğlencesini bize yaşatıyor."
 image: "ffarmlogo.jpg"
-thumb: "ffarmlogo.jpg"
 author: "Emre Güntekin"
 ---
 

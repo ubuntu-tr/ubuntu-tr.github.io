@@ -6,7 +6,6 @@ tags: ["rehber", "github", "git"]
 permalink: "github-rehberi"
 summary: "Github servisleri anlatılarak daha önce bu servisleri kullanmamış kişilerin kendi projelerini oluşturup yönetebilmeleri amaçlanmıştır."
 image: "1.png"
-thumb: "1.png"
 author: "bugra9"
 ---
 ## Giriş

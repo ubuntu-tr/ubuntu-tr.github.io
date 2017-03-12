@@ -6,7 +6,6 @@ tags: ["Sudo 60. Sayı","dosya sistemi","ext4"]
 permalink: "linux-taki-temel-dosya-sistemleri-ext2-ext3-ext4-jfs"
 summary: "Orijinal Linux sistemi, Unix dosya sistemine işlevsellik bakımından benzeyen basit bir dosya sistemi kullanır. Bu makalede Linux'ta kullanılan temel dosya sistemlerini tartışacağız."
 image: "1.png"
-thumb: "1.png"
 author: "Alev Erzurumlu"
 ---
 

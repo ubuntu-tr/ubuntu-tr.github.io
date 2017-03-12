@@ -6,7 +6,6 @@ tags: ["Sudo 47. Sayı","ağ izleme","test","nessus","wireshark","zenmap","nmap"
 permalink: "sistem-ag-denetleme-araclari"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Erkan Esmer"
 ---
 ## Giriş

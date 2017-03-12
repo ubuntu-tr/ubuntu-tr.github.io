@@ -6,7 +6,6 @@ tags: ["Sudo 36. Sayı","filezilla","FTP","dosya aktarım"]
 permalink: "filezilla"
 summary: ""
 image: "filezilla.png"
-thumb: "filezilla.png"
 author: "Ceren Çalıcı"
 ---
 

@@ -6,7 +6,6 @@ tags: ["Sudo 57. Sayı","güvenlik","parola yöneticisi"]
 permalink: "clipperz-parola-yoneticisi-ve-sayisal-veri-kasasi"
 summary: "Son zamanların havalı terimi bulut bilişim malumunuz. Bulut servislerin yaygınlaşmasıyla birlikte kullandığımız çevrimiçi hesapların sayısı da doğal olarak arttı. Peki her yeni hesap için farklı parolalar mı kullanıyoruz yoksa var olan parolalarımızı yeniden kullanmayı mı tercih ediyoruz?"
 image: "clipperz.png"
-thumb: "clipperz.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

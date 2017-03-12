@@ -6,7 +6,6 @@ tags: ["Sudo 58. Sayı","oyun"]
 permalink: "minecraft"
 summary: "Minecraft, küplerle çeşitli tasarımlar yapmanızı sağlayan 2 ve 3 boyutlu oynanabilen bir oyundur."
 image: "1.png"
-thumb: "1.png"
 author: "Yusuf Düzgün"
 ---
 ## Giriş

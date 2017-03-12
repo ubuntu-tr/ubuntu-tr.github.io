@@ -6,7 +6,6 @@ tags: ["Sudo 56. Sayı","kayıt","log","günlük"]
 permalink: "syslog-ng"
 summary: "Çoğu son kullanıcı, kayıt (log) dosyalarını bilmez. Biraz ileri seviyede olanlar ise hatalarla karşılaşınca bunlara bakarlar. Ama sistem yöneticileri için sistemin neler yaptığını sürekli izlemek önemlidir. Bunun içinse bu kayıtları inceleyen araçları kullanırlar. Nasıl mı? Cevabı yazımızda."
 image: "log.png"
-thumb: "log.png"
 author: "Bahadır Demircioğlu"
 ---
 

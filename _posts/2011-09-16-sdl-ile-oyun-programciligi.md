@@ -6,7 +6,6 @@ tags: ["Sudo 33. Sayı","SDL","oyun","programlama"]
 permalink: "sdl-ile-oyun-programciligi"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Sinan Ateş"
 ---
 ## Giriş

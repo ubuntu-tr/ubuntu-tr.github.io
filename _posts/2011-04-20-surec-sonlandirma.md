@@ -6,7 +6,6 @@ tags: ["Sudo 30. Sayı","kill","pkill"]
 permalink: "surec-sonlandirma"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Semetey Coşkun"
 ---
 

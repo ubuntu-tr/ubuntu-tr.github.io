@@ -6,7 +6,6 @@ tags: ["Sudo 61. Sayı","metin editörü"]
 permalink: "vim-seri-II"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Semetey Coşkun"
 ---
 

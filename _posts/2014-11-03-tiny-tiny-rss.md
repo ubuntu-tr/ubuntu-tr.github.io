@@ -6,7 +6,6 @@ tags: ["rss","php","Sudo 61. Sayı"]
 permalink: "tiny-tiny-rss"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Heartsmagic"
 ---
 ## Giriş

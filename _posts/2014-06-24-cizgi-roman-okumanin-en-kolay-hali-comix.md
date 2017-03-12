@@ -6,7 +6,6 @@ tags: ["Sudo 60. Sayı","çizgi roman"]
 permalink: "cizgi-roman-okumanin-en-kolay-hali-comix"
 summary: "Çok sevdiğimiz çizgi romanları bilgisayardan okumak, epey meşakkatli olabiliyor. Resim görüntüleyici programları ile açıp okumak, insanı çizgi romandan bile soğutur. Ama bunu kolaylaştıran güzel bir uygulamamız var: Comix."
 image: "comix_gorsel_1.png"
-thumb: "comix_gorsel_1.png"
 author: "Ceren Çalıcı"
 ---
 

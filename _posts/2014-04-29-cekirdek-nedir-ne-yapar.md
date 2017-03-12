@@ -6,7 +6,6 @@ tags: ["Sudo 58. Sayı","çekirdek","kernel"]
 permalink: "cekirdek-nedir-ne-yapar"
 summary: "Çekirdek, en alt katmanda çalışan ve donanımları kullanmamızı sağlayan uygulamalara arayüzlük yapan bir programdır diyebiliriz."
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Erkan Esmer"
 ---
 ## Giriş

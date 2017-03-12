@@ -6,7 +6,6 @@ tags: ["Sudo 32. Sayı","sürüm kontrol","subversion"]
 permalink: "subversion"
 summary: ""
 image: "1.png"
-thumb: "1.png"
 author: "Çağrı Emer"
 ---
 ## Giriş

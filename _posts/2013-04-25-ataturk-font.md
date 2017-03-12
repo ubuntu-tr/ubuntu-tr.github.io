@@ -6,7 +6,6 @@ tags: ["Sudo 52. Sayı","Atatürk","font"]
 permalink: "font"
 summary: "Yıllarca yazısını örnek aldığım, bende hayranlık uyandıran Ata'mızın el yazısını beraber incelemeye ne dersiniz?"
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Elif Sungur"
 ---
 

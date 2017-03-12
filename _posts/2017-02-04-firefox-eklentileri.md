@@ -6,7 +6,6 @@ tags: ["rss", "açık kaynak", "eklenti"]
 permalink: "firefox-eklentileri"
 summary: "Eklenti denilince ilk akla gelen yazılım Mozilla Firefox! Bu yazıda Firefox eklentilerinden bir kaçı hakkında detaylı bilgi edinebilirsiniz."
 image: "firefox-eklentileri.jpg"
-thumb: "firefox-eklentileri.jpg"
 author: "hatas"
 ---
 

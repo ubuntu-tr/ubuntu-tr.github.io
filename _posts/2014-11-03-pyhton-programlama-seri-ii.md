@@ -6,7 +6,6 @@ tags: ["python","programlama","Sudo 61. Sayı"]
 permalink: "pyhton-programlama-seri-ii"
 summary: ""
 image: "pyhton-programlama-seri-ii.jpeg"
-thumb: "pyhton-programlama-seri-ii.jpeg"
 author: "Berkay Dedeoğlu"
 ---
 ## Giriş

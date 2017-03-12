@@ -6,7 +6,6 @@ tags: ["yazılım paketleme", "paket yayımlama", "deb", "ppa", "aur", "pkgbuild
 permalink: "yazilimlarin-paketlenip-yayimlanmasi"
 summary: "Bu yazıda git sürüm kontrol sistemi kullanarak geliştirilen yazılımların çeşitli paket sistemleri için otomatik paketlenip yayımlanması anlatılmaktadır."
 image: "1.png"
-thumb: "1.png"
 author: "bugra9"
 ---
 ## Giriş

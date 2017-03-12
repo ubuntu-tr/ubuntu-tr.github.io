@@ -6,7 +6,6 @@ tags: ["Sudo 49. Sayı","ubuntu","sık sorulan sorular","linux"]
 permalink: "ubuntu-sorular"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Bahadır Demircioğlu"
 ---
 ## Sık Sorulan Sorular

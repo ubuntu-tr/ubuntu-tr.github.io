@@ -6,7 +6,6 @@ tags: ["Sudo 47. Sayı","oyun"]
 permalink: "the-journey-down"
 summary: ""
 image: "ana-resim.png"
-thumb: "ana-resim.png"
 author: "Mehmet Zaki Bilgi"
 ---
 

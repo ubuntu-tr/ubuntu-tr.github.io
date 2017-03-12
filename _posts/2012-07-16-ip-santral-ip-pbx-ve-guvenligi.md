@@ -6,7 +6,6 @@ tags: ["Sudo 43. Sayı","IP","güvenlik","santral","IP PBX","asterisk"]
 permalink: "ip-santral-ip-pbx-ve-guvenligi"
 summary: ""
 image: "kapak.png"
-thumb: "kapak.png"
 author: "Deniz Özibrişim"
 ---
 

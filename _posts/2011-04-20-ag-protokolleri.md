@@ -6,7 +6,6 @@ tags: ["Sudo 30. Sayı","ağ","ağ protokolü","telnet","TCP","SMTP","SNMP","FTP
 permalink: "ag-protokolleri"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Aysel Aksu"
 ---
 ## Giriş

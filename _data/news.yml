@@ -1,7 +1,7 @@
-- thumb: 1.jpeg
+- image: 1.jpeg
   title: "MongoDB 3.2 yayınlandı"
   url: /mongodb
   
-- thumb: heartbleed.jpg
+- image: heartbleed.jpg
   title: "İnternet dünyasının %70'i tehlike altında"
   url: /heartbleed

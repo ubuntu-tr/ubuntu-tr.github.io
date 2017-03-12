@@ -5,9 +5,9 @@
     <div class="{{ class[18] }}"> 
         <div class="{{ cat.color }} {{ class[19] }}">{{ cat.title }}</div>
         {% if forloop.index0 < 10 %}
-        <img src="assets/post{{post.url}}/card_{{post.thumb}}">
+        <img src="assets/post{{post.url}}/card_{{post.image}}">
         {% else %}
-        <img data-src="assets/post{{post.url}}/card_{{post.thumb}}">
+        <img data-src="assets/post{{post.url}}/card_{{post.image}}">
         {% endif %} 
     </div>
     <div class="content">

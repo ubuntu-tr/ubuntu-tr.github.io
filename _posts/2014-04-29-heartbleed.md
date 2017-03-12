@@ -6,7 +6,6 @@ tags: ["Sudo 58. Sayı","heartbleed","openssl","heartbeat","güvenlik"]
 permalink: "heartbleed"
 summary: "Düşünün, internet dünyasının %70’i tehlike altında ve bu tehlike aracılığı ile korsanlar parolalarınız ile hesaplarınızda cirit atıyorlar. Garip, değil mi?"
 image: "heartbleed.jpg"
-thumb: "heartbleed.jpg"
 author: "Barış Can"
 ---
 

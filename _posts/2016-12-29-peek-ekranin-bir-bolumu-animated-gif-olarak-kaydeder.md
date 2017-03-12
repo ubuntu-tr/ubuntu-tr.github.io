@@ -6,7 +6,6 @@ tags: ["peek", "animated gif", "linux peek programı", "linux animated gif yapı
 permalink: "peek-ekranin-bir-bolumu-animated-gif-olarak-kaydeder"
 summary: "Bu yazıda, ekranın bir bölümünü animated gif olarak kaydedip paylaşmanızı sağlayacak Peek programı tanıtılmaktadır."
 image: "peek-ekranin-bir-bolumu-animated-gif-olarak-kaydeder.jpg"
-thumb: "peek-ekranin-bir-bolumu-animated-gif-olarak-kaydeder.jpg"
 author: "siberoloji"
 ---
 Bazen, arkadaşlarınıza Linux içerisinde bir işlemin nasıl yapılacağını yazıyla tarif etmekte sorun yaşıyor olabilirsiniz. Örneğin, "Sistem ayarlarına gir, şuraya tıkla" vb. tarifler, karşılıklı aynı ekran ve masaüstü yöneticisi kullanmıyorsanız daha da karmaşık hale gelebilir. Bunun çözümünü Linux kullanıcıları komut satırını kullanarak halletmeye çalışırlar. Öyle veya böyle, görsellik her zaman daha etkili bir çözümdür.

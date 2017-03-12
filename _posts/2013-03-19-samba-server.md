@@ -6,7 +6,6 @@ tags: ["Sudo 51. Sayı","samba","sunucu","dosya paylaşım"]
 permalink: "samba-server"
 summary: "Eğer kullanmadığınız eski bir bilgisayarınız varsa -ki artık hemen hemen herkesin vardır artık günümüzde herhâlde- onu kolayca bir sunucuya çevirebilirsiniz."
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Ceren Çalıcı"
 ---
 ## Giriş

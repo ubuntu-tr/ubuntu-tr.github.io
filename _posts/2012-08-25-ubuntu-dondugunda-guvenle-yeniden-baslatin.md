@@ -6,7 +6,6 @@ tags: ["Sudo 44. Sayı","sysRq","yeniden başlat","ubuntu","linux"]
 permalink: "ubuntu-dondugunda-guvenle-yeniden-baslatin"
 summary: ""
 image: "1.jpg"
-thumb: "1.jpg"
 author: "Decent"
 ---
 

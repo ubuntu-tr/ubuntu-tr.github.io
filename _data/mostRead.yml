@@ -1,140 +1,140 @@
 # Anasayfa - En çok okunanlar
-- thumb: heartbleed.jpg
+- image: heartbleed.jpg
   title: "Heartbleed"
   url: /heartbleed
   category: home
 
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Eski Bir Bilgisayar Bir Dosya Paylaşım Sunucusuna Nasıl Çevrilir?"
   url: /samba-server
   category: home
 
-- thumb: the-cave.jpeg
+- image: the-cave.jpeg
   title: "The Cave"
   url: /thecave
   category: home
 
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Ubuntu Hakkında En Çok Sorulan Sorular"
   url: /ubuntu-sorular
   category: home
 
-- thumb: 1.png
+- image: 1.png
   title: "Git Sürüm Kontrol Sistemi"
   url: /git-surum-kontrol-sistemi
   category: home
 
 # Haberler - En çok okunanlar
-- thumb: heartbleed.jpg
+- image: heartbleed.jpg
   title: "Heartbleed"
   url: /heartbleed
   category: k1
 
-- thumb: 1.png
+- image: 1.png
   title: "Güvenli Önyükleyici ile Güvenlik Seviyenizi Artırın"
   url: /secure-boot-loader
   category: k1
 
 # Nasıl? - En çok okunanlar
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Eski Bir Bilgisayar Bir Dosya Paylaşım Sunucusuna Nasıl Çevrilir?"
   url: /samba-server
   category: k2
 
-- thumb: 1.jpg
+- image: 1.jpg
   title: "SDL ile Oyun Programcılığı"
   url: /sdl-ile-oyun-programciligi
   category: k2
 
-- thumb: pyhton-programlama.jpeg
+- image: pyhton-programlama.jpeg
   title: "Pyhton Programlama"
   url: /pyhton-programlama-seri-i
   category: k2
 
-- thumb: 1.png
+- image: 1.png
   title: "Kabuk Programlama (Bash)"
   url: /Bash-1
   category: k2
 
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Squid"
   url: /squid
   category: k2
 
 # Oyun/Eğlence - En çok okunanlar
-- thumb: the-cave.jpeg
+- image: the-cave.jpeg
   title: "The Cave"
   url: /thecave
   category: k3
 
-- thumb: trine11.png
+- image: trine11.png
   title: "Trine 2: Complete Story"
   url: /trine-2
   category: k3
 
-- thumb: logo.jpg
+- image: logo.jpg
   title: "Faster Than Light: FTL"
   url: /ftl
   category: k3
 
-- thumb: ets2logo.png
+- image: ets2logo.png
   title: "Euro Truck Simulator 2"
   url: /ets2
   category: k3
 
-- thumb: 1.png
+- image: 1.png
   title: "Linux Oyunlarının Kırılma Noktaları"
   url: /linuxoyun
   category: k3
 
 # Ubuntu+1 - En çok okunanlar
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Ubuntu Hakkında En Çok Sorulan Sorular"
   url: /ubuntu-sorular
   category: k4
 
-- thumb: 1.png
+- image: 1.png
   title: "Fstab Rehberi"
   url: /fstab
   category: k4
 
-- thumb: 1.png
+- image: 1.png
   title: "Sistemi İzleme Merkezi: /proc"
   url: /proc-dizini
   category: k4
 
-- thumb: dejadup.png
+- image: dejadup.png
   title: "Deja Dup"
   url: /deja-dup
   category: k4
 
-- thumb: 1.png
+- image: 1.png
   title: "Upstart"
   url: /upstart
   category: k4
 
 # Tanıtım - En çok okunanlar
-- thumb: 1.png
+- image: 1.png
   title: "Git Sürüm Kontrol Sistemi"
   url: /git-surum-kontrol-sistemi
   category: k5
 
-- thumb: 1.jpeg
+- image: 1.jpeg
   title: "MongoDB"
   url: /mongodb
   category: k5
 
-- thumb: 1.jpg
+- image: 1.jpg
   title: "Açık Kaynak Öğrenme Yönetim Sistemleri"
   url: /lms
   category: k5
 
-- thumb: 1.png
+- image: 1.png
   title: "Linux Çekirdek Geliştirme Süreci"
   url: /linux-cekirdek-gelistirme-sureci
   category: k5
 
-- thumb: filezilla.png
+- image: filezilla.png
   title: "Dosya Aktarmak İçin: FileZilla"
   url: /filezilla
   category: k5
