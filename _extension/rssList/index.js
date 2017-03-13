@@ -4,7 +4,7 @@ index: js
 rssLink: "https://forum.ubuntu-tr.net/index.php?action=.xml;type=rss"
 ---
 var script = document.createElement('script');
-script.src = 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=rssReader&q={{ page.rssLink }}';
+script.src = 'https://api.rss2json.com/v1/api.json?callback=rssReader&rss_url={{ page.rssLink }}';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 function rssReader(data) {
