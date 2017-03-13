@@ -1,0 +1,10 @@
+_site
+.sass-cache
+node_modules
+npm-debug.log
+*.sublime-project
+*.sublime-workspace
+Gemfile.lock
+
+.DS_Store
+Thumbs.db
