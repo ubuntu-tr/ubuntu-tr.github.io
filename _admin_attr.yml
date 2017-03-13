@@ -1,0 +1,31 @@
+- attr: "file.path"
+  title: "Konum"
+  list:
+    show: false
+  edit:
+    order: 1
+    section: 2
+  input:
+    type: "text"
+    
+- attr: "title"
+  title: "Başlık"
+  list:
+    show: true
+  edit:
+    order: 1
+  input:
+    type: "text"
+    
+- attr: "file.content"
+  title: "İçerik"
+  list:
+    show: false
+  edit:
+    order: 1
+    section: 3
+    type: 2
+  input:
+    type: "editor"
+    imageFrom: "assets/post/:permalink"
+    imageTo: "{{ site.assetsDir }}{{ page.permalink }}"

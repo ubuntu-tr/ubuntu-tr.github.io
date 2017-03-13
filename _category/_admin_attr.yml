@@ -1,0 +1,10 @@
+- attr: "color"
+  title: "Renk"
+  list:
+    show: true
+  edit:
+    order: 2
+    type: 2
+  input:
+    type: "select"
+    options: { red: Kırmızı, orange: Turuncu, yellow: Sarı, olive: Zeytin Yeşili, green: Yeşil, teal: Turkuaz, blue: Mavi, violet: Menekşe, purple: Mor, pink: Pembe, brown: Kahverengi, grey: Gri, black: Siyah }

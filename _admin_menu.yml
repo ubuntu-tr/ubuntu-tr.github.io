@@ -1,0 +1,23 @@
+- title: "Yazı"
+  icon: "file text"
+  url: "/list/_posts"
+
+- title: "Kategori"
+  icon: "sitemap"
+  url: "/list/_category"
+
+- title: "Etiket"
+  icon: "tags"
+  url: "/list/_tag"
+
+- title: "Yazar"
+  icon: "user"
+  url: "/list/_other/author"
+
+- title: "Dosya"
+  icon: "image"
+  url: "/list/assets"
+
+- title: "Ana Dizin"
+  icon: "folder open outline"
+  url: "/list/"

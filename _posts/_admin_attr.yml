@@ -1,0 +1,110 @@
+- attr: "title"
+  title: "Makale Başlığı"
+  list:
+    show: true
+  edit:
+    order: 1
+    type: 2
+  input:
+    type: "text"
+
+- attr: "file.path"
+  title: "Konum"
+  list:
+    show: false
+  edit:
+    order: 1
+    section: 2
+  input:
+    type: "slug"
+    emptyValue: ":JPath/:JDate-:title.md"
+
+- attr: "summary"
+  title: "Özet"
+  list:
+    show: false
+  edit:
+    order: 2
+    type: 2
+  input:
+    type: "text"
+    rows: 2
+    
+- attr: "image"
+  title: "Resim"
+  list:
+    show: false
+  edit:
+    order: 6
+    type: 2
+  input:
+    type: "file"
+    path: "assets/post/:permalink"
+    
+- attr: "permalink"
+  title: "Permalink"
+  list:
+    show: false
+  edit:
+    order: 2
+    type: 2
+    section: 2
+  input:
+    type: "slug"
+    emptyValue: ":title"
+    
+- attr: "date"
+  title: "Zaman"
+  list:
+    show: true
+  edit:
+    order: 3
+    type: 2
+    section: 2
+  input:
+    type: "date"
+
+- attr: "author"
+  title: "Yazar"
+  list:
+    show: true
+  edit:
+    order: 5
+    type: 2
+  input:
+    type: "select"
+    isRelated: true
+    multiple: false
+    allowAdditions: true
+    path: "_other/author"
+    value: "title"
+    
+- attr: "categories"
+  title: "Kategori"
+  list:
+    show: true
+  edit:
+    order: 3
+    type: 2
+  input:
+    type: "select"
+    isRelated: true
+    multiple: false
+    allowAdditions: false
+    path: "_category"
+    value: "code"
+
+- attr: "tags"
+  title: "Etiketler"
+  list:
+    show: false
+  edit:
+    order: 4
+    type: 2
+  input:
+    type: "select"
+    isRelated: true
+    multiple: true
+    allowAdditions: true
+    path: "_tag"
+    value: "title"
