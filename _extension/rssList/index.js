@@ -9,8 +9,8 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 function rssReader(data) {
 	var value = '';
-	for (var i in data.responseData.feed.entries) {
-		value = data.responseData.feed.entries[i];
+	for (var i in data.items) {
+		value = data.items[i];
 		$('#rssForum').append('<a class="item" href="'+value.link+'"> <i class="map marker icon"></i> <div class="content"> <div class="description">'+value.title+'</div> </div> </a>');
 	}
 }
