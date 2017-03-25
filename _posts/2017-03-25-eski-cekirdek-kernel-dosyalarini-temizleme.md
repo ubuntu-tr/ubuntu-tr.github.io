@@ -64,7 +64,7 @@ Halen kullanılan sürüm ile ilgili bir hata olduğunda, hatayı düzeltebilmek
 ---
 
 **4. Adım: Eski Kernel Sürümlerini Sistemden Kaldırma Nasıl Yapılır?**
-Aşağıda görmüş olduğunuz ` sudo apt purge linux-image- ` ifadesinden sonra, sisteminizden kaldırmak istediğiniz sürüm numarasını, 2.Adımda elde ettiğiniz çıktıdan kontrol ederek girin. Biz bu örnekte `4.4.0-21` sürümünü kaldırıyoruz. Enter tuşuna bastığınızda apt size kaldırılacak paketleri gösterecektir. Acele etmeden kontrol edin ve Evet seçeneği ile devam edin. İşlem bir miktar uzun sürdüğü için takıldığı düşüncesine kapılmayın. Bekleyin, tamamlanacaktır.
+Aşağıda görmüş olduğunuz `sudo apt purge linux-image-` ifadesinden sonra, sisteminizden kaldırmak istediğiniz sürüm numarasını, 2.Adımda elde ettiğiniz çıktıdan kontrol ederek girin. Biz bu örnekte `4.4.0-21` sürümünü kaldırıyoruz. Enter tuşuna bastığınızda apt size kaldırılacak paketleri gösterecektir. Acele etmeden kontrol edin ve Evet seçeneği ile devam edin. İşlem bir miktar uzun sürdüğü için takıldığı düşüncesine kapılmayın. Bekleyin, tamamlanacaktır.
 
 ```
 sudo apt purge linux-image-4.4.0-21-generic
