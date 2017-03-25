@@ -4,7 +4,7 @@ summary: >-
   İlgilenmeniz gereken bir Linux sistemi varsa ve rahatça başınızı yastığa
   koymak istiyorsanız, en azından aşağıda tavsiye ettiğimiz önlemleri almış
   olmanız gerektiğini belirtmek istiyoruz.
-image: OB81Y60.jpg
+image: linux-sisteminiz-icin-13-tavsiye.jpg
 date: '2017-03-24 00:02'
 permalink: linux-sisteminiz-icin-13-tavsiye
 thumb: linux-sisteminiz-icin-13-tavsiye.jpg
