@@ -15,7 +15,7 @@ tags:
   - uçbirim
 author: Ümit Solmaz
 ---
-### Fontlar Sisteme Nasıl Eklenir?
+**Fontlar Sisteme Nasıl Eklenir?**
 
 Derleyen: [arti17](https://forum.ubuntu-tr.net/index.php?action=profile;u=29963)
 
