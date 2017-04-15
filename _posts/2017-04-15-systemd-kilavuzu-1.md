@@ -18,15 +18,15 @@ author: siberoloji
 ---
 # Systemd Kullanım Kılavuzu
 
-Systemd, kullanımı giderek yaygınlaşan başlatıcı ve sistem yönetim aracıdır. Ana Linux dağıtımların bir çoğu systemd kullanmaya başlamıştır. Değişime ayak uydurmak ve systemd yöneticisinin sunduğu imkanları kullanmak istiyorsanız bu yazı size başlangıç olarak oldukça yol gösterici olacaktır. 
+Systemd, kullanımı giderek yaygınlaşan başlatıcı ve sistem yönetim aracıdır. Ana Linux dağıtımların bir çoğu systemd kullanmaya başlamıştır. Değişime ayak uydurmak ve systemd yöneticisinin sunduğu imkanları kullanmak istiyorsanız bu yazı size başlangıç olarak oldukça yol gösterici olacaktır.
 
-Bu yazıda temel olarak systemd'nin `systemctl` komutuna dair örnekler verilecektir. Bu sayede çalışan servisleri, bu servislerin durumlarını, durumları değiştirmeyi ele alacağız. 
+Bu yazıda temel olarak systemd'nin `systemctl` komutuna dair örnekler verilecektir. Bu sayede çalışan servisleri, bu servislerin durumlarını, durumları değiştirmeyi ele alacağız.
 
 # Servis Yönetimi
 
 Init sistem olarak adlandırılan başlatıcı sisteminin temel işlevi, boot esnasında Linux çekirdeğinin (kernel) yüklenmesinden sonra gerçekleştirilen kullanıcı safhası (userland) elemanlarının başlatılması ve kullanımının yönetilmesidir. Linux işletim sisteminiz çalışırken de servisler systemd tarafından yönetilmeye devam eder. Bu konuyu ifade ettikten sonra bir takım basit işlemlere geçebiliriz.
 
-Systemd için gerçekleştirilecek işlemlerin çoğu unit adı verilen elemanlarla ilgilidir. Unit elemanları, systemd nin anlayacağı şekilde yapılandırılmış dosyalardır. Her bir unit elemanı, sonuna . nokta işaretinden sonra verilen uzantı kullanılarak gruplandırılır. Bu sayede bir unit elemanının hangi işlev ile ilgili olduğu temsil edilir. 
+Systemd için gerçekleştirilecek işlemlerin çoğu unit adı verilen elemanlarla ilgilidir. Unit elemanları, systemd nin anlayacağı şekilde yapılandırılmış dosyalardır. Her bir unit elemanı, sonuna . nokta işaretinden sonra verilen uzantı kullanılarak gruplandırılır. Bu sayede bir unit elemanının hangi işlev ile ilgili olduğu temsil edilir.
 
 Örneğin, `mysqld.service` unit elemanı MySQL hizmeti ile ilgilidir. `tmp.mount` unite elemanı ise tmp disk bölümünün mount edilmesi ile ilgili bir elemandır. Komutları kullanırken sonu `.service` ile biten elemanların `.service` kısmını yamasanız da systemd bunu anlayacaktır. Ancak `.mount` veya `.path `vb. unit elemanların uzantısını mutlaka yazmanız gerekir. Konvansiyonu takip etme açısından her zaman `.service` kısmını da yazmanızı tavsiye ediyoruz. TAB otoatik tamamlama işlevi zaten baş kısmını yazdığınız unit elemanının gerisini kendisi tamamlayacaktır.
 
@@ -39,7 +39,7 @@ Bir systemd servisini başlatmak ve o servise ait unit dosyasında bulunan kural
 sudo systemctl start application.service
 ```
 
-Yukarıda bahsettiğimiz konuyu tekrar hatırlatalım. Buradaki örnekte görülen `application.service` ifadesindeki` .service` kısmını yazmasanızda komut çalışacaktır. 
+Yukarıda bahsettiğimiz konuyu tekrar hatırlatalım. Buradaki örnekte görülen `application.service` ifadesindeki` .service` kısmını yazmasanızda komut çalışacaktır.
 
 ```sh
 sudo systemctl start application
@@ -47,7 +47,7 @@ sudo systemctl start application
 
 ### Servisi Durdurma
 
-Sisteminizde mevcut durumda halen çalışan bir servisi durdurmak için `stop` komutunu kullanıyoruz. 
+Sisteminizde mevcut durumda halen çalışan bir servisi durdurmak için `stop` komutunu kullanıyoruz.
 
 ```sh
 sudo systemctl stop application.service
@@ -61,7 +61,7 @@ Bir servis mevcut durumda çalışıyorsa ve tekrar başlatmak istersek `restart
 sudo systemctl restart application.service
 ```
 
-Çalışan bir servis ile ilgili ayar dosyalarında bir değişiklik yaptınız ancak servisi tamamen yeniden başlatmaya gerek kalmadan ayarların etkin olmasını isterseniz `reload` komutunu kulanabilirsiniz. 
+Çalışan bir servis ile ilgili ayar dosyalarında bir değişiklik yaptınız ancak servisi tamamen yeniden başlatmaya gerek kalmadan ayarların etkin olmasını isterseniz `reload` komutunu kulanabilirsiniz.
 
 ```sh
 sudo systemctl reload application.service
@@ -75,7 +75,7 @@ sudo systemctl reload-or-restart application.service
 
 ## Servisi Aktif ve Pasif Duruma Getirme
 
-Bir önceki başlıkta açıklanan `start`, `stop`, `restart`, `reload` komutları servisi o anda açık bulunan oturum için açma ve kapamaya yarar. Bu komutlar, servisin bilgisayar açılırken başlayıp başlamayacağı ile ilgilenmez. 
+Bir önceki başlıkta açıklanan `start`, `stop`, `restart`, `reload` komutları servisi o anda açık bulunan oturum için açma ve kapamaya yarar. Bu komutlar, servisin bilgisayar açılırken başlayıp başlamayacağı ile ilgilenmez.
 
 ### Aktif Duruma Getirme
 Öncelikle, bir servisin sisteminiz açılırken ***başlamamaya*** ayarlandığını farz edelim. Bu servisi, bilgisayar her açıldığında başlayacak şekilde ayarlamak için `enable` komutu kullanabiliriz. Yani aktif hale getiririz. Aktif hale getirmek, her sistem açıldığında başlaması anlamına gelmektedir. Aşağıda bu duruma örnek verilmiştir.
@@ -84,7 +84,7 @@ Bir önceki başlıkta açıklanan `start`, `stop`, `restart`, `reload` komutlar
 sudo systemctl enable application.service
 ```
 
-> İLERİ DÜZEY: 
+> **İLERİ DÜZEY:**
 > Yukarıdaki komut aslında ne yapıyor? Başlatmak istediğiniz servisin unit elemanı pasif halde de olsa genellikle ( `/lib/systemd/system` veya `/etc/systemd/system`) klasöründe duruyordur. İşte bu konumun symbolic link olarak adlandırdığımız kısayolunu, systemd nin başlangıçta otomatik başlatılacak servisler için baktığı `/etc/systemd/system/application.service.wants.wants` şeklinde oluştur.
 
 ### Pasif Duruma Getirme
@@ -94,7 +94,7 @@ Bir servisi, bilgisayar başlangıcında çalışmaması için ayarlamak istedi�
 sudo systemctl disable application.service
 ```
 
-Bu komut, `enable` komutu ile oluşturulan symbolic link dosyasını silecek ve servisi pasif hale getirecektir. 
+Bu komut, `enable` komutu ile oluşturulan symbolic link dosyasını silecek ve servisi pasif hale getirecektir.
 
 **Hatırlatma**: `enable` ve `disable` komutları, sistem başlangıcı ile ilgili olduğundan, halen açık bulunan oturumda servisi başlatmaz veya durdurmaz. Bunun için **start** veya **stop** komutları kullanılmaktadır ve birbirlerinden farklı işlevleri olan komutlardır.
 
@@ -134,7 +134,7 @@ systemctl is-active application.service
 
 ### is-enabled
 
-Bir servisin, bilgisayar açılırken başlayıp başlamadığını öğrenmek isterseniz `is-enabled` parametresini kullanabilirsiniz. 
+Bir servisin, bilgisayar açılırken başlayıp başlamadığını öğrenmek isterseniz `is-enabled` parametresini kullanabilirsiniz.
 
 ```sh
 systemctl is-enabled application.service
@@ -142,7 +142,7 @@ systemctl is-enabled application.service
 
 ### is-failed
 
-Bir servisin hata verip vermediğini anlamak için `is-failed` parametresini de kullanmanız mümkündür. 
+Bir servisin hata verip vermediğini anlamak için `is-failed` parametresini de kullanmanız mümkündür.
 
 ```sh
 systemctl is-failed application.service
@@ -150,7 +150,7 @@ systemctl is-failed application.service
 
 ## Sistem Genel Durumunu Gözden Geçirme
 
-Yazımızda buraya kadar, tek bir servisin durumu ve başlangıç işlemleri ile ilgili komutları gördük. Sistemin tamamıyla ilgili bilgileri gözden geçireceğimiz bir takım `systemctl` komutlarına bakma zamanı geldi. 
+Yazımızda buraya kadar, tek bir servisin durumu ve başlangıç işlemleri ile ilgili komutları gördük. Sistemin tamamıyla ilgili bilgileri gözden geçireceğimiz bir takım `systemctl` komutlarına bakma zamanı geldi.
 
 ## Çalışan Tüm Üniteler
 
@@ -174,15 +174,15 @@ getty@tty1.service                        loaded active running Getty on tty1
 . . .
 ```
 
-**Sütun Açıklamaları:**
+|Sütunlar | Açıklamalar |
+| ------ | --------|
+|UNIT: |Systemd unit elemanının adını belirtir.|
+|LOAD: |Unit elemanının sistem hafızasına yüklenip yüklenmediğini gösterir.|
+|ACTIVE: |Bir unit elemanının başarıyla başlatılıp başlatılmadığını gösterir.|
+|SUB: |Alt seviye durum bilgisidir. Bazı servisler bilgisayar başlangıçında çalışıp otomatik kapanabilirler. Bu tür servisleri exited (çalıştı ve çıkış yapıldı) olarak görebilirsiniz. Halen çalışıyorsa running ifadesiyle gösterilirler.|
+|DESCRIPTION: |Durumu gösterilen ünitenin kısaca ne işe yaradığını özetler.|
 
-**UNIT**: systemd unit elemanının adını belirtir.
-**LOAD**: Unit elemanının sistem hafızasına yüklenip yüklenmediğini gösterir.
-**ACTIVE**: Bir unit elemanının başarıyla başlatılıp başlatılmadığını gösterir.
-**SUB**: Alt seviye durum bilgisidir. Bazı servisler bilgisayar başlangıçında çalışıp otomatik kapanabilirler. Bu tür servisleri exited (çalıştı ve çıkış yapıldı) olarak görebilirsiniz. Halen çalışıyorsa running ifadesiyle gösterilirler.
-**DESCRIPTION**: Durumu gösterilen ünitenin kısaca ne işe yaradığını özetler. 
-
-> İLERİ DÜZEY AÇIKLAMA:
+> **İLERİ DÜZEY AÇIKLAMA:**
 > Yukarıdaki komut (`systemctl list-units`) sadece aktif halde olan servisleri gösterdiğinden doğal olarak LOAD sütunu daima loaded bilgisini gösterecektir. Loaded yani yüklenmiş servisler haricinde diğer servisleri görmek için demek ki ayrıca bir takım parametreler daha belirtmemiz gerekmektedir. Bunun için ayrı parametre belirtmek gerektiğinden aslında varsayılan durum `list-units` parametresini kullanmaya gerek bile yoktur. Sadece `systemctl` komutunu vermek ile `systemctl list-units` komutunu vermek aynı işe yarar. Kafanız karıştıysa endişelenmeyin, bu bilgi programcılar için gerekli olup çok büyük bir değişiklik ifade etmez.
 
 ## Çalışan veya Çalışmayan Tüm Üniteler
@@ -205,7 +205,7 @@ systemctl list-units --all --state=exited
 
 ### --type
 
-Başka bir filtreleme yöntemi ise `--type` filtresidir. Tipi `service` olan ünite elemanları listelemek için `--type=service` kriteri girilebilir. 
+Başka bir filtreleme yöntemi ise `--type` filtresidir. Tipi `service` olan ünite elemanları listelemek için `--type=service` kriteri girilebilir.
 
 ```sh
 systemctl list-units --type=service
@@ -213,7 +213,7 @@ systemctl list-units --type=service
 
 ## Tüm Unit Elemanları Dosyaları
 
-Burada açıklanacak olan `list-unit-files` ile `list-units` bazen karıştırılabilir. Öncelikle aralarındaki farkı açıklayalım sonra bir örnek verelim. 
+Burada açıklanacak olan `list-unit-files` ile `list-units` bazen karıştırılabilir. Öncelikle aralarındaki farkı açıklayalım sonra bir örnek verelim.
 
 **`list-units`**: systemd tarafından bilgisayarın başlangıcından itibaren işleme tabi tutulmuş (parse edilmiş) tüm unite elemanları ile ilgilenir.
 
@@ -223,7 +223,7 @@ Burada açıklanacak olan `list-unit-files` ile `list-units` bazen karıştırı
 systemctl list-unit-files
 ```
 
-Yukarıdaki komutun çıktısı iki sütundan oluşur. UNIT FILE ve STATE sütunları. State sütunu, "`enabled`" "`disabled`" "`static`" veya "`masked`" değerlerini alır. 
+Yukarıdaki komutun çıktısı iki sütundan oluşur. UNIT FILE ve STATE sütunları. State sütunu, "`enabled`" "`disabled`" "`static`" veya "`masked`" değerlerini alır.
 
 ```sh
 UNIT FILE                                  STATE   
@@ -247,6 +247,7 @@ org.cups.cupsd.path                        enabled
 "**masked**" durumu: Sistemde var olan bir servisin tamamen yasaklandığını belirtir. Bilgisayar başladığında başlayıp başlamayacağını "enable" ve "disable" ile ayarladığımızı hatırlayın. "masked" durumunda olan bir servis, otomatik veya elle dahi olsa "enable" edilemez. Tamamen yasaklanmıştır diyebiliriz.
 
 Bu yazıda systemd ve özellikle systemctl konusuna giriş yapmış olduk. Ortalama bir bilgisayar kullanıcısının, ilk aşamada işine yarayabilecek komutları açıklamaya çalıştım. Yakın bir zamanda bu yazının devamı niteliğinde bir yazı daha yazmayı planlıyorum. Görüş ve önerilerinizi (varsa hataları) bildirmenizden mutluluk duyarız.
+
 # Son notlar:
 1. Yukarıda bulunan örneklerde `application.service` yerine sisteminizde bulunan bir service yazılmalıdır. sistemde `application.service` diye bir servis yoktur. Doğrudan örneği kopyalayıp yapıştırmayın. Örneğin `sudo systemctl stop application.service` yerine `sudo systemctl stop ufw.service` . Peki biz bu servisleri nereden bileceğiz? `systemctl` komut çıktısı size yol gösterecektir.
 2. Yazıda, ünite elemanı, unit elemanı, ünite, servis gibi karışık kulanımlar için eleştirileri şimdiden kabul ediyorum ancak elimden bu kadar geldi. İster istemez karışıyor İngilizce Türkçe manaları.
