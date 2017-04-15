@@ -9,7 +9,7 @@ image: "ubuntu-hakkinda-son-gelismelerle-ilgili-goruslerim.jpg"
 thumb: "ubuntu-hakkinda-son-gelismelerle-ilgili-goruslerim.jpg"
 author: "siberoloji"
 ---
-Linux İşletim sistemleri arasında oldukça önemli bir yere sahip olan Ubuntu'nun, uzun süredir üzerinde çalıştığı Unity, Phone, Tablet ve Convergence Projelerinin artık sürdürülmeyeceği, Mark Shutleworth tarafından bir [blog](https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/) yazısıyla duyuruldu. 5 nisan 2017 tarihli blog yazısının yayınlanması ve haberin Linux Toplulukları tarafından duyulmasının ardından, bu konuda bir çok düşünce yayınlandı. 
+Linux İşletim sistemleri arasında oldukça önemli bir yere sahip olan Ubuntu'nun, uzun süredir üzerinde çalıştığı Unity, Phone, Tablet ve Convergence Projelerinin artık sürdürülmeyeceği, Mark Shuttleworth tarafından bir [blog](https://insights.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence/) yazısıyla duyuruldu. 5 nisan 2017 tarihli blog yazısının yayınlanması ve haberin Linux Toplulukları tarafından duyulmasının ardından, bu konuda bir çok düşünce yayınlandı. 
 
 Ubuntu veya diğer Linux kullanıcıları olarak bizler de bunları okuyup takip ettik. Ubuntu Türkiye forumunda da bu konuda kullanıcı görüşleri paylaşıldı. Olumlu, olumsuz veya tarafsız kalanların tüm görüşlerini, yabancı basın da dahil olmak üzere yaklaşık bir haftadır takip ediyorum. Bu konuda ortaya çıkan başlıkları ve genel düşünceleri bir yazıda toplamak istedim.
 
@@ -30,5 +30,5 @@ Canonical firması da tam bu noktada maliyet ve fayda analizi yapmak durumuna ge
 Unity aslında iyiydi, Gnome şöyle veya KDE olsaydı gibi aslında kimseye bu saatten sonra pek faydası olmayacak konuları bir kenara bırakmak gerekiyor. 
 > Ubuntu Türkiye topluluğu olarak bir araya gelmemizi sağlayan Ubuntu ortak paydasında paylaşım ve yardımlaşmaya devam etmeliyiz diye düşünüyorum. 
 
-Bu noktada RedHat örneğini vermek istiyorum. RedHat, ticari olarak Linux işletim sisteminin başarı sağlayabileceğini göstermiş bir İşletim Sistemi. Ne kadar açık kaynak ve özgür yazılım felsefesine aykırı şeklinde eleştirilse de onların da Fedora ve Açık Kaynak kodlu CentOS sürümleri mevcut. Ubuntu'nun da Canonical tarafından buna benzer bir sürece gireceğini düşünüyorum. Fena mı olur? Hayır bence çok daha iyi olur. Gönüllü olarak katkıda bulunan bir çok yazılımcı ve katkıcı belki de maddi gelir bile etme şansı bulur.
+Bu noktada RedHat örneğini vermek istiyorum. RedHat, ticari olarak Linux işletim sisteminin başarı sağlayabileceğini göstermiş bir İşletim Sistemi. Ne kadar açık kaynak ve özgür yazılım felsefesine aykırı şeklinde eleştirilse de onların da Fedora ve Açık Kaynak kodlu CentOS sürümleri mevcut. Ubuntu'nun da Canonical tarafından buna benzer bir sürece gireceğini düşünüyorum. Fena mı olur? Hayır bence çok daha iyi olur. Gönüllü olarak katkıda bulunan bir çok yazılımcı ve katkıcı belki de maddi gelir elde etme şansı bulur.
 Ne kadar açık kaynak olsa da sonuçta kaynaklar sınırlı. Ne dersiniz?
