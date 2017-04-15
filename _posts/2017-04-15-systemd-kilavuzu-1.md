@@ -84,7 +84,7 @@ Bir önceki başlıkta açıklanan `start`, `stop`, `restart`, `reload` komutlar
 sudo systemctl enable application.service
 ```
 
-> **İLERİ DÜZEY:**
+> <i class="orange spy icon"></i> **İLERİ DÜZEY:**
 > Yukarıdaki komut aslında ne yapıyor? Başlatmak istediğiniz servisin unit elemanı pasif halde de olsa genellikle ( `/lib/systemd/system` veya `/etc/systemd/system`) klasöründe duruyordur. İşte bu konumun symbolic link olarak adlandırdığımız kısayolunu, systemd nin başlangıçta otomatik başlatılacak servisler için baktığı `/etc/systemd/system/application.service.wants.wants` şeklinde oluştur.
 
 ### Pasif Duruma Getirme
@@ -96,7 +96,7 @@ sudo systemctl disable application.service
 
 Bu komut, `enable` komutu ile oluşturulan symbolic link dosyasını silecek ve servisi pasif hale getirecektir.
 
-**Hatırlatma**: `enable` ve `disable` komutları, sistem başlangıcı ile ilgili olduğundan, halen açık bulunan oturumda servisi başlatmaz veya durdurmaz. Bunun için **start** veya **stop** komutları kullanılmaktadır ve birbirlerinden farklı işlevleri olan komutlardır.
+<i class="red circular inverted announcement icon"></i> **Hatırlatma**: `enable` ve `disable` komutları, sistem başlangıcı ile ilgili olduğundan, halen açık bulunan oturumda servisi başlatmaz veya durdurmaz. Bunun için **start** veya **stop** komutları kullanılmaktadır ve birbirlerinden farklı işlevleri olan komutlardır.
 
 ## Servisin Durumunu Kontrol Etme
 
@@ -182,7 +182,7 @@ getty@tty1.service                        loaded active running Getty on tty1
 |SUB: |Alt seviye durum bilgisidir. Bazı servisler bilgisayar başlangıçında çalışıp otomatik kapanabilirler. Bu tür servisleri exited (çalıştı ve çıkış yapıldı) olarak görebilirsiniz. Halen çalışıyorsa running ifadesiyle gösterilirler.|
 |DESCRIPTION: |Durumu gösterilen ünitenin kısaca ne işe yaradığını özetler.|
 
-> **İLERİ DÜZEY AÇIKLAMA:**
+> <i class="orange quote left icon"></i> **İLERİ DÜZEY AÇIKLAMA:**
 > Yukarıdaki komut (`systemctl list-units`) sadece aktif halde olan servisleri gösterdiğinden doğal olarak LOAD sütunu daima loaded bilgisini gösterecektir. Loaded yani yüklenmiş servisler haricinde diğer servisleri görmek için demek ki ayrıca bir takım parametreler daha belirtmemiz gerekmektedir. Bunun için ayrı parametre belirtmek gerektiğinden aslında varsayılan durum `list-units` parametresini kullanmaya gerek bile yoktur. Sadece `systemctl` komutunu vermek ile `systemctl list-units` komutunu vermek aynı işe yarar. Kafanız karıştıysa endişelenmeyin, bu bilgi programcılar için gerekli olup çok büyük bir değişiklik ifade etmez.
 
 ## Çalışan veya Çalışmayan Tüm Üniteler

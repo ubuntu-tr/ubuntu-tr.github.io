@@ -44,4 +44,7 @@ Bu bölümde yazıcı otomatik olarak seçili olsa da tekrar kontrol edin. "driv
 
 Ağa bağlı yazıcınız varsa ve test işlemlerine meraklıysanız, denemenizi ve topluluğa sonuçlarını rapor etmenizi tavsiye ediyoruz.
 
+---
+
+<i class="orange big mail outline icon"></i>
 **Eposta Bağlantısı:**  <https://lists.ubuntu.com/archives/ubuntu-devel/2016-December/039586.html>

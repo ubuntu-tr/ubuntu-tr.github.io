@@ -34,7 +34,7 @@ beğendiğimiz yazı fontlarını,oluşturduğumuz **.fonts** dosyasının için
 
 ![]({{ site.assetsDir }}{{ page.permalink }}/003.png)
 
-bu işlemleri yaptıktan sonra **Uçbirim**i açıyoruz ve alttaki komutumuzu ekliyoruz.Ekledikten sonra Enter'ı tuşluyoruz,(şifre isteyecek) şifremizi giriyoruz ve Enter'ı tuşluyoruz; fontlar sisteme ekleniyor.
+bu işlemleri yaptıktan sonra **Uçbirim**'i açıyoruz ve alttaki komutumuzu ekliyoruz.Ekledikten sonra Enter'ı tuşluyoruz,(şifre isteyecek) şifremizi giriyoruz ve Enter'ı tuşluyoruz; fontlar sisteme ekleniyor.
 
 ```
 sudo fc-cache -fv

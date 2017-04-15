@@ -18,7 +18,8 @@ Linux ve diğer işletim sistemlerinde kullanılan silme işleminin, aslında do
 
 > Görsel arayüz kullanıyorsanız, Geri Dönüşüm Kutusu, Trash veya Çöp kutusu ifadelerini mutlaka bilirsiniz. Masaüstü ortamında dosyaya sağ tıklar ve SİL-Çöpe Gönder seçeneklerinden birisini seçersiniz.
 
-İşletim sisteminize göre, dosyayı Çöp Kutusuna göndermeden silme (Shift+Delete) yöntemi de bulunuyor olabilir. Komut satırından rm komutuyla silme işlemini de gerçekleştirebilirsiniz. (**Not**:Komut satırında silme geri dönüşümsüz yapılır.)
+İşletim sisteminize göre, dosyayı Çöp Kutusuna göndermeden silme (Shift+Delete) yöntemi de bulunuyor olabilir. Komut satırından rm komutuyla silme işlemini de gerçekleştirebilirsiniz.
+(<i class="red warning circle icon"></i>**Not**:Komut satırında silme geri dönüşümsüz yapılır.)
 
 Yukarıda bahsedilen yöntemlerden hangisini uygularsanız uygulayın, aslında dosyalarınız disk alanında yazılı oldukları yerlerden fiziksel olarak silinmezler. Sadece işletim sisteminizin yer bulma kataloğuna, o adresler boştur bilgisi kodlanır. Dolayısıyla üzerine yazılabilir hale gelir. Aslında sildiğinizi düşündüğünüz veriler, diskinizde halen duruyordur. Ne zamanki yeni bilgiler diske yazılmak için yer aranırsa, üzerine yazılır. Peki, gerçekten kalıcı silme nasıl yapılabilir?
 
@@ -32,8 +33,8 @@ shred -vuf --iterations=32 systemctl.xls
 
 Örneğimizde, systemctl.xls isimli, 10752 byte uzunlukta bir dosya bulunmaktadır. Bu dosya için -v (verbose), -u (remove), -f (force) parametreleri verilmiş ve işlemin (iterations) 32 defa tekrar edilmesi istenmiştir. Burada;
 
-Komut | Açıklama 
-:--- | ---: 
+Komut | Açıklama
+--- | ---
 -v (verbose) | Yapılan işlemin ekranda gösterilmesi istenmektedir.
 -u (remove) | Silme işleminden sonra dosyanın bölünmesi ve daha sonra rm komutuyla silinmesi istenmiştir. -u parametresi kullanılmaz ise dosyanın üzerine yazıldığı halde, dosya ismi sistemde görünmeye devam eder. Sadece içeriği okunamaz.
 -f (force) | Bu parametre ile dosya, silmeye karşı korumalı olsa bile yetki değiştirilmesine izin verilmektedir.
