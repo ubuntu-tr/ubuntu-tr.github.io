@@ -1,13 +1,20 @@
 ---
-title: "Systemd Kılavuzu - 1"
-date: 2017-04-15 13:58
-categories: "k5"
-tags: ["systemd"]
-permalink: "systemd-kilavuzu-1"
-summary: "Bu yazı systemd yöneticisinin, systemctl komutunun başlangıç düzeyinde incelenmesinin bir bölümü bulunmaktadır."
-image: "systemd-kilavuzu-1.jpg"
-thumb: "systemd-kilavuzu-1.jpg"
-author: "siberoloji"
+title: Systemd Kılavuzu - 1
+summary: >-
+  Bu yazı systemd yöneticisinin, systemctl komutunun başlangıç düzeyinde
+  incelenmesinin bir bölümü bulunmaktadır.
+image: systemd-kilavuzu-1.jpg
+date: '2017-04-15 13:58'
+permalink: systemd-kilavuzu-1
+thumb: systemd-kilavuzu-1.jpg
+categories: k5
+tags:
+  - systemctl status
+  - list-units
+  - list-unit-files
+  - systemctl
+  - systemd
+author: siberoloji
 ---
 # Systemd Kullanım Kılavuzu
 
