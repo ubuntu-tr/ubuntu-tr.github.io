@@ -12,7 +12,7 @@ author: "Yusuf Düzgün"
 
 Minecraft'ı anlatmaya ilk olarak Wikipedia'dan aldığım şu tanımla başlayabiliriz :).
 
-> Minecraft, küplerle çeşitli tasarımlar yapmanızı sağlayan 2 ve 3
+> <i class="orange quote left icon"></i>Minecraft, küplerle çeşitli tasarımlar yapmanızı sağlayan 2 ve 3
 > boyutlu oynanabilen bir oyundur. Programın ilk sürümleri Markus
 > "Notch" Persson tarafından yazılmıştır ve Notch'un kurduğu Mojang
 > şirketi çatısı altında geliştirilmektedir. Java programlama dilinde
