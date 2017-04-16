@@ -20,10 +20,10 @@ Geçtiğimiz haftalarda, Mark Shuttleworth tarafından duyurulan haberlerin ard�
 Ubuntu İşletim sistemi tabii ki geliştirilmeye devam edecek. 2018 yılının Nisan ayında çıkacak olan Ubuntu 18.04 Unity yerine Gnome Masaüstü ile birlikte dağıtılacak. Tarihi açıdan, Unity 7'nin en son geldiği nokta ile birlikte, yapılan bir takım güncellemelerin de olduğu Ubuntu 17.04 sürümünü indirip arşivlemek isteyenler olabilir.
 
 > <i class="orange left quote icon"></i>**Kişisel Not** (@siberoloji):
-> Mesela, benim elimde şu an var olan Ubuntu 12.04 LTS ve Edubuntu CD'leri var. Hayatımda farklı bir yeri olduğundan, ayrı bir anlam ifade ediyorlar.
+> Mesela, benim elimde şu an Ubuntu 12.04 LTS ve Edubuntu CD'leri var. Hayatımda farklı bir yeri olduğundan, ayrı bir anlam ifade ediyorlar.
+
 
 **En son sürümde neler var?**
-
 **Swap Dosyaları**
 Ubuntu 17.04 sürümünden itibaren kullanılabileceği duyurulan Swap bölümü yerine Swap dosyaları hayata geçirilmiş durumda. Modern bilgisayarların İşlemci hızları ve RAM kapasitelerinin gelişmiş olmasından dolayı ortaya çıkan duruma ayak uydurmak için geliştirilen bu yeni sistem, diğer işletim sistemlerindeki Page File kullanımına benziyor. İlerleyen sürümlerde sıkça duymaya başlayacağımız bu sistemi kullanmak isteyebilirsiniz. (Bkz.: John Ledkov Blog yazısı)
 
