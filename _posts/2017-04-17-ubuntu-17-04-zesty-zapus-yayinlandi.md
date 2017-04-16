@@ -55,6 +55,7 @@ Varsayılan Masaüstü resmini aşağıda görebilirsiniz.
 ---
 
 **İndirme Bağlantısı**
+
 <i class="orange download icon"></i> [İmajlar](http://releases.ubuntu.com/17.04/)
 
 *Torrent:*
