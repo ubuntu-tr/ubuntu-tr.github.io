@@ -1,7 +1,7 @@
 - image: 1.png
   url: 'https://sudo.ubuntu-tr.net'
 
-- image: ubuntu-1704.png
+- image: ubuntu_1704.png
   url: 'https://sudo.ubuntu-tr.net/ubuntu-17-04-zesty-zapus-yayinlandi'
 
 - image: nginx_if.png
