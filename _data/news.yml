@@ -1,7 +1,11 @@
+- image: ubuntu-17-04-zesty-zapus-yayinlandi.jpg
+  title: "Ubuntu 17.04 Zesty Zapus Yayınlandı"
+  url: /ubuntu-17-04-zesty-zapus-yayinlandi
+
 - image: 1.jpeg
   title: "MongoDB 3.2 yayınlandı"
   url: /mongodb
-  
+
 - image: heartbleed.jpg
   title: "İnternet dünyasının %70'i tehlike altında"
   url: /heartbleed
