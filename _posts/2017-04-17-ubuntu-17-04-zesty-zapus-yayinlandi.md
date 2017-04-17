@@ -46,7 +46,7 @@ Varsayılan uygulamalarda öne çıkan LibreOffice 5.3 sürümü bulunuyor. Ribb
 ---
 
 **Diğer Değişiklikler**
-DNS çözümleyicisi olarak artık `systemd-resoled` kullanılmaya başlanmış durumda. `gconf` ayarları artık varsayılan olarak kullanılmıyor. Onun yerini `gsettings` almış durumda.
+DNS çözümleyicisi olarak artık `systemd-resolve` kullanılmaya başlanmış durumda. `gconf` ayarları artık varsayılan olarak kullanılmıyor. Onun yerini `gsettings` almış durumda.
 
 Varsayılan Masaüstü resmini aşağıda görebilirsiniz.
 
