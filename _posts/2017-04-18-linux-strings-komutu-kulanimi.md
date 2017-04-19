@@ -1,5 +1,5 @@
 ---
-title: "Linux Strings Komutu Kulanımı"
+title: "Linux Strings Komutu Kullanımı"
 date: 2017-04-18 22:49
 categories: "k2"
 tags: ["linux komutları", "strings", "komut satırı"]
