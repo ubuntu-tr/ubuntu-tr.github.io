@@ -4,9 +4,9 @@
   url: /heartbleed
   category: home
 
-- image: 1.jpg
-  title: "Eski Bir Bilgisayar Bir Dosya Paylaşım Sunucusuna Nasıl Çevrilir?"
-  url: /samba-server
+- image: systemd-kilavuzu-1.jpg
+  title: "Systemd Kılavuzu - 1"
+  url: /systemd-kilavuzu-1
   category: home
 
 - image: the-cave.jpeg
