@@ -14,7 +14,7 @@ Merhaba, bu yazıda her Linux kullanıcısının mutlaka kullanmayı öğrenmesi
 
 # nmap Nedir?
 
-**Network Mapper** yani ağ haritasını çıkaran program olarak bilinen ```nmap``` detaylarına inildiğinde çok güçlü bir ağ yönetim yardımcısıdır. Bünyesinde barındırdığı bir çok tarama seçeneği ile ağda bulunan cihazların keşfedilmesini sağlar. 
+**Network Mapper** yani ağ haritasını çıkaran program olarak bilinen ```nmap``` detaylarına inildiğinde çok güçlü bir ağ yönetim yardımcısıdır. Bünyesinde barındırdığı bir çok tarama seçeneği ile ağda bulunan cihazların keşfedilmesini sağlar.
 
 **Nmap Script Engine** adı verilen scriptleri kullanarak ağ bulunan cihazların zafiyetlerini keşfetme ve gerekli önlemleri alma imkanı verir. Komut satırından ```nmap``` komutuyla kullanabileceğiniz gibi, GUI sürümünü olan ```zenmap``` programını da kullanabilirsiniz. Bu yazıda komut satırından kullanım gösterilecektir.
 
@@ -63,7 +63,7 @@ lo        Link encap:Local Loopback
           UP LOOPBACK RUNNING  MTU:65536  Metric:1
           RX packets:3324 errors:0 dropped:0 overruns:0 frame:0
           TX packets:3324 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1 
+          collisions:0 txqueuelen:1
           RX bytes:296929 (296.9 KB)  TX bytes:296929 (296.9 KB)
 
 wlp3s0    Link encap:Ethernet  HWaddr 28:c2:dd:a6:af:5b  
@@ -72,12 +72,13 @@ wlp3s0    Link encap:Ethernet  HWaddr 28:c2:dd:a6:af:5b
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:25653 errors:0 dropped:0 overruns:0 frame:0
           TX packets:18391 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
+          collisions:0 txqueuelen:1000
           RX bytes:9525019 (9.5 MB)  TX bytes:2675265 (2.6 MB)
 ```
 
-Komut çıktısında görüldüğü gibi ```wlp3s0``` cihazımız IPv6 formatında ```192.168.1.112``` adresini kullanmaktadır. O zaman, bizimle aynı ağda bulunan cihazlar, bağlı bulundukları DHCP Sunucudan büyük ihtimalle ```192.168.1.1``` ile ```192.168.1.255``` aralığında IP adresleri almıştır. 
-NOT:
+Komut çıktısında görüldüğü gibi ```wlp3s0``` cihazımız IPv6 formatında ```192.168.1.112``` adresini kullanmaktadır. O zaman, bizimle aynı ağda bulunan cihazlar, bağlı bulundukları DHCP Sunucudan büyük ihtimalle ```192.168.1.1``` ile ```192.168.1.255``` aralığında IP adresleri almıştır.
+
+> **NOT:**
 > Akıllı ağ yöneticileri bu IP adresini elle (manual) ayarlarlar ve yukarıda varsayılan önermeden kurtulurlar.
 
 Bu durumda tarayacağımız IP aralığını ```nmap``` komutuna ```192.168.1.1-255``` olarak verebileceğiniz gibi CDR gösterimi ile ```192.168.1.0/24``` şeklinde de verebiliriz.
@@ -136,7 +137,7 @@ Gördüğünüz gibi tarama sonucunda, ağımızda 11 adet IP adresi bulunmuştu
 
 ```nmap``` komutuna bu IP adreslerini tek tek verebileceğiniz gibi aralık belirterek Port taraması da yapabilirsiniz. Biz burada basit olarak açık IP adreslerinden sadece 1 tanesini seçelim ve o IP adresinin 65535 portunu tarayalım. Zaten ```ifconfig``` komutuyla kendi IP adresimizi öğrenmiştik. Onu seçmemeye dikkat edin. İsterseniz onu da (kendinizi) tarayabilirsiniz.
 
-Aşağıda, ```SYN``` taraması kullanıldığından, başında ```sudo``` komutu vermeliyiz çünkü SYN taraması normal kullanıcıların yapabileceği bir tarama değildir. Diğer parametrelerin ne anlama geldiğini yukarıda açıklamıştık. 
+Aşağıda, ```SYN``` taraması kullanıldığından, başında ```sudo``` komutu vermeliyiz çünkü SYN taraması normal kullanıcıların yapabileceği bir tarama değildir. Diğer parametrelerin ne anlama geldiğini yukarıda açıklamıştık.
 Bu komutun ne yapacağını açıkça yazalım ki anlaması kolay osun.
 
 > 192.168.56.169 IP adresinde bulunan varsayılan 1000 portu, Ping Kontrolü yapmadan (```-Pn```), DNS çözümlemesi yapmadan (```-n```), SYN taraması ile (```-sS```)araştır ve ekrana açık bulunan portları (```--open```), sebebiyle birlikte (```--reason```) yazdır. İşlemin devam etme durumunu göster (```-v```)
@@ -163,6 +164,7 @@ Nmap done: 1 IP address (1 host up) scanned in 32.60 seconds
            Raw packets sent: 1398 (61.496KB) | Rcvd: 1359 (54.388KB)
 
 ```
+
 Çıktı sonucunda, yukarıda bulunan açık Portlar görülmektedir. Yanlarında Service sütünunda bir takım servislerin açık bulunduğunu görmekteyiz. Şimdi bu servislerin detaylarını görelim.
 
 ### nmap ile Servis Tarama
@@ -174,12 +176,12 @@ Host is up (0.0040s latency).
 PORT     STATE SERVICE     VERSION
 21/tcp   open  ftp         vsftpd 2.0.8 or later
 53/tcp   open  domain      dnsmasq 2.67
-| dns-nsid: 
+| dns-nsid:
 |_  bind.version: dnsmasq-2.67
 80/tcp   open  http        TP-LINK TD-W8968 http admin
-| http-methods: 
+| http-methods:
 |_  Supported Methods: GET POST
-|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_http-title: Site doesn\'t have a title (text/html; charset=utf-8).
 139/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
 445/tcp  open  netbios-ssn Samba smbd 3.X (workgroup: WORKGROUP)
 1001/tcp open  unknown
@@ -199,22 +201,19 @@ Host script results:
 |   WORKGROUP<00>        Flags: <group><active>
 |   WORKGROUP<1d>        Flags: <unique><active>
 |_  WORKGROUP<1e>        Flags: <group><active>
-| smb-os-discovery: 
+| smb-os-discovery:
 |   OS: Unix (Samba 3.0.14a)
-|   NetBIOS computer name: 
+|   NetBIOS computer name:
 |   Workgroup: WORKGROUP
 |_  System time: 2017-05-20T23:35:58+03:00
-| smb-security-mode: 
+| smb-security-mode:
 |   account_used: guest
 |   authentication_level: share (dangerous)
 |   challenge_response: supported
 |_  message_signing: disabled (dangerous, but default)
-|_smbv2-enabled: Server doesn't support SMBv2 protocol
+|_smbv2-enabled: Server doesn\'t support SMBv2 protocol
 ```
 
-Yukarıdaki ifadeler benzer sonuçları siz kendi taramalarınızda da bulabilirsiniz. Burada yer alan çıktıda, ```Samba 3.0.14a``` kullanıldığı ve bu servisin ```guest``` misafir kullanıcı işlemlerine müsaade ettiği ```authentication_level: share (dangerous)``` satırıyla bize bildirilmektedir. 
+Yukarıdaki ifadeler benzer sonuçları siz kendi taramalarınızda da bulabilirsiniz. Burada yer alan çıktıda, ```Samba 3.0.14a``` kullanıldığı ve bu servisin ```guest``` misafir kullanıcı işlemlerine müsaade ettiği ```authentication_level: share (dangerous)``` satırıyla bize bildirilmektedir.
 
 Sistem ve ağ yöneticisi olarak gerekli önlemleri almanız gerektiğini ```nmap``` komutuyla basitçe göstermiş olduk.
-
-
-
