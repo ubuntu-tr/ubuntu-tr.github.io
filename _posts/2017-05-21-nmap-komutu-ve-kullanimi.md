@@ -10,13 +10,13 @@ thumb: "nmap-komutu-ve-kullanimi.jpg"
 author: "siberoloji"
 ---
 
-Merhaba, bu yazıda her Linux kullanıcısının mutlaka kullanmayı öğrenmesi gereken bir yazılım olan ```nmap``` programından bahsetmek istiyorum. Belik de adını duymuşsunuzdur ancak bu yazıda, bir kaç örnekle birlikte kullanımını göstermek istiyorum.
+Merhaba, bu yazıda her Linux kullanıcısının mutlaka kullanmayı öğrenmesi gereken bir yazılım olan ```nmap``` programından bahsetmek istiyorum. Belki de adını duymuşsunuzdur ancak bu yazıda, bir kaç örnekle birlikte kullanımını göstermek istiyorum.
 
 # nmap Nedir?
 
-**Network Mapper** yani ağ haritasını çıkaran program olarak bilinen ```nmap``` detaylarına inildiğinde çok güçlü bir ağ yönetim yardımcısıdır. Bünyesinde barındırdığı bir çok tarama seçeneği ile ağda bulunan cihazların keşfedilmesini sağlar.
+**Network Mapper** yani ağ haritasını çıkaran program olarak bilinen ```nmap```, detaylarına inildiğinde çok güçlü bir ağ yönetim yardımcısıdır. Bünyesinde barındırdığı bir çok tarama seçeneği ile ağda bulunan cihazların keşfedilmesini sağlar.
 
-**Nmap Script Engine** adı verilen scriptleri kullanarak ağ bulunan cihazların zafiyetlerini keşfetme ve gerekli önlemleri alma imkanı verir. Komut satırından ```nmap``` komutuyla kullanabileceğiniz gibi, GUI sürümünü olan ```zenmap``` programını da kullanabilirsiniz. Bu yazıda komut satırından kullanım gösterilecektir.
+**Nmap Script Engine** adı verilen scriptleri kullanarak, ağda bulunan cihazların zafiyetlerini keşfetme ve gerekli önlemleri alma imkanı verir. Komut satırından ```nmap``` komutuyla kullanabileceğiniz gibi, GUI sürümü olan ```zenmap``` programını da kullanabilirsiniz. Bu yazıda komut satırından kullanım gösterilecektir.
 
 # nmap Kurulum
 
@@ -26,7 +26,7 @@ Nmap programı hemen hemen tüm dağıtımların paket depolarında yer almaktad
 sudo apt install nmap
 ```
 
-İşte bu kadar. ```nmap``` bilgisayarınıza kuruldu. Komut satırında ```nmap --help``` komutunu verdiğinizde oldukça detaylı kullanım parametrelerini görebilirsiniz. Bu yazıda hepsinin detayına girmemiz mümkün olmadığından çoğunlukla kullanılanları göreceğiz.
+İşte bu kadar. ```nmap``` bilgisayarınıza kuruldu. Komut satırında ```nmap --help``` komutunu verdiğinizde, oldukça detaylı kullanım parametrelerini görebilirsiniz. Bu yazıda hepsinin detayına girmemiz mümkün olmadığından çoğunlukla kullanılanları göreceğiz.
 
 # nmap Tarama Adımları
 
@@ -53,7 +53,7 @@ sudo apt install nmap
 
 ## Taranacak IP Aralığı
 
-Taramamıza başlamadan önce hangi IP aralığını tarayacağımızı tespit etmeliyiz. Tabii ki bizim de üyesi bulunduğumuz bir ağı taramamız gereklidir. ```ifconfig``` komutuyla bilgisayarımızın IP adresini öğrenelim.
+Taramamıza başlamadan önce, hangi IP aralığını tarayacağımızı tespit etmeliyiz. Tabii ki bizim de üyesi bulunduğumuz bir ağı taramamız gereklidir. ```ifconfig``` komutuyla bilgisayarımızın IP adresini öğrenelim.
 
 ```sh
 ifconfig
@@ -76,22 +76,27 @@ wlp3s0    Link encap:Ethernet  HWaddr 28:c2:dd:a6:af:5b
           RX bytes:9525019 (9.5 MB)  TX bytes:2675265 (2.6 MB)
 ```
 
-Komut çıktısında görüldüğü gibi ```wlp3s0``` cihazımız IPv6 formatında ```192.168.1.112``` adresini kullanmaktadır. O zaman, bizimle aynı ağda bulunan cihazlar, bağlı bulundukları DHCP Sunucudan büyük ihtimalle ```192.168.1.1``` ile ```192.168.1.255``` aralığında IP adresleri almıştır.
+Komut çıktısında görüldüğü gibi ```wlp3s0``` cihazımız, IPv4 formatında ```192.168.1.112``` adresini kullanmaktadır. O zaman, bizimle aynı ağda bulunan cihazlar, bağlı bulundukları DHCP Sunucudan büyük ihtimalle ```192.168.1.1``` ile ```192.168.1.255``` aralığında IP adresleri almıştır.
 
 > **NOT:**
 > Akıllı ağ yöneticileri bu IP adresini elle (manual) ayarlarlar ve yukarıda varsayılan önermeden kurtulurlar.
 
-Bu durumda tarayacağımız IP aralığını ```nmap``` komutuna ```192.168.1.1-255``` olarak verebileceğiniz gibi CDR gösterimi ile ```192.168.1.0/24``` şeklinde de verebiliriz.
+Bu durumda tarayacağımız IP aralığını ```nmap``` komutuna ```192.168.1.1-255``` olarak verebileceğiniz gibi CIDR gösterimi ile ```192.168.1.0/24``` şeklinde de verebiliriz.
 
 ## nmap Tarama Adımları
 
 Bu noktadan sonra artık tarama yapabiliriz. Bu tarama işlemini de 3 safhada ele almalısınız. Her bir safhada bulacağınız bilgiler, bir sonraki safhada kullanılacaktır.
 
-1. IP Tarama
+1. IP Tarama:
+
 Bağlı bulunduğunuz ağdaki cihazları ve aldıkları IP adresleri öğrenmek için yapılır.
-2. Port Tarama
+
+2. Port Tarama:
+
 Ağda bulunan IP adreslerini kullanarak, bu adreslerde hangi portların açık olduğunu bulmak için kullanılır.
-3. Portlarda Servis Tarama
+
+3. Portlarda Servis Tarama:
+
 Portlarda bulunan servislerin neler olduğunu tespit etmek için kullanılır.
 
 ### nmap ile Açık IP adreslerini Öğrenme
@@ -135,12 +140,11 @@ Gördüğünüz gibi tarama sonucunda, ağımızda 11 adet IP adresi bulunmuştu
 
 ### nmap ile Açık Portları Öğrenme
 
-```nmap``` komutuna bu IP adreslerini tek tek verebileceğiniz gibi aralık belirterek Port taraması da yapabilirsiniz. Biz burada basit olarak açık IP adreslerinden sadece 1 tanesini seçelim ve o IP adresinin 65535 portunu tarayalım. Zaten ```ifconfig``` komutuyla kendi IP adresimizi öğrenmiştik. Onu seçmemeye dikkat edin. İsterseniz onu da (kendinizi) tarayabilirsiniz.
+```nmap``` komutuna bu IP adreslerini tek tek verebileceğiniz gibi, aralık belirterek Port taraması da yapabilirsiniz. Biz burada basit olarak açık IP adreslerinden sadece 1 tanesini seçelim ve o IP adresinin varsayılan 1000 portunu tarayalım. Zaten ```ifconfig``` komutuyla kendi IP adresimizi öğrenmiştik. Onu seçmemeye dikkat edin. İsterseniz onu da (kendinizi) tarayabilirsiniz.
 
-Aşağıda, ```SYN``` taraması kullanıldığından, başında ```sudo``` komutu vermeliyiz çünkü SYN taraması normal kullanıcıların yapabileceği bir tarama değildir. Diğer parametrelerin ne anlama geldiğini yukarıda açıklamıştık.
-Bu komutun ne yapacağını açıkça yazalım ki anlaması kolay osun.
+Aşağıda, ```SYN``` taraması kullanıldığından, başında ```sudo``` komutu vermeliyiz çünkü SYN taraması normal kullanıcıların yapabileceği bir tarama değildir. Diğer parametrelerin ne anlama geldiğini yukarıda açıklamıştık. Bu komutun ne yapacağını açıkça yazalım ki anlaması kolay osun.
 
-> 192.168.56.169 IP adresinde bulunan varsayılan 1000 portu, Ping Kontrolü yapmadan (```-Pn```), DNS çözümlemesi yapmadan (```-n```), SYN taraması ile (```-sS```)araştır ve ekrana açık bulunan portları (```--open```), sebebiyle birlikte (```--reason```) yazdır. İşlemin devam etme durumunu göster (```-v```)
+> 192.168.1.169 IP adresinde bulunan varsayılan 1000 portu, Ping Kontrolü yapmadan (```-Pn```), DNS çözümlemesi yapmadan (```-n```), SYN taraması ile (```-sS```)araştır ve ekrana açık bulunan portları (```--open```), sebebiyle birlikte (```--reason```) yazdır. İşlemin devam etme durumunu göster (```-v```)
 
 ```sh
 sudo nmap -Pn -sS -n -v --reason --open 192.168.1.169
@@ -165,9 +169,11 @@ Nmap done: 1 IP address (1 host up) scanned in 32.60 seconds
 
 ```
 
-Çıktı sonucunda, yukarıda bulunan açık Portlar görülmektedir. Yanlarında Service sütünunda bir takım servislerin açık bulunduğunu görmekteyiz. Şimdi bu servislerin detaylarını görelim.
+Çıktı sonucunda, yukarıda bulunan açık Portlar görülmektedir. Yanlarında Service sütünunda bir takım servislerin açık bulunduğunu görmekteyiz. Şimdi bu servislerin detaylarını bulmaya çalışalım.
 
-### nmap ile Servis Tarama
+### nmap ile Servis Versiyon Taraması
+
+Bu örnekte, **192.168.1.169** IP adresinde bulunan açık Portlarda, **SYN** paketleri ile **Versiyon** Taraması yapılmaktadır.
 
 ```sh
 sudo nmap -sS -sV -sC -n -v -p 21,53,80,139,445,1001,1900  192.168.1.169
@@ -188,7 +194,7 @@ PORT     STATE SERVICE     VERSION
 1900/tcp open  upnp        Portable SDK for UPnP devices 1.6.19 (Linux 3.4.11-rt19; UPnP 1.0)
 ```
 
-Komutun çıktısında, daha fazla detay vardır. Yukarıda sadece açık bulunan Portlar ve servisler listelenmiştir. Son olarak ```nmap``` komutunun bize sağladığı diğer sonuca bakalım.
+Komutun çıktısının ilk bölümü yukarıdaki gibidir. Bu çıktıdan, açık portlarda çalışan servisler ve **Versiyon** bilgisini görebiliriz. Son olarak yaptığımız ```nmap``` taramasının sonucunun ikinci bölümüne bakalım.
 
 ```sh
 Host script results:
@@ -214,6 +220,6 @@ Host script results:
 |_smbv2-enabled: Server doesn\'t support SMBv2 protocol
 ```
 
-Yukarıdaki ifadeler benzer sonuçları siz kendi taramalarınızda da bulabilirsiniz. Burada yer alan çıktıda, ```Samba 3.0.14a``` kullanıldığı ve bu servisin ```guest``` misafir kullanıcı işlemlerine müsaade ettiği ```authentication_level: share (dangerous)``` satırıyla bize bildirilmektedir.
+Yukarıdaki ifadelere benzer sonuçları, siz kendi taramalarınızda da bulabilirsiniz. Burada yer alan çıktıda, ```Samba 3.0.14a``` kullanıldığı ve bu servisin ```guest``` misafir kullanıcı işlemlerine müsaade ettiği ```authentication_level: share (dangerous)``` satırıyla bize bildirilmektedir.
 
 Sistem ve ağ yöneticisi olarak gerekli önlemleri almanız gerektiğini ```nmap``` komutuyla basitçe göstermiş olduk.
