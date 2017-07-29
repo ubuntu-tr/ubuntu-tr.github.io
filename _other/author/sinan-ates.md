@@ -1,3 +1,0 @@
----
-title: "Sinan Ateş"
----

@@ -1,4 +1,0 @@
----
-title: "convergence"
-code: "convergence"
----

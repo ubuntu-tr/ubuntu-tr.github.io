@@ -1,4 +1,0 @@
----
-title: "Hakkında"
-code: "hakkinda"
----

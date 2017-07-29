@@ -1,3 +1,0 @@
----
-title: "Monty_Python"
----

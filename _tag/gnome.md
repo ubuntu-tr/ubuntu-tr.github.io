@@ -1,4 +1,0 @@
----
-title: "gnome"
-code: "gnome"
----

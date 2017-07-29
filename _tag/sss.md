@@ -1,3 +1,0 @@
----
-title: "sık sorulan sorular"
----

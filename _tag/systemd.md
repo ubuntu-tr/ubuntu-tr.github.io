@@ -1,4 +1,0 @@
----
-title: "systemd"
-code: "systemd"
----

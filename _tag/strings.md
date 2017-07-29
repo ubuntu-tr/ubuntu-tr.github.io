@@ -1,4 +1,0 @@
----
-title: "strings"
-code: "strings"
----

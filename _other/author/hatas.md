@@ -1,4 +1,0 @@
----
-title: "hatas"
-code: "hatas"
----
