@@ -59,7 +59,7 @@ footer > nav a:hover {
 footer > .bilgi {
     width: 90%;
     margin: 0 auto;
-    background: url("theme/ubuntu-tr/images/logo-ubuntu-grey.tif") no-repeat scroll right 20px rgba(0, 0, 0, 0);
+    background: url("theme/ubuntu-tr/images/github-logo.png") no-repeat scroll right 20px rgba(0, 0, 0, 0);
     font-size: 12px;
     line-height: 14px;
     font-weight: 300;
