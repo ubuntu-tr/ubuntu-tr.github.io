@@ -158,7 +158,7 @@ nav > a:last-child {
     background: #000000;
 }
 .menu > a:not(:first-child):not(:last-child):hover {
-    background: #000000;
+    background: #E1662F;
 }
 .menu > a:not(:first-child)::before {
     content: " ";
