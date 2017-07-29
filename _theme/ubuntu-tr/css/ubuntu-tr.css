@@ -151,11 +151,11 @@ nav > a:last-child {
     display: block;
     padding: 12px 14px 0px;
     font-size: 14px;
-    border-left: 1px solid #C64012;
+    border-left: 1px solid #000000;
     height: 47px;
 }
 .menu > a.aktif {
-    background: #B83A10;
+    background: #000000;
 }
 .menu > a:not(:first-child):not(:last-child):hover {
     background: #E1662F;
