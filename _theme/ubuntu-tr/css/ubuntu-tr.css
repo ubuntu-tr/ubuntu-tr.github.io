@@ -243,8 +243,8 @@ input[type=search].search-field:focus {
     }
     #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
-        background: #000000;
-        border-top: 1px solid #000000;
+        background: #0277BD;
+        border-top: 1px solid #0277BD;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
         color: black;
