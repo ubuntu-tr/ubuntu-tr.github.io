@@ -158,11 +158,11 @@ nav > a:last-child {
     background: #000000;
 }
 .menu > a:not(:first-child):not(:last-child):hover {
-    background: #E1662F;
+    background: #00BCD4;
 }
 .menu > a:not(:first-child)::before {
     content: " ";
-    border-left: 1px solid #EC5B29;
+    border-left: 1px solid #00BCD4;
     padding-right: 14px;
     margin: -12px 0 0 -14px;
     display: block;
@@ -215,7 +215,7 @@ input[type=search].search-field {
 }
 input[type=search].search-field:focus {
     background-color: #FFFFFF;
-    border: 2px solid #C3C0AB;
+    border: 2px solid #000000;
     cursor: text;
     outline: 0 none;
     width: 250px;
@@ -243,8 +243,8 @@ input[type=search].search-field:focus {
     }
     #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
-        background: #E95420;
-        border-top: 1px solid #EC5B29;
+        background: #000000;
+        border-top: 1px solid #000000;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
         color: black;
