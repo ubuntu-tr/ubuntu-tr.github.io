@@ -162,7 +162,7 @@ nav > a:last-child {
 }
 .menu > a:not(:first-child)::before {
     content: " ";
-    border-left: 1px solid #000000;
+    border-left: 1px solid #EC5B29;
     padding-right: 14px;
     margin: -12px 0 0 -14px;
     display: block;
@@ -243,8 +243,8 @@ input[type=search].search-field:focus {
     }
     #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
-        background: #0277BD;
-        border-top: 1px solid #0277BD;
+        background: #E95420;
+        border-top: 1px solid #EC5B29;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
         color: black;
