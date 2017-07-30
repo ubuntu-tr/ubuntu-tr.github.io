@@ -7,7 +7,7 @@
             </label>
             Nuri Çilengir
         </a>
-        <a href="/">Ana Sayfa</a>
+        <a href="/">Home Page</a>
         {% assign posts = site.category | sort:'order' %}
         {% for post in posts %}
             <a class="{% if post.url == page.url %}aktif{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
