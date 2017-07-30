@@ -1,0 +1,13 @@
+---
+index: systemHead
+---
+{% capture temp2 %}
+	{% assign items = site.theme | sort: 'order', 'last' %}
+	{% for ext in items %}{% 
+	    if ext.index == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+	{% assign items = site.extension | sort: 'order' %}
+	{% for ext in items %}{% 
+	    if ext.index == "head" %}{{ ext.content }}{% endif %}{% 
+	endfor %}
+{% endcapture %}{{ temp2 | scssify }}
