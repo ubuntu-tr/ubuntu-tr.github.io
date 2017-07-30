@@ -110,21 +110,21 @@ h5.ui.header {
 /*--- Orange ---*/
 
 .ui.orange.header {
-  color: #F2711C !important;
+  color: #00BCD4 !important;
 }
 a.ui.orange.header:hover {
   color: #f26202 !important;
 }
 .ui.orange.dividing.header {
-  border-bottom: 2px solid #F2711C;
+  border-bottom: 2px solid #00BCD4;
 }
 
 /* Inverted */
 .ui.inverted.orange.header {
-  color: #FF851B !important;
+  color: #00BCD4 !important;
 }
 a.ui.inverted.orange.header:hover {
-  color: #ff7701 !important;
+  color: #00BCD4 !important;
 }
 
 /*-------------------
