@@ -5,7 +5,7 @@
             <label for="menuDugme1">
                <i class="sidebar icon"></i>
             </label>
-            sudo
+            Nuri Çilengir
         </a>
         <a href="/">Ana Sayfa</a>
         {% assign posts = site.category | sort:'order' %}
