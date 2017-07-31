@@ -21,7 +21,7 @@
         {% for post in posts %}
             <a class="{% if post.url == page.url %}aktif{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
         {% endfor %}
-        <a href="sendeyaz/" target="_blank">Sen de Yaz</a>
+        
         <a></a>
         <form name="search-form" class="search-form" action="" method="get">
             <input type="search" title="Arama:" name="ara" value="" placeholder="Ara …" class="search-field">
