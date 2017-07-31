@@ -9,7 +9,7 @@
         <a href="https://twitter.com/_cilengirnuri">Twitter</a>
         <a href="https://stackoverflow.com/users/8382507/aimlesslight?tab=profile">Stack Overflow</a>
     </nav>
-<header>
+</header>
     <nav class="menu">
         <a class="logo" href="/">
             <label for="menuDugme1">

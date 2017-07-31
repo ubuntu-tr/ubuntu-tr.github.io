@@ -158,11 +158,11 @@ nav > a:last-child {
     background: #000000;
 }
 .menu > a:not(:first-child):not(:last-child):hover {
-    background: #EC5B29;
+    background: #00BCD4;
 }
 .menu > a:not(:first-child)::before {
     content: " ";
-    border-left: 1px solid #EC5B29;
+    border-left: 1px solid #00BCD4;
     padding-right: 14px;
     margin: -12px 0 0 -14px;
     display: block;
