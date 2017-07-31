@@ -8,7 +8,6 @@
 			 <a href="https://nnuriilengir.github.io/about/">About</a>
 		</div>
 		<div>
-			<a href="http://www.ubuntu-tr.net/">Home Page</a>
 			<a href="https://github.com/nnuriilengir">GitHub</a>
 			<a href="https://www.facebook.com/profile.php?id=100009844125117">Facebook</a>
 			<a href="https://twitter.com/_cilengirnuri">Twitter</a>
