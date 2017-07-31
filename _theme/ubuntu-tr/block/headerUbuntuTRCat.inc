@@ -3,7 +3,7 @@
     <nav class="ustMenu">
         <a href="https://nnuriilengir.github.io/">Home Page</a>
         <a href="https://github.com/nnuriilengir">GitHub</a>
-        <a class="aktif" href="/">SUDO</a>
+        <a class="aktif" href="/">Nuri Çilengir</a>
         <a href="https://www.facebook.com/profile.php?id=100009844125117">Facebook</a>
         <a href="https://twitter.com/_cilengirnuri">Twitter</a>
         <a href="https://stackoverflow.com/users/8382507/aimlesslight?tab=profile">Stack Overflow</a>
@@ -14,9 +14,9 @@
             <label for="menuDugme1">
                <i class="sidebar icon"></i>
             </label>
-            sudo
+            Nuri Çilengir
         </a>
-        <a href="/">Ana Sayfa</a>
+        <a href="/">Home Page</a>
         {% assign posts = site.category | sort:'order' %}
         {% for post in posts %}
             <a class="{% if post.url == page.url %}aktif{% endif %}" href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
