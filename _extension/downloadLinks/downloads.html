@@ -1,0 +1,43 @@
+---
+order: 6
+index: sidebar
+
+name: Ubuntu 17.04
+link_32Bit: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-i386.iso
+link_64Bit: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
+
+name2: Ubuntu 16.04.2 (Uzun Süreli Destek)
+link2_32Bit: http://releases.ubuntu.com/16.04.2/ubuntu-16.04.2-desktop-i386.iso
+link2_64Bit: http://releases.ubuntu.com/16.04.2/ubuntu-16.04.2-desktop-amd64.iso
+
+header: "Ubuntu İndirme Bağlantısı"
+---
+<div class="ui card fluid">
+    <div class="content">
+      <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.png"> {{ page.name }}
+    </div>
+    <div class="extra content ui buttons tiny">
+      <a href="{{ page.link_32Bit }}" target="_blank" href="#" class="ui button blue">
+              <i class="cloud download icon"></i>
+        32 Bit İndir</a>
+
+      <a href="{{ page.link_64Bit }}" target="_blank" class="ui button orange">
+              <i class="cloud download icon"></i>
+        64 Bit İndir</a>
+    </div>
+</div>
+
+<div class="ui card fluid">
+    <div class="content">
+      <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.png"> {{ page.name2 }}
+    </div>
+    <div class="extra content ui buttons tiny">
+      <a href="{{ page.link2_32Bit }}" target="_blank" class="ui button blue">
+              <i class="cloud download icon"></i>
+        32 Bit İndir</a>
+
+      <a href="{{ page.link2_64Bit }}" target="_blank" class="ui button orange">
+              <i class="cloud download icon"></i>
+        64 Bit İndir</a>
+    </div>
+</div>
