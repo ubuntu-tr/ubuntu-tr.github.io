@@ -7,8 +7,7 @@
         <a href="https://www.facebook.com/profile.php?id=100009844125117">Facebook</a>
         <a href="https://twitter.com/_cilengirnuri">Twitter</a>
         <a href="https://stackoverflow.com/users/8382507/aimlesslight?tab=profile">Stack Overflow</a>
-		<a href="https://nnuriilengir.github.io/">About</a>
-        <a href="#">nuriilengir@gmail.com</a>
+		<a href="https://nnuriilengir.github.io/">About/Contact</a>
     </nav>
     <nav class="menu">
         <a class="logo" href="/">
