@@ -59,7 +59,7 @@ footer > nav a:hover {
 footer > .bilgi {
     width: 90%;
     margin: 0 auto;
-    background: url("theme/ubuntu-tr/images/logo-ubuntu-grey.png") no-repeat scroll right 20px rgba(0, 0, 0, 0);
+    background: url("theme/ubuntu-tr/images/github-logo.png") no-repeat scroll right 20px rgba(0, 0, 0, 0);
     font-size: 12px;
     line-height: 14px;
     font-weight: 300;
@@ -127,17 +127,17 @@ nav > a:last-child {
     display: block;
 }
 .ustMenu > a:hover {
-    color: #E95420;
+    color: #000000;
 }
 .ustMenu >  a.aktif {
-    border-top: 2px solid #E95420;
-    color: #E95420;
+    border-top: 2px solid #000000;
+    color: #000000;
     opacity: 1;
     padding-top: 3px;
 }
 
 .menu {
-    background: none repeat scroll 0 0 #E95420;
+    background: none repeat scroll 0 0 #000000;
     box-shadow: 0 2px 2px -2px #777777 inset, 2px 1px #FFFFFF;
     width: 100%;
     height: 47px;
@@ -151,18 +151,18 @@ nav > a:last-child {
     display: block;
     padding: 12px 14px 0px;
     font-size: 14px;
-    border-left: 1px solid #C64012;
+    border-left: 1px solid #000000;
     height: 47px;
 }
 .menu > a.aktif {
-    background: #B83A10;
+    background: #000000;
 }
 .menu > a:not(:first-child):not(:last-child):hover {
-    background: #E1662F;
+    background: #00BCD4;
 }
 .menu > a:not(:first-child)::before {
     content: " ";
-    border-left: 1px solid #EC5B29;
+    border-left: 1px solid #00BCD4;
     padding-right: 14px;
     margin: -12px 0 0 -14px;
     display: block;
@@ -215,7 +215,7 @@ input[type=search].search-field {
 }
 input[type=search].search-field:focus {
     background-color: #FFFFFF;
-    border: 2px solid #C3C0AB;
+    border: 2px solid #000000;
     cursor: text;
     outline: 0 none;
     width: 250px;
@@ -243,8 +243,8 @@ input[type=search].search-field:focus {
     }
     #menuDugme1:checked + header > nav.menu > a:not(:first-child):not(:empty) {
         display: block;
-        background: #E95420;
-        border-top: 1px solid #EC5B29;
+        background: #000000;
+        border-top: 1px solid #000000;
     }
     #menuDugme1:checked + header > nav.menu > a > label {
         color: black;

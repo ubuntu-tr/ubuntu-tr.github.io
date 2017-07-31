@@ -1,5 +1,5 @@
 # Site settings
-url: "https://sudo.ubuntu-tr.net"
+url: "https://nnuriilengir.github.io"
 
 themeDir: theme/ubuntu-tr
 listDir: _theme/ubuntu-tr/layouts/list

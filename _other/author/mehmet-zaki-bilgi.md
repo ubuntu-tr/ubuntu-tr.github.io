@@ -1,3 +1,0 @@
----
-title: "Mehmet Zaki Bilgi"
----

@@ -1,4 +1,0 @@
----
-title: "shred"
-code: "shred"
----

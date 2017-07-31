@@ -1,4 +1,0 @@
----
-title: "siberoloji"
-code: "siberoloji"
----

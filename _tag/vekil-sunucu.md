@@ -1,3 +1,0 @@
----
-title: "vekil sunucu"
----
