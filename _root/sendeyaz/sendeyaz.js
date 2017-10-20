@@ -209,7 +209,7 @@ $( document ).ready(function() {
 function uploadImage(file) {
 	var url = "";
 	var formData = new FormData();
-	formData.append('Filedata', file.files[0]);
+	formData.append('file', file.files[0]);
 	formData.append('upload_session', 'Lx9pua3GBDDc9SCOzNStV0GCK4ZkyAGW');
 	formData.append('token', '61aa06d6116f7331ad7b2ba9c7fb707ec9b182e8');
 	formData.append('numfiles', '1');
@@ -221,13 +221,13 @@ function uploadImage(file) {
 	formData.append('forum', '');
 
     var request = new XMLHttpRequest();
-	request.open("POST", "https://postimage.org/upload.php", false);
+	request.open("POST", "https://postimages.org/json", false);
 	request.send(formData);
 
 	if (request.status === 200 || request.status === 201) {
 		var url2 = JSON.parse(request.responseText).url;
 		request = new XMLHttpRequest();
-		request.open("GET", "https://postimage.org/modredir.php?dz=1&to="+url2+"&mode=phpbb3&hash=1&lang=english&code=hotlink&content=&forumurl=http://postimage.org/&areaid=0&errors=0", false);
+		request.open("GET", "https://postimages.org/mod?dz=1&to="+url2+"&mode=phpbb3&hash=1&lang=english&code=hotlink&content=&forumurl=http://postimage.org/&areaid=0&errors=0", false);
 		request.send();
 		if (request.status === 200 || request.status === 201)
 			url = request.responseText.match(/\[img\](.*)\[\/img\]/)[1];
