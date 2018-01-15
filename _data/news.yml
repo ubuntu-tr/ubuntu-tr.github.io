@@ -1,11 +1,7 @@
-- image: ubuntu-17-04-zesty-zapus-yayinlandi.jpg
-  title: "Ubuntu 17.04 Zesty Zapus Yayınlandı"
-  url: /ubuntu-17-04-zesty-zapus-yayinlandi
+- image: ubuntu-kurulum-kaliplarinin-indirme-baglantilari.jpg
+  title: "Ubuntu Kurulum Kalıplarının İndirme Bağlantıları"
+  url: /ubuntu-kurulum-kaliplarinin-indirme-baglantilari
 
-- image: 1.jpeg
-  title: "MongoDB 3.2 yayınlandı"
-  url: /mongodb
-
-- image: heartbleed.jpg
-  title: "İnternet dünyasının %70'i tehlike altında"
-  url: /heartbleed
+- image: ubuntu-17-10.jpg
+  title: Ubuntu 17.10 "Artful Aardvark" Yayınlandı
+  url: /ubuntu-17-10-artful-aardvark-yayinlandi
