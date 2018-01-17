@@ -4,7 +4,7 @@ order: 1
 post: css
 ---
 /* Source: https://github.com/liamsymonds/simplygrey-jekyll/blob/master/css/syntax.css */
-pre.highlight { background: #333333 }
+.markdown-body pre.highlight { background: #333333 }
 .highlight .hll { background-color: #49483e }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #f8f8f2; } /* Error */
