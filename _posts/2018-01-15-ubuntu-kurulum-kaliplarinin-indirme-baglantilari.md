@@ -19,9 +19,9 @@ author: "bugra9"
 [Ubuntu 18.04.1 LTS Server 64-bit](http://releases.ubuntu.com/18.04/ubuntu-18.04.1-live-server-amd64.iso)
 
 **Uzun Süreli Destek (2021 yılına kadar destek)**
-[Ubuntu 16.04.4 LTS Desktop 64-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.4-desktop-amd64.iso)
-[Ubuntu 16.04.4 LTS Desktop 32-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.4-desktop-i386.iso)
-[Ubuntu 16.04.4 LTS Server 64-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.4-server-amd64.iso)
+[Ubuntu 16.04.5 LTS Desktop 64-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.5-desktop-amd64.iso)
+[Ubuntu 16.04.5 LTS Desktop 32-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.5-desktop-i386.iso)
+[Ubuntu 16.04.5 LTS Server 64-bit](http://releases.ubuntu.com/16.04/ubuntu-16.04.5-server-amd64.iso)
 
 ## Kubuntu
 [Kubuntu 18.04.1 Desktop 64-bit](http://cdimage.ubuntu.com/kubuntu/releases/18.04/release/kubuntu-18.04.1-desktop-amd64.iso)
