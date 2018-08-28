@@ -8,7 +8,6 @@
         <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
         <a href="http://www.ubuntu-tr.net/iletisim/">İletişim</a>
         <a href="https://forum.ubuntu-tr.net/index.php?topic=12295.0">Türkiye Tayfası</a>
-        <a href="http://www.ubuntu-tr.net/tur/14.04/tr/index.html">Ubuntu Çevrimiçi Tur</a>
         <a href="http://webchat.freenode.net/?channels=ubuntu-tr-sohbet">Sohbet Kanalı</a>
     </nav>
     <nav class="menu">
