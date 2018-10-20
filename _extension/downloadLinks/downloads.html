@@ -2,28 +2,28 @@
 order: 6
 index: sidebar
 
-name: Ubuntu 18.04.1 (Uzun Süreli Destek)
-link_32Bit: https://sudo.ubuntu-tr.net/ubuntu-kurulum-kaliplarinin-indirme-baglantilari
-link_64Bit: http://releases.ubuntu.com/18.04/ubuntu-18.04.1-desktop-amd64.iso
+name: Ubuntu 18.10
+link_server: http://releases.ubuntu.com/18.10/ubuntu-18.10-live-server-amd64.iso
+link_desktop: http://releases.ubuntu.com/18.10/ubuntu-18.10-desktop-amd64.iso
 
-name2: Ubuntu 16.04.5 (Uzun Süreli Destek)
-link2_32Bit: http://releases.ubuntu.com/16.04/ubuntu-16.04.5-desktop-i386.iso
-link2_64Bit: http://releases.ubuntu.com/16.04/ubuntu-16.04.5-desktop-amd64.iso
+name2: Ubuntu 18.04.1 (Uzun Süreli Destek)
+link2_server: http://releases.ubuntu.com/18.04/ubuntu-18.04.1-live-server-amd64.iso
+link2_desktop: http://releases.ubuntu.com/18.04/ubuntu-18.04.1-desktop-amd64.iso
 
-header: "Ubuntu İndirme Bağlantısı"
+header: "Ubuntu İndirme Bağlantısı (64 Bit)"
 ---
 <div class="ui card fluid">
     <div class="content">
       <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.png"> {{ page.name }}
     </div>
     <div class="extra content ui buttons tiny">
-      <a href="{{ page.link_32Bit }}" target="_blank" href="#" class="ui button blue">
+      <a href="{{ page.link_server }}" target="_blank" href="#" class="ui button blue">
               <i class="cloud download icon"></i>
-        32 Bit İndir</a>
+        Sunucu</a>
 
-      <a href="{{ page.link_64Bit }}" target="_blank" class="ui button orange">
+      <a href="{{ page.link_desktop }}" target="_blank" class="ui button orange">
               <i class="cloud download icon"></i>
-        64 Bit İndir</a>
+        Masaüstü</a>
     </div>
 </div>
 
@@ -32,12 +32,12 @@ header: "Ubuntu İndirme Bağlantısı"
       <img class="ui avatar image" src="{{ site.themeDir }}/images/logo-ubuntu_cof-orange-hex.png"> {{ page.name2 }}
     </div>
     <div class="extra content ui buttons tiny">
-      <a href="{{ page.link2_32Bit }}" target="_blank" class="ui button blue">
+      <a href="{{ page.link2_server }}" target="_blank" class="ui button blue">
               <i class="cloud download icon"></i>
-        32 Bit İndir</a>
+        Sunucu</a>
 
-      <a href="{{ page.link2_64Bit }}" target="_blank" class="ui button orange">
+      <a href="{{ page.link2_desktop }}" target="_blank" class="ui button orange">
               <i class="cloud download icon"></i>
-        64 Bit İndir</a>
+        Masaüstü</a>
     </div>
 </div>
