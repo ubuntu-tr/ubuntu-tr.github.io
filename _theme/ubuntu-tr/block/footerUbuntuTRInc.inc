@@ -25,7 +25,8 @@
             <a href="http://wiki.ubuntu-tr.net/index.php?title=Ana_Sayfa">Wiki</a>
             <a href="http://wiki.ubuntu-tr.net/index.php?title=Ubuntu">Ubuntu Nedir?</a>
             <a href="http://wiki.ubuntu-tr.net/index.php?title=Kurulum">Kurulum</a>
-            <a href="http://wiki.ubuntu-tr.net/index.php?title=Windows%27tan_Ubuntu%27ya_ge%C3%A7i%C5%9F">Windows’tan Ubuntu’ya Geçiş</a>
+            <a href="https://wiki.ubuntu-tr.net/index.php?title=Ubuntu_başlangıç_kılavuzu">Ubuntu Başlangıç Kılavuzu</a>
+            <a href="https://wiki.ubuntu-tr.net/index.php?title=SSS">Sıkça Sorulan Sorular</a>
         </div>
         <div>
             <a href="http://gezegen.ubuntu-tr.net/">Gezegen</a>
